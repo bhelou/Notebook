@@ -1,0 +1,1184 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage{listings}
+\lstset{ %
+  language=Matlab,                % the language of the code
+  basicstyle=\footnotesize,           % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\footnotesize,          % the size of the fonts that are used for the line-numbers
+  stepnumber=5,                   % the step between two line-numbers. If it's 1, each line 
+  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},      % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                   % show the filename of files included with \lstinputlisting;
+  % also try caption instead of title
+  numberstyle=\tiny\color{gray},        % line number style
+  keywordstyle=\color{blue},          % keyword style
+  commentstyle=\color{dkgreen},       % comment style
+  stringstyle=\color{mauve},         % string literal style
+  escapeinside={\%*}{*)},            % if you want to add a comment within your code
+  morekeywords={*,\dots}               % if you want to add more keywords to the set
+}
+
+\usepackage[hidelinks]{hyperref}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 3cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part
+Classical Optics
+\end_layout
+
+\begin_layout Section
+Light Propagation
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:PlaneWavePropagation"
+
+\end_inset
+
+Plane Wave description and some important terminology
+\end_layout
+
+\begin_layout Standard
+We can describe a plane wave in many different ways:
+\begin_inset Formula 
+\begin{eqnarray}
+E\left(\xi\right) & = & \mathcal{E}_{0}\cos\left(\omega_{0}\xi-\phi_{0}\right)\nonumber \\
+ & = & \mathcal{E}_{c}\cos\left(\omega_{0}\xi\right)+\mathcal{E}_{s}\sin\left(\omega_{0}\xi\right)\label{eq:EfieldDefinitions}\\
+ & = & \frac{1}{\sqrt{2}}\left(\mathcal{E}e^{-i\omega_{0}\xi}+c.c.\right),\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\xi=t-x/c$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{E}_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{0}$
+\end_inset
+
+ are called 
+\emph on
+amplitude
+\emph default
+ and 
+\emph on
+phase
+\emph default
+ (and the first equality is the 'amplitude-phase' representation), 
+\begin_inset Formula $\mathcal{E}_{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{E}_{s}$
+\end_inset
+
+ are the cosine and sine 
+\emph on
+quadrature amplitudes 
+\emph default
+and 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ is called the 
+\emph on
+complex amplitude
+\emph default
+.
+ The sine quadrature is also called the 
+\emph on
+phase quadrature 
+\emph default
+(to see why refer to section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:PhaseModulation"
+
+\end_inset
+
+).
+ The different pictures can be related in the following way
+\begin_inset Formula 
+\begin{eqnarray}
+\mathcal{E}_{c} & = & \sqrt{2}Re\left[\mathcal{E}\right]\qquad\mathcal{E}_{s}=\sqrt{2}Im\left[\mathcal{E}\right]=\mathcal{E}_{0}\sin\phi_{0}\nonumber \\
+\mathcal{E} & = & \frac{\mathcal{E}_{c}+i\mathcal{E}_{s}}{\sqrt{2}}\nonumber \\
+\mathcal{E}_{0} & = & \sqrt{2}\left|\mathcal{E}\right|\qquad\tan\phi_{0}=\arg\mathcal{E}\label{eq:transformationElectricFieldPictures}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because of the nature of the wave, we only have to study it at one point
+ in space, say for 
+\begin_inset Formula $x=0$
+\end_inset
+
+ (
+\begin_inset Formula $E\left(t\right)$
+\end_inset
+
+) then the electric field at another location can be related to 
+\begin_inset Formula $E\left(t\right)$
+\end_inset
+
+.
+ For the complex amplitude representation, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E}^{\left(L\right)} & = & e^{i\omega_{0}L/c}\mathcal{E}^{\left(0\right)}\\
+\end{eqnarray*}
+
+\end_inset
+
+and in the quadrature representation, we have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\left(\begin{array}{c}
+\mathcal{E}_{c}\\
+\mathcal{E}_{s}
+\end{array}\right) & = & \left(\begin{array}{cc}
+\cos\phi_{L} & -\sin\phi_{L}\\
+\sin\phi_{L} & \cos\phi_{L}
+\end{array}\right)\left(\begin{array}{c}
+\mathcal{E}_{c}\\
+\mathcal{E}_{s}
+\end{array}\right),\nonumber \\
+ & = & \mathbb{P}\left(\phi_{L}\right)\vec{\mathcal{E}}\label{eq:rotation matrix}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi_{L}=\left[\omega_{0}L/c\right]_{\mbox{mod }2\pi}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ is the 2D rotation matrix.
+\end_layout
+
+\begin_layout Standard
+(Section 2.2.1 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Danilishin2012"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:StokesReciprocityRelations"
+
+\end_inset
+
+Stokes reciprocity relations
+\end_layout
+
+\begin_layout Standard
+They are given by 
+\begin_inset Formula 
+\begin{eqnarray}
+\left|r\right| & = & \left|r^{'}\right|,\quad\left|t\right|=\left|t^{'}\right|\nonumber \\
+\left|r\right|^{2}+\left|t\right|^{2} & = & 1=\left|r^{'}\right|^{2}+\left|t^{'}\right|^{2}\label{eq:stokesReciprocityRelations}\\
+r^{*}t^{'}+t^{*}r^{'} & = & 0\nonumber \\
+r^{*}t+r^{'}t^{'*} & = & 0,\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+where the reciprocity relations connect the complex reflectance 
+\begin_inset Formula $r$
+\end_inset
+
+ and transmittance 
+\begin_inset Formula $t$
+\end_inset
+
+ of a nonabsorbing beam splitter with the corresponding quantities 
+\begin_inset Formula $r^{'}$
+\end_inset
+
+ and 
+\begin_inset Formula $t^{'}$
+\end_inset
+
+ for light incident from the opposite direction.
+\end_layout
+
+\begin_layout Subsection
+Derivation of Stokes reciprocity relations
+\end_layout
+
+\begin_layout Standard
+Consider the setup shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:stokesFigure"
+
+\end_inset
+
+ where a 
+\emph on
+monochromatic plane wave of unit complex amplitude
+\emph default
+ (i.e.
+ 
+\begin_inset Formula $\left|E\right|^{2}=1$
+\end_inset
+
+) is traveling from point A towards the beam splitter (BS) at an arbitrary
+ angle from the normal of the beam splitter.
+ The wave goes through the following steps: 
+\end_layout
+
+\begin_layout Enumerate
+let 
+\begin_inset Formula $\phi_{0}$
+\end_inset
+
+ be the phase shift experienced by this plane wave when it arrives at point
+ P.
+\end_layout
+
+\begin_layout Enumerate
+The beamsplitter gives rise to a reflected wave at point P (of complex amplitude
+ 
+\begin_inset Formula $r$
+\end_inset
+
+) and a transmitted wave at point Q (of complex amplitude 
+\begin_inset Formula $t$
+\end_inset
+
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The reflected wave R1 travels to mirror M1 from which it experiences a phase
+ shift equal to 
+\begin_inset Formula $\phi_{1}$
+\end_inset
+
+ when it is reflected and arrives back to P (i.e.
+ it had followed the path PC+CP).
+\end_layout
+
+\begin_layout Enumerate
+The transmitted wave T1 travels to mirror M2 and experiences a phase shift
+ equal to 
+\begin_inset Formula $\phi_{2}$
+\end_inset
+
+ when it is reflected and arrives back to Q (i.e.
+ it had followed the path QB+BQ).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The returning waves on contact with the BS give rise to reflected and transmitte
+d waves of complex reflectance and tranmittance given by 
+\begin_inset Formula $r^{'}$
+\end_inset
+
+ and 
+\begin_inset Formula $t^{'}$
+\end_inset
+
+ for T1 because it is impinging on the right and 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+ for R1 because it is impinging from the left*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Why is that R1 has the same 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+ as the intially incident wave? this is because there is symmetry of the
+ BS about its normal (the BS looks different only on its normal axis), i.e.
+ 
+\begin_inset Formula $r\left(\alpha\right)=r\left(-\alpha\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+WRONG
+\end_layout
+
+\begin_layout Plain Layout
+They are the same for R1 and T1 because say the first incident wave is incident
+ on the BS at an angle of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ then R1 is incident at an angle of 
+\begin_inset Formula $-\alpha$
+\end_inset
+
+ as measured from the normal (see figure).
+ Morever, looking at the figure we can see that T1 is incident at angle
+ of 
+\begin_inset Formula $-\alpha$
+\end_inset
+
+.
+ This angle was calculated by reflecting the QB path by the beam splitter
+ (an easy way of doing so is to rotate the image until the BS is vertical
+ and then just perform a reflection about the y-axis) and determing where
+ it lands in relation to the BS's normal.
+ We did the reflection because we assumed there is a symmetry of the BS:
+ it is invariant under reflections - related to time reversal symmetry or
+ is it just how the BS is constructed i.e.
+ by construction it is symmetric - moreover we do have the same medium on
+ both sides so there really is a symmetry (THIS IS NOT NECESSARILY SATISFIED)??.
+ Now the reflectance is a function of the angle 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ so we must have that the reflectances are the same.
+\end_layout
+
+\begin_layout Plain Layout
+WRONG
+\end_layout
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $E_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{D}$
+\end_inset
+
+ denote the electric field that leave points A and D, respectively.
+ Assume that 
+\begin_inset Formula $\phi_{3}$
+\end_inset
+
+ is the phase shift corresponding to the path from Q to D.
+ Then 
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{A} & = & \mbox{Transmitted part of T1+Reflected part of R1}\\
+ & = & e^{i\phi_{0}}te^{i\phi_{2}}t^{'}e^{i\phi_{0}}+e^{i\phi_{0}}re^{i\phi_{1}}re^{i\phi_{0}}\\
+E_{D} & = & \mbox{Transmitted part of R1+Reflected part of T1}\\
+ & = & e^{i\phi_{0}}re^{i\phi_{1}}te^{i\phi_{3}}+e^{i\phi_{0}}te^{i\phi_{2}}r^{'}e^{i\phi_{3}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename michelsonForderivationOfreciprocityRelations.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:stokesFigure"
+
+\end_inset
+
+The beam splitter is a parallel side beam splitter meaning that it's refractive
+ index is a function only of the coordinates perpendicular to its face which
+ are either discrete or continuous (i.e.
+ the BS may be stratified or continuous).
+ To ensure that a plane wave incident from one side emerges as a plane wave
+ traveling in the same direction, we shall suppose that the same medium
+ (e.g.
+ air) is present on both sides of the BS.
+ Moreover, the mirrors M1 and M2 are assumed to be perfect mirrors.
+\begin_inset Newline newline
+\end_inset
+
+From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ou1989"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The incoming light indensity is given by 
+\begin_inset Formula $\left|E\right|^{2}=1$
+\end_inset
+
+ so by energy conservation we must have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+1 & = & \left|E_{A}\right|^{2}+\left|E_{D}\right|^{2}\equiv I_{A}+I_{D},\\
+ & = & \left|r\right|^{2}\left(\left|r\right|^{2}+\left|t\right|^{2}\right)+\left|t\right|^{2}\left(\left|t^{'}\right|^{2}+\left|r^{'}\right|^{2}\right)+2\left|r^{2}tt^{'}\right|\cos\left(\theta_{t}+\theta_{t^{'}}-2\theta_{r}+\phi_{2}-\phi_{1}\right)\\
+ & = & +2\left|rr^{'}t^{2}\right|\cos\left(\theta_{r^{'}}-\theta_{r}+\phi_{2}-\phi_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{eqnarray*}
+r & = & \left|r\right|e^{i\theta_{r}}\qquad r^{'}=\left|r^{'}\right|e^{i\theta_{r^{'}}}\\
+t & = & \left|t\right|e^{i\theta_{t}}\qquad t^{'}=\left|t^{'}\right|e^{i\theta_{t^{'}}}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ou1989"
+
+\end_inset
+
+ for the simple but tedious algebra
+\end_layout
+
+\end_inset
+
+The phase shift 
+\begin_inset Formula $\left(\phi_{2}-\phi_{1}\right)$
+\end_inset
+
+ can be made arbitrarily small or large (by varying the position of B and
+ C).
+ 
+\begin_inset Formula $\left|r\right|^{2}\left(\left|r\right|^{2}+\left|t\right|^{2}\right)+\left|t\right|^{2}\left(\left|t^{'}\right|^{2}+\left|r^{'}\right|^{2}\right)$
+\end_inset
+
+ are independent of the phase shift so they can be considered equal to a
+ constant.
+ Moreover, for the above equation to be satisfied then the 3rd and 4th term
+ must be equal a constant (as the 1st and 2nd terms are constants) so 
+\begin_inset Formula 
+\begin{eqnarray*}
+2\left|r^{2}tt^{'}\right|\cos\left(\theta_{t}+\theta_{t^{'}}-2\theta_{r}+\phi_{2}-\phi_{1}\right)+2\left|rr^{'}t^{2}\right|\cos\left(\theta_{r^{'}}-\theta_{r}+\phi_{2}-\phi_{1}\right) & = & 1-\left(\left|r\right|^{2}\left(\left|r\right|^{2}+\left|t\right|^{2}\right)+\left|t\right|^{2}\left(\left|t^{'}\right|^{2}+\left|r^{'}\right|^{2}\right)\right)\\
+ & = & constant
+\end{eqnarray*}
+
+\end_inset
+
+We know from physical arguments that 
+\begin_inset Formula $\left|r\right|^{2}+\left|t\right|^{2}=1$
+\end_inset
+
+ (energy conservation of a beam after it hits a BS).
+ so 
+\begin_inset Formula 
+\begin{eqnarray*}
+2\left|r^{2}tt^{'}\right|\cos\left(\theta_{t}+\theta_{t^{'}}-2\theta_{r}+\phi_{2}-\phi_{1}\right)+2\left|rr^{'}t^{2}\right|\cos\left(\theta_{r^{'}}-\theta_{r}+\phi_{2}-\phi_{1}\right) & = & 0\\
+\implies\frac{\left|r^{2}tt^{'}\right|}{\left|rr^{'}t^{2}\right|} & = & -\frac{\cos\left(\theta_{r^{'}}-\theta_{r}+\phi_{2}-\phi_{1}\right)}{\cos\left(\theta_{t}+\theta_{t^{'}}-2\theta_{r}+\phi_{2}-\phi_{1}\right)}
+\end{eqnarray*}
+
+\end_inset
+
+Try the solution 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left|r\right|\left|t^{'}\right| & = & \left|r^{'}\right|\left|t\right|\\
+\end{eqnarray*}
+
+\end_inset
+
+ then we must have that the cosine terms sum to 0.
+ Then use the trig identity that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos u+\cos v & = & 2\cos\left(\frac{u+v}{2}\right)\cos\left(\frac{u-v}{2}\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+to obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \cos\left(\frac{\theta_{t}+\theta_{t^{'}}+\theta_{r^{'}}-3\theta_{r}}{2}+\phi_{2}-\phi_{1}\right)\cos\left(\frac{\mbox{\theta_{r}+\theta_{t^{'}}-\theta_{r^{'}}-\theta_{r}}}{2}\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+which can be solved for any 
+\begin_inset Formula $\phi_{2}-\phi_{1}$
+\end_inset
+
+ by letting 
+\begin_inset Formula $\mbox{\theta_{t}+\theta_{t^{'}}-\theta_{r^{'}}-\theta_{r}}=\pm\pi$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+e^{i\left(\theta_{t}^{'}-\theta_{r}\right)}+e^{i\left(\theta_{r}^{'}-\theta_{t}\right)} & = & 0\quad\mbox{OR }e^{i\left(\theta_{t}-\theta_{r}\right)}+e^{i\left(\theta_{r}^{'}-\theta_{t^{'}}\right)}\\
+\implies\left(e^{i\left(\theta_{t}^{'}-\theta_{r}\right)}+e^{i\left(\theta_{r}^{'}-\theta_{t}\right)}\right)\left|r\right|\left|t\right| & = & 0\quad\mbox{OR }\left(e^{i\left(\theta_{t}-\theta_{r}\right)}+e^{i\left(\theta_{r}^{'}-\theta_{t^{'}}\right)}\right)\left|r\right|\left|t\right|=0\\
+\implies r^{*}t^{'}+t^{*}r^{'} & = & 0\quad\mbox{OR }r^{*}t+r^{'}t^{'*}=0
+\end{eqnarray*}
+
+\end_inset
+
+where we have used the assumption that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left|r\right|\left|t^{'}\right|=\left|r^{'}\right|\left|t\right|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+(from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ou1989"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Section
+Modulation
+\end_layout
+
+\begin_layout Subsection
+Modulation of plane waves
+\end_layout
+
+\begin_layout Standard
+For this section, we assyme a plane wave of the form (with no phase)
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{car}\left(t\right) & = & \mathcal{E}_{0}\cos\left(\omega_{0}t\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Section 2.2.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Danilishin2012"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+Amplitude Modulation
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Simple example
+\series default
+: The modulated wave would look like
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{AM}\left(t\right) & = & \left(\mathcal{E}_{0}\left(1+\epsilon_{m}\cos\left(\Omega t+\phi_{m}\right)\right)\right)\cos\left(\omega_{0}t\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\epsilon_{m}\ll1$
+\end_inset
+
+ is called the 
+\emph on
+modulation depth
+\emph default
+, 
+\begin_inset Formula $\Omega\ll\omega_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{m}$
+\end_inset
+
+ is called the 
+\emph on
+relative phase
+\emph default
+.
+ We can also write 
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{AM}\left(t\right) & = & Re\left[\mathcal{E}_{0}e^{-i\omega_{0}t}+\frac{\mathcal{E}_{0}\epsilon_{m}}{2}e^{-i\phi_{m}}e^{-i\left(\omega_{0}+\Omega\right)t}+\frac{\mathcal{E}_{0}\epsilon_{m}}{2}e^{i\phi_{m}}e^{-i\left(\omega_{0}-\Omega\right)t}\right].\\
+\end{eqnarray*}
+
+\end_inset
+
+The two other plane waves are called the 
+\emph on
+modulated sidebands
+\emph default
+ with amplitudes 
+\begin_inset Formula $A_{\omega_{0}\pm\Omega}=\epsilon_{m}\mathcal{E}_{0}e^{\mp i\phi_{m}}/2$
+\end_inset
+
+.
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+Generalization
+\series default
+: This can be generalized to an arbitrary 
+\emph on
+periodic modulation function 
+\emph default
+
+\begin_inset Formula $A\left(t\right)=\sum_{k=1}^{\infty}A_{k}\cos\left(k\Omega+\phi_{k}\right)$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(t\right) & = & \mathcal{E}_{0}\cos\left(\omega_{0}t\right)+\frac{\epsilon_{m}\mathcal{E}_{0}}{2}\sum_{k=1}^{\infty}A_{k}\left\{ \cos\left[\left(\omega_{0}-k\Omega\right)t-\phi_{k}\right]+\cos\left[\left(\omega_{0}+k\Omega\right)t+\phi_{k}\right]\right\} \\
+\end{eqnarray*}
+
+\end_inset
+
+and to an arbitray real modulation function 
+\begin_inset Formula $A\left(t\right)=\intop_{-\infty}^{\infty}\frac{d\omega}{2\pi}A\left(\Omega\right)e^{-i\Omega t}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(t\right) & = & Re\left[\mathcal{E}_{0}e^{-i\omega_{0}t}+\epsilon_{m}\mathcal{E}_{0}e^{-i\omega_{0}t}\intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}A\left(\Omega\right)e^{-i\Omega t}\right]\\
+ & = & \mathcal{E}_{0}\cos\omega_{0}t+\frac{\epsilon_{m}\mathcal{E}_{0}}{2}\intop_{-\infty}^{\infty}\frac{d\omega}{2\pi}\left(A\left(\omega-\omega_{0}\right)+A\left(\omega+\omega_{0}\right)\right)e^{-i\omega t}
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+Re\left(e^{-i\omega_{0}t}\intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}A\left(\Omega\right)e^{-i\Omega t}\right) & = & \cos\omega_{0}t\intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}A\left(\Omega\right)e^{-i\Omega t}\\
+ & = & \frac{1}{2}\left(\intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}A\left(\Omega\right)e^{-i\left(\Omega+\omega_{0}\right)t}+\intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}A\left(\Omega\right)e^{-i\left(\Omega-\omega_{0}\right)t}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename modulation.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Danilishin2012"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:PhaseModulation"
+
+\end_inset
+
+Phase Modulation
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Simple example
+\series default
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{PM}\left(t\right) & = & \mathcal{E}_{0}\cos\left(\omega_{0}t+\delta_{m}\cos\left(\Omega t+\phi_{m}\right)\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+where the phase deviation 
+\begin_inset Formula $\delta_{m}\ll1$
+\end_inset
+
+ and in this limit 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E}_{c} & \approx & \mathcal{E}_{0}\\
+\mathcal{E}_{s} & \approx & \delta_{m}\mathcal{E}_{0}\cos\left(\Omega t+\phi_{m}\right)
+\end{eqnarray*}
+
+\end_inset
+
+and so for a weak modulation, only the sine quadrature contains the modulation
+ signal and this is why it is called the 
+\emph on
+phase quadrature
+\emph default
+.
+ In this approximation, we also have a pair of sidebands created
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{PM}\left(t\right) & = & Re\left[\mathcal{E}_{0}e^{-\omega_{0}t}+i\frac{\delta_{m}\mathcal{E}_{0}}{2}\left(e^{i\left[\left(\omega_{0}+\Omega\right)t+\phi_{m}\right]}+e^{i\left[\left(\omega_{0}-\Omega\right)t-\phi_{m}\right]}\right)\right].\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+Generalization
+\series default
+: For a periodic function: 
+\begin_inset Formula $\Phi\left(t\right)=\sum_{k=1}^{\infty}\Phi_{k}\cos\left(k\Omega+\phi_{k}\right)$
+\end_inset
+
+ and in the weak modulation limit, we obtain 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(t\right) & \approx & \mathcal{E}_{0}\cos\left(\omega_{0}t\right)-\frac{\delta_{m}\mathcal{E}_{0}}{2}\sum_{k=1}^{\infty}\Phi_{k}\left\{ \sin\left[\left(\omega_{0}-k\Omega\right)t-\phi_{k}\right]+\sin\left[\left(\omega_{0}+k\Omega\right)t+\phi_{k}\right]\right\} \\
+\end{eqnarray*}
+
+\end_inset
+
+and for a general function: 
+\begin_inset Formula $\Phi\left(t\right)=\int_{-\infty}^{\infty}\frac{d\omega}{2\pi}\Phi\left(\Omega\right)e^{-i\Omega t}$
+\end_inset
+
+, we obtain that
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(t\right) & \approx & \mathcal{E}_{0}\cos\omega_{0}t+\frac{\delta_{m}\mathcal{E}_{0}}{2}\intop_{-\infty}^{\infty}\frac{d\omega}{2\pi}i\left(\Phi\left(\omega-\omega_{0}\right)-\Phi\left(\omega+\omega_{0}\right)\right)e^{-i\omega t},\\
+\end{eqnarray*}
+
+\end_inset
+
+which is different from the amplitude modulation expression by a 
+\begin_inset Formula $\pm\pi/2$
+\end_inset
+
+ phase shift added to the sidebands.
+\end_layout
+
+\begin_layout Section
+Optical Elements
+\end_layout
+
+\begin_layout Standard
+Section 2.2.4 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Danilishin2012"
+
+\end_inset
+
+ has an elementary summary of mirror, 50/50 beamsplitter and losses
+\end_layout
+
+\begin_layout Standard
+Section 2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "freise2010"
+
+\end_inset
+
+ contains a more detailed summary with more elements such as cavities.
+\end_layout
+
+\begin_layout Subsection
+Light modulation by mirror motion
+\end_layout
+
+\begin_layout Standard
+Section 2.2.5 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Danilishin2012"
+
+\end_inset
+
+ has an elementary explanation of the phenomenon with application to GW
+ detection.
+ An example of a perfectly reflecting mirror (
+\begin_inset Formula $R=1$
+\end_inset
+
+) is given in section 2.2.6.
+\end_layout
+
+\begin_layout Standard
+Important equations: 36
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Classical-Beam-splitter"
+
+\end_inset
+
+Beam splitter
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename classicalBeamsplitter.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Classical-Beamsplitter"
+
+\end_inset
+
+Classical Beamsplitter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+A beam splitter is represented by the following scattering matrix
+\begin_inset Formula 
+\begin{eqnarray}
+\left(\begin{array}{c}
+E_{out,1}\\
+E_{out,2}
+\end{array}\right) & = & \left(\begin{array}{cc}
+t^{'} & r\\
+r^{'} & t
+\end{array}\right)\left(\begin{array}{c}
+E_{in,1}\\
+E_{in,2}
+\end{array}\right)\label{eq:scatteringMatrixBS}\\
+ & \equiv & \boldsymbol{S}\boldsymbol{E}_{in}\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+(see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Classical-Beamsplitter"
+
+\end_inset
+
+ for what the E-fields represent).
+\end_layout
+
+\begin_layout Standard
+(From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mandelQO"
+
+\end_inset
+
+ section 12.12.1)
+\end_layout
+
+\begin_layout Section
+Approximations
+\end_layout
+
+\begin_layout Standard
+Narrowband approximation: The 
+\begin_inset Formula $\omega$
+\end_inset
+
+ in the expansion of the quantized Electric field is replaced with 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+, the central frequency of the laser.
+\end_layout
+
+\begin_layout Section
+Laser
+\end_layout
+
+\begin_layout Subsection
+Laser Noise
+\end_layout
+
+\begin_layout Subsubsection
+Simple classical treatment
+\end_layout
+
+\begin_layout Standard
+Add a random time-dependent modulation of the amplitude and phase:
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(t\right) & = & \left(\mathcal{E}_{0}+\hat{e}_{n}\left(t\right)\right)\cos\left[\omega_{0}t+\phi_{0}+\hat{\phi}_{n}\left(t\right)\right]\\
+ & \equiv & \left(\mathcal{E}_{c}+\hat{e}_{c}\left(t\right)\right)\cos\omega_{0}t+\left(\mathcal{E}_{s}+\hat{e}_{s}\left(t\right)\right)\sin\omega_{0}t
+\end{eqnarray*}
+
+\end_inset
+
+Moreover, the noise component 
+\begin_inset Formula $\delta\hat{E}_{noise}\left(t\right)=\hat{e}_{c}\left(t\right)\cos\omega_{0}t+\hat{e}_{s}\left(t\right)\sin\omega_{0}t$
+\end_inset
+
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ can related to the noise component at 
+\begin_inset Formula $x=0$
+\end_inset
+
+ by the equality 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{c}
+\hat{e}_{c}^{\left(L\right)}\left(\Omega\right)\\
+\hat{e}_{s}^{\left(L\right)}\left(\Omega\right)
+\end{array}\right) & = & e^{i\Omega L/c}\mathbb{P}\left[\frac{\omega_{0}L}{c}\right]\left(\begin{array}{c}
+\hat{e}_{c}^{\left(0\right)}\left(\Omega\right)\\
+\hat{e}_{s}^{\left(0\right)}\left(\Omega\right)
+\end{array}\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ is the 2D rotation matrix (defined in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:rotation matrix"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+(Section 2.2.3 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Danilishin2012"
+
+\end_inset
+
+)
+\end_layout
+
+\end_body
+\end_document

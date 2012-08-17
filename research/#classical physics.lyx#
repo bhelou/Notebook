@@ -1,0 +1,824 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage{listings}
+\lstset{ %
+  language=Matlab,                % the language of the code
+  basicstyle=\footnotesize,           % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\footnotesize,          % the size of the fonts that are used for the line-numbers
+  stepnumber=5,                   % the step between two line-numbers. If it's 1, each line 
+  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},      % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                   % show the filename of files included with \lstinputlisting;
+  % also try caption instead of title
+  numberstyle=\tiny\color{gray},        % line number style
+  keywordstyle=\color{blue},          % keyword style
+  commentstyle=\color{dkgreen},       % comment style
+  stringstyle=\color{mauve},         % string literal style
+  escapeinside={\%*}{*)},            % if you want to add a comment within your code
+  morekeywords={*,\dots}               % if you want to add more keywords to the set
+}
+
+\usepackage[hidelinks]{hyperref}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 3cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part
+Classical E&M
+\end_layout
+
+\begin_layout Section
+Conversion between SI and CGS
+\end_layout
+
+\begin_layout Enumerate
+The Poynting vector is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+S\left[SI\right] & \rightarrow & \frac{1}{4\pi c}S\left[SI\right]\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+S\left[CGS\right]=E\times H & = & \sqrt{\frac{1}{4\pi\varepsilon_{0}}}\times\sqrt{\frac{1}{4\pi\mu_{0}}}S\left[SI\right]\\
+ & = & \frac{1}{4\pi}\frac{1}{\sqrt{\varepsilon_{0}\mu_{0}}}S\left[SI\right]=\frac{1}{4\pi c}S\left[SI\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Maxwell's Equations and constitutive relations (SI)
+\end_layout
+
+\begin_layout Standard
+In SI they are
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{\nabla}\times\vec{E} & = & -\partial_{t}\vec{B}\qquad\left(\mbox{Faraday's Law}\right)\\
+c^{2}\vec{\nabla}\times\vec{B} & = & \partial_{t}\vec{E}+\frac{1}{\epsilon_{0}}\partial_{t}\vec{P}+\frac{1}{\epsilon_{0}}\vec{J}+\frac{1}{\epsilon_{0}}\left(\vec{\nabla}\times\vec{M}\right)\qquad\left(\mbox{Ampere's law}\right)\\
+\epsilon_{0}\vec{\nabla}.\vec{E} & = & -\vec{\nabla}.\vec{P}+\rho\\
+\vec{\nabla}.\vec{B} & = & 0,
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\rho$
+\end_inset
+
+ is the free charge density and the remaining vector fields are given by
+ the 
+\emph on
+constitutive relations
+\emph default
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{J} & = & \overleftrightarrow{\sigma}.\vec{E},\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is the conductivity tensor.
+ Assuming instanteneous , linear and local responses, we have 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{M} & = & \mu_{0}\overleftrightarrow{\chi}_{m}.\vec{H}\\
+\vec{P}\left(\vec{r},t\right) & = & \epsilon_{0}\overleftrightarrow{\chi}_{e}.\vec{E}\left(\vec{r},t\right),\\
+\vec{D} & = & \epsilon_{0}\vec{E}+\vec{P}=\epsilon_{0}\left(1+\overleftrightarrow{\chi}_{e}\right).\vec{E}=\overleftrightarrow{\epsilon}.\vec{E}\\
+\vec{B} & = & \mu_{0}\vec{H}+\vec{M}=\mu_{0}\left(1+\overleftrightarrow{\chi}_{m}\right).\vec{H}=\vec{\mu}.\vec{H}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\overleftrightarrow{\chi}_{e}$
+\end_inset
+
+ is a second rank tensor referred to as the 
+\emph on
+electric susceptibility
+\emph default
+ and 
+\begin_inset Formula $\vec{P}$
+\end_inset
+
+ represents the response of a material to an applied electric field.
+ Moreover, 
+\begin_inset Formula $\overleftrightarrow{\chi}_{m}$
+\end_inset
+
+ is a second rank tensor referred to as the 
+\emph on
+magnetic susceptibility
+\emph default
+ and 
+\begin_inset Formula $\vec{M}$
+\end_inset
+
+ represents the response of a material to an applied magnetic field.
+ 
+\begin_inset Formula $\vec{D}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{B}$
+\end_inset
+
+ are the total fields in the material.
+\end_layout
+
+\begin_layout Standard
+(Section 1.1 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsection
+Units (SI)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[W\right] & = & \left[Watt\right]=\left[J/s\right]\\
+\left[A\right] & = & \left[Ampere\right]=\left[C/s\right]\\
+\left[T\right] & = & \left[Tesla\right]=\left[Ns/Cm\right]\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[E\right] & = & \left[N/C\right]=\left[V/m\right]\\
+\left[D\right] & = & \left[C/m^{2}\right]\\
+\left[H\right] & = & \left[A/m\right]\\
+\left[B\right] & = & \left[T\right]=\left[Ns/Cm\right]\\
+\left[S\right] & = & \left[W/m^{2}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[H\right] & = & \left[Oe\right]\rightarrow\frac{1000}{4\pi}A.m\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Energy
+\end_layout
+
+\begin_layout Subsection
+Poynting's theorem (SI)
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{S} & = & \vec{E}\times\vec{H}\quad\left[\mbox{W/m}^{2}\right]\\
+\end{eqnarray*}
+
+\end_inset
+
+which is referred to as the 
+\emph on
+Poynting's vector
+\emph default
+ and gives the magnitude and direction of the power flux or irradiance/rate
+ of energy transfer per unit area.
+ Then 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{\nabla}.\vec{S}+\partial_{t}\left(w_{e}+w_{m}\right)+\vec{E}.\vec{J} & = & 0,\quad\left(\mbox{Continuity Equation}\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Multiply Faraday's law by 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ and add this to the dot multiplication of Ampere's law by 
+\begin_inset Formula $-\vec{E}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{eqnarray*}
+w_{e} & = & \frac{1}{2}\epsilon_{0}\left(1+\chi\right)E^{2}=\frac{1}{2}\epsilon E^{2}\quad\left[J/m^{3}\right]\\
+w_{m} & = & \frac{1}{2}\mu_{0}\left(1+\chi_{m}\right)H^{2}=\frac{1}{2}\mu H^{2}\quad\left[J/m^{3}\right]
+\end{eqnarray*}
+
+\end_inset
+
+are the energy densities associated with the electric and magnetic fields,
+ respectively.
+\end_layout
+
+\begin_layout Standard
+(Section 2.1 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsection
+Intensity/Irradiance (SI)
+\end_layout
+
+\begin_layout Standard
+The tim averaged Poynting vector or irradiance or intensity is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle S\right\rangle  & = & I\hat{k}=\frac{1}{T}\int_{0}^{T}\vec{E}\left(t\right)\times\vec{H}\left(t\right)dt,
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{k}$
+\end_inset
+
+ is the unit vector along the direction of plane wave propagation.
+ Note that this time-average makes sense because in general detectors cannot
+ respond to very high frequencies ...
+\end_layout
+
+\begin_layout Standard
+For plane waves in a dispersionless medium, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+I & = & \frac{1}{2}cn\epsilon_{0}E_{0}^{2}.\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $E_{0}\sim30\sqrt{I}$
+\end_inset
+
+ and so a 1 
+\begin_inset Formula $W/m^{2}$
+\end_inset
+
+ plane wave has an associated peak field strength of 30 
+\begin_inset Formula $V/m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(Section 2.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:ClassicalEMmomentum"
+
+\end_inset
+
+Momentum
+\end_layout
+
+\begin_layout Standard
+Expression for the 4-momentum: Eq.
+ 32.6 of Landau's classical theory of fields.
+\end_layout
+
+\begin_layout Part
+Classical Mechanics
+\end_layout
+
+\begin_layout Section
+Brownian Motion
+\end_layout
+
+\begin_layout Subsection
+Continous Markov process and the Langevin equation
+\end_layout
+
+\begin_layout Standard
+A continuous Markov Process (continuous memoryless stochastic process) 
+\begin_inset Formula $X$
+\end_inset
+
+ has to have the form ((standard form)
+\series bold
+ Langevin equation
+\series default
+):
+\begin_inset Formula 
+\begin{eqnarray*}
+X\left(t+dt\right) & = & X\left(t\right)+A\left(X\left(t\right),t\right)dt+D\left(X\left(t\right),t\right)^{1/2}N\left(t\right)\left(dt\right)^{1/2},\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $A$
+\end_inset
+
+ is called the drift function, 
+\begin_inset Formula $D$
+\end_inset
+
+ is called the diffusion function, and 
+\begin_inset Formula $N\left(t\right)$
+\end_inset
+
+is a temporall uncorrelated unit normal random variable, i.e., 
+\begin_inset Formula $N\left(t\right)=\mbox{\textbf{N}}\left(0,1\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $N\left(t\right)$
+\end_inset
+
+ is statistically indepedent of 
+\begin_inset Formula $N\left(t^{'}\right)$
+\end_inset
+
+ if 
+\begin_inset Formula $t\neq t^{'}$
+\end_inset
+
+ (proof is given in the appendix of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gillespie96"
+
+\end_inset
+
+).
+ The above equation can also be written in differential form by noticing
+ that 
+\begin_inset Formula $N\left(t\right)/dt^{1/2}=\mbox{\textbf{N}}\left(0,dt^{-1}\right)$
+\end_inset
+
+.
+ Defining the Gaussian white noise
+\series bold
+ 
+\series default
+process by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Gamma\left(t\right) & = & \lim_{dt\rightarrow0}\mbox{\textbf{N}}\left(0,1/dt\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+to obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{dX\left(t\right)}{dt} & = & A\left(X\left(t\right),t\right)+D^{1/2}\left(X\left(t\right),t\right)\Gamma\left(t\right).\\
+\end{eqnarray*}
+
+\end_inset
+
+This is the 
+\series bold
+white noise form of the Langevin equation
+\series default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gillespie96"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Langevin's approach to brownian motion
+\end_layout
+
+\begin_layout Standard
+Hypthesize that the net force exerted on a Brownian particle in the 
+\begin_inset Formula $x$
+\end_inset
+
+ direction at time 
+\begin_inset Formula $t$
+\end_inset
+
+ by surrounding fluid molecules can be resolved into two components: (i)
+ a dissipative drag force 
+\begin_inset Formula $-\gamma v\left(t\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $v$
+\end_inset
+
+ is the 
+\begin_inset Formula $x$
+\end_inset
+
+ component of velocity and 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ the drag coefficient, and (ii) a zero-mean, temporally uncorrelated randomly
+ fluctuating force 
+\begin_inset Formula $F\left(t\right)$
+\end_inset
+
+, which is assumed to be stastically indepedent of 
+\begin_inset Formula $v\left(t^{'}\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $t^{'}\leq t$
+\end_inset
+
+ (a force 
+\begin_inset Formula $F$
+\end_inset
+
+ in the future is not going to affect 
+\begin_inset Formula $v$
+\end_inset
+
+ at the present time).
+ Newton's equations give (after dividing by the mass 
+\begin_inset Formula $m$
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{eqnarray}
+\dot{v} & = & -\frac{1}{m/\gamma}v+m^{-1}F\left(t\right).\label{eq:velocityEqu}
+\end{eqnarray}
+
+\end_inset
+
+If we define 
+\begin_inset Formula $\tau\equiv m/\gamma$
+\end_inset
+
+ and require that 
+\begin_inset Formula $F\left(t\right)=mc^{1/2}\Gamma\left(t\right)$
+\end_inset
+
+, then 
+\begin_inset Formula $\left(\ref{eq:velocityEqu}\right)$
+\end_inset
+
+ resembles the white noise Langevin equation: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{v} & = & -\frac{1}{\tau}v+c^{1/2}\Gamma\left(t\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+and specifically the Ornstein-Uhlenbeck (O-U) process (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gillespie96"
+
+\end_inset
+
+ section D).
+ Note that the form of 
+\begin_inset Formula $F\left(t\right)$
+\end_inset
+
+ is not an additional assumption because the definition of 
+\begin_inset Formula $F\left(t\right)$
+\end_inset
+
+ as a zero mean function that is uncorrelated with 
+\begin_inset Formula $v\left(t^{'}\right)$
+\end_inset
+
+ for 
+\begin_inset Formula $t^{'}\leq t$
+\end_inset
+
+ implies a continous Markov process (
+\begin_inset Formula $v$
+\end_inset
+
+ has to be a 'continous' random variable).
+ To find the expressions of 
+\begin_inset Formula $\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ we note that the velocity of the particle must be Maxwell-Boltzmann distributed
+: 
+\begin_inset Formula $v\left(t\rightarrow\infty\right)=\mbox{\textbf{N}}\left(0,k_{B}T/m\right)$
+\end_inset
+
+.
+ Moreover, the displacement of the particle must exhibit the experimentally
+ diffuse observed behavior: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle X^{2}\left(t\rightarrow\infty\right)\right\rangle  & = & 2D\left(t-t_{0}\right).\\
+\end{eqnarray*}
+
+\end_inset
+
+(note that this is mathematically true if 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is very small from a macroscopic viewpoint - just invoke the zero-tau theorem
+ - 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gillespie96"
+
+\end_inset
+
+ section E).
+ These observations have to match the solution to an O-U process, obtaining
+ that 
+\begin_inset Formula $\tau=DM/k_{B}T$
+\end_inset
+
+ and 
+\begin_inset Formula $c=2\left(k_{B}T/m\right)^{2}/D$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gillespie96"
+
+\end_inset
+
+.
+ Recalling the definition of 
+\begin_inset Formula $\tau$
+\end_inset
+
+ we obtain that 
+\begin_inset Formula $\gamma=k_{B}T/D$
+\end_inset
+
+.
+ Moreover, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+F\left(t\right) & = & \left(2k_{B}T\gamma\right)^{1/2}\Gamma\left(t\right).\\
+\end{eqnarray*}
+
+\end_inset
+
+This is called the 
+\series bold
+fluctuation dissipation formula
+\series default
+: the fluctuating force is an increasing function of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and vanishes IFF 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ vanishes.
+ The above equation implies that 
+\begin_inset Formula $\left\langle F\left(t\right)F\left(t+t^{'}\right)\right\rangle =2k_{B}T\gamma\delta\left(t^{'}\right)$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\gamma & = & \frac{1}{2k_{B}T}\intop_{-\infty}^{\infty}\left\langle F\left(t\right)F\left(t+t^{'}\right)\right\rangle dt^{'}.\\
+\end{eqnarray*}
+
+\end_inset
+
+Another important integral equation is the
+\emph on
+ auto-covariance formula for the diffusion coefficient
+\emph default
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+D & = & \intop_{0}^{\infty}\left[\lim_{t\rightarrow\infty}\left\langle V\left(t\right)V\left(t+t^{'}\right)\right\rangle \right]dt^{'}.\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+This follows from using the O-U theory to calculate that the equilibrium
+ auto-covariance formula for the velocity is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{t\rightarrow\infty}\left\langle V\left(t\right)V\left(t+t^{'}\right)\right\rangle  & = & \frac{D}{\tau}e^{-t^{'}/\tau}.\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
+\series default
+We can also calculate the equilibrium 
+\emph on
+mean power dissipated
+\emph default
+ by the Brownian particle via the three orthogonal components of the drag
+ force: 
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{eq} & = & 3\left\langle \left[\gamma v\left(\infty\right)\right]v\left(\infty\right)\right\rangle =\frac{3\gamma k_{B}T}{m}.\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+In the last step we have used the equipartition theorem.
+ The first equality follows from the definition of power:
+\begin_inset Formula 
+\begin{eqnarray*}
+P\left(t\right) & = & \frac{dW}{dt}=\frac{d}{dt}\left(\intop_{C}F.dx\right)=\frac{d}{dt}\left(\intop F\left(t\right).v\left(t\right)dt\right)\\
+ & = & F.v,
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $C$
+\end_inset
+
+ is the path and the third equality follows from 
+\begin_inset Formula $dx=v\left(t\right)dt$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
+\series default
+We can also use the O-U theory to obtain the frequency spectrum of the equilibri
+um power: 
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{eq}\left(\nu\right) & = & \frac{12k_{B}T}{1+\left(2\pi m\nu/\gamma\right)^{2}}\quad\nu\geq0.\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

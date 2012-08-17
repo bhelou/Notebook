@@ -1,0 +1,413 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage{listings}
+\lstset{ %
+  language=Matlab,                % the language of the code
+  basicstyle=\footnotesize,           % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\footnotesize,          % the size of the fonts that are used for the line-numbers
+  stepnumber=5,                   % the step between two line-numbers. If it's 1, each line 
+  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},      % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                   % show the filename of files included with \lstinputlisting;
+  % also try caption instead of title
+  numberstyle=\tiny\color{gray},        % line number style
+  keywordstyle=\color{blue},          % keyword style
+  commentstyle=\color{dkgreen},       % comment style
+  stringstyle=\color{mauve},         % string literal style
+  escapeinside={\%*}{*)},            % if you want to add a comment within your code
+  morekeywords={*,\dots}               % if you want to add more keywords to the set
+}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 3cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsubsection
+Calculating spectral densities of quantum noise in linear optical measurements
+\end_layout
+
+\begin_layout Standard
+If the readout quantity of a meter is linear (in Fourier space; measurements
+ aren't usually instanteneous) then it's most general form is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{Y}\left(\Omega\right) & = & \vec{H}^{\dagger}\left(\Omega\right)\hat{\vec{a}}\left(\Omega\right)+G\left(\Omega\right)\\
+ & = & H_{c}\left(\Omega\right)\hat{a}_{c}\left(\Omega\right)+H_{s}\left(\Omega\right)\hat{a}_{s}\left(\Omega\right)+G\left(\Omega\right)\\
+ & \equiv & \hat{N}_{Y}\left(\Omega\right)+G\left(\Omega\right),
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\vec{a}}$
+\end_inset
+
+ is defined in , 
+\begin_inset Formula $\hat{H}=\left(\begin{array}{cc}
+H_{c} & H_{s}\end{array}\right)$
+\end_inset
+
+ characterized how light is transformed by the device, 
+\begin_inset Formula $G$
+\end_inset
+
+ is the spectrum of the measured quantity and so 
+\begin_inset Formula $\hat{N}_{Y}$
+\end_inset
+
+ represents the quantum noise in the system.
+ Note that 
+\begin_inset Formula $H_{cs}\left(\Omega\right)$
+\end_inset
+
+ is a real valued function of the variable 
+\begin_inset Formula $s=i\Omega$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+To see why, note that 
+\begin_inset Formula $\hat{Y}\left(t\right)$
+\end_inset
+
+ is an observable and so it is hermitian and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{Y}^{\dagger}\left(\Omega\right) & = & \hat{Y}\left(-\Omega\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+which entails that 
+\begin_inset Formula 
+\begin{eqnarray*}
+H_{sc}^{*}\left(\Omega\right) & = & H_{sc}\left(-\Omega\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+Write 
+\begin_inset Formula $H$
+\end_inset
+
+ as a taylor series then we have 
+\begin_inset Formula 
+\begin{eqnarray*}
+H^{*} & = & \sum a_{n}^{*}\Omega^{n}\\
+ & = & \sum a_{n}\left(-1\right)^{n}\Omega^{n}=H\left(-\Omega\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+which entails that 
+\begin_inset Formula $a_{n}^{*}=a_{n}\left(-1\right)^{n}$
+\end_inset
+
+ or 
+\begin_inset Formula $a_{n}=i^{n}\times RealConstant$
+\end_inset
+
+ and we can absorb the 
+\begin_inset Formula $i^{n}$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega^{n}$
+\end_inset
+
+ and define a new variable 
+\begin_inset Formula $s=i\Omega$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Define the 
+\series bold
+\emph on
+double-sided 
+\series default
+power spectral density 
+\emph default
+
+\begin_inset Formula $S_{Y}$
+\end_inset
+
+ (a measure of the quantum noise) by 
+\begin_inset Formula 
+\begin{eqnarray}
+2\pi S_{Y}\left(\Omega\right)\delta\left(\Omega-\Omega^{'}\right) & = & \left\langle \hat{N}_{Y}\left(\Omega\right)\hat{N}_{Y}^{\dagger}\left(\Omega^{'}\right)\right\rangle _{symm}.\label{eq:def spectral density quantum}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+(Note that the spectral density can be defined differently*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+It can also be defined as 
+\begin_inset Formula $\pi S_{O_{1}O_{2}}\left(\Omega\right)\delta\left(\Omega-\Omega^{'}\right)=\left\langle \hat{O}_{1}\left(\Omega\right)\hat{O}_{2}\left(\Omega^{'}\right)\right\rangle _{symm}$
+\end_inset
+
+ (see section 2.4.2 footnote 2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haixingThesis"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+) For example, the power spectral density of a vacuum state is given by
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+S_{Y}^{vac}\left(\Omega\right) & = & \frac{\left|H_{c}\left(\Omega\right)\right|^{2}+\left|H_{s}\left(\Omega\right)\right|^{2}}{2}\label{eq:vacuum spectral density}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle \hat{N}_{Y}\left(\Omega\right)\hat{N}_{Y}\left(\Omega^{'}\right)\right\rangle _{symm} & = & \left\langle \vec{H}^{\dagger}\left(\Omega\right)\hat{\vec{a}}\left(\Omega\right)\vec{H}\left(\Omega^{'}\right)\hat{\vec{a}}^{\dagger}\left(\Omega^{'}\right)\right\rangle _{symm}\\
+ & = & \vec{H}^{\dagger}\left(\Omega\right)\left\langle \hat{\vec{a}}\left(\Omega\right)\hat{\vec{a}}^{\dagger}\left(\Omega^{'}\right)\right\rangle _{symm}\vec{H}\left(\Omega\right)
+\end{eqnarray*}
+
+\end_inset
+
+as 
+\begin_inset Formula $H$
+\end_inset
+
+ is not a quantum operator.
+ Then we use 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:spectralVacuum"
+
+\end_inset
+
+ (remembering that 
+\begin_inset Formula $\hat{a}^{\dagger}\left(\Omega\right)=\hat{a}\left(-\Omega\right)$
+\end_inset
+
+) to obtain 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle \hat{N}_{Y}\left(\Omega\right)\hat{N}_{Y}\left(\Omega^{'}\right)\right\rangle _{symm} & = & \left(2\pi\delta\left(\Omega-\Omega^{'}\right)\right)\vec{H}^{\dagger}\left(\Omega\right)\mathbb{S}_{vac}\vec{H}\left(\Omega\right)\\
+ & = & \left(2\pi\delta\left(\Omega-\Omega^{'}\right)\right)\frac{\vec{H}^{\dagger}\left(\Omega\right)\vec{H}\left(\Omega\right)}{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and for a squeezed state 
+\begin_inset Formula $\ket{r,\phi}$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\begin{eqnarray*}
+S_{Y}^{sqz}\left(\Omega\right) & = & \frac{\left|H_{c}\left(\Omega\right)\right|^{2}}{2}\left(\cosh2r+\sinh2r\cos2\phi\right)+\frac{\left|H_{s}\left(\Omega\right)\right|^{2}}{2}\left(\cosh2r-\sinh2r\cos2\phi\right)\\
+ &  & -Re\left[H_{c}\left(\Omega\right)H_{s}^{*}\left(\Omega\right)\right]\sinh2r\sin2\phi.
+\end{eqnarray*}
+
+\end_inset
+
+We might also be interested in calculting cross-correlations between 
+\begin_inset Formula $H$
+\end_inset
+
+ and some other quantity 
+\begin_inset Formula $Z$
+\end_inset
+
+ with quantum noise defined by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{N}_{Z}\left(\Omega\right) & = & \vec{Z}\hat{\vec{a}}\\
+\end{eqnarray*}
+
+\end_inset
+
+then simply 
+\begin_inset Formula 
+\begin{eqnarray*}
+2\pi S_{YZ}\left(\Omega\right)\delta\left(\Omega-\Omega^{'}\right) & = & \left\langle \hat{N}_{Y}\left(\Omega\right)\hat{N}_{Z}^{\dagger}\left(\Omega^{'}\right)\right\rangle _{symm}.\\
+\end{eqnarray*}
+
+\end_inset
+
+For example, for a vacuum state we obtain 
+\begin_inset Formula 
+\begin{eqnarray*}
+S_{YZ}^{vac}\left(\Omega\right) & = & \frac{H_{c}^{*}Z_{c}+H_{s}^{*}Z_{s}}{2}\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle \hat{N}_{Y}\left(\Omega\right)\hat{N}_{Z}^{\dagger}\left(\Omega^{'}\right)\right\rangle _{symm} & = & \left\langle \vec{H}^{\dagger}\left(\Omega\right)\hat{\vec{a}}\left(\Omega\right)\vec{Z}\left(\Omega^{'}\right)\hat{\vec{a}}^{\dagger}\left(\Omega^{'}\right)\right\rangle _{symm}\\
+ & = & \vec{H}^{\dagger}\left(\Omega\right)\left\langle \hat{\vec{a}}\left(\Omega\right)\hat{\vec{a}}^{\dagger}\left(\Omega^{'}\right)\right\rangle _{symm}\vec{Z}\left(\Omega\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and for a squeezed state 
+\begin_inset Formula $\ket{r,\phi}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+S_{YZ}^{sqz}\left(\Omega\right) & = & \frac{H_{c}^{*}Z_{c}}{2}\left(\cosh2r+\sinh2r\cos2\phi\right)+\frac{H_{s}^{*}Z_{s}}{2}\left(\cosh2r-\sinh2r\cos2\phi\right)\\
+ &  & -\frac{H_{s}^{*}Z_{c}+H_{c}^{*}Z_{s}}{2}\sinh2r\sin2\phi.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
