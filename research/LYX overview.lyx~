@@ -155,6 +155,11 @@ Comment
  with Alt+i n c 
 \end_layout
 
+\begin_layout Enumerate
+To enter an equation Ctrl+m.
+ Easy!
+\end_layout
+
 \begin_layout Section
 Outline of the document
 \end_layout
@@ -192,7 +197,11 @@ You can navigate the different sections in your document by clicking on
 \end_layout
 
 \begin_layout Section
-Equations
+Other stuff
+\end_layout
+
+\begin_layout Standard
+Check section 7.1 of additional features
 \end_layout
 
 \end_body
