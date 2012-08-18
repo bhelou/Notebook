@@ -152,7 +152,7 @@ Note
 \emph on
 Comment
 \emph default
- with Alt+i n c 
+ with Alt+i n c m
 \end_layout
 
 \begin_layout Section
@@ -192,7 +192,11 @@ You can navigate the different sections in your document by clicking on
 \end_layout
 
 \begin_layout Section
-Equations
+Other stuff
+\end_layout
+
+\begin_layout Standard
+Check section 7.1 of additional features
 \end_layout
 
 \end_body
