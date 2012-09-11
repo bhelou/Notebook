@@ -1,0 +1,5140 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage{listings}
+\lstset{ %
+  language=Matlab,                % the language of the code
+  basicstyle=\footnotesize,           % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\footnotesize,          % the size of the fonts that are used for the line-numbers
+  stepnumber=5,                   % the step between two line-numbers. If it's 1, each line 
+  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},      % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                   % show the filename of files included with \lstinputlisting;
+  % also try caption instead of title
+  numberstyle=\tiny\color{gray},        % line number style
+  keywordstyle=\color{blue},          % keyword style
+  commentstyle=\color{dkgreen},       % comment style
+  stringstyle=\color{mauve},         % string literal style
+  escapeinside={\%*}{*)},            % if you want to add a comment within your code
+  morekeywords={*,\dots}               % if you want to add more keywords to the set
+}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 3cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part
+Classical Mechanics
+\end_layout
+
+\begin_layout Section
+Elementary Principles
+\end_layout
+
+\begin_layout Subsection
+Work
+\end_layout
+
+\begin_layout Standard
+The work done by all forces in moving a system from an initial configuration
+ 1, to a final configuration 2 can be written to be (assuming that the masses
+ 
+\begin_inset Formula $m_{i}$
+\end_inset
+
+ of the constituent particles of the system are constants)
+\begin_inset Formula 
+\begin{eqnarray}
+W_{12} & = & \sum_{i}\int_{1}^{2}\mathbf{F}_{i}.d\mathbf{s}_{i}\label{eq:work}\\
+ & = & T_{2}-T_{1},\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $T$
+\end_inset
+
+ is the total kinetic energy of the system: 
+\begin_inset Formula 
+\begin{eqnarray*}
+T & = & \frac{1}{2}\sum_{i}m_{i}v_{i}^{2}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that
+\begin_inset Formula 
+\begin{eqnarray*}
+W_{12} & = & \sum_{i}\int_{1}^{2}\mathbf{F}_{i}.d\mathbf{s}_{i}\\
+ & = & \sum_{i}\int_{1}^{2}\mathbf{F}_{i}^{\left(e\right)}.d\mathbf{s}_{i}+\sum_{ij,i\neq j}\int_{1}^{2}\mathbf{F}_{ji}.d\mathbf{s}_{i}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{F}_{i}^{\left(e\right)}$
+\end_inset
+
+ stands for an external force and 
+\series bold
+
+\begin_inset Formula $\mathbf{F}_{ji}$
+\end_inset
+
+ 
+\series default
+is the internal force on the 
+\begin_inset Formula $i$
+\end_inset
+
+th particle due to the 
+\begin_inset Formula $j$
+\end_inset
+
+th particle and so we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d^{2}}{dt^{2}}\left(\sum_{i}m_{i}\mathbf{s}_{i}\right) & = & \sum_{i}\mathbf{F}_{i}^{\left(e\right)}+\sum_{ij}\mathbf{F}_{ji},\\
+ & = & \sum_{i}m_{i}\ddot{\mathbf{s}_{i}}=\sum_{i}m_{i}\dot{\mathbf{v}_{i}}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\sum_{ij}\mathbf{F}_{ji}=\sum_{ij,i\neq j}\mathbf{F}_{ij}$
+\end_inset
+
+ because 
+\begin_inset Formula $\mathbf{F}_{ii}=0$
+\end_inset
+
+, as a particle does not exert a force on itself, and where we have assumed
+ that the mass is a constant.
+ Hence, using that 
+\begin_inset Formula $d\mathbf{s}_{i}/dt=\mathbf{v}_{i}$
+\end_inset
+
+, we obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+W_{12} & = & \sum_{i}\int_{1}^{2}m_{i}\dot{\mathbf{v}_{i}}.\left(\mathbf{v}_{i}dt\right)\\
+ & = & \sum_{i}\int_{1}^{2}d\left(\frac{1}{2}m_{i}v_{i}^{2}\right)=T_{2}-T_{1}
+\end{eqnarray*}
+
+\end_inset
+
+because 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d\left(\frac{1}{2}m_{i}v_{i}^{2}\right)}{dt} & = & m_{i}\mathbf{v}_{i}.\dot{\mathbf{v}_{i}}\\
+\implies d\left(\frac{1}{2}m_{i}v_{i}^{2}\right) & = & m_{i}\mathbf{v}_{i}.\mathbf{\dot{v}}_{i}dt
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset CommandInset citation
+LatexCommand cite
+key "goldsteinM"
+
+\end_inset
+
+ Eq.
+ 1.29)
+\end_layout
+
+\begin_layout Subsection
+Conservative force
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+conservative
+\emph default
+ force is such that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\oint\mathbf{F}_{c}.d\mathbf{s} & = & 0,
+\end{eqnarray*}
+
+\end_inset
+
+i.e.
+ the work 
+\begin_inset Formula $W_{12}$
+\end_inset
+
+ (see Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:work"
+
+\end_inset
+
+) is the same for any physically possible path between points 1 and 2.
+ This condition is equivalent to stating that a conservative can be written
+ in the form 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{F}_{c} & = & -\nabla V\left(\mathbf{r}\right),
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $V$
+\end_inset
+
+ is usually called the 
+\emph on
+potential energy
+\emph default
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+This is a direct consequence of the Gradient Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:The Gradient Theorem"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Energy conservation theorem for conservative forces:
+\end_layout
+
+\begin_layout Standard
+Moreover, for a conservative system, 
+\begin_inset Formula $W_{12}$
+\end_inset
+
+ can also be calculated to be
+\begin_inset Formula 
+\begin{eqnarray*}
+W_{12} & = & V_{1}-V_{2},
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula $\mathbf{F}_{c}=-\nabla V\left(\mathbf{r}\right)$
+\end_inset
+
+, for some scalar function 
+\begin_inset Formula $V$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{F}_{c} & = & -\frac{dV}{d\mathbf{s}},\\
+\mbox{i.e. }\left(\mathbf{F}_{c}\right)_{i} & = & -\partial_{s_{i}}V
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $d\mathbf{s}$
+\end_inset
+
+ is a differential path length.
+ Hence, we can write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{F}.d\mathbf{s} & = & -dV\\
+\implies W_{12} & = & \int_{1}^{2}\mathbf{F}.d\mathbf{s}=-\left(V_{2}-V_{1}\right)\\
+ & = & V_{1}-V_{2}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+which implies that energy is conserved for for a conservative system*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+From the above equation, we have that 
+\begin_inset Formula $W_{12}=V_{1}-V_{2}$
+\end_inset
+
+ and from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:work"
+
+\end_inset
+
+, we have that 
+\begin_inset Formula $W_{12}=T_{2}-T_{1}$
+\end_inset
+
+.
+ Combing the two we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+V_{1}-V_{2} & = & T_{2}-T_{1}\\
+\implies V_{1}+T_{1} & = & T_{2}+V_{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset CommandInset citation
+LatexCommand cite
+key "goldsteinM"
+
+\end_inset
+
+ Eq.
+ 1.17)
+\end_layout
+
+\begin_layout Section
+Green function Physics
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Simple-treatment-classicalGreen"
+
+\end_inset
+
+Simple treatment
+\end_layout
+
+\begin_layout Standard
+Indeed, take a classical problem:
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{D}\left[x\right] & = & 0,
+\end{eqnarray*}
+
+\end_inset
+
+where for example, 
+\begin_inset Formula $\mathcal{D}=md^{2}/dt^{2}$
+\end_inset
+
+ for a free mass and 
+\begin_inset Formula $\mathcal{D}=md^{2}/dt^{2}+m\omega_{0}^{2}$
+\end_inset
+
+ for a SHO.
+ Then if the system experiences an external force 
+\begin_inset Formula $G$
+\end_inset
+
+ then we have that 
+\begin_inset Formula $\mathcal{D}\left[x\right]=G$
+\end_inset
+
+ and so we can write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+x & = & \mathcal{D}^{-1}\left[G\right]\\
+ & \equiv & \int_{t_{0}}^{t}\chi\left(t-t'\right)G\left(t^{'}\right),
+\end{eqnarray*}
+
+\end_inset
+
+where we have denoted the green's function by 
+\begin_inset Formula $\chi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+For a general linear differential operator 
+\begin_inset Formula $\mathcal{D}=\sum_{k=0}^{n}a_{k}d^{k}/dt^{k}$
+\end_inset
+
+, the green's function has to satisfy the following equations and boundary
+ conditions (that we choose):
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{D}\chi\left(t-t^{'}\right) & = & \delta\left(t-t^{'}\right),\quad\chi\left(t-t^{'}\right)|_{t\rightarrow t^{'}}=0,...\\
+...\partial_{t}^{n-2}\chi|_{t\rightarrow t^{'}} & = & 0,\quad...\partial_{t}^{n-1}\chi|_{t\rightarrow t^{'}}0...=\frac{1}{a_{n}}
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Indeed, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{D}x & = & \mathcal{D}\mathcal{D}^{-1}\left[G\right]=\int_{t_{0}}^{t}dt^{'}\mathcal{D}\left[\chi\left(t-t'\right)G\left(t^{'}\right)\right]\\
+ & = & \int_{t_{0}}^{t}\delta\left(t-t^{'}\right)G\left(t^{'}\right)dt^{'}=G\left(t\right)
+\end{eqnarray*}
+
+\end_inset
+
+Now, we have to check what boundary conditions the proposed solution 
+\series bold
+
+\begin_inset Formula $\int_{t_{0}}^{t}\chi\left(t-t'\right)G\left(t^{'}\right)$
+\end_inset
+
+ 
+\series default
+can satisfy and choose one of them.
+
+\series bold
+ 
+\series default
+Since 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ differential terms, a unique solution has to verify 
+\begin_inset Formula $n$
+\end_inset
+
+ boundary conditions.
+ Now,
+\begin_inset Formula 
+\begin{eqnarray*}
+\int_{t-\epsilon}^{t}dt_{1}\mathcal{D}\chi\left(t-t_{1}\right) & = & \int_{t-\epsilon}^{t}\delta\left(t-t_{1}\right)dt_{1}=-1\mbox{(because of bounds of integration)},\\
+ & = & \int_{t-\epsilon}^{t}dt_{1}\left(a_{n-1}\partial_{t}^{n-1}\chi\left(t-t_{1}\right)+a_{n}\partial_{t}^{n}\chi\left(t-t_{1}\right)\right)\\
+ & = & a_{n-1}\left(\partial_{t}^{n-2}\chi\left(0\right)-\partial_{t}^{n-2}\chi\left(\epsilon\right)\right)+a_{n}\left(\partial_{t}^{n-1}\chi\left(0\right)-\partial_{t}^{n-1}\chi\left(\epsilon\right)\right)\\
+ & = & a_{n}\left(\partial_{t}^{n-1}\chi\left(0\right)-\partial_{t}^{n-1}\chi\left(\epsilon\right)\right)
+\end{eqnarray*}
+
+\end_inset
+
+where we choose 
+\begin_inset Formula $\chi$
+\end_inset
+
+ to be continuous at all levels up to 
+\begin_inset Formula $\partial_{t}^{n-1}$
+\end_inset
+
+ (i.e.
+ 
+\begin_inset Formula $\partial_{t}^{j}\chi=0\quad\forall j\in\left[0,n-2\right]$
+\end_inset
+
+).
+ The above equation can be satisfied if we choose 
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{\epsilon\rightarrow0}\partial_{t}^{n-1}\chi\left(\epsilon\right) & = & \partial_{t}^{n-1}\chi\left(0\right)+\frac{1}{a_{n}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+(Inspired from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Danilishin2012"
+
+\end_inset
+
+ equation below (132))
+\end_layout
+
+\begin_layout Section
+Brownian Motion
+\end_layout
+
+\begin_layout Subsection
+Continuous Markov process and the Langevin equation
+\end_layout
+
+\begin_layout Standard
+A continuous Markov Process (continuous memoryless stochastic process) 
+\begin_inset Formula $X$
+\end_inset
+
+ has to have the form ((standard form)
+\series bold
+ Langevin equation
+\series default
+):
+\begin_inset Formula 
+\begin{eqnarray*}
+X\left(t+dt\right) & = & X\left(t\right)+A\left(X\left(t\right),t\right)dt+D\left(X\left(t\right),t\right)^{1/2}N\left(t\right)\left(dt\right)^{1/2},\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $A$
+\end_inset
+
+ is called the drift function, 
+\begin_inset Formula $D$
+\end_inset
+
+ is called the diffusion function, and 
+\begin_inset Formula $N\left(t\right)$
+\end_inset
+
+is a temporal uncorrelated unit normal random variable, i.e., 
+\begin_inset Formula $N\left(t\right)=\mbox{\textbf{N}}\left(0,1\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $N\left(t\right)$
+\end_inset
+
+ is statistically independent of 
+\begin_inset Formula $N\left(t^{'}\right)$
+\end_inset
+
+ if 
+\begin_inset Formula $t\neq t^{'}$
+\end_inset
+
+ (proof is given in the appendix of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gillespie96"
+
+\end_inset
+
+).
+ The above equation can also be written in differential form by noticing
+ that 
+\begin_inset Formula $N\left(t\right)/dt^{1/2}=\mbox{\textbf{N}}\left(0,dt^{-1}\right)$
+\end_inset
+
+.
+ Defining the Gaussian white noise
+\series bold
+ 
+\series default
+process by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Gamma\left(t\right) & = & \lim_{dt\rightarrow0}\mbox{\textbf{N}}\left(0,1/dt\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+to obtain that 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{dX\left(t\right)}{dt} & = & A\left(X\left(t\right),t\right)+D^{1/2}\left(X\left(t\right),t\right)\Gamma\left(t\right).\label{eq:white noise langevin}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+This is the 
+\series bold
+white noise form of the Langevin equation
+\series default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gillespie96"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Langevin's approach to Brownian motion
+\end_layout
+
+\begin_layout Standard
+Hypothesize that the net force exerted on a Brownian particle in the 
+\begin_inset Formula $x$
+\end_inset
+
+ direction at time 
+\begin_inset Formula $t$
+\end_inset
+
+ by surrounding fluid molecules can be resolved into two components: (i)
+ a dissipative drag force 
+\begin_inset Formula $-\gamma v\left(t\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $v$
+\end_inset
+
+ is the 
+\begin_inset Formula $x$
+\end_inset
+
+ component of velocity and 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ the drag coefficient, and (ii) a zero-mean, temporally uncorrelated randomly
+ fluctuating force 
+\begin_inset Formula $F\left(t\right)$
+\end_inset
+
+, which is assumed to be statistically independent of 
+\begin_inset Formula $v\left(t^{'}\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $t^{'}\leq t$
+\end_inset
+
+ (a force 
+\begin_inset Formula $F$
+\end_inset
+
+ in the future is not going to affect 
+\begin_inset Formula $v$
+\end_inset
+
+ at the present time).
+ Newton's equations give (after dividing by the mass 
+\begin_inset Formula $m$
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{eqnarray}
+\dot{v} & = & -\frac{1}{m/\gamma}v+m^{-1}F\left(t\right).\label{eq:velocityEqu}
+\end{eqnarray}
+
+\end_inset
+
+If we define 
+\begin_inset Formula $\tau\equiv m/\gamma$
+\end_inset
+
+ and require that 
+\begin_inset Formula $F\left(t\right)=mc^{1/2}\Gamma\left(t\right)$
+\end_inset
+
+, then 
+\begin_inset Formula $\left(\ref{eq:velocityEqu}\right)$
+\end_inset
+
+ resembles the white noise Langevin equation (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:white noise langevin"
+
+\end_inset
+
+): 
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{v} & = & -\frac{1}{\tau}v+c^{1/2}\Gamma\left(t\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+and specifically the Ornstein-Uhlenbeck (O-U) process (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gillespie96"
+
+\end_inset
+
+ section D).
+ Note that the form of 
+\begin_inset Formula $F\left(t\right)$
+\end_inset
+
+ is not an additional assumption because the definition of 
+\begin_inset Formula $F\left(t\right)$
+\end_inset
+
+ as a zero mean function that is uncorrelated with 
+\begin_inset Formula $v\left(t^{'}\right)$
+\end_inset
+
+ for 
+\begin_inset Formula $t^{'}\leq t$
+\end_inset
+
+ implies a continuous Markov process (
+\begin_inset Formula $v$
+\end_inset
+
+ has to be a 'continous' random variable) of the form 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:white noise langevin"
+
+\end_inset
+
+.
+ To find the expressions of 
+\begin_inset Formula $\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ we note that the velocity of the particle must be Maxwell-Boltzmann distributed
+: 
+\begin_inset Formula $v\left(t\rightarrow\infty\right)=\mbox{\textbf{N}}\left(0,k_{B}T/m\right)$
+\end_inset
+
+.
+ Moreover, the displacement of the particle must exhibit the experimentally
+ diffuse observed behavior: 
+\begin_inset Formula 
+\begin{eqnarray}
+\left\langle X^{2}\left(t\rightarrow\infty\right)\right\rangle  & = & 2D\times\left(t-t_{0}\right).\label{eq:diffusion brownian motion}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+(note that this is mathematically true if 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is very small from a macroscopic viewpoint - just invoke the zero-tau theorem
+ - 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gillespie96"
+
+\end_inset
+
+ section E).
+ These observations have to match the solution to an O-U process, obtaining
+ that 
+\begin_inset Formula $\tau=DM/k_{B}T$
+\end_inset
+
+ and 
+\begin_inset Formula $c=2\left(k_{B}T/m\right)^{2}/D$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gillespie96"
+
+\end_inset
+
+.
+ Recalling the definition of 
+\begin_inset Formula $\tau$
+\end_inset
+
+ we obtain that 
+\begin_inset Formula $\gamma=k_{B}T/D$
+\end_inset
+
+.
+ Moreover, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+F\left(t\right) & = & \left(2k_{B}T\gamma\right)^{1/2}\Gamma\left(t\right).\\
+\end{eqnarray*}
+
+\end_inset
+
+This is called the 
+\series bold
+fluctuation dissipation formula
+\series default
+: the fluctuating force is an increasing function of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and vanishes IFF 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ vanishes.
+ The above equation implies that 
+\begin_inset Formula $\left\langle F\left(t\right)F\left(t+t^{'}\right)\right\rangle =2k_{B}T\gamma\delta\left(t^{'}\right)$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\gamma & = & \frac{1}{2k_{B}T}\intop_{-\infty}^{\infty}\left\langle F\left(t\right)F\left(t+t^{'}\right)\right\rangle dt^{'}.\\
+\end{eqnarray*}
+
+\end_inset
+
+Another important integral equation is the
+\emph on
+ auto-covariance formula for the diffusion coefficient
+\emph default
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+D & = & \intop_{0}^{\infty}\left[\lim_{t\rightarrow\infty}\left\langle v\left(t\right)v\left(t+t^{'}\right)\right\rangle \right]dt^{'}.\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+This follows from using the O-U theory to calculate that the equilibrium
+ auto-covariance formula for the velocity is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{t\rightarrow\infty}\left\langle V\left(t\right)V\left(t+t^{'}\right)\right\rangle  & = & \frac{D}{\tau}e^{-t^{'}/\tau}.\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
+\series default
+We can also calculate the equilibrium 
+\emph on
+mean power dissipated
+\emph default
+ by the Brownian particle via the three orthogonal components of the drag
+ force: 
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{eq} & = & 3\left\langle \left[\gamma v\left(\infty\right)\right]v\left(\infty\right)\right\rangle =\frac{3\gamma k_{B}T}{m}.\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+In the last step we have used the equipartition theorem.
+ The first equality follows from the definition of power:
+\begin_inset Formula 
+\begin{eqnarray*}
+P\left(t\right) & = & \frac{dW}{dt}=\frac{d}{dt}\left(\intop_{C}F.dx\right)=\frac{d}{dt}\left(\intop F\left(t\right).v\left(t\right)dt\right)\\
+ & = & F.v,
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $C$
+\end_inset
+
+ is the path and the third equality follows from 
+\begin_inset Formula $dx=v\left(t\right)dt$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
+\series default
+We can also use the O-U theory to obtain the frequency spectrum of the equilibri
+um power: 
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{eq}\left(\nu\right) & = & \frac{12k_{B}T}{1+\left(2\pi m\nu/\gamma\right)^{2}}\quad\nu\geq0.\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Lagrangian
+\end_layout
+
+\begin_layout Subsection
+Equations of Motion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}\frac{\partial L}{\partial\dot{q}_{i}} & = & \frac{\partial L}{\partial q_{i}}\qquad\left(i=1,2,...\right),\label{eq:EOM lagrangian}
+\end{eqnarray}
+
+\end_inset
+
+where the 
+\begin_inset Formula $q_{i}\left(t\right)$
+\end_inset
+
+ are the generalized coordinates of the system.
+\end_layout
+
+\begin_layout Subsubsection
+Adding a friction term to the Lagrangian
+\end_layout
+
+\begin_layout Standard
+To add friction terms to the Lagrangian, you add an extra term to the Lagrange
+ equations: 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}\left(\frac{\partial L}{\partial\dot{q}_{i}}\right)-\frac{\partial L}{\partial q_{i}} & = & -\frac{\partial F}{\partial\dot{q}_{i}}\qquad\left(i=1,2,...\right)\label{eq:Lagrange EOM with friction}
+\end{eqnarray}
+
+\end_inset
+
+with 
+\begin_inset Formula 
+\begin{eqnarray*}
+F & = & \frac{1}{2}\sum_{ik}\alpha_{ik}\dot{x}_{i}\dot{x}_{k},
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha_{ik}=\alpha_{ki}$
+\end_inset
+
+ are positive constants*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+For a quasi heuristic derivation of the above EOMs, see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:System-with-many-DOFs"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ For more background on friction, see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:frictionIntro"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Quote
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+25 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsection
+Energy defined in terms of the Lagrangian
+\end_layout
+
+\begin_layout Standard
+The energy of a system is defined to be 
+\begin_inset Formula 
+\begin{eqnarray}
+E & = & \sum_{i}\dot{q}_{i}\frac{\partial L_{0}}{\partial\dot{q}_{i}}-L_{0},\label{eq:energy lagrangian}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $L_{0}$
+\end_inset
+
+ is the Lagrangian of the system only, with terms due to the environment,
+ such as interaction terms, neglected^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Take the following lagrangian as an example:
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & T-U+xF\left(t\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $T$
+\end_inset
+
+ represents the kinetic energy of the system and 
+\begin_inset Formula $U$
+\end_inset
+
+ its potential energy.
+ Moreover, 
+\begin_inset Formula $x$
+\end_inset
+
+ is some generalized coordinate of the system and 
+\begin_inset Formula $F$
+\end_inset
+
+ an external force.
+ Hence, 
+\begin_inset Formula $xF$
+\end_inset
+
+ is like an interaction term and 
+\begin_inset Formula $L_{0}=T-U$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Moreover, the rate of change in energy is given by 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{dE}{dt} & = & -\frac{\partial L}{\partial t}+\frac{d}{dt}\left[\left(L-L_{0}\right)-\dot{q}_{i}\frac{\partial\left(L-L_{0}\right)}{\partial\dot{q}_{i}}\right].\label{eq:energy change lagrangian}
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{dL}{dt} & = & \partial_{t}L+\sum_{i}\frac{\partial L}{\partial q_{i}}\frac{\partial q_{i}}{\partial t}+\sum_{i}\frac{\partial L}{\partial\dot{q}_{i}}\frac{\partial\dot{q}_{i}}{\partial t}\\
+ & = & \partial_{t}L+\sum_{i}\frac{\partial L}{\partial q_{i}}\dot{q}_{i}+\sum_{i}\frac{\partial L}{\partial\dot{q}_{i}}\ddot{q}_{i}\\
+ & = & \partial_{t}L+\sum_{i}\left(\frac{d}{dt}\frac{\partial L}{\partial\dot{q}_{i}}\right)\dot{q}_{i}+\sum_{i}\frac{\partial L}{\partial\dot{q}_{i}}\ddot{q}_{i}
+\end{eqnarray*}
+
+\end_inset
+
+where we have used that 
+\begin_inset Formula $\frac{d}{dt}\frac{\partial L}{\partial\dot{q}_{i}}=\frac{\partial L}{\partial q_{i}}\qquad\left(i=1,2,...\right)$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{dL}{dt} & = & \left(\partial_{t}L\right)+\sum_{i}\frac{d}{dt}\left(\dot{q}_{i}\frac{\partial L}{\partial\dot{q}_{i}}\right)\\
+\implies\frac{d}{dt}\left(\sum\dot{q}_{i}\frac{\partial L}{\partial\dot{q}_{i}}-L\right) & = & -\left(\partial_{t}L\right)
+\end{eqnarray*}
+
+\end_inset
+
+Now, the energy is defined as 
+\begin_inset Formula $\sum\dot{q}_{i}\frac{\partial L^{0}}{\partial\dot{q}_{i}}-L^{0}$
+\end_inset
+
+ so since
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum\dot{q}_{i}\frac{\partial L}{\partial\dot{q}_{i}}-L & = & \sum\left[\left(\dot{q}_{i}\frac{\partial L_{0}}{\partial\dot{q}_{i}}-L_{0}\right)+\dot{q}_{i}\frac{\partial\left(L-L_{0}\right)}{\partial\dot{q}_{i}}-\left(L-L_{0}\right)\right]\\
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{dE}{dt} & = & \frac{d}{dt}\left[\left(L-L_{0}\right)-\dot{q}_{i}\frac{\partial\left(L-L_{0}\right)}{\partial\dot{q}_{i}}\right]-\partial_{t}L\\
+ & =
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+and so if the Lagrangian does not depend explicitly on time then energy
+ is conserved.
+\end_layout
+
+\begin_layout Standard
+For a Lagrangian of the form 
+\begin_inset Formula $L=T\left(q,\dot{q}\right)-U\left(q\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $T$
+\end_inset
+
+ is quadratic function of the velocities (i.e.
+ 
+\begin_inset Formula $T=\frac{1}{2}\sum_{ik}a_{ik}\left(q\right)\dot{q}_{i}\dot{q}_{k}$
+\end_inset
+
+) then 
+\begin_inset Formula $E=T+U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+6 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsubsection
+Loss of energy, including friction
+\end_layout
+
+\begin_layout Standard
+Using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:energy lagrangian"
+
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{dE}{dt} & = & -2F-\frac{\partial L}{\partial t}+\frac{d}{dt}\left[\left(L-L_{0}\right)-\dot{q}_{i}\frac{\partial\left(L-L_{0}\right)}{\partial\dot{q}_{i}}\right],\label{eq:loss energy friction}
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:energy lagrangian"
+
+\end_inset
+
+ that
+\begin_inset Formula 
+\begin{eqnarray*}
+E & = & \sum_{i}\dot{q}_{i}\frac{\partial L^{0}}{\partial\dot{q}_{i}}-L^{0}.\\
+\end{eqnarray*}
+
+\end_inset
+
+We will assume that 
+\begin_inset Formula $L=L^{0}$
+\end_inset
+
+ (the effects of an external force or a time dependence in the Lagrangian
+ can be added at the end of the analysis), so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\implies\frac{dE}{dt} & = & \sum_{i}\frac{d}{dt}\left(\dot{q}_{i}\frac{\partial L}{\partial\dot{q}_{i}}-L\right)\\
+ & = & \sum_{i}\left(\ddot{q}_{i}\frac{\partial L}{\partial\dot{q}_{i}}+\dot{q}_{i}\left(\frac{d}{dt}\frac{\partial L}{\partial\dot{q}_{i}}\right)-\frac{\partial L}{\partial q_{i}}\frac{\partial q_{i}}{\partial t}-\frac{\partial L}{\partial\dot{q}_{i}}\frac{\partial\dot{q}_{i}}{\partial t}-\frac{\partial L}{\partial t}\right)\\
+ & = & \sum_{i}\left(\dot{q}_{i}\left(\frac{d}{dt}\frac{\partial L}{\partial\dot{q}_{i}}\right)-\frac{\partial L}{\partial q_{i}}\dot{q}_{i}\right)=\sum_{i}\left(\dot{q}_{i}\left(\frac{\partial L}{\partial q_{i}}-\frac{\partial F}{\partial\dot{q}_{i}}\right)-\frac{\partial L}{\partial q_{i}}\dot{q}_{i}\right)\\
+ & = & -\sum_{i}\dot{q}_{i}\frac{\partial F}{\partial\dot{q}_{i}}\\
+ & = & -\frac{1}{2}\sum_{ik}\alpha_{ik}\dot{q}_{i}\dot{q}_{k}-\frac{1}{2}\sum_{ik}\alpha_{ki}\dot{q}_{i}\dot{q}_{k}\\
+ & = & -\sum_{ik}\alpha_{ik}\dot{q}_{i}\dot{q}_{k}=-2F
+\end{eqnarray*}
+
+\end_inset
+
+because 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is symmetric.
+ We have also used that
+\begin_inset Formula 
+\begin{eqnarray*}
+F & = & \frac{1}{2}\sum_{ik}\alpha_{ik}\dot{x}_{i}\dot{x}_{k},
+\end{eqnarray*}
+
+\end_inset
+
+A SIMPLER way of showing that 
+\begin_inset Formula $\sum_{i}\dot{q}_{i}\frac{\partial F}{\partial\dot{q}_{i}}=2F$
+\end_inset
+
+ would have been to use the fact that 
+\begin_inset Formula $F$
+\end_inset
+
+ is a homogeneous function of order 
+\begin_inset Formula $2$
+\end_inset
+
+ and so, using Euler's theorem (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Euler-Homogeneous-function-theorem"
+
+\end_inset
+
+), we have that 
+\begin_inset Formula $F$
+\end_inset
+
+ satisfies 
+\begin_inset Formula 
+\begin{eqnarray*}
+2F & = & \sum_{i}x_{i}\frac{\partial F}{\partial x_{i}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $F$
+\end_inset
+
+ is the dissipative function defined in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dissipative function"
+
+\end_inset
+
+.
+ 
+\begin_inset Quotes erd
+\end_inset
+
+Since dissipative processes lead to a loss of energy, it follows that 
+\begin_inset Formula $F>0$
+\end_inset
+
+, i.e.
+ the quadratic form 
+\begin_inset Formula $F=\frac{1}{2}\sum_{ik}\alpha_{ik}\dot{x}_{i}\dot{x}_{k}$
+\end_inset
+
+ is positive definite
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Quote
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+25 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsection
+The Lagrangian for a system of particles
+\end_layout
+
+\begin_layout Subsubsection
+Closed system
+\end_layout
+
+\begin_layout Standard
+The Lagrangian for a 
+\emph on
+closed 
+\emph default
+system of particles^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+i.e.
+ a system of particles which interact with one another but with no other
+ bodies
+\end_layout
+
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & \sum_{a}\frac{1}{2}mv_{a}^{2}-U\left(\mathbf{r}_{1},\mathbf{r}_{2},...\right),
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{r}_{a}$
+\end_inset
+
+ is the position vector of the 
+\begin_inset Formula $a$
+\end_inset
+
+th particle, 
+\begin_inset Formula $\mathbf{v}_{a}=d\mathbf{r}_{a}/dt$
+\end_inset
+
+ and 
+\begin_inset Formula $U$
+\end_inset
+
+ is a function, called the 
+\emph on
+potential energy 
+\emph default
+of the system, that describes the interaction between the different particles.
+ The first term is called the 
+\emph on
+kinetic energy 
+\emph default
+of the system.
+ The equations of motion of such a system are given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{dt}\frac{\partial L}{\partial\mathbf{v}_{a}} & = & \frac{\partial L}{\partial\mathbf{r}_{a}}\qquad\left(a=1,2,...\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+5 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsection
+Comments
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Lagrangian-unaffected-by-time"
+
+\end_inset
+
+Lagrangian unaffected by a total derivative with respect to time
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula 
+\begin{eqnarray*}
+L^{'}\left(q,\dot{q},t\right) & = & L\left(q,\dot{q},t\right)+\frac{d}{dt}f\left(q,t\right),
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $q\left(t\right)$
+\end_inset
+
+ is a shorthand for a set of generalized coordinates.
+ Then 
+\begin_inset Formula $L^{'}$
+\end_inset
+
+ and 
+\begin_inset Formula $L$
+\end_inset
+
+ lead to the same EOMs*.
+ Hence, the Lagrangian is defined only to within an additive total time
+ derivative of any function of co-ordinates and time
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+This is because the action for 
+\begin_inset Formula $L^{'}$
+\end_inset
+
+ can be written to be
+\begin_inset Formula 
+\begin{eqnarray*}
+S^{'} & = & \int_{t_{1}}^{t_{2}}L^{'}dt=S+\int_{t_{1}}^{t_{2}}\frac{df}{dt}dt=S+f\left(q\left(t_{2}\right),t_{2}\right)-f\left(q\left(t_{1}\right),t_{1}\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+The principle of least action results in the same results for both actions
+ because it is a minimization problem and so 
+\begin_inset Formula $f\left(q\left(t_{2}\right),t_{2}\right)-f\left(q\left(t_{1}\right),t_{1}\right)$
+\end_inset
+
+ gives zero on variation, so that the conditions 
+\begin_inset Formula $\delta S^{'}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta S=0$
+\end_inset
+
+ are equivalent.
+ Hence, 
+\begin_inset Formula $L^{'}$
+\end_inset
+
+ and 
+\begin_inset Formula $L$
+\end_inset
+
+ lead to the same equations of motion.
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+(Eq.
+ 2.8 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Section
+Small Oscillations
+\end_layout
+
+\begin_layout Subsection
+Free Oscillations with no damping
+\end_layout
+
+\begin_layout Subsubsection
+Oscillations of systems with more than one degree of freedom
+\end_layout
+
+\begin_layout Standard
+Let the potential energy of the system, 
+\begin_inset Formula $U$
+\end_inset
+
+, be a function of the generalized coordinates 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ (
+\begin_inset Formula $i=1,2,...,s$
+\end_inset
+
+) and have a minimum at 
+\begin_inset Formula $q_{i}=q_{i0}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x_{i}=q_{i}-q_{i0}$
+\end_inset
+
+, and expand 
+\begin_inset Formula $U$
+\end_inset
+
+ as function of the 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ as far as the quadratic terms, to obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+U & = & \frac{1}{2}\sum_{ik}k_{ik}x_{i}x_{k}+O\left(x^{3}\right),
+\end{eqnarray*}
+
+\end_inset
+
+where we take that 
+\begin_inset Formula $U\left(0\right)=0$
+\end_inset
+
+.
+ The kinetic energy is given in the general form 
+\begin_inset Formula 
+\begin{eqnarray*}
+T & = & \frac{1}{2}\sum_{ik}a_{ik}\left(q\right)\dot{q}_{i}\dot{q}_{k}.
+\end{eqnarray*}
+
+\end_inset
+
+Since we are working with small oscillations, to first order, we can replace
+ 
+\begin_inset Formula $q$
+\end_inset
+
+ with 
+\begin_inset Formula $q_{i0}$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+This is just a taylor expansion about the equilibrium points 
+\begin_inset Formula $a_{ik}\left(q\right)=a_{ik}\left(q_{i0}\right)+....$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ By letting 
+\begin_inset Formula $a_{ik}\left(q_{0}\right)=m_{ik}$
+\end_inset
+
+, we obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & \frac{1}{2}\sum_{ik}\left(m_{ik}\dot{x}_{i}\dot{x}_{k}-k_{ik}x_{i}x_{k}\right)+O\left(x^{3}\right).\\
+\end{eqnarray*}
+
+\end_inset
+
+The equations of motion are given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k}m_{ik}\ddot{x}_{k}+\sum_{k}k_{ik}x_{k} & = & 0\qquad\left(i=1,2,...,s\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have 
+\begin_inset Formula 
+\begin{eqnarray*}
+dL & = & \frac{1}{2}m\sum_{ik}\left(m_{ik}\dot{x}_{i}d\dot{x}_{k}+m_{ik}\dot{x}_{k}d\dot{x}_{i}-k_{ik}x_{i}dx_{k}-k_{ik}x_{k}dx_{i}\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+We then use that 
+\begin_inset Formula $m_{ik}=m_{ki}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{ik}=k_{ki}$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+as if 
+\begin_inset Formula $a_{ik}\left(q\right)\neq a_{ki}\left(q\right)$
+\end_inset
+
+ are different then we just let 
+\begin_inset Formula $a_{ik,new}\left(q\right)\equiv a_{ik}\left(q\right)+a_{ki}\left(q\right)$
+\end_inset
+
+ as we have that 
+\begin_inset Formula $T=\frac{1}{2}\sum_{ik}a_{ik}\left(q\right)\dot{q}_{i}\dot{q}_{k}=\sum_{ik}\left(a_{ik}\left(q\right)+a_{ki}\left(q\right)\right)\dot{q}_{i}\dot{q}_{k}$
+\end_inset
+
+ and then we define 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a_{ik,new}\left(q\right)\equiv\left(b_{ik}\left(q\right)+b_{ki}\left(q\right)\right)/2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+The same analysis can be conducted for 
+\begin_inset Formula $k$
+\end_inset
+
+ .
+\end_layout
+
+\end_inset
+
+ .
+ Hence, 
+\begin_inset Formula 
+\begin{eqnarray*}
+dL & = & \sum_{k}\left(m_{ik}\dot{x}_{k}d\dot{x}_{i}-k_{ik}x_{k}dx_{i}\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+and so 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{dt}\frac{\partial L}{\partial\dot{x}_{i}} & = & \sum_{k}m_{ik}\frac{d}{dt}\dot{x}_{k}\\
+\frac{\partial L}{\partial x_{i}} & = & -\sum_{k}k_{ik}x_{k}
+\end{eqnarray*}
+
+\end_inset
+
+Finally use Lagrange's equations
+\begin_inset Formula $\frac{d}{dt}\frac{\partial L}{\partial\dot{q}_{i}}=\frac{\partial L}{\partial q_{i}}$
+\end_inset
+
+ (Eq.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:EOM lagrangian"
+
+\end_inset
+
+) to obtain the desired EOMs.
+\end_layout
+
+\end_inset
+
+Then try the ansatz 
+\begin_inset Formula $x_{k}\left(t\right)=A_{k}\exp\left(i\omega t\right)$
+\end_inset
+
+ to obtain that
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k}\left(-\omega^{2}m_{ik}+k_{ik}\right)A_{k} & = & 0,
+\end{eqnarray*}
+
+\end_inset
+
+which has non-zero solutions, if the determinant of the coefficients, 
+\begin_inset Formula $\left|k_{ik}-\omega^{2}m_{ik}\right|$
+\end_inset
+
+, vanishes.
+ The resultant 
+\begin_inset Formula $s$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+there are 
+\begin_inset Formula $s$
+\end_inset
+
+ of them because the equation is of degree 
+\begin_inset Formula $s$
+\end_inset
+
+ and the index 
+\begin_inset Formula $i,k$
+\end_inset
+
+ go from 
+\begin_inset Formula $1$
+\end_inset
+
+ to 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ real*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+There is a physical reason for this: if 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is imaginary then the oscillations will be damped and energy will not be
+ conserved
+\end_layout
+
+\end_inset
+
+ positive roots, 
+\begin_inset Formula $\omega_{j}^{2}$
+\end_inset
+
+, are called the 
+\emph on
+eigenfrequencies
+\emph default
+ of the system and with them are associated the normal modes, 
+\begin_inset Formula $\Theta\propto re\left[\exp\left(i\omega_{a}t\right)\right]$
+\end_inset
+
+, of the system, which can be treated as the normal-coordinates of the system
+ (
+\begin_inset Formula $L=\sum_{a}\frac{1}{2}m_{a}\left(\dot{\Theta}_{a}^{2}-\omega_{a}^{2}\Theta_{a}^{2}\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $m_{a}$
+\end_inset
+
+ are positive constants) with EOMs given by 
+\begin_inset Formula 
+\begin{eqnarray}
+m_{a}\ddot{\Theta}_{a}+k_{a}\Theta_{a} & = & 0\qquad\left(a=1,2,...,s\right)\label{eq:EOMs systems many DOF}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+and 
+\begin_inset Formula $k_{a}=m_{a}\omega_{a}^{2}$
+\end_inset
+
+ [[TODO: Expand and elaborate on last few sentences + add forced oscillations]]
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+23 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsection
+Free Oscillations with damping
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:frictionIntro"
+
+\end_inset
+
+Introduction from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+\begin_inset Quotes eld
+\end_inset
+
+When a body moves in a medium, the latter exerts a resistance which tends
+ to retard the motion.
+ The energy of the moving body is finally dissipated by being converted
+ into heat.
+ Motion under these conditions is no longer a purely mechanical process,
+ and allowance must be made for the motion of the medium itself and for
+ the internal thermal state of both the medium and the body.
+ In particular, we cannot in general assert that the acceleration of a moving
+ body is a function only of its co-ordinates and velocity at the instant
+ considered; that is, there are no equations of motion in the mechanical
+ sense.
+ 
+\bar under
+Thus the problem of the motion of a body in a medium is not one of mechanics
+\bar default
+.
+ There exists, however, a class of cases where motion in a medium can be
+ approximately described by including certain additional terms in the mechanical
+ equations of motion.
+ Such cases include oscillations with frequencies small compared with those
+ of the dissipative processes in the medium[[TODO: What is (order of magnitude)
+ the timescale of dissipative processes for say macroscopic mechanical systems?]
+].
+ When this condition is fulfilled we may regard the body as being acted
+ on by a force of 
+\emph on
+friction
+\emph default
+ which depends (for a given homogeneous medium) only on its velocity.
+ 
+\end_layout
+
+\begin_layout Quote
+If, in addition, this velocity is sufficiently small, then the frictional
+ force can be expanded in powers of the velocity.
+ The zero-order term in the expansion is zero, since no friction acts on
+ a body at rest, and so the first non-vanishing term is proportional to
+ the velocity.
+ Thus t
+\bar under
+he generalized frictional force 
+\begin_inset Formula $f_{fr}$
+\end_inset
+
+ acting on a system executing small oscillations in one dimension (co-ordinate
+ 
+\begin_inset Formula $x$
+\end_inset
+
+) may be written 
+\begin_inset Formula $f_{fr}=-\alpha\dot{x}$
+\end_inset
+
+
+\bar default
+, where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a positive coefficient and the minus sign indicates that the force acts
+ in the direction opposite to that of the velocity.
+ 
+\begin_inset Quotes erd
+\end_inset
+
+ (
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+25 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsubsection
+Description
+\end_layout
+
+\begin_layout Standard
+Adding the generalized frictional force 
+\begin_inset Formula $f_{fr}=-\alpha\dot{x}$
+\end_inset
+
+ (see sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:frictionIntro"
+
+\end_inset
+
+ for physical derivation of 
+\begin_inset Formula $f_{fr}$
+\end_inset
+
+) to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:EOMs systems many DOF"
+
+\end_inset
+
+ with 
+\begin_inset Formula $a=1$
+\end_inset
+
+ (i.e.
+ only one normal mode exists), we obtain the EOM for the system:
+\begin_inset Formula 
+\begin{eqnarray}
+m\ddot{x} & = & -kx-\alpha\dot{x}.\label{eq:homogeneous friction EOM}
+\end{eqnarray}
+
+\end_inset
+
+Let 
+\begin_inset Formula $\omega_{0}^{2}\equiv k/m$
+\end_inset
+
+ ^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+it represents the frequency of free oscillations of the system in the absence
+ of friction
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{eqnarray}
+\lambda & \equiv & \frac{\alpha}{2m},\label{eq:damping coefficient}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+ which will be called the 
+\emph on
+damping
+\emph default
+ 
+\emph on
+coefficient
+\emph default
+.
+ The solution of the above EOM is given by 
+\begin_inset Formula 
+\begin{eqnarray}
+x & = & \begin{cases}
+re\left\{ A\exp\left[-\lambda t+i\sqrt{\omega_{0}^{2}-\lambda^{2}t}\right]\right\} =ae^{-\lambda t}\cos\left(\omega t+\alpha\right) & \lambda<\omega_{0}\\
+\left(b_{1}+b_{2}t\right)\exp\left(-\lambda t\right) & \lambda=\omega_{0}\\
+c_{1}\exp\left\{ -\left[\lambda-\sqrt{\lambda^{2}-\omega_{0}^{2}}\right]t\right\} +c_{2}\exp\left\{ -\left[\lambda+\sqrt{\lambda^{2}-\omega_{0}^{2}}\right]t\right\}  & \lambda>\omega_{0}
+\end{cases},\label{eq:Sol Free Damped Oscillation}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\omega=\sqrt{\omega_{0}^{2}-\lambda^{2}}$
+\end_inset
+
+ and 
+\begin_inset Formula $A=ae^{\alpha}$
+\end_inset
+
+ [[TODO: Derive the above solution]] or 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ and 
+\series bold
+
+\begin_inset Formula $b_{2}$
+\end_inset
+
+
+\series default
+ or
+\series bold
+ 
+\series default
+
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ are to be determined from the initial conditions
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+For 
+\begin_inset Formula $\lambda=\omega_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\left(b_{1}+b_{2}t\right)\exp\left(-\lambda t\right)$
+\end_inset
+
+ so 
+\begin_inset Formula $b_{1}=x_{0}\equiv x\left(t=0\right)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $v_{0}\equiv\dot{x}\left(t=0\right)$
+\end_inset
+
+.
+ We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{x} & = & b_{2}\exp\left(-\lambda t\right)-\lambda x\\
+\implies\dot{x}\left(t=0\right) & = & b_{2}-\lambda x_{0}=v_{0}\\
+\implies b_{2} & = & v_{0}+\lambda x_{0}
+\end{eqnarray*}
+
+\end_inset
+
+and hence 
+\begin_inset Formula $\boxed{x\left(t\right)=\left(x_{0}\left(1+\lambda t\right)+v_{0}t\right)\exp\left(-\lambda t\right)}$
+\end_inset
+
+.
+ I.e.
+ 
+\begin_inset Formula $\boxed{b_{1}=x_{0};\ b_{2}=v_{0}+\lambda x_{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+For 
+\begin_inset Formula $\lambda>\omega_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{1}\exp\left\{ -\left[\lambda-\sqrt{\left(\lambda^{2}-\omega_{0}^{2}\right)}\right]t\right\} +c_{2}\exp\left\{ -\left[\lambda+\sqrt{\left(\lambda^{2}-\omega_{0}^{2}\right)}\right]t\right\} $
+\end_inset
+
+ so 
+\begin_inset Formula $x_{0}=c_{1}+c_{2}$
+\end_inset
+
+, moreover, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{x} & = & c_{1}\left(\lambda-\sqrt{\left(\lambda^{2}-\omega_{0}^{2}\right)}\right)\exp\left\{ -\left[\lambda-\sqrt{\left(\lambda^{2}-\omega_{0}^{2}\right)}\right]t\right\} +c_{2}\left(\lambda+\sqrt{\left(\lambda^{2}-\omega_{0}^{2}\right)}\right)\exp\left\{ -\left[\lambda+\sqrt{\left(\lambda^{2}-\omega_{0}^{2}\right)}\right]t\right\} \\
+\implies v_{0} & = & c_{1}\left(\lambda-\sqrt{\left(\lambda^{2}-\omega_{0}^{2}\right)}\right)+c_{2}\left(\lambda+\sqrt{\lambda^{2}-\omega_{0}^{2}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Using Mathematica*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+wTemp = Sqrt[
+\backslash
+[Lambda]^2 - w0^2]; temp = Solve[{x0 == c1 + c2, v0 == c1*(
+\backslash
+[Lambda] - wTemp) + c2*(
+\backslash
+[Lambda] + wTemp)}, {c1, c2}]; Assuming[
+\backslash
+[Lambda] > w0, FullSimplify[temp]]
+\end_layout
+
+\end_inset
+
+, we obtain that
+\begin_inset Preview
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+boxed{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{aligned}
+\end_layout
+
+\begin_layout Plain Layout
+
+c_{1}	&=&	
+\backslash
+frac{x_{0}
+\backslash
+left(
+\backslash
+lambda+
+\backslash
+sqrt{
+\backslash
+lambda^{2}-
+\backslash
+omega_{0}^{2}}
+\backslash
+right)-v_{0}}{2
+\backslash
+sqrt{
+\backslash
+lambda^{2}-
+\backslash
+omega_{0}^{2}}}
+\backslash
+
+\backslash
+ c_{2}	&=&	
+\backslash
+frac{x_{0}
+\backslash
+left(
+\backslash
+sqrt{
+\backslash
+lambda^{2}-
+\backslash
+omega_{0}^{2}}-
+\backslash
+lambda
+\backslash
+right)+v_{0}}{2
+\backslash
+sqrt{
+\backslash
+lambda^{2}-
+\backslash
+omega_{0}^{2}}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{aligned}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ The different parameter regimes are discussed below:
+\end_layout
+
+\begin_layout Enumerate
+When 
+\begin_inset Formula $\lambda<\omega_{0}$
+\end_inset
+
+ (or the 
+\emph on
+underdamped 
+\emph default
+regime), the motion consists of damped oscillations^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Further elaboration:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+They may be regarded as being harmonic oscillations of exponentially decreasing
+ amplitude.
+ The rate of decrease of the amplitude is given by the exponent 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, and the "frequency" 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is less than that of free oscillations in the absence of friction ...
+ The decrease in frequency as a result of friction is to be expected, since
+ friction retards motion.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Moreover, the energy is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+E & = & a^{2}\left(1+\omega_{0}^{2}\right)\cos^{2}\left(\omega t+\alpha\right)e^{-2\lambda t}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The energy is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+E & = & \frac{1}{2}m\dot{x}^{2}+\frac{1}{2}m\omega_{0}^{2}x^{2}\\
+ & = & \frac{1}{2}m\left(\dot{x}^{2}+\omega_{0}^{2}x^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+So for 
+\begin_inset Formula $\lambda<\omega_{0}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray*}
+E & = & a^{2}\left(1+\omega_{0}^{2}\right)\cos^{2}\left(\omega t+\alpha\right)e^{-2\lambda t}
+\end{eqnarray*}
+
+\end_inset
+
+w = Sqrt[w0^2 - 
+\backslash
+[Lambda]^2]; x = A*Exp[-
+\backslash
+[Lambda]*t]*Cos[w*t + 
+\backslash
+[Alpha]]; En = FullSimplify[D[x]^2 + w0^2*x^2]; 
+\end_layout
+
+\end_inset
+
+Denoting the initial energy by 
+\begin_inset Formula $E_{0}=E\left(t=0\right)$
+\end_inset
+
+, we can write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+E & = & E_{0}e^{-2\lambda t}+O\left(\left(\frac{\lambda}{\omega}_{0}\right)^{2}\right)\\
+\bar{E} & = & \frac{2\pi}{\omega}\int_{0}^{2\pi/\omega}E\left(t\right)dt\\
+ & = & \bar{E}_{0}e^{-2\lambda t}+O\left(\left(\frac{\lambda}{\omega}_{0}\right)^{2}\right),
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\bar{E}$
+\end_inset
+
+ is the average over the period 
+\begin_inset Formula $2\pi/\omega$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Note2"
+
+\end_inset
+
+[[Needs a lot of work and polish]]
+\end_layout
+
+\begin_layout Plain Layout
+The energy is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+E & = & \frac{1}{2}m\dot{x}^{2}+\frac{1}{2}m\omega_{0}^{2}x^{2}\\
+ & = & \frac{1}{2}m\left(\dot{x}^{2}+\omega_{0}^{2}x^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+So for 
+\begin_inset Formula $\lambda<\omega_{0}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray*}
+E & = & a^{2}\left(1+\omega_{0}^{2}\right)\cos^{2}\left(\omega t+\alpha\right)e^{-2\lambda t}
+\end{eqnarray*}
+
+\end_inset
+
+The energy for free oscillations is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{0} & = & E\left(t=0\right)=E\left(\lambda=0\right)\\
+ & = & a^{2}\left(1+\omega_{0}^{2}\right)\cos^{2}\left(\omega_{0}t+\alpha\right)
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+w = Sqrt[w0^2 - 
+\backslash
+[Lambda]^2]; x = A*Exp[-
+\backslash
+[Lambda]*t]*Cos[w*t + 
+\backslash
+[Alpha]]; En = FullSimplify[D[x]^2 + w0^2*x^2]; En /.
+ {
+\backslash
+[Lambda] -> 0}
+\end_layout
+
+\end_inset
+
+So for 
+\begin_inset Formula $\lambda\ll\omega_{0}$
+\end_inset
+
+ then 
+\begin_inset Formula $\omega=\omega_{0}\sqrt{1-\left(\frac{\lambda}{\omega_{0}}\right)^{2}}\approx\omega_{0}\left(1-\left(\lambda/\omega_{0}\right)^{2}/2\right)+O\left(\left(\lambda/\omega_{0}\right)^{3}\right)$
+\end_inset
+
+.
+ Moreover, up to first order of accuracy 
+\begin_inset Formula $E=E_{0}e^{-2\lambda t}+O\left(\left(\lambda/\omega_{0}\right)^{2}\right)$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+w1 = w0*Sqrt[1 - y^2]; FullSimplify[Series[Cos[w1*t + 
+\backslash
+[Alpha]]^2, {y, 0, 4}]]
+\end_layout
+
+\begin_layout Plain Layout
+(here 
+\begin_inset Formula $y$
+\end_inset
+
+ refers to 
+\begin_inset Formula $\left(\lambda/\omega_{0}\right)$
+\end_inset
+
+) We obtain that the second order term is 
+\begin_inset Formula $\propto$
+\end_inset
+
+ to 
+\begin_inset Formula $t\omega_{0}y^{2}=\left(\lambda/\omega_{0}\right)t\lambda$
+\end_inset
+
+ which is actually of first order.
+\end_layout
+
+\begin_layout Plain Layout
+One can worry about the validity of 
+\begin_inset Formula $t$
+\end_inset
+
+ because it grows without control but we can keep re-defining the origin
+ of time to be the beginning of an oscillation (this is possible because
+ 
+\begin_inset Formula $\cos$
+\end_inset
+
+ is periodic).
+ And hence, 
+\begin_inset Formula $t$
+\end_inset
+
+ is of the order of 
+\begin_inset Formula $2\pi/\omega$
+\end_inset
+
+ (as max 
+\begin_inset Formula $t$
+\end_inset
+
+ = 
+\begin_inset Formula $2\pi/\omega$
+\end_inset
+
+) and so 
+\begin_inset Formula $\left(\lambda/\omega_{0}\right)t\lambda\sim\left(\lambda/\omega_{0}\right)\left(\lambda/\omega\right)\sim\left(\lambda/\omega_{0}\right)^{2}$
+\end_inset
+
+ so 
+\begin_inset Formula $t\omega_{0}y^{2}$
+\end_inset
+
+ is indeed of second order.
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+[[This is the part that really needs work]] If we 
+\bar under
+time average
+\bar default
+ over a period 
+\begin_inset Formula $2\pi/\omega$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{E} & = & a^{2}\frac{1+\omega_{0}^{2}}{2}e^{-2\lambda t}+O\left(\lambda/\omega_{0}\right)\\
+ & \equiv & E_{avg}e^{-2\lambda t}+O\left(\lambda/\omega_{0}\right),
+\end{eqnarray*}
+
+\end_inset
+
+where we took 
+\begin_inset Formula $e^{-2\lambda t}$
+\end_inset
+
+ out of the time average because 
+\begin_inset Formula $\lambda\ll\omega_{0}$
+\end_inset
+
+ and so 
+\begin_inset Formula $\lambda t$
+\end_inset
+
+ hardly varies over the period 
+\begin_inset Formula $\left(2\pi/\omega\right)$
+\end_inset
+
+.
+ Rigorously, this will is at least introduce a first order to 
+\begin_inset Formula $\bar{E}$
+\end_inset
+
+.
+ Exactly, since 
+\begin_inset Formula $\lambda t$
+\end_inset
+
+ is small 
+\begin_inset Formula $e^{-2\lambda t}\approx1-2\lambda t$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{E} & = & E_{avg}+\overline{a^{2}\left(1+\omega_{0}^{2}\right)\cos^{2}\left(\omega_{0}t+\alpha\right)\left(-2\lambda t\right)}\\
+ & = & E_{avg}\left(1-\lambda t\right)\approx E_{avg}e^{-2\lambda t}
+\end{eqnarray*}
+
+\end_inset
+
+so the effect of taking 
+\begin_inset Formula $e^{-2\lambda t}$
+\end_inset
+
+ out of the integral is at least of second order.
+\end_layout
+
+\begin_layout Plain Layout
+Now, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{E_{0}}=\frac{\omega}{2\pi}\int_{0}^{2\pi/\omega}E_{0}dt & = & a^{2}\left(1+\omega_{0}^{2}\right)\frac{\omega}{2\pi}\int_{0}^{2\pi/\omega}\cos^{2}\left(\omega_{0}t+\alpha\right)
+\end{eqnarray*}
+
+\end_inset
+
+From Mathematica we determine that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{E_{0}} & = & E_{avg}+O\left(\left(\lambda/\omega_{0}\right)^{2}\right)\\
+\implies E_{avg} & = & \bar{E}_{0}+O\left(\left(\lambda/\omega_{0}\right)^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+w1 = w0*Sqrt[1 - y^2]; temp = FullSimplify[ w1/2/Pi*Integrate[Cos[w0*t +
+ 
+\backslash
+[Alpha]]^2, {t, 0, 2*Pi/w1}]]; E0Avg = Const*FullSimplify[Series[temp, {y,
+ 0, 4}]]
+\end_layout
+
+\begin_layout Plain Layout
+Note that we have 
+\begin_inset Formula $y=\lambda/\omega_{0}$
+\end_inset
+
+ and Const=
+\begin_inset Formula $a^{2}\left(1+\omega_{0}^{2}\right)$
+\end_inset
+
+.
+ We obtain that 
+\begin_inset Formula $\bar{E_{0}}=E_{avg}e^{2\lambda t}+\propto y^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+TODO: can an alternate derivation use that 
+\begin_inset Formula $E=E_{0}e^{-2\lambda t}+O\left(\left(\frac{\lambda}{\omega}_{0}\right)^{2}\right)$
+\end_inset
+
+ ??
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+When 
+\begin_inset Formula $\lambda>\omega_{0}$
+\end_inset
+
+ (or the 
+\emph on
+overdamped 
+\emph default
+regime), the friction is sufficiently strong to cause an aperiodic decrease
+ (i.e.
+ with no oscillations) of the position of the damped oscillator to its equilibri
+um position 
+\begin_inset Formula $x\left(t=0\right)$
+\end_inset
+
+.
+ This position is reached asymptotically, i.e.
+ as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+.
+ This type of motion is called 
+\emph on
+aperiodic damping
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+When 
+\begin_inset Formula $\lambda=\omega_{0}$
+\end_inset
+
+ (or the 
+\emph on
+critically damped
+\emph default
+ regime), the motion of the oscillator is a special case of aperiodic motion.
+ Moreover, the critically damped oscillator is the fastest to asymptotically
+ approaches the equilibrium value of the oscillator*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Using that 
+\begin_inset Formula 
+\begin{eqnarray*}
+x & = & \begin{cases}
+re\left\{ A\exp\left[-\lambda t+i\sqrt{\omega_{0}^{2}-\lambda^{2}t}\right]\right\} =ae^{-\lambda t}\cos\left(\omega t+\alpha\right) & \lambda<\omega_{0}\\
+\left(b_{1}+b_{2}t\right)\exp\left(-\lambda t\right) & \lambda=\omega_{0}\\
+c_{1}\exp\left\{ -\left[\lambda-\sqrt{\lambda^{2}-\omega_{0}^{2}}\right]t\right\} +c_{2}\exp\left\{ -\left[\lambda+\sqrt{\lambda^{2}-\omega_{0}^{2}}\right]t\right\}  & \lambda>\omega_{0}
+\end{cases},
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+we obtain that as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+, the critically damped approaches the equilibrium value, 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, as 
+\begin_inset Formula $te^{-2\lambda t}$
+\end_inset
+
+, while the overdamped oscillator approaches 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ as 
+\begin_inset Formula $\cos\left(\omega t+\alpha\right)e^{-\lambda t}$
+\end_inset
+
+ and the underdamped oscillator approaches 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ as 
+\begin_inset Formula $\exp\left(-\left[\lambda+\sqrt{\lambda^{2}-\omega_{0}^{2}}\right]t\right)<te^{-2\lambda t}$
+\end_inset
+
+ because 
+\begin_inset Formula $\sqrt{\lambda^{2}-\omega_{0}^{2}}<\lambda>0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Quote
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+25 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:System-with-many-DOFs"
+
+\end_inset
+
+System with many DOF 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+For a system with more than one degree of freedom, the generalized frictional
+ forces corresponding to the co-ordinates 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are linear functions of the velocities, of the form 
+\begin_inset Formula 
+\begin{eqnarray*}
+f_{fr,i} & = & -\sum_{k}\alpha_{ik}\dot{x}_{k}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+Hence, the EOMs are given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k}m_{ik}\ddot{x}_{k}+\sum_{k}k_{ik}x_{k} & = & -\sum_{k}\alpha_{ik}\dot{x}_{k}\qquad\left(i=1,2,...\right).
+\end{eqnarray*}
+
+\end_inset
+
+We also have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{ik} & = & \alpha_{ki}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+From purely mechanical arguments we can draw no conclusions concerning the
+ symmetry properties of the coefficients 
+\begin_inset Formula $\alpha_{ik}$
+\end_inset
+
+ as regards the suffixes i and k, but the methods of statistical physics^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Here Landau references 
+\begin_inset Quotes eld
+\end_inset
+
+Statistical Physics, part 1, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+ 121, Pergamon Press, Oxford 1980
+\end_layout
+
+\end_inset
+
+ make it possible to demonstrate that in all cases 
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{ik} & = & \alpha_{ki}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Lagrange EOM with friction"
+
+\end_inset
+
+, we have that 
+\begin_inset Formula $f_{fr,i}=-\partial F/\partial\dot{x}_{i}$
+\end_inset
+
+, with 
+\begin_inset Formula 
+\begin{eqnarray}
+F & = & \frac{1}{2}\sum_{ik}\alpha_{ik}\dot{x}_{i}\dot{x}_{k},\label{eq:dissipative function}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $F$
+\end_inset
+
+ is called the dissipative function.
+ Moreover, 
+\begin_inset Formula $x_{k}\left(t\right)$
+\end_inset
+
+ will be of the form 
+\begin_inset Formula $\sum_{k}A_{k,i}\exp\left(r_{i}t\right)$
+\end_inset
+
+ (if there degeneracies in 
+\begin_inset Formula $r$
+\end_inset
+
+, we will have terms of the form 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $t^{l}\exp\left(rt\right)$
+\end_inset
+
+ [[TODO: is this true?? Confirm]]), where 
+\begin_inset Formula $r\in\mathbb{C}$
+\end_inset
+
+ are the roots of the following characteristic equation: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left|m_{ik}r^{2}+\alpha_{ik}r+k_{ik}\right| & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+25 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Quote
+ 
+\end_layout
+
+\begin_layout Subsection
+Forced Oscillations with no damping
+\end_layout
+
+\begin_layout Standard
+Consider the oscillations of a system on which an external force acts.
+ The system now has an additional potential energy 
+\begin_inset Formula $U_{e}\left(x,t\right)$
+\end_inset
+
+ resulting from the external field.
+ Expanding this additional term as a Taylor series in 
+\begin_inset Formula $x$
+\end_inset
+
+, we obtain that
+\begin_inset Formula 
+\begin{eqnarray*}
+U_{e}\left(x,t\right) & = & U_{e}\left(0,t\right)+x\left.\partial_{x}U_{e}\left(x,t\right)\right|_{x=0}.
+\end{eqnarray*}
+
+\end_inset
+
+The first term can be omitted from the Lagrangian because it is a function
+ of time only (see comment 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Lagrangian-unaffected-by-time"
+
+\end_inset
+
+).
+ Denoting 
+\begin_inset Formula $\left.\partial_{x}U_{e}\left(x,t\right)\right|_{x=0}$
+\end_inset
+
+ by 
+\begin_inset Formula $-F\left(t\right)$
+\end_inset
+
+, which can be interpreted as an 
+\begin_inset Quotes eld
+\end_inset
+
+external "force" acting on the system in the equilibrium position
+\begin_inset Quotes erd
+\end_inset
+
+, we obtain that
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & \frac{1}{2}m\dot{x}^{2}-\frac{1}{2}kx^{2}+xF\left(t\right).
+\end{eqnarray*}
+
+\end_inset
+
+Hence, we obtain the following EOM: 
+\begin_inset Formula 
+\begin{eqnarray}
+\ddot{x}+\omega^{2}x & = & F\left(t\right)/m\label{eq:EOM forced oscillation}
+\end{eqnarray}
+
+\end_inset
+
+The solution to the above equation is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+x\left(t\right) & = & \frac{1}{\omega}Im\left[\xi\right]\\
+\xi\left(t\right) & = & \dot{x}+i\omega x\\
+ & = & \exp\left(i\omega t\right)\left(\int_{0}^{t}\frac{1}{m}F\left(t\right)\exp\left(-i\omega t\right)dt+\xi\left(t=0\right)\right).
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\ddot{x}+\omega^{2}x & = & F\left(t\right)/m\\
+ & = & \frac{d}{dt}\left(\dot{x}+i\omega x\right)-i\omega\left(\dot{x}+i\omega x\right)\\
+\implies\frac{d}{dt}\xi-i\omega\xi & = & F\left(t\right)/m
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula 
+\begin{eqnarray*}
+\xi & = & \dot{x}+i\omega x,
+\end{eqnarray*}
+
+\end_inset
+
+we must have that 
+\begin_inset Formula $x=Im\left[\xi\right]/\omega$
+\end_inset
+
+.
+ Try a solution of the form 
+\begin_inset Formula $\xi=A\left(t\right)\exp\left(i\omega t\right)$
+\end_inset
+
+.
+ We obtain that 
+\begin_inset Formula $\dot{A}\left(t\right)=F\left(t\right)\exp\left(-i\omega t\right)/m$
+\end_inset
+
+.
+ Integration gives that that 
+\begin_inset Formula 
+\begin{eqnarray*}
+A\left(t\right) & = & \int_{0}^{t}\frac{1}{m}F\left(t\right)\exp\left(-i\omega t\right)dt+A\left(t=0\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+22 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsubsection
+Example
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula 
+\begin{eqnarray*}
+F\left(t\right) & = & f\cos\left(\gamma t+\beta\right).
+\end{eqnarray*}
+
+\end_inset
+
+^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+This is a good example because one can expand 
+\begin_inset Formula $F$
+\end_inset
+
+ in a Taylor series
+\end_layout
+
+\end_inset
+
+The general solution of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:EOM forced oscillation"
+
+\end_inset
+
+ is of the form 
+\begin_inset Formula $x=x_{0}+x_{1}$
+\end_inset
+
+, where 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ is the solution to the corresponding Homogeneous equation.
+ Try the ansatz 
+\begin_inset Formula $x_{1}=b\cos\left(\gamma t+\beta\right)$
+\end_inset
+
+, to obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+x & = & \begin{cases}
+a\cos\left(\omega t+\alpha\right)+\frac{f}{m\left(\omega^{2}-\gamma^{2}\right)}\cos\left(\gamma t+\beta\right) & \omega\neq\gamma\\
+a\cos\left(\omega t+\alpha\right)+\frac{f}{2m\omega}t\sin\left(\omega t+\beta\right) & \omega=\gamma\mbox{ (Resonance)}
+\end{cases},
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\omega=\sqrt{k/m}$
+\end_inset
+
+ and 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ are determined from the found from the initial conditions[TODO: Derive].
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Thus the amplitude of oscillations in resonance increases linearly with
+ the time (until the oscillations are no longer small and the whole theory
+ given above becomes invalid).
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+For small oscillations 
+\emph on
+near resonance
+\emph default
+, i.e.
+ when 
+\begin_inset Formula $\gamma=\omega+\epsilon$
+\end_inset
+
+ with 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ small, we put the general in the complex form
+\begin_inset Formula 
+\begin{eqnarray*}
+x & = & \left[A+B\exp\left(i\epsilon t\right)\right]\exp\left(i\omega t\right).
+\end{eqnarray*}
+
+\end_inset
+
+Letting 
+\begin_inset Formula $C=A+B\exp\left(i\epsilon t\right)$
+\end_inset
+
+, we can write that 
+\begin_inset Formula $\left|\left|A\right|-\left|B\right|\right|\leq\left|C\right|\leq\left|A\right|+\left|B\right|$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left|C\right|^{2} & = & \left|A\right|^{2}+\left|B\right|^{2}+2Re\left[AB\exp\left(i\epsilon t\right)\right]\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is small, we can say that 
+\begin_inset Formula $x$
+\end_inset
+
+ is amplitude modulated (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Amplitude-Modulation"
+
+\end_inset
+
+ with 
+\begin_inset Formula $\Omega\equiv\epsilon$
+\end_inset
+
+, 
+\begin_inset Formula $\omega_{0}\equiv\omega$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon_{m}e^{i\phi_{m}}\equiv B$
+\end_inset
+
+) between 
+\begin_inset Formula $\left|\left|A\right|-\left|B\right|\right|$
+\end_inset
+
+ and 
+\begin_inset Formula $\left|A\right|+\left|B\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+22 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsubsection
+Energy transfer
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+The energy of a system executing forced oscillations is naturally not conserved,
+ since the system gains energy from the source of the external field.
+ Let us determine the total energy transmitted to the system ...
+ assuming its initial energy to be zero.
+\begin_inset Quotes erd
+\end_inset
+
+ The energy gained by the system at time 
+\begin_inset Formula $\infty$
+\end_inset
+
+ when we assume that the force is finally released is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta E=E\left(t\rightarrow\infty\right)-E\left(t=t_{0}\right) & = & E\left(t\rightarrow\infty\right)=\frac{1}{2}m\left|\xi\right|^{2}\\
+ & = & \frac{1}{2}m\left|\int_{t_{0}}^{\infty}\frac{1}{m}F\left(t\right)\exp\left(-i\omega t\right)dt+\xi\left(t=t_{0}\right)\right|^{2}
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula $E=\sum_{i}\dot{q}_{i}\frac{\partial L}{\partial\dot{q}_{i}}-L$
+\end_inset
+
+ (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:energy lagrangian"
+
+\end_inset
+
+) and 
+\begin_inset Formula $L=\frac{1}{2}m\dot{x}^{2}-\frac{1}{2}kx^{2}+xF\left(t\right).$
+\end_inset
+
+ so (not including terms induced from external forces, specifically 
+\begin_inset Formula $xF$
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+E & = & \dot{x}m\dot{x}-\frac{1}{2}m\dot{x}^{2}+\frac{1}{2}kx^{2}\\
+ & = & \frac{1}{2}m\dot{x}^{2}+\frac{1}{2}kx^{2}\\
+ & = & \frac{1}{2}m\dot{x}^{2}+\frac{1}{2}m\omega^{2}x^{2}
+\end{eqnarray*}
+
+\end_inset
+
+At time 
+\begin_inset Formula $\infty$
+\end_inset
+
+, the force is finally released so we have 
+\begin_inset Formula $E\left(\infty\right)=\frac{1}{2}m\dot{x}^{2}+\frac{1}{2}m\omega^{2}x^{2}=\frac{1}{2}m\left|\xi\right|^{2}$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(\infty\right) & = & E\left(t=t_{0}\right)-\frac{1}{\omega}\im{\int_{-\infty}^{\infty}dt\xi\left(t\right)\dot{F}\left(t\right)}\\
+ & = & E\left(t=t_{0}\right)-\frac{1}{\omega}\im{\int dt\exp\left(i\omega t\right)\left(\int_{0}^{t}\frac{1}{m}F\left(t\right)\exp\left(-i\omega t\right)dt+\xi\left(t=t_{0}\right)\right)\dot{F}dt}\\
+ & = & -\frac{1}{\omega}\im{\int dt\exp\left(i\omega t\right)\left(\int_{0}^{t}\frac{1}{m}F\left(s\right)\exp\left(-i\omega s\right)ds\right)\dot{F}\left(t\right)dt}\\
+ & = & -\frac{1}{\omega}\im{\frac{1}{m}\int dt\int_{0}^{t}ds\exp\left(i\omega\left(t-s\right)\right)F\left(s\right)\dot{F}\left(t\right)dt}\\
+ & =\\
+\\
+ & = & -\frac{1}{\omega}\im{\frac{1}{m}\int dt\int_{0}^{t}ds\exp\left(-i\omega s\right)F\left(s\right)\dot{F}\left(t\right)dt}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Taking that 
+\begin_inset Formula $t_{0}=-\infty$
+\end_inset
+
+, we have that 
+\begin_inset Formula $\xi\left(t=t_{0}\right)=0$
+\end_inset
+
+ *
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+At time 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(t=t_{0}\right) & = & \frac{1}{2}m\dot{x}^{2}+\frac{1}{2}m\omega^{2}x^{2}-xF\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+but 
+\begin_inset Formula $F\left(-\infty\right)=0$
+\end_inset
+
+ (this is the beginning of time, before the force was applied; the force
+ has been applied at a discrete point in time 
+\begin_inset Formula $t_{f}$
+\end_inset
+
+ and by definition 
+\begin_inset Formula $-\infty<t_{f}$
+\end_inset
+
+) and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{2}m\left|\xi\right|^{2} & = & 0\\
+\implies\left|\xi\right| & = & 0\\
+\xi & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta E & = & \frac{1}{2m}\left|\int_{-\infty}^{\infty}F\left(t\right)\exp\left(-i\omega t\right)dt\right|^{2}\\
+ & = & \frac{1}{2m}\left|\mathcal{F}\left[F\right]\left(\omega\right)\right|^{2}.
+\end{eqnarray*}
+
+\end_inset
+
+In particular, if the external force acts only during a time short in comparison
+ with 
+\begin_inset Formula $1/\omega$
+\end_inset
+
+, then 
+\begin_inset Formula $\Delta E=\left(\int_{-\infty}^{\infty}F\left(t\right)dt\right)^{2}/2m$
+\end_inset
+
+ and we can interpret 
+\begin_inset Formula $\int_{-\infty}^{\infty}F\left(t\right)dt$
+\end_inset
+
+ as the impulse transferred to the system over a short duration.
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+22 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsection
+Forced Oscillations with damping
+\end_layout
+
+\begin_layout Standard
+Consider the special case of a periodic external force (for the general
+ case, one can expand the force in a Fourier series):
+\begin_inset Formula 
+\begin{eqnarray*}
+\ddot{x}+2\lambda\dot{x}+\omega_{0}^{2}x & = & \frac{f}{m}\cos\gamma t.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+To see how the homogeneous part of the above EOM is derived, see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:homogeneous friction EOM"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+It is more convenient to work in the complex form of the above equation*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:addComplexPartLDE"
+
+\end_inset
+
+ for why this is valid
+\end_layout
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\ddot{x}+2\lambda\dot{x}+\omega_{0}^{2}x & = & \frac{f}{m}e^{i\gamma t}.
+\end{eqnarray*}
+
+\end_inset
+
+Try the Ansatz 
+\begin_inset Formula $x=b\exp\left(i\gamma t+\delta\right)$
+\end_inset
+
+ to obtain that for 
+\begin_inset Formula $\lambda<\omega_{0}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+x & = & a\exp\left(-\lambda t\right)\cos\left(\omega t+\alpha\right)+b\cos\left(\gamma t+\delta\right),\label{eq:sol damped forced oscillations}
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+b\exp\left(i\delta\right) & = & \frac{f}{m}\frac{1}{\omega_{0}^{2}-\gamma^{2}+2i\lambda\gamma},
+\end{eqnarray*}
+
+\end_inset
+
+from which we can write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+b & = & \frac{f}{m}\frac{1}{\sqrt{\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}+4\lambda^{2}\gamma^{2}}}\\
+\tan\delta & = & \frac{2\lambda\gamma}{\gamma^{2}-\omega_{0}^{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+Then take the real part of 
+\begin_inset Formula $b\exp\left(i\gamma t+\delta\right)$
+\end_inset
+
+ and finally add the solution to the homogeneous equation 
+\begin_inset Formula $ae^{-\lambda t}\cos\left(\omega t+\alpha\right)$
+\end_inset
+
+ (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Sol Free Damped Oscillation"
+
+\end_inset
+
+) to 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+b & = & \frac{f}{m}\frac{1}{\sqrt{\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}+4\lambda^{2}\gamma^{2}}}\\
+\tan\delta & = & \frac{2\lambda\gamma}{\gamma^{2}-\omega_{0}^{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+26 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsubsection
+Behavior of the phase shift 
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The phase shift 
+\begin_inset Formula $\delta$
+\end_inset
+
+, as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:phase shift forced damped oscillator"
+
+\end_inset
+
+, behaves in the following fashion: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\delta & \rightarrow & \begin{cases}
+0 & \mbox{as }\gamma\rightarrow0\\
+-\frac{\pi}{2} & \mbox{as }\gamma\rightarrow\left(\frac{\pi}{2}\right)_{-}\\
+\frac{\pi}{2} & \mbox{as }\gamma\rightarrow\left(\frac{\pi}{2}\right)_{+}\\
+0 & \mbox{as }\gamma\rightarrow\infty.
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename phase shift forced damped oscillator.eps
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:phase shift forced damped oscillator"
+
+\end_inset
+
+ The phase shift, 
+\begin_inset Formula $\delta$
+\end_inset
+
+, experienced by a forced damped oscillator.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\tan\delta & = & \frac{2\lambda\gamma}{\gamma^{2}-\omega_{0}^{2}}\\
+ & = & \frac{2\left(\lambda/\omega_{0}\right)\left(\gamma/\omega_{0}\right)}{\left(\gamma/\omega_{0}\right)^{2}-1}
+\end{eqnarray*}
+
+\end_inset
+
+So we make a plot in terms of 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ (so 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ is a frequency unit), thereby reducing the number of symbols by 1.
+ We let 
+\begin_inset Formula $\gamma/\omega_{0}=x\in\mathbb{R}^{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda/\omega_{0}=y$
+\end_inset
+
+.
+ Since we are assuming that 
+\begin_inset Formula $\lambda<\omega_{0}$
+\end_inset
+
+.
+ We have that 
+\begin_inset Formula $\lambda/\omega_{0}<1$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+26 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsubsection
+Asymptotic behavior
+\end_layout
+
+\begin_layout Standard
+Since the first term decreases exponentially, after a sufficiently long
+ time, the asymptotic solution,
+\begin_inset Formula 
+\begin{eqnarray}
+x_{asymptotic} & = & b\cos\left(\gamma t+\delta\right),\qquad t\gg1/\lambda\label{eq:asymptotic sol damped forced oscillations}
+\end{eqnarray}
+
+\end_inset
+
+ will dominate.
+ 
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+26 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsubsection
+Resonance
+\end_layout
+
+\begin_layout Standard
+Resonance (i.e.
+ 
+\begin_inset Formula $b$
+\end_inset
+
+ is at a maximum) occurs when the frequency of the external force, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, is equal to 
+\begin_inset Formula 
+\begin{eqnarray*}
+\gamma_{\mbox{resonance}} & = & \begin{cases}
+\sqrt{\omega_{0}^{2}-2\lambda^{2}} & \omega_{0}>2\sqrt{\lambda}\\
+\sqrt{2\lambda^{2}-\omega_{0}^{2}} & \lambda<\omega_{0}<2\sqrt{\lambda}
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+To see this, determine when 
+\begin_inset Formula $b$
+\end_inset
+
+ is at a maximum and so when 
+\begin_inset Formula $\sqrt{\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}+4\lambda^{2}\gamma^{2}}$
+\end_inset
+
+ is at a minimum.
+ Now, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}+4\lambda^{2}\gamma^{2} & = & \omega_{0}^{4}-2\omega_{0}^{2}\gamma^{2}+\gamma^{4}+4\lambda^{2}\gamma^{2}\\
+ & \equiv & \xi
+\end{eqnarray*}
+
+\end_inset
+
+Moreover, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\partial_{\lambda}\xi & = & 4\gamma^{3}+8\lambda^{2}\gamma-4\omega_{0}^{2}\gamma\\
+ & = & \gamma\left(4\gamma^{2}+4\left(2\lambda^{2}-\omega_{0}^{2}\right)\right)\\
+ & = & 4\gamma\left(\gamma^{2}+\left(2\lambda^{2}-\omega_{0}^{2}\right)\right),
+\end{eqnarray*}
+
+\end_inset
+
+which occurs when 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+ or when 
+\begin_inset Formula 
+\begin{eqnarray*}
+\gamma^{2} & = & 2\lambda^{2}-\omega_{0}^{2}\\
+\end{eqnarray*}
+
+\end_inset
+
+Hence, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\gamma_{\mbox{resonance}} & = & \begin{cases}
+\sqrt{\omega_{0}^{2}-2\lambda^{2}} & \omega_{0}>2\sqrt{\lambda}\\
+\sqrt{2\lambda^{2}-\omega_{0}^{2}} & \lambda<\omega_{0}<2\sqrt{\lambda}
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+(Remember that we have assumed that 
+\begin_inset Formula $\omega_{0}>\lambda$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+26 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsubsection
+Energy
+\end_layout
+
+\begin_layout Standard
+At steady state (defined as when the energy remains constant), the energy
+ absorbed by the system from the source of the external force, 
+\begin_inset Formula $\left(dE/dt\right)_{e}$
+\end_inset
+
+, equals the energy dissipated by friction, 
+\begin_inset Formula $\left(dE/dt\right)_{friction}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\frac{dE}{dt}\right)_{e} & = & -\left(\frac{dE}{dt}\right)_{friction}\\
+ & = & 2F,
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $F$
+\end_inset
+
+ is the dissipative function (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dissipative function"
+
+\end_inset
+
+)*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The energy dissipated due to friction is equal to 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\frac{dE}{dt}\right)_{friction} & = & -2F\\
+\end{eqnarray*}
+
+\end_inset
+
+(Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:loss energy friction"
+
+\end_inset
+
+) where 
+\begin_inset Formula $F$
+\end_inset
+
+ is the dissipative function (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dissipative function"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+Using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:loss energy friction"
+
+\end_inset
+
+, the total energy change is equal to (denoting the external force by 
+\begin_inset Formula $f$
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{dE}{dt} & = & -2F-\frac{\partial L}{\partial t}+\frac{d}{dt}\left[\left(L-L_{0}\right)-\dot{q}_{i}\frac{\partial\left(L-L_{0}\right)}{\partial\dot{q}_{i}}\right],\\
+ & = & -2F-x\dot{f}+x\dot{f}+\dot{x}f\\
+ & = & -2F\left(t\right)+\dot{x}f\left(t\right)
+\end{eqnarray*}
+
+\end_inset
+
+and so 
+\begin_inset Formula $\dot{x}f=\left(\Delta E\right)_{e}$
+\end_inset
+
+ is the energy gained/lost from the external force.
+ Hence, at steady state, we have 
+\begin_inset Formula 
+\begin{eqnarray*}
+2F\left(t\right) & = & \left(\Delta E\right)_{e}\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $I\left(\gamma\right)$
+\end_inset
+
+ be the mean amount of energy absorbed per unit period 
+\begin_inset Formula $2\pi/\gamma$
+\end_inset
+
+ from the external force.
+ Then, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+I\left(\gamma\right) & = & 2\bar{F},
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\bar{F}$
+\end_inset
+
+ denotes the average value of 
+\begin_inset Formula $F$
+\end_inset
+
+ over one period of oscillation.
+ Assuming that enough time has passed for the first term in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sol damped forced oscillations"
+
+\end_inset
+
+, which is proportional to 
+\begin_inset Formula $\exp\left(-\lambda t\right)$
+\end_inset
+
+, to be safely neglected, we obtain that 
+\begin_inset Formula 
+\begin{eqnarray}
+I\left(\gamma\right) & = & \lambda mb^{2}\gamma^{2},\nonumber \\
+ & = & \frac{\lambda f^{2}\gamma^{2}/m}{\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}+4\lambda^{2}\gamma^{2}},\label{eq:ss energy absorbed forced damped oscillations}
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+For a 1D system, 
+\begin_inset Formula $F$
+\end_inset
+
+ (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dissipative function"
+
+\end_inset
+
+) is equal to 
+\begin_inset Formula 
+\begin{eqnarray*}
+F & = & \frac{1}{2}\alpha\dot{x}^{2},\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{eqnarray*}
+x & = & b\cos\left(\gamma t+\delta\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+because we are assuming that 
+\begin_inset Formula $t$
+\end_inset
+
+ is large enough to neglect 
+\begin_inset Formula $\exp\left(-\lambda t\right)$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{x} & = & -\gamma b\sin\left(\gamma t+\delta\right)\\
+\implies F & = & \frac{1}{2}\alpha\gamma^{2}b^{2}\sin^{2}\left(\gamma t+\delta\right)\\
+ & = & \lambda m\gamma^{2}b^{2}\sin^{2}\left(\gamma t+\delta\right)
+\end{eqnarray*}
+
+\end_inset
+
+where we make use of the fact 
+\begin_inset Formula $\alpha=2m\lambda$
+\end_inset
+
+ (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:damping coefficient"
+
+\end_inset
+
+).
+ Moreover, 
+\begin_inset Formula $\left(\gamma/2\pi\right)\int_{0}^{2\pi/\gamma}\sin^{2}\left(\gamma t+\delta\right)dt=1/2$
+\end_inset
+
+ so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{F} & = & \frac{1}{2}\lambda m\gamma^{2}b^{2}.\\
+\end{eqnarray*}
+
+\end_inset
+
+Finally, make use of the fact that 
+\begin_inset Formula 
+\begin{eqnarray*}
+I & = & 2\bar{F}\\
+\end{eqnarray*}
+
+\end_inset
+
+to obtain the desired result.
+\end_layout
+
+\end_inset
+
+where in the second equality we have the definition of 
+\begin_inset Formula $b$
+\end_inset
+
+ (Eq.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sol damped forced oscillations"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+26 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Subsubsection
+Near Resonance
+\end_layout
+
+\begin_layout Standard
+Let us assume that 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is approximately equal to the resonant frequency 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $\gamma=\omega_{0}+\epsilon$
+\end_inset
+
+, with 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ small.
+ In addition, let us work in the regime where 
+\begin_inset Formula $\lambda\ll\omega_{0}$
+\end_inset
+
+.
+ Then, the asymptotic solution (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:asymptotic sol damped forced oscillations"
+
+\end_inset
+
+) becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{asymptotic} & = & b\cos\left(\gamma t+\delta\right),\qquad t\gg1/\lambda
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{eqnarray*}
+b & = & \frac{f}{2m\omega_{0}\sqrt{\epsilon^{2}+\lambda^{2}}}+O\left(\epsilon^{3}\right),\\
+\tan\delta & = & \frac{\lambda}{\epsilon}+O\left(\epsilon^{2}\right).
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The original solution is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+x & = & a\exp\left(-\lambda t\right)\cos\left(\omega t+\alpha\right)+b\cos\left(\gamma t+\delta\right),
+\end{eqnarray*}
+
+\end_inset
+
+ *
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+b\exp\left(i\delta\right) & = & \frac{f}{m}\frac{1}{\omega_{0}^{2}-\gamma^{2}+2i\lambda\gamma},
+\end{eqnarray*}
+
+\end_inset
+
+from which we can write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+b & = & \frac{f}{m}\frac{1}{\sqrt{\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}+4\lambda^{2}\gamma^{2}}}\\
+\tan\delta & = & \frac{2\lambda\gamma}{\gamma^{2}-\omega_{0}^{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+Then take the real part of 
+\begin_inset Formula $b\exp\left(i\gamma t+\delta\right)$
+\end_inset
+
+ and finally add the solution to the homogeneous equation 
+\begin_inset Formula $ae^{-\lambda t}\cos\left(\omega t+\alpha\right)$
+\end_inset
+
+ (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Sol Free Damped Oscillation"
+
+\end_inset
+
+) to 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+b & = & \frac{f}{m}\frac{1}{\sqrt{\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}+4\lambda^{2}\gamma^{2}}}\\
+\tan\delta & = & \frac{2\lambda\gamma}{\gamma^{2}-\omega_{0}^{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+Now, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}+4\lambda^{2}\gamma^{2} & = & \left(\omega_{0}^{2}-\omega_{0}^{2}-2\omega_{0}\epsilon\right)^{2}+4\left(\omega_{0}+\epsilon\right)^{2}\lambda^{2}+O\left(\epsilon^{4}\right)\\
+ & \approx & 4\omega_{0}^{2}\epsilon^{2}+4\left(\omega_{0}^{2}+2\omega_{0}\epsilon+\epsilon^{2}\right)\lambda^{2}+O\left(\epsilon^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+We ignore 
+\begin_inset Formula $\epsilon\lambda^{2}$
+\end_inset
+
+ because it is of the third order of smallness (as 
+\begin_inset Formula $\epsilon\ll\omega_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda\ll\omega_{0}$
+\end_inset
+
+).
+ By the same argument, we ignore 
+\begin_inset Formula $\epsilon^{2}\lambda^{2}$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}+4\lambda^{2}\gamma^{2} & = & 4\omega_{0}\epsilon^{2}+4\omega_{0}^{2}\lambda^{2}+O\left(\epsilon^{3}\right)\\
+ & = & 4\omega_{0}^{2}\left(\epsilon^{2}+\lambda^{2}\right)+O\left(\epsilon^{3}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Hence, 
+\begin_inset Formula 
+\begin{eqnarray*}
+b & = & \frac{f}{2m\omega_{0}}\frac{1}{\sqrt{\epsilon^{2}+\lambda^{2}}}.
+\end{eqnarray*}
+
+\end_inset
+
+For 
+\begin_inset Formula $\tan\delta$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\tan\delta & = & \frac{2\lambda\left(\omega_{0}-\epsilon\right)}{\omega_{0}^{2}+2\omega_{0}\epsilon+\epsilon^{2}-\omega_{0}^{2}}.\\
+ & = & \frac{2\lambda\omega_{0}}{2\omega_{0}\epsilon+\epsilon^{2}}+O\left(\epsilon^{2}\right)\\
+ & = & \frac{2\omega_{0}}{2\omega_{0}\left(\epsilon/\lambda\right)+\epsilon\left(\epsilon/\lambda\right)}+O\left(\epsilon^{2}\right)\\
+ &  & \frac{\lambda\omega_{0}}{\omega_{0}\epsilon}+O\left(\epsilon^{2}\right)=\frac{\lambda}{\epsilon}+O\left(\epsilon^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Moreover, the mean energy absorbed per unit period (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ss energy absorbed forced damped oscillations"
+
+\end_inset
+
+) becomes
+\begin_inset Formula 
+\begin{eqnarray}
+I\left(\epsilon\right) & = & \frac{f^{2}\lambda}{4m\left(\epsilon^{2}+\lambda^{2}\right)},\label{eq:near resonance forced damped SHO energy absorbed}
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+From eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ss energy absorbed forced damped oscillations"
+
+\end_inset
+
+, we have that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{eqnarray*}
+I\left(\gamma\right) & = & \lambda mb^{2}\gamma^{2}
+\end{eqnarray*}
+
+\end_inset
+
+We already showed that 
+\begin_inset Formula 
+\begin{eqnarray*}
+b & = & \frac{f}{2m\omega_{0}\sqrt{\epsilon^{2}+\lambda^{2}}}+O\left(\epsilon^{3}\right),
+\end{eqnarray*}
+
+\end_inset
+
+and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+b^{2} & = & \frac{f^{2}}{4m^{2}\omega_{0}^{2}\left(\epsilon^{2}+\lambda^{2}\right)}+O\left(\epsilon^{3}\right)\\
+\implies I & \approx & \frac{\lambda f^{2}}{4m\left(\epsilon^{2}+\lambda^{2}\right)}\frac{\gamma^{2}}{\omega_{0}^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+Now 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\gamma^{2}}{\omega_{0}^{2}} & = & 1+\frac{2\epsilon}{\omega_{0}}+O\left(\epsilon^{2}\right)\\
+\implies I & \approx & \frac{\lambda f^{2}}{4m\left(\epsilon^{2}+\lambda^{2}\right)}+O\left(\epsilon\right)
+\end{eqnarray*}
+
+\end_inset
+
+as 
+\begin_inset Formula $\left(A+O\left(\epsilon^{3}\right)\right)\times\left(B+O\left(\epsilon\right)\right)=AB+AO\left(\epsilon\right)+O\left(\epsilon^{3}\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are of zeroth order.
+\end_layout
+
+\end_inset
+
+which is a Lorentzian (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lorentzian function"
+
+\end_inset
+
+) centered around 
+\begin_inset Formula $\epsilon=0$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the HWHM (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lorentzian function"
+
+\end_inset
+
+) then the smaller the damping is, the more peaked the resonance curve,
+ 
+\begin_inset Formula $I\left(\gamma\right)$
+\end_inset
+
+, becomes, while the area 
+\begin_inset Formula $\int_{0}^{\infty}I\left(\gamma\right)d\gamma$
+\end_inset
+
+ remains constant and is approximately equal to 
+\begin_inset Formula $\pi f^{2}/4m$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "integral approximation 1"
+
+\end_inset
+
+We have that, since 
+\begin_inset Formula $\gamma=\omega_{0}+\epsilon$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\int_{0}^{\infty}I\left(\gamma\right)d\gamma & = & \int_{-\omega_{0}}^{\infty}I\left(\epsilon\right)d\epsilon.
+\end{eqnarray*}
+
+\end_inset
+
+Next, we use the approximate relation of 
+\begin_inset Formula $I$
+\end_inset
+
+ based on that 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is small: 
+\begin_inset Formula $I_{approx}\left(\gamma\right)=\frac{f^{2}\lambda}{4m\left(\epsilon^{2}+\lambda^{2}\right)}.$
+\end_inset
+
+ This approximation obviously brakes down for large 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ but since the integral is one large sum that is peaked around 
+\begin_inset Formula $\epsilon=0$
+\end_inset
+
+, and 
+\begin_inset Formula $I$
+\end_inset
+
+ decreases rapidly with increasing 
+\begin_inset Formula $\left|\epsilon\right|$
+\end_inset
+
+ then to first order, we can use the approximate relation of 
+\begin_inset Formula $I\left(\epsilon\right)$
+\end_inset
+
+ for all values of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ Indeed, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{I\left(\gamma\right)}{I\left(\omega_{0}\right)=I_{approx}\left(\omega_{0}\right)} & = & \left(\frac{\lambda f^{2}\gamma^{2}/m}{\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}+4\lambda^{2}\gamma^{2}}\right)/\left(\frac{f^{2}}{4m\lambda}\right)\\
+ & = & \frac{4\lambda^{2}\gamma^{2}}{\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}+4\lambda^{2}\gamma^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+For 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ far from 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{I\left(\gamma\right)}{I\left(\omega_{0}\right)=I_{approx}\left(\omega_{0}\right)} & \approx & \frac{4\lambda^{2}\gamma^{2}}{\left(\omega_{0}^{2}-\gamma^{2}\right)^{2}}\\
+ & \approx & \frac{4\lambda^{2}}{\gamma^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+which of the second order of smallness compared to 
+\begin_inset Formula $I\left(\omega_{0}\right)$
+\end_inset
+
+ and so we can write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\int_{-\omega_{0}}^{\infty}I\left(\epsilon\right)d\epsilon & \approx & \int_{-\omega_{0}}^{\infty}I_{approx}\left(\epsilon\right)d\epsilon\\
+\end{eqnarray*}
+
+\end_inset
+
+=====
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "narrowbandNote1"
+
+\end_inset
+
+Then, for the same reason (
+\begin_inset Formula $I_{approx}\left(\epsilon\right)$
+\end_inset
+
+ is a rapidly decreasing function of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+), we use the narrowband approximation:
+\begin_inset Formula 
+\begin{eqnarray*}
+\int_{-\omega_{0}}^{\infty}I_{approx}\left(\epsilon\right)d\epsilon & \approx & \int_{-\infty}^{\infty}I_{approx}\left(\epsilon\right)d\epsilon\\
+ & = & \frac{\pi f^{2}}{4m}
+\end{eqnarray*}
+
+\end_inset
+
+[[TODO: as can be easily shown with the use of Mathematica]]
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+26 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LandauM"
+
+\end_inset
+
+) 
+\end_layout
+
+\end_body
+\end_document

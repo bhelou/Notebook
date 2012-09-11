@@ -1,0 +1,1449 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\usepackage[]{hyperref}
+\usepackage{empheq}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\usepackage{listings}
+\lstloadlanguages{[5.2]Mathematica}
+\end_preamble
+\options unicode=true, hidelinks
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 3cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Notebook
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "macros page.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "C:/Users/Bass/Documents/GitHub/Notebook/research/math.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "../qOptics.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "../classical physics.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "C:/Users/Bass/Documents/GitHub/Notebook/research/classical mechanics.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "../optics.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Miscellaneous
+\end_layout
+
+\begin_layout Section
+TODO
+\end_layout
+
+\begin_layout Standard
+SEE WHY IF WE have a linear hamiltonian then the equations of motions are
+ the same classically and in quantum mechanics
+\end_layout
+
+\begin_layout Standard
+TO VERIFY:
+\end_layout
+
+\begin_layout Enumerate
+Spectral density 
+\end_layout
+
+\begin_layout Enumerate
+typo in 2.29 of thesis?
+\end_layout
+
+\begin_layout Enumerate
+Interpertation of continuous measurements?
+\end_layout
+
+\begin_layout Enumerate
+If hamiltonian is linear in QM then it is the same in QM
+\end_layout
+
+\begin_layout Enumerate
+Analyze 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://prl.aps.org/pdf/PRL/v109/i10/e100404
+\end_layout
+
+\end_inset
+
+ for generalized Heisenberg inequality.
+\end_layout
+
+\begin_layout Subsection
+Things to add to the notebook
+\end_layout
+
+\begin_layout Enumerate
+Have a good list of formulae
+\end_layout
+
+\begin_layout Subsection
+Attempts to improve Lyx functionality for my notebook
+\end_layout
+
+\begin_layout Enumerate
+Table of contents in the outline view: entries are truncated and there are
+ no default options (Like I want Keep to be always checked) 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.mail-archive.com/lyx-devel@lists.lyx.org/msg170913.html
+\end_layout
+
+\end_inset
+
+ might help with this task.
+\end_layout
+
+\begin_layout Enumerate
+Try to install 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.oak-tree.us/lyx-outline/
+\end_layout
+
+\end_inset
+
+ to improve functionality of Lyx's outline.
+\end_layout
+
+\begin_layout Section
+Websites that need to be sorted
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset href
+LatexCommand href
+name "Howell QO tutorials"
+target "http://www.pas.rochester.edu/~howell/mysite2/Tutorials/"
+
+\end_inset
+
+: Optics/quantum optics/quantum info tutorials
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://dlmf.nist.gov/
+\end_layout
+
+\end_inset
+
+NIST digital library of mathematical functions; such cool help format.
+ Many cool features [[TODO: Organize these features and figure out how they
+ are used]]
+\end_layout
+
+\begin_layout Section
+Graphing
+\end_layout
+
+\begin_layout Subsection
+Existing Figures
+\end_layout
+
+\begin_layout Enumerate
+Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:phase shift forced damped oscillator"
+
+\end_inset
+
+ is a simple neat image that makes use of ticks, axes labels, a legend and
+ plot styles.
+ The Mathematica file that produced it is: 
+\begin_inset CommandInset href
+LatexCommand href
+name "Plotting a simple figure"
+target "../graphs/figure1.nb"
+type "file:"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Tools in Mathematica that might be useful for Graphing
+\end_layout
+
+\begin_layout Enumerate
+Ticks: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://mathematica.stackexchange.com/questions/5369/about-the-number-format-in-tic
+ks
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Arrows: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://stackoverflow.com/questions/5844790/arrows-for-the-axes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Tooltips in Mathematica (
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://reference.wolfram.com/mathematica/ref/Tooltip.html
+\end_layout
+
+\end_inset
+
+) is a great way of adding tooltips in figures and equations.
+\end_layout
+
+\begin_layout Section
+Lyx
+\end_layout
+
+\begin_layout Subsection
+Tools and scripts that can be used with Lyx
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://wiki.lyx.org/Tools/Tools
+\end_layout
+
+\end_inset
+
+ TODO: Determine which ones are useful.
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.nongnu.org/fangle/
+\end_layout
+
+\end_inset
+
+ might be a good tool if I code.
+\end_layout
+
+\begin_layout Subsection
+Modules
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.oak-tree.us/2010/07/13/custom-lyx-modules/
+\end_layout
+
+\end_inset
+
+TODO: Investigate how they can be useful.
+\end_layout
+
+\begin_layout Subsection
+Lyx templates and how to use them/Importing a Latex style into Lyx
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://blog.oak-tree.us/index.php/2009/11/02/custom-lyx-nih
+\end_layout
+
+\end_inset
+
+TODO: Develop a series of steps to follow in order to import a Latex style
+ into Lyx.
+\end_layout
+
+\begin_layout Subsection
+Advice on using typesetting to reduce errors
+\end_layout
+
+\begin_layout Standard
+Highlight the changes that will be made in pairs (or more) and use under/over
+ braces to show alternate expression of a certain symbol.
+ Example:
+\begin_inset Formula 
+\begin{eqnarray*}
+h_{SQL} & = & \frac{\overbrace{g_{SQL}}^{\sqrt{2\hbar m\Omega^{2}}}}{m\Omega^{2}L/2}=\underrightarrow{2}\frac{\sqrt{\underrightarrow{2}\hbar\underline{m\Omega^{2}}}}{\underline{m\Omega^{2}}\underbrace{L}_{\sqrt{L^{2}}}}\\
+ & = & \sqrt{\frac{8\hbar}{m\Omega^{2}L^{2}}}
+\end{eqnarray*}
+
+\end_inset
+
+(Note there seems to be a problem with 
+\backslash
+undertilde at the moment: it is underfined; missing tex package??)
+\end_layout
+
+\begin_layout Subsection
+Commonly used symbols
+\end_layout
+
+\begin_layout Enumerate
+
+\backslash
+atop
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{{i=1...n\atop j=2...n}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\backslash
+underbrace
+\begin_inset Formula 
+\begin{eqnarray*}
+\underbrace{E}_{K.E.+P.E.} & = & \frac{1}{2}m\ddot{x}^{2}+U\left(x\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Mathematica
+\end_layout
+
+\begin_layout Subsection
+Using Mathematica
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://stackoverflow.com/questions/8073530/get-mathematica-to-simplify-expression
+-with-another-equation
+\end_layout
+
+\end_inset
+
+: Get mathematica to simplify an expression with another equation; example,
+ let temp = x+y+z, how do we get Mathematica to simplify this to temp =
+ v+z where v=x+y.
+\end_layout
+
+\begin_layout Subsection
+Weird Mathematica behavior
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://people.sc.fsu.edu/~jburkardt/html/mathematica_glossary.html#Complex_Numbers
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+Similarly, when Mathematica uses high-powered techniques on simple problems,
+ it will return inexplicable results.
+ Integrate [ Sqrt [ 1 + x^3 ], { x, 0, 4 } ] returns a complex value.
+ But, Integrate [ ( 1 + x^3 )^0.5, { x, 0, 4 } ] returns the value you were
+ probably expecting.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://mathematica.stackexchange.com/questions/2022/simplifying-already-defined-sy
+mbols
+\end_layout
+
+\end_inset
+
+: Simplifying already defined symbols: the order with which you define variables
+ matters.
+\end_layout
+
+\begin_layout Subsection
+Mathematica packages/toolbox 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://digi-area.com/index.php
+\end_layout
+
+\end_inset
+
+Differential geometry library.
+\end_layout
+
+\begin_layout Enumerate
+A discussion on this topic (and on Mathematica tools+books+resources): 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://stackoverflow.com/questions/4198961/what-is-in-your-mathematica-tool-bag
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Wiki page on pacakges: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.mathematica-users.org/webMathematica/wiki/wiki.jsp?pageName=Packages#_Co
+mmercial_Mathematica_Applications_distributed_by_Wolfram_
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Other specific tools/tasks
+\end_layout
+
+\begin_layout Enumerate
+Generating a table of contents: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://mathematica.stackexchange.com/questions/476/generating-a-table-of-contents
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+How display section number: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://stackoverflow.com/questions/5905915/how-to-get-not-display-the-section-num
+ber
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Perhaps useful in the future
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Note2"
+
+\end_inset
+
+ is about playing with taylor series and about the accuracy of making certain
+ approximations.
+\end_layout
+
+\begin_layout Section
+Neat simple Math derivations
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "note 3"
+
+\end_inset
+
+: add a parameter 
+\begin_inset Formula $t$
+\end_inset
+
+ only to set it to 
+\begin_inset Formula $1$
+\end_inset
+
+ at the end of the derivation.
+\end_layout
+
+\begin_layout Section
+Tex
+\end_layout
+
+\begin_layout Standard
+Wikibook on LATEX that is very well formatted: 
+\begin_inset CommandInset href
+LatexCommand href
+name "LATEX WikiBook"
+target "http://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics#Boxed_Equations"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Boxing equations
+\end_layout
+
+\begin_layout Standard
+Code for boxing equations:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Preview
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{empheq}[box=
+\backslash
+fbox]{align} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{split}   
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+text{recall}    &= 
+\backslash
+frac{TP}{TP+FN}  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+text{precision} &= 
+\backslash
+frac{TP}{TP+FP}  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+text{TP rate}   &= 
+\backslash
+text{recall}     
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+text{FP rate}   &= 
+\backslash
+frac{FP}{FP+TN}  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{split} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{empheq}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+boxed{
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+begin{aligned}
+\end_layout
+
+\begin_layout Plain Layout
+
+c_{1}	&=&	
+\backslash
+frac{x_{0}
+\backslash
+left(
+\backslash
+lambda+
+\backslash
+sqrt{
+\backslash
+lambda^{2}-
+\backslash
+omega_{0}^{2}}
+\backslash
+right)-v_{0}}{2
+\backslash
+sqrt{
+\backslash
+lambda^{2}-
+\backslash
+omega_{0}^{2}}}
+\backslash
+
+\backslash
+ c_{2}	&=&	
+\backslash
+frac{x_{0}
+\backslash
+left(
+\backslash
+sqrt{
+\backslash
+lambda^{2}-
+\backslash
+omega_{0}^{2}}-
+\backslash
+lambda
+\backslash
+right)+v_{0}}{2
+\backslash
+sqrt{
+\backslash
+lambda^{2}-
+\backslash
+omega_{0}^{2}}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+end{aligned}
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Simple Tools
+\end_layout
+
+\begin_layout Section
+Simple Mathematica Scripts for doing simple calculations
+\end_layout
+
+\begin_layout Enumerate
+Convert wavelength to frequency: ^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+[Lambda]to
+\backslash
+[Omega][
+\backslash
+[Lambda]_, n_] := N[(299792458/n)*2*Pi/
+\backslash
+[Lambda]];
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+[Lambda]to
+\backslash
+[Omega][760*10^-9, 1]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Numerics/Data
+\end_layout
+
+\begin_layout Subsection
+Experiment specifications
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.ligo.caltech.edu/advLIGO/scripts/ref_des.shtml
+\end_layout
+
+\end_inset
+
+: Exact specifications of the LIGO and the advanced LIGO experiments.
+\end_layout
+
+\begin_layout Subsection
+State of the Art Technology Data
+\end_layout
+
+\begin_layout Enumerate
+Highest intensity laser frontier: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://spie.org/x88664.xml?pf=true&ArticleID=x88664
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Order of Magnitude Approximations
+\end_layout
+
+\begin_layout Subsection
+Optics
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Frequency/Wavelength range of visible light
+\emph default
+: 
+\begin_inset Formula $400\times10^{12}-790\times10^{12}\; Hz/760-380\; nm$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Fabry-Perot
+\emph default
+: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Typical separation of mirrors: 10 cm (section 7.6.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+FSR: 
+\begin_inset Formula $10^{10}s^{-1}$
+\end_inset
+
+ (section 7.6.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+RP (see Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:RP fabry perot"
+
+\end_inset
+
+): 
+\begin_inset Formula $4\times10^{6}$
+\end_inset
+
+ (for 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+, 
+\begin_inset Formula $d=10$
+\end_inset
+
+ cm, and 
+\begin_inset Formula $\lambda\sim1\;\mu m$
+\end_inset
+
+ which results in a frequency resolution of 
+\begin_inset Formula $10^{9}\; s^{-1}$
+\end_inset
+
+) (Section 7.6.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Experimental tools
+\end_layout
+
+\begin_layout Subsection
+Popular Manufacturers
+\end_layout
+
+\begin_layout Enumerate
+Tunable Lasers: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.santec.com/en/5211
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Analysis of papers
+\end_layout
+
+\begin_layout Section
+Quantum-mechanical noise in an interferometer: 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "caves81"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename michelson interferometer caves 81.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "caves81"
+
+\end_inset
+
+; the number of bounces at each mirror is denoted by 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Derivation of equation 2.12-2.14
+\end_layout
+
+\begin_layout Standard
+Find the momentum carried by the light in each arm of the interferometer
+ then the momentum transferred at each bounce is twice this amount (assuming
+ the mirrors don't move; for if they do, the reflected light will be Doppler
+ shifted).
+ Assume the electric field is polarized out of the page.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename caves81_beam splitter.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pictorial representation of what happens at the beam-splitter
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:beamsplitter"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let mode 
+\begin_inset Formula $1^{+}$
+\end_inset
+
+ refer to light incident from the input laser port (incident plane wave
+ with angular frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Mode 
+\begin_inset Formula $2^{+}$
+\end_inset
+
+ is the light incident from the unused input port.
+ We will assume there is also a laser at the second (mode 2) port.
+ Denote the laser E-field by 
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{laser,mode1} & = & E_{1}=ae^{i\left(kx-\omega t\right)}\\
+E_{laser,mode2} & = & E_{2}=ae^{i\left(ky-\omega t\right)}\\
+k & = & \omega/c.
+\end{eqnarray*}
+
+\end_inset
+
+Looking at figure 
+\begin_inset Formula $\ref{fig:beamsplitter}$
+\end_inset
+
+, we easily see that mode 
+\begin_inset Formula $1+$
+\end_inset
+
+ after traversing the beam-splitter becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{1+} & = & \begin{cases}
+E_{1}+E_{1}^{R} & y>x\\
+E_{1}^{T}
+\end{cases}\\
+\end{eqnarray*}
+
+\end_inset
+
+To figure out what 
+\begin_inset Formula $E_{1}^{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{1}^{T}$
+\end_inset
+
+ are, we consider a general 50/50 beam-splitter: it introduces a global
+ phase shift of 
+\begin_inset Formula $e^{i\Delta}$
+\end_inset
+
+ to any light that traverses it and a relative 
+\begin_inset Formula $e^{i\mu}$
+\end_inset
+
+ to the reflected light.
+ However, we also have to take into account the reflection symmety through
+ 
+\begin_inset Formula $x=-y$
+\end_inset
+
+ (WHY?).
+ The transmitted and reflected E-field are 
+\begin_inset Formula $1/\sqrt{2}$
+\end_inset
+
+ that of the incoming E-field (see section 
+\begin_inset Formula $\ref{sub:Beamsplitter}$
+\end_inset
+
+).
+ Hence, 
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{1}^{T} & = & \frac{1}{\sqrt{2}}e^{i\Delta}E_{1}.\\
+\end{eqnarray*}
+
+\end_inset
+
+CANT FOLLOW REST OF DERIVATION UNTIL (2.14): 
+\series bold
+See section 
+\begin_inset Formula $\ref{sub:Beamsplitter}$
+\end_inset
+
+ (section 6.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gerryQO"
+
+\end_inset
+
+) to better understand how a quantum beam-splitter works: we need to satisfy
+ 
+\begin_inset Formula $r^{*}t+r^{'}t^{'}=0$
+\end_inset
+
+ so if 
+\begin_inset Formula $t=t^{'}=e^{i\Delta}/\sqrt{2}$
+\end_inset
+
+ then 
+\begin_inset Formula $r^{'}=-r^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Reference 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Helger2009"
+
+\end_inset
+
+: Quantum-state preparation and macroscopic entanglement in gravitational-wave
+ detectors
+\end_layout
+
+\begin_layout Subsection
+Important Information
+\end_layout
+
+\begin_layout Subsubsection
+Symmetrized time-domain two-point correlation function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{ab}\left(t-t^{'}\right) & = & \left\langle \hat{a}\left(t\right)\hat{b}\left(t^{'}\right)\right\rangle _{\mbox{sym}}\\
+ & \equiv & tr\left[\hat{\rho}\frac{\hat{a}\left(t\right)\hat{b}\left(t^{'}\right)+\hat{b}\left(t^{'}\right)\hat{a}\left(t\right)}{2}\right]
+\end{eqnarray*}
+
+\end_inset
+
+We can define the single-sided (cross-) spectral density 
+\begin_inset Formula $S_{ab}\left(\Omega\right)$
+\end_inset
+
+ from this as 
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{ab}\left(t\right) & = & \frac{1}{2}\intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}S_{ab}\left(\Omega\right)e^{-i\Omega t}\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Random other stuff
+\end_layout
+
+\begin_layout Itemize
+For equation 22, if 
+\begin_inset Formula $\Omega_{k}$
+\end_inset
+
+ is real then 
+\begin_inset Formula $\mathcal{F}^{-1}\left(1/\left(\Omega-\Omega_{k}\right)\right)\propto e^{-i\Omega_{k}t}Sign(t)$
+\end_inset
+
+ if 
+\begin_inset Formula $\Omega_{k}=a+ib\in\mathbb{C}$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{F}^{-1}\left(1/\left(\Omega-\Omega_{k}\right)\right) & \propto & e^{\left(b-ia\right)t}\Theta\left(-t\times sign(b)\right)\times sign\left(b\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+and so IFF 
+\begin_inset Formula $Im\left(\Omega_{k}\right)<0$
+\end_inset
+
+ does 
+\begin_inset Formula $\mathcal{F}^{-1}\left(1/\left(\Omega-\Omega_{k}\right)\right)$
+\end_inset
+
+ have support for only positive time.
+\end_layout
+
+\begin_layout Itemize
+DOI: 10.1103/PhysRevD.65.042001
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "references"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

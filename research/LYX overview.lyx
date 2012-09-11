@@ -156,12 +156,12 @@ Comment
 \end_layout
 
 \begin_layout Enumerate
-TEST
+To enter an equation Ctrl+m.
+ Easy!
 \end_layout
 
 \begin_layout Enumerate
-To enter an equation Ctrl+m.
- Easy!
+To copy paste equation line: Shift+end - Ctrl+c - End - Ctrl+v
 \end_layout
 
 \begin_layout Section
@@ -206,6 +206,58 @@ Other stuff
 
 \begin_layout Standard
 Check section 7.1 of additional features
+\end_layout
+
+\begin_layout Standard
+To add something to the TOC use 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{General Introduction}
+\end_layout
+
+\end_inset
+
+ below the section titles General Introduction.
+\end_layout
+
+\begin_layout Enumerate
+Instant preview is very useful if you'd like to use ERT (evil red text)
+ [[Elaborate more]]
+\end_layout
+
+\begin_layout Enumerate
+Math macros are very useful.
+ They have to be included in a child document that appears first in the
+ list of child documents [[elaborate more]]
+\end_layout
+
+\begin_layout Section
+Lyx vs other typesetting platform
+\end_layout
+
+\begin_layout Enumerate
+Lyx has better keyboard shortcuts and selection tricks (such as ctrl+shift+->)
+ then Mathematica but mouse selection on Lyx is not smooth at all.
+\end_layout
+
+\begin_layout Enumerate
+If I use HTML, I will be able to incorporate Mathematica (like 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.mathematica-users.org/webMathematica/wiki/wiki.jsp?pageName=Main_Page
+\end_layout
+
+\end_inset
+
+ - note that this website is no longer updated) or sage features?
 \end_layout
 
 \end_body

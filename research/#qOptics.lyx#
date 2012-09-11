@@ -2,7 +2,7 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass amsart
+\textclass article
 \begin_preamble
 \usepackage{braket}
 \usepackage[pdfborder={0 0 0}]{hyperref}
@@ -39,11 +39,6 @@
 }
 \end_preamble
 \use_default_options true
-\begin_modules
-theorems-ams
-eqs-within-sections
-figs-within-sections
-\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -15613,7 +15608,7 @@ reference "eq:outputQuadratures_freeSpaceNoise"
 
 *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -15653,27 +15648,11 @@ Say
 \begin_inset Formula $\Omega\tau$
 \end_inset
 
- and using that both are of comparable norm*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-See 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "note4"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-, we obtain (to zeroth order) that
+ and using that both are of comparable norm, we obtain (to zeroth order)
+ that
 \begin_inset Formula 
 \begin{eqnarray*}
-\vec{\beta} & = & \mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right),
+\vec{\beta} & = & \mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right),\\
 \end{eqnarray*}
 
 \end_inset
@@ -15689,15 +15668,6 @@ T\mathcal{K}/8 & 1
 0\\
 \mathcal{\sqrt{K}}
 \end{array}\right),
-\end{eqnarray*}
-
-\end_inset
-
-where 
-\begin_inset Formula 
-\begin{eqnarray*}
-\phi & \equiv & \tan^{-1}\left(\Omega/\gamma\right)\quad\gamma\equiv\frac{Tc}{4L}\\
-\mathcal{K} & \equiv & \frac{2\gamma\iota_{c}}{\Omega^{2}\left(\Omega^{2}+\gamma^{2}\right)}\quad\iota_{c}\equiv\frac{8\omega_{0}I_{c}}{mLc}\quad I_{c}\equiv\frac{4I_{0}}{T}.
 \end{eqnarray*}
 
 \end_inset
@@ -15905,15 +15875,9 @@ Claim
 
  *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "note4"
-
-\end_inset
-
 Let 
 \begin_inset Formula 
 \begin{eqnarray*}
@@ -16081,7 +16045,7 @@ reference "note3"
 \end_layout
 
 \begin_layout Plain Layout
-Using Mathematica and the above claim, we obtain that 
+Using Mathematica, we obtain that 
 \begin_inset Formula $H_{12}=0$
 \end_inset
 
@@ -16354,14 +16318,14 @@ For
  which would mean that 
 \begin_inset Formula 
 \begin{eqnarray*}
-h_{SQL} & = & \frac{\overbrace{g_{SQL}}^{\sqrt{2\hbar m\Omega^{2}}}}{m\Omega^{2}L/2}=\underrightarrow{2}\frac{\sqrt{\underrightarrow{2}\hbar\underline{m\Omega^{2}}}}{\underline{m\Omega^{2}}\underbrace{L}_{\sqrt{L^{2}}}}\\
+h_{SQL} & = & \frac{\overbrace{g_{SQL}}^{\sqrt{2\hbar m\Omega^{2}}}}{m\Omega^{2}L/2}=\underrightarrow{2}\frac{\sqrt{\underrightarrow{2}\hbar\undertilde{m}\underline{\Omega^{2}}}}{\undertilde{m}\underline{\Omega^{2}}\underbrace{L}_{\sqrt{L^{2}}}}\\
  & = & \sqrt{\frac{8\hbar}{m\Omega^{2}L^{2}}}\\
 \implies\frac{G}{g_{SQL}} & = & -\frac{h}{h_{SQL}}
 \end{eqnarray*}
 
 \end_inset
 
- so that we can write that 
+so that we can write that 
 \begin_inset Formula 
 \begin{eqnarray*}
 \vec{F}G & = & \frac{e^{i\phi}}{2}\left(\begin{array}{c}

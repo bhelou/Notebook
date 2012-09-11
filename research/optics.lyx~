@@ -2,7 +2,7 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass article
+\textclass amsart
 \begin_preamble
 \usepackage{braket}
 \usepackage{color}
@@ -40,6 +40,11 @@
 \usepackage[hidelinks]{hyperref}
 \end_preamble
 \use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -60,6 +65,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -188,17 +194,40 @@ reference "sub:PhaseModulation"
  The different pictures can be related in the following way
 \begin_inset Formula 
 \begin{eqnarray}
-\mathcal{E}_{c} & = & \sqrt{2}Re\left[\mathcal{E}\right]\qquad\mathcal{E}_{s}=\sqrt{2}Im\left[\mathcal{E}\right]\nonumber \\
+\mathcal{E}_{c} & = & \sqrt{2}Re\left[\mathcal{E}\right]=\mathcal{E}_{0}\cos\left(\phi_{0}\right)\qquad\mathcal{E}_{s}=\sqrt{2}Im\left[\mathcal{E}\right]=\mathcal{E}_{0}\sin\phi_{0}\nonumber \\
 \mathcal{E} & = & \frac{\mathcal{E}_{c}+i\mathcal{E}_{s}}{\sqrt{2}}\nonumber \\
 \mathcal{E}_{0} & = & \sqrt{2}\left|\mathcal{E}\right|\qquad\tan\phi_{0}=\arg\mathcal{E}\label{eq:transformationElectricFieldPictures}
 \end{eqnarray}
 
 \end_inset
 
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(\xi\right) & = & \mathcal{E}_{0}\left(\cosDiff{\omega_{0}\xi}{\phi_{0}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E}_{c} & = & \mathcal{E}_{0}\cos\left(\phi_{0}\right)\\
+\mathcal{E}_{s} & = & \mathcal{E}_{0}\sin\left(\phi_{0}\right)
+\end{eqnarray*}
+
+\end_inset
+
 
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 Because of the nature of the wave, we only have to study it at one point
  in space, say for 
 \begin_inset Formula $x=0$
@@ -696,7 +725,7 @@ Modulation of plane waves
 \end_layout
 
 \begin_layout Standard
-For this section, we assyme a plane wave of the form (with no phase)
+For this section, we assume a plane wave of the form (with no phase)
 \begin_inset Formula 
 \begin{eqnarray*}
 E_{car}\left(t\right) & = & \mathcal{E}_{0}\cos\left(\omega_{0}t\right)\\
@@ -719,6 +748,12 @@ key "Danilishin2012"
 \end_layout
 
 \begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Amplitude-Modulation"
+
+\end_inset
+
 Amplitude Modulation
 \end_layout
 
@@ -730,7 +765,7 @@ Simple example
 : The modulated wave would look like
 \begin_inset Formula 
 \begin{eqnarray*}
-E_{AM}\left(t\right) & = & \left(\mathcal{E}_{0}\left(1+\epsilon_{m}\cos\left(\Omega t+\phi_{m}\right)\right)\right)\cos\left(\omega_{0}t\right),\\
+E_{AM}\left(t\right) & = & \mathcal{E}_{0}\left(1+\epsilon_{m}\cos\left(\Omega t+\phi_{m}\right)\right)\cos\left(\omega_{0}t\right),\\
 \end{eqnarray*}
 
 \end_inset
@@ -739,7 +774,7 @@ where
 \begin_inset Formula $\epsilon_{m}\ll1$
 \end_inset
 
- is called the 
+ [[TODO: Is this assumption really necessary??]] is called the 
 \emph on
 modulation depth
 \emph default
@@ -756,10 +791,126 @@ modulation depth
 relative phase
 \emph default
 .
- We can also write 
+ In these limits, the phase quadratures (defined by 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:EfieldDefinitions"
+
+\end_inset
+
+) 
 \begin_inset Formula 
 \begin{eqnarray*}
-E_{AM}\left(t\right) & = & Re\left[\mathcal{E}_{0}e^{-i\omega_{0}t}+\frac{\mathcal{E}_{0}\epsilon_{m}}{2}e^{-i\phi_{m}}e^{-i\left(\omega_{0}+\Omega\right)t}+\frac{\mathcal{E}_{0}\epsilon_{m}}{2}e^{i\phi_{m}}e^{-i\left(\omega_{0}-\Omega\right)t}\right].\\
+\mathcal{E}_{c} & \approx & \mathcal{E}_{0}\left(1+\epsilon_{m}\cos\left(\Omega t+\phi_{m}\right)\right)\\
+\mathcal{E}_{s} & \approx & 0.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{AM}\left(t\right) & = & \mathcal{E}_{0}\cos\omega_{0}t+\epsilon_{m}\cos\left(\Omega t+\phi_{m}\right)\cos\left(\omega_{0}t\right),\\
+ & = & \mathcal{E}_{c}\cos\omega_{0}t+\mathcal{E}_{s}\sin\omega_{0}t\\
+ & = & \mathcal{E}_{0}\cos\omega_{0}t+\epsilon_{m}\cos\left(\omega_{0}t\right)\left[\cosSum{\Omega t}{\phi_{m}}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+In the timescale of 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+, since 
+\begin_inset Formula $\Omega\ll\omega_{0}$
+\end_inset
+
+, it will seem like that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\cos\left(\Omega t+\phi_{m}\right)$
+\end_inset
+
+ remains a constant and so we can treat 
+\begin_inset Formula $\epsilon_{m}\cos\left(\Omega t+\phi_{m}\right)$
+\end_inset
+
+ as a constant and incorporate it in 
+\begin_inset Formula $\mathcal{E}_{c}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Also, it seems like there is no problem if 
+\begin_inset Formula $\mathcal{E}_{c}$
+\end_inset
+
+ depends on time in this way.
+\end_layout
+
+\end_inset
+
+For this simple example, we can say that we have the phenomenon of 
+\emph on
+beats
+\emph default
+ (see figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:modulation figure"
+
+\end_inset
+
+ (a)).
+ We can also write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{AM}\left(t\right) & = & Re\left[\mathcal{E}_{0}e^{-i\omega_{0}t}+\frac{\mathcal{E}_{0}\epsilon_{m}}{2}e^{-i\phi_{m}}e^{-i\left(\omega_{0}+\Omega\right)t}+\frac{\mathcal{E}_{0}\epsilon_{m}}{2}e^{i\phi_{m}}e^{-i\left(\omega_{0}-\Omega\right)t}\right].
 \end{eqnarray*}
 
 \end_inset
@@ -796,7 +947,7 @@ E\left(t\right) & = & \mathcal{E}_{0}\cos\left(\omega_{0}t\right)+\frac{\epsilon
 
 \end_inset
 
-and to an arbitray real modulation function 
+and to an arbitrary real modulation function 
 \begin_inset Formula $A\left(t\right)=\intop_{-\infty}^{\infty}\frac{d\omega}{2\pi}A\left(\Omega\right)e^{-i\Omega t}$
 \end_inset
 
@@ -847,6 +998,12 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:modulation figure"
+
+\end_inset
+
 From 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -898,8 +1055,68 @@ where the phase deviation
 \begin_inset Formula 
 \begin{eqnarray*}
 \mathcal{E}_{c} & \approx & \mathcal{E}_{0}\\
-\mathcal{E}_{s} & \approx & \delta_{m}\mathcal{E}_{0}\cos\left(\Omega t+\phi_{m}\right)
+\mathcal{E}_{s} & \approx & \mathcal{E}_{0}\delta_{m}\cos\left(\Omega t+\phi_{m}\right)
 \end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+because we have that from Eq.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:transformationElectricFieldPictures"
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+  
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E}_{s} & = & \mathcal{E}_{0}\sin\left(\delta_{m}\cos\left(\Omega t+\phi_{m}\right)\right)\\
+ & \approx & \mathcal{E}_{0}\delta_{m}\cos\left(\Omega t+\phi_{m}\right)
+\end{eqnarray*}
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E}_{c} & = & \mathcal{E}_{0}\cos\left(\delta_{m}\cos\left(\Omega t+\phi_{m}\right)\right)\\
+ & \approx & \mathcal{E}_{0}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
 
 \end_inset
 
@@ -950,6 +1167,15 @@ which is different from the amplitude modulation expression by a
 \end_inset
 
  phase shift added to the sidebands.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(t\right) & = & \mathcal{E}_{0}\cos\omega_{0}t+\frac{\epsilon_{m}\mathcal{E}_{0}}{2}\intop_{-\infty}^{\infty}\frac{d\omega}{2\pi}\left(A\left(\omega-\omega_{0}\right)+A\left(\omega+\omega_{0}\right)\right)e^{-i\omega t}\\
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1091,19 +1317,1699 @@ key "mandelQO"
 \end_layout
 
 \begin_layout Section
-Approximations
+Interferometry
+\end_layout
+
+\begin_layout Subsection
+Interferometer as a weak force probe
+\end_layout
+
+\begin_layout Subsubsection
+Light phase as indicator of a weak force
 \end_layout
 
 \begin_layout Standard
-Narrowband approximation: The 
+Section 2.1.1 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Danilishin2012"
+
+\end_inset
+
+: fairly clear and simple to understand.
+\end_layout
+
+\begin_layout Subsubsection
+Michelson interferometer
+\end_layout
+
+\begin_layout Standard
+Directly measuring the phase of light is difficult so one has to resort
+ to interferometry techniques.
+\end_layout
+
+\begin_layout Standard
+2.1.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Danilishin2012"
+
+\end_inset
+
+: quick summary with trick to improve sensitivity: introduction of some
+ constant small bias 
+\begin_inset Formula $\delta L_{0}$
+\end_inset
+
+ between the arms lengths.
+\end_layout
+
+\begin_layout Subsection
+The Fabry-Perot Interferometer
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Intro
+\emph default
+:
+\emph on
+ 
+\emph default
+^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+The Michelson interferometer is useful in analyzing the coherence function
+ or power spectrum of light sources with coherence lengths of the order
+ of centimeters or less.
+ The analysis of light sources with longer coherence lengths is not feasible
+ with the Michelson interferometer ...
+ because of the length of the arms required.
+ On the other hand, if one could allow light to bounce back and forth many
+ times within an arm, one would increase the effective path length while
+ reducing the size of the instrument.
+ ...
+ The device, which consists of two partially transmitting surfaces facing
+ each other, operates on the principle of multiple beam interference.
+ Light which enters the instrument from one side is reﬂected back and forth
+ many times , with a little light escaping at each interface.
+ The light which leaves is the superposition of all the partial beams which
+ emerge from the partially transmitting output mirror.
+ ...
+ If the separation between the plates, 
+\begin_inset Formula $d$
+\end_inset
+
+, is constant one speaks of a 
+\emph on
+Fabry-Perot etalon
+\emph default
+, otherwise it is called a 
+\emph on
+Fabry-Perot interferometer
+\emph default
+.
+ Because of the long effective path length inside the interferometer, the
+ surfaces of the partially transmitting mirrors must be made with great
+ precision so as to not cause phase distortion in the light beam which is
+ being analyzed.
+ A high quality Fabry-Perot interferometer can have a surface ﬂatness of
+ better than λ/100.
+ In addition, the mirror surfaces may be curved (in particular, convex)
+ so that the light during its many traversals is conﬁned to the cavity.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+ section 7.6.2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+Description
+\emph default
+: 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fabry perot analysis.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:fabry perot driel"
+
+\end_inset
+
+From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ We will assume that the Fabry-Perot instrument is symmetric: i.e.
+ both partial mirros are identical and so have the same the same reflectivity
+ 
+\begin_inset Formula $\Gamma\equiv re^{i\phi}$
+\end_inset
+
+ and the same reflectivity 
+\begin_inset Formula $\Phi\equiv te^{i\sigma}$
+\end_inset
+
+.
+ As illustrated in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fabry perot driel"
+
+\end_inset
+
+, a continuous light beam of amplitude 
+\begin_inset Formula $\mathcal{E}_{0}$
+\end_inset
+
+ reaches the cavity at an angle of incidence (i.e.
+ the angle between the 
+\begin_inset Formula $\vec{E}_{0}$
+\end_inset
+
+ and the normal to the mirrors) 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ For a non-attenuating medium, we obtain that the intensity being transmitted
+ from the cavity is equal to 
+\begin_inset Formula 
+\begin{eqnarray}
+I_{out} & = & \frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}\label{eq:fabry transmitted intensity}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta=2\phi+\delta$
+\end_inset
+
+, 
+\begin_inset Formula $\delta=2\omega nd\cos\theta/c$
+\end_inset
+
+ is the phase difference between beams following 2 successive reflections
+ inside the cavity and the functional form of the above equation is known
+ as the 
+\emph on
+Airy function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+F & = & \frac{\pi\sqrt{R}}{1-R}
+\end{eqnarray*}
+
+\end_inset
+
+is called the 
+\emph on
+finesse 
+\emph default
+of the interferometer and 
+\begin_inset Formula $R=\left|\Gamma\right|^{2}$
+\end_inset
+
+ is the reflection coefficient*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The phase difference between beams following 2 successive reflections inside
+ the cavity is given by: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\delta & = & 2kd\cos\theta=2\frac{2\pi n}{\lambda_{0}}d\cos\theta
+\end{eqnarray*}
+
+\end_inset
+
+ because see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:path differences fabry perot"
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename derivation path difference fabry perot.png
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:path differences fabry perot"
+
+\end_inset
+
+Clarification on the path difference expression: The path difference is
+ given by =
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta l & = & \left(\xi_{3}+\xi_{1}+\xi_{2}+\xi_{2}\right)-\left(\xi_{3}+\xi_{1}+\xi_{3}\right)\\
+ & = & 2\xi_{2}-\xi_{3}=\left(2\xi_{1}+2\xi_{3}\right)-\xi_{3}=2\xi_{1}+\xi_{3}\\
+ & = & \xi_{1}+\left(\xi_{1}+\xi_{3}\right)=\xi_{1}+\xi_{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Now, the total electric field exiting the cavity 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E} & = & \mbox{First transmitted beam+Second transmitted beam+....}\\
+ & = & \mbox{Beam that goes through both mirrors+}\\
+ &  & \mbox{Beam that goes through 1st mirror then reflected twice then transmitted through mirror 2 and accumulates}\\
+ &  & \mbox{a phase shift+...}\\
+ & = & \mathcal{E}_{0}\Phi^{2}+\mathcal{E}_{0}\Phi^{2}\Gamma^{2}e^{i\delta}+\mathcal{E}_{0}\Phi^{2}\Gamma^{2}e^{2i\delta}+...\\
+ & = & \mathcal{E}_{0}\Phi^{2}\left(1+\Gamma^{2}e^{i\delta}+\Gamma^{4}e^{2i\delta}+...\right),
+\end{eqnarray*}
+
+\end_inset
+
+which is a geometric series because 
+\begin_inset Formula $\left|\Gamma\right|^{2}\leq1$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E} & = & \mathcal{E}_{0}\Phi^{2}\frac{1}{1-\Gamma^{2}e^{i\delta}}\\
+\implies I & \propto & \left|\mathcal{E}\right|^{2}\\
+I & = & \frac{I_{0}\left|\Phi\right|^{4}}{\left|1-\Gamma^{2}e^{i\delta}\right|^{2}}\\
+ & = & \frac{I_{0}T^{2}}{\left|1-r^{2}e^{i\Delta}\right|^{2}}=\frac{I_{0}T^{2}}{\left(1+R^{2}-2R\cos\Delta\right)}\\
+ & = & \frac{I_{0}T^{2}}{\left(1-R\right)^{2}}/\left(\frac{1+R^{2}}{\left(1-R\right)^{2}}-\frac{2R}{\left(1-R\right)^{2}}\cos\Delta\right)\\
+ & = & \frac{I_{0}T^{2}}{\left(1-R\right)^{2}}/\left(\frac{1+R^{2}}{\left(1-R\right)^{2}}-\frac{2R}{\left(1-R\right)^{2}}\left(1-2\sin^{2}\frac{\Delta}{2}\right)\right)\\
+ & = & \frac{I_{0}T^{2}}{\left(1-R\right)^{2}}/\left(1+\frac{4R}{\left(1-R\right)^{2}}\sin^{2}\frac{\Delta}{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+For a non-attenuating medium we have that 
+\begin_inset Formula $T=1-R$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+I & = & \frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $I_{out}/I_{0}$
+\end_inset
+
+ is plotted for different values of 
+\begin_inset Formula $R$
+\end_inset
+
+:
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fabry airy function.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+; TODO: Redo with Mathematica
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ From Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fabry transmitted intensity"
+
+\end_inset
+
+, we notice that 
+\begin_inset Formula $I_{out}$
+\end_inset
+
+ is at a maximum for 
+\begin_inset Formula $\Delta=2m\pi$
+\end_inset
+
+ with 
+\begin_inset Formula $m\in\mathbb{Z}$
+\end_inset
+
+ (this defines the resonance condition), each of which corresponds to a
+ resonant frequency 
+\begin_inset Formula $\omega_{m}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta/2 & = & \omega_{m}nd\cos\theta/c+\phi.\label{eq:fabry parameter}
+\end{eqnarray}
+
+\end_inset
+
+Moreover, the intensity being reflected from the cavity is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{r} & = & I_{0}\frac{4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Calculating power
+\emph default
+ 
+\emph on
+exiting to the left
+\emph default
+: By conservation of energy we have that 
+\begin_inset Formula $I_{out}+I_{r}=I_{in}=I_{0},$
+\end_inset
+
+ 
+\begin_inset Formula $I_{out}$
+\end_inset
+
+ is the power leaving the cavity to the right (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fabry transmitted intensity"
+
+\end_inset
+
+) and 
+\begin_inset Formula $I_{r}$
+\end_inset
+
+ is the power reflected to the left of the first mirror.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+(Note that we have ignored the power stored in the cavity because we are
+ working in the steady state regime: as the cavity reaches steady state,
+ energy is built up inside the cavity) Hence, 
+\begin_inset Formula $I_{r}=I_{0}-I_{out}$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{r} & = & I_{0}-I_{out}=I_{0}-\frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}\\
+ & = & I_{0}\frac{4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)},
+\end{eqnarray*}
+
+\end_inset
+
+(Alternate brute force derivation which shows that you have to be careful
+ with the reciprocity relations):*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The path difference (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:path differences fabry perot"
+
+\end_inset
+
+) between two successive transmitted beams to the left (i.e.
+ back to the input port) is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta l & = & \left(\xi_{3}+\xi_{1}+\xi_{2}\right)-\left(\xi_{3}\right)\\
+ & = & \xi_{1}+\xi_{2}=2d\cos\theta
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Denote the phase difference by 
+\begin_inset Formula $\delta=2kd\cos\theta$
+\end_inset
+
+.
+ Then, the total electric field exiting the cavity 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E} & = & \mbox{First transmitted beam+Second transmitted beam+....}\\
+ & = & \mbox{Beam that is directly reflected+}\\
+ &  & \mbox{Beam that goes through 1st mirror then reflected then transmitted through mirror 1 and accumulates}\\
+ &  & \mbox{a phase shift+...}\\
+ & = & -\mathcal{E}_{0}\Gamma^{*}+\mathcal{E}_{0}\left|\Phi\right|^{2}\Gamma e^{i\delta}+\mathcal{E}_{0}\left|\Phi\right|^{2}\Gamma^{3}e^{2i\delta}+...\\
+ & = & -\mathcal{E}_{0}\Gamma^{*}+\mathcal{E}_{0}T\Gamma e^{i\delta}\left(1+\Gamma^{2}e^{i\delta}+\Gamma^{4}e^{2i\delta}+...\right),
+\end{eqnarray*}
+
+\end_inset
+
+where the first term contains 
+\begin_inset Formula $-\Gamma^{*}$
+\end_inset
+
+ instead of 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+, and the second term 
+\begin_inset Formula $\left|\Phi\right|^{2}$
+\end_inset
+
+ instead of 
+\begin_inset Formula $\Phi^{2}$
+\end_inset
+
+ because of the reciprocity relations*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The reciprocity relations (Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:stokesReciprocityRelations"
+
+\end_inset
+
+) have to be satisfied: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Gamma^{*}\Phi^{'}+\Gamma^{'*}\Phi^{'} & = & 0,
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Phi^{'}$
+\end_inset
+
+ is the transmissivity for electric field crossing the mirror from right
+ to left and 
+\begin_inset Formula $\Gamma^{'}$
+\end_inset
+
+ is the reflectivity for electric incident (from right to left) to the right
+ side of the side of the first mirror.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Then we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Phi^{'} & = & \Phi^{*}\left(\frac{-\Gamma^{'}}{\Gamma^{*}}\right).\\
+\end{eqnarray*}
+
+\end_inset
+
+Pick 
+\begin_inset Formula $\Gamma^{'}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\Gamma^{'}=-\Gamma^{*}$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Phi^{'} & = & \Phi^{*}\\
+\implies\Phi^{'}\Phi & = & \left|\Phi\right|^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and the second is a geometric series because 
+\begin_inset Formula $\left|\Gamma\right|^{2}\leq1$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E} & = & -\mathcal{E}_{0}\Gamma^{*}+\mathcal{E}_{0}T\Gamma e^{i\delta}\left(\frac{1}{1-\Gamma^{2}e^{i\delta}}\right)=-\mathcal{E}_{0}\Gamma e^{-2i\phi}+\mathcal{E}_{0}T\Gamma e^{i\delta}\left(\frac{1}{1-\Gamma^{2}e^{i\delta}}\right)\\
+ & = & \mathcal{E}_{0}\Gamma\frac{e^{i\delta}\left(T+\Gamma^{2}e^{-2i\phi}\right)-e^{-2i\phi}}{1-\Gamma^{2}e^{i\delta}}=\mathcal{E}_{0}\Gamma\frac{e^{i\delta}\left(T+R\right)-e^{-2i\phi}}{1-\Gamma^{2}e^{i\delta}}\\
+I & \propto & \left|\mathcal{E}\right|^{2}\\
+\implies I & = & I_{0}\left|\Gamma\right|^{2}\frac{\left|-e^{-2i\phi}+e^{i\delta}\left(T+R\right)\right|^{2}}{\left|1-\Gamma^{2}e^{i\delta}\right|^{2}}\\
+ & = & I_{0}R\frac{1+\left|T+R\right|^{2}-2\re{e^{i\left(\delta+2\phi\right)}\left(T+R\right)}}{\left|1-r^{2}e^{i\Delta}\right|^{2}}\\
+ & = & I_{0}R\frac{1+T^{2}+R^{2}+2RT-2\left(T+R\right)\cos\left(\delta+2\phi\right)}{\left(1+R^{2}-2R\cos\Delta\right)}\\
+ & = & \left[\frac{I_{0}R}{\left(1-R\right)^{2}}/\left(\frac{1+R^{2}}{\left(1-R\right)^{2}}-\frac{2R}{\left(1-R\right)^{2}}\cos\Delta\right)\right]\left(1+\left(T+R\right)^{2}-2\left(T+R\right)\cos\left(\delta+2\phi\right)\right)\\
+ & = & \left[\frac{I_{0}R}{\left(1-R\right)^{2}}/\left(\frac{1+R^{2}}{\left(1-R\right)^{2}}-\frac{2R}{\left(1-R\right)^{2}}\left(1-2\sin^{2}\frac{\Delta}{2}\right)\right)\right]\left(1+\left(T+R\right)^{2}-2\left(T+R\right)\cos\left(\delta+2\phi\right)\right)\\
+ & = & \left[\frac{I_{0}R}{\left(1-R\right)^{2}}/\left(1+\frac{4R}{\left(1-R\right)^{2}}\sin^{2}\frac{\Delta}{2}\right)\right]\left(1+\left(T+R\right)^{2}-2\left(T+R\right)\cos\left(\delta+2\phi\right)\right)\\
+ & = & \left[\frac{I_{0}R}{\left(1-R\right)^{2}}/\left(1+\frac{4R}{\left(1-R\right)^{2}}\sin^{2}\frac{\Delta}{2}\right)\right]\left(1+\left(T+R\right)^{2}-2\left(T+R\right)\cos\left(\delta+2\phi\right)\right)\\
+ & = & \frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}\frac{R}{\left(1-R\right)^{2}}\left(1+\left(T+R\right)^{2}-2\left(T+R\right)\cos\left(\delta+2\phi\right)\right)
+\end{eqnarray*}
+
+\end_inset
+
+Assuming a non-attenuating medium (
+\begin_inset Formula $T=1-R$
+\end_inset
+
+ and so 
+\begin_inset Formula $T+R=1$
+\end_inset
+
+), and using that 
+\begin_inset Formula $\Delta=\delta+2\phi$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+I & = & \frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}\frac{R}{T^{2}}\left(2-2\cos\left(\Delta\right)\right)\\
+ & = & \frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}\frac{R}{T^{2}}2\left(1-\cos\left(\Delta\right)\right)\\
+ & = & \frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}4\left(F/\pi\right)^{2}\sin^{2}\frac{\Delta}{2}
+\end{eqnarray*}
+
+\end_inset
+
+where in the last equality we have used that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos\Delta & = & 1-2\sin^{2}\frac{\Delta}{2}\\
+\implies\sin^{2}\frac{\Delta}{2} & = & \frac{1-\cos\Delta}{2}\\
+\implies\left(1-\cos\Delta\right) & = & 2\sin^{2}\frac{\Delta}{2}
+\end{eqnarray*}
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\begin{eqnarray*}
+F & = & \frac{\pi\sqrt{R}}{1-R}\\
+\implies\left(F/\pi\right)^{2} & = & \frac{R}{T^{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The constant frequency separation between different resonances is called
+ the 
+\emph on
+free spectral range
+\emph default
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+FSR & = & \omega_{m+1}-\omega_{m}=\frac{\pi c}{nd\cos\theta}\\
+ & = & \frac{2\pi}{\tau_{RT}},
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\tau_{RT}$
+\end_inset
+
+ is the time light takes to make a roundtrip inside the cavity*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\tau_{RT} & = & \frac{\mbox{distance}}{\mbox{speed}}=\frac{2d\cos\theta}{c/n}\\
+ & = & 2\times\frac{nd\cos\theta}{c\pi}\times\pi=\frac{2\pi}{FSR}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Denote the FWHM of 
+\begin_inset Formula $I_{out}$
+\end_inset
+
+ by 
+\begin_inset Formula $\Delta\omega$
+\end_inset
+
+.
+ Then, assuming 
+\begin_inset Formula $\phi=0$
+\end_inset
+
+ and a high reflection coefficient 
+\begin_inset Formula $R$
+\end_inset
+
+, we can write that 
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta\omega & \approx & \frac{FSR}{F}\qquad\left(R\approx1\right).\label{eq:approx FWHM of Iout Fabry}
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ denote the value of 
 \begin_inset Formula $\omega$
 \end_inset
 
- in the expansion of the quantized Electric field is replaced with 
-\begin_inset Formula $\omega_{0}$
+ at which we reach the FWHM
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)} & = & \frac{1}{2}\\
+\implies4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right) & = & 1\\
+\implies\sin\Delta/2 & = & \frac{\pi}{2F}
+\end{eqnarray*}
+
 \end_inset
 
-, the central frequency of the laser.
+If we have a high reflectivity then 
+\begin_inset Formula $\Delta\approx\epsilon+2m\pi$
+\end_inset
+
+ and so we can write - denoting the frequency when 
+\begin_inset Formula $I_{out}$
+\end_inset
+
+ reaches 
+\begin_inset Formula $I_{0}/2$
+\end_inset
+
+ by 
+\begin_inset Formula $\omega_{1/2}$
+\end_inset
+
+- that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta & \approx & \frac{\pi}{F}\\
+\Delta & = & 2\frac{\omega_{1/2}n}{c}d\cos\theta+2\phi\\
+\implies\omega_{1/2} & = & \frac{\left(\Delta-2\phi\right)c}{2nd\cos\theta}
+\end{eqnarray*}
+
+\end_inset
+
+Denote the FWHM of the frequency by 
+\begin_inset Formula $\Delta\omega_{1/2}$
+\end_inset
+
+ then assuming 
+\begin_inset Formula $\phi=0$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta\omega_{1/2} & = & 2\left(\frac{\Delta c}{2nd\cos\theta}\right)\\
+ & = & \Delta\frac{1}{\pi}\times FSR\\
+ & = & \frac{FSR}{F}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+(From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+ section 7.6.2)
+\end_layout
+
+\begin_layout Subsubsection
+Resolving power of the Fabry-Perot
+\end_layout
+
+\begin_layout Standard
+Consider 2 waves of slightly different frequencies 
+\begin_inset Formula $\omega$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega^{'}$
+\end_inset
+
+ falling on the interferometer then if we assume that the two sources are
+ mutually incoherent (i.e.
+ no interference effects between them) and that they have the same intensity
+ then the overall transmitted intensity is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{out} & = & \frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}+\frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta^{'}/2\right)},
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta=2\omega nd\cos\theta/c+2\phi$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta^{'}=2\omega^{'}nd\cos\theta/c+2\phi$
+\end_inset
+
+.
+ In order to say that we can resolve the lines in the intensity pattern
+ we must adopt a suitable criterion.
+ A generally accepted criterion, is the Rayleigh criterion (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Rayleigh-criterion"
+
+\end_inset
+
+).
+ According to this criterion two lines are considered to be resolved if
+ the intensity at the saddle point is 
+\begin_inset Formula $8/\pi^{2}$
+\end_inset
+
+ times the intensity at the two maxima.
+ Therefore, at the saddle point (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:2 beams intensity pattern"
+
+\end_inset
+
+), applying this criterion, we obtain that the maximum frequency separation
+ between the two peaks before the Rayleigh criterion is no longer met is
+ given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\delta\omega & = & \omega-\omega^{'}\approx\frac{1.05\pi c}{Fnd\cos\theta},
+\end{eqnarray*}
+
+\end_inset
+
+where we made the assumption that both 
+\begin_inset Formula $\Delta-\Delta^{'}$
+\end_inset
+
+ is small*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The 2 beams are of the same form 
+\begin_inset Formula $I_{out}=\frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}+\frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta^{'}/2\right)},$
+\end_inset
+
+ so their saddle point will be at 
+\begin_inset Formula $\left(\Delta-\Delta^{'}\right)/2$
+\end_inset
+
+, i.e.
+ between the 2 peaks.
+ Hence, at the saddle point the intensity is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{out} & = & 2\frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\left(\Delta-\Delta^{'}\right)/4\right)}.
+\end{eqnarray*}
+
+\end_inset
+
+At what value of 
+\begin_inset Formula $d$
+\end_inset
+
+ do we reach a maximum of 
+\begin_inset Formula $I_{out}$
+\end_inset
+
+? By symmetry, it is either at the saddle or somewhere else.
+ But we are assuming a high reflectivity (i.e.
+ 
+\begin_inset Formula $\Delta,\Delta^{'}$
+\end_inset
+
+ is small) and so the maximum has to be at one of the peaks and we have
+ that (say we pick the peak of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{out}/I_{0} & = & 1+\frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\left(\Delta-\Delta^{'}\right)/2\right)},
+\end{eqnarray*}
+
+\end_inset
+
+(the 
+\begin_inset Formula $\left(\Delta-\Delta^{'}\right)$
+\end_inset
+
+ is because we set the origin at where the first beam is at a maximum and
+ 
+\begin_inset Formula $sin^{2}x=sin^{2}-x$
+\end_inset
+
+, i.e.
+ we shift the coordinates) so we want to find at what value of 
+\begin_inset Formula $\delta\omega=\omega-\omega^{'}$
+\end_inset
+
+, do we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{8}{\pi^{2}}\left(1+\frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\left(\Delta-\Delta^{'}\right)/2\right)}\right) & = & 2\frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\left(\Delta-\Delta^{'}\right)/4\right)}
+\end{eqnarray*}
+
+\end_inset
+
+Using Mathematica (TODO) and again assuming that 
+\begin_inset Formula $\Delta-\Delta^{'}$
+\end_inset
+
+ is small, we obtain that 
+\begin_inset Formula $\delta\omega=\omega-\omega^{'}=\frac{1.05\pi c}{Fnd\cos\theta}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ The resolving power is defined by 
+\begin_inset Formula 
+\begin{eqnarray}
+RP & = & \frac{\omega}{\delta\omega}\nonumber \\
+ & = & \frac{\omega Fnd\cos\theta}{1.05\pi c}.\label{eq:RP fabry perot}
+\end{eqnarray}
+
+\end_inset
+
+(Section 7.6.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+Near resonance: Fabry-Perot as a damped harmonic oscillator
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula 
+\begin{eqnarray*}
+\xi & \equiv & \Delta-\Delta_{m}\\
+ & = & \frac{2\left(\omega-\omega_{m}\right)nd\cos\theta}{c},
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta_{m}=2m\pi$
+\end_inset
+
+ is the location of the 
+\begin_inset Formula $m$
+\end_inset
+
+th transmission peak.
+ By assuming that 
+\begin_inset Formula $\xi$
+\end_inset
+
+ is small then we can write that 
+\begin_inset Formula 
+\begin{eqnarray}
+I/I_{0} & \approx & \frac{1}{1+\left(F/\pi\right)^{2}\xi^{2}}.\label{eq:fabry perot near resonance}
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+I/I_{0} & = & \frac{1}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta/2\right)}\\
+ & = & \frac{1}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\left(\xi+\Delta_{m}\right)/2\right)}\\
+ & = & \frac{1}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\xi/2+m\pi\right)}\\
+ & = & \frac{1}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\xi/2\right)}\approx\frac{1}{1+4\left(F/\pi\right)^{2}\xi^{2}/4}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+This is a Lorentzian with FWHM given by 
+\begin_inset Formula $\Delta\omega=\pi c/Fnd\cos\theta$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+A lorentzian has the form 
+\begin_inset Formula 
+\begin{eqnarray*}
+f & = & \frac{1}{\pi}\left(\frac{\gamma}{\left(x-x_{0}\right)^{2}+\gamma^{2}}\right),\\
+ & = & 1/\pi\gamma\left(1+\left(\frac{x-x_{0}}{\gamma}\right)^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ is the location of the peak and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is HWHM (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lorentzian function"
+
+\end_inset
+
+).
+ Now, 
+\begin_inset Formula 
+\begin{eqnarray*}
+I/I_{0} & = & \frac{1}{1+\left(F/\pi\right)^{2}\xi^{2}}\\
+ & = & \frac{1}{\pi}\frac{1}{1/\pi+F^{2}\xi^{2}/\pi^{3}}\\
+ & = & \frac{1}{\pi}/\left(1/\pi+F^{2}\xi^{2}/\pi^{3}\right)\\
+ & = & \frac{1}{\pi}/\left(1/\pi+F^{2}\frac{4\left(\omega-\omega_{m}\right)^{2}n^{2}d^{2}\cos^{2}\theta}{c^{2}\pi^{3}}\right)\\
+ & = & \frac{1}{\pi}/\left(1/\pi+\left(\omega-\omega_{m}\right)^{2}/\left(\frac{c^{2}\pi^{3}}{4F^{2}n^{2}d^{2}\cos^{2}\theta}\right)\right)\\
+ & = & \frac{1}{\pi}\times\left(\pi\right)/\left(1+\left(\omega-\omega_{m}\right)^{2}/\left(\frac{c^{2}\pi^{2}}{4F^{2}n^{2}d^{2}\cos^{2}\theta}\right)\right)
+\end{eqnarray*}
+
+\end_inset
+
+and so 
+\begin_inset Formula $\gamma=\sqrt{\frac{c^{2}\pi^{2}}{4F^{2}n^{2}d^{2}\cos^{2}\theta}}$
+\end_inset
+
+ and FWHM=
+\begin_inset Formula $2\gamma$
+\end_inset
+
+.
+ Note we dont need the exact form 
+\begin_inset Formula $1/\pi\gamma\left(1+\left(\frac{x-x_{0}}{\gamma}\right)^{2}\right)$
+\end_inset
+
+ as the 
+\begin_inset Formula $1/\pi\gamma$
+\end_inset
+
+ is just a constant and does not modify what the FWHM but only the height
+ of the function
+\end_layout
+
+\end_inset
+
+ and so the Fabry-Perot can be viewed as a macroscopic oscillator with a
+ number of equally spaced resonance frequencies*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+To see this connection, note that w
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+e have from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:near resonance forced damped SHO energy absorbed"
+
+\end_inset
+
+ that the energy absorbed by a forced damped harmonic oscillator is given
+ by 
+\begin_inset Formula 
+\begin{eqnarray*}
+I\left(\epsilon\right) & = & \frac{f^{2}\lambda}{4m\left(\epsilon^{2}+\lambda^{2}\right)},\\
+ & = & \frac{\lambda f^{2}}{4m\lambda^{2}\left(\epsilon^{2}/\lambda^{2}+1\right)}\\
+ & = & \frac{f^{2}}{4m\lambda}\frac{1}{\epsilon^{2}/\lambda^{2}+1}
+\end{eqnarray*}
+
+\end_inset
+
+and so we can associate 
+\begin_inset Formula $f^{2}/4m\lambda$
+\end_inset
+
+ with 
+\begin_inset Formula $I_{0}$
+\end_inset
+
+ and we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{\lambda^{2}} & \equiv & \left(F/\pi\right)^{2}\\
+\implies\lambda & \equiv & \frac{\pi}{F}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ These 'oscillators' have (by definition^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+The energy damping rate is defined to be the FWHM and the energy lifetime
+ to be 1/(energy damping rate)
+\end_layout
+
+\end_inset
+
+) energy damping rates given by 
+\begin_inset Formula $\Delta\omega$
+\end_inset
+
+ and energy lifetimes of the order of 
+\begin_inset Formula $\tau=1/\Delta\omega$
+\end_inset
+
+ and so the higher the finesse of the system the slower the rate of energy
+ loss from the resonator is.
+\end_layout
+
+\begin_layout Standard
+(section 7.6.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+Comments on the Fabry-Perot [[TODO: Organize]]
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+For a (typical) 10 cm separation of the mirrors with normally incident light
+ the free spectral range corresponds to 
+\begin_inset Formula $10^{10}s^{-1}$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+A wavelength is around 
+\begin_inset Formula $10^{-6}m$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+FSR & \approx & \frac{\pi\times3\times10^{8}}{10^{-1}}\\
+ & \approx & 10^{9+1}=10^{10}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, which is much less than the frequency of visible light.
+\begin_inset Quotes erd
+\end_inset
+
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+ section 7.6.2)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+Because the output of the interferometer is periodic as a function of frequency
+ with period equal to the frequency of the spectral free range, the analysis
+ of light sources with bandwidths greater than the spectral free range is
+ at best complicated and one may be better off using a Michelson interferometer.
+ The Fabry-Perot interferometer is most useful for analyzing light sources
+ with a bandwidth less than the free spectral range.
+ For such sources the typical output of the interferometer is given in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fabry output multifrequency input"
+
+\end_inset
+
+.
+ In this ﬁgure the variation in 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ is achieved by scanning 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ Although the output is still periodic in 
+\begin_inset Formula $d$
+\end_inset
+
+, the component frequency may be obtained by comparing the output with that
+ of a true monochromatic source of known frequency^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+If we know what the frequency of one of the peaks in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fabry output multifrequency input"
+
+\end_inset
+
+ then we can know the frequency of any other peak.
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fabry output multifrequency input.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:fabry output multifrequency input"
+
+\end_inset
+
+ From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+ section 7.6.2)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+More often than not, a point source is used and the waves which interfere
+ in the observation plane form concentric circular rings as in the case
+ of the Michelson interferometer.
+ In essence one is observing a scan of the interferometer with 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ changing because of the variation in 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ A scan of the intensity pattern in the observation plane gives the same
+ information as a scan of the intensity at the center of the ring pattern
+ as a function of 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+ section 7.6.2)
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Intracavity power
+\emph default
+: *
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+NOTE: Siegman does it differently and gets a different result? See Eq.
+ 19 of section 11.3 (p.
+ 415) of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "siegmanLasers"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+Calculating intracavity power
+\emph default
+ (to be specific I am calculating the power inside the cavity at a specific
+ location: the outer/right edge of the first mirror): The path difference
+ (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:path differences fabry perot"
+
+\end_inset
+
+) between two successive reflected beams is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta l & = & \left(\xi_{3}+\xi_{1}+\xi_{2}\right)\\
+ & = & 2\xi_{2}=2d\sec\theta
+\end{eqnarray*}
+
+\end_inset
+
+Denote the phase difference by 
+\begin_inset Formula $\delta^{'}=k\Delta l$
+\end_inset
+
+.
+ Then, we have that the total electric field stored in the Fabry Perot is
+ given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E}_{c} & = & \mbox{First transmitted beam+First reflected beam+....}\\
+ & = & \mbox{Beam that goes through first mirrors+}\\
+ &  & \mbox{Beam that goes through 1st mirror then reflected and accumulates a phase shift+...}\\
+ & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi\Gamma e^{i\delta^{'}}+\mathcal{E}_{0}\Phi\Gamma^{3}e^{2i\delta^{'}}+...\\
+ & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi\Gamma e^{i\delta^{'}}\left(1+\Gamma^{2}e^{i\delta^{'}}+\Gamma^{4}e^{2i\delta^{'}}+...\right),
+\end{eqnarray*}
+
+\end_inset
+
+which is a geometric series because 
+\begin_inset Formula $\left|\Gamma\right|^{2}\leq1$
+\end_inset
+
+ and so (letting 
+\begin_inset Formula $\Delta^{'}=\delta^{'}+2\phi$
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E}_{c} & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi\Gamma e^{i\delta^{'}}\left(\frac{1}{1-\Gamma^{2}e^{i\delta^{'}}}\right)=\mathcal{E}_{0}\Phi\left(1+\frac{\Gamma e^{i\delta^{'}}}{1-\Gamma^{2}e^{i\delta^{'}}}\right)\\
+ & = & \mathcal{E}_{0}\Phi\frac{1+e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)}{1-\Gamma^{2}e^{i\delta^{'}}}\\
+I_{c} & \propto & \left|\mathcal{E}_{c}\right|^{2}\\
+\implies I_{c} & = & I_{0}\left|\Phi\right|^{2}\frac{\left|1+e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)\right|^{2}}{\left|1-\Gamma^{2}e^{i\delta^{'}}\right|^{2}}\\
+ & = & I_{0}T\frac{\normSumComplex1{\left[e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)\right]}}{\left|1-r^{2}e^{i\Delta^{'}}\right|^{2}}\\
+ & = & I_{0}T\frac{1+\normSumComplex{-\Gamma^{2}}{\Gamma}+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)}{\left(1+R^{2}-2R\cos\Delta^{'}\right)}\\
+ & = & I_{0}T\frac{1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)}{\left(1+R^{2}-2R\cos\Delta^{'}\right)}\\
+ & = & \left[\frac{I_{0}T}{\left(1-R\right)^{2}}/\left(\frac{1+R^{2}}{\left(1-R\right)^{2}}-\frac{2R}{\left(1-R\right)^{2}}\cos\Delta^{'}\right)\right]\left(1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)\right)\\
+ & = & \left[\frac{I_{0}T}{\left(1-R\right)^{2}}/\left(\frac{1+R^{2}}{\left(1-R\right)^{2}}-\frac{2R}{\left(1-R\right)^{2}}\left(1-2\sin^{2}\frac{\Delta^{'}}{2}\right)\right)\right]\left(1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\Delta^{'}\right)\right)\\
+ & = & \left[\frac{I_{0}T}{\left(1-R\right)^{2}}/\left(1+\frac{4R}{\left(1-R\right)^{2}}\sin^{2}\frac{\Delta^{'}}{2}\right)\right]\left(1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\Delta^{'}\right)\right)\\
+ & = & \frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta^{'}/2\right)}\frac{T}{\left(1-R\right)^{2}}\left(1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\Delta^{'}\right)\right)
+\end{eqnarray*}
+
+\end_inset
+
+For a non-attenuating medium we have that 
+\begin_inset Formula $T=1-R$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{c} & = & \frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta^{'}/2\right)}\frac{1}{T}\left(1+R^{2}+R-2R^{3/2}\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\Delta^{'}\right)\right)
+\end{eqnarray*}
+
+\end_inset
+
+Now if 
+\begin_inset Formula $\Delta/2=\omega_{m}nd\cos\theta/c+\phi=2m\pi$
+\end_inset
+
+ at resonance, where 
+\begin_inset Formula $m$
+\end_inset
+
+ is an integer.
+ Let us assume that 
+\begin_inset Formula $\phi=0$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta/2 & = & \omega_{m}nd\cos\theta/c=2m\pi\\
+\implies\Delta^{'}/2 & = & \Delta/2\cos^{3}\theta=2m\pi/\cos^{3}\theta.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+Calculating intracavity power at any location
+\emph default
+: Let the origin be at the outer edge of the first mirror then 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E}_{c}\left(x\right) & = & \mbox{First transmitted beam+First reflected beam+....}\\
+ & = & \mbox{Beam that goes through first mirrors+}\\
+ &  & \mbox{Beam that goes through 1st mirror then reflected and accumulates a phase shift+...}\\
+ & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi\Gamma e^{2ik\left(d-x\right)\sec\theta}+\mathcal{E}_{0}\Phi\Gamma^{2}e^{2ik\left(x\sec\theta+\left(d-x\right)\sec\theta\right)}+\mathcal{E}_{0}\Phi\Gamma^{3}e^{2ik\left(x\sec\theta+2\left(d-x\right)\sec\theta\right)}+\\
+ &  & +\mathcal{E}_{0}\Phi\Gamma^{4}e^{4ik\left(x\sec\theta+\left(d-x\right)\sec\theta\right)}+\mathcal{E}_{0}\Phi\Gamma^{5}e^{4ik\left(x\sec\theta+2\left(d-x\right)\sec\theta\right)}+...
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The Sagnac ring interometer
+\end_layout
+
+\begin_layout Standard
+Section 4.1.2 of Scully's quantum optics (p.101) - Fairly self-contained and
+ clear.
+ 
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Rayleigh-criterion"
+
+\end_inset
+
+Rayleigh criterion
+\end_layout
+
+\begin_layout Standard
+In order to say that we can resolve the lines in an intensity pattern we
+ must adopt a suitable criterion.
+ A generally accepted criterion, is the Rayleigh criterion.
+ According to this criterion two lines are considered to be resolved if
+ the intensity at the saddle point is 
+\begin_inset Formula $8/\pi^{2}$
+\end_inset
+
+ times the intensity at the two maxima.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename intensity pattern 2 monochromatic lines.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:2 beams intensity pattern"
+
+\end_inset
+
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vanDrielO"
+
+\end_inset
+
+ section 7.6.2) Here 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ is a parameter that can be varied in a Fabry perot interferometer - see
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fabry parameter"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1119,7 +3025,7 @@ Simple classical treatment
 \end_layout
 
 \begin_layout Standard
-Add a random time-dependent modulation of the amplitude and phase:
+Add a random time-dependent modulation of the amplitude and phase:sds
 \begin_inset Formula 
 \begin{eqnarray*}
 E\left(t\right) & = & \left(\mathcal{E}_{0}+\hat{e}_{n}\left(t\right)\right)\cos\left[\omega_{0}t+\phi_{0}+\hat{\phi}_{n}\left(t\right)\right]\\

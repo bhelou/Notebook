@@ -102,147 +102,104 @@
 
 \begin_body
 
-\begin_layout Title
-Lyx for note taking
-\end_layout
-
-\begin_layout Section
-Keyboard shortcuts
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Table of contents 
-\emph default
-(TOC): It can be inserted by the keyboard combination Alt+i i c.
- 
-\end_layout
-
-\begin_layout Enumerate
-A 
-\emph on
-figure
-\emph default
- with Alt+i a 
-\begin_inset Formula $\downarrow$
+\begin_layout Standard
+FILL IN THE SECTION ON WHY 
+\begin_inset Formula $S_{\theta}=\lim\theta\tau$
 \end_inset
 
- Enter.
-\end_layout
 
-\begin_layout Enumerate
-
-\emph on
-Graphics
-\emph default
- with Alt+i g
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Note
-\emph default
- with Alt+i n n
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Comment
-\emph default
- with Alt+i n c m
-\end_layout
-
-\begin_layout Enumerate
-To enter an equation Ctrl+m.
- Easy!
-\end_layout
-
-\begin_layout Enumerate
-To copy paste equation line: Shift+end - Ctrl+c - End - Ctrl+v
-\end_layout
-
-\begin_layout Section
-Outline of the document
 \end_layout
 
 \begin_layout Standard
-To have the Outline of the document (i.e.
- The TOC/list of figures/list of notes, etc...) presented to the left of the
- screen, press Alt+d.
- 
+cool applet for 2d integration: http://higheredbcs.wiley.com/legacy/college/mccall
+um/0470131586/applets/ch16/hh_fig_16_4a.htm
 \end_layout
 
 \begin_layout Standard
-Some useful features:
-\end_layout
-
-\begin_layout Enumerate
-You can easily (using the 4 buttons on the bottom right side of the outline
- tab)
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Move sections around
-\end_layout
-
-\begin_layout Enumerate
-Increase or decrease the nesting depth of items
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-You can navigate the different sections in your document by clicking on
- the names of the different sections and subsections of your document.
- Note: Check the 'Keep' button on the bottom of the outline tab.
-\end_layout
-
-\begin_layout Section
-Other stuff
-\end_layout
-
-\begin_layout Standard
-Check section 7.1 of additional features
-\end_layout
-
-\begin_layout Standard
-To add something to the TOC use 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-addcontentsline{toc}{section}{General Introduction}
-\end_layout
+Perhaps useful in the future: note in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Danilishin2012"
 
 \end_inset
 
- below the section titles General Introduction.
+'s treatment of the force susceptibility formalism on classical green function
+ solution to EOM
 \end_layout
 
-\begin_layout Enumerate
-Instant preview is very useful if you'd like to use ERT (evil red text)
- [[Elaborate more]]
+\begin_layout Standard
+Correlation between coherent states' amplitude and phase quadratures, see
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "Note1"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Enumerate
-Math macros are very useful.
- They have to be included in a child document that appears first in the
- list of child documents [[elaborate more]]
+\begin_layout Standard
+TODO:
 \end_layout
 
-\begin_layout Section
-Lyx vs other typesetting platform
+\begin_layout Standard
+Figure out how to have pretty program listing
 \end_layout
 
-\begin_layout Enumerate
-Lyx has better keyboard shortcuts and selection tricks (such as ctrl+shift+->)
- then Mathematica but mouse selection on Lyx is not smooth at all.
+\begin_layout Standard
+Tuned fabry perot!!
+\end_layout
+
+\begin_layout Standard
+Can i search equations?
+\end_layout
+
+\begin_layout Standard
+Thoughts:
+\end_layout
+
+\begin_layout Standard
+Very difficult to find a specific reference - my approach solves it with
+ Ctrl-f as well as possibly an index or a subsection specifically devoted
+ to references.
+\end_layout
+
+\begin_layout Standard
+Use 
+\begin_inset Formula $dp/d\lambda=\left[P\left(\lambda\right),H\left(\lambda\right)\right]$
+\end_inset
+
+ with 
+\begin_inset Formula $H=px$
+\end_inset
+
+ so that time evolution is like 
+\begin_inset Formula $e^{p\lambda x}$
+\end_inset
+
+??
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Omega\tau,\kappa,T$
+\end_inset
+
+ show same order.
+ Also detuning
+\begin_inset Formula $\sim\gamma$
+\end_inset
+
+.
+ then do taylor expansion of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ around 
+\begin_inset Formula $\kappa\epsilon,T\epsilon$
+\end_inset
+
+, etc ...
 \end_layout
 
 \end_body

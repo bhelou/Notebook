@@ -40,6 +40,11 @@
 \usepackage[]{hyperref}
 \end_preamble
 \use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -142,7 +147,8 @@ Integrating
 \begin_inset Formula 
 \begin{eqnarray*}
 \int_{-\infty}^{\infty}dt\lim_{\Delta t\rightarrow0}\frac{\delta_{t\in\left[t_{0}-\Delta t/2,t_{0}+\Delta t/2\right]}}{\Delta t} & = & \int_{-\infty}^{\infty}dt\frac{\delta_{t\in\left[t_{0}-dt/2,t_{0}+dt/2\right]}}{dt}\\
- & = & \int_{t_{0}-dt/2}^{t_{0}+dt/2}dt\frac{1}{dt}=1
+ & = & \int_{t_{0}-dt/2}^{t_{0}+dt/2}dt\frac{1}{dt}=\frac{1}{dt}\times dt\\
+ & = & 1
 \end{eqnarray*}
 
 \end_inset
@@ -375,7 +381,7 @@ A_{n} & = & \frac{1}{L}\int_{-L/2}^{L/2}f\left(x\right)e^{-i\left(2\pi nx/L\righ
 \end_layout
 
 \begin_layout Standard
-From 
+(From 
 \begin_inset CommandInset href
 LatexCommand href
 name "Fourier series wolfram alpha"
@@ -383,11 +389,1149 @@ target "http://mathworld.wolfram.com/FourierSeries.html"
 
 \end_inset
 
+)
+\end_layout
+
+\begin_layout Section
+Useful Tricks/Theorems
+\end_layout
+
+\begin_layout Subsection
+Taylor Series !
+\end_layout
+
+\begin_layout Subsubsection
+Taylor Theorem 1 
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is 
+\begin_inset Formula $n+1$
+\end_inset
+
+ times continuously differentiable, then 
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+[f(a+
+\backslash
+lambda,b+
+\backslash
+mu)=f+
+\backslash
+left(
+\backslash
+lambda
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial x}+
+\backslash
+mu
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial y}
+\backslash
+right)f+
+\backslash
+dots+
+\backslash
+frac{1}{n!}
+\backslash
+left(
+\backslash
+lambda
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial x}+
+\backslash
+mu
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial y}
+\backslash
+right)^{n}f+R_{n},
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $R_{n}$
+\end_inset
+
+ denotes the remainder, 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ and its partial derivatives on the right-hand side are evaluated at 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(From 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://dlmf.nist.gov/1.5.E18
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+Taylor Theorem 2 (if 
+\begin_inset Formula $f$
+\end_inset
+
+ is not infinitely differentiable)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://en.wikipedia.org/wiki/Taylor%27s_theorem
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Subsubsection
+Taylor Expansion
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is infinitely differentiable
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+f\left(x_{1},...,x_{d}\right) & = & \sum_{n_{1}=0}^{\infty}\sum_{n_{2}=0}^{\infty}...\sum_{n_{d}=0}^{\infty}\frac{(x_{1}-a_{1})^{n_{1}}...(x_{d}-a_{d})^{n_{d}}}{n_{1}!...n_{d}!}\left.\frac{\partial^{n_{1}+...+n_{d}}}{\partial x_{1}^{n_{1}}...\partial x_{d}^{n_{d}}}f\left(x_{1},...,x_{d}\right)\right|_{x_{1}=a_{1},...,x_{d}=a_{d}}.\label{sub:Taylor-Expansion}
+\end{eqnarray}
+
+\end_inset
+
+Hence, for 2 variables
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x,y\right) & = & f\left(a,b\right)+\left(x-a\right)f_{x}\left(a,b\right)+\left(y-b\right)f_{y}\left(a,b\right)\\
+ &  & +\frac{1}{2!}\left[\left(x-a\right)^{2}f_{xx}\left(a,b\right)+2\left(x-a\right)\left(y-b\right)f_{xy}\left(a,b\right)+\left(y-b\right)^{2}f_{yy}\left(a,b\right)\right]+...
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Taylor Expansion of the product of functions
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $f\left(x\right)=g\left(x\right)\times h\left(x\right)$
+\end_inset
+
+ then the Taylor expansion of 
+\begin_inset Formula $f$
+\end_inset
+
+ , up to order 
+\begin_inset Formula $a$
+\end_inset
+
+, can be found by 
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x\right) & = & T_{a}\left[g\left(x\right)\right]T_{a}\left[h\left(x\right)\right]+O\left(x^{a+1}\right),
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $T_{a}\left[d\left(x\right)\right]$
+\end_inset
+
+ denotes the Taylor expansion of 
+\begin_inset Formula $d\left(x\right)$
+\end_inset
+
+ up to order 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note that in general 
+\begin_inset Formula 
+\begin{eqnarray*}
+T_{a}\left(f\left(x\right)\right) & \neq & T_{a}\left[g\left(x\right)\right]T_{a}\left[h\left(x\right)\right]\\
+\end{eqnarray*}
+
+\end_inset
+
+as 
+\begin_inset Formula $T_{a}\left[g\left(x\right)\right]T_{a}\left[h\left(x\right)\right]$
+\end_inset
+
+ can contain terms of order greater than 
+\begin_inset Formula $a$
+\end_inset
+
+ (up to 
+\begin_inset Formula $O\left(x^{2a}\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+If 
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x\right) & = & g\left(x\right)\times h\left(x\right)\\
+ & = & \sum_{n=0}^{\infty}\frac{x^{n}}{n!}\left.\frac{d^{n}}{dx^{n}}\left(gh\right)\right|_{x=0}\\
+ & = & \sum_{n=0}^{\infty}\frac{x^{n}}{n!}\left.\sum_{k=0}^{n}\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)g^{\left(n-k\right)}h^{\left(k\right)}\right|_{x=0}
+\end{eqnarray*}
+
+\end_inset
+
+where in the last equality we used 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://en.wikipedia.org/wiki/Product_rule#Higher_derivatives
+\end_layout
+
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x\right) & = & \sum_{n=0}^{\infty}\sum_{k=0}^{n}\frac{x^{n}}{k!\left(n-k\right)!}\left.g^{\left(n-k\right)}\left(x\right)h^{\left(k\right)}\left(x\right)\right|_{x=0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Taylor Expansion of Variables of Comparable Norm
+\end_layout
+
+\begin_layout Standard
+Assume we wish to expand about variables 
+\begin_inset Formula $x_{1},x_{2},...,x_{n}$
+\end_inset
+
+ that are all of comparable (and small) norm (i.e.
+ 
+\begin_inset Formula $x_{1}\approx x_{2}\approx...\approx x_{n}$
+\end_inset
+
+ and all are of the same order).
+ Then, the best expansion to use is the following: 
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x_{1},x_{2},...,x_{n}\right) & = & \left.f\left(x_{1}\epsilon,x_{2}\epsilon,...,x_{n}\epsilon\right)\right|_{\epsilon=1}\\
+ & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\partial_{\epsilon}^{n}f\left(x_{1}\epsilon,x_{2}\epsilon,...,x_{n}\epsilon\right)\right|_{\epsilon=0}\right)_{\epsilon=1}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+(We will work with 2 variables: 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ for clarity, a generalization to any number of variables follows the same
+ procedure) Suppose we wish to expand up to order 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ We will compare the approach proposed above with the normal multivariate
+ expansion (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Taylor-Expansion"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are of comparable norm 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left.f\left(x\epsilon,y\epsilon\right)\right|_{\epsilon=1} & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\partial_{\epsilon}^{n}f\left(x\epsilon,y\epsilon\right)\right|_{\epsilon=0}\right)_{\epsilon=1}\\
+ & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\left(\frac{\partial f}{\partial x\epsilon}\frac{\partial x\epsilon}{\partial\epsilon}+\frac{\partial f}{\partial y\epsilon}\frac{\partial y\epsilon}{\partial\epsilon}\right)^{n}\right|_{\epsilon=0}\right)_{\epsilon=1}\\
+ & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\left(x\frac{\partial f}{\partial x\epsilon}+y\frac{\partial f}{\partial y\epsilon}\right)^{n}\right|_{\epsilon=0}\right)_{\epsilon=1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $T/x$
+\end_inset
+
+ is not recognized to be a macroscopic number so approach 1 is more convenient
+\end_layout
+
+\begin_layout Plain Layout
+Normal keeps terms up to order 
+\begin_inset Formula $O\left(x_{1}^{a}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $O\left(x_{2}^{b}\right)$
+\end_inset
+
+ so we will have terms appear up to 
+\begin_inset Formula $O\left(x_{1}^{a}x_{2}^{b}\right)=O\left(x_{1}^{a+b}\right)$
+\end_inset
+
+ because 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ are of comparable norms, so if we are interested in terms up to order 
+\begin_inset Formula $c$
+\end_inset
+
+ then with approach 2 we have will have to expand about ...
+ Actually we might have to expand up to higher orders because terms like
+ 
+\begin_inset Formula $O\left(x_{1}^{a}/x_{2}^{b}\right)$
+\end_inset
+
+ are of order 
+\begin_inset Formula $O\left(x_{1}^{a-b}\right)$
+\end_inset
+
+ but instead it is recognized to be of order 
+\begin_inset Formula $O\left(x_{1}^{a}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+In other words, we expand about this parameter 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ and then set it to 1.
+ The above relation can also be written in the equivalent form
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x_{1},x_{2},...,x_{n}\right) & = & \sum_{n=0}^{\infty}\frac{1}{n!}\left.\left(\sum_{i=1}^{n}x_{i}\frac{\partial f}{\partial x_{i}\epsilon}\right)^{n}\right|_{\epsilon=0}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+(We will work with 2 variables: 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ for clarity, a generalization to any number of variables follows the same
+ procedure)
+\end_layout
+
+\begin_layout Plain Layout
+We demonstrate for 2 variables 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left.f\left(x\epsilon,y\epsilon\right)\right|_{\epsilon=1} & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\partial_{\epsilon}^{n}f\left(x\epsilon,y\epsilon\right)\right|_{\epsilon=0}\right)_{\epsilon=1}\\
+ & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\left(\frac{\partial f}{\partial x\epsilon}\frac{\partial x\epsilon}{\partial\epsilon}+\frac{\partial f}{\partial y\epsilon}\frac{\partial y\epsilon}{\partial\epsilon}\right)^{n}\right|_{\epsilon=0}\right)_{\epsilon=1}\\
+ & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\left(x\frac{\partial f}{\partial x\epsilon}+y\frac{\partial f}{\partial y\epsilon}\right)^{n}\right|_{\epsilon=0}\right)_{\epsilon=1}\\
+ & = & \sum_{n=0}^{\infty}\frac{1}{n!}\left(\left.\left(x\frac{\partial f}{\partial x\epsilon}+y\frac{\partial f}{\partial y\epsilon}\right)^{n}\right|_{\epsilon=0}\right)_{\epsilon=1}\\
+ & = & \left(\left.\sum_{n=0}^{\infty}\frac{1}{n!}\left(x\frac{\partial f}{\partial x\epsilon}+y\frac{\partial f}{\partial y\epsilon}\right)^{n}\right|_{\epsilon=0}\right)_{\epsilon=1}\\
+ & = & \left.\sum_{n=0}^{\infty}\frac{1}{n!}\left(x\frac{\partial f}{\partial x\epsilon}+y\frac{\partial f}{\partial y\epsilon}\right)^{n}\right|_{\epsilon=0}\\
+ & = & \left.\sum_{n=0}^{\infty}\frac{1}{n!}\left(x\frac{\partial f}{\partial x\epsilon}+y\frac{\partial f}{\partial y\epsilon}\right)^{n}\right|_{\epsilon=0}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A hierarchical structure of variables 
+\begin_inset Formula $x_{1}>x_{2}>...>x_{n}$
+\end_inset
+
+ can also be accommodated by writing
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x,y\right) & = & \left.f\left(x_{1}\epsilon,x_{2}\epsilon^{2},...,x_{n}\epsilon^{n}\right)\right|_{\epsilon=1}\\
+ & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\partial_{\epsilon}^{n}f\left(x_{1}\epsilon,x_{2}\epsilon^{2},...,x_{n}\epsilon^{n}\right)\right|_{\epsilon=0}\right)_{\epsilon=1}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Calculus
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Euler-Homogeneous-function-theorem"
+
+\end_inset
+
+Euler's Homogeneous function theorem
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $f\left(\mathbf{x}\right)$
+\end_inset
+
+ be a function that satisfies 
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(t\mathbf{x}\right) & = & t^{n}f\left(\mathbf{x}\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+i.e.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ is homogeneous function of order 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i}x_{i}\frac{\partial f}{\partial x_{i}} & = & nf\left(\mathbf{x}\right).
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "note 3"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{x}^{'}=t\mathbf{x}$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\begin{eqnarray*}
+nt^{n-1}f\left(x\right) & = & \partial_{t}f\\
+ & = & \sum_{i}\frac{\partial f}{\partial x_{i}^{'}}\frac{\partial x_{i}^{'}}{\partial t}\\
+ & = & \sum_{i}\frac{\partial f}{\partial x_{i}^{'}}x_{i}\\
+ & = & \sum_{i}\frac{\partial f}{\partial\left(tx_{i}\right)}x_{i}
+\end{eqnarray*}
+
+\end_inset
+
+Set 
+\begin_inset Formula $t=1$
+\end_inset
+
+ to obtain the desired result.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset CommandInset href
+LatexCommand href
+name "Euler's Homogeneous Function Theorem"
+target "http://mathworld.wolfram.com/EulersHomogeneousFunctionTheorem.html"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:addComplexPartLDE"
+
+\end_inset
+
+Adding a complex part to L.D.E.
+ and then taking the real part
+\end_layout
+
+\begin_layout Standard
+Consider the Linear D.E.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{L}\left[x\right] & = & F
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ is a linear differential operator, and 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $F$
+\end_inset
+
+ are both real functions.
+ Add an imaginary part to 
+\begin_inset Formula $F$
+\end_inset
+
+, i.e.
+ let 
+\begin_inset Formula $\tilde{F}=F+iG$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $x=\re{\tilde{x}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+ is defined by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{L}\left[\tilde{x}\right] & = & \tilde{F}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+If we solve for 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+, we can obtain 
+\begin_inset Formula $x$
+\end_inset
+
+ by taking the real part of 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+.
+ This is because 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ is a linear differential operator so 
+\begin_inset Formula $\mathcal{L}\left[re\left(\tilde{x}\right)\right]=\re{\mathcal{L}\left[\tilde{x}\right]}$
+\end_inset
+
+ (to see this clearly write that 
+\begin_inset Formula $\mathcal{L}=\sum a_{k}d^{k}/dt^{k}$
+\end_inset
+
+).
+ Since, 
+\begin_inset Formula $\mathcal{L}\left[x\right]=F$
+\end_inset
+
+, we consequently have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\re{\mathcal{L}\left[\tilde{x}\right]} & = & \re{\mathcal{L}\left[\tilde{x}\right]}=\re{\tilde{F}}\\
+ & = & F=\mathcal{L}\left[x\right]\\
+ & = & \mathcal{L}\left[\re{\tilde{x}}\right]
+\end{eqnarray*}
+
+\end_inset
+
+and so 
+\begin_inset Formula $x=\re{\tilde{x}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Vector Calculus
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:The Gradient Theorem"
+
+\end_inset
+
+The Gradient Theorem/Fundamental Theorem of Calculus for Line Integrals
+\end_layout
+
+\begin_layout Standard
+[[TODO: Fill]]
+\end_layout
+
+\begin_layout Section
 Useful Identities
+\end_layout
+
+\begin_layout Subsection
+Functions
+\end_layout
+
+\begin_layout Subsubsection
+The Lorentzian
+\end_layout
+
+\begin_layout Standard
+A Lorentzian has the form 
+\begin_inset Formula 
+\begin{eqnarray}
+f\left(x\right) & \propto & \frac{\gamma}{\left(x-x_{0}\right)^{2}+\gamma^{2}}\nonumber \\
+ & \propto & 1/\gamma\left(1+\left(\frac{x-x_{0}}{\gamma}\right)^{2}\right),\label{eq:lorentzian function}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ is the location of the peak and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is HWHM.
+ The (normalized to unity) Lorentzian distribution is defined to be 
+\begin_inset Formula 
+\begin{eqnarray}
+p\left(x\right) & = & \frac{1}{\pi}\left(\frac{\gamma}{\left(x-x_{0}\right)^{2}+\gamma^{2}}\right)\nonumber \\
+ & = & 1/\pi\gamma\left(1+\left(\frac{x-x_{0}}{\gamma}\right)^{2}\right).\label{eq:lorentzian distribution}
+\end{eqnarray}
+
+\end_inset
+
+The lorentzian can be encountered in the following locations:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fabry perot near resonance"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:near resonance forced damped SHO energy absorbed"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Algebra
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Finite Geometric series
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\gSeriesFinite}[2]{\frac{1-#1^{#2}}{1-#1}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k=0}^{n-1}r^{k} & = & \gSeriesFinite rn
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Geometric series
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\gSeries}[1]{\frac{1}{1-#1}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+\sum_{k=0}^{\infty}r^{k} & = & \gSeries r\label{eq:geometric series}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Complex Algebra
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Norm of sum of two complex numbers
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\normSumComplex}[2]{\left|#1\right|^{2}+\left|#2\right|^{2}+2\re{#1#2^{*}}}
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left|A+B\right|^{2} & = & \normSumComplex AB
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Squaring a complex number
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\squareCnumber}[2]{#1^{2}-#2^{2}+2i#1#2}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(a+ib\right)^{2} & = & \squareCnumber ab
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Complex division
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\cDivide}[4]{\frac{\left(#1#3+#2#4\right)+i\left(#2#3-#1#4\right)}{#3^{2}+#4^{2}}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{a+bi}{c+di} & = & \cDivide abcd
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+From 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://mathworld.wolfram.com/ComplexDivision.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Trig
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Double angle cosine
+\emph default
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos2\theta & = & \cos^{2}\theta-\sin^{2}\theta\\
+ & = & 2\cos^{2}\theta-1\\
+ & = & 1-2\sin^{2}\theta
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Cosine sum formula
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\cosSum}[2]{\cos\left(#1\right)\cos\left(#2\right)-\sin\left(#1\right)\sin\left(#2\right)}
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos\left(u+v\right) & = & \cosSum uv
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Cosine difference formula
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\cosDiff}[2]{\cos\left(#1\right)\cos\left(#2\right)+\sin\left(#1\right)\sin\left(#2\right)}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos\left(u-v\right) & = & \cosDiff uv
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Sine difference formula
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\sinDiff}[2]{\sin\left(#1\right)\cos\left(#2\right)-\cos\left(#1\right)\sin\left(#2\right)}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\sin\left(u-v\right) & = & \sinDiff uv
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Cosine Sum to Product formula
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\cosStoP}[2]{2\cos\left(\frac{#1+#2}{2}\right)\cos\left(\frac{#1-#2}{2}\right)}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos u+\cos v & = & \cosStoP uv
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Cosine Diff to Product formula
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\cosDtoP}[2]{-2\sin\left(\frac{#1+#2}{2}\right)\sin\left(\frac{#1-#2}{2}\right)}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos u-\cos v & = & \cosDtoP uv
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Cosine of 
+\begin_inset Formula $\tan^{-1}$
+\end_inset
+
+ 
+\emph default
+
+\begin_inset FormulaMacro
+\newcommand{\cosAtan}[1]{\frac{1}{\sqrt{1+#1^{2}}}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos\left(\tan^{-1}a\right) & = & \cosAtan a
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Sine of 
+\begin_inset Formula $\tan^{-1}$
+\end_inset
+
+ 
+\emph default
+
+\begin_inset FormulaMacro
+\newcommand{\sinAtan}[1]{\frac{#1}{\sqrt{1+#1^{2}}}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\sin\left(\tan^{-1}a\right) & = & \sinAtan a
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Complex Trig
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Complex exponential of 
+\begin_inset Formula $\tan^{-1}$
+\end_inset
+
+ 
+\emph default
+
+\begin_inset FormulaMacro
+\newcommand{\expiAtan}[1]{\frac{1+i#1}{\sqrt{1+#1^{2}}}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\exp\left(i\tan^{-1}a\right) & = & \expiAtan a
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\exp\left(i\tan^{-1}a\right) & = & \cos\left(\tan^{-1}a\right)+i\sin\left(\tan^{-1}a\right)\\
+ & = & \cosAtan a+i\sinAtan a\\
+ & = & \frac{1+ia}{\sqrt{1+a^{2}}}
+\end{eqnarray*}
+
+\end_inset
+
+This could have been also determined with the Mathematica command: FullSimplify[
+ExpToTrig[Exp[I*ArcTan[a]]]].
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Fourier Transform
 \end_layout
 
 \begin_layout Enumerate
