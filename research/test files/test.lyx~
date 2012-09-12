@@ -24,7 +24,6 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -69,36 +68,28 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\re}[1]{#1}
-{\mbox{re}\left(#1\right)}
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\im}[1]{#1}
-{\mbox{im}\left(#1\right)}
-\end_inset
-
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\i}[3]{#1#2#3}
-{\intop_{#1}^{#2}d#3}
-\end_inset
+\begin_layout Part
+sda
+\end_layout
 
+\begin_layout Section
+sadsa
+\end_layout
 
-\begin_inset FormulaMacro
-\renewcommand{\section}{}
-{\mathcal{x}}
-\end_inset
-
-
+\begin_layout Subsection
+sdasd
 \end_layout
 
 \end_body

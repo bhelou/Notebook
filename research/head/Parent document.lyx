@@ -5,15 +5,7 @@
 \textclass article
 \begin_preamble
 \usepackage{braket}
-\usepackage[]{hyperref}
 \usepackage{empheq}
-\usepackage{color}
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{mauve}{rgb}{0.58,0,0.82}
-
-\usepackage{listings}
-\lstloadlanguages{[5.2]Mathematica}
 \end_preamble
 \options unicode=true, hidelinks
 \use_default_options true
@@ -88,6 +80,15 @@ figs-within-sections
 
 \begin_layout Title
 Notebook
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
