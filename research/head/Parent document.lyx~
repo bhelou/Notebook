@@ -2,15 +2,20 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass article
+\textclass scrbook
 \begin_preamble
 \usepackage{braket}
 \usepackage{empheq}
+
+\newref{claim}{name=claim~}
+\newref{def}{name=definition~}
 \end_preamble
 \options unicode=true, hidelinks
 \use_default_options true
 \begin_modules
 theorems-ams
+eqs-within-sections
+figs-within-sections
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -145,6 +150,51 @@ filename "../optics.lyx"
 
 \begin_layout Part
 Miscellaneous
+\end_layout
+
+\begin_layout Section
+Instructions to follow
+\end_layout
+
+\begin_layout Enumerate
+Whenever you do something, keep in mind the end goals of this notebook.
+ For example, when inserting a file hyperlink, do not use the full file
+ path (which will only be recognized on your PC) but something like 
+\begin_inset Quotes eld
+\end_inset
+
+./filename.pdf
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+When linking to files, URL seems to work best: I am having problems with
+ href: e.g.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+href{file:temp.nb}{test}
+\end_layout
+
+\end_inset
+
+ seems to be interpreted as a file with with filename 
+\begin_inset Quotes eld
+\end_inset
+
+file:temp.nb
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -418,7 +468,20 @@ TODO: Develop a series of steps to follow in order to import a Latex style
 \end_layout
 
 \begin_layout Subsection
-Advice on using typesetting to reduce errors
+Warnings/Mistakes to avoid
+\end_layout
+
+\begin_layout Enumerate
+When defining macros, be sure NOT to use names that conflict with existing
+ commands.
+ For example, naming a macro 
+\backslash
+section will cause havoc as this name conflicts with the command for the
+ heading of sections.
+\end_layout
+
+\begin_layout Subsection
+Advice on using typesetting to reduce algebraic errors
 \end_layout
 
 \begin_layout Standard
@@ -474,6 +537,67 @@ underbrace
 Mathematica
 \end_layout
 
+\begin_layout Subsection
+Mathematica files
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+tuned fabry perot output operators.nb
+\end_layout
+
+\end_inset
+
+; in this document the following is used:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Taylor expansion of variables of comparable norm: e.g.
+ 
+\bar under
+FradialForm
+\end_layout
+
+\begin_layout Enumerate
+Simple Matrix Algebra: 
+\bar under
+calculateHMatrix
+\end_layout
+
+\begin_layout Enumerate
+Writing complex expressions in (complex) radial form: e.g.
+ 
+\bar under
+FradialForm
+\end_layout
+
+\begin_layout Enumerate
+Careful manipulations involving the arctan function: 
+\bar under
+arctan
+\end_layout
+
+\begin_layout Enumerate
+Making variable substitutions to simplify expressions: e.g.
+ 
+\bar under
+calculating H21
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Using Mathematica
 \end_layout

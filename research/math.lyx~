@@ -790,19 +790,38 @@ end{defn}
 
 \end_layout
 
+\begin_layout Subsection
+Connection with 
+\end_layout
+
 \begin_layout Standard
-(Section 6.2.3 of 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "blandfordCP"
+We present an example 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}[Normal Distributions] We try to blah blad 
+\backslash
+end{example}
+\end_layout
 
 \end_inset
 
-)
+
 \end_layout
 
-\begin_layout Subsection
-Connection with statistical mechanics
+\end_inset
+
+Moreover,
 \end_layout
 
 \begin_layout Standard

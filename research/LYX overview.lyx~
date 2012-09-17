@@ -109,57 +109,6 @@ theorems-ams
 Lyx for note taking
 \end_layout
 
-\begin_layout Standard
-TOORGANIZE
-\end_layout
-
-\begin_layout Enumerate
-Hack for automatic equation numbering in Lyx: 
-\begin_inset CommandInset href
-LatexCommand href
-name "automatic numbering lyx"
-target "http://tex.stackexchange.com/questions/57948/automatic-equation-numbering-in-lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Adding unnumbered sections to TOC 
-\begin_inset CommandInset href
-LatexCommand href
-name "unnumbered sections"
-target "http://tex.stackexchange.com/questions/11668/adding-unnumbered-sections-to-toc"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset href
-LatexCommand href
-name "ams latex guide"
-target "http://www.ams.org/publications/authors/tex/amslatex"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Generating graphs with latex 
-\begin_inset CommandInset href
-LatexCommand href
-name "function graphs tex"
-target "http://tex.stackexchange.com/questions/3622/best-way-to-generate-a-nice-function-graph-in-latex"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Things that I use
 \end_layout

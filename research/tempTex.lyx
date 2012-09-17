@@ -53,11 +53,15 @@
 \begin_layout Standard
 
 
-\begin_inset Formula $\sum_{n_1=0}^\infty \sum_{n_2=0}^\infty \cdots \sum_{n_d = 0}^\infty 
-\frac{(x_1-a_1)^{n_1}\cdots (x_d-a_d)^{n_d}}{n_1!\cdots n_d!}\,\left(\frac{\partial^{n_1 + \cdots + n_d}f}{\partial x_1^{n_1}\cdots \partial x_d^{n_d}}\right)$
+\begin_inset Formula $\left(
+\begin{array}{cc}
+ \frac{-e^{2 i x}+\sqrt{1-T}}{-1+e^{2 i x} \sqrt{1-T}} & 0 \\
+ -\frac{e^{2 i x} T \kappa }{\left(-1+e^{2 i x} \sqrt{1-T}\right)^2} & \frac{-e^{2 i x}+\sqrt{1-T}}{-1+e^{2 i x} \sqrt{1-T}}
+\end{array}
+\right)$
 \end_inset
 
-
+ 
 \end_layout
 
 \end_body
