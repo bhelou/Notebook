@@ -7,8 +7,8 @@
 \usepackage{braket}
 \usepackage{empheq}
 
-\newref{claim}{name=claim~}
-\newref{def}{name=definition~}
+\newref{claim}{name=claim~,Name=Claim~,names=claims~,Names=Claims~}
+\newref{def}{name=definition~,Name=Definition~,names=definitions~,Names=Definitions~}
 \end_preamble
 \options unicode=true, hidelinks
 \use_default_options true
@@ -107,7 +107,7 @@ filename "macros page.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/Bass/Documents/GitHub/Notebook/research/math.lyx"
+filename "../math.lyx"
 
 \end_inset
 
@@ -134,7 +134,7 @@ filename "../classical physics.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/Bass/Documents/GitHub/Notebook/research/classical mechanics.lyx"
+filename "../classical mechanics.lyx"
 
 \end_inset
 
@@ -195,6 +195,248 @@ file:temp.nb
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsection
+Installation
+\end_layout
+
+\begin_layout Subsubsection
+Tex Packages
+\end_layout
+
+\begin_layout Standard
+If you wish to compile the Lyx Document.
+\end_layout
+
+\begin_layout Standard
+Packages can very easily be installed by using Miktex's package manager
+ (: enter the name of a package and then right-click to install it)
+\end_layout
+
+\begin_layout Enumerate
+Install the 
+\begin_inset Quotes eld
+\end_inset
+
+Koma-script
+\begin_inset Quotes erd
+\end_inset
+
+ package.
+\end_layout
+
+\begin_layout Enumerate
+Install the 
+\begin_inset Quotes eld
+\end_inset
+
+refstyle
+\begin_inset Quotes erd
+\end_inset
+
+ package.
+\end_layout
+
+\begin_layout Enumerate
+Install the 
+\begin_inset Quotes eld
+\end_inset
+
+mh
+\begin_inset Quotes erd
+\end_inset
+
+ package.
+\end_layout
+
+\begin_layout Enumerate
+Install the 
+\begin_inset Quotes eld
+\end_inset
+
+esint
+\begin_inset Quotes erd
+\end_inset
+
+ package.
+\end_layout
+
+\begin_layout Enumerate
+Install the 
+\begin_inset Quotes eld
+\end_inset
+
+ulem
+\begin_inset Quotes erd
+\end_inset
+
+ package.
+\end_layout
+
+\begin_layout Enumerate
+Install the 
+\begin_inset Quotes eld
+\end_inset
+
+braket
+\begin_inset Quotes erd
+\end_inset
+
+ package.
+\end_layout
+
+\begin_layout Enumerate
+Install the 
+\begin_inset Quotes eld
+\end_inset
+
+preview
+\begin_inset Quotes erd
+\end_inset
+
+ package.
+\end_layout
+
+\begin_layout Subsection
+Recommended settings changes for viewing the document
+\end_layout
+
+\begin_layout Enumerate
+Turn Instant preview on: Tools
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Preferences
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Look & Feel
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Instant Preview.
+\end_layout
+
+\begin_layout Enumerate
+Change the Colors: Tools
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Preferences
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Colors: Change 
+\begin_inset Quotes eld
+\end_inset
+
+background
+\begin_inset Quotes erd
+\end_inset
+
+ color to white, the 
+\begin_inset Quotes eld
+\end_inset
+
+math background
+\begin_inset Quotes erd
+\end_inset
+
+ to white, the 
+\begin_inset Quotes eld
+\end_inset
+
+note background
+\begin_inset Quotes erd
+\end_inset
+
+ to white and the 
+\begin_inset Quotes eld
+\end_inset
+
+comment background
+\begin_inset Quotes erd
+\end_inset
+
+ to white.
+\end_layout
+
+\begin_layout Subsection
+Recommended settings changes for editing the document
+\end_layout
+
+\begin_layout Enumerate
+Real-time/continuous spell-checking: Tools
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Preferences
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Language Settings
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Spellchecker and check the box 
+\begin_inset Quotes eld
+\end_inset
+
+Spellcheck continuously
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+In Text inline completion: Tools
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Preferences
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Editing
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Input Completion and check the boxes 
+\begin_inset Quotes eld
+\end_inset
+
+Automatic inline completion
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Automatic popup
+\begin_inset Quotes erd
+\end_inset
+
+.
+ It is also recommended that you reduce the 
+\begin_inset Quotes eld
+\end_inset
+
+inline completion delay
+\begin_inset Quotes erd
+\end_inset
+
+ and the 
+\begin_inset Quotes eld
+\end_inset
+
+popup delay
+\begin_inset Quotes erd
+\end_inset
+
+ to 0 seconds.
 \end_layout
 
 \begin_layout Section

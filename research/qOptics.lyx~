@@ -14190,7 +14190,7 @@ We might also be interested in calculating cross-correlations between
  with quantum noise defined by 
 \begin_inset Formula 
 \begin{eqnarray*}
-\hat{N}_{Z}\left(\Omega\right) & = & \vec{Z}\hat{\vec{a}}\\
+\hat{N}_{Z}\left(\Omega\right) & = & \vec{Z}\hat{\vec{a}}
 \end{eqnarray*}
 
 \end_inset

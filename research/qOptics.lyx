@@ -7623,7 +7623,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename squeezed_phase space.gif
+	filename squeezed_phase space.png
 	scale 40
 
 \end_inset
@@ -16558,7 +16558,7 @@ We have used that
 \begin_inset Formula 
 \begin{eqnarray*}
 \exp\left(i\tan^{-1}\phi\right) & = & \expiAtan{\phi}\\
-\implies\exp\left(2i\tan^{-1}\phi\right) & = & \left[\exp\left(i\tan^{-1}\phi\right)\right]^{2}=\frac{\squareCnumber 1{\phi}}{1+\phi^{2}}=\frac{1-\phi^{2}+2i\phi}{1+\phi^{2}}\\
+\implies\exp\left(2i\tan^{-1}\phi\right) & = & \left[\exp\left(i\tan^{-1}\phi\right)\right]^{2}=\frac{\squareCnumber1{\phi}}{1+\phi^{2}}=\frac{1-\phi^{2}+2i\phi}{1+\phi^{2}}\\
  & = & \frac{i-\phi}{i+\phi}
 \end{eqnarray*}
 
