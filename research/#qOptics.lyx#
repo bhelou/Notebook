@@ -687,7 +687,16 @@ In this simple treatment of the single mode laser, we will assume that it
 \end_inset
 
 .
- We can write down the electric field in the following fashion: 
+ We also assume that 
+\begin_inset Formula $\xi$
+\end_inset
+
+ is real.
+ 
+\end_layout
+
+\begin_layout Standard
+We can write down the electric field in the following fashion: 
 \begin_inset Formula 
 \begin{eqnarray*}
 \hat{E}\left(t\right) & = & \mathcal{C}_{0}\left(\hat{\mathcal{E}}_{c}\left(t\right)\cos\omega_{0}t+\hat{\mathcal{E}}_{s}\left(t\right)\sin\omega_{0}t\right)\\
@@ -788,7 +797,9 @@ Turns out that this form of
 \begin_inset Formula 
 \begin{eqnarray}
 \hat{\mathcal{E}_{c}}\left(t\right) & \rightarrow & \intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}\hat{a}_{c}\left(\Omega\right)e^{-i\Omega t}+\frac{c_{1}}{\pi\sqrt{2}}\bar{a}\label{eq:transformed electric fields}\\
-\hat{\mathcal{E}_{s}}\left(t\right) & \rightarrow & \intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}\hat{a}_{s}\left(\Omega\right)e^{-i\Omega t},\nonumber 
+ & \equiv & \hat{\mathcal{E}}_{c}\left(t\right)+\frac{c_{1}}{\pi\sqrt{2}}\bar{a}\\
+\hat{\mathcal{E}_{s}}\left(t\right) & \rightarrow & \intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}\hat{a}_{s}\left(\Omega\right)e^{-i\Omega t}\nonumber \\
+ & \equiv & \hat{\mathcal{E}}_{s}\left(t\right),
 \end{eqnarray}
 
 \end_inset
@@ -866,6 +877,115 @@ where it is convenient to pick
 
 \end_inset
 
+Note that 
+\begin_inset Formula 
+\begin{eqnarray}
+\left\langle \hat{\mathcal{E}}_{c}\left(t\right)\right\rangle  & = & 0\label{eq:expectations quadratures 1mode laser}\\
+\left\langle \hat{\mathcal{E}_{s}}\left(t\right)\right\rangle  & = & 0.\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+*
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Note that the new (denoting the state of light by 
+\begin_inset Formula $\left|\alpha\right\rangle $
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle \hat{\mathcal{E}_{c}}\right\rangle  & = & \bar{a}=\left\langle \psi\left|\hat{\mathcal{E}}_{c}\right|\psi\right\rangle \\
+ & = & \left\langle \psi|D\left(D^{\dagger}\hat{\mathcal{E}}_{c,transformed}D\right)D^{\dagger}|\psi\right\rangle \\
+ & = & \left\langle \psi_{transformed}\left|\hat{\mathcal{E}}_{c,transformed}\right|\psi_{transformed}\right\rangle \\
+ & = & \left\langle \psi_{transformed}|\left(\bar{a}+\hat{\mathcal{E}}_{c,afterTransformation}\right)|\psi_{transformed}\right\rangle \\
+ & = & \bar{a}+\left\langle \psi_{transformed}|\left(\bar{a}+\hat{\mathcal{E}}_{c,afterTransformation}\right)|\psi_{transformed}\right\rangle =\bar{a}+\left\langle \hat{\mathcal{E}}_{c,afterTransformation}\right\rangle \\
+ & = & \bar{a}
+\end{eqnarray*}
+
+\end_inset
+
+Hence, we can write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle \hat{\mathcal{E}}_{c,afterTransformation}\right\rangle  & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+Moreover, for 
+\begin_inset Formula $\left|\psi\right\rangle =\left|\xi\right\rangle $
+\end_inset
+
+, where 
+\begin_inset Formula $\left|\xi\right\rangle $
+\end_inset
+
+ is a coherent state and 
+\begin_inset Formula $\xi$
+\end_inset
+
+ is real, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle \hat{a}_{s}\left(\Omega\right)\right\rangle  & \approx & \left\langle \frac{\hat{a}_{+}-\hat{a}_{-}^{\dagger}}{i\sqrt{2}}\right\rangle =\frac{\delta\left(\Omega\right)}{i\sqrt{2}}\left(\xi-\xi^{*}\right)=0\\
+\implies\left\langle \hat{\mathcal{E}_{s,beforeTransformation}}\right\rangle  & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+but 
+\begin_inset Formula $\left\langle \hat{\mathcal{E}_{s,beforeTransformation}}\right\rangle =\left\langle \hat{\mathcal{E}_{s,afterTransformation}}\right\rangle =\left\langle \hat{\mathcal{E}}_{s}\right\rangle $
+\end_inset
+
+ so 
+\begin_inset Formula $\left\langle \hat{\mathcal{E}}_{s}\right\rangle =0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
 What are 
 \begin_inset Formula $\xi$
 \end_inset
@@ -874,11 +994,7 @@ What are
 \begin_inset Formula $\bar{a}$
 \end_inset
 
-? Assuming that 
-\begin_inset Formula $\xi$
-\end_inset
-
- is real, we can show that we must have that 
+? We can show that we must have that 
 \begin_inset Formula 
 \begin{eqnarray*}
 \bar{a} & = & \sqrt{\frac{2I_{0}}{\hbar\omega_{0}}}\\
@@ -893,7 +1009,7 @@ where
 
  is the time averaged optical power*
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 We will be able to write down the electric field in the following form:
@@ -1042,7 +1158,7 @@ by definition.
  Furthermore, we have that
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle \hat{a}_{c}\left(\Omega\right)\right\rangle  & \approx & \left\langle \frac{\hat{a}_{+}-\hat{a}_{-}^{\dagger}}{i\sqrt{2}}\right\rangle =\frac{\delta\left(\Omega\right)}{i\sqrt{2}}\left(\xi-\xi^{*}\right)=0\\
+\left\langle \hat{a}_{s}\left(\Omega\right)\right\rangle  & \approx & \left\langle \frac{\hat{a}_{+}-\hat{a}_{-}^{\dagger}}{i\sqrt{2}}\right\rangle =\frac{\delta\left(\Omega\right)}{i\sqrt{2}}\left(\xi-\xi^{*}\right)=0\\
 \implies\left\langle \hat{\mathcal{E}_{s,beforeTransformation}}\right\rangle  & = & 0
 \end{eqnarray*}
 
@@ -1079,63 +1195,7 @@ For
 
 \end_inset
 
-Note that the new (denoting the state of light by 
-\begin_inset Formula $\left|\alpha\right\rangle $
-\end_inset
-
-)
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\langle \hat{\mathcal{E}_{c}}\right\rangle  & = & \left\langle \alpha|D\left(D^{\dagger}\hat{\mathcal{E}}_{c,transformed}D\right)D^{\dagger}|\alpha\right\rangle \\
- & = & \left\langle \psi_{transformed}\left|\hat{\mathcal{E}}_{c,transformed}\right|\psi_{transformed}\right\rangle \\
- & = & \left\langle vac|\hat{\mathcal{E}}_{c,afterTransformation}|vac\right\rangle \\
- & = & 0
-\end{eqnarray*}
-
-\end_inset
-
  
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\langle \hat{\mathcal{E}_{c,afterTransformation}}\right\rangle  & = & \left\langle \psi_{transformed}\left|\hat{\mathcal{E}}_{c,afterTransformation}\right|\psi_{transformed}\right\rangle \\
- & = & \left\langle \alpha|D\hat{\mathcal{E}}_{c,afterTransformation}D^{\dagger}|\alpha\right\rangle \\
- & = & \left\langle vac|\hat{\mathcal{E}}_{c,afterTransformation}|vac\right\rangle \\
- & = & 0
-\end{eqnarray*}
-
-\end_inset
-
- which is small (note we only applied the 
-\begin_inset Formula $D$
-\end_inset
-
- transformation on 
-\begin_inset Formula $\psi$
-\end_inset
-
- because 
-\family default
-\series bold
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-
-\begin_inset Formula $D$
-\end_inset
-
- 
-\series default
-has already been applied on 
-\begin_inset Formula $\hat{\mathcal{E}}_{c,afterTransformation}$
-\end_inset
-
-.
 \end_layout
 
 \end_inset
@@ -7563,7 +7623,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename squeezed_phase space.gif
+	filename squeezed_phase space.png
 	scale 40
 
 \end_inset
@@ -14130,7 +14190,7 @@ We might also be interested in calculating cross-correlations between
  with quantum noise defined by 
 \begin_inset Formula 
 \begin{eqnarray*}
-\hat{N}_{Z}\left(\Omega\right) & = & \vec{Z}\hat{\vec{a}}\\
+\hat{N}_{Z}\left(\Omega\right) & = & \vec{Z}\hat{\vec{a}}
 \end{eqnarray*}
 
 \end_inset
@@ -14995,6 +15055,14 @@ status collapsed
 \begin_inset Formula $\left\langle a_{c}\right\rangle =0$
 \end_inset
 
+ (See Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:expectations quadratures 1mode laser"
+
+\end_inset
+
 
 \end_layout
 
@@ -15004,8 +15072,7 @@ status collapsed
  We identify the first part as the shot noise: 
 \begin_inset Formula 
 \begin{eqnarray}
-\hat{n}_{sh} & = & e^{2i\Omega\tau}\hat{a}_{s},\label{eq:shotNoiseSimpleExNoise}\\
-\nonumber 
+\hat{n}_{sh} & = & e^{2i\Omega\tau}\hat{a}_{s},\label{eq:shotNoiseSimpleExNoise}
 \end{eqnarray}
 
 \end_inset
@@ -15275,7 +15342,7 @@ Tuned Fabry-Perot Cavity
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -15661,7 +15728,7 @@ where
 \begin{eqnarray*}
 \mathbf{H} & = & e^{2i\phi}\left(\begin{array}{cc}
 1 & 0\\
-T\mathcal{K}/8 & 1
+-T\mathcal{K}/8 & 1
 \end{array}\right)\\
 \vec{F} & = & -\frac{e^{i\phi}}{2g_{SQL}}\left(\begin{array}{c}
 0\\
@@ -15682,7 +15749,7 @@ with
 
  *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 We obtain that 
@@ -15712,13 +15779,13 @@ reference "eq:outputQuadratures_freeSpaceNoise"
 \begin{eqnarray*}
 \vec{b}\left(\Omega\right) & = & e^{i2\Omega\tau}\left(\begin{array}{cc}
 1 & 0\\
-\kappa & 1
+\kappa^{'} & 1
 \end{array}\right)\left(\begin{array}{c}
 a_{c}\left(\Omega\right)\\
 a_{s}\left(\Omega\right)
 \end{array}\right)+\left(\begin{array}{c}
 0\\
-e^{i\Omega\tau}\sqrt{2\kappa}
+e^{i\Omega\tau}\sqrt{2\kappa^{'}}
 \end{array}\right)\frac{G\left(\Omega\right)}{g_{SQL}}\\
  & \equiv & \mathbf{M}\vec{a}+\vec{D}G,
 \end{eqnarray*}
@@ -15726,14 +15793,68 @@ e^{i\Omega\tau}\sqrt{2\kappa}
 \end_inset
 
 where 
-\begin_inset Formula $\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}$
-\end_inset
-
- and 
 \begin_inset Formula $g_{SQL}=\sqrt{2\hbar m\Omega^{2}}.$
 \end_inset
 
- We have that 
+ What is 
+\begin_inset Formula $\kappa^{'}$
+\end_inset
+
+ equal to? In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outputQuadratures_freeSpaceNoise"
+
+\end_inset
+
+, it is equal to 
+\begin_inset Formula $\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}$
+\end_inset
+
+.
+ However, now, 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+ are inside the cavity (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:tuned fabry perot noise"
+
+\end_inset
+
+).
+ Inside the cavity, at steady state, there will be a very large power stored
+ in the cavity: 
+\begin_inset Formula $I_{c}=4I_{0}/T$
+\end_inset
+
+ (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "rem:intracavity power LM T0"
+
+\end_inset
+
+) and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\kappa^{'} & = & \frac{8I_{c}\omega_{0}}{mc^{2}\Omega^{2}}\\
+ & = & \frac{8\left(4I_{0}/T\right)\omega_{0}}{mc^{2}\Omega^{2}}\\
+ & = & \frac{4\kappa}{T}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+We have that 
 \begin_inset Formula $\vec{a}=\sqrt{R}\vec{b}+\sqrt{T}\vec{\alpha}$
 \end_inset
 
@@ -15880,10 +16001,15 @@ name "note6"
 \begin_inset Formula $T$
 \end_inset
 
- is comparable in strength to 
+, 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ and 
 \begin_inset Formula $\Omega\tau$
 \end_inset
 
+ are all comparable in strength.
  
 \end_layout
 
@@ -16012,7 +16138,7 @@ and so
 \end_inset
 
  and 
-\begin_inset Formula $\Omega$
+\begin_inset Formula $\Omega\tau$
 \end_inset
 
  are of the same order of magnitude 
@@ -16062,6 +16188,64 @@ reference "note3"
 
 \SpecialChar \@.
  
+\end_layout
+
+\begin_layout Plain Layout
+Finally, we estimate the order of magnitude of 
+\begin_inset Formula $\kappa$
+\end_inset
+
+: An order of magnitude (using the LIGO data: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.ligo.caltech.edu/advLIGO/scripts/ref_des.shtml
+\end_layout
+
+\end_inset
+
+) gives us (note that I assumed that 
+\begin_inset Formula $I_{0}$
+\end_inset
+
+ is of the order of 
+\begin_inset Formula $10^{2}$
+\end_inset
+
+ W; this is what Haixing told me to assume 
+\begin_inset Formula $I_{0}$
+\end_inset
+
+ is equal to).
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\kappa & = & \frac{8\times100\times2.5}{4\times9\times1}\frac{1\times10\times10^{15}}{10\times10^{16}\times10^{4}}\\
+ & \approx & \frac{20\times100}{36\times1}\frac{1}{10\times10^{4}}\\
+ & \approx & 100\frac{1}{10\times10^{4}}=10^{-3}
+\end{eqnarray*}
+
+\end_inset
+
+and so 
+\begin_inset Formula $\kappa$
+\end_inset
+
+, 
+\begin_inset Formula $T$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega\tau$
+\end_inset
+
+ are all dimensionless quantities of the same order of magnitude: 
+\begin_inset Formula $10^{-3}$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -16149,7 +16333,7 @@ result H11
 \begin_inset Formula 
 \begin{eqnarray*}
 H_{21} & = & -e^{2i\phi}\frac{T}{8}\frac{2\gamma\iota_{c}}{\Omega^{2}\left(\gamma^{2}+\Omega^{2}\right)}+O\left(0\right)\\
- & \equiv & -e^{2i\phi}\frac{T}{8}\mathcal{K}.
+ & \equiv & -e^{2i\phi}\frac{1}{2}\mathcal{K}.
 \end{eqnarray*}
 
 \end_inset
@@ -16168,7 +16352,7 @@ result H21
 \begin{eqnarray*}
 \mathbf{H} & \approx & e^{2i\phi}\left(\begin{array}{cc}
 1 & 0\\
-T\mathcal{K}/8 & 1
+-\mathcal{K}/2 & 1
 \end{array}\right)\\
 \phi & \equiv & \tan^{-1}\left(\Omega/\gamma\right)\quad\gamma\equiv\frac{Tc}{4L}\\
 \mathcal{K} & \equiv & \frac{2\gamma\iota_{c}}{\Omega^{2}\left(\Omega^{2}+\gamma^{2}\right)}\quad\iota_{c}=\frac{8\omega_{0}I_{c}}{mLc}\quad I_{c}=\frac{4I_{0}}{T}.
@@ -16187,9 +16371,9 @@ resultF2
 , we can write that 
 \begin_inset Formula 
 \begin{eqnarray*}
-\vec{F} & = & -\frac{e^{i\phi}}{2g_{SQL}}\left(\begin{array}{c}
+\vec{F} & = & -\frac{e^{i\phi}}{g_{SQL}}\left(\begin{array}{c}
 0\\
-\mathcal{\sqrt{K}}
+\sqrt{\mathcal{K}}
 \end{array}\right)
 \end{eqnarray*}
 
@@ -16200,7 +16384,7 @@ resultF2
 
 \begin_layout Remark*
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 If 
@@ -16228,7 +16412,7 @@ h_{SQL} & = & \frac{\overbrace{g_{SQL}}^{\sqrt{2\hbar m\Omega^{2}}}}{m\Omega^{2}
  so that we can write that 
 \begin_inset Formula 
 \begin{eqnarray*}
-\vec{F}G & = & \frac{e^{i\phi}}{2}\left(\begin{array}{c}
+\vec{F}G & = & e^{i\phi}\left(\begin{array}{c}
 0\\
 \mathcal{\sqrt{K}}
 \end{array}\right)\frac{h}{h_{SQL}}
@@ -16242,6 +16426,10 @@ h_{SQL} & = & \frac{\overbrace{g_{SQL}}^{\sqrt{2\hbar m\Omega^{2}}}}{m\Omega^{2}
 \end_inset
 
  
+\end_layout
+
+\begin_layout Remark*
+Exact Results 
 \begin_inset Note Note
 status collapsed
 
@@ -16295,9 +16483,9 @@ sqrt{1-T}} & 0
 
 \begin_layout Plain Layout
 
- -
+ 
 \backslash
-frac{e^{2 i x} T 
+frac{4e^{2 i x}  
 \backslash
 kappa }{
 \backslash
@@ -16384,13 +16572,13 @@ begin{array}{c}
 
  -
 \backslash
-frac{
+frac{2
 \backslash
 sqrt{2} e^{i x} 
 \backslash
 sqrt{
 \backslash
-kappa }}{
+kappa}}{
 \backslash
 text{gSQL}-e^{2 i x} 
 \backslash
@@ -16559,18 +16747,6 @@ because
 \mathcal{K} & \equiv & \frac{2\gamma\iota_{c}}{\Omega^{2}\left(\Omega^{2}+\gamma^{2}\right)}\\
  & = & \frac{T}{4\tau}\frac{8\kappa}{T\tau\left(\Omega^{2}+\gamma^{2}\right)}=\frac{2\kappa}{\tau^{2}\left(\Omega^{2}+T^{2}/16\tau^{2}\right)}\\
  & = & \frac{2\kappa}{\left(\Omega^{2}\tau^{2}+T^{2}/16\right)}=\frac{32\kappa}{\left(16\Omega^{2}\tau^{2}+T^{2}\right)}
-\end{eqnarray*}
-
-\end_inset
-
-Trying to estimate the order of magnitude of 
-\begin_inset Formula $\kappa$
-\end_inset
-
-: An order of magnitude gives us 
-\begin_inset Formula 
-\begin{eqnarray*}
- &  & \frac{8\times\times2.5}{4\times9\times1}\frac{1\times10\times10^{15}}{10\times10^{16}\times10^{4}}\\
 \end{eqnarray*}
 
 \end_inset

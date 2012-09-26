@@ -3,9 +3,6 @@
 \begin_document
 \begin_header
 \textclass scrbook
-\begin_preamble
-\usepackage{braket}
-\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
@@ -2977,6 +2974,9 @@ begin{rem}[Fabry-Perot intracavity power]
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
 name "rem:intracavity power LM T0"

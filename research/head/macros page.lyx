@@ -93,9 +93,28 @@
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset FormulaMacro
 \renewcommand{\sectionSymbol}{}
 {\mathcal{x}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\ang}{\mbox{\overset{\circ}{A}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\limit}[2]{\lim_{#1\rightarrow#2}}
 \end_inset
 
 

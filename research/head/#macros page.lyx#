@@ -70,7 +70,7 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\re}[1]{#1}
+\renewcommand{\re}[1]{#1}
 {\mbox{re}\left(#1\right)}
 \end_inset
 
@@ -79,7 +79,7 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\im}[1]{#1}
+\renewcommand{\im}[1]{#1}
 {\mbox{im}\left(#1\right)}
 \end_inset
 
@@ -88,7 +88,7 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\i}[3]{#1#2#3}
+\renewcommand{\i}[3]{#1#2#3}
 {\intop_{#1}^{#2}d#3}
 \end_inset
 
@@ -97,7 +97,7 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\sectionSymbol}{}
+\renewcommand{\sectionSymbol}{}
 {\mathcal{x}}
 \end_inset
 
@@ -106,7 +106,15 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ang}{\mbox{\overset{\circ}{A}}}
+\renewcommand{\ang}{\mbox{\overset{\circ}{A}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\li}{}
 \end_inset
 
 

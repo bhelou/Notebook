@@ -235,10 +235,15 @@ where
  is the absolute value of the Jacobian determinant.
  Hence, 
 \begin_inset Formula 
-\begin{eqnarray*}
-g\left(y\right) & = & \frac{f\left[h^{-1}\left(y\right)\right]}{\left|\frac{\partial h}{\partial x}\right|_{x=h^{-1}\left(y\right)}}."\\
-\end{eqnarray*}
+\begin{eqnarray}
+g\left(y\right) & = & \frac{f\left[h^{-1}\left(y\right)\right]}{\left|\frac{\partial h}{\partial x}\right|_{x=h^{-1}\left(y\right)}}.\label{eq:statistics transformation of variables}\\
+\nonumber 
+\end{eqnarray}
 
+\end_inset
+
+
+\begin_inset Quotes erd
 \end_inset
 
 (From section 1.13 of 
@@ -268,6 +273,20 @@ type "file:"
 \end_inset
 
 ).
+\end_layout
+
+\begin_layout Standard
+Transformation of variables has been used in:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "note:transformation statistics 1"
+
+\end_inset
+
+ (very simple example)
 \end_layout
 
 \begin_layout Section
@@ -550,13 +569,110 @@ key "blandfordCP"
 
 \end_layout
 
+\begin_layout Remark
+For any random process, we have that
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{t\rightarrow0}P_{2}\left(y_{2},t|y_{1}\right) & = & \delta\left(y_{2}-y_{1}\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ is the conditional probability defined from 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:prob random process"
+
+\end_inset
+
+).*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+to see why, note that for a test function 
+\begin_inset Formula $f$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{t\rightarrow0}\int dy_{2}f\left(y_{2}\right)P_{2}\left(y_{2},t|y_{1}\right) & = & \lim_{t\rightarrow0}\int dy_{2}f\left(y_{2}\right)\frac{p_{2}\left(y_{2},t;y_{1}\right)}{p_{1}\left(y_{1}\right)}\\
+ & = & \frac{1}{p_{1}\left(y_{1}\right)}\lim_{t\rightarrow0}\int dy_{2}f\left(y_{2}\right)p_{2}\left(y_{2},t;y_{1}\right)\\
+ & = & \frac{1}{p_{1}\left(y_{1}\right)}\int dy_{2}f\left(y_{2}\right)p_{2}\left(y_{2},y_{1}\right)\\
+ & = & \frac{1}{p_{1}\left(y_{1}\right)}\int dy_{2}f\left(y_{2}\right)p_{1}\left(y_{1}\right)\delta\left(y_{2}-y_{2}\right)\\
+ & = & f\left(y_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+We obtain the fourth equality from the definition of 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:prob random process"
+
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(Exercise 6.1 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+)
+\end_layout
+
 \begin_layout Section
 Stationary random processes
 \end_layout
 
-\begin_layout Definition
-Stationary random processes: A random process is said to be stationary if
- and only if its probability distributions 
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}[Stationary Random Processes]
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "def: Stationary Random Process"
+
+\end_inset
+
+A random process is said to be stationary if and only if its probability
+ distributions 
 \begin_inset Formula $p_{n}$
 \end_inset
 
@@ -568,10 +684,55 @@ p_{n}\left(y_{n},t_{n}+\tau;...;y_{2},t_{2}+\tau;y_{1},t_{1}+\tau\right) & = & p
 
 \end_inset
 
-where 
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
 \end_layout
 
-\begin_layout Definition*
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}[Probability for Random Processes]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "def:prob random process"
+
+\end_inset
+
+
 \begin_inset Formula $p_{n}\left(y_{n},t_{n};...;y_{2},t_{2};y_{1},t_{1}\right)$
 \end_inset
 
@@ -604,6 +765,238 @@ where
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+The conditional probabilities can be obtained from the absolute ones by
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{eqnarray}
+P_{n}\left(y_{n},t_{n}|y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right) & = & \frac{p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}{p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}.\label{eq:conditional RP in terms of absolute}
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The above follows from the definition of probabilities: to see that, rewrite
+ it in the form:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right) & = & P_{n}\left(y_{n},t_{n}|y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right).\\
+\end{eqnarray*}
+
+\end_inset
+
+By definition, 
+\begin_inset Formula $P_{n}$
+\end_inset
+
+ is the probability that we obtain a value between 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{n}+dy_{n}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t_{n}$
+\end_inset
+
+ given that we obtained a value between 
+\begin_inset Formula $y_{n-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{n-1}+dy_{n-1}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t_{n-1}$
+\end_inset
+
+ and ...
+ and that we obtained a value between 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{1}+dy_{1}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t_{1}.$
+\end_inset
+
+ And by 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:prob random process"
+
+\end_inset
+
+,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ tells us the probability that the random variable 
+\begin_inset Formula $Y\left(t\right)$
+\end_inset
+
+ will take on a value between 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{1}+dy_{1}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ and ..., and will also take on a value between 
+\begin_inset Formula $y_{n-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{n-1}+dy_{n-1}$
+\end_inset
+
+ at a later time 
+\begin_inset Formula $t_{n-1}$
+\end_inset
+
+ (and this probability is given by 
+\begin_inset Formula $p_{n-1}$
+\end_inset
+
+)
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ AND that given all of the previous, a value between 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{n}+dy_{n}$
+\end_inset
+
+ is obtained at time 
+\begin_inset Formula $t_{n}$
+\end_inset
+
+ (and this probability is given by 
+\begin_inset Formula $P_{n}$
+\end_inset
+
+).
+ Hence, the equality is derived.
+\end_layout
+
+\begin_layout Plain Layout
+Also, the above equality means that 
+\begin_inset Formula $P_{n}$
+\end_inset
+
+ is properly normalized to 1: Consider 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\int dy_{n}P_{n}\left(y_{n},t_{n}|y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right) & = & \int dy_{n}\frac{p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}{p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}.\\
+ & = & \frac{\int dy_{n}p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}{p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}\\
+ & = & \frac{p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}{p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}\\
+ & = & 1,
+\end{eqnarray*}
+
+\end_inset
+
+where the before last equality comes from the definition of probabilities.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -649,7 +1042,8 @@ since it does not depend on the time
 Denote
 \begin_inset Formula 
 \begin{eqnarray*}
-P_{2}\left(y_{2},t|y_{2}\right) & \equiv & P_{2}\left(y_{2},t|y_{1},0\right)
+P_{2}\left(y_{2},t|y_{2}\right) & \equiv & P_{2}\left(y_{2},t|y_{1},0\right)\\
+ & \equiv & P_{2}\left(y_{2},t|y_{1}\right),
 \end{eqnarray*}
 
 \end_inset
@@ -787,15 +1181,562 @@ end{defn}
 
 \end_inset
 
+Under this assumption, time averages for function 
+\begin_inset Formula $F$
+\end_inset
+
+ defined using a realization (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:realization"
+
+\end_inset
+
+) 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ is the same as the ensemble average:
+\begin_inset Formula 
+\begin{eqnarray}
+\bar{F} & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}F\left(y\left(t\right)\right)dt\quad\mbox{(Time average)}\nonumber \\
+ & = & \left\langle F\left(y\right)\right\rangle =\int F\left(y\right)p_{1}\left(y\right)dy,\label{eq:implication ergodicity}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ is defined in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:prob random process"
+
+\end_inset
+
+ [[TYPO: ^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Eq.
+ 6.8 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+ should be 
+\begin_inset Formula $\bar{F}=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}F\left(y\left(t\right)\right)dt$
+\end_inset
+
 
 \end_layout
 
-\begin_layout Subsection
-Connection with 
+\end_inset
+
+]].
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Correspondingly, we can blur the distinction between the random process
+ and speciﬁc realizations of it
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-We present an example 
+(Section 6.2.3 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection*
+Further discussion with the reference of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "OliveiraET"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:ergodic hypothesis"
+
+\end_inset
+
+is not very clear and its implications are stated but not derived.
+ Ergodicity and its meaning is a difficult subject.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "OliveiraET"
+
+\end_inset
+
+ discusses ergodic theory in the context of classical statistical mechanics.
+ The article is not very well written and requires some level of mathematical
+ background but is well organized and one can extract some ideas from it:
+\end_layout
+
+\begin_layout Itemize
+The definition of ergodicity is specified (in different ways) to be: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+An invariant measure 
+\begin_inset Formula $\mu$
+\end_inset
+
+ with respect to a general dynamics 
+\begin_inset Formula $\tau^{t}$
+\end_inset
+
+ is called ergodic (or the pair 
+\begin_inset Formula $\left(\tau^{t},\mu\right)$
+\end_inset
+
+ is ergodic) if for every set 
+\begin_inset Formula $A\subset\Omega$
+\end_inset
+
+ with 
+\begin_inset Formula $\tau^{t}\left(A\right)=A$
+\end_inset
+
+, one has either 
+\begin_inset Formula $\mu\left(A\right)=0$
+\end_inset
+
+ or 
+\begin_inset Formula $\mu\left(\Omega\backslash A\right)=0$
+\end_inset
+
+, i.e., every invariant set under the dynamics has zero or full measure.
+ Then ergodicity means that the only nontrivial (that is, with nonzero measure)
+ invariant set is just the whole set; in other words, ergodicity is equivalent
+ to the set 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ be 
+\emph on
+indecomposable
+\emph default
+ under the dynamics 
+\begin_inset Formula $\left(\tau^{t},\mu\right)$
+\end_inset
+
+.
+ If it is clear what is the invariant measure under consideration, one also
+ says that the system or the dynamics 
+\begin_inset Formula $\tau^{t}$
+\end_inset
+
+ is ergodic.
+\begin_inset Quotes erd
+\end_inset
+
+ Note that 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is a set and invariant measure means that 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\mu\left(\tau^{t}\left(A\right)\right)=\mu\left(A\right),$
+\end_inset
+
+ 
+\begin_inset Formula $\forall t$
+\end_inset
+
+, for all suitable 
+\begin_inset Formula $A$
+\end_inset
+
+...
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+If for each integrable 
+\begin_inset Formula $f$
+\end_inset
+
+ the time average 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+ is constant 
+\begin_inset Formula $\mu$
+\end_inset
+
+−
+\emph on
+a.e.
+\emph default
+, then the pair 
+\begin_inset Formula $\left(\tau^{t},\mu\right)$
+\end_inset
+
+ is called ergodic.
+ Note that this implies 
+\begin_inset Formula 
+\begin{eqnarray*}
+f^{*}\left(\omega\right) & = & \int_{\Omega}f\left(\omega^{'}\right)d\mu\left(\omega^{'}\right),\quad\mu-a.e.
+\end{eqnarray*}
+
+\end_inset
+
+that is, the equality of space and time averages.
+ If the flow 
+\begin_inset Formula $\tau^{t}$
+\end_inset
+
+ is fixed, it is also common to say that the invariant measure 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is ergodic.
+\begin_inset Quotes erd
+\end_inset
+
+ Note that the definition of 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{eqnarray*}
+f^{*}\left(\xi\right) & \equiv & \lim_{t\rightarrow\infty}\frac{1}{t}\int_{t_{0}}^{t_{0}+t}f\left(T^{s}\xi\right)ds,\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ is some initial time 
+\begin_inset Formula $ $
+\end_inset
+
+and 
+\begin_inset Formula $T^{s}\xi$
+\end_inset
+
+ indicates time evolution of 
+\begin_inset Formula $\xi$
+\end_inset
+
+ by time 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Moreover, 
+\emph on
+a.e.
+
+\emph default
+ refers to: 
+\begin_inset Quotes eld
+\end_inset
+
+(this means “almost everywhere,” a short way of saying “except on a set
+ of zero measure”)
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Ergodicity in the context of statistical mechanics is explained: 
+\begin_inset Quotes eld
+\end_inset
+
+
+\series bold
+Ergodic hypothesis in statistical mechanics
+\series default
+: The microcanonical ensemble 
+\begin_inset Formula $d\xi$
+\end_inset
+
+ is ergodic with respect to the Hamiltonian dynamics.
+\begin_inset Quotes erd
+\end_inset
+
+ In the context of classical statistical mechanics, 
+\begin_inset Formula $\xi=\left(q,p\right)$
+\end_inset
+
+ is a collection of the positions 
+\begin_inset Formula $q$
+\end_inset
+
+ and momenta 
+\begin_inset Formula $p$
+\end_inset
+
+ of the constituent particles of the system.
+ 
+\begin_inset Formula $d\xi$
+\end_inset
+
+ is the measure of the system.
+ For instance, the phase space average of an observable 
+\begin_inset Formula $f$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle f\right\rangle  & \equiv & \int_{\Gamma}f\left(\xi\right)\rho_{t}\left(\xi\right)d\xi,\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ is the phase space of the system and 
+\begin_inset Formula $\rho_{t}$
+\end_inset
+
+ is the density function at time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Nonergodicity is quite common and sometimes could mean the coexistence of
+ two phases (see section 4.1).
+\end_layout
+
+\begin_layout Itemize
+Mixing entails ergodicity but the converse does not necessarily hold (section
+ 4.1).
+ The intuitive definition of mixing is for example stirring a drop of ink
+ in a liquid.
+ A precise definition was given by Von Neumann: 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\left(\tau^{t},\mu\right)$
+\end_inset
+
+ is mixing (
+\begin_inset Formula $\mu$
+\end_inset
+
+ is assumed to be invariant) if for any 
+\begin_inset Formula $A,B\subset\Omega$
+\end_inset
+
+ one has 
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{t\rightarrow\infty}\mu\left(\tau^{t}\left(A\right)\cap B\right) & = & \mu\left(A\right)\mu\left(B\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+This expression means that as time increases the portion of a given measurable
+ set 
+\begin_inset Formula $A$
+\end_inset
+
+ that then resides in any set 
+\begin_inset Formula $B$
+\end_inset
+
+ is proportional to the measure of 
+\begin_inset Formula $B$
+\end_inset
+
+; thus, according to the probability measure 
+\begin_inset Formula $\mu$
+\end_inset
+
+, 
+\begin_inset Formula $\tau^{t}\left(A\right)$
+\end_inset
+
+ becomes uniformly distributed over 
+\series bold
+
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\series default
+.
+\begin_inset Quotes erd
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+To see why, note that if 
+\begin_inset Formula $A$
+\end_inset
+
+ is uniformly distributed then for any set 
+\begin_inset Formula $B$
+\end_inset
+
+ the probability of 
+\begin_inset Formula $A\cap B$
+\end_inset
+
+ is simply the measure/probability of 
+\begin_inset Formula $A$
+\end_inset
+
+ multiplied by the measure/probability of 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Section 5 says that we might be able to justify the microcanonical ensemble
+ without passing through the ergodicity hypothesis: by taking the limit
+ of infinitely many particles and showing that all the resultant thermodynamics
+ are equivalent.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+An invariant measure is said to result in a thermodynamics if the Boltzmann
+ 
+\emph on
+heat theorem 
+\emph default
+holds
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The heat theorem holds if 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{T}\left(du+pdv\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+[where 
+\begin_inset Formula $u$
+\end_inset
+
+ is the intensive internal energy, 
+\begin_inset Formula $p$
+\end_inset
+
+ the pressure and 
+\begin_inset Formula $v$
+\end_inset
+
+ the intensive volume] is an exact differential 
+\begin_inset Formula $ds$
+\end_inset
+
+, which allows the introduction of the entropy 
+\begin_inset Formula $s$
+\end_inset
+
+ as a function of state 
+\begin_inset Formula $\left(u,v\right)$
+\end_inset
+
+, a fundamental ingredient.
+ Note that this is an analytic expression for the second law of thermodynamics.
+ As a matter of fact, the proper way of taking the thermodynamic limit depends
+ on the ensemble considered, and in some cases different ensembles may correspon
+d to different physical situations; for example, ﬁxed external boundary
+ conditions can generate new ensembles.
+ Now by restricting to these distributions, and also for the systems one
+ also proves that in the limit 
+\begin_inset Formula $V,N\rightarrow\infty$
+\end_inset
+
+ the same entropy function 
+\begin_inset Formula $s$
+\end_inset
+
+ results (as well as the same thermodynamic potentials), then the same thermodyn
+amics is generated without ambiguity.
+ The ergodic question would be avoided, while the number of particles is
+ asked to be very large.
+\begin_inset Quotes erd
+\end_inset
+
+ Also, 
+\begin_inset Quotes eld
+\end_inset
+
+we underline that for a large class of particle interactions..., the standard
+ microcanonical, canonical and grand canonical distributions generate the
+ same thermodynamics; however, it is worth mentioning that the important
+ cases of Coulomb and gravitational potentials are not included in such
+ proofs.
+\begin_inset Quotes erd
+\end_inset
+
+ (I don't quite understand this argument).
+ 
+\end_layout
+
+\begin_layout Section
+Markov Random Processes
 \end_layout
 
 \begin_layout Standard
@@ -809,22 +1750,450 @@ status open
 
 
 \backslash
-begin{example}[Normal Distributions] We try to blah blad 
-\backslash
-end{example}
+begin{defn}[Markov Random Process]
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-Moreover,
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "def:Markov Process"
+
+\end_inset
+
+A random process 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ is said to be Markov/
+\emph on
+Markovian
+\emph default
+ IFF
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{n}\left(y_{n},t_{n}|y_{n-1},t_{n-1};\cdots;y_{1},t_{1}\right) & = & P_{2}\left(y_{n},t_{n}|y_{n-1},t_{n-1}\right)\quad\mbox{for all }t_{n}\geq\cdots\geq t_{2}\geq t_{1},\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $P_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ are conditional probabilities defined from the probability distribution
+ 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:prob random process"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From this definition, and the definitions of stationarity and ergodicity
+ we have the the following :
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:ErgodicP2"
+
+\end_inset
+
+An ergodic process satisfies
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{t\rightarrow\infty}P_{2}\left(y_{2},t|y_{1}\right) & = & p_{1}\left(y_{2}\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+In section 2.2.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NewmanMC"
+
+\end_inset
+
+, it is stated that the condition ergodicity means that it should be possible
+ for a Markov process to reach any state of the system from any other state
+ if we wait long enough.
+ This is implied in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:implication ergodicity"
+
+\end_inset
+
+, where the ensemble average is equal to the time average because a realization
+ 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ gets to explore all possible values of 
+\begin_inset Formula $y$
+\end_inset
+
+, i.e.
+ passes through all states of the phase space with probability 
+\begin_inset Formula $p_{1}\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+This + markotivity means that some kind of equilibrium will be reached:
+ we will have to return to the initial state eventually where because the
+ process is Markovian, the process repeats itself.
+ So in this sense, what the initial state of the process does not matter
+ at time 
+\begin_inset Formula $\infty$
+\end_inset
+
+: 
+\begin_inset Formula $\lim_{t\rightarrow\infty}P_{2}\left(y_{2},t|y_{1}\right)$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+.
+ Moreover, we know that 
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{2}\left(y_{2},t|y_{1}\right) & = & \frac{p_{2}\left(y_{2},t;y_{1}\right)}{p\left(y_{1}\right)}\\
+\end{eqnarray*}
+
+\end_inset
+
+If the RHS is independent of 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+ then 
+\begin_inset Formula $p_{2}\left(y_{2},t;y_{1}\right)\propto p\left(y_{1}\right)$
+\end_inset
+
+ as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+.
+ In fact, as we argued previously 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ becomes independent of 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and time at 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+ and so 
+\begin_inset Formula $p_{2}\left(y_{2},t;y_{1}\right)=p_{1}\left(y_{2}\right)p_{1}\left(y_{1}\right)$
+\end_inset
+
+ an 
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{t\rightarrow\infty}P_{2}\left(y_{2},t|y_{1}\right) & = & p_{1}\left(y_{2}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From that Lemma, we can write that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm: P2 is king"
+
+\end_inset
+
+For any Markovian, stationary and ergodic process, all the probability distribut
+ions follow from 
+\begin_inset Formula $P_{2}\left(y_{2},t|y_{1}\right)$
+\end_inset
+
+ alone.*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+From the definition of a Markovian process (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:Markov Process"
+
+\end_inset
+
+), all conditional probabilities can be obtained from 
+\begin_inset Formula $P_{2}\left(y_{n},t_{n}|y_{n-1},t_{n-1}\right)$
+\end_inset
+
+ which for a stationary process can be written as 
+\begin_inset Formula $P_{2}\left(y_{n},t_{n}-t_{n-1}|y_{n-1},0\right)=P_{2}\left(y_{n},t|y_{n-1},0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+From Bayes rule, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{n}\left(y_{n},t_{n};\cdots;y_{1},t_{1}\right) & = & P_{n}\left(y_{n},t_{n}|y_{n-1},t_{n-1};\cdots;y_{1},t_{1}\right)p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{1},t_{n-1}\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Consider a stationary Markovian process then this becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{n}\left(y_{n},t_{n};\cdots;y_{1}\right) & = & P_{2}\left(y_{n},t_{n}|y_{n-1},t_{n-1}\right)p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{1}\right)\\
+ & = & P_{2}\left(y_{n},t|y_{n-1},t_{n-1}\right)P_{n-1}\left(y_{n-1},t_{n-1}|...\right)p_{n-1}\left(y_{n-1},...\right)\\
+ & = & P_{2}\left(y_{n},t_{n}-t_{n-1}|y_{n-1},0\right)P_{2}\left(y_{n-1},t_{n-1}-t_{n-2}|y_{n-2}\right)p_{n-1}\\
+ &  & \vdots\\
+ & = & \prod_{i=0}^{n-2}P_{2}\left(y_{n-i},t_{n-i}-t_{n-i-1}|y_{n-i-1}\right)p_{1}\left(y_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+So for a general distribution 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ all we need to know are 
+\begin_inset Formula $P_{2}\left(y_{n},t|y_{n-1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{1}\left(y_{1}\right)$
+\end_inset
+
+.
+ Further note that all 
+\begin_inset Formula $P_{2}\left(y_{n},t|y_{n-1}\right)$
+\end_inset
+
+ are of the form 
+\begin_inset Formula $P_{2}\left(y_{2},t|y_{1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Now, for 
+\emph on
+ergodic processes
+\emph default
+: Use 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "lem:ErgodicP2"
+
+\end_inset
+
+ to write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{t\rightarrow\infty}P_{2}\left(y_{2},t|y_{1}\right) & = & p_{1}\left(y_{2}\right).
+\end{eqnarray*}
+
+\end_inset
+
+ Hence, we can obtain 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ from 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ and all we need to know is 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+(Unsuccessful attempt at proof: 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Unsuccessful
+\emph default
+ attempt at the proof:
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{F} & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left[\lim_{t\rightarrow\infty}P_{2}\left(y_{2},t|y\left(s\right)\right)\right]ds\\
+ & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left[\lim_{t\rightarrow\infty}\frac{p_{2}\left(y_{2},t;y\left(s\right)\right)}{p_{1}\left(y\left(s\right)\right)}\right]ds\\
+ & = & \left\langle F\left(y\right)\right\rangle =\int\left[\lim_{t\rightarrow\infty}P_{2}\left(y_{2},t|y\right)\right]p_{1}\left(y\right)dy,\\
+ & = & \int\left[\lim_{t\rightarrow\infty}\frac{p_{2}\left(y_{2},t;y\right)}{p_{1}\left(y\right)}\right]p_{1}\left(y\right)dy\\
+ & = & \int\lim_{t\rightarrow\infty}p_{2}\left(y_{2},t;y\right)dy,
+\end{eqnarray*}
+
+\end_inset
+
+ Also, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{F} & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{y\left(-T/2\right)}^{y\left(T/2\right)}\left[\lim_{t\rightarrow\infty}\frac{p_{2}\left(y_{2},t;y\left(s\right)\right)}{p_{1}\left(y\left(s\right)\right)}\right]ds\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Another 
+\emph on
+unsuccessful
+\emph default
+ attempt:
+\end_layout
+
+\begin_layout Plain Layout
+This argument is inspired from Sec.
+ 2.2.3 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NewmanMC"
+
+\end_inset
+
+ on detailed balance.
+ From that section, if detailed balance is satisfied, i.e.
+ if
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{\mu}P\left(\mu\rightarrow\nu\right) & = & p_{\nu}P\left(\nu\rightarrow\mu\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $p_{\mu}$
+\end_inset
+
+ is the equilibrium probability to be in state 
+\begin_inset Formula $\mu$
+\end_inset
+
+ (equivalent to 
+\begin_inset Formula $p_{1}\left(y\right)$
+\end_inset
+
+) and 
+\begin_inset Formula $P\left(\mu\rightarrow\nu\right)$
+\end_inset
+
+ is the transition probability from state 
+\begin_inset Formula $\mu$
+\end_inset
+
+ to 
+\begin_inset Formula $\nu$
+\end_inset
+
+ (and is equivalent to 
+\begin_inset Formula $P_{2}\left(y_{2},t|y_{1}\right)$
+\end_inset
+
+), then simple equilibrium is reached.
+ There is no reason for this 
+\end_layout
+
+\end_inset
+
+)
 \begin_inset Formula 
 \begin{eqnarray*}
 \\
@@ -835,24 +2204,191 @@ Moreover,
 
 \end_layout
 
-\begin_layout Section
-Transforms
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thm}
 \end_layout
 
-\begin_layout Subsection
-Fourier Transform
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsubsection
-Complex Fourier transform
-\end_layout
+\end_inset
 
-\begin_layout Standard
-We have that 
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
-f\left(x\right) & = & \sum_{n=-\infty}^{\infty}A_{n}e^{i\left(2\pi nx/L\right)}\\
-A_{n} & = & \frac{1}{L}\int_{-L/2}^{L/2}f\left(x\right)e^{-i\left(2\pi nx/L\right)}dx
+\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}[Markov Processes]
+\end_layout
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+An example of Markov process is the 
+\begin_inset Formula $x$
+\end_inset
+
+-component of velocity 
+\begin_inset Formula $v_{x}(t)$
+\end_inset
+
+ of a dust particle in an arbitrarily large room ﬁlled with constant-temperature
+ air.
+ Why? Because the molecule’s equation of motion is 
+\begin_inset Formula $mdv_{x}/dt=F_{x}^{'}(t),$
+\end_inset
+
+ and the force 
+\begin_inset Formula $F_{x}^{'}(t)$
+\end_inset
+
+ is due to random buffeting by other molecules that are uncorrelated (the
+ kick now is unrelated to earlier kicks); thus, there is no way for the
+ value of 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ in the future to be inﬂuenced by any earlier values of 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ except the most recent one.
+\begin_inset Quotes erd
+\end_inset
+
+ (Section 6.3.1 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+By contrast, the position 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ of the particle is not Markov because the probabilities of future values
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ depend not just on the initial value of 
+\begin_inset Formula $x$
+\end_inset
+
+, but also on the initial velocity 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+—or, equivalently, the probabilities depend on the values of 
+\begin_inset Formula $x$
+\end_inset
+
+ at two initial, closely spaced times[[*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I am not sure what 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+ is talking about but looking at the EOM 
+\begin_inset Formula $mdv_{x}/dt=F_{x}^{'}(t),$
+\end_inset
+
+ we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+m\ddot{x} & = & F_{x}^{'}\\
+\implies\dot{x} & = & \int\frac{F_{x}^{'}}{m}dt+v_{x}\left(t_{0}\right)\\
+ & = & \frac{F_{x}\left(t\right)}{m}+v_{x}\left(t_{0}\right)\\
+\implies x & = & \int\frac{F_{x}\left(t\right)}{m}dt+v_{x}\left(t_{0}\right)t+x\left(t_{0}\right)
+\end{eqnarray*}
+
+\end_inset
+
+so 
+\begin_inset Formula $x$
+\end_inset
+
+ does depend on the entire previous history and not just on the most recent
+ time.
+ 
+\end_layout
+
+\end_inset
+
+]].
+ The pair 
+\begin_inset Formula $\left\{ x\left(t\right),v_{x}\left(t\right)\right\} $
+\end_inset
+
+ is a two-dimensional Markov process[[*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The equations of motion for the system are 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{dt}\left(\begin{array}{c}
+x\\
+v_{x}
+\end{array}\right) & = & \left(\begin{array}{c}
+v_{x}\\
+F_{x}^{'}/m
+\end{array}\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+ which looks like a Markov EOM ?? 
+\begin_inset Formula 
+\begin{eqnarray*}
+\\
 \end{eqnarray*}
 
 \end_inset
@@ -860,12 +2396,1530 @@ A_{n} & = & \frac{1}{L}\int_{-L/2}^{L/2}f\left(x\right)e^{-i\left(2\pi nx/L\righ
 
 \end_layout
 
+\end_inset
+
+]].
+\begin_inset Quotes erd
+\end_inset
+
+ (Section 6.3.1 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-(From 
-\begin_inset CommandInset href
-LatexCommand href
-name "Fourier series wolfram alpha"
-target "http://mathworld.wolfram.com/FourierSeries.html"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thm}[The Smoluchowski Equation]
+\end_layout
+
+\end_inset
+
+For any Markovian, stationary process and for times 
+\begin_inset Formula $0<t_{2}<t_{3}$
+\end_inset
+
+, we can write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{2}\left(y_{3},t_{3}|y_{1}\right) & = & \int P_{2}\left(y_{3},t_{3}-t_{2}|y_{2}\right)P_{2}\left(y_{2},t_{2}-t_{1}|y_{1}\right)dy_{2}\\
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{2}\left(y_{3},t_{3}|y_{1},t_{1}\right) & = & \int P_{3}\left(y_{3},t_{3}|y_{2},t_{2};y_{1},t_{1}\right)P_{2}\left(y_{2},t_{2}|y_{1},t_{1}\right)dy_{2}\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $t_{2}<t_{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $t_{2}>t_{1}$
+\end_inset
+
+.
+ The above statement is true because of conservation of probability and
+ because the realization 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ has to have a certain value at time 
+\begin_inset Formula $t_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Afterward, use the fact that the process is Markovian to write that
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{2}\left(y_{3},t_{3}|y_{1},t_{1}\right) & = & \int P_{2}\left(y_{3},t_{3}|y_{2},t_{2}\right)P_{2}\left(y_{2},t_{2}|y_{1},t_{1}\right)dy_{2}\\
+\end{eqnarray*}
+
+\end_inset
+
+Use the fact that the process is stationary to obtain that
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{2}\left(y_{3},t_{3}|y_{1},t_{1}\right) & = & \int P_{2}\left(y_{3},t_{3}-t_{2}|y_{2}\right)P_{2}\left(y_{2},t_{2}-t_{1}|y_{1}\right)dy_{2}\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Gaussian Random Processes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}[Gaussian (Stationary) Random Process]
+\end_layout
+
+\end_inset
+
+A random process is said to be Gaussian IFF all its probability distributions
+ are Gaussian:
+\begin_inset Formula 
+\begin{eqnarray}
+p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right) & = & A\exp\left[-\sum_{j=1}^{n}\sum_{k=1}^{n}\alpha_{jk}\left(y_{j}-\bar{y}\right)\left(y_{k}-\bar{y}\right)\right],\label{eq:gaussian random process}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ is defined in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:prob random process"
+
+\end_inset
+
+, 
+\begin_inset Formula $A>0$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\alpha_{jk}\right]$
+\end_inset
+
+ is a positive-definite matrix*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Otherwise 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ would not be normalizable.
+ Indeed
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right) & = & A\exp\left[-\vec{Y}^{T}\overleftrightarrow{\alpha}\vec{Y}\right],\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\vec{Y}$
+\end_inset
+
+ is the vertical vector corresponding to 
+\begin_inset Formula $\left[y_{j}-\bar{y}\right]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Claim: 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ is normalizable IFF 
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ is positive definite.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\implies\right)$
+\end_inset
+
+ If 
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ is positive definite then by definition 
+\begin_inset Formula $\vec{Y}^{T}\overleftrightarrow{\alpha}\vec{Y}$
+\end_inset
+
+ is positive and so 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ is decaying exponential and so normalizable.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\Longleftarrow\right)$
+\end_inset
+
+We want 
+\begin_inset Formula $\vec{Y}^{T}\overleftrightarrow{\alpha}\vec{Y}$
+\end_inset
+
+ to be positive for all possible 
+\begin_inset Formula $\vec{Y}$
+\end_inset
+
+ then by definition 
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ is positive definite.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ The process is also time-stationary (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def: Stationary Random Process"
+
+\end_inset
+
+), if 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{jk}$
+\end_inset
+
+ depend only on the time differences such as 
+\begin_inset Formula $t_{2}-t_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $t_{3}-t_{1}$
+\end_inset
+
+, etc ...
+ Further, 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+ is a constant that is equal to 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{y} & = & \left\langle y\right\rangle =\int yp_{1}\left(y\right)dy\\
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1}\left(y_{1}\right) & = & A\exp\left[-\alpha\left(y_{1}-\bar{y}\right)^{2}\right].\\
+\end{eqnarray*}
+
+\end_inset
+
+Calculating 
+\begin_inset Formula $\int_{-\infty}^{\infty}yp_{1}\left(y\right)dy$
+\end_inset
+
+ with Mathematica gives the desired answer.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Properties of Gaussian Processes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thm}
+\end_layout
+
+\end_inset
+
+The conditional probabilities of a Gaussian process (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:gaussian random process"
+
+\end_inset
+
+) will be Gaussians themselves (i.e.
+ of the form of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:gaussian random process"
+
+\end_inset
+
+)*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+From 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:conditional RP in terms of absolute"
+
+\end_inset
+
+, we can write that (letting 
+\begin_inset Formula $P\equiv P_{n}\left(y_{n},t_{n}|y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)$
+\end_inset
+
+)
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{eqnarray*}
+P & = & \frac{p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}{p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}\\
+ & = & \frac{A\exp\left[-\sum_{j=1}^{n}\sum_{k=1}^{n}\alpha_{jk}\left(y_{j}-\bar{y}\right)\left(y_{k}-\bar{y}\right)\right]}{B\exp\left[-\sum_{j=1}^{n-1}\sum_{k=1}^{n-1}\beta_{jk}\left(y_{j}-\bar{y}\right)\left(y_{k}-\bar{y}\right)\right]}\\
+ & = & \frac{A\exp\left[-\vec{Y}^{T}\overleftrightarrow{\alpha}\vec{Y}\right]}{B\exp\left[-\vec{Y}_{n}^{T}\overleftrightarrow{\gamma}\vec{Y}_{n}\right]},\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\overleftrightarrow{\gamma}$
+\end_inset
+
+ is 
+\begin_inset Formula $\overleftrightarrow{\beta}$
+\end_inset
+
+ appended with 0s: 
+\begin_inset Formula $\gamma_{nl}=\gamma_{ln}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $l=1,\cdots,n$
+\end_inset
+
+.
+ In other words, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\overleftrightarrow{\gamma} & = & \left(\begin{array}{cc}
+\overleftrightarrow{\beta} & 0\\
+0 & 0
+\end{array}\right)\\
+\vec{Y} & = & \left(\begin{array}{c}
+y_{1}\\
+\vdots\\
+y_{n}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+so that
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{Y}^{T}\overleftrightarrow{\gamma}\vec{Y} & = & \left(\begin{array}{ccc}
+y_{1} & \cdots & y_{n}\end{array}\right)\left(\begin{array}{cc}
+\overleftrightarrow{\beta} & 0\\
+0 & 0
+\end{array}\right)\left(\begin{array}{c}
+y_{1}\\
+\vdots\\
+y_{n}
+\end{array}\right)\\
+ & = & \vec{Y}_{n-1}^{T}\overleftrightarrow{\beta}\vec{Y}_{n-1}
+\end{eqnarray*}
+
+\end_inset
+
+because 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ can be anything and would not change the value of 
+\begin_inset Formula $\vec{Y}^{T}\overleftrightarrow{\gamma}\vec{Y}$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula 
+\begin{eqnarray*}
+P & = & \frac{A}{B}\exp\left(-\vec{Y}^{T}\left(\overleftrightarrow{\alpha}-\overleftrightarrow{\gamma}\right)\vec{Y}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Is 
+\begin_inset Formula $\overleftrightarrow{\alpha}-\overleftrightarrow{\gamma}$
+\end_inset
+
+ positive? (unsuccessful attempt: 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Use that
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right) & = & \int dy_{n}p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right)\\
+ & = & \int dy_{n}A\exp\left[-\left(\vec{Y}^{T}\overleftrightarrow{\xi}\vec{Y}+\vec{Y}^{T}\left(\overleftrightarrow{\alpha}-\overleftrightarrow{\xi}\right)\vec{Y}\right)\right],
+\end{eqnarray*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+\overleftrightarrow{\xi} & = & \left(\begin{array}{ccc}
+0 & 0 & \alpha_{1n}\\
+0 & 0 & \vdots\\
+\alpha_{n1} & \cdots & \alpha_{nn}
+\end{array}\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+It is plausible that 
+\begin_inset Formula $\overleftrightarrow{\xi}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\overleftrightarrow{\alpha}-\overleftrightarrow{\xi}\right)$
+\end_inset
+
+ are both positive [[TODO: VERIFY]].
+ Also, since 
+\begin_inset Formula $\left(\overleftrightarrow{\alpha}-\overleftrightarrow{\xi}\right)$
+\end_inset
+
+ does not contain terms of the form 
+\begin_inset Formula $\alpha_{ln}\,\forall l\in\left[1,\cdots,n\right]$
+\end_inset
+
+ then the second term inside the exponential plays no role in the integral
+ and so
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right) & = & \int dy_{n}p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right)\\
+ & = & \left(\int dy_{n}A\exp\left[-\vec{Y}^{T}\overleftrightarrow{\xi}\vec{Y}\right]\right)\exp\left[-\vec{Y}^{T}\left(\overleftrightarrow{\alpha}-\overleftrightarrow{\xi}\right)\vec{Y}\right],\\
+ & = & B\exp\left[-\vec{Y}_{n-1}^{T}\overleftrightarrow{\gamma}\vec{Y}_{n-1}\right]
+\end{eqnarray*}
+
+\end_inset
+
+Now, 
+\begin_inset Formula $\exp\left[-\vec{Y}^{T}\overleftrightarrow{\xi}\vec{Y}\right]$
+\end_inset
+
+ is of the form 
+\begin_inset Formula $\exp\left[-\left(\alpha_{nn}\left(y_{n}-\bar{y}\right)^{2}+\sum_{k=1}^{n-1}\alpha_{nk}\left(y_{n}-\bar{y}\right)\left(y_{k}-\bar{y}\right)+\sum_{j=1}^{n-1}\alpha_{jn}\left(y_{j}-\bar{y}\right)\left(y_{n}-\bar{y}\right)\right)\right]$
+\end_inset
+
+ .
+ This integrated must be indepedent 
+\begin_inset Formula 
+\begin{eqnarray*}
+\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\end_layout
+
+\end_inset
+
+) It has to be! as 
+\begin_inset Formula $P$
+\end_inset
+
+ must be positive for all values of 
+\begin_inset Formula $\vec{Y}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(unsuccesful attempt) 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+P & = & \frac{p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}{p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}\\
+ & = & \frac{A\exp\left[-\sum_{j=1}^{n}\sum_{k=1}^{n}\alpha_{jk}\left(y_{j}-\bar{y}\right)\left(y_{k}-\bar{y}\right)\right]}{B\exp\left[-\sum_{j=1}^{n-1}\sum_{k=1}^{n-1}\beta_{jk}\left(y_{j}-\bar{y}\right)\left(y_{k}-\bar{y}\right)\right]}\\
+ & = & \frac{A}{B}\exp\left[-\left(\sum_{j=1}^{n}\sum_{k=1}^{n}\alpha_{jk}\left(y_{j}-\bar{y}\right)\left(y_{k}-\bar{y}\right)-\sum_{j=1}^{n-1}\sum_{k=1}^{n-1}\beta_{jk}\left(y_{j}-\bar{y}\right)\left(y_{k}-\bar{y}\right)\right)\right]\\
+ & = & \frac{A}{B}\exp\left[-\left(\alpha_{nn}\left(y_{n}-\bar{y}\right)^{2}+\sum_{k=1}^{n-1}\alpha_{nk}\left(y_{j}-\bar{y}\right)\left(y_{k}-\bar{y}\right)+\sum_{j=1}^{n-1}\alpha_{jn}\left(y_{j}-\bar{y}\right)\left(y_{k}-\bar{y}\right)+\sum_{j=1}^{n-1}\sum_{k=1}^{n-1}\left(\alpha_{jk}-\beta_{jk}\right)\left(y_{j}-\bar{y}\right)\left(y_{k}-\bar{y}\right)\right)\right]\\
+ & = & \frac{A}{B}\exp\left[-\left(\alpha_{nn}\left(y_{n}-\bar{y}\right)^{2}+\sum_{k=1}^{n-1}\alpha_{nk}\left(y_{n}-\bar{y}\right)\left(y_{k}-\bar{y}\right)+\sum_{j=1}^{n-1}\alpha_{jn}\left(y_{j}-\bar{y}\right)\left(y_{n}-\bar{y}\right)\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+where the last equality comes from the fact that 
+\begin_inset Formula $\alpha=\beta$
+\end_inset
+
+ because 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)=\int dy_{n}p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Section 6.3.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prop}[Correlation Function of Gaussian Markov stationary and Ergodic
+ Processes]
+\end_layout
+
+\end_inset
+
+The correlation function (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:Correlation Function"
+
+\end_inset
+
+) of a Gaussian Markov stationary process is given by 
+\begin_inset Formula 
+\begin{eqnarray}
+C_{y}\left(\tau\right) & = & \sigma_{y}^{2}e^{-\tau/\tau_{r}}.\label{eq:correlation function gaussian}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+To see why, first use the ergodic hypothesis to convert the time average
+ into a phase space expectation value (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:implication ergodicity"
+
+\end_inset
+
+): 
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{y}\left(\tau\right) & = & \int\left(y_{1}-\bar{y}\right)\left(y_{2}-\bar{y}\right)p_{2}\left(y_{2},\tau;y_{1}\right)dy_{1}dy_{2}\\
+\end{eqnarray*}
+
+\end_inset
+
+Note that we have treated 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $y\left(t+\tau\right)$
+\end_inset
+
+ as two separate random variables, which is reasonable as 
+\begin_inset Formula $y\left(t+\tau\right)$
+\end_inset
+
+ is a different realization than 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{y}\left(\tau\right) & = & \int\left(y_{1}y_{2}-y_{1}\bar{y}-y_{2}\bar{y}+\bar{y}^{2}\right)p_{2}\left(y_{2},\tau;y_{1}\right)dy_{1}dy_{2}\\
+\end{eqnarray*}
+
+\end_inset
+
+Now, using 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:conditional RP in terms of absolute"
+
+\end_inset
+
+, we have that 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{2}\left(y_{2},\tau|y_{1}\right)p_{1}\left(y_{1}\right) & = & p_{2}\left(y_{2},t_{2};y_{1}\right).\\
+\end{eqnarray*}
+
+\end_inset
+
+Moreover, 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ is given by 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "thm:Doob's theorem"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{2}\left(y_{2},\tau|y_{1}\right) & = & \frac{1}{\sqrt{2\pi\sigma_{y_{\tau}}}}\exp\left[-\frac{\left(y_{2}-\bar{y}_{\tau}\right)^{2}}{2\sigma_{y_{\tau}}^{2}}\right],\\
+\end{eqnarray*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{y}_{\tau} & = & \bar{y}+e^{-\tau/\tau_{r}}\left(y_{1}-\bar{y}\right)\\
+\sigma_{y_{\tau}}^{2} & = & \left(1-e^{-2\tau/\tau_{r}}\right)\sigma_{y}^{2},
+\end{eqnarray*}
+
+\end_inset
+
+and 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ is given by 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:p1 gaussian random process"
+
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1}\left(y_{1}\right) & = & \frac{1}{\sqrt{2\pi\sigma_{y}^{2}}}\exp\left[-\frac{\left(y_{1}-\bar{y}\right)^{2}}{2\sigma_{y}^{2}}\right].\\
+\end{eqnarray*}
+
+\end_inset
+
+Combining, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{2}\left(y_{2},t_{2};y_{1}\right) & = & \frac{1}{\sqrt{2\pi\sigma_{y_{\tau}}}}\exp\left[-\frac{\left(y_{2}-\bar{y}_{\tau}\right)^{2}}{2\sigma_{y_{\tau}}^{2}}\right]\frac{1}{\sqrt{2\pi\sigma_{y}^{2}}}\exp\left[-\frac{\left(y_{1}-\bar{y}\right)^{2}}{2\sigma_{y}^{2}}\right],\\
+\end{eqnarray*}
+
+\end_inset
+
+The calculation of 
+\begin_inset Formula $C_{y}$
+\end_inset
+
+ has been done in Mathematica (
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+correlation function of gaussian stationary markov ergodic random process.nb
+\end_layout
+
+\end_inset
+
+) to obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{y}\left(\tau\right) & = & \sigma_{y}^{2}e^{-\tau/\tau_{r}}\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+[[TYPO: Eq.
+ 6.20 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+ should be 
+\begin_inset Formula $C_{y}\left(\tau\right)=\sigma_{y}^{2}e^{-\tau/\tau_{r}}$
+\end_inset
+
+]]
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prop}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Section 6.4.1.
+ of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+Doob's theorem for Gaussian Markov ergodic stationary processes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thm}[Doob's theorem]
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Doob's theorem"
+
+\end_inset
+
+Assume that a one-dimensional random process 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ is Markov, time-stationary, ergodic and Gaussian then
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{2}\left(y_{2},\tau|y_{1}\right) & = & \frac{1}{\sqrt{2\pi\sigma_{y_{\tau}}}}\exp\left[-\frac{\left(y_{2}-\bar{y}_{\tau}\right)^{2}}{2\sigma_{y_{\tau}}^{2}}\right],\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ is a conditional probability defined from the probability distribution
+ given in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:prob random process"
+
+\end_inset
+
+ and the mean 
+\begin_inset Formula $\bar{y}_{\tau}$
+\end_inset
+
+ and variance 
+\begin_inset Formula $\sigma_{y_{\tau}}^{2}$
+\end_inset
+
+ are given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{y}_{\tau} & = & \bar{y}+e^{-\tau/\tau_{r}}\left(y_{1}-\bar{y}\right)\\
+\sigma_{y_{\tau}}^{2} & = & \left(1-e^{-2\tau/\tau_{r}}\right)\sigma_{y}^{2},
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{y}^{2}$
+\end_inset
+
+ are the equilibrium values (i.e.
+ they are determined from the 
+\begin_inset Formula $\tau\rightarrow\infty$
+\end_inset
+
+ limit of 
+\begin_inset Formula $P_{2}\left(y_{2},\tau|y_{1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau_{r}$
+\end_inset
+
+ is called the relaxation time.*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Redefine variables so that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(y-\bar{y}\right)/\sigma_{y} & = & y_{n}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $y$
+\end_inset
+
+ is Gaussian distributed and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1}\left(y\right) & = & \frac{1}{\sqrt{2\pi\sigma_{y}^{2}}}\exp\left(-\frac{\left(y-\bar{y}\right)^{2}}{2\sigma_{y}^{2}}\right).
+\end{eqnarray*}
+
+\end_inset
+
+We make the variable change to 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ to obtain that 
+\begin_inset Formula 
+\begin{equation}
+p_{1}=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{y_{n}^{2}}{2}\right).
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "note:transformation statistics 1"
+
+\end_inset
+
+To make a variable change, we use 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:statistics transformation of variables"
+
+\end_inset
+
+:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{eqnarray*}
+g\left(y_{n}\right) & = & \frac{f\left[h^{-1}\left(y_{n}\right)\right]}{\left|\frac{\partial h}{\partial y}\right|_{y=h^{-1}\left(y_{n}\right)}}.
+\end{eqnarray*}
+
+\end_inset
+
+with 
+\begin_inset Formula $g$
+\end_inset
+
+ being the new probability distribution, 
+\begin_inset Formula $f\left(y\right)=p_{1}\left(y\right),$
+\end_inset
+
+ 
+\begin_inset Formula $h\left(y\right)=\left(y-\bar{y}\right)/\sigma_{y}=y_{new}$
+\end_inset
+
+.
+ Hence,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+h^{-1}\left(y_{n}\right) & = & y_{n}\sigma_{y}+\bar{y}\\
+\mbox{because }h\left(h^{-1}\left(y_{n}\right)\right) & = & \left(\left(y_{n}\sigma_{y}+\bar{y}\right)-\bar{y}\right)/\sigma_{y}=y_{n}
+\end{eqnarray*}
+
+\end_inset
+
+Moreover, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\partial_{y}h & = & 1/\sigma_{y}\\
+\end{eqnarray*}
+
+\end_inset
+
+ So 
+\begin_inset Formula 
+\begin{eqnarray*}
+g\left(y_{n}\right) & = & 1/\left(\frac{1}{\sigma_{y}}\right)\frac{1}{\sqrt{2\pi\sigma_{y}^{2}}}\exp\left(-\frac{\left(y_{n}\sigma_{y}+\bar{y}-\bar{y}\right)^{2}}{2\sigma_{y}^{2}}\right)\\
+ & = & \frac{1}{\sqrt{2\pi}}\exp\left(-\frac{\left(y_{n}\sigma_{y}\right)^{2}}{2\sigma_{y}^{2}}\right)\\
+ & = & \frac{1}{\sqrt{2\pi}}\exp\left(-\frac{y_{n}^{2}}{2}\right)\\
+ & \equiv & p_{1}\left(y_{n}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(An easier way would have been to notice that 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1}\left(y\right) & \propto & \exp\left(-h\left(y\right)^{2}/2\right)\\
+\implies p_{1}\left(h^{-1}\left(y\right)\right) & \propto & \exp\left(-\left(h\left(h^{-1}\left(y_{n}\right)\right)\right)^{2}/2\right)=\exp\left(-y_{n}^{2}/2\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Hence, 
+\begin_inset Formula $\bar{y}_{n}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{y_{n}}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Next we calculate what 
+\begin_inset Formula $p_{2}\left(y_{2n},t_{2};y_{1n},t_{1}\right)$
+\end_inset
+
+ is equal to.
+ Again, 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ is Gaussian so it is for the form given by 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:gaussian random process"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{2} & = & A\exp\left[-\vec{Y}^{T}\overleftrightarrow{\alpha}\vec{Y}\right],
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $A$
+\end_inset
+
+ is a normalization constant and 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ are stationary (i.e.
+ they only depend on 
+\begin_inset Formula $\left(t_{2}-t_{1}\right)$
+\end_inset
+
+).
+ We have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\vec{Y}_{n} & = & \left(\begin{array}{c}
+\left(y_{1}-\bar{y}\right)/\sigma_{y}\\
+\left(y_{2}-\bar{y}\right)/\sigma_{y}
+\end{array}\right)\\
+ & = & \left(\vec{Y}-\bar{Y}\right)/\sigma_{y}\\
+\implies\vec{Y} & = & \sigma_{y}\vec{Y}_{n}+\bar{Y},
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\bar{Y}=\left(\begin{array}{cc}
+\bar{y} & \bar{y}\end{array}\right)^{T}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $\bar{y}_{2}=\bar{y}_{1}\equiv\bar{y}$
+\end_inset
+
+ because the process is Markov: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{y}_{2} & = & \int p_{1}\left(y_{2},t_{2}\right)y_{2}dy_{2}=\int p_{1}\left(y_{2}\right)y_{2}dy_{2}=\int p_{1}\left(y_{1}\right)y_{1}dy_{1}\\
+ & = & \int p_{1}\left(y_{1},t_{1}\right)y_{1}dy_{1}=\bar{y}_{1}.
+\end{eqnarray*}
+
+\end_inset
+
+The same reasoning (that 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ share the same probability distribution if the process is stationary) directly
+ applies to explain why 
+\begin_inset Formula $\sigma_{y_{1}}=\sigma_{y_{2}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Hence we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{2} & = & A\exp\left[-\left(\sigma_{y}\vec{Y}_{n}+\bar{Y}\right)^{T}\overleftrightarrow{\alpha}\left(\sigma_{y}\vec{Y}_{n}+\bar{Y}\right)\right]\\
+ & = & A\exp\left[-\left(\sigma_{y}^{2}\vec{Y}_{n}^{T}\overleftrightarrow{\alpha}\vec{Y}_{n}+\sigma_{y}\bar{Y}\overleftrightarrow{\alpha}\vec{Y}_{n}+\sigma_{y}\vec{Y}_{n}\overleftrightarrow{\alpha}\bar{Y}+\bar{Y}\overleftrightarrow{\alpha}\bar{Y}\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Doob's theorem is very powerful because
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Quotes eld
+\end_inset
+
+All statistical properties of a Gaussian, Markov [[,ergodic and stationary]]
+ process are determined by just three parameters: its (equilibrium) mean
+ 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+ and variance 
+\begin_inset Formula $\sigma_{y}^{2}$
+\end_inset
+
+, and its relaxation time 
+\begin_inset Formula $\tau_{r}$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Use 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "thm: P2 is king"
+
+\end_inset
+
+ that for a Markov, stationary and ergodic process, all probability distribution
+s follow from 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ and using Doob's theorem (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "thm:Doob's theorem"
+
+\end_inset
+
+), we know that if the random process is also Gaussian then 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{2}\left(y_{2},\tau|y_{1}\right) & = & \frac{1}{\sqrt{2\pi\sigma_{y_{\tau}}}}\exp\left[-\frac{\left(y_{2}-\bar{y}_{\tau}\right)^{2}}{2\sigma_{y_{\tau}}^{2}}\right],\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ is a conditional probability defined from the probability distribution
+ given in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:prob random process"
+
+\end_inset
+
+ and the mean 
+\begin_inset Formula $\bar{y}_{\tau}$
+\end_inset
+
+ and variance 
+\begin_inset Formula $\sigma_{y_{\tau}}^{2}$
+\end_inset
+
+ are given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{y}_{\tau} & = & \bar{y}+e^{-\tau/\tau_{r}}\left(y_{1}-\bar{y}\right)\\
+\sigma_{y_{\tau}}^{2} & = & \left(1-e^{-2\tau/\tau_{r}}\right)\sigma_{y}^{2}.
+\end{eqnarray*}
+
+\end_inset
+
+Hence, 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ is determined by only 3 parameters: 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{y}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau_{r}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As an example,
+\end_layout
+
+\begin_layout Corollary
+For a Gaussian, Markov, ergodic and stationary process
+\begin_inset Formula 
+\begin{eqnarray}
+p_{1}\left(y\right) & = & \frac{1}{\sqrt{2\pi\sigma_{y}^{2}}}\exp\left[-\frac{\left(y-\bar{y}\right)^{2}}{2\sigma_{y}^{2}}\right].\label{eq:p1 gaussian random process}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+First use 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "lem:ErgodicP2"
+
+\end_inset
+
+ to write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1}\left(y\right) & = & \lim_{\tau\rightarrow\infty}P_{2}\left(y,\tau|y_{1}\right)\\
+\end{eqnarray*}
+
+\end_inset
+
+then take the limit of 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{\tau\rightarrow\infty}\frac{1}{\sqrt{2\pi\sigma_{y_{\tau}}}}\exp\left[-\frac{\left(y-\bar{y}_{\tau}\right)^{2}}{2\sigma_{y_{\tau}}^{2}}\right] & = & \frac{1}{\sqrt{2\pi\sigma_{y}^{2}}}\exp\left[-\frac{\left(y-\bar{y}\right)^{2}}{2\sigma_{y}^{2}}\right]\\
+\end{eqnarray*}
+
+\end_inset
+
+by definition of 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{y}$
+\end_inset
+
+ (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "thm:Doob's theorem"
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Section 6.3.3.
+ of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
 
 \end_inset
 
@@ -873,14 +3927,594 @@ target "http://mathworld.wolfram.com/FourierSeries.html"
 \end_layout
 
 \begin_layout Section
-Useful Tricks/Theorems
+Correlation Functions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}[Correlation Function]
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "def:Correlation Function"
+
+\end_inset
+
+Let y(t) be a realization of a random process (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:realization"
+
+\end_inset
+
+) with its time average denoted by 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+.
+ Then, the correlation function of 
+\begin_inset Formula $y(t)$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $C_{y}$
+\end_inset
+
+, is deﬁned by
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{y}\left(\tau\right) & \equiv & \overline{\left(y\left(t\right)-\bar{y}\right)\left(y\left(t+\tau\right)-\bar{y}\right)}\\
+ & \equiv & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left(y\left(t\right)-\bar{y}\right)\left(y\left(t+\tau\right)-\bar{y}\right)dt.
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which has an interpretation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{rem}[Interpertation of Correlation functions]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+This quantity [[Correlation function]], as its name suggests, is a measure
+ of the extent to which the values of 
+\begin_inset Formula $y$
+\end_inset
+
+ at times 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $t+\tau$
+\end_inset
+
+ tend to be correlated
+\begin_inset Quotes erd
+\end_inset
+
+ (Section 6.4.1 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{rem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are some conventions on the name of certain quantities:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{rem}[Nomenclature in Correlation functions]
+\end_layout
+
+\end_inset
+
+The quantity 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is called the 
+\emph on
+delay time 
+\emph default
+and by convention is taken to be positive.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{rem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Section 6.4.1 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Subsection
-Taylor Series !
+Properties of Correlation Functions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{rem}[Poperty of correlation function]
+\end_layout
+
+\end_inset
+
+A correlation function, 
+\begin_inset Formula $C_{y}$
+\end_inset
+
+, (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:Correlation Function"
+
+\end_inset
+
+) satisfies
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{y}\left(\tau\right) & = & C_{y}\left(-\tau\right).\\
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Use the definition of correlation functions (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:Correlation Function"
+
+\end_inset
+
+) to write that
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{y}\left(\tau\right) & \equiv & \overline{\left(y\left(t\right)-\bar{y}\right)\left(y\left(t+\tau\right)-\bar{y}\right)}\\
+ & \equiv & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left(y\left(t\right)-\bar{y}\right)\left(y\left(t+\tau\right)-\bar{y}\right)dt.\\
+ & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2+\tau}^{T/2+\tau}\left(y\left(s-\tau\right)-\bar{y}\right)\left(y\left(s\right)-\bar{y}\right)ds.\\
+ & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left(y\left(s-\tau\right)-\bar{y}\right)\left(y\left(s\right)-\bar{y}\right)ds.\\
+ & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left(y\left(s\right)-\bar{y}\right)\left(y\left(s-\tau\right)-\bar{y}\right)ds.\\
+ & = & C_{y}\left(-\tau\right)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $s=t+\tau$
+\end_inset
+
+ and so 
+\begin_inset Formula $y=s-\tau$
+\end_inset
+
+.
+ Moreover, we used that 
+\begin_inset Formula $\limit T{\infty}\tau+T/2=T/2$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{rem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{rem}[Poperty of correlation function for ergodic stationary random
+ processes]
+\end_layout
+
+\end_inset
+
+A correlation function, 
+\begin_inset Formula $C_{y}$
+\end_inset
+
+, (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:Correlation Function"
+
+\end_inset
+
+) for an ergodic and stationary random process satisfies
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{y}\left(0\right) & = & vary=\left\langle y^{2}\right\rangle -\left\langle y\right\rangle ^{2}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Use the fact that the process is ergodic so that we can replace the time
+ average with the ensemble average (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:implication ergodicity"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{y}\left(0\right) & = & \int\left(y-\bar{y}\right)^{2}p_{1}\left(y\right)dy,\\
+ & \equiv & vary
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ is defined in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:prob random process"
+
+\end_inset
+
+ and we used the fact that the process is ergodic in the first line of the
+ above equation.
+\end_layout
+
+\begin_layout Plain Layout
+Note that we have treated 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ as a random variable in the transformation to an ensemble average.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{rem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
+Decay of the correlation function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prop}[Poperty of correlation function for ergodic stationary random
+ processes]
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:prop1"
+
+\end_inset
+
+A correlation function, 
+\begin_inset Formula $C_{y}\left(\tau\right)$
+\end_inset
+
+, (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:Correlation Function"
+
+\end_inset
+
+) for an ergodic and stationary random process will asymptote to zero for
+ 
+\begin_inset Formula $\tau>\tau_{r}$
+\end_inset
+
+, where 
+\begin_inset Formula $\tau_{r}$
+\end_inset
+
+ is a finite time that is called the process's 
+\emph on
+relaxation time
+\emph default
+ or 
+\emph on
+correlation time
+\emph default
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+ in section 6.4.1 gives a heuristic proof: 
+\begin_inset Quotes eld
+\end_inset
+
+This is true for all ergodic, stationary random processes, since our deﬁnition
+ of ergodicity in Sec.
+ 6.2.3 [[
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "def:ergodic hypothesis"
+
+\end_inset
+
+]] above relies on each realization 
+\begin_inset Formula $y(t)$
+\end_inset
+
+ losing its memory of earlier values after some sufficiently longtime 
+\begin_inset Formula $T$
+\end_inset
+
+; otherwise, it would not be possible to construct the ensemble 
+\begin_inset Formula $\mathcal{E}^{'}$
+\end_inset
+
+ of random variables 
+\begin_inset Formula $Y^{K}\left(t\right)$
+\end_inset
+
+ [[defined in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "def:ergodic hypothesis"
+
+\end_inset
+
+]] and have them behave like independent random variables.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prop}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+[
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "prop:prop1"
+
+\end_inset
+
+] For a Gaussian ergodic stationary Markov random process, the correlation
+ function is given by (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:correlation function gaussian"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{y}\left(\tau\right) & = & \sigma_{y}^{2}e^{-\tau/\tau_{r}}.\\
+\end{eqnarray*}
+
+\end_inset
+
+Hence, the process decays exponentially and the relaxation time is given
+ by 
+\begin_inset Formula $\tau_{r}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Chapter
+Useful Tricks/Theorems
+\end_layout
+
+\begin_layout Section
+Taylor Series !
+\end_layout
+
+\begin_layout Subsection
 Taylor's Theorem 
 \end_layout
 
@@ -1028,7 +4662,7 @@ http://en.wikipedia.org/wiki/Taylor%27s_theorem
  has a complete and detailed account of the theorem.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Taylor Expansion
 \end_layout
 
@@ -1060,7 +4694,7 @@ f\left(x,y\right) & = & f\left(a,b\right)+\left(x-a\right)f_{x}\left(a,b\right)+
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Taylor Expansion of a product of functions
 \end_layout
 
@@ -1170,7 +4804,7 @@ f\left(x\right) & = & \sum_{n=0}^{\infty}\sum_{k=0}^{n}\frac{x^{n}}{k!\left(n-k\
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Taylor Expansion of Variables of Comparable Norm
 \end_layout
 
@@ -1399,7 +5033,7 @@ In other words, we expand about this parameter
  
 \end_layout
 
-\begin_layout Paragraph*
+\begin_layout Subsubsection*
 More details
 \end_layout
 
@@ -1415,7 +5049,7 @@ f\left(x_{1},x_{2},...,x_{n}\right) & = & \sum_{n=0}^{\infty}\frac{1}{n!}\left.\
 *
 \end_layout
 
-\begin_layout Paragraph*
+\begin_layout Subsubsection*
 Usage of this tool/concept
 \end_layout
 
@@ -1433,7 +5067,7 @@ reference "note6"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Taylor Expansion of Variables of Hierarchical Norm
 \end_layout
 
@@ -1496,236 +5130,6 @@ Note the exact structure depends on the data; for example, if
 \end_inset
 
 ).
-\end_layout
-
-\begin_layout Section
-Calculus
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Euler-Homogeneous-function-theorem"
-
-\end_inset
-
-Euler's Homogeneous function theorem
-\end_layout
-
-\begin_layout Standard
-Let 
-\begin_inset Formula $f\left(\mathbf{x}\right)$
-\end_inset
-
- be a function that satisfies 
-\begin_inset Formula 
-\begin{eqnarray*}
-f\left(t\mathbf{x}\right) & = & t^{n}f\left(\mathbf{x}\right),\\
-\end{eqnarray*}
-
-\end_inset
-
-i.e.
- 
-\begin_inset Formula $f$
-\end_inset
-
- is homogeneous function of order 
-\begin_inset Formula $n$
-\end_inset
-
-.
- Then, 
-\begin_inset Formula 
-\begin{eqnarray*}
-\sum_{i}x_{i}\frac{\partial f}{\partial x_{i}} & = & nf\left(\mathbf{x}\right).
-\end{eqnarray*}
-
-\end_inset
-
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "note 3"
-
-\end_inset
-
-Let 
-\begin_inset Formula $\mathbf{x}^{'}=t\mathbf{x}$
-\end_inset
-
- then 
-\begin_inset Formula 
-\begin{eqnarray*}
-nt^{n-1}f\left(x\right) & = & \partial_{t}f\\
- & = & \sum_{i}\frac{\partial f}{\partial x_{i}^{'}}\frac{\partial x_{i}^{'}}{\partial t}\\
- & = & \sum_{i}\frac{\partial f}{\partial x_{i}^{'}}x_{i}\\
- & = & \sum_{i}\frac{\partial f}{\partial\left(tx_{i}\right)}x_{i}
-\end{eqnarray*}
-
-\end_inset
-
-Set 
-\begin_inset Formula $t=1$
-\end_inset
-
- to obtain the desired result.
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-(
-\begin_inset CommandInset href
-LatexCommand href
-name "Euler's Homogeneous Function Theorem"
-target "http://mathworld.wolfram.com/EulersHomogeneousFunctionTheorem.html"
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:addComplexPartLDE"
-
-\end_inset
-
-Adding a complex part to L.D.E.
- and then taking the real part
-\end_layout
-
-\begin_layout Standard
-Consider the Linear D.E.
- 
-\begin_inset Formula 
-\begin{eqnarray*}
-\mathcal{L}\left[x\right] & = & F
-\end{eqnarray*}
-
-\end_inset
-
-where 
-\begin_inset Formula $\mathcal{L}$
-\end_inset
-
- is a linear differential operator, and 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $F$
-\end_inset
-
- are both real functions.
- Add an imaginary part to 
-\begin_inset Formula $F$
-\end_inset
-
-, i.e.
- let 
-\begin_inset Formula $\tilde{F}=F+iG$
-\end_inset
-
-.
- Then, 
-\begin_inset Formula $x=\re{\tilde{x}}$
-\end_inset
-
-, where 
-\begin_inset Formula $\tilde{x}$
-\end_inset
-
- is defined by 
-\begin_inset Formula 
-\begin{eqnarray*}
-\mathcal{L}\left[\tilde{x}\right] & = & \tilde{F}.
-\end{eqnarray*}
-
-\end_inset
-
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-If we solve for 
-\begin_inset Formula $\tilde{x}$
-\end_inset
-
-, we can obtain 
-\begin_inset Formula $x$
-\end_inset
-
- by taking the real part of 
-\begin_inset Formula $\tilde{x}$
-\end_inset
-
-.
- This is because 
-\begin_inset Formula $\mathcal{L}$
-\end_inset
-
- is a linear differential operator so 
-\begin_inset Formula $\mathcal{L}\left[re\left(\tilde{x}\right)\right]=\re{\mathcal{L}\left[\tilde{x}\right]}$
-\end_inset
-
- (to see this clearly write that 
-\begin_inset Formula $\mathcal{L}=\sum a_{k}d^{k}/dt^{k}$
-\end_inset
-
-).
- Since, 
-\begin_inset Formula $\mathcal{L}\left[x\right]=F$
-\end_inset
-
-, we consequently have that 
-\begin_inset Formula 
-\begin{eqnarray*}
-\re{\mathcal{L}\left[\tilde{x}\right]} & = & \re{\mathcal{L}\left[\tilde{x}\right]}=\re{\tilde{F}}\\
- & = & F=\mathcal{L}\left[x\right]\\
- & = & \mathcal{L}\left[\re{\tilde{x}}\right]
-\end{eqnarray*}
-
-\end_inset
-
-and so 
-\begin_inset Formula $x=\re{\tilde{x}}$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Vector Calculus
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:The Gradient Theorem"
-
-\end_inset
-
-The Gradient Theorem/Fundamental Theorem of Calculus for Line Integrals
-\end_layout
-
-\begin_layout Standard
-[[TODO: Fill]]
 \end_layout
 
 \begin_layout Section
@@ -2201,6 +5605,331 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Chapter
+Calculus
+\end_layout
+
+\begin_layout Section
+Functions
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Euler-Homogeneous-function-theorem"
+
+\end_inset
+
+Euler's Homogeneous function theorem
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $f\left(\mathbf{x}\right)$
+\end_inset
+
+ be a function that satisfies 
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(t\mathbf{x}\right) & = & t^{n}f\left(\mathbf{x}\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+i.e.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ is homogeneous function of order 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i}x_{i}\frac{\partial f}{\partial x_{i}} & = & nf\left(\mathbf{x}\right).
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "note 3"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{x}^{'}=t\mathbf{x}$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\begin{eqnarray*}
+nt^{n-1}f\left(x\right) & = & \partial_{t}f\\
+ & = & \sum_{i}\frac{\partial f}{\partial x_{i}^{'}}\frac{\partial x_{i}^{'}}{\partial t}\\
+ & = & \sum_{i}\frac{\partial f}{\partial x_{i}^{'}}x_{i}\\
+ & = & \sum_{i}\frac{\partial f}{\partial\left(tx_{i}\right)}x_{i}
+\end{eqnarray*}
+
+\end_inset
+
+Set 
+\begin_inset Formula $t=1$
+\end_inset
+
+ to obtain the desired result.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset CommandInset href
+LatexCommand href
+name "Euler's Homogeneous Function Theorem"
+target "http://mathworld.wolfram.com/EulersHomogeneousFunctionTheorem.html"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Section*
+Differential Equations
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:addComplexPartLDE"
+
+\end_inset
+
+Adding a complex part to L.D.E.
+ and then taking the real part
+\end_layout
+
+\begin_layout Standard
+Consider the Linear D.E.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{L}\left[x\right] & = & F
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ is a linear differential operator, and 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $F$
+\end_inset
+
+ are both real functions.
+ Add an imaginary part to 
+\begin_inset Formula $F$
+\end_inset
+
+, i.e.
+ let 
+\begin_inset Formula $\tilde{F}=F+iG$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $x=\re{\tilde{x}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+ is defined by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{L}\left[\tilde{x}\right] & = & \tilde{F}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+If we solve for 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+, we can obtain 
+\begin_inset Formula $x$
+\end_inset
+
+ by taking the real part of 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+.
+ This is because 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ is a linear differential operator so 
+\begin_inset Formula $\mathcal{L}\left[re\left(\tilde{x}\right)\right]=\re{\mathcal{L}\left[\tilde{x}\right]}$
+\end_inset
+
+ (to see this clearly write that 
+\begin_inset Formula $\mathcal{L}=\sum a_{k}d^{k}/dt^{k}$
+\end_inset
+
+).
+ Since, 
+\begin_inset Formula $\mathcal{L}\left[x\right]=F$
+\end_inset
+
+, we consequently have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\re{\mathcal{L}\left[\tilde{x}\right]} & = & \re{\mathcal{L}\left[\tilde{x}\right]}=\re{\tilde{F}}\\
+ & = & F=\mathcal{L}\left[x\right]\\
+ & = & \mathcal{L}\left[\re{\tilde{x}}\right]
+\end{eqnarray*}
+
+\end_inset
+
+and so 
+\begin_inset Formula $x=\re{\tilde{x}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Vector Calculus
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:The Gradient Theorem"
+
+\end_inset
+
+The Gradient Theorem/Fundamental Theorem of Calculus for Line Integrals
+\end_layout
+
+\begin_layout Standard
+[[TODO: Fill]]
+\end_layout
+
+\begin_layout Section
+Transforms
+\end_layout
+
+\begin_layout Subsection
+Fourier Transform
+\end_layout
+
+\begin_layout Subsubsection
+Complex Fourier transform
+\end_layout
+
+\begin_layout Standard
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x\right) & = & \sum_{n=-\infty}^{\infty}A_{n}e^{i\left(2\pi nx/L\right)}\\
+A_{n} & = & \frac{1}{L}\int_{-L/2}^{L/2}f\left(x\right)e^{-i\left(2\pi nx/L\right)}dx
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(From 
+\begin_inset CommandInset href
+LatexCommand href
+name "Fourier series wolfram alpha"
+target "http://mathworld.wolfram.com/FourierSeries.html"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Section
+Gaussian Integrals
+\end_layout
+
+\begin_layout Claim
+Let 
+\begin_inset Formula $\overleftrightarrow{A}$
+\end_inset
+
+ be a real symmetric positive-definite 
+\begin_inset Formula $N\times N$
+\end_inset
+
+ matrix, 
+\begin_inset Formula $\vec{x}=\left(\begin{array}{cccc}
+x_{1} & x_{2} & \cdots & x_{N}\end{array}\right)^{T}$
+\end_inset
+
+- a variable vector, 
+\begin_inset Formula $\vec{b}=\left(\begin{array}{cccc}
+b_{1} & b_{2} & \cdots & b_{N}\end{array}\right)$
+\end_inset
+
+- a constant vector then 
+\begin_inset Formula 
+\begin{eqnarray}
+\int d\vec{x}\exp\left[-\frac{1}{2}\vec{x}^{T}\overleftrightarrow{A}\vec{x}+\vec{b}^{T}\vec{x}\right] & = & \sqrt{\frac{\left(2\pi\right)^{N}}{\det\overleftrightarrow{A}}}\exp\left[\frac{1}{2}\vec{b}^{T}\overleftrightarrow{A^{-1}}\vec{b}\right],\label{eq:gaussian integral}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+where all integrals are taken over 
+\begin_inset Formula $\left[-\infty,\infty\right]$
+\end_inset
+
+.
+ *
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The proof is given in problem 1 a of Ph127c HW1 [[TODO: Write the proof]]
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \end_body

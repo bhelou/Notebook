@@ -3,6 +3,9 @@
 \begin_document
 \begin_header
 \textclass scrbook
+\begin_preamble
+\usepackage{braket}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
@@ -8401,7 +8404,7 @@ Linear Quantum system
 \end_layout
 
 \begin_layout Standard
-By defnition, such a system has a hamiltonian that is at most quadratic
+By definition, such a system has a hamiltonian that is at most quadratic
  in its canonical coordinates and momenta.
  Hence, the most general hamiltonian can be written in the form 
 \begin_inset Formula 
@@ -8815,7 +8818,7 @@ name "sub:Twolinearsystems"
 
 \end_inset
 
-Two indepedent linear systems
+Two independent linear systems
 \end_layout
 
 \begin_layout Standard
@@ -10704,7 +10707,7 @@ In the continuous limit, the observable measured by the detector (given
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:discrete position expression temp"
+reference "eq:physics delta function"
 
 \end_inset
 
@@ -10754,7 +10757,7 @@ reference "eq:continuous measurement temp"
 
 \end_inset
 
-, we we can interpert 
+, we we can interpret 
 \begin_inset Formula $S_{x}$
 \end_inset
 
@@ -10826,7 +10829,14 @@ but the pulses are uncorrelated so we expect that
 \begin_inset Formula $\lim_{\vartheta\rightarrow0}\frac{\delta_{ij}}{\vartheta}\left(\Delta\phi_{pulse}\right)^{2}$
 \end_inset
 
- and 
+ (as in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:physics delta function"
+
+\end_inset
+
+) 
 \begin_inset Formula 
 \begin{eqnarray*}
 S_{\phi} & = & \mathcal{F}\left(C\right)\\
@@ -15342,7 +15352,7 @@ Tuned Fabry-Perot Cavity
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -15728,9 +15738,9 @@ where
 \begin{eqnarray*}
 \mathbf{H} & = & e^{2i\phi}\left(\begin{array}{cc}
 1 & 0\\
-T\mathcal{K}/8 & 1
+-\mathcal{K}/2 & 1
 \end{array}\right)\\
-\vec{F} & = & -\frac{e^{i\phi}}{2g_{SQL}}\left(\begin{array}{c}
+\vec{F} & = & -\frac{e^{i\phi}}{g_{SQL}}\left(\begin{array}{c}
 0\\
 \mathcal{\sqrt{K}}
 \end{array}\right),
@@ -15779,13 +15789,13 @@ reference "eq:outputQuadratures_freeSpaceNoise"
 \begin{eqnarray*}
 \vec{b}\left(\Omega\right) & = & e^{i2\Omega\tau}\left(\begin{array}{cc}
 1 & 0\\
-\kappa & 1
+\kappa^{'} & 1
 \end{array}\right)\left(\begin{array}{c}
 a_{c}\left(\Omega\right)\\
 a_{s}\left(\Omega\right)
 \end{array}\right)+\left(\begin{array}{c}
 0\\
-e^{i\Omega\tau}\sqrt{2\kappa}
+e^{i\Omega\tau}\sqrt{2\kappa^{'}}
 \end{array}\right)\frac{G\left(\Omega\right)}{g_{SQL}}\\
  & \equiv & \mathbf{M}\vec{a}+\vec{D}G,
 \end{eqnarray*}
@@ -15793,14 +15803,68 @@ e^{i\Omega\tau}\sqrt{2\kappa}
 \end_inset
 
 where 
-\begin_inset Formula $\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}$
-\end_inset
-
- and 
 \begin_inset Formula $g_{SQL}=\sqrt{2\hbar m\Omega^{2}}.$
 \end_inset
 
- We have that 
+ What is 
+\begin_inset Formula $\kappa^{'}$
+\end_inset
+
+ equal to? In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outputQuadratures_freeSpaceNoise"
+
+\end_inset
+
+, it is equal to 
+\begin_inset Formula $\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}$
+\end_inset
+
+.
+ However, now, 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+ are inside the cavity (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:tuned fabry perot noise"
+
+\end_inset
+
+).
+ Inside the cavity, at steady state, there will be a very large power stored
+ in the cavity: 
+\begin_inset Formula $I_{c}=4I_{0}/T$
+\end_inset
+
+ (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "rem:intracavity power LM T0"
+
+\end_inset
+
+) and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\kappa^{'} & = & \frac{8I_{c}\omega_{0}}{mc^{2}\Omega^{2}}\\
+ & = & \frac{8\left(4I_{0}/T\right)\omega_{0}}{mc^{2}\Omega^{2}}\\
+ & = & \frac{4\kappa}{T}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+We have that 
 \begin_inset Formula $\vec{a}=\sqrt{R}\vec{b}+\sqrt{T}\vec{\alpha}$
 \end_inset
 
@@ -15947,10 +16011,15 @@ name "note6"
 \begin_inset Formula $T$
 \end_inset
 
- is comparable in strength to 
+, 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ and 
 \begin_inset Formula $\Omega\tau$
 \end_inset
 
+ are all comparable in strength.
  
 \end_layout
 
@@ -16079,7 +16148,7 @@ and so
 \end_inset
 
  and 
-\begin_inset Formula $\Omega$
+\begin_inset Formula $\Omega\tau$
 \end_inset
 
  are of the same order of magnitude 
@@ -16129,6 +16198,64 @@ reference "note3"
 
 \SpecialChar \@.
  
+\end_layout
+
+\begin_layout Plain Layout
+Finally, we estimate the order of magnitude of 
+\begin_inset Formula $\kappa$
+\end_inset
+
+: An order of magnitude (using the LIGO data: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.ligo.caltech.edu/advLIGO/scripts/ref_des.shtml
+\end_layout
+
+\end_inset
+
+) gives us (note that I assumed that 
+\begin_inset Formula $I_{0}$
+\end_inset
+
+ is of the order of 
+\begin_inset Formula $10^{2}$
+\end_inset
+
+ W; this is what Haixing told me to assume 
+\begin_inset Formula $I_{0}$
+\end_inset
+
+ is equal to).
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\kappa & = & \frac{8\times100\times2.5}{4\times9\times1}\frac{1\times10\times10^{15}}{10\times10^{16}\times10^{4}}\\
+ & \approx & \frac{20\times100}{36\times1}\frac{1}{10\times10^{4}}\\
+ & \approx & 100\frac{1}{10\times10^{4}}=10^{-3}
+\end{eqnarray*}
+
+\end_inset
+
+and so 
+\begin_inset Formula $\kappa$
+\end_inset
+
+, 
+\begin_inset Formula $T$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega\tau$
+\end_inset
+
+ are all dimensionless quantities of the same order of magnitude: 
+\begin_inset Formula $10^{-3}$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -16216,7 +16343,7 @@ result H11
 \begin_inset Formula 
 \begin{eqnarray*}
 H_{21} & = & -e^{2i\phi}\frac{T}{8}\frac{2\gamma\iota_{c}}{\Omega^{2}\left(\gamma^{2}+\Omega^{2}\right)}+O\left(0\right)\\
- & \equiv & -e^{2i\phi}\frac{T}{8}\mathcal{K}.
+ & \equiv & -e^{2i\phi}\frac{1}{2}\mathcal{K}.
 \end{eqnarray*}
 
 \end_inset
@@ -16235,7 +16362,7 @@ result H21
 \begin{eqnarray*}
 \mathbf{H} & \approx & e^{2i\phi}\left(\begin{array}{cc}
 1 & 0\\
-T\mathcal{K}/8 & 1
+-\mathcal{K}/2 & 1
 \end{array}\right)\\
 \phi & \equiv & \tan^{-1}\left(\Omega/\gamma\right)\quad\gamma\equiv\frac{Tc}{4L}\\
 \mathcal{K} & \equiv & \frac{2\gamma\iota_{c}}{\Omega^{2}\left(\Omega^{2}+\gamma^{2}\right)}\quad\iota_{c}=\frac{8\omega_{0}I_{c}}{mLc}\quad I_{c}=\frac{4I_{0}}{T}.
@@ -16254,9 +16381,9 @@ resultF2
 , we can write that 
 \begin_inset Formula 
 \begin{eqnarray*}
-\vec{F} & = & -\frac{e^{i\phi}}{2g_{SQL}}\left(\begin{array}{c}
+\vec{F} & = & -\frac{e^{i\phi}}{g_{SQL}}\left(\begin{array}{c}
 0\\
-\mathcal{\sqrt{K}}
+\sqrt{\mathcal{K}}
 \end{array}\right)
 \end{eqnarray*}
 
@@ -16295,7 +16422,7 @@ h_{SQL} & = & \frac{\overbrace{g_{SQL}}^{\sqrt{2\hbar m\Omega^{2}}}}{m\Omega^{2}
  so that we can write that 
 \begin_inset Formula 
 \begin{eqnarray*}
-\vec{F}G & = & \frac{e^{i\phi}}{2}\left(\begin{array}{c}
+\vec{F}G & = & e^{i\phi}\left(\begin{array}{c}
 0\\
 \mathcal{\sqrt{K}}
 \end{array}\right)\frac{h}{h_{SQL}}
@@ -16309,6 +16436,10 @@ h_{SQL} & = & \frac{\overbrace{g_{SQL}}^{\sqrt{2\hbar m\Omega^{2}}}}{m\Omega^{2}
 \end_inset
 
  
+\end_layout
+
+\begin_layout Remark*
+Exact Results 
 \begin_inset Note Note
 status collapsed
 
@@ -16362,9 +16493,9 @@ sqrt{1-T}} & 0
 
 \begin_layout Plain Layout
 
- -
+ 
 \backslash
-frac{e^{2 i x} T 
+frac{4e^{2 i x}  
 \backslash
 kappa }{
 \backslash
@@ -16451,13 +16582,13 @@ begin{array}{c}
 
  -
 \backslash
-frac{
+frac{2
 \backslash
 sqrt{2} e^{i x} 
 \backslash
 sqrt{
 \backslash
-kappa }}{
+kappa}}{
 \backslash
 text{gSQL}-e^{2 i x} 
 \backslash
@@ -16558,7 +16689,7 @@ We have used that
 \begin_inset Formula 
 \begin{eqnarray*}
 \exp\left(i\tan^{-1}\phi\right) & = & \expiAtan{\phi}\\
-\implies\exp\left(2i\tan^{-1}\phi\right) & = & \left[\exp\left(i\tan^{-1}\phi\right)\right]^{2}=\frac{\squareCnumber1{\phi}}{1+\phi^{2}}=\frac{1-\phi^{2}+2i\phi}{1+\phi^{2}}\\
+\implies\exp\left(2i\tan^{-1}\phi\right) & = & \left[\exp\left(i\tan^{-1}\phi\right)\right]^{2}=\frac{\squareCnumber 1{\phi}}{1+\phi^{2}}=\frac{1-\phi^{2}+2i\phi}{1+\phi^{2}}\\
  & = & \frac{i-\phi}{i+\phi}
 \end{eqnarray*}
 
@@ -16626,18 +16757,6 @@ because
 \mathcal{K} & \equiv & \frac{2\gamma\iota_{c}}{\Omega^{2}\left(\Omega^{2}+\gamma^{2}\right)}\\
  & = & \frac{T}{4\tau}\frac{8\kappa}{T\tau\left(\Omega^{2}+\gamma^{2}\right)}=\frac{2\kappa}{\tau^{2}\left(\Omega^{2}+T^{2}/16\tau^{2}\right)}\\
  & = & \frac{2\kappa}{\left(\Omega^{2}\tau^{2}+T^{2}/16\right)}=\frac{32\kappa}{\left(16\Omega^{2}\tau^{2}+T^{2}\right)}
-\end{eqnarray*}
-
-\end_inset
-
-Trying to estimate the order of magnitude of 
-\begin_inset Formula $\kappa$
-\end_inset
-
-: An order of magnitude gives us 
-\begin_inset Formula 
-\begin{eqnarray*}
- &  & \frac{8\times\times2.5}{4\times9\times1}\frac{1\times10\times10^{15}}{10\times10^{16}\times10^{4}}\\
 \end{eqnarray*}
 
 \end_inset

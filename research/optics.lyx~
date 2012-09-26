@@ -2,7 +2,7 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass article
+\textclass scrbook
 \use_default_options true
 \begin_modules
 theorems-ams
@@ -2735,12 +2735,60 @@ key "vanDrielO"
  section 7.6.2)
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Subsubsection
+Intracavity power 
+\end_layout
 
-\emph on
-Intracavity power
-\emph default
-: *
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{rem}[Fabry-Perot intracavity power]
+\end_layout
+
+\end_inset
+
+For the setup given in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:fabry perot driel"
+
+\end_inset
+
+ (i.e.
+ the two mirrors have the same reflectivity 
+\begin_inset Formula $R$
+\end_inset
+
+ and transmissivity 
+\begin_inset Formula $T$
+\end_inset
+
+), the intracavity power (at the outer edge of the right mirror) is given
+ by 
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{c} & = & \frac{I_{0}}{1+4\left(F/\pi\right)^{2}\sin^{2}\left(\Delta^{'}/2\right)}\frac{T}{\left(1-R\right)^{2}}\left(1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\Delta^{'}\right)\right),\\
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\delta^{'}=2kd\sec\theta$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta^{'}=\phi+\delta^{'}$
+\end_inset
+
+*
 \begin_inset Note Note
 status collapsed
 
@@ -2814,7 +2862,7 @@ which is a geometric series because
  & = & \mathcal{E}_{0}\Phi\frac{1+e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)}{1-\Gamma^{2}e^{i\delta^{'}}}\\
 I_{c} & \propto & \left|\mathcal{E}_{c}\right|^{2}\\
 \implies I_{c} & = & I_{0}\left|\Phi\right|^{2}\frac{\left|1+e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)\right|^{2}}{\left|1-\Gamma^{2}e^{i\delta^{'}}\right|^{2}}\\
- & = & I_{0}T\frac{\normSumComplex1{\left[e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)\right]}}{\left|1-r^{2}e^{i\Delta^{'}}\right|^{2}}\\
+ & = & I_{0}T\frac{\normSumComplex 1{\left[e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)\right]}}{\left|1-r^{2}e^{i\Delta^{'}}\right|^{2}}\\
  & = & I_{0}T\frac{1+\normSumComplex{-\Gamma^{2}}{\Gamma}+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)}{\left(1+R^{2}-2R\cos\Delta^{'}\right)}\\
  & = & I_{0}T\frac{1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)}{\left(1+R^{2}-2R\cos\Delta^{'}\right)}\\
  & = & \left[\frac{I_{0}T}{\left(1-R\right)^{2}}/\left(\frac{1+R^{2}}{\left(1-R\right)^{2}}-\frac{2R}{\left(1-R\right)^{2}}\cos\Delta^{'}\right)\right]\left(1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)\right)\\
@@ -2884,6 +2932,260 @@ Calculating intracavity power at any location
 
 \end_inset
 
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{rem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For different conditions, we have that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{rem}[Fabry-Perot intracavity power]
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "rem:intracavity power LM T0"
+
+\end_inset
+
+For the setup given in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:fabry perot driel"
+
+\end_inset
+
+, if the left mirror has perfect reflectivity (i.e.
+ 
+\begin_inset Formula $R=1$
+\end_inset
+
+ ), and if we assume that 
+\begin_inset Formula $T$
+\end_inset
+
+ is small, 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+, the medium is non-attenuating and that 
+\begin_inset Formula $d$
+\end_inset
+
+ is an integer multiple of half-wavelengths, then we can write that the
+ intracavity power (at the outer edge of the right mirror) is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{c} & = & \frac{4I_{0}}{T}.\\
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Calculating intracavity power
+\emph default
+ (to be specific I am calculating the power inside the cavity at a specific
+ location: the outer/right edge of the first mirror): The path difference
+ (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:path differences fabry perot"
+
+\end_inset
+
+) between two successive reflected beams is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta l & = & \left(\xi_{3}+\xi_{1}+\xi_{2}\right)\\
+ & = & 2\xi_{2}=2d\sec\theta
+\end{eqnarray*}
+
+\end_inset
+
+Denote the phase difference by 
+\begin_inset Formula $\delta^{'}=k\Delta l$
+\end_inset
+
+.
+ Then, we have that the total electric field stored in the Fabry Perot is
+ given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E}_{c} & = & \mbox{First transmitted beam+First reflected beam+....}\\
+ & = & \mbox{Beam that goes through first mirrors+}\\
+ &  & \mbox{Beam that goes through 1st mirror then reflected and accumulates a phase shift+...}\\
+ & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi e^{i\delta^{'}}+\mathcal{E}_{0}\Phi\Gamma e^{2i\delta^{'}}+...\\
+ & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi e^{i\delta^{'}}\left(1+\Gamma e^{i\delta^{'}}+\Gamma^{2}e^{2i\delta^{'}}+...\right),
+\end{eqnarray*}
+
+\end_inset
+
+which is a geometric series because 
+\begin_inset Formula $\left|\Gamma\right|^{2}\leq1$
+\end_inset
+
+ and so (letting 
+\begin_inset Formula $\Delta^{'}=\delta^{'}+\phi$
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{E}_{c} & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi e^{i\delta^{'}}\left(\frac{1}{1-\Gamma e^{i\delta^{'}}}\right)=\mathcal{E}_{0}\Phi\left(1+\frac{e^{i\delta^{'}}}{1-\Gamma e^{i\delta^{'}}}\right)\\
+ & = & \mathcal{E}_{0}\Phi\frac{1+e^{i\delta^{'}}\left(1-\Gamma\right)}{1-\Gamma e^{i\delta^{'}}}\\
+I_{c} & \propto & \left|\mathcal{E}_{c}\right|^{2}\\
+\implies I_{c} & = & I_{0}\left|\Phi\right|^{2}\frac{\left|1+e^{i\delta^{'}}\left(1-\Gamma\right)\right|^{2}}{\left|1-\Gamma e^{i\delta^{'}}\right|^{2}}\\
+ & = & I_{0}T\frac{\normSumComplex 1{\left[e^{i\delta^{'}}\left(1-\Gamma\right)\right]}}{\left|1-re^{i\Delta^{'}}\right|^{2}}\\
+ & = & I_{0}T\frac{1+\normSumComplex{-1}{\Gamma}+2\left(\cos\left(\delta^{'}\right)-r\cos\left(\phi+\delta^{'}\right)\right)}{\left(1+R-2r\cos\Delta^{'}\right)}\\
+ & = & I_{0}T\frac{1+1+R-2r\cos\phi+2\left(\cos\left(\delta^{'}\right)-r\cos\left(\phi+\delta^{'}\right)\right)}{\left(1+R-2r\cos\Delta^{'}\right)}\\
+ & = & I_{0}T\frac{2+R-2r\cos\phi+2\left(\cos\left(\delta^{'}\right)-r\cos\left(\phi+\delta^{'}\right)\right)}{\left(1+R-2r\cos\Delta^{'}\right)}
+\end{eqnarray*}
+
+\end_inset
+
+For a non-attenuating medium we have that 
+\begin_inset Formula $T=1-R$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{c} & = & I_{0}T\frac{3-T-2\sqrt{1-T}\cos\phi+2\left(\cos\left(\delta^{'}\right)-\sqrt{1-T}\cos\left(\phi+\delta^{'}\right)\right)}{\left(2-T-2\sqrt{1-T}\cos\Delta^{'}\right)}
+\end{eqnarray*}
+
+\end_inset
+
+Let us assume that 
+\begin_inset Formula $\phi=0$
+\end_inset
+
+ and that 
+\begin_inset Formula $\Delta l=2d\sec\theta$
+\end_inset
+
+ is an integer multiply of the wavelength 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ so that 
+\begin_inset Formula $\delta^{'}=2m\pi$
+\end_inset
+
+, where 
+\begin_inset Formula $m\in\mathbb{Z}.$
+\end_inset
+
+ Since, 
+\begin_inset Formula $\Delta^{'}=\phi+\delta^{'}$
+\end_inset
+
+, we have that 
+\begin_inset Formula $\Delta^{'}=2m\pi$
+\end_inset
+
+.
+ Hence,
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{c} & = & I_{0}T\frac{3-T-2\sqrt{1-T}+2\left(1-\sqrt{1-T}\right)}{\left(2-T-2\sqrt{1-T}\right)}\\
+ & = & I_{0}T\frac{1-T+2\left(1-\sqrt{1-T}\right)+2\left(1-\sqrt{1-T}\right)}{\left(2\left(1-\sqrt{1-T}\right)-T\right)}\\
+ & = & I_{0}T\frac{1-T+4\left(1-\sqrt{1-T}\right)}{\left(2\left(1-\sqrt{1-T}\right)-T\right)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Finally, assume that 
+\begin_inset Formula $T$
+\end_inset
+
+ is small so that 
+\begin_inset Formula $\sqrt{1-T}\approx1-T/2-T^{2}/8$
+\end_inset
+
+ so that 
+\begin_inset Formula $1-\sqrt{1-T}=T/2+T^{2}/8+O\left(T^{3}\right)$
+\end_inset
+
+ to write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{c} & \approx & I_{0}T\frac{1-T+2T+T^{2}/2}{T^{2}/4}\\
+ & = & I_{0}\frac{T-T^{2}+2T^{2}+T^{3}/2}{T^{2}/4}\\
+ & \approx & I_{0}\frac{T}{T^{2}/4}\\
+ & = & 4\frac{I_{0}}{T}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{rem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2891,7 +3193,7 @@ Calculating intracavity power at any location
 The Sagnac ring interometer
 \end_layout
 
-\begin_layout Standard
+\begin_layout Remark
 Section 4.1.2 of Scully's quantum optics (p.101) - Fairly self-contained and
  clear.
  

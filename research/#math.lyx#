@@ -3721,7 +3721,6 @@ reference "eq:implication ergodicity"
 \begin{eqnarray*}
 C_{21} & = & \int\left(y_{2}-\bar{y}\right)\left(y_{1}-\bar{y}\right)p_{2}\left(y_{2},t_{2}-t_{1};y_{1}\right)dy_{2}dy_{1}\\
  & = & \int\left(y_{2}-\bar{y}\right)\left(y_{1}-\bar{y}\right)A\exp\left[-\vec{Y}^{T}\overleftrightarrow{\alpha}\vec{Y}\right]dy_{2}dy_{1}\\
- & = & A
 \end{eqnarray*}
 
 \end_inset

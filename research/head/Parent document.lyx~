@@ -139,6 +139,16 @@ filename "../classical mechanics.lyx"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "../solid state physics.lyx"
+
+\end_inset
+
+
 \begin_inset CommandInset include
 LatexCommand include
 filename "../optics.lyx"
@@ -171,8 +181,11 @@ Whenever you do something, keep in mind the end goals of this notebook.
 \end_layout
 
 \begin_layout Enumerate
-When linking to files, URL seems to work best: I am having problems with
- href: e.g.
+When linking to files, URL (Alt+i
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+U) seems to work best: I am having problems with href: e.g.
  
 \begin_inset ERT
 status open
@@ -457,10 +470,6 @@ Spectral density
 \end_layout
 
 \begin_layout Enumerate
-typo in 2.29 of thesis?
-\end_layout
-
-\begin_layout Enumerate
 Interpertation of continuous measurements?
 \end_layout
 
@@ -481,6 +490,10 @@ http://prl.aps.org/pdf/PRL/v109/i10/e100404
 \end_inset
 
  for generalized Heisenberg inequality.
+\end_layout
+
+\begin_layout Enumerate
+Fix tuned fabry perot example ...
 \end_layout
 
 \begin_layout Subsection
@@ -589,7 +602,7 @@ type "file:"
 \end_layout
 
 \begin_layout Subsection
-Tools in Mathematica that might be useful for Graphing
+Tools/Tricks in Mathematica that might be useful for Graphing
 \end_layout
 
 \begin_layout Enumerate
@@ -624,6 +637,22 @@ http://stackoverflow.com/questions/5844790/arrows-for-the-axes
 \end_layout
 
 \begin_layout Enumerate
+Zoom region and display a subplot within plot: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://stackoverflow.com/questions/5412970/zoom-region-and-display-as-a-subplot-w
+ithin-plot
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 Tooltips in Mathematica (
 \begin_inset Flex URL
 status collapsed
@@ -636,6 +665,64 @@ http://reference.wolfram.com/mathematica/ref/Tooltip.html
 \end_inset
 
 ) is a great way of adding tooltips in figures and equations.
+\end_layout
+
+\begin_layout Section
+References
+\end_layout
+
+\begin_layout Standard
+Finding bibtex entries for an article/book: (sources: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://tex.stackexchange.com/questions/58200/what-is-the-best-way-to-get-bibtex-en
+tries-from-isbn-number
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://mathoverflow.net/questions/20551/sources-for-bibtex-entries
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+From an ISBN number, use 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://lead.to/amazon/en/
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+Google Scholar will produce BibTeX entries if you turn on Show links to
+ import to BibTeX in Scholar search preferences 
+\begin_inset Quotes eld
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -837,6 +924,37 @@ Making variable substitutions to simplify expressions: e.g.
  
 \bar under
 calculating H21
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+correlation function of gaussian stationary markov ergodic random process.nb
+\end_layout
+
+\end_inset
+
+; in this document the following is used:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Choosing the right order of integration so that the integral is computed
+ in a reasonable amount of time.
 \end_layout
 
 \end_deeper
@@ -1298,6 +1416,44 @@ end{equation}
 
 \begin_layout Part
 Simple Tools
+\end_layout
+
+\begin_layout Section
+Properties of Materials
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://materialsproject.org/)? 
+\end_layout
+
+\end_inset
+
+ has lots of data on many materials.
+\end_layout
+
+\begin_layout Section
+Conversion to SI
+\end_layout
+
+\begin_layout Enumerate
+1 dyne = 
+\begin_inset Formula $10^{-5}N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+1 amu/mass number = 
+\begin_inset Formula $1.660538921(73)\times10^{-27}$
+\end_inset
+
+ kg.
 \end_layout
 
 \begin_layout Section
