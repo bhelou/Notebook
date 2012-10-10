@@ -81,6 +81,83 @@ Mathematics
 \end_layout
 
 \begin_layout Chapter
+Linear Algebra
+\end_layout
+
+\begin_layout Section
+Special Matrices
+\end_layout
+
+\begin_layout Subsection
+Symmetric matrices properties
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:inverse symmetric matrix is symmetric"
+
+\end_inset
+
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a symmetric matrix that has an inverse, then its inverse is also symmetric*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We assumed that
+\begin_inset Formula $A$
+\end_inset
+
+ has an inverse.
+ Denote it by 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $AA^{-1}=I$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(AA^{-1}\right)^{T} & = & I^{T}=I\\
+ & = & \left(A^{-1}\right)^{T}A^{T}\\
+ & = & \left(A^{-1}\right)^{T}A\\
+ & = & A^{-1}A
+\end{eqnarray*}
+
+\end_inset
+
+Multiply both sides of the last two equalities by 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ then we may write that 
+\begin_inset Formula $\left(A^{-1}\right)^{T}I=A^{-1}I$
+\end_inset
+
+ and so 
+\begin_inset Formula $\left(A^{-1}\right)^{T}=A^{-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ is symmetric.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
 Distributions
 \end_layout
 
@@ -184,6 +261,1032 @@ p_{n}\left(y_{n},t_{n};...;y_{1},t_{1}\right) & = & P_{n}\left(y_{n},t_{n}|y_{n-
 
 \begin_layout Chapter
 Statistics
+\end_layout
+
+\begin_layout Section
+Common probability distributions
+\end_layout
+
+\begin_layout Subsection
+Multivariate Gaussian Normal
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}[Multivariate Gaussian distribution]
+\end_layout
+
+\end_inset
+
+The multivariate normal distribution of a 
+\begin_inset Formula $k$
+\end_inset
+
+-dimensional random vector 
+\begin_inset Formula $\vec{X}=\left(X_{1},X_{2},...,X_{k}\right)$
+\end_inset
+
+ is defined to be
+\begin_inset Formula 
+\begin{equation}
+p\left(X=\vec{x}\right)=\frac{1}{\sqrt{\left(2\pi\right)^{k}\det\left({\bf \bm{\Sigma}}\right)}}\exp\left[-\frac{1}{2}\left(\vec{x}-\vec{\mu}\right)^{T}\bm{\Sigma}\left(\vec{x}-\vec{\mu}\right)\right],\label{eq:MultivariategaussianDistrubution}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\bm{\Sigma}$
+\end_inset
+
+ is a positive-definite symmetric matrix.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+The multivariate normal distribution of a 
+\begin_inset Formula $k$
+\end_inset
+
+-dimensional random vector 
+\begin_inset Formula $\vec{X}=\left(X_{1},X_{2},...,X_{k}\right)$
+\end_inset
+
+ can be written in the form
+\begin_inset Formula 
+\begin{equation}
+p\left(X=\vec{x}\right)=\frac{1}{\sqrt{\left(2\pi\right)^{k}\det\left({\bf \bm{\Sigma}}\right)}}\exp\left[-\frac{1}{2}\left(\vec{x}-\vec{\mu}\right)^{T}\bm{\Sigma}^{-1}\left(\vec{x}-\vec{\mu}\right)\right],
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\vec{\mu}$
+\end_inset
+
+ is the 
+\begin_inset Formula $k$
+\end_inset
+
+-dimensional vector representing the expectation value of 
+\begin_inset Formula $\vec{X}$
+\end_inset
+
+: 
+\begin_inset Formula $\vec{\mu}=\left[E\left(X_{1}\right),E\left(X_{2}\right),...,E\left(X_{K}\right)\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\bm{\Sigma}$
+\end_inset
+
+ is the 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ covariance matrix: 
+\begin_inset Formula 
+\begin{equation}
+\bm{\Sigma}=\left\{ Cov\left[X_{i},X_{j}\right]\right\} =\left\{ E\left[X_{i}X_{j}\right]-E\left[X_{i}\right]E\left[X_{j}\right]\right\} ,\, i,j\in\left[1,2,...,k\right].
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We prove this for 2-dimensional vector: Let 
+\begin_inset Formula $Y=X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+What 
+\begin_inset Formula $p_{2}\left(y_{2},y_{1}\right)$
+\end_inset
+
+ is equal to.
+ Again, 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ is Gaussian so it is for the form given by 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:MultivariategaussianDistrubution"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{2}\left(y_{2},y_{1}\right) & = & A\exp\left[-\frac{1}{2}\left(\vec{Y}-\bar{Y}\right)^{T}\overleftrightarrow{\alpha}\left(\vec{Y}-\bar{Y}\right)\right],
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $A$
+\end_inset
+
+ is a normalization constant and where 
+\begin_inset Formula $\bar{Y}=\left(\begin{array}{cc}
+\bar{y}_{1} & \bar{y}_{2}\end{array}\right)^{T}$
+\end_inset
+
+(note that in general 
+\begin_inset Formula $\bar{y}_{2}\neq\bar{y}_{1}$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The process is Markov: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{y}_{2} & = & \int p_{1}\left(y_{2},t_{2};y_{1}\right)y_{2}dy_{2}dy_{1}
+\end{eqnarray*}
+
+\end_inset
+
+and there is no reason for this to be equal to 
+\begin_inset Formula $\int p_{1}\left(y_{2}\right)y_{2}dy_{2}=\int p_{1}\left(y_{1}\right)y_{1}dy_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+As an example, consider 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1}\left(y_{2},t_{2};y_{1}\right) & = & A\exp\left(-\left(y_{1}-a\right)^{2}-\left(y_{2}-b\right)^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+then the two variables are independent and 
+\begin_inset Formula $\bar{y}_{1}=a$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{y}_{2}=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+The same reasoning directly applies to explain why in general
+\begin_inset Formula $\sigma_{y_{1}}\neq\sigma_{y_{2}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ has to be symmetric (
+\begin_inset Formula $\vec{Y}^{T}\overleftrightarrow{\alpha}\vec{Y}$
+\end_inset
+
+ should look the same as 
+\begin_inset Formula $\left(\vec{Y}^{T}\overleftrightarrow{\alpha}\vec{Y}\right)^{T}=\vec{Y}^{T}\overleftrightarrow{\alpha^{T}}\vec{Y}$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $y_{2}\alpha_{12}y_{1}$
+\end_inset
+
+ should be the same as 
+\begin_inset Formula $y_{1}\alpha_{21}y_{2}$
+\end_inset
+
+), so we have that 
+\begin_inset Formula 
+\begin{equation}
+\overleftrightarrow{\alpha}=\left(\begin{array}{cc}
+\alpha_{11} & \alpha_{12}\\
+\alpha_{12} & \alpha_{22}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+We ask what is 
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ equal to in terms of the correlation matrix
+\begin_inset Formula $C_{ij}$
+\end_inset
+
+? We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{ij} & = & \int\left(y_{i}-\bar{y}_{i}\right)\left(y_{j}-\bar{y}_{j}\right)p_{2}\left(y_{j},t_{2}-t_{1};y_{i}\right)dy_{2}dy_{1}\\
+ & = & \int_{-\infty}^{\infty}\left(y_{j}-\bar{y}\right)\left(y_{i}-\bar{y}\right)A\exp\left[-\left(\vec{Y}-\bar{Y}\right)^{T}\overleftrightarrow{\alpha}\left(\vec{Y}-\bar{Y}\right)\right]dy_{2}dy_{1}\\
+ & = & \int_{-\infty}^{\infty}\tilde{y}_{j}\tilde{y}_{i}A\exp\left[-\tilde{Y}^{T}\overleftrightarrow{\alpha}\tilde{Y}\right]d\tilde{y}_{2}d\tilde{y}_{1}\\
+ & = & \left\langle y_{j}y_{i}\right\rangle .
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+From 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:2nd order gaussian average"
+
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\left\langle y_{i}y_{j}\right\rangle  & = & C_{ij}=\left(\overleftrightarrow{\alpha^{-1}}\right)_{ij}.\label{eq:eqTemp2-1}
+\end{eqnarray}
+
+\end_inset
+
+ The matrix 
+\begin_inset Formula $\overleftrightarrow{C}$
+\end_inset
+
+ is symmetric because 
+\begin_inset Formula $\overleftrightarrow{\alpha^{-1}}$
+\end_inset
+
+ is symmetric which in turn is symmetric because 
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ is symmetric (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "thm:inverse symmetric matrix is symmetric"
+
+\end_inset
+
+).
+ Conventionally, 
+\begin_inset Formula $C_{11}$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $\sigma_{1}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{22}$
+\end_inset
+
+ by 
+\begin_inset Formula $\sigma_{2}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{12}$
+\end_inset
+
+ by 
+\begin_inset Formula $\rho\sigma_{1}\sigma_{2}$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:eqTemp2-1"
+
+\end_inset
+
+ will be the key to expressing 
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\overleftrightarrow{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Using Mathematica, it can be shown that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+the equation 
+\begin_inset Formula $\left\langle y_{i}y_{j}\right\rangle =\left(\overleftrightarrow{\alpha^{-1}}\right)_{ij}$
+\end_inset
+
+ implies that the expression inside the exponent can be simplified to (cell
+ tag 
+\begin_inset Quotes eld
+\end_inset
+
+full answer
+\begin_inset Quotes erd
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{equation}
+-\frac{1}{2}\left(\vec{Y}-\bar{Y}\right)^{T}\overleftrightarrow{\alpha}\left(\vec{Y}-\bar{Y}\right)=-\frac{1}{\left(1-\rho^{2}\right)}\left[\frac{\left(y_{1}-\bar{y}_{1}\right)^{2}}{2\sigma_{1}^{2}}+\frac{\left(y_{1}-\bar{y}_{1}\right)^{2}}{2\sigma_{1}^{2}}-\frac{\rho\left(y_{1}-\bar{y}_{1}\right)\left(y_{2}-\bar{y}_{2}\right)}{\sigma_{1}\sigma_{2}}\right]
+\end{equation}
+
+\end_inset
+
+which is the same as (see cell tag 
+\begin_inset Quotes eld
+\end_inset
+
+comparison to full answer
+\begin_inset Quotes erd
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{equation}
+-\frac{1}{2}\left(\vec{Y}-\bar{Y}\right)^{T}\bm{\Sigma}^{-1}\left(\vec{Y}-\bar{Y}\right)
+\end{equation}
+
+\end_inset
+
+and so we can write that 
+\begin_inset Formula $\overleftrightarrow{\alpha}=\bm{\Sigma}^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+[Notation] We say that 
+\begin_inset Formula $\vec{X}$
+\end_inset
+
+ follows the distribution 
+\begin_inset Formula $\mathcal{N}\left(\vec{\mu},\bm{\Sigma}\right)$
+\end_inset
+
+ or more concisely 
+\begin_inset Formula $\vec{X}\sim\mathcal{N}\left(\vec{\mu},\bm{\Sigma}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Basic facts about Multivariate Gaussians 
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $X\sim\mathcal{N}\left(\vec{\mu},\bm{\Sigma}\right)$
+\end_inset
+
+ and we shift it by 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $X\rightarrow X+\vec{y}$
+\end_inset
+
+.
+ We have that 
+\begin_inset Formula $\left(X+y\right)\sim\mathcal{N}\left(\vec{\mu}+\vec{y},\bm{\Sigma}\right).$
+\end_inset
+
+ Moreover, 
+\begin_inset Formula 
+\begin{equation}
+AX\sim\mathcal{N}\left(A\vec{\mu},A\bm{\Sigma}A^{T}\right)
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{equation}
+\vec{\mu}=E\left[AX\right]=AE\left[X\right],
+\end{equation}
+
+\end_inset
+
+because 
+\begin_inset Formula $A$
+\end_inset
+
+ is like a constant.
+\end_layout
+
+\begin_layout Plain Layout
+Moreover, 
+\begin_inset Formula 
+\begin{eqnarray}
+\bm{\Sigma} & = & E\left[XX^{T}\right]-E\left[X\right]E\left[X^{T}\right]\\
+ & = & E\left[\left(AX\right)\left(AX\right)^{T}\right]-E\left[\left(AX\right)\right]E\left[\left(AX\right)^{T}\right]\\
+ & = & E\left[AXX^{T}A^{T}\right]-E\left[AX\right]E\left[X^{T}A^{T}\right]\\
+ & = & A\left(E\left[XX^{T}\right]-E\left[X\right]E\left[X^{T}\right]\right)A^{T}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $X\sim\mathcal{N}\left(\vec{\mu},\bm{\Sigma}\right)$
+\end_inset
+
+ and Cov
+\begin_inset Formula $\left(X_{i},X_{j}\right)=0$
+\end_inset
+
+ then 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{j}$
+\end_inset
+
+ are independent random variables.
+ (in general independence implies covariance is zero but not vice versa).
+\end_layout
+
+\begin_layout Definition
+[Indepedence of two random variables] Random variables 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ are independent if 
+\begin_inset Formula $P\left(X\in A,Y\in B\right)=P\left(X\in A\right)P\left(Y\in B\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $A,B\in F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This can be generalized to multiple random variables:
+\end_layout
+
+\begin_layout Definition
+[Indepedence of random variables] Random variables 
+\begin_inset Formula $X_{1},\, X_{2},...,\, X_{n}$
+\end_inset
+
+ are jointly independent if 
+\begin_inset Formula $P\left(X_{1}\in A_{1},...,X_{n}\in A_{n}\right)=P\left(X_{1}\in A_{1}\right)...P\left(X_{1}\in A_{1}\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $X_{1},\, X_{2},...,X_{n}\in F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We also have that 
+\end_layout
+
+\begin_layout Definition
+[Pairwise Indepedence] Random variables 
+\begin_inset Formula $X_{1},\, X_{2},...,\, X_{n}$
+\end_inset
+
+ are pairwise independent if each pair 
+\begin_inset Formula $X_{i},X_{j}$
+\end_inset
+
+ are independent.
+\end_layout
+
+\begin_layout Remark
+In general, joint independence implies pairwise independence but not vice
+ versa.
+\end_layout
+
+\begin_layout Standard
+Recall if 
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+ are jointly independent then 
+\begin_inset Formula 
+\begin{equation}
+E\left[\prod_{i=1}^{n}f_{i}\left(X_{i}\right)\right]=\prod_{i=1}^{n}E\left[f_{i}\left(X_{i}\right)\right]
+\end{equation}
+
+\end_inset
+
+Hence, 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ independent implies that 
+\begin_inset Formula $\mbox{cov}\left(X,Y\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Multivariate Normal's characteristic function
+\end_layout
+
+\begin_layout Standard
+The characteristic function: 
+\begin_inset Formula $X\sim\mathcal{N}\left(\vec{\mu},\bm{\Sigma}\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $X,\vec{t}\in\mathbb{R}^{m}$
+\end_inset
+
+ implies that 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[e^{i\vec{t}.X}\right] & = & \int e^{it\vec{x}}p\left(\vec{x}\right)d\vec{x}\\
+ & = & \exp\left(i\vec{\mu}.\vec{t}-\frac{1}{2}\vec{t}^{T}\bm{\Sigma}\vec{t}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Basic probability facts: The distribution of a random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ is uniquely determined by its characteristic function 
+\begin_inset Formula $\phi\left(t\right)=E\left[e^{i\vec{t}.X}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:combination_of_Gaussians"
+
+\end_inset
+
+For Gaussians, any linear combination 
+\begin_inset Formula $\sum_{i=1}^{n}t_{i}X_{i}$
+\end_inset
+
+ (for 
+\begin_inset Formula $X_{1},\, X_{2},...,\, X_{n}$
+\end_inset
+
+ jointly normal) is itself normal.
+\end_layout
+
+\begin_layout Standard
+Conventions: 
+\end_layout
+
+\begin_layout Enumerate
+We will always work with mean zero Gaussians from now on (because a variable
+ transformation can always be made to eliminate the mean).
+\end_layout
+
+\begin_layout Enumerate
+All Hilbert spaces used here will be separable.
+\end_layout
+
+\begin_layout Enumerate
+Sometimes, its convenient to work with complex valued Gaussians.
+ However, unless explicitly said so we'll assume that Gaussians are real-valued.
+\end_layout
+
+\begin_layout Standard
+Stepping stone to Gaussian Hilbert space:
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $X\sim\mathcal{N}\left(0,\bm{\Sigma}\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $X\in\mathbb{R}^{n}$
+\end_inset
+
+.
+ Now consider, 
+\begin_inset Formula 
+\begin{eqnarray*}
+H_{X} & \equiv & \mbox{span}\left\{ X_{1},...,X_{n}\right\} =\left\{ \sum_{i=1}^{n}t_{i}X_{i}:t_{1},...,t_{n}\in\mathbb{R}\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+Each element of 
+\begin_inset Formula $H_{x}$
+\end_inset
+
+ has a normal distribution by 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "thm:combination_of_Gaussians"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Observe that 
+\begin_inset Formula $H_{x}$
+\end_inset
+
+ is a linear space.
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\xi=\left(\sum_{i=1}^{n}t_{i}X_{i},\sum_{i=1}^{n}s_{i}X_{i}\right)$
+\end_inset
+
+ for some 
+\begin_inset Formula $t_{1},...,t_{n}\in\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{1},...,s_{n}\in\mathbb{R}$
+\end_inset
+
+.
+ What is the distribution of 
+\begin_inset Formula $\xi$
+\end_inset
+
+? 
+\begin_inset Formula $\xi\sim\mathcal{N}\left(0,\tilde{\bm{\Sigma}}\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\tilde{\bm{\Sigma}}=\left(\begin{array}{cc}
+\vec{t}^{T}\bm{\Sigma}\vec{t} & \vec{t}^{T}\bm{\Sigma}\vec{s}\\
+\vec{t}^{T}\bm{\Sigma}\vec{s} & \vec{s}^{T}\bm{\Sigma}\vec{s}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\xi$
+\end_inset
+
+ will be normally distributed.
+ Denote the covariance matrix by 
+\begin_inset Formula $\tilde{\bm{\Sigma}}$
+\end_inset
+
+.
+ We have that
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\tilde{\bm{\Sigma}}\right)_{11} & = & \mbox{cov}\left(\sum_{i=1}^{n}t_{i}X_{i},\sum_{i=1}^{n}t_{i}X_{i}\right)\\
+ & = & \sum_{i=1}^{n}\sum_{j=1}^{n}t_{i}t_{j}\mbox{cov}\left(X_{i},X_{j}\right)\\
+ & = & \sum_{i=1}^{n}\sum_{j=1}^{n}t_{i}t_{j}\bm{\Sigma}_{ij}
+\end{eqnarray*}
+
+\end_inset
+
+because covariance is a bilinear operator 
+\end_layout
+
+\begin_layout Plain Layout
+By the same logic we obtain that 
+\begin_inset Formula 
+\begin{equation}
+\tilde{\bm{\Sigma}}=\left(\begin{array}{cc}
+\vec{t}^{T}\bm{\Sigma}\vec{t} & \vec{t}^{T}\bm{\Sigma}\vec{s}\\
+\vec{t}^{T}\bm{\Sigma}\vec{s} & \vec{s}^{T}\bm{\Sigma}\vec{s}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Alternate derivation: For fixed 
+\begin_inset Formula $\left\{ t_{i}\right\} ,\,\left\{ s_{i}\right\} ,$
+\end_inset
+
+ the map 
+\begin_inset Formula $\left(X_{i},...,X_{n}\right)\rightarrow\left(\sum_{i=1}^{n}t_{i}X_{i},\sum_{i=1}^{n}s_{i}X_{i}\right)=AX$
+\end_inset
+
+ is a map from 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ This map is also linear, and hence is represented by a 
+\begin_inset Formula $2\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A=\left(\begin{array}{c}
+\vec{t}\\
+\vec{s}
+\end{array}\right)$
+\end_inset
+
+.
+ The same algebra that we carried out previously works here as well.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In general, every finite collection of points in 
+\begin_inset Formula $H_{x}$
+\end_inset
+
+ has a joint normal distribution (although sometimes the distribution is
+ degenerate).
+\end_layout
+
+\begin_layout Standard
+The basic example of a degenerate Gaussian is: Let 
+\begin_inset Formula $X\sim\mathcal{N}\left(0,1\right)$
+\end_inset
+
+ with 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ then look at
+\begin_inset Formula $\left(X,X\right)$
+\end_inset
+
+.
+ It has a degenerate normal distribution.
+ Why is that? Well the mean is given by 
+\begin_inset Formula $\vec{\mu}$
+\end_inset
+
+ and the covariance matrix given 
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{cc}
+1 & 1\\
+1 & 1
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+Note that this matrix is only positive semi-definite (the matrix is not
+ invertible).
+ To understand what this means look at 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename stodegenerateGaussian.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Degenerate Gaussian; can only sample normally points on the blue line.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Define an inner product on 
+\begin_inset Formula $H_{x}$
+\end_inset
+
+ by 
+\begin_inset Formula $\left\langle Y_{1},Y_{2}\right\rangle _{H_{x}}\equiv\mbox{cov}\left(Y_{1},Y_{2}\right)=E\left[Y_{1}Y_{2}\right]-E\left[Y_{1}\right]E\left[Y_{2}\right]$
+\end_inset
+
+ where 
+\begin_inset Formula $Y_{1},Y_{2}\in H_{x}$
+\end_inset
+
+.*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+This is an inner product because (assuming means are equal to 0)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \lambda Y_{1},Y_{2}\right\rangle =E\left[\lambda Y_{1}Y_{2}\right]=\lambda E\left[Y_{1}Y_{2}\right]=\lambda\left\langle Y_{1},Y_{2}\right\rangle _{H_{x}}$
+\end_inset
+
+ for 
+\begin_inset Formula $\lambda\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle Y_{1},Y_{2}\right\rangle =E\left[Y_{1}Y_{2}\right]=E\left[Y_{2}Y_{1}\right]=\left\langle Y_{2}Y_{1}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle Y,Y\right\rangle _{H_{x}}=E\left[Y^{2}\right]>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $Y\in H_{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle Y_{1}+Y_{2},Y_{3}\right\rangle =\left\langle Y_{1},Y_{3}\right\rangle +\left\langle Y_{2},Y_{3}\right\rangle $
+\end_inset
+
+ because covariance is bilinear.
+\end_layout
+
+\begin_layout Plain Layout
+There may be more properties that need verification.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $H_{x}$
+\end_inset
+
+ is a representation of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ (with a particular inner product) by a collection of random variables.
+ We will show that there is an isometry between 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $L^{2}\left(\Omega,F,\mathbb{P}\right)$
+\end_inset
+
+: take 
+\begin_inset Formula $\vec{t}$
+\end_inset
+
+ from 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ and construct 
+\begin_inset Formula $Y=\left\langle \vec{t},X\right\rangle $
+\end_inset
+
+ as defined above.
 \end_layout
 
 \begin_layout Section
@@ -3447,7 +4550,7 @@ where
 
  is called the relaxation time.*
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Redefine variables so that 
@@ -3622,7 +4725,8 @@ reference "eq:gaussian random process"
 :
 \begin_inset Formula 
 \begin{eqnarray*}
-p_{2} & = & A\exp\left[-\vec{Y}^{T}\overleftrightarrow{\alpha}\vec{Y}\right],
+p_{2}\left(y_{2n},t_{2};y_{1n},t_{1}\right) & = & p_{2}\left(y_{2n},t_{2}-t_{1};y_{1n}\right)\\
+ & = & A\exp\left[-\frac{1}{2}\left(\vec{Y}-\bar{Y}\right)^{T}\overleftrightarrow{\alpha}\left(\vec{Y}-\bar{Y}\right)\right],
 \end{eqnarray*}
 
 \end_inset
@@ -3649,45 +4753,42 @@ where
 \begin_inset Formula 
 \begin{eqnarray}
 \vec{Y}_{n} & = & \left(\begin{array}{c}
-\left(y_{1}-\bar{y}\right)/\sigma_{y}\\
-\left(y_{2}-\bar{y}\right)/\sigma_{y}
+\left(y_{1}-\bar{y}_{1}\right)/\sigma_{y1}\\
+\left(y_{2}-\bar{y}_{2}\right)/\sigma_{y2}
 \end{array}\right)\\
- & = & \left(\vec{Y}-\bar{Y}\right)/\sigma_{y}\\
-\implies\vec{Y} & = & \sigma_{y}\vec{Y}_{n}+\bar{Y},
+ & = & \left(\begin{array}{cc}
+1/\sigma_{y1}\\
+ & 1/\sigma_{y2}
+\end{array}\right)\left(\vec{Y}-\bar{Y}\right)\\
+\implies\vec{Y} & = & \overleftrightarrow{\sigma}\vec{Y}_{n}+\bar{Y},
 \end{eqnarray}
 
 \end_inset
 
 where 
 \begin_inset Formula $\bar{Y}=\left(\begin{array}{cc}
-\bar{y} & \bar{y}\end{array}\right)^{T}$
+\bar{y}_{1} & \bar{y}_{2}\end{array}\right)^{T}$
 \end_inset
 
-.
- Note that 
-\begin_inset Formula $\bar{y}_{2}=\bar{y}_{1}\equiv\bar{y}$
+(note that in general 
+\begin_inset Formula $\bar{y}_{2}\neq\bar{y}_{1}$
 \end_inset
 
- because the process is Markov: 
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The process is Markov: 
 \begin_inset Formula 
 \begin{eqnarray*}
-\bar{y}_{2} & = & \int p_{1}\left(y_{2},t_{2}\right)y_{2}dy_{2}=\int p_{1}\left(y_{2}\right)y_{2}dy_{2}=\int p_{1}\left(y_{1}\right)y_{1}dy_{1}\\
- & = & \int p_{1}\left(y_{1},t_{1}\right)y_{1}dy_{1}=\bar{y}_{1}.
+\bar{y}_{2} & = & \int p_{1}\left(y_{2},t_{2};y_{1}\right)y_{2}dy_{2}dy_{1}
 \end{eqnarray*}
 
 \end_inset
 
-The same reasoning (that 
-\begin_inset Formula $y_{2}$
-\end_inset
-
- and 
-\begin_inset Formula $y_{1}$
-\end_inset
-
- share the same probability distribution if the process is stationary) directly
- applies to explain why 
-\begin_inset Formula $\sigma_{y_{1}}=\sigma_{y_{2}}$
+and there is no reason for this to be equal to 
+\begin_inset Formula $\int p_{1}\left(y_{2}\right)y_{2}dy_{2}=\int p_{1}\left(y_{1}\right)y_{1}dy_{1}$
 \end_inset
 
 .
@@ -3695,16 +4796,226 @@ The same reasoning (that
 \end_layout
 
 \begin_layout Plain Layout
-Hence we have that 
+As an example, consider 
 \begin_inset Formula 
 \begin{eqnarray*}
-p_{2} & = & A\exp\left[-\left(\sigma_{y}\vec{Y}_{n}+\bar{Y}\right)^{T}\overleftrightarrow{\alpha}\left(\sigma_{y}\vec{Y}_{n}+\bar{Y}\right)\right]\\
- & = & A\exp\left[-\left(\sigma_{y}^{2}\vec{Y}_{n}^{T}\overleftrightarrow{\alpha}\vec{Y}_{n}+\sigma_{y}\bar{Y}\overleftrightarrow{\alpha}\vec{Y}_{n}+\sigma_{y}\vec{Y}_{n}\overleftrightarrow{\alpha}\bar{Y}+\bar{Y}\overleftrightarrow{\alpha}\bar{Y}\right)\right]
+p_{1}\left(y_{2},t_{2};y_{1}\right) & = & A\exp\left(-\left(y_{1}-a\right)^{2}-\left(y_{2}-b\right)^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+then the two variables are independent and 
+\begin_inset Formula $\bar{y}_{1}=a$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{y}_{2}=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+The same reasoning directly applies to explain why in general
+\begin_inset Formula $\sigma_{y_{1}}\neq\sigma_{y_{2}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+) and
+\begin_inset Formula 
+\begin{eqnarray*}
+\overleftrightarrow{\sigma} & = & \left(\begin{array}{cc}
+\sigma_{y1}\\
+ & \sigma_{y2}
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+So 
+\begin_inset Formula $\left(\vec{Y}-\bar{Y}\right)=\overleftrightarrow{\sigma}\vec{Y}_{n}$
+\end_inset
+
+.
+ Hence, we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{2} & = & A^{'}\exp\left[-\frac{1}{2}\left(\overleftrightarrow{\sigma}\vec{Y}_{n}\right)^{T}\overleftrightarrow{\alpha}\left(\overleftrightarrow{\sigma}\vec{Y}_{n}\right)\right].
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ has to be symmetric (
+\begin_inset Formula $\vec{Y}^{T}\overleftrightarrow{\alpha}\vec{Y}$
+\end_inset
+
+ should look the same as 
+\begin_inset Formula $\left(\vec{Y}^{T}\overleftrightarrow{\alpha}\vec{Y}\right)^{T}=\vec{Y}^{T}\overleftrightarrow{\alpha^{T}}\vec{Y}$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $y_{2}\alpha_{12}y_{1}$
+\end_inset
+
+ should be the same as 
+\begin_inset Formula $y_{1}\alpha_{21}y_{2}$
+\end_inset
+
+), so we have that 
+\begin_inset Formula 
+\begin{equation}
+\overleftrightarrow{\alpha}=\left(\begin{array}{cc}
+\alpha_{11} & \alpha_{12}\\
+\alpha_{12} & \alpha_{22}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+We ask what is 
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ equal to in terms of the correlation matrix
+\begin_inset Formula $C_{ij}$
+\end_inset
+
+? Using the ergodic hypothesis to convert time-averages to ensemble averages
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:implication ergodicity"
+
+\end_inset
+
+), we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{ij} & = & \int\left(y_{i}-\bar{y}_{i}\right)\left(y_{j}-\bar{y}_{j}\right)p_{2}\left(y_{j},t_{2}-t_{1};y_{i}\right)dy_{2}dy_{1}\\
+ & = & \int_{-\infty}^{\infty}\left(y_{j}-\bar{y}\right)\left(y_{i}-\bar{y}\right)A\exp\left[-\left(\vec{Y}-\bar{Y}\right)^{T}\overleftrightarrow{\alpha}\left(\vec{Y}-\bar{Y}\right)\right]dy_{2}dy_{1}\\
+ & = & \int_{-\infty}^{\infty}\tilde{y}_{j}\tilde{y}_{i}A\exp\left[-\tilde{Y}^{T}\overleftrightarrow{\alpha}\tilde{Y}\right]d\tilde{y}_{2}d\tilde{y}_{1}\\
+ & = & \left\langle y_{j}y_{i}\right\rangle .
 \end{eqnarray*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+From 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:2nd order gaussian average"
+
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\left\langle y_{i}y_{j}\right\rangle  & = & C_{ij}=\left(\overleftrightarrow{\alpha^{-1}}\right)_{ij}.\label{eq:eqTemp2}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+ The matrix 
+\begin_inset Formula $\overleftrightarrow{C}$
+\end_inset
+
+ is symmetric because 
+\begin_inset Formula $\overleftrightarrow{\alpha^{-1}}$
+\end_inset
+
+ is symmetric which in turn is symmetric because 
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ is symmetric (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "thm:inverse symmetric matrix is symmetric"
+
+\end_inset
+
+).
+ Conventionally, 
+\begin_inset Formula $C_{11}$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $\sigma_{1}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{22}$
+\end_inset
+
+ by 
+\begin_inset Formula $\sigma_{2}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{12}$
+\end_inset
+
+ by 
+\begin_inset Formula $\rho\sigma_{1}\sigma_{2}$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:eqTemp2"
+
+\end_inset
+
+ will be the key to expressing 
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\overleftrightarrow{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Using Mathematica, it can be shown that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+the equation 
+\begin_inset Formula $\left\langle y_{i}y_{j}\right\rangle =\left(\overleftrightarrow{\alpha^{-1}}\right)_{ij}$
+\end_inset
+
+ implies that
 \end_layout
 
 \end_inset
@@ -5886,7 +7197,7 @@ target "http://mathworld.wolfram.com/FourierSeries.html"
 Gaussian Integrals
 \end_layout
 
-\begin_layout Claim
+\begin_layout Lemma
 Let 
 \begin_inset Formula $\overleftrightarrow{A}$
 \end_inset
@@ -5908,8 +7219,7 @@ b_{1} & b_{2} & \cdots & b_{N}\end{array}\right)$
 - a constant vector then 
 \begin_inset Formula 
 \begin{eqnarray}
-\int d\vec{x}\exp\left[-\frac{1}{2}\vec{x}^{T}\overleftrightarrow{A}\vec{x}+\vec{b}^{T}\vec{x}\right] & = & \sqrt{\frac{\left(2\pi\right)^{N}}{\det\overleftrightarrow{A}}}\exp\left[\frac{1}{2}\vec{b}^{T}\overleftrightarrow{A^{-1}}\vec{b}\right],\label{eq:gaussian integral}\\
-\nonumber 
+\int d\vec{x}\exp\left[-\frac{1}{2}\vec{x}^{T}\overleftrightarrow{A}\vec{x}+\vec{b}^{T}\vec{x}\right] & = & \sqrt{\frac{\left(2\pi\right)^{N}}{\det\overleftrightarrow{A}}}\exp\left[\frac{1}{2}\vec{b}^{T}\overleftrightarrow{A^{-1}}\vec{b}\right],\label{eq:gaussian integral}
 \end{eqnarray}
 
 \end_inset
@@ -5930,6 +7240,129 @@ The proof is given in problem 1 a of Ph127c HW1 [[TODO: Write the proof]]
 \end_inset
 
  
+\end_layout
+
+\begin_layout Standard
+We will need the following definition:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}[Gaussian average]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "def:Gaussian average"
+
+\end_inset
+
+Gaussian averages are defined by 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle O\left(\vec{x}\right)\right\rangle  & \equiv & \frac{\int d\vec{x}O\left(\vec{x}\right)\exp\left[-\frac{1}{2}\vec{x}^{T}\overleftrightarrow{A}\vec{x}\right]}{\int d\vec{x}\exp\left[-\frac{1}{2}\vec{x}^{T}\overleftrightarrow{A}\vec{x}\right]}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{cor}[2nd order polynomial Gaussian average]
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $\overleftrightarrow{A}$
+\end_inset
+
+ be a real symmetric positive-definite 
+\begin_inset Formula $N\times N$
+\end_inset
+
+ matrix, then 
+\begin_inset Formula 
+\begin{eqnarray}
+\left\langle x_{i}x_{j}\right\rangle  & = & \left(\overleftrightarrow{A^{-1}}\right)_{ij},\label{eq:2nd order gaussian average}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\left\langle x_{i}x_{j}\right\rangle $
+\end_inset
+
+ is the Gaussian average defined in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:Gaussian average"
+
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{cor}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -165,7 +165,7 @@ constitutive relations
 \end_inset
 
 where 
-\begin_inset Formula $\sigma$
+\begin_inset Formula $\overleftrightarrow{\sigma}$
 \end_inset
 
  is the conductivity tensor.
@@ -238,6 +238,8 @@ Units (SI)
 \left[W\right] & = & \left[Watt\right]=\left[J/s\right]\\
 \left[A\right] & = & \left[Ampere\right]=\left[C/s\right]\\
 \left[T\right] & = & \left[Tesla\right]=\left[Ns/Cm\right]\\
+\left[N\right] & = & \left[\mbox{Newton}\right]=\left[Kg\times m/s^{2}\right]\\
+\left[V\right] & = & \left[\mbox{Volt}\right]=A\times\Omega=\frac{W}{A}=\sqrt{W\times\Omega}=\frac{J}{C}
 \end{eqnarray*}
 
 \end_inset
@@ -249,15 +251,39 @@ Units (SI)
 \left[D\right] & = & \left[C/m^{2}\right]\\
 \left[H\right] & = & \left[A/m\right]\\
 \left[B\right] & = & \left[T\right]=\left[Ns/Cm\right]\\
-\left[S\right] & = & \left[W/m^{2}\right]
+\left[S\right] & = & \left[W/m^{2}\right]\\
+\left[\mu\right] & = & \left[C\times m\right]
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the electric dipoles moment and is of the form of 
+\begin_inset Formula $q\vec{x}$
+\end_inset
+
+.
+ We also have that for fundamental units
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\hbar\right] & = & \left[m^{2}\times kg/s\right]
 \end{eqnarray*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+For units we have that
 \begin_inset Formula 
 \begin{eqnarray*}
-\left[H\right] & = & \left[Oe\right]\rightarrow\frac{1000}{4\pi}A.m\\
+\left[H\right] & = & \left[\mbox{Oersted}\right]=\left[Oe\right]\rightarrow\frac{1000}{4\pi}A.m\\
+{}[\mbox{1 Dyne]} & = & 10^{-5}N\\
+\left[\mbox{1 amu/atomic mass nmber}\right] & = & 1.660538921(73)\times10^{-27}\mbox{ kg}
 \end{eqnarray*}
 
 \end_inset

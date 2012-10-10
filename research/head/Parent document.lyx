@@ -578,6 +578,21 @@ NIST digital library of mathematical functions; such cool help format.
  are used]]
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://about.me/peeterjoot
+\end_layout
+
+\end_inset
+
+ A link to Peeter Joot's typed notes on certain physics topics such as classical
+ field theory and continuum mechanics.
+\end_layout
+
 \begin_layout Section
 Graphing
 \end_layout
@@ -817,6 +832,23 @@ section will cause havoc as this name conflicts with the command for the
  heading of sections.
 \end_layout
 
+\begin_layout Enumerate
+There seems to be a problem with using refstyle and <formatted reference>
+ when the labels use numerics or space (but the refstyle website mentioned
+ nothing of this: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.ctan.org/pkg/refstyle
+\end_layout
+
+\end_inset
+
+)- try not to use them.
+\end_layout
+
 \begin_layout Subsection
 Advice on using typesetting to reduce algebraic errors
 \end_layout
@@ -964,6 +996,89 @@ Choosing the right order of integration so that the integral is computed
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+In 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+bivariateNormalDistributionInTermsOfCorrelationMatrix.nb
+\end_layout
+
+\end_inset
+
+, I introduce the following trick: you can separate an expresion into powers
+ of a particular symbol, i.e.
+ let 
+\begin_inset Formula $f$
+\end_inset
+
+ be a function of some symbol 
+\begin_inset Formula $y-\bar{y}$
+\end_inset
+
+ then 
+\begin_inset Formula $f$
+\end_inset
+
+ can be expanded as a polynomial in terms of 
+\begin_inset Formula $\left(y-\bar{y}\right)$
+\end_inset
+
+ with proper use of the Series command.
+ (see cell tag 
+\begin_inset Quotes eld
+\end_inset
+
+trickToSeperateIntoPowers
+\begin_inset Quotes erd
+\end_inset
+
+)*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+expr is the expression that needs to be simplified to be a polynomial in
+ 
+\begin_inset Formula $y_{1}-ym1$
+\end_inset
+
+ and tempExpr is the output
+\end_layout
+
+\begin_layout Plain Layout
+tempExpr = 0;
+\end_layout
+
+\begin_layout Plain Layout
+nIndex = 1; 
+\end_layout
+
+\begin_layout Plain Layout
+While[(FullSimplify[tempExpr - exprInExp] === 0) == False, tempExpr = Normal[Ser
+ies[expr, {Subscript[y, 1], ym1, nIndex}, {Subscript[y, 1], ym1, nIndex}]];
+ nIndex = nIndex + 1; ]
+\end_layout
+
+\begin_layout Plain Layout
+tempExpr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Using Mathematica
 \end_layout
@@ -1116,6 +1231,45 @@ ber
 
 \end_layout
 
+\begin_layout Subsection
+Mathematica behavior that I want and that is in the works
+\end_layout
+
+\begin_layout Standard
+You can export Latex strings from Mathematica but it would be great if you
+ can also import them (see 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://library.wolfram.com/infocenter/Conferences/8013/
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+If the function ImportString[#,"TeX"]& worked perfectly, it would be powerful
+ indeed; untold thousands of technical papers that appear in the world's
+ scientific journals and elsewhere also exist as strings of common typographical
+ symbols written in the LaTeX typesetting language.
+ If these strings could all be readily translated into Mathematica notebooks,
+ one would be in a much stronger position to exploit the power of Mathematica
+ to probe on a large scale the intellectual content of the papers themselves.
+ As of June 2011, ImportString[#,"TeX"]& falls short of this ideal, but
+ it nonetheless appears to be an excellent starting point.
+ It is the purpose of this work to evaluate the present performance of ImportStr
+ing[#,"TeX"]& by applying it to various examples, by pointing out areas
+ of difficulty, and by suggesting possible avenues of improvement.
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
 \begin_layout Section
 Perhaps useful in the future
 \end_layout
@@ -1169,12 +1323,27 @@ target "http://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics#Boxed_Equations"
 .
 \end_layout
 
+\begin_layout Standard
+Documentation on AMS tex: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.ams.org/publications/authors/tex/amslatex
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Boxing equations
 \end_layout
 
 \begin_layout Standard
-Code for boxing equations:
+Code for  boxing equations:
 \family roman
 \series medium
 \shape up
@@ -1443,26 +1612,6 @@ http://materialsproject.org/)?
 \end_layout
 
 \begin_layout Section
-Conversion to SI
-\end_layout
-
-\begin_layout Enumerate
-1 dyne = 
-\begin_inset Formula $10^{-5}N$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-1 amu/mass number = 
-\begin_inset Formula $1.660538921(73)\times10^{-27}$
-\end_inset
-
- kg.
-\end_layout
-
-\begin_layout Section
 Simple Mathematica Scripts for doing simple calculations
 \end_layout
 
@@ -1497,7 +1646,7 @@ status collapsed
 \end_layout
 
 \begin_layout Section
-Numerics/Data
+Data on current technology/Experiments
 \end_layout
 
 \begin_layout Subsection
@@ -1516,6 +1665,44 @@ http://www.ligo.caltech.edu/advLIGO/scripts/ref_des.shtml
 \end_inset
 
 : Exact specifications of the LIGO and the advanced LIGO experiments.
+\end_layout
+
+\begin_layout Enumerate
+Experimental data on particle physics measurements: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://pdg.lbl.gov/
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The Particle Data Group is an international collaboration charged with summarizi
+ng Particle Physics, as well as related areas of Cosmology and Astrophysics.
+ In 2008, the PDG consists of 170 authors from 108 institutions in 20 countries.
+ The summaries are published in even-numbered years as a now 1340-page book,
+ the Review of Particle Physics, and as an abbreviated version (294 pages),
+ the Particle Physics Booklet.
+ The Review is published in a major journal, and in addition the PDG distributes
+ 16,000 copies of it and 31,000 copies of the Booklet.
+ The Review has been called the bible of particle physics; over the years,
+ it has been cited in 30,000 papers.
+ The Review includes a compilation and evaluation of measurements of the
+ properties of the elementary particles.
+ In the 2008 Review, the listings include 2,778 new measurements from 645
+ papers, in addition to 24,559 measurements from 7,104 papers that appeared
+ in earlier editions.
+ Evaluations of these properties are abstracted in summary tables.
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1634,6 +1821,37 @@ key "vanDrielO"
 \end_deeper
 \begin_layout Section
 Experimental tools
+\end_layout
+
+\begin_layout Subsection
+Neat experiments
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Watching electrons move at high speed
+\end_layout
+
+\begin_layout Standard
+New MIT system allows femtosecond-resolution movie of electrons in a topological
+ insulator, a promising new electronic material.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://web.mit.edu/newsoffice/2012/watching-electrons-move-0918.html
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection

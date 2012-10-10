@@ -15759,7 +15759,7 @@ with
 
  *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 We obtain that 
@@ -18303,12 +18303,12 @@ key "BraginskyQM"
  section 3.1)
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Useful Identities/theorems, etc ...
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:QMequs"
@@ -18541,8 +18541,7 @@ If
  then 
 \begin_inset Formula 
 \begin{eqnarray}
-\left[f\left(\hat{A}\right),\hat{B}\right] & = & c\frac{df\left(\hat{A}\right)}{d\hat{A}}.\label{eq:generalCommutatorFunction}\\
-\nonumber 
+\left[f\left(\hat{A}\right),\hat{B}\right] & = & c\frac{df\left(\hat{A}\right)}{d\hat{A}}.\label{eq:generalCommutatorFunction}
 \end{eqnarray}
 
 \end_inset
@@ -18799,7 +18798,7 @@ key "Buonanno2002"
  appendix)
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Quantum Notation/Terminology
 \end_layout
 
@@ -18872,7 +18871,7 @@ Symmetric expectation value
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Math Notation/Terminology
 \end_layout
 
@@ -18896,7 +18895,7 @@ of
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Quantum Abbreviations
 \end_layout
 
@@ -18968,7 +18967,7 @@ HWHM
 : Half-width at half maximum
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Generators in QM
 \end_layout
 
@@ -19025,7 +19024,7 @@ key "mandelQO"
 )
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:identitiesQO"
@@ -19046,7 +19045,7 @@ target "http://www.physics.utoronto.ca/~nquesada/docs/bosonic.pdf"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Atomic Physics
 \end_layout
 
@@ -19061,11 +19060,11 @@ target "http://www.physics.utoronto.ca/~nquesada/docs/atomic.pdf"
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Approximations
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Narrowband-approximation"
@@ -19160,7 +19159,7 @@ reference "narrowbandNote1"
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
+\begin_layout Section
 Integral approximations
 \end_layout
 

@@ -282,8 +282,8 @@ For units we have that
 \begin_inset Formula 
 \begin{eqnarray*}
 \left[H\right] & = & \left[\mbox{Oersted}\right]=\left[Oe\right]\rightarrow\frac{1000}{4\pi}A.m\\{}
-[\mbox{1 Dyne]} & = & 10^{-5}N\\
-\left[\mbox{1 amu/atomic mass nmber}\right] & = & 1.660538921(73)\times10^{-27}\mbox{ kg}
+[\mbox{Dyne]} & = & 10^{-5}N\\
+\left[\mbox{1 amu/atomic mass nmber}\right]
 \end{eqnarray*}
 
 \end_inset
