@@ -2,7 +2,7 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass article
+\textclass scrbook
 \use_default_options true
 \begin_modules
 theorems-ams
@@ -998,7 +998,14 @@ Adding a friction term to the Lagrangian
 
 \begin_layout Standard
 To add friction terms to the Lagrangian, you add an extra term to the Lagrange
- equations: 
+ equations (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:EOM lagrangian"
+
+\end_inset
+
+): 
 \begin_inset Formula 
 \begin{eqnarray}
 \frac{d}{dt}\left(\frac{\partial L}{\partial\dot{q}_{i}}\right)-\frac{\partial L}{\partial q_{i}} & = & -\frac{\partial F}{\partial\dot{q}_{i}}\qquad\left(i=1,2,...\right)\label{eq:Lagrange EOM with friction}
@@ -1091,7 +1098,11 @@ E & = & \sum_{i}\dot{q}_{i}\frac{\partial L_{0}}{\partial\dot{q}_{i}}-L_{0},\lab
 
 \end_inset
 
-where 
+where the 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ are the generalized coordinates of the system, 
 \begin_inset Formula $L_{0}$
 \end_inset
 
@@ -1141,7 +1152,11 @@ where
 \end_inset
 
 .
- Moreover, the rate of change in energy is given by 
+ 
+\end_layout
+
+\begin_layout Standard
+Moreover, the rate of change in energy is given by 
 \begin_inset Formula 
 \begin{eqnarray}
 \frac{dE}{dt} & = & -\frac{\partial L}{\partial t}+\frac{d}{dt}\left[\left(L-L_{0}\right)-\dot{q}_{i}\frac{\partial\left(L-L_{0}\right)}{\partial\dot{q}_{i}}\right].\label{eq:energy change lagrangian}

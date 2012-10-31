@@ -388,13 +388,140 @@ where
  are too slow
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 For plane waves in a dispersionless medium, we have that 
 \begin_inset Formula 
 \begin{eqnarray}
-I & = & \frac{1}{2}cn\epsilon_{0}E_{0}^{2}.\label{eq:simple classical intensity SI}\\
-\nonumber 
+I & = & \frac{1}{2}cn\epsilon_{0}E_{0}^{2}.\label{eq:simple_classical_intensity_SI}
 \end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We will also assume that 
+\begin_inset Formula $\vec{E}_{0}$
+\end_inset
+
+ points along the 
+\begin_inset Formula $z-$
+\end_inset
+
+axis.
+\end_layout
+
+\begin_layout Plain Layout
+Then, what is the form of the magnetic field? Use Ampere's law to write
+ that
+\begin_inset Formula 
+\begin{eqnarray}
+c^{2}\vec{\nabla}\times\vec{B} & = & \partial_{t}\vec{E}=-i\omega\vec{E}_{0}\exp i\left(kx-\omega t\right)=\left\{ 0,0,-i\omega E_{0}\exp i\left(kx-\omega t\right)\right\} \\
+ & = & c^{2}\left|\begin{array}{ccc}
+i & j & k\\
+\partial_{x} & \partial_{y} & \partial_{z}\\
+B_{x} & B_{y} & B_{z}
+\end{array}\right|=c^{2}\left\{ \partial_{y}B_{z}-\partial_{z}B_{y},-\partial_{x}B_{z}+\partial_{z}B_{x},\partial_{x}B_{y}-\partial_{y}B_{x}\right\} .
+\end{eqnarray}
+
+\end_inset
+
+If 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ is a plane wave, then so will 
+\begin_inset Formula $\vec{B}$
+\end_inset
+
+ be a plane wave: 
+\begin_inset Formula $\vec{B}=\vec{B}_{0}\exp i\left(kx-\omega t\right)$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\partial_{y}\vec{B}=\partial_{z}\vec{B}=0$
+\end_inset
+
+.
+ And we can write that
+\begin_inset Formula 
+\begin{eqnarray}
+c^{2}\partial_{x}B_{z} & = & 0\\
+\partial_{x}B_{y} & = & \frac{i\omega}{c^{2}}\vec{E}_{0}\exp i\left(kx-\omega t\right).
+\end{eqnarray}
+
+\end_inset
+
+The first of these equations implies that 
+\begin_inset Formula $B_{z}=0$
+\end_inset
+
+.
+ Moreover, 
+\begin_inset Formula $\vec{B}\perp\vec{k}$
+\end_inset
+
+ so 
+\begin_inset Formula $B_{x}=0$
+\end_inset
+
+.
+ The second equation implies that
+\begin_inset Formula 
+\begin{equation}
+B_{y}=\frac{i\omega E_{0}\exp i\left(kx-\omega t\right)}{ik}=\frac{\omega}{k}\frac{1}{c^{2}}E_{0}\exp i\left(kx-\omega t\right).
+\end{equation}
+
+\end_inset
+
+Hence, 
+\begin_inset Formula 
+\begin{eqnarray}
+\vec{B} & = & \frac{\omega}{k}\frac{1}{c^{2}}\left\{ 0,E_{0}\exp i\left(kx-\omega t\right),0\right\} \\
+ & = & \frac{1}{c\sqrt{\epsilon_{R}}}\left\{ 0,E_{0}\exp i\left(kx-\omega t\right),0\right\} ,
+\end{eqnarray}
+
+\end_inset
+
+where we have used that 
+\begin_inset Formula $\omega/k=\lambda/T=c/n$
+\end_inset
+
+, with 
+\begin_inset Formula $n=\sqrt{\epsilon_{R}}$
+\end_inset
+
+ being the refractive index.
+ We finally use that 
+\begin_inset Formula $H=B/\mu_{0}$
+\end_inset
+
+ to obtain that 
+\begin_inset Formula 
+\begin{equation}
+S=\frac{1}{\mu_{0}c\sqrt{\epsilon_{R}}}E\times H=\frac{1}{\mu_{0}c\sqrt{\epsilon_{R}}}\left|E\left(t\right)\right|^{2}.
+\end{equation}
+
+\end_inset
+
+Then the time average of 
+\begin_inset Formula $S$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\begin{eqnarray}
+\bar{S} & = & \frac{1}{2\mu_{0}c\sqrt{\epsilon_{R}}}\left|E_{0}\right|^{2}\\
+ & = & \frac{c\epsilon_{0}}{2\sqrt{\epsilon_{R}}}\left|E_{0}\right|^{2}.\\
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

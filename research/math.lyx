@@ -81,6 +81,1310 @@ Mathematics
 \end_layout
 
 \begin_layout Chapter
+Useful Tricks/Theorems
+\end_layout
+
+\begin_layout Section
+Taylor Series !
+\end_layout
+
+\begin_layout Subsection
+Taylor's Theorem 
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is 
+\begin_inset Formula $n+1$
+\end_inset
+
+ times continuously differentiable, then 
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+[f(a+
+\backslash
+lambda,b+
+\backslash
+mu)=f+
+\backslash
+left(
+\backslash
+lambda
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial x}+
+\backslash
+mu
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial y}
+\backslash
+right)f+
+\backslash
+dots+
+\backslash
+frac{1}{n!}
+\backslash
+left(
+\backslash
+lambda
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial x}+
+\backslash
+mu
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial y}
+\backslash
+right)^{n}f+R_{n},
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $R_{n}$
+\end_inset
+
+ denotes the remainder, 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ and its partial derivatives on the right-hand side are evaluated at 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(From 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://dlmf.nist.gov/1.5.E18
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is infinitely differentiable then 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{\infty}\rightarrow0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://en.wikipedia.org/wiki/Taylor%27s_theorem
+\end_layout
+
+\end_inset
+
+ has a complete and detailed account of the theorem.
+\end_layout
+
+\begin_layout Subsection
+Taylor Expansion
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is infinitely differentiable
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+f\left(x_{1},...,x_{d}\right) & = & \sum_{n_{1}=0}^{\infty}\sum_{n_{2}=0}^{\infty}...\sum_{n_{d}=0}^{\infty}\frac{(x_{1}-a_{1})^{n_{1}}...(x_{d}-a_{d})^{n_{d}}}{n_{1}!...n_{d}!}\left.\frac{\partial^{n_{1}+...+n_{d}}}{\partial x_{1}^{n_{1}}...\partial x_{d}^{n_{d}}}f\left(x_{1},...,x_{d}\right)\right|_{x_{1}=a_{1},...,x_{d}=a_{d}}.\label{sub:Taylor-Expansion}
+\end{eqnarray}
+
+\end_inset
+
+Hence, for 2 variables
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x,y\right) & = & f\left(a,b\right)+\left(x-a\right)f_{x}\left(a,b\right)+\left(y-b\right)f_{y}\left(a,b\right)\\
+ &  & +\frac{1}{2!}\left[\left(x-a\right)^{2}f_{xx}\left(a,b\right)+2\left(x-a\right)\left(y-b\right)f_{xy}\left(a,b\right)+\left(y-b\right)^{2}f_{yy}\left(a,b\right)\right]+...
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Taylor Expansion of a product of functions
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $f\left(x\right)=g\left(x\right)\times h\left(x\right)$
+\end_inset
+
+ then the Taylor expansion of 
+\begin_inset Formula $f$
+\end_inset
+
+ , up to order 
+\begin_inset Formula $a$
+\end_inset
+
+, can be found by 
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x\right) & = & T_{a}\left[g\left(x\right)\right]T_{a}\left[h\left(x\right)\right]+O\left(x^{a+1}\right),
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $T_{a}\left[d\left(x\right)\right]$
+\end_inset
+
+ denotes the Taylor expansion of 
+\begin_inset Formula $d\left(x\right)$
+\end_inset
+
+ up to order 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note that in general 
+\begin_inset Formula 
+\begin{eqnarray*}
+T_{a}\left(f\left(x\right)\right) & \neq & T_{a}\left[g\left(x\right)\right]T_{a}\left[h\left(x\right)\right]\\
+\end{eqnarray*}
+
+\end_inset
+
+as 
+\begin_inset Formula $T_{a}\left[g\left(x\right)\right]T_{a}\left[h\left(x\right)\right]$
+\end_inset
+
+ can contain terms of order greater than 
+\begin_inset Formula $a$
+\end_inset
+
+ (up to 
+\begin_inset Formula $O\left(x^{2a}\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+If 
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x\right) & = & g\left(x\right)\times h\left(x\right)\\
+ & = & \sum_{n=0}^{\infty}\frac{x^{n}}{n!}\left.\frac{d^{n}}{dx^{n}}\left(gh\right)\right|_{x=0}\\
+ & = & \sum_{n=0}^{\infty}\frac{x^{n}}{n!}\left.\sum_{k=0}^{n}\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)g^{\left(n-k\right)}h^{\left(k\right)}\right|_{x=0}
+\end{eqnarray*}
+
+\end_inset
+
+where in the last equality we used 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://en.wikipedia.org/wiki/Product_rule#Higher_derivatives
+\end_layout
+
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x\right) & = & \sum_{n=0}^{\infty}\sum_{k=0}^{n}\frac{x^{n}}{k!\left(n-k\right)!}\left.g^{\left(n-k\right)}\left(x\right)h^{\left(k\right)}\left(x\right)\right|_{x=0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Taylor Expansion of Variables of Comparable Norm
+\end_layout
+
+\begin_layout Standard
+Assume we wish to expand about variables 
+\begin_inset Formula $x_{1},x_{2},...,x_{n}$
+\end_inset
+
+ that are all of comparable (and small) norm (i.e.
+ 
+\begin_inset Formula $x_{1}\approx x_{2}\approx...\approx x_{n}$
+\end_inset
+
+ and all are of the same order).
+ Then, the best expansion to use is the following: 
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x_{1},x_{2},...,x_{n}\right) & = & \left.f\left(x_{1}\epsilon,x_{2}\epsilon,...,x_{n}\epsilon\right)\right|_{\epsilon=1}\\
+ & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\partial_{\epsilon}^{n}f\left(x_{1}\epsilon,x_{2}\epsilon,...,x_{n}\epsilon\right)\right|_{\epsilon=0}\right)_{\epsilon=1}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+(We will work with 2 variables: 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ for clarity, a generalization to any number of variables follows the same
+ procedure) Suppose we wish to expand up to order 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ We will compare the approach proposed above with the normal multivariate
+ expansion (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Taylor-Expansion"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are of comparable norm 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left.f\left(x\epsilon,y\epsilon\right)\right|_{\epsilon=1} & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\partial_{\epsilon}^{n}f\left(x\epsilon,y\epsilon\right)\right|_{\epsilon=0}\right)_{\epsilon=1}\\
+ & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\left(\frac{\partial f}{\partial x\epsilon}\frac{\partial x\epsilon}{\partial\epsilon}+\frac{\partial f}{\partial y\epsilon}\frac{\partial y\epsilon}{\partial\epsilon}\right)^{n}\right|_{\epsilon=0}\right)_{\epsilon=1}\\
+ & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\left(x\frac{\partial f}{\partial x\epsilon}+y\frac{\partial f}{\partial y\epsilon}\right)^{n}\right|_{\epsilon=0}\right)_{\epsilon=1}
+\end{eqnarray*}
+
+\end_inset
+
+so notice that in expansion of up to order 
+\begin_inset Formula $h$
+\end_inset
+
+ in 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ will include terms 
+\begin_inset Formula $O\left(x^{a}y^{b}\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $a+b\leq h$
+\end_inset
+
+.
+ So an expansion in 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ up to order 
+\begin_inset Formula $h$
+\end_inset
+
+ is a true expansion of up to order 
+\begin_inset Formula $h$
+\end_inset
+
+ (this only holds if 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are of comparable norms as otherwise the order of 
+\begin_inset Formula $x^{a}y^{b}$
+\end_inset
+
+ is undetermined as, for example, 
+\begin_inset Formula $x$
+\end_inset
+
+ might be much smaller than 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Hence, in the case that 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are of comparable norm, the advantages of the proposed approach (approach
+ 1) over the traditional approach (approach 2) are the following:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $y/x$
+\end_inset
+
+ is not recognized to be a macroscopic number in approach 2 so approach
+ 1 is more convenient.
+ In general, terms of the form 
+\begin_inset Formula $x^{a}/y^{b}$
+\end_inset
+
+ are not correctly interpreted with approach 2: they are not correctly identifie
+d to be of order 
+\begin_inset Formula $a-b$
+\end_inset
+
+.
+ Hence, a term like 
+\begin_inset Formula $x^{3h}/y^{2h}$
+\end_inset
+
+ appears with approach 1 but with approach 2 will not appear unless we expand
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ up to order 
+\begin_inset Formula $3h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Approach 1 keeps terms up to order 
+\begin_inset Formula $O\left(x^{a}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $O\left(y^{b}\right)$
+\end_inset
+
+ so we will have terms appear up to 
+\begin_inset Formula $O\left(x^{a}y^{b}\right)=O\left(x^{a+b}\right)$
+\end_inset
+
+ because 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are of comparable norms, so if we are interested in terms up to order 
+\begin_inset Formula $h$
+\end_inset
+
+ then with approach 2 we have will have to expand up to order 
+\begin_inset Formula $h$
+\end_inset
+
+ for both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ This is inconvenient because we might end up with terms like 
+\begin_inset Formula $O\left(x^{h}y^{h}\right)$
+\end_inset
+
+ which is of order 
+\begin_inset Formula $2h$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+In other words, we expand about this parameter 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ and then set it to 1.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+More details
+\end_layout
+
+\begin_layout Remark*
+The above relation can also be written in the equivalent form
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x_{1},x_{2},...,x_{n}\right) & = & \sum_{n=0}^{\infty}\frac{1}{n!}\left.\left(\sum_{i=1}^{n}x_{i}\frac{\partial f}{\partial x_{i}\epsilon}\right)^{n}\right|_{\epsilon=0}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\end_layout
+
+\begin_layout Subsubsection*
+Usage of this tool/concept
+\end_layout
+
+\begin_layout Standard
+Such Taylor expansions have been used in:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "note6"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Taylor Expansion of Variables of Hierarchical Norm
+\end_layout
+
+\begin_layout Standard
+[[TODO: This section needs precision and better writing]]
+\end_layout
+
+\begin_layout Standard
+A hierarchical structure of variables 
+\begin_inset Formula $x_{1}>x_{2}>...>x_{n}$
+\end_inset
+
+ can also be accommodated by writing
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(x,y\right) & = & \left.f\left(x_{1}\epsilon,x_{2}\epsilon^{2},...,x_{n}\epsilon^{n}\right)\right|_{\epsilon=1}\\
+ & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\partial_{\epsilon}^{n}f\left(x_{1}\epsilon,x_{2}\epsilon^{2},...,x_{n}\epsilon^{n}\right)\right|_{\epsilon=0}\right)_{\epsilon=1}.
+\end{eqnarray*}
+
+\end_inset
+
+Note the exact structure depends on the data; for example, if 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ is of order 
+\begin_inset Formula $10^{-3}$
+\end_inset
+
+ while 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ is of order 
+\begin_inset Formula $10^{-9}$
+\end_inset
+
+ when if we multiply 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ by 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, we should multiply 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ by 
+\begin_inset Formula $\epsilon^{3}$
+\end_inset
+
+ (as 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ is of order 
+\begin_inset Formula $O\left(x_{1}^{3}\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Section
+Useful Identities
+\end_layout
+
+\begin_layout Subsection
+Functions
+\end_layout
+
+\begin_layout Subsubsection
+The Lorentzian
+\end_layout
+
+\begin_layout Standard
+A Lorentzian has the form 
+\begin_inset Formula 
+\begin{eqnarray}
+f\left(x\right) & \propto & \frac{\gamma}{\left(x-x_{0}\right)^{2}+\gamma^{2}}\nonumber \\
+ & \propto & 1/\gamma\left(1+\left(\frac{x-x_{0}}{\gamma}\right)^{2}\right),\label{eq:lorentzian function}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ is the location of the peak and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is HWHM.
+ The (normalized to unity) Lorentzian distribution is defined to be 
+\begin_inset Formula 
+\begin{eqnarray}
+p\left(x\right) & = & \frac{1}{\pi}\left(\frac{\gamma}{\left(x-x_{0}\right)^{2}+\gamma^{2}}\right)\nonumber \\
+ & = & 1/\pi\gamma\left(1+\left(\frac{x-x_{0}}{\gamma}\right)^{2}\right).\label{eq:lorentzian distribution}
+\end{eqnarray}
+
+\end_inset
+
+The lorentzian can be encountered in the following locations:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fabry perot near resonance"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:near resonance forced damped SHO energy absorbed"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Algebra
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Finite Geometric series
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\gSeriesFinite}[2]{\frac{1-#1^{#2}}{1-#1}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k=0}^{n-1}r^{k} & = & \gSeriesFinite rn
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Geometric series
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\gSeries}[1]{\frac{1}{1-#1}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+\sum_{k=0}^{\infty}r^{k} & = & \gSeries r\label{eq:geometric series}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Complex Algebra
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Norm of sum of two complex numbers
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\normSumComplex}[2]{\left|#1\right|^{2}+\left|#2\right|^{2}+2\re{#1#2^{*}}}
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left|A+B\right|^{2} & = & \normSumComplex AB
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Squaring a complex number
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\squareCnumber}[2]{#1^{2}-#2^{2}+2i#1#2}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(a+ib\right)^{2} & = & \squareCnumber ab
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Complex division
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\cDivide}[4]{\frac{\left(#1#3+#2#4\right)+i\left(#2#3-#1#4\right)}{#3^{2}+#4^{2}}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{a+bi}{c+di} & = & \cDivide abcd
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+From 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://mathworld.wolfram.com/ComplexDivision.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Complex Analysis
+\end_layout
+
+\begin_layout Theorem
+(Parseval's theorem; continuum limit) Let 
+\begin_inset Formula $X\left(f\right)=\mathcal{F}\left\{ x\left(t\right)\right\} $
+\end_inset
+
+ represent the continuous Fourier transform of 
+\begin_inset Formula $x\left(t\right)$
+\end_inset
+
+ and let f represent the frequency component (not angular frequency) of
+ x, then 
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}\left|x\left(t\right)\right|^{2}dt=\int_{-\infty}^{\infty}\left|X\left(f\right)\right|^{2}df.\label{eq:ParsevalThmcontinuousEq}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+Denoting the Fourier transform of a function h with 
+\begin_inset Formula $\hat{h}\left(f\right)$
+\end_inset
+
+ (where 
+\begin_inset Formula $f$
+\end_inset
+
+ denotes frequency and not angular frequency), then we have that
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}\left(gh^{*}+hg^{*}\right)dt=\int_{-\infty}^{\infty}\left(\hat{g}\hat{h}^{*}+\hat{h}\hat{g}^{*}\right)df.\label{eq:generalizationParseval}
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have from Parseval's theorem (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:ParsevalThmcontinuousEq"
+
+\end_inset
+
+) that
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{-\infty}^{\infty}\left|g\left(t\right)\right|^{2}dt & = & \int_{-\infty}^{\infty}\left|\hat{g}\left(f\right)\right|^{2}df\\
+\int_{-\infty}^{\infty}\left|h\left(t\right)\right|^{2}dt & = & \int_{-\infty}^{\infty}\left|\hat{h}\left(f\right)\right|^{2}df.
+\end{eqnarray}
+
+\end_inset
+
+Moreover, applying the same theorem to 
+\begin_inset Formula $g+h$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{-\infty}^{\infty}\left|g\left(t\right)+h\left(t\right)\right|^{2}dt & = & \int_{-\infty}^{\infty}\left|\hat{g}\left(f\right)+\hat{h}\left(f\right)\right|^{2}df\\
+ & = & \int_{-\infty}^{\infty}df\left(\normSumComplex{\hat{g}}{\hat{h}}\right)
+\end{eqnarray}
+
+\end_inset
+
+Subtracting 
+\begin_inset Formula $\int_{-\infty}^{\infty}\left|g\left(t\right)+h\left(t\right)\right|^{2}dt$
+\end_inset
+
+ with 
+\begin_inset Formula $\int_{-\infty}^{\infty}\left|g\left(t\right)\right|^{2}dt$
+\end_inset
+
+ and 
+\begin_inset Formula $\int_{-\infty}^{\infty}\left|h\left(t\right)\right|^{2}dt$
+\end_inset
+
+, we obtain that
+\begin_inset Formula 
+\begin{equation}
+2\int\re{gh^{*}}=2\int\re{\hat{g}\hat{h}^{*}}.
+\end{equation}
+
+\end_inset
+
+Hence,
+\begin_inset Formula 
+\begin{equation}
+\int dt\left(gh^{*}+h^{*}g\right)=\int df\left(\hat{g}\hat{h}^{*}+\hat{h}^{*}\hat{g}\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset CommandInset label
+LatexCommand label
+name "thm: shiftPropertyFourier"
+
+\end_inset
+
+(Shift Property of Fourier Transforms) Denoting the Fourier transform of
+ a function h with 
+\begin_inset Formula $\mathcal{F}\left\{ h\left(t\right)\right\} $
+\end_inset
+
+ (where 
+\begin_inset Formula $f$
+\end_inset
+
+ denotes frequency and not angular frequency), then we have that
+\begin_inset Formula 
+\begin{equation}
+\mathcal{F}\left\{ h\left(t+\tau\right)\right\} =\mathcal{F}\left\{ h\left(f\right)\right\} e^{-o2\pi f\tau}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Fact
+Let 
+\begin_inset Formula $y$
+\end_inset
+
+ be a real function, then denoting the Fourier transform with a hat, we
+ have that
+\begin_inset Formula 
+\begin{equation}
+\hat{y}\left(-f\right)=\hat{y}^{*}\left(f\right).\label{eq:FourierRealFunction}
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that - using that 
+\begin_inset Formula $y$
+\end_inset
+
+ is real-
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{y}\left(-f\right) & = & c\int_{-\infty}^{\infty}y\left(t\right)e^{\pm i\left(-f\right)t}dt\\
+ & = & c\int_{-\infty}^{\infty}y\left(t\right)\left(e^{\pm ift}\right)^{*}dt\\
+ & = & c\int_{-\infty}^{\infty}\left(y\left(t\right)e^{\pm ift}\right)^{*}dt\\
+ & = & \hat{y}^{*}\left(f\right).
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Trig
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Double angle cosine
+\emph default
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos2\theta & = & \cos^{2}\theta-\sin^{2}\theta\\
+ & = & 2\cos^{2}\theta-1\\
+ & = & 1-2\sin^{2}\theta
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Cosine sum formula
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\cosSum}[2]{\cos\left(#1\right)\cos\left(#2\right)-\sin\left(#1\right)\sin\left(#2\right)}
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos\left(u+v\right) & = & \cosSum uv
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Cosine difference formula
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\cosDiff}[2]{\cos\left(#1\right)\cos\left(#2\right)+\sin\left(#1\right)\sin\left(#2\right)}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos\left(u-v\right) & = & \cosDiff uv
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Sine difference formula
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\sinDiff}[2]{\sin\left(#1\right)\cos\left(#2\right)-\cos\left(#1\right)\sin\left(#2\right)}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\sin\left(u-v\right) & = & \sinDiff uv
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Cosine Sum to Product formula
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\cosStoP}[2]{2\cos\left(\frac{#1+#2}{2}\right)\cos\left(\frac{#1-#2}{2}\right)}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos u+\cos v & = & \cosStoP uv
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Cosine Diff to Product formula
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\cosDtoP}[2]{-2\sin\left(\frac{#1+#2}{2}\right)\sin\left(\frac{#1-#2}{2}\right)}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos u-\cos v & = & \cosDtoP uv
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Cosine Product to Sum formula
+\emph default
+ 
+\begin_inset FormulaMacro
+\newcommand{\cosPtoS}[2]{#1#2}
+{\left[\cos\left(#1-#2\right)+\cos\left(#1+#2\right)\right]/2}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\cos u\cos v=\cosPtoS uv
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Cosine of 
+\begin_inset Formula $\tan^{-1}$
+\end_inset
+
+ 
+\emph default
+
+\begin_inset FormulaMacro
+\newcommand{\cosAtan}[1]{\frac{1}{\sqrt{1+#1^{2}}}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos\left(\tan^{-1}a\right) & = & \cosAtan a
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Sine of 
+\begin_inset Formula $\tan^{-1}$
+\end_inset
+
+ 
+\emph default
+
+\begin_inset FormulaMacro
+\newcommand{\sinAtan}[1]{\frac{#1}{\sqrt{1+#1^{2}}}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\sin\left(\tan^{-1}a\right) & = & \sinAtan a
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Complex Trig
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Complex exponential of 
+\begin_inset Formula $\tan^{-1}$
+\end_inset
+
+ 
+\emph default
+
+\begin_inset FormulaMacro
+\newcommand{\expiAtan}[1]{\frac{1+i#1}{\sqrt{1+#1^{2}}}}
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\exp\left(i\tan^{-1}a\right) & = & \expiAtan a
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\exp\left(i\tan^{-1}a\right) & = & \cos\left(\tan^{-1}a\right)+i\sin\left(\tan^{-1}a\right)\\
+ & = & \cosAtan a+i\sinAtan a\\
+ & = & \frac{1+ia}{\sqrt{1+a^{2}}}
+\end{eqnarray*}
+
+\end_inset
+
+This could have been also determined with the Mathematica command: FullSimplify[
+ExpToTrig[Exp[I*ArcTan[a]]]].
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Fourier Transform
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Shift property
+\emph default
+:
+\begin_inset Formula 
+\begin{eqnarray}
+\mathcal{F}\left(g\left(t-t_{0}\right)\right) & = & \mathcal{F}\left(g\left(t\right)\right)e^{-i\omega t_{0}}.\label{eq:shiftPropertyFourierTransforms}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{F}\left[\hat{a}_{c}\left(t-t_{0}\right)\right] & = & \int e^{-i\omega s}g\left(s-t_{0}\right)ds\\
+ & = & e^{-i\omega t_{0}}\int e^{-i\omega\left(x+t_{0}\right)}g\left(x\right)dx
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
 Linear Algebra
 \end_layout
 
@@ -181,8 +1485,7 @@ Dirac delta function
 We can also write that 
 \begin_inset Formula 
 \begin{eqnarray}
-\delta\left(t-t_{0}\right) & = & \lim_{\Delta t\rightarrow0}\frac{\delta_{t\in\left[t_{0}-\Delta t/2,t_{0}+\Delta t/2\right]}}{\Delta t}\label{eq:physics delta function}\\
-\nonumber 
+\delta\left(t-t_{0}\right) & = & \lim_{\Delta t\rightarrow0}\frac{\delta_{t\in\left[t_{0}-\Delta t/2,t_{0}+\Delta t/2\right]}}{\Delta t}.\label{eq:physics delta function}
 \end{eqnarray}
 
 \end_inset
@@ -209,6 +1512,46 @@ Also,
  & = & \int_{t_{0}-dt/2}^{t_{0}+dt/2}dt\frac{f\left(t\right)}{dt}=\frac{F\left(t_{0}+dt/2\right)-F\left(t_{0}-dt/2\right)}{dt}\\
  & = & f\left(t_{0}\right).
 \end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We also have that 
+\begin_inset Formula 
+\begin{equation}
+\delta\left(0\right)=\limit{\delta t}0\frac{1}{\delta t}.\label{eq:fishyDeltaZero}
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{-\infty}^{\infty}f\left(x\right)\delta\left(x\right)dx & = & \limit{\delta x}0\int_{-\delta x/2}^{\delta x/2}f\left(x\right)\delta\left(x\right)dx=f\left(0\right)\\
+ & \approx & \limit{\delta x}0\delta xf\left(0\right)\delta\left(0\right)=f\left(0\right)\limit{\delta x}0\delta x\delta\left(0\right)\\
+ & = & f\left(0\right),
+\end{eqnarray}
+
+\end_inset
+
+so we can write that
+\begin_inset Formula 
+\begin{equation}
+\limit{\delta x}0\delta x\delta\left(0\right)=1
+\end{equation}
 
 \end_inset
 
@@ -257,6 +1600,92 @@ p_{n}\left(y_{n},t_{n};...;y_{1},t_{1}\right) & = & P_{n}\left(y_{n},t_{n}|y_{n-
 \end_inset
 
 ]]
+\end_layout
+
+\begin_layout Definition
+[Indepedence of two random variables] Random variables 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ are independent if 
+\begin_inset Formula $P\left(X\in A,Y\in B\right)=P\left(X\in A\right)P\left(Y\in B\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $A,B\in\mathcal{F}$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ is the 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-field.
+\end_layout
+
+\begin_layout Standard
+This can be generalized to multiple random variables:
+\end_layout
+
+\begin_layout Definition
+[Indepedence of random variables] Random variables 
+\begin_inset Formula $X_{1},\, X_{2},...,\, X_{n}$
+\end_inset
+
+ are jointly independent if 
+\begin_inset Formula $P\left(X_{1}\in A_{1},...,X_{n}\in A_{n}\right)=P\left(X_{1}\in A_{1}\right)...P\left(X_{1}\in A_{1}\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $X_{1},\, X_{2},...,X_{n}\in\mathcal{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We also have that 
+\end_layout
+
+\begin_layout Definition
+[Pairwise Indepedence] Random variables 
+\begin_inset Formula $X_{1},\, X_{2},...,\, X_{n}$
+\end_inset
+
+ are pairwise independent if each pair 
+\begin_inset Formula $X_{i},X_{j}$
+\end_inset
+
+ are independent.
+\end_layout
+
+\begin_layout Remark
+In general, joint independence implies pairwise independence but not vice
+ versa*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+A good counter example is shown in 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://en.wikipedia.org/wiki/Pairwise_independence#Example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Chapter
@@ -379,7 +1808,7 @@ where
 
 *
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 We prove this for 2-dimensional vector: Let 
@@ -734,7 +2163,7 @@ and so we can write that
 Basic facts about Multivariate Gaussians 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 Suppose 
 \begin_inset Formula $X\sim\mathcal{N}\left(\vec{\mu},\bm{\Sigma}\right)$
 \end_inset
@@ -750,7 +2179,7 @@ Suppose
 
 .
  We have that 
-\begin_inset Formula $\left(X+y\right)\sim\mathcal{N}\left(\vec{\mu}+\vec{y},\bm{\Sigma}\right).$
+\begin_inset Formula $\left(X+\vec{y}\right)\sim\mathcal{N}\left(\vec{\mu}+\vec{y},\bm{\Sigma}\right).$
 \end_inset
 
  Moreover, 
@@ -793,7 +2222,19 @@ Moreover,
 
 \end_inset
 
+To see why the first equality is true, note that 
+\begin_inset Formula 
+\begin{equation}
+\bm{\Sigma}_{ij}=E\left[x_{i}x_{j}\right]-E\left[x_{i}\right]E\left[x_{j}\right].
+\end{equation}
 
+\end_inset
+
+We also defined X to be a vertical vector so 
+\begin_inset Formula $XX^{T}$
+\end_inset
+
+ will give us a matrix with the desired entries.
 \end_layout
 
 \end_inset
@@ -801,7 +2242,7 @@ Moreover,
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Remark
 If 
 \begin_inset Formula $X\sim\mathcal{N}\left(\vec{\mu},\bm{\Sigma}\right)$
 \end_inset
@@ -819,67 +2260,11 @@ If
 \end_inset
 
  are independent random variables.
- (in general independence implies covariance is zero but not vice versa).
-\end_layout
+ In general, independence implies that the covariance is zero *
+\begin_inset Note Note
+status collapsed
 
-\begin_layout Definition
-[Indepedence of two random variables] Random variables 
-\begin_inset Formula $X,Y$
-\end_inset
-
- are independent if 
-\begin_inset Formula $P\left(X\in A,Y\in B\right)=P\left(X\in A\right)P\left(Y\in B\right)$
-\end_inset
-
- for all 
-\begin_inset Formula $A,B\in F$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-This can be generalized to multiple random variables:
-\end_layout
-
-\begin_layout Definition
-[Indepedence of random variables] Random variables 
-\begin_inset Formula $X_{1},\, X_{2},...,\, X_{n}$
-\end_inset
-
- are jointly independent if 
-\begin_inset Formula $P\left(X_{1}\in A_{1},...,X_{n}\in A_{n}\right)=P\left(X_{1}\in A_{1}\right)...P\left(X_{1}\in A_{1}\right)$
-\end_inset
-
- for all 
-\begin_inset Formula $X_{1},\, X_{2},...,X_{n}\in F$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-We also have that 
-\end_layout
-
-\begin_layout Definition
-[Pairwise Indepedence] Random variables 
-\begin_inset Formula $X_{1},\, X_{2},...,\, X_{n}$
-\end_inset
-
- are pairwise independent if each pair 
-\begin_inset Formula $X_{i},X_{j}$
-\end_inset
-
- are independent.
-\end_layout
-
-\begin_layout Remark
-In general, joint independence implies pairwise independence but not vice
- versa.
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
 Recall if 
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
@@ -907,41 +2292,9 @@ Hence,
 .
 \end_layout
 
-\begin_layout Paragraph
-Multivariate Normal's characteristic function
-\end_layout
-
-\begin_layout Standard
-The characteristic function: 
-\begin_inset Formula $X\sim\mathcal{N}\left(\vec{\mu},\bm{\Sigma}\right)$
 \end_inset
 
- and let 
-\begin_inset Formula $X,\vec{t}\in\mathbb{R}^{m}$
-\end_inset
-
- implies that 
-\begin_inset Formula 
-\begin{eqnarray*}
-E\left[e^{i\vec{t}.X}\right] & = & \int e^{it\vec{x}}p\left(\vec{x}\right)d\vec{x}\\
- & = & \exp\left(i\vec{\mu}.\vec{t}-\frac{1}{2}\vec{t}^{T}\bm{\Sigma}\vec{t}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Basic probability facts: The distribution of a random variable 
-\begin_inset Formula $X$
-\end_inset
-
- is uniquely determined by its characteristic function 
-\begin_inset Formula $\phi\left(t\right)=E\left[e^{i\vec{t}.X}\right]$
-\end_inset
-
-.
+ but not vice versa.
 \end_layout
 
 \begin_layout Theorem
@@ -962,365 +2315,42 @@ For Gaussians, any linear combination
  jointly normal) is itself normal.
 \end_layout
 
-\begin_layout Standard
-Conventions: 
-\end_layout
-
-\begin_layout Enumerate
-We will always work with mean zero Gaussians from now on (because a variable
- transformation can always be made to eliminate the mean).
-\end_layout
-
-\begin_layout Enumerate
-All Hilbert spaces used here will be separable.
-\end_layout
-
-\begin_layout Enumerate
-Sometimes, its convenient to work with complex valued Gaussians.
- However, unless explicitly said so we'll assume that Gaussians are real-valued.
+\begin_layout Paragraph
+[Property] Multivariate Normal's characteristic function
 \end_layout
 
 \begin_layout Standard
-Stepping stone to Gaussian Hilbert space:
-\end_layout
-
-\begin_layout Standard
-Assume 
-\begin_inset Formula $X\sim\mathcal{N}\left(0,\bm{\Sigma}\right)$
+Let 
+\begin_inset Formula $X\sim\mathcal{N}\left(\vec{\mu},\bm{\Sigma}\right)$
 \end_inset
 
- where 
-\begin_inset Formula $X\in\mathbb{R}^{n}$
+ and let 
+\begin_inset Formula $X,\vec{t}\in\mathbb{R}^{m}$
 \end_inset
 
 .
- Now consider, 
+ Then, 
 \begin_inset Formula 
 \begin{eqnarray*}
-H_{X} & \equiv & \mbox{span}\left\{ X_{1},...,X_{n}\right\} =\left\{ \sum_{i=1}^{n}t_{i}X_{i}:t_{1},...,t_{n}\in\mathbb{R}\right\} 
+E\left[e^{i\vec{t}.X}\right] & = & \int e^{it\vec{x}}p\left(\vec{x}\right)d\vec{x}\\
+ & = & \exp\left(i\vec{\mu}.\vec{t}-\frac{1}{2}\vec{t}^{T}\bm{\Sigma}\vec{t}\right).
 \end{eqnarray*}
 
 \end_inset
 
-Each element of 
-\begin_inset Formula $H_{x}$
-\end_inset
-
- has a normal distribution by 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "thm:combination_of_Gaussians"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Observe that 
-\begin_inset Formula $H_{x}$
-\end_inset
-
- is a linear space.
-\end_layout
-
-\begin_layout Standard
-Take 
-\begin_inset Formula $\xi=\left(\sum_{i=1}^{n}t_{i}X_{i},\sum_{i=1}^{n}s_{i}X_{i}\right)$
-\end_inset
-
- for some 
-\begin_inset Formula $t_{1},...,t_{n}\in\mathbb{R}$
-\end_inset
-
- and 
-\begin_inset Formula $s_{1},...,s_{n}\in\mathbb{R}$
-\end_inset
-
-.
- What is the distribution of 
-\begin_inset Formula $\xi$
-\end_inset
-
-? 
-\begin_inset Formula $\xi\sim\mathcal{N}\left(0,\tilde{\bm{\Sigma}}\right)$
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\tilde{\bm{\Sigma}}=\left(\begin{array}{cc}
-\vec{t}^{T}\bm{\Sigma}\vec{t} & \vec{t}^{T}\bm{\Sigma}\vec{s}\\
-\vec{t}^{T}\bm{\Sigma}\vec{s} & \vec{s}^{T}\bm{\Sigma}\vec{s}
-\end{array}\right)
-\end{equation}
-
-\end_inset
-
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Formula $\xi$
-\end_inset
-
- will be normally distributed.
- Denote the covariance matrix by 
-\begin_inset Formula $\tilde{\bm{\Sigma}}$
-\end_inset
-
-.
- We have that
-\begin_inset Formula 
-\begin{eqnarray*}
-\left(\tilde{\bm{\Sigma}}\right)_{11} & = & \mbox{cov}\left(\sum_{i=1}^{n}t_{i}X_{i},\sum_{i=1}^{n}t_{i}X_{i}\right)\\
- & = & \sum_{i=1}^{n}\sum_{j=1}^{n}t_{i}t_{j}\mbox{cov}\left(X_{i},X_{j}\right)\\
- & = & \sum_{i=1}^{n}\sum_{j=1}^{n}t_{i}t_{j}\bm{\Sigma}_{ij}
-\end{eqnarray*}
-
-\end_inset
-
-because covariance is a bilinear operator 
-\end_layout
-
-\begin_layout Plain Layout
-By the same logic we obtain that 
-\begin_inset Formula 
-\begin{equation}
-\tilde{\bm{\Sigma}}=\left(\begin{array}{cc}
-\vec{t}^{T}\bm{\Sigma}\vec{t} & \vec{t}^{T}\bm{\Sigma}\vec{s}\\
-\vec{t}^{T}\bm{\Sigma}\vec{s} & \vec{s}^{T}\bm{\Sigma}\vec{s}
-\end{array}\right)
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Alternate derivation: For fixed 
-\begin_inset Formula $\left\{ t_{i}\right\} ,\,\left\{ s_{i}\right\} ,$
-\end_inset
-
- the map 
-\begin_inset Formula $\left(X_{i},...,X_{n}\right)\rightarrow\left(\sum_{i=1}^{n}t_{i}X_{i},\sum_{i=1}^{n}s_{i}X_{i}\right)=AX$
-\end_inset
-
- is a map from 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
-
- to 
-\begin_inset Formula $\mathbb{R}^{2}$
-\end_inset
-
-.
- This map is also linear, and hence is represented by a 
-\begin_inset Formula $2\times n$
-\end_inset
-
- matrix 
-\begin_inset Formula $A=\left(\begin{array}{c}
-\vec{t}\\
-\vec{s}
-\end{array}\right)$
-\end_inset
-
-.
- The same algebra that we carried out previously works here as well.
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
 \begin_layout Standard
-In general, every finite collection of points in 
-\begin_inset Formula $H_{x}$
+Basic probability fact: The distribution of a random variable 
+\begin_inset Formula $X$
 \end_inset
 
- has a joint normal distribution (although sometimes the distribution is
- degenerate).
-\end_layout
-
-\begin_layout Standard
-The basic example of a degenerate Gaussian is: Let 
-\begin_inset Formula $X\sim\mathcal{N}\left(0,1\right)$
-\end_inset
-
- with 
-\begin_inset Formula $x\in\mathbb{R}$
-\end_inset
-
- then look at
-\begin_inset Formula $\left(X,X\right)$
+ is uniquely determined by its characteristic function 
+\begin_inset Formula $\phi\left(t\right)=E\left[e^{i\vec{t}.X}\right]$
 \end_inset
 
 .
- It has a degenerate normal distribution.
- Why is that? Well the mean is given by 
-\begin_inset Formula $\vec{\mu}$
-\end_inset
-
- and the covariance matrix given 
-\begin_inset Formula 
-\begin{equation}
-\left(\begin{array}{cc}
-1 & 1\\
-1 & 1
-\end{array}\right).
-\end{equation}
-
-\end_inset
-
-Note that this matrix is only positive semi-definite (the matrix is not
- invertible).
- To understand what this means look at 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename stodegenerateGaussian.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Degenerate Gaussian; can only sample normally points on the blue line.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Define an inner product on 
-\begin_inset Formula $H_{x}$
-\end_inset
-
- by 
-\begin_inset Formula $\left\langle Y_{1},Y_{2}\right\rangle _{H_{x}}\equiv\mbox{cov}\left(Y_{1},Y_{2}\right)=E\left[Y_{1}Y_{2}\right]-E\left[Y_{1}\right]E\left[Y_{2}\right]$
-\end_inset
-
- where 
-\begin_inset Formula $Y_{1},Y_{2}\in H_{x}$
-\end_inset
-
-.*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-This is an inner product because (assuming means are equal to 0)
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left\langle \lambda Y_{1},Y_{2}\right\rangle =E\left[\lambda Y_{1}Y_{2}\right]=\lambda E\left[Y_{1}Y_{2}\right]=\lambda\left\langle Y_{1},Y_{2}\right\rangle _{H_{x}}$
-\end_inset
-
- for 
-\begin_inset Formula $\lambda\in\mathbb{R}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left\langle Y_{1},Y_{2}\right\rangle =E\left[Y_{1}Y_{2}\right]=E\left[Y_{2}Y_{1}\right]=\left\langle Y_{2}Y_{1}\right\rangle $
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left\langle Y,Y\right\rangle _{H_{x}}=E\left[Y^{2}\right]>0$
-\end_inset
-
- for all 
-\begin_inset Formula $Y\in H_{x}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left\langle Y_{1}+Y_{2},Y_{3}\right\rangle =\left\langle Y_{1},Y_{3}\right\rangle +\left\langle Y_{2},Y_{3}\right\rangle $
-\end_inset
-
- because covariance is bilinear.
-\end_layout
-
-\begin_layout Plain Layout
-There may be more properties that need verification.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $H_{x}$
-\end_inset
-
- is a representation of 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
-
- (with a particular inner product) by a collection of random variables.
- We will show that there is an isometry between 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
-
- and 
-\begin_inset Formula $L^{2}\left(\Omega,F,\mathbb{P}\right)$
-\end_inset
-
-: take 
-\begin_inset Formula $\vec{t}$
-\end_inset
-
- from 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
-
- and construct 
-\begin_inset Formula $Y=\left\langle \vec{t},X\right\rangle $
-\end_inset
-
- as defined above.
 \end_layout
 
 \begin_layout Section
@@ -2235,7 +3265,7 @@ begin{defn}[Ergodic Hypothesis for Random Processes]
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "def:ergodic hypothesis"
+name "def:ergodic_hypothesis"
 
 \end_inset
 
@@ -2413,7 +3443,7 @@ key "OliveiraET"
 \begin_layout Standard
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "def:ergodic hypothesis"
+reference "def:ergodic_hypothesis"
 
 \end_inset
 
@@ -3842,21 +4872,30 @@ reference "def: Stationary Random Process"
 \end_inset
 
 , etc ...
- Further, 
+ Further, for stationary processes, 
 \begin_inset Formula $\bar{y}$
 \end_inset
 
- is a constant that is equal to 
+ and the 
+\begin_inset Formula $\alpha_{ii}$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,2,...,n$
+\end_inset
+
+ are constants that are equal to 
 \begin_inset Formula 
-\begin{eqnarray*}
-\bar{y} & = & \left\langle y\right\rangle =\int yp_{1}\left(y\right)dy\\
-\end{eqnarray*}
+\begin{eqnarray}
+\bar{y} & = & \left\langle y\right\rangle =\int yp_{1}\left(y\right)dy\nonumber \\
+\alpha_{ii} & = & \frac{1}{2\sigma_{y}^{2}}=\frac{1}{2\left(\left\langle y^{2}\right\rangle -\left\langle y\right\rangle ^{2}\right)}.\label{eq:equalMeanVarianceStationaryProcesses}
+\end{eqnarray}
 
 \end_inset
 
 *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula $p_{1}$
@@ -3875,7 +4914,100 @@ Calculating
 \end_inset
 
  with Mathematica gives the desired answer.
- 
+ The same analysis can be carried out for 
+\begin_inset Formula $\sigma_{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Further, we have that all of the 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+ and all of the 
+\begin_inset Formula $\alpha_{ii}$
+\end_inset
+
+ have to be the same because*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We prove this claim for 2 variables; the analysis can be easily extended
+ for more than 2 variables.
+\end_layout
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{y}_{2} & = & \int p_{2}\left(y_{2},t_{2};y_{1}\right)y_{2}dy_{2}dy_{1}
+\end{eqnarray*}
+
+\end_inset
+
+and this has this to be equal to 
+\begin_inset Formula $\int p_{1}\left(y_{2},t_{2}\right)y_{2}dy_{2}$
+\end_inset
+
+ as that is the definition of 
+\begin_inset Formula $\bar{y}_{2}$
+\end_inset
+
+.
+ However, for stationary processes, 
+\begin_inset Formula 
+\begin{equation}
+p_{1}\left(y_{2},t_{2}\right)=p_{1}\left(y_{2},t_{1}\right)=p_{1}\left(y_{1},t_{1}\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+As an example, consider 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1}\left(y_{2},t_{2};y_{1}\right) & = & A\exp\left(-\left(y_{1}-a\right)^{2}-\left(y_{2}-b\right)^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+then the two variables are independent and 
+\begin_inset Formula $\bar{y}_{1}=a$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{y}_{2}=b$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $a$
+\end_inset
+
+ has to be equal to 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+The same reasoning directly applies to explain why in general
+\begin_inset Formula $\sigma_{y_{1}}=\sigma_{y_{2}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -4584,10 +5716,28 @@ where
 
  is called the relaxation time.*
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Redefine variables so that 
+The idea of the proof is to show that the correlation functions have to
+ have the form of exponentials as they have to verify an equality of the
+ form 
+\begin_inset Formula $C_{y}\left(t_{3}-t_{2}\right)=C_{y}\left(t_{3}-t_{1}\right)C_{y}\left(t_{1}-t_{2}\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $t_{3}>t_{1}>t_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+[
+\emph on
+Complete Proof
+\emph default
+] Redefine variables so that 
 \begin_inset Formula 
 \begin{eqnarray*}
 \left(y-\bar{y}\right)/\sigma_{y} & = & y_{n}
@@ -4745,7 +5895,59 @@ Next we calculate what
 \end_inset
 
  is equal to.
- Again, 
+\end_layout
+
+\begin_layout Claim
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{2}\left(y_{2n},t_{2};y_{1n},t_{1}\right) & = & \frac{1}{\sqrt{\left(2\pi\right)^{2}\left(1-\rho^{2}\right)}}\exp\left(-\frac{y_{1n}^{2}-2\rho y_{1n}y_{2n}+y_{2n}^{2}}{2\left(1-\rho^{2}\right)}\right),
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\rho$
+\end_inset
+
+ is defined in the correlation matrix of 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\bm{\Sigma}$
+\end_inset
+
+ is the correlation matrix of 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\begin{equation}
+\bm{\Sigma}=\left(\begin{array}{cc}
+\sigma_{1}^{2} & \rho\sigma_{1}\sigma_{2}\\
+\rho\sigma_{1}\sigma_{2} & \sigma_{2}^{2}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Again, 
 \begin_inset Formula $y\left(t\right)$
 \end_inset
 
@@ -4783,7 +5985,22 @@ where
 \end_inset
 
 ).
- We have that 
+ We denote the entries of 
+\begin_inset Formula $\overleftrightarrow{\alpha}$
+\end_inset
+
+ in the following fashion 
+\begin_inset Formula 
+\begin{equation}
+\overleftrightarrow{\alpha}=\left(\begin{array}{cc}
+\sigma_{y_{1}} & \rho\sigma_{y_{1}}\sigma_{y_{2}}\\
+\rho\sigma_{y_{1}}\sigma_{y_{2}} & \sigma_{y_{2}}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+We have that 
 \begin_inset Formula 
 \begin{eqnarray}
 \vec{Y}_{n} & = & \left(\begin{array}{c}
@@ -4804,62 +6021,7 @@ where
 \bar{y}_{1} & \bar{y}_{2}\end{array}\right)^{T}$
 \end_inset
 
-(note that in general 
-\begin_inset Formula $\bar{y}_{2}\neq\bar{y}_{1}$
-\end_inset
-
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-The process is Markov: 
-\begin_inset Formula 
-\begin{eqnarray*}
-\bar{y}_{2} & = & \int p_{1}\left(y_{2},t_{2};y_{1}\right)y_{2}dy_{2}dy_{1}
-\end{eqnarray*}
-
-\end_inset
-
-and there is no reason for this to be equal to 
-\begin_inset Formula $\int p_{1}\left(y_{2}\right)y_{2}dy_{2}=\int p_{1}\left(y_{1}\right)y_{1}dy_{1}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Plain Layout
-As an example, consider 
-\begin_inset Formula 
-\begin{eqnarray*}
-p_{1}\left(y_{2},t_{2};y_{1}\right) & = & A\exp\left(-\left(y_{1}-a\right)^{2}-\left(y_{2}-b\right)^{2}\right)
-\end{eqnarray*}
-
-\end_inset
-
-then the two variables are independent and 
-\begin_inset Formula $\bar{y}_{1}=a$
-\end_inset
-
- and 
-\begin_inset Formula $\bar{y}_{2}=b$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Plain Layout
-The same reasoning directly applies to explain why in general
-\begin_inset Formula $\sigma_{y_{1}}\neq\sigma_{y_{2}}$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-) and
+ and
 \begin_inset Formula 
 \begin{eqnarray*}
 \overleftrightarrow{\sigma} & = & \left(\begin{array}{cc}
@@ -5033,7 +6195,26 @@ reference "eq:eqTemp2"
 \end_layout
 
 \begin_layout Plain Layout
-Using Mathematica, it can be shown that 
+Using Mathematica (
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+bivariateNormalDistributionInTermsOfCorrelationMatrix.nb
+\end_layout
+
+\end_inset
+
+), it can be shown that 
 \family roman
 \series medium
 \shape up
@@ -5049,7 +6230,410 @@ the equation
 \begin_inset Formula $\left\langle y_{i}y_{j}\right\rangle =\left(\overleftrightarrow{\alpha^{-1}}\right)_{ij}$
 \end_inset
 
- implies that
+ implies that the expression inside the exponent can be simplified to (cell
+ tag 
+\begin_inset Quotes eld
+\end_inset
+
+full answer with variable transformation
+\begin_inset Quotes erd
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray}
+-\frac{1}{2}\left(\vec{Y}-\bar{Y}\right)^{T}\overleftrightarrow{\alpha}\left(\vec{Y}-\bar{Y}\right) & = & \frac{y_{1n}^{2}-2\rho y_{1n}y_{2n}+y_{2n}^{2}}{2\left(-1+\rho^{2}\right)}\\
+ & = & -\frac{y_{1n}^{2}-2\rho y_{1n}y_{2n}+y_{2n}^{2}}{2\left(1-\rho^{2}\right)}
+\end{eqnarray}
+
+\end_inset
+
+The normalization constant 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+ has to be given then by (cell tag 
+\begin_inset Quotes eld
+\end_inset
+
+normalization with variable transformation
+\begin_inset Quotes erd
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray}
+\mathcal{N} & = & 1/2/\sqrt{1-\rho^{2}}/\pi\\
+ & = & \frac{1}{\sqrt{\left(2\pi\right)^{2}\left(1-\rho^{2}\right)}}\\
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+We have that 
+\begin_inset Formula 
+\begin{equation}
+P_{2}\left(y_{2n},t_{2}|y_{1n},t_{1}\right)=\frac{1}{\sqrt{2\pi\left(1-\rho^{2}\right)}}\exp\left[-\frac{\left(y_{2n}-\rho y_{1n}\right)^{2}}{2\left(1-\rho^{2}\right)}\right].\label{eq:tempEqP2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We use 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:conditional RP in terms of absolute"
+
+\end_inset
+
+ that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+P_{n}\left(y_{n},t_{n}|y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)=\frac{p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}{p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}
+\end{equation}
+
+\end_inset
+
+so 
+\begin_inset Formula 
+\begin{eqnarray}
+P_{2}\left(y_{2n},t_{2}|y_{1n},t_{1}\right) & = & \frac{p_{2}\left(y_{2n},t_{2};y_{1n},t_{1}\right)}{p_{1}\left(y_{1n},t_{1}\right)}\\
+ & = & \frac{1}{\sqrt{\left(2\pi\right)^{2}\left(1-\rho^{2}\right)}}\exp\left(-\frac{y_{1n}^{2}-2\rho y_{1n}y_{2n}+y_{2n}^{2}}{2\left(1-\rho^{2}\right)}\right)\times1/\left(\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{y_{1n}^{2}}{2}\right)\right)\\
+ & = & \frac{1}{\sqrt{\left(2\pi\right)\left(1-\rho^{2}\right)}}\exp\left(-\frac{y_{1n}^{2}-2\rho y_{1n}y_{2n}+y_{2n}^{2}}{2\left(1-\rho^{2}\right)}+\frac{y_{1n}^{2}\left(1-\rho^{2}\right)}{2\left(1-\rho^{2}\right)}\right)\\
+ & = & \frac{1}{\sqrt{\left(2\pi\right)\left(1-\rho^{2}\right)}}\exp\left(-\frac{y_{1n}^{2}-2\rho y_{1n}y_{2n}+y_{2n}^{2}-y_{1n}^{2}+y_{1n}^{2}\rho^{2}}{2\left(1-\rho^{2}\right)}\right)\\
+ & = & \frac{1}{\sqrt{\left(2\pi\right)\left(1-\rho^{2}\right)}}\exp\left(-\frac{-2\rho y_{1n}y_{2n}+y_{2n}^{2}+y_{1n}^{2}\rho^{2}}{2\left(1-\rho^{2}\right)}\right)\\
+ & = & \frac{1}{\sqrt{\left(2\pi\right)\left(1-\rho^{2}\right)}}\exp\left(-\frac{\left(y_{2n}-\rho y_{1n}\right)^{2}}{2\left(1-\rho^{2}\right)}\right).
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+We have that 
+\begin_inset Formula 
+\begin{equation}
+C_{31}=C_{32}C_{21},
+\end{equation}
+
+\end_inset
+
+i.e.
+\begin_inset Formula 
+\begin{equation}
+C_{yn}\left(t_{3}-t_{1}\right)=C_{yn}\left(t_{3}-t_{2}\right)C_{yn}\left(t_{2}-t_{1}\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We use 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:conditional RP in terms of absolute"
+
+\end_inset
+
+ that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+P_{n}\left(y_{n},t_{n}|y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)=\frac{p_{n}\left(y_{n},t_{n};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}{p_{n-1}\left(y_{n-1},t_{n-1};\cdots;y_{2},t_{2};y_{1};t_{1}\right)}
+\end{equation}
+
+\end_inset
+
+so 
+\begin_inset Formula 
+\begin{equation}
+P_{3}\left(y_{3n},t_{3}|y_{2n},t_{2};y_{1n},t_{1}\right)=\frac{p_{3}\left(y_{3n},t_{3};y_{2n},t_{2};y_{1n},t_{1}\right)}{p_{2}\left(y_{2n},t_{2};y_{1n},t_{1}\right)}
+\end{equation}
+
+\end_inset
+
+which implies that
+\begin_inset Formula 
+\begin{equation}
+p_{3}\left(y_{3n},t_{3};y_{2n},t_{2};y_{1n},t_{1}\right)=P_{3}\left(y_{3n},t_{3}|y_{2n},t_{2};y_{1n},t_{1}\right)p_{2}\left(y_{2n},t_{2};y_{1n},t_{1}\right).
+\end{equation}
+
+\end_inset
+
+Use that that the process is Markovian to write that 
+\begin_inset Formula 
+\begin{equation}
+p_{3}\left(y_{3n},t_{3};y_{2n},t_{2};y_{1n},t_{1}\right)=P_{2}\left(y_{3n},t_{3}|y_{2n},t_{2}\right)p_{2}\left(y_{2n},t_{2};y_{1n},t_{1}\right).
+\end{equation}
+
+\end_inset
+
+This can be calculated explicitly to yield that 
+\begin_inset Formula 
+\begin{eqnarray}
+p_{3}\left(y_{3n},t_{3};y_{2n},t_{2};y_{1n},t_{1}\right) & = & \frac{1}{\sqrt{\left(2\pi\right)^{2}\left(1-C_{32}^{2}\right)}}\exp\left(-\frac{y_{3n}^{2}-2\rho y_{3n}y_{2n}+y_{3n}^{2}}{2\left(1-C_{32}^{2}\right)}\right)\frac{1}{\sqrt{2\pi\left(1-C_{21}^{2}\right)}}\exp\left[-\frac{\left(y_{2n}-C_{21}y_{1n}\right)^{2}}{2\left(1-C_{21}^{2}\right)}\right]\\
+ & = & \frac{1}{\sqrt{\left(2\pi\right)^{3}\left(1-C_{32}^{2}\right)\left(1-C_{21}^{2}\right)}}\exp\left(-\frac{y_{1n}^{2}-2\rho y_{1n}y_{2n}+y_{2n}^{2}}{2\left(1-C_{32}^{2}\right)}-\frac{\left(y_{2n}-C_{21}y_{1n}\right)^{2}}{2\left(1-C_{21}^{2}\right)}\right).
+\end{eqnarray}
+
+\end_inset
+
+Finally, we use the definition of correlation (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:Correlation Function"
+
+\end_inset
+
+) and the ergodic hypothesis (that phase space averages are the same as
+ time averages: 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:implication ergodicity"
+
+\end_inset
+
+) to write that 
+\begin_inset Formula 
+\begin{eqnarray}
+C_{31} & = & \left\langle y\left(t_{3}\right)y\left(t_{1}\right)\right\rangle \\
+ & = & \int p_{3}\left(y_{3},t_{3};y_{2},t_{2};y_{1},t_{1}\right)y_{3}y_{1}dy_{3}dy_{2}dy_{1}.
+\end{eqnarray}
+
+\end_inset
+
+This can be done with Mathematica [[TODO: show]] to yield that 
+\begin_inset Formula 
+\begin{equation}
+C_{31}=C_{32}C_{21}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+From the previous claim, we have that 
+\begin_inset Formula 
+\begin{equation}
+C_{y}\left(\tau\right)=C_{y}\left(\tau_{1}\right)C_{y}\left(\tau-\tau_{1}\right),
+\end{equation}
+
+\end_inset
+
+for any 
+\begin_inset Formula $\tau_{1}$
+\end_inset
+
+ such that
+\begin_inset Formula $\tau_{1}\leq\tau$
+\end_inset
+
+.
+ A function with such a property is the exponential function: 
+\begin_inset Formula 
+\begin{equation}
+C_{y}\left(\tau\right)=\exp\left(-\tau/\tau_{r}\right),
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\tau_{r}$
+\end_inset
+
+ is some constant.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+We also have to incorporate boundary conditions: the definition, we currently
+ have is that 
+\begin_inset Formula 
+\begin{equation}
+C_{y}\left(t_{j}-t_{i}\right)=C_{ji}
+\end{equation}
+
+\end_inset
+
+so 
+\begin_inset Formula 
+\begin{equation}
+C_{y}\left(0\right)=C_{ii}=\left\langle y_{1n}^{2}\right\rangle 
+\end{equation}
+
+\end_inset
+
+which is equal to 
+\begin_inset Formula $\sigma_{yn}^{2}$
+\end_inset
+
+ by definition, which itself is equal to 1, by construction.
+ This initial condition is verified by the form of 
+\begin_inset Formula $C_{y}=\exp\left(-\tau/\tau_{r}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Inserting this expression into 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:tempEqP2"
+
+\end_inset
+
+, yields us Doob's theorem for 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+P_{2}\left(y_{2n},t_{2}|y_{1n},t_{1}\right)=\frac{1}{\sqrt{2\pi\left(1-\rho^{2}\right)}}\exp\left[-\frac{\left(y_{2n}-\rho y_{1n}\right)^{2}}{2\left(1-\rho^{2}\right)}\right]
+\end{equation}
+
+\end_inset
+
+as now 
+\begin_inset Formula $\left(1-\rho^{2}\right)$
+\end_inset
+
+ can be identified with 
+\begin_inset Formula $\sigma_{yr}^{2}=\left(1-e^{-2\tau/\tau_{r}}\right)\sigma_{yn}^{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $\sigma_{yn}^{2}=1$
+\end_inset
+
+.
+ Moreover, 
+\begin_inset Formula $\bar{y}_{\tau}$
+\end_inset
+
+ can be identified with 
+\begin_inset Formula $\rho y_{1n}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\rho y_{1n}=e^{-\tau/\tau_{r}}y_{1n}=e^{-\tau/\tau_{r}}\left(y_{1n}-\bar{y}_{1}\right)+\bar{y}_{1}
+\end{equation}
+
+\end_inset
+
+because 
+\begin_inset Formula $\bar{y}=0$
+\end_inset
+
+ by construction.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Finally, we show that Doob's theorem also holds for the unscaled original
+ variables: 
+\begin_inset Formula $y_{1},y_{2}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+P_{2}\left(y_{2},t_{2}|y_{1},t_{1}\right) & \propto & \exp\left[-\frac{\left(\left(y_{2}-\bar{y}_{2}\right)/\sigma_{y_{2}}-\rho\left(y_{1}-\bar{y}_{1}\right)/\sigma_{y_{1}}\right)^{2}}{2\left(1-\rho^{2}\right)}\right]\\
+ & = & \exp\left[-\frac{\left(y_{2}-\bar{y}_{2}-\rho\left(y_{1}-\bar{y}_{1}\right)\left(\sigma_{y_{2}}/\sigma_{y_{1}}\right)\right)^{2}}{2\left(1-\rho^{2}\right)\sigma_{y_{2}}^{2}}\right]\\
+ & = & \exp\left[-\frac{\left(y_{2}-\left[\bar{y}_{2}+\rho\left(y_{1}-\bar{y}_{1}\right)\left(\sigma_{y_{2}}/\sigma_{y_{1}}\right)\right]\right)^{2}}{2\left(1-\rho^{2}\right)\sigma_{y_{2}}^{2}}\right].
+\end{eqnarray}
+
+\end_inset
+
+We now use that for stationary processes, 
+\begin_inset Formula $\bar{y}_{2}=\bar{y}_{1}$
+\end_inset
+
+ and ditto for the variances (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:equalMeanVarianceStationaryProcesses"
+
+\end_inset
+
+) so 
+\begin_inset Formula 
+\begin{eqnarray}
+P_{2}\left(y_{2},t_{2}|y_{1},t_{1}\right) & \propto & \exp\left[-\frac{\left(\left(y_{2}-\bar{y}_{2}\right)/\sigma_{y_{2}}-\rho\left(y_{1}-\bar{y}_{1}\right)/\sigma_{y_{1}}\right)^{2}}{2\left(1-\rho^{2}\right)}\right]\\
+ & = & \exp\left[-\frac{\left(y_{2}-\bar{y}_{2}-\rho\left(y_{1}-\bar{y}_{1}\right)\left(\sigma_{y_{2}}/\sigma_{y_{1}}\right)\right)^{2}}{2\left(1-\rho^{2}\right)\sigma_{y_{2}}^{2}}\right]\\
+ & = & \exp\left[-\frac{\left(y_{2}-\left[\bar{y}+\rho\left(y_{1}-\bar{y}\right)\right]\right)^{2}}{2\left(1-\rho^{2}\right)\sigma_{y}^{2}}\right],
+\end{eqnarray}
+
+\end_inset
+
+as desired as 
+\begin_inset Formula $\rho=e^{-\tau/\tau_{r}}$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -5497,6 +7081,13 @@ begin{rem}[Poperty of correlation function]
 
 \end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "rem:correlationEven"
+
+\end_inset
+
 A correlation function, 
 \begin_inset Formula $C_{y}$
 \end_inset
@@ -5760,7 +7351,7 @@ This is true for all ergodic, stationary random processes, since our deﬁnition
  6.2.3 [[
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "def:ergodic hypothesis"
+reference "def:ergodic_hypothesis"
 
 \end_inset
 
@@ -5783,7 +7374,7 @@ reference "def:ergodic hypothesis"
  [[defined in 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "def:ergodic hypothesis"
+reference "def:ergodic_hypothesis"
 
 \end_inset
 
@@ -5851,1079 +7442,220 @@ Hence, the process decays exponentially and the relaxation time is given
  
 \end_layout
 
-\begin_layout Chapter
-Useful Tricks/Theorems
-\end_layout
-
 \begin_layout Section
-Taylor Series !
+Spectral densities
 \end_layout
 
-\begin_layout Subsection
-Taylor's Theorem 
-\end_layout
-
-\begin_layout Standard
-If 
-\begin_inset Formula $f$
-\end_inset
-
- is 
-\begin_inset Formula $n+1$
-\end_inset
-
- times continuously differentiable, then 
-\begin_inset Preview
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-[f(a+
-\backslash
-lambda,b+
-\backslash
-mu)=f+
-\backslash
-left(
-\backslash
-lambda
-\backslash
-frac{
-\backslash
-partial}{
-\backslash
-partial x}+
-\backslash
-mu
-\backslash
-frac{
-\backslash
-partial}{
-\backslash
-partial y}
-\backslash
-right)f+
-\backslash
-dots+
-\backslash
-frac{1}{n!}
-\backslash
-left(
-\backslash
-lambda
-\backslash
-frac{
-\backslash
-partial}{
-\backslash
-partial x}+
-\backslash
-mu
-\backslash
-frac{
-\backslash
-partial}{
-\backslash
-partial y}
-\backslash
-right)^{n}f+R_{n},
-\backslash
-]
-\end_layout
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:singleSidedSpectral"
 
 \end_inset
 
+The 
+\emph on
+single-sided spectral density/power spectrum
+\emph default
+ of a real random variable 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
 
-\end_layout
+ is defined by
+\begin_inset Formula 
+\begin{equation}
+S_{y}\left(f\right)=\lim_{T\rightarrow\infty}\frac{2}{T}\left|\int_{-T/2}^{T/2}\left[y\left(t\right)-\bar{y}\right]e^{i2\pi ft}dt\right|^{2},
+\end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $R_{n}$
+\begin_inset Formula $\bar{y}$
 \end_inset
 
- denotes the remainder, 
-\begin_inset Formula $n\in\mathbb{N}$
-\end_inset
-
- and 
-\begin_inset Formula $f$
-\end_inset
-
- and its partial derivatives on the right-hand side are evaluated at 
-\begin_inset Formula $\left(a,b\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-(From 
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://dlmf.nist.gov/1.5.E18
-\end_layout
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Standard
-If 
-\begin_inset Formula $f$
-\end_inset
-
- is infinitely differentiable then 
-\begin_inset Formula $n\rightarrow\infty$
-\end_inset
-
- and 
-\begin_inset Formula $R_{\infty}\rightarrow0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://en.wikipedia.org/wiki/Taylor%27s_theorem
-\end_layout
-
-\end_inset
-
- has a complete and detailed account of the theorem.
-\end_layout
-
-\begin_layout Subsection
-Taylor Expansion
-\end_layout
-
-\begin_layout Standard
-If 
-\begin_inset Formula $f$
-\end_inset
-
- is infinitely differentiable
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-f\left(x_{1},...,x_{d}\right) & = & \sum_{n_{1}=0}^{\infty}\sum_{n_{2}=0}^{\infty}...\sum_{n_{d}=0}^{\infty}\frac{(x_{1}-a_{1})^{n_{1}}...(x_{d}-a_{d})^{n_{d}}}{n_{1}!...n_{d}!}\left.\frac{\partial^{n_{1}+...+n_{d}}}{\partial x_{1}^{n_{1}}...\partial x_{d}^{n_{d}}}f\left(x_{1},...,x_{d}\right)\right|_{x_{1}=a_{1},...,x_{d}=a_{d}}.\label{sub:Taylor-Expansion}
-\end{eqnarray}
-
-\end_inset
-
-Hence, for 2 variables
-\begin_inset Formula 
-\begin{eqnarray*}
-f\left(x,y\right) & = & f\left(a,b\right)+\left(x-a\right)f_{x}\left(a,b\right)+\left(y-b\right)f_{y}\left(a,b\right)\\
- &  & +\frac{1}{2!}\left[\left(x-a\right)^{2}f_{xx}\left(a,b\right)+2\left(x-a\right)\left(y-b\right)f_{xy}\left(a,b\right)+\left(y-b\right)^{2}f_{yy}\left(a,b\right)\right]+...
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Taylor Expansion of a product of functions
-\end_layout
-
-\begin_layout Standard
-Let 
-\begin_inset Formula $f\left(x\right)=g\left(x\right)\times h\left(x\right)$
-\end_inset
-
- then the Taylor expansion of 
-\begin_inset Formula $f$
-\end_inset
-
- , up to order 
-\begin_inset Formula $a$
-\end_inset
-
-, can be found by 
-\begin_inset Formula 
-\begin{eqnarray*}
-f\left(x\right) & = & T_{a}\left[g\left(x\right)\right]T_{a}\left[h\left(x\right)\right]+O\left(x^{a+1}\right),
-\end{eqnarray*}
-
-\end_inset
-
-where 
-\begin_inset Formula $T_{a}\left[d\left(x\right)\right]$
-\end_inset
-
- denotes the Taylor expansion of 
-\begin_inset Formula $d\left(x\right)$
-\end_inset
-
- up to order 
-\begin_inset Formula $a$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Note that in general 
-\begin_inset Formula 
-\begin{eqnarray*}
-T_{a}\left(f\left(x\right)\right) & \neq & T_{a}\left[g\left(x\right)\right]T_{a}\left[h\left(x\right)\right]\\
-\end{eqnarray*}
-
-\end_inset
-
-as 
-\begin_inset Formula $T_{a}\left[g\left(x\right)\right]T_{a}\left[h\left(x\right)\right]$
-\end_inset
-
- can contain terms of order greater than 
-\begin_inset Formula $a$
-\end_inset
-
- (up to 
-\begin_inset Formula $O\left(x^{2a}\right)$
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-If 
-\begin_inset Formula 
-\begin{eqnarray*}
-f\left(x\right) & = & g\left(x\right)\times h\left(x\right)\\
- & = & \sum_{n=0}^{\infty}\frac{x^{n}}{n!}\left.\frac{d^{n}}{dx^{n}}\left(gh\right)\right|_{x=0}\\
- & = & \sum_{n=0}^{\infty}\frac{x^{n}}{n!}\left.\sum_{k=0}^{n}\left(\begin{array}{c}
-n\\
-k
-\end{array}\right)g^{\left(n-k\right)}h^{\left(k\right)}\right|_{x=0}
-\end{eqnarray*}
-
-\end_inset
-
-where in the last equality we used 
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://en.wikipedia.org/wiki/Product_rule#Higher_derivatives
-\end_layout
-
-\end_inset
-
-.
- Hence, 
-\begin_inset Formula 
-\begin{eqnarray*}
-f\left(x\right) & = & \sum_{n=0}^{\infty}\sum_{k=0}^{n}\frac{x^{n}}{k!\left(n-k\right)!}\left.g^{\left(n-k\right)}\left(x\right)h^{\left(k\right)}\left(x\right)\right|_{x=0}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Taylor Expansion of Variables of Comparable Norm
-\end_layout
-
-\begin_layout Standard
-Assume we wish to expand about variables 
-\begin_inset Formula $x_{1},x_{2},...,x_{n}$
-\end_inset
-
- that are all of comparable (and small) norm (i.e.
- 
-\begin_inset Formula $x_{1}\approx x_{2}\approx...\approx x_{n}$
-\end_inset
-
- and all are of the same order).
- Then, the best expansion to use is the following: 
-\begin_inset Formula 
-\begin{eqnarray*}
-f\left(x_{1},x_{2},...,x_{n}\right) & = & \left.f\left(x_{1}\epsilon,x_{2}\epsilon,...,x_{n}\epsilon\right)\right|_{\epsilon=1}\\
- & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\partial_{\epsilon}^{n}f\left(x_{1}\epsilon,x_{2}\epsilon,...,x_{n}\epsilon\right)\right|_{\epsilon=0}\right)_{\epsilon=1}.
-\end{eqnarray*}
-
-\end_inset
-
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-(We will work with 2 variables: 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
- for clarity, a generalization to any number of variables follows the same
- procedure) Suppose we wish to expand up to order 
-\begin_inset Formula $h$
-\end_inset
-
-.
- We will compare the approach proposed above with the normal multivariate
- expansion (see section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Taylor-Expansion"
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Plain Layout
-Since 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
- are of comparable norm 
-\begin_inset Formula 
-\begin{eqnarray*}
-\left.f\left(x\epsilon,y\epsilon\right)\right|_{\epsilon=1} & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\partial_{\epsilon}^{n}f\left(x\epsilon,y\epsilon\right)\right|_{\epsilon=0}\right)_{\epsilon=1}\\
- & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\left(\frac{\partial f}{\partial x\epsilon}\frac{\partial x\epsilon}{\partial\epsilon}+\frac{\partial f}{\partial y\epsilon}\frac{\partial y\epsilon}{\partial\epsilon}\right)^{n}\right|_{\epsilon=0}\right)_{\epsilon=1}\\
- & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\left(x\frac{\partial f}{\partial x\epsilon}+y\frac{\partial f}{\partial y\epsilon}\right)^{n}\right|_{\epsilon=0}\right)_{\epsilon=1}
-\end{eqnarray*}
-
-\end_inset
-
-so notice that in expansion of up to order 
-\begin_inset Formula $h$
-\end_inset
-
- in 
-\begin_inset Formula $\epsilon$
-\end_inset
-
- will include terms 
-\begin_inset Formula $O\left(x^{a}y^{b}\right)$
-\end_inset
-
- where 
-\begin_inset Formula $a+b\leq h$
-\end_inset
-
-.
- So an expansion in 
-\begin_inset Formula $\epsilon$
-\end_inset
-
- up to order 
-\begin_inset Formula $h$
-\end_inset
-
- is a true expansion of up to order 
-\begin_inset Formula $h$
-\end_inset
-
- (this only holds if 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
- are of comparable norms as otherwise the order of 
-\begin_inset Formula $x^{a}y^{b}$
-\end_inset
-
- is undetermined as, for example, 
-\begin_inset Formula $x$
-\end_inset
-
- might be much smaller than 
-\begin_inset Formula $y$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Plain Layout
-Hence, in the case that 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
- are of comparable norm, the advantages of the proposed approach (approach
- 1) over the traditional approach (approach 2) are the following:
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $y/x$
-\end_inset
-
- is not recognized to be a macroscopic number in approach 2 so approach
- 1 is more convenient.
- In general, terms of the form 
-\begin_inset Formula $x^{a}/y^{b}$
-\end_inset
-
- are not correctly interpreted with approach 2: they are not correctly identifie
-d to be of order 
-\begin_inset Formula $a-b$
-\end_inset
-
-.
- Hence, a term like 
-\begin_inset Formula $x^{3h}/y^{2h}$
-\end_inset
-
- appears with approach 1 but with approach 2 will not appear unless we expand
- 
-\begin_inset Formula $x$
-\end_inset
-
- up to order 
-\begin_inset Formula $3h$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-Approach 1 keeps terms up to order 
-\begin_inset Formula $O\left(x^{a}\right)$
-\end_inset
-
- and 
-\begin_inset Formula $O\left(y^{b}\right)$
-\end_inset
-
- so we will have terms appear up to 
-\begin_inset Formula $O\left(x^{a}y^{b}\right)=O\left(x^{a+b}\right)$
-\end_inset
-
- because 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
- are of comparable norms, so if we are interested in terms up to order 
-\begin_inset Formula $h$
-\end_inset
-
- then with approach 2 we have will have to expand up to order 
-\begin_inset Formula $h$
-\end_inset
-
- for both 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
-.
- This is inconvenient because we might end up with terms like 
-\begin_inset Formula $O\left(x^{h}y^{h}\right)$
-\end_inset
-
- which is of order 
-\begin_inset Formula $2h$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-In other words, we expand about this parameter 
-\begin_inset Formula $\epsilon$
-\end_inset
-
- and then set it to 1.
- 
-\end_layout
-
-\begin_layout Subsubsection*
-More details
-\end_layout
-
-\begin_layout Remark*
-The above relation can also be written in the equivalent form
-\begin_inset Formula 
-\begin{eqnarray*}
-f\left(x_{1},x_{2},...,x_{n}\right) & = & \sum_{n=0}^{\infty}\frac{1}{n!}\left.\left(\sum_{i=1}^{n}x_{i}\frac{\partial f}{\partial x_{i}\epsilon}\right)^{n}\right|_{\epsilon=0}.
-\end{eqnarray*}
-
-\end_inset
-
-*
-\end_layout
-
-\begin_layout Subsubsection*
-Usage of this tool/concept
-\end_layout
-
-\begin_layout Standard
-Such Taylor expansions have been used in:
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "note6"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Taylor Expansion of Variables of Hierarchical Norm
-\end_layout
-
-\begin_layout Standard
-[[TODO: This section needs precision and better writing]]
-\end_layout
-
-\begin_layout Standard
-A hierarchical structure of variables 
-\begin_inset Formula $x_{1}>x_{2}>...>x_{n}$
-\end_inset
-
- can also be accommodated by writing
-\begin_inset Formula 
-\begin{eqnarray*}
-f\left(x,y\right) & = & \left.f\left(x_{1}\epsilon,x_{2}\epsilon^{2},...,x_{n}\epsilon^{n}\right)\right|_{\epsilon=1}\\
- & = & \left(\sum_{n=0}^{\infty}\frac{\epsilon^{n}}{n!}\left.\partial_{\epsilon}^{n}f\left(x_{1}\epsilon,x_{2}\epsilon^{2},...,x_{n}\epsilon^{n}\right)\right|_{\epsilon=0}\right)_{\epsilon=1}.
-\end{eqnarray*}
-
-\end_inset
-
-Note the exact structure depends on the data; for example, if 
-\begin_inset Formula $x_{1}$
-\end_inset
-
- is of order 
-\begin_inset Formula $10^{-3}$
-\end_inset
-
- while 
-\begin_inset Formula $x_{2}$
-\end_inset
-
- is of order 
-\begin_inset Formula $10^{-9}$
-\end_inset
-
- when if we multiply 
-\begin_inset Formula $x_{1}$
-\end_inset
-
- by 
-\begin_inset Formula $\epsilon$
-\end_inset
-
-, we should multiply 
-\begin_inset Formula $x_{2}$
-\end_inset
-
- by 
-\begin_inset Formula $\epsilon^{3}$
-\end_inset
-
- (as 
-\begin_inset Formula $x_{2}$
-\end_inset
-
- is of order 
-\begin_inset Formula $O\left(x_{1}^{3}\right)$
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Section
-Useful Identities
-\end_layout
-
-\begin_layout Subsection
-Functions
-\end_layout
-
-\begin_layout Subsubsection
-The Lorentzian
-\end_layout
-
-\begin_layout Standard
-A Lorentzian has the form 
-\begin_inset Formula 
-\begin{eqnarray}
-f\left(x\right) & \propto & \frac{\gamma}{\left(x-x_{0}\right)^{2}+\gamma^{2}}\nonumber \\
- & \propto & 1/\gamma\left(1+\left(\frac{x-x_{0}}{\gamma}\right)^{2}\right),\label{eq:lorentzian function}
-\end{eqnarray}
-
-\end_inset
-
-where 
-\begin_inset Formula $x_{0}$
-\end_inset
-
- is the location of the peak and 
-\begin_inset Formula $\gamma$
-\end_inset
-
- is HWHM.
- The (normalized to unity) Lorentzian distribution is defined to be 
-\begin_inset Formula 
-\begin{eqnarray}
-p\left(x\right) & = & \frac{1}{\pi}\left(\frac{\gamma}{\left(x-x_{0}\right)^{2}+\gamma^{2}}\right)\nonumber \\
- & = & 1/\pi\gamma\left(1+\left(\frac{x-x_{0}}{\gamma}\right)^{2}\right).\label{eq:lorentzian distribution}
-\end{eqnarray}
-
-\end_inset
-
-The lorentzian can be encountered in the following locations:
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:fabry perot near resonance"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:near resonance forced damped SHO energy absorbed"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Algebra
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Finite Geometric series
-\emph default
- 
-\begin_inset FormulaMacro
-\newcommand{\gSeriesFinite}[2]{\frac{1-#1^{#2}}{1-#1}}
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\sum_{k=0}^{n-1}r^{k} & = & \gSeriesFinite rn
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Geometric series
-\emph default
- 
-\begin_inset FormulaMacro
-\newcommand{\gSeries}[1]{\frac{1}{1-#1}}
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray}
-\sum_{k=0}^{\infty}r^{k} & = & \gSeries r\label{eq:geometric series}
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Complex Algebra
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Norm of sum of two complex numbers
-\emph default
- 
-\begin_inset FormulaMacro
-\newcommand{\normSumComplex}[2]{\left|#1\right|^{2}+\left|#2\right|^{2}+2\re{#1#2^{*}}}
+ is the mean value of 
+\begin_inset Formula $y\left(t\right)$
 \end_inset
 
 : 
-\begin_inset Formula 
-\begin{eqnarray*}
-\left|A+B\right|^{2} & = & \normSumComplex AB
-\end{eqnarray*}
-
+\begin_inset Formula $\bar{y}=\int y\left(t\right)p_{1}\left(y,t\right)dt$
 \end_inset
 
+ and where we choose 
+\begin_inset Formula $f$
+\end_inset
 
+ to be positive.
 \end_layout
 
-\begin_layout Enumerate
-
-\emph on
-Squaring a complex number
-\emph default
- 
-\begin_inset FormulaMacro
-\newcommand{\squareCnumber}[2]{#1^{2}-#2^{2}+2i#1#2}
+\begin_layout Standard
+(Note that 
+\begin_inset Formula $y\left(t\right)$
 \end_inset
 
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\left(a+ib\right)^{2} & = & \squareCnumber ab
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Complex division
-\emph default
- 
-\begin_inset FormulaMacro
-\newcommand{\cDivide}[4]{\frac{\left(#1#3+#2#4\right)+i\left(#2#3-#1#4\right)}{#3^{2}+#4^{2}}}
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{a+bi}{c+di} & = & \cDivide abcd
-\end{eqnarray*}
-
-\end_inset
-
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-From 
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://mathworld.wolfram.com/ComplexDivision.html
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Trig
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Double angle cosine
-\emph default
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\cos2\theta & = & \cos^{2}\theta-\sin^{2}\theta\\
- & = & 2\cos^{2}\theta-1\\
- & = & 1-2\sin^{2}\theta
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Cosine sum formula
-\emph default
- 
-\begin_inset FormulaMacro
-\newcommand{\cosSum}[2]{\cos\left(#1\right)\cos\left(#2\right)-\sin\left(#1\right)\sin\left(#2\right)}
-\end_inset
-
-: 
-\begin_inset Formula 
-\begin{eqnarray*}
-\cos\left(u+v\right) & = & \cosSum uv
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Cosine difference formula
-\emph default
- 
-\begin_inset FormulaMacro
-\newcommand{\cosDiff}[2]{\cos\left(#1\right)\cos\left(#2\right)+\sin\left(#1\right)\sin\left(#2\right)}
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\cos\left(u-v\right) & = & \cosDiff uv
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Sine difference formula
-\emph default
- 
-\begin_inset FormulaMacro
-\newcommand{\sinDiff}[2]{\sin\left(#1\right)\cos\left(#2\right)-\cos\left(#1\right)\sin\left(#2\right)}
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\sin\left(u-v\right) & = & \sinDiff uv
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Cosine Sum to Product formula
-\emph default
- 
-\begin_inset FormulaMacro
-\newcommand{\cosStoP}[2]{2\cos\left(\frac{#1+#2}{2}\right)\cos\left(\frac{#1-#2}{2}\right)}
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\cos u+\cos v & = & \cosStoP uv
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Cosine Diff to Product formula
-\emph default
- 
-\begin_inset FormulaMacro
-\newcommand{\cosDtoP}[2]{-2\sin\left(\frac{#1+#2}{2}\right)\sin\left(\frac{#1-#2}{2}\right)}
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\cos u-\cos v & = & \cosDtoP uv
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Cosine of 
-\begin_inset Formula $\tan^{-1}$
-\end_inset
-
- 
-\emph default
-
-\begin_inset FormulaMacro
-\newcommand{\cosAtan}[1]{\frac{1}{\sqrt{1+#1^{2}}}}
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\cos\left(\tan^{-1}a\right) & = & \cosAtan a
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Sine of 
-\begin_inset Formula $\tan^{-1}$
-\end_inset
-
- 
-\emph default
-
-\begin_inset FormulaMacro
-\newcommand{\sinAtan}[1]{\frac{#1}{\sqrt{1+#1^{2}}}}
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\sin\left(\tan^{-1}a\right) & = & \sinAtan a
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Complex Trig
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Complex exponential of 
-\begin_inset Formula $\tan^{-1}$
-\end_inset
-
- 
-\emph default
-
-\begin_inset FormulaMacro
-\newcommand{\expiAtan}[1]{\frac{1+i#1}{\sqrt{1+#1^{2}}}}
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{eqnarray*}
-\exp\left(i\tan^{-1}a\right) & = & \expiAtan a
-\end{eqnarray*}
-
-\end_inset
-
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-We have that 
-\begin_inset Formula 
-\begin{eqnarray*}
-\exp\left(i\tan^{-1}a\right) & = & \cos\left(\tan^{-1}a\right)+i\sin\left(\tan^{-1}a\right)\\
- & = & \cosAtan a+i\sinAtan a\\
- & = & \frac{1+ia}{\sqrt{1+a^{2}}}
-\end{eqnarray*}
-
-\end_inset
-
-This could have been also determined with the Mathematica command: FullSimplify[
-ExpToTrig[Exp[I*ArcTan[a]]]].
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Fourier Transform
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Shift property
-\emph default
-:
+ is not a realization.) The convention that we used for the Fourier transform
+ is
 \begin_inset Formula 
 \begin{eqnarray}
-\mathcal{F}\left(g\left(t-t_{0}\right)\right) & = & \mathcal{F}\left(g\left(t\right)\right)e^{-i\omega t_{0}}.\label{eq:shiftPropertyFourierTransforms}\\
-\nonumber 
+\tilde{y}\left(f\right) & \equiv & \int_{-\infty}^{\infty}y\left(t\right)e^{i2\pi ft}dt\\
+y\left(t\right) & \equiv & \int_{-\infty}^{\infty}\tilde{y}\left(f\right)e^{-i2\pi ft}df.
 \end{eqnarray}
 
 \end_inset
 
-*
+In general, 
+\begin_inset Formula $\tilde{y}\left(f\right)$
+\end_inset
+
+ might not not exist (for example if 
+\begin_inset Formula $y\left(t\right)=1$
+\end_inset
+
+).
+ To get around this problem, use the following tricks:
+\end_layout
+
+\begin_layout Enumerate
+Construct a function that is the truncation of 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+y_{T}\left(t\right)\equiv\begin{cases}
+y\left(t\right) & -T/2<t<T/2\\
+0 & \mbox{otherwise. }
+\end{cases}
+\end{equation}
+
+\end_inset
+
+Then, because 
+\begin_inset Formula $y_{T}$
+\end_inset
+
+ is defined over a finite interval then its Fourier transform must exist.
+\end_layout
+
+\begin_layout Enumerate
+By making use of Parseval's theorem and by assuming that 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ is real, it can be shown that the limit
+\begin_inset Formula 
+\begin{equation}
+\limit T{\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left[y\left(t\right)\right]^{2}dt=\limit T{\infty}\frac{2}{T}\int_{0}^{\infty}\left|\tilde{y}_{T}\left(f\right)\right|^{2}df
+\end{equation}
+
+\end_inset
+
+exists*
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
+First, we show that
+\begin_inset Formula 
+\begin{equation}
+\int_{-T/2}^{T/2}\left[y\left(t\right)\right]^{2}dt=\int_{0}^{\infty}\left|\tilde{y}_{T}\left(f\right)\right|^{2}df
+\end{equation}
+
+\end_inset
+
+We have that
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\int_{-T/2}^{T/2}\left[y\left(t\right)\right]^{2}dt=\int_{-\infty}^{\infty}\left[y_{T}\left(t\right)\right]^{2}dt
+\end{equation}
+
+\end_inset
+
+because 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\begin{equation}
+y_{T}\left(t\right)\equiv\begin{cases}
+y\left(t\right) & -T/2<t<T/2\\
+0 & \mbox{otherwise. }
+\end{cases}
+\end{equation}
+
+\end_inset
+
+We then use Parseval's theorem (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ParsevalThmcontinuousEq"
+
+\end_inset
+
+) to write that
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}\left[y_{T}\left(t\right)\right]^{2}dt=\int_{-\infty}^{\infty}\left|\tilde{y}_{T}\left(f\right)\right|^{2}df.
+\end{equation}
+
+\end_inset
+
+We then make use of the fact that 
+\begin_inset Formula $y$
+\end_inset
+
+ is real and so 
+\begin_inset Formula $\tilde{y}_{T}^{*}\left(f\right)=\tilde{y}_{T}\left(-f\right)$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:FourierRealFunction"
+
+\end_inset
+
+).
+ We obtain
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{-T/2}^{T/2}\left[y\left(t\right)\right]^{2}dt & = & \int_{-\infty}^{\infty}\left|\tilde{y}_{T}\left(f\right)\right|^{2}df\\
+ & = & \int_{0}^{\infty}\left|\tilde{y}_{T}\left(f\right)\right|^{2}df+\int_{-\infty}^{0}\left|\tilde{y}_{T}\left(f\right)\right|^{2}df\\
+ & = & \int_{0}^{\infty}\left[\tilde{y}_{T}\left(f\right)\right]^{2}df-\int_{\infty}^{0}\left[\tilde{y}_{T}\left(-f\right)\right]^{2}df\\
+ & = & \int_{0}^{\infty}\left[\tilde{y}_{T}\left(f\right)\right]^{2}df+\int_{0}^{\infty}\left[\tilde{y}_{T}\left(-f\right)\right]^{2}df\\
+ & = & \int_{0}^{\infty}\left[\tilde{y}_{T}\left(f\right)\right]^{2}df+\int_{0}^{\infty}\left[\tilde{y}_{T}^{*}\left(f\right)\right]^{2}df\\
+ & = & \int_{0}^{\infty}\left[\tilde{y}_{T}\left(f\right)\right]^{2}df+\int_{0}^{\infty}\left[\tilde{y}_{T}\left(f\right)\right]^{2}df\\
+ & = & 2\int_{0}^{\infty}\left[\tilde{y}_{T}\left(f\right)\right]^{2}df.
+\end{eqnarray}
+
+\end_inset
+
+The second step is to prove the following claim:
+\end_layout
+
+\begin_layout Claim
 
 \family roman
 \series medium
@@ -6936,11 +7668,188 @@ status collapsed
 \uwave off
 \noun off
 \color none
+\begin_inset Formula $\int_{-T/2}^{T/2}\left[y\left(t\right)\right]^{2}dt$
+\end_inset
+
+ diverges linearly in 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We have that 
+\begin_inset Formula $y$
+\end_inset
+
+ is a bounded function and so 
 \begin_inset Formula 
-\begin{eqnarray*}
-\mathcal{F}\left[\hat{a}_{c}\left(t-t_{0}\right)\right] & = & \int e^{-i\omega s}g\left(s-t_{0}\right)ds\\
- & = & e^{-i\omega t_{0}}\int e^{-i\omega\left(x+t_{0}\right)}g\left(x\right)dx
-\end{eqnarray*}
+\begin{equation}
+\int_{-T/2}^{T/2}\left[y\left(t\right)\right]^{2}dt<\int_{-T/2}^{T/2}M^{2}dt
+\end{equation}
+
+\end_inset
+
+which diverges like 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Note that it is reasonable that 
+\begin_inset Formula $y$
+\end_inset
+
+ be bounded (a.s.) because it is a random variable with a finite variance.
+\end_layout
+
+\begin_layout Plain Layout
+Hence, 
+\begin_inset Formula 
+\begin{equation}
+\limit T{\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left[y\left(t\right)\right]^{2}dt
+\end{equation}
+
+\end_inset
+
+will be well behaved.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+Note that the the mean is removed from the definition of the spectral density
+ because we do not wish to have an uninteresting delta function in 
+\begin_inset Formula $S_{y}\left(f\right)$
+\end_inset
+
+ at zero frequency*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ is of the form 
+\begin_inset Formula $\bar{y}+y^{'}\left(t\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $y^{'}\left(t\right)$
+\end_inset
+
+ has only time-dependent terms.
+ Moreover, the fourier transform of a constant is a delta function.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+The spectral density function is directly related to the correlation function
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "def:Correlation Function"
+
+\end_inset
+
+) by 
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{\infty}S_{y}\left(f\right)df=C_{y}\left(0\right)=\sigma_{y}^{2}.\label{eq:spectralCorrelation}
+\end{equation}
+
+\end_inset
+
+(note that we integrate only over positive frequencies because we are dealing
+ with the single-sided spectral density)*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that, by letting 
+\begin_inset Formula $g\left(f\right)\equiv\mathcal{F}\left(y_{T}\left(t\right)-\bar{y}\right)$
+\end_inset
+
+ where 
+\begin_inset Formula 
+\begin{equation}
+y_{T}\left(t\right)\equiv\begin{cases}
+y\left(t\right) & -T/2<t<T/2\\
+0 & \mbox{otherwise,}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{0}^{\infty}S_{y}\left(f\right)df & = & \int_{0}^{\infty}\lim_{T\rightarrow\infty}\frac{2}{T}\left|\int_{-T/2}^{T/2}\left[y\left(t\right)-\bar{y}\right]e^{i2\pi ft}dt\right|^{2}df\\
+ & = & \int_{0}^{\infty}\lim_{T\rightarrow\infty}\frac{2}{T}\left|g\left(f\right)\right|^{2}df\\
+ & = & \lim_{T\rightarrow\infty}\frac{2}{T}\int_{0}^{\infty}\left|g\left(f\right)\right|^{2}df\\
+ & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-\infty}^{\infty}\left|g\left(f\right)\right|^{2}df,
+\end{eqnarray}
+
+\end_inset
+
+where we have used that 
+\begin_inset Formula $\left|g\left(f\right)\right|^{2}$
+\end_inset
+
+ is an even function (as 
+\begin_inset Formula $g\left(f\right)=g^{*}\left(-f\right)$
+\end_inset
+
+ - see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:FourierRealFunction"
+
+\end_inset
+
+).
+ Hence,
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{0}^{\infty}S_{y}\left(f\right)df & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-\infty}^{\infty}\left|g\left(f\right)\right|^{2}df\\
+ & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-\infty}^{\infty}\left|\mathcal{F}^{-1}\left\{ g\left(f\right)\right\} \right|^{2}dt\\
+ & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-\infty}^{\infty}\left(y_{T}\left(t\right)-\bar{y}\right)^{2}dt\\
+ & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left(y_{T}\left(t\right)-\bar{y}\right)^{2}dt,
+\end{eqnarray}
+
+\end_inset
+
+where we made use of Parseval's theorem (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ParsevalThmcontinuousEq"
+
+\end_inset
+
+) and where we used that by definition (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "def:Correlation Function"
+
+\end_inset
+
+), we have that 
+\begin_inset Formula 
+\begin{eqnarray}
+C_{y}\left(0\right) & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left(y\left(t\right)-\bar{y}\right)\left(y\left(t\right)-\bar{y}\right)dt\\
+ & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left(y\left(t\right)-\bar{y}\right)^{2}dt.
+\end{eqnarray}
 
 \end_inset
 
@@ -6950,6 +7859,628 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+ section 6.4.2)
+\end_layout
+
+\begin_layout Subsection
+Notes and conventions
+\end_layout
+
+\begin_layout Remark
+The convention that we used for the Fourier transform is
+\begin_inset Formula 
+\begin{eqnarray}
+\tilde{y}\left(f\right) & \equiv & \int_{-\infty}^{\infty}y\left(t\right)e^{i2\pi ft}dt\\
+y\left(t\right) & \equiv & \int_{-\infty}^{\infty}\tilde{y}\left(f\right)e^{-i2\pi ft}df.
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The double-sided spectral density is defined by
+\begin_inset Formula 
+\begin{equation}
+S_{y}^{\mbox{double-sided}}\left(f\right)=\frac{1}{2}S_{y}\left(\left|f\right|\right),
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $f\in\mathbb{R}$
+\end_inset
+
+ and where 
+\begin_inset Formula $S_{y}$
+\end_inset
+
+ is the single-sided spectral density defined in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:singleSidedSpectral"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+In physics, the spectral density has units of 
+\begin_inset Formula $y^{2}$
+\end_inset
+
+/Hz.
+\end_layout
+
+\begin_layout Subsection
+Interpretation in Science
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+Power spectrum interpretation 
+\end_layout
+
+\begin_layout Standard
+Consider the electric field, 
+\begin_inset Formula $E\left(t\right)$
+\end_inset
+
+, coming from a complicated source (such as a distant galaxy, where 
+\begin_inset Formula $E$
+\end_inset
+
+ is the superposition of an enormous number of atoms/sources/etc ...) then
+ we have no closed form expression for 
+\begin_inset Formula $E$
+\end_inset
+
+ and it has to be modeled with a random process.
+ In this case, the spectral density is proportional to the power per unit
+ frequency:
+\begin_inset Formula 
+\begin{equation}
+S_{E}\left(f\right)\propto\frac{d\mathcal{E}}{dt}\frac{1}{df},
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $d\mathcal{E}/dt\propto\left|E\right|^{2}$
+\end_inset
+
+ represents the power (see for example 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:simple_classical_intensity_SI"
+
+\end_inset
+
+)*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Indeed, by 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:spectralCorrelation"
+
+\end_inset
+
+, the total power in 
+\begin_inset Formula $S_{E}$
+\end_inset
+
+ is equal to:
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{\infty}S_{E}\left(f\right)df=\lim_{T\rightarrow\infty}\frac{1}{T}\int\left|E\left(t\right)-\bar{E}\right|^{2}dt,
+\end{equation}
+
+\end_inset
+
+which represents the time-averaged power (the power is proportional 
+\begin_inset Formula $\propto\left|E\right|^{2}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Plain Layout
+So we can treat 
+\begin_inset Formula $S_{E}\left(f\right)$
+\end_inset
+
+ as the power per unit frequency, because when it integrated it gives us
+ the total power.
+\end_layout
+
+\end_inset
+
+.
+ Moreover, note that diffraction gratings measure 
+\begin_inset Formula $\propto S_{E}\left(f\right)$
+\end_inset
+
+:
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename DensityFunctionPower.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Taken from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Noise interpretation 
+\end_layout
+
+\begin_layout Standard
+Suppose we are measuring some random variable 
+\begin_inset Formula $y$
+\end_inset
+
+ (which could for example be the position of a particle), then there will
+ be some noise associated with the measurement.
+ For instance, 
+\begin_inset Formula $y$
+\end_inset
+
+ has a finite variance, which we will denote by 
+\begin_inset Formula $\sigma_{y}^{2}$
+\end_inset
+
+.
+ Then, using 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:spectralCorrelation"
+
+\end_inset
+
+, we have that
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{\infty}S_{E}\left(f\right)df=\sigma_{y}^{2}.
+\end{equation}
+
+\end_inset
+
+Hence, 
+\begin_inset Formula $\sqrt{S_{y}\left(f\right)}$
+\end_inset
+
+ can be interpreted as the rms value of 
+\begin_inset Formula $y$
+\end_inset
+
+'s oscillations at frequency 
+\begin_inset Formula $f$
+\end_inset
+
+ per unit frequency (so 
+\begin_inset Formula $\sqrt{S_{y}\left(f\right)\Delta f}$
+\end_inset
+
+ is the noise over the bandwidth 
+\begin_inset Formula $\Delta f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A concrete example is that of the detection of gravitational waves and LIGO:
+ laser interferometry is used to monitor the separation 
+\begin_inset Formula $x\left(t\right)$
+\end_inset
+
+ between the mirrors.
+ The following figure shows the square root of the spectral density of the
+ noise-induced fluctuations in 
+\begin_inset Formula $x(t)$
+\end_inset
+
+:
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename noise spectrum LIGO.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+The minimum of the noise spectrum is at 
+\begin_inset Formula $f=150$
+\end_inset
+
+ Hz.
+ If one is searching, amidst this noise, for a broad-band gravitational-wave
+ signal, then one might filter the interferometer output so one’s data analysis
+ sees only a frequency band of order the frequency of interest: 
+\begin_inset Formula $\Delta f\approx f$
+\end_inset
+
+.
+ Then, the rms noise in this band will be 
+\begin_inset Formula $\sqrt{S_{x}\left(f\right)\times f}\approx10^{-19}\mbox{ m}/\sqrt{\mbox{Hz}}\times\sqrt{150\mbox{Hz}}\approx10^{-18}$
+\end_inset
+
+m, which is 
+\begin_inset Formula $\sim$
+\end_inset
+
+1/1000 the diameter of the nucleus of an atom.
+ If the gravitational wave with frequency ~150 Hz changes the mirrors’ separatio
+n by much more than this miniscule amount, it should be detectable!
+\begin_inset Quotes erd
+\end_inset
+
+ (From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "blandfordCP"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The Wiener-Khintchine Theorem
+\end_layout
+
+\begin_layout Standard
+(The Wiener-Khintchine Theorem) For any random process 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ the correlation function 
+\begin_inset Formula $C_{y}\left(\tau\right)$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:Correlation Function"
+
+\end_inset
+
+) and the single-sided spectral density (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:singleSidedSpectral"
+
+\end_inset
+
+) are cosine transforms of each other:
+\begin_inset Formula 
+\begin{eqnarray}
+C_{y}\left(\tau\right) & = & \int_{0}^{\infty}S_{y}\left(f\right)\cos\left(2\pi f\tau\right)df\\
+S_{y}\left(f\right) & = & 4\int_{0}^{\infty}C_{y}\left(\tau\right)\cos\left(2\pi f\tau\right)d\tau.
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+ now denote 
+\begin_inset Formula $y\left(t\right)-\bar{y}$
+\end_inset
+
+.
+ Let
+\begin_inset Formula 
+\begin{equation}
+y_{T}\left(t\right)\equiv\begin{cases}
+y\left(t\right) & -T/2<t<T/2\\
+0 & \mbox{otherwise. }
+\end{cases}
+\end{equation}
+
+\end_inset
+
+Further, use 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:generalizationParseval"
+
+\end_inset
+
+ with 
+\begin_inset Formula $g=y_{T}\left(t\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $h=y_{T}\left(t+\tau\right)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray}
+\int dt\left(y_{T}\left(t\right)y_{T}^{*}\left(t+\tau\right)+y_{T}\left(t+\tau\right)y_{T}\left(t\right)\right) & = & \int df\left(\tilde{y_{T}}\left(f\right)\tilde{y_{T}}^{*}\left(t+\tau\right)+\tilde{y_{T}}\left(t+\tau\right)\tilde{y_{T}}^{*}\left(f\right)\right).
+\end{eqnarray}
+
+\end_inset
+
+However, we have assume that 
+\begin_inset Formula $y_{T}\left(t\right)$
+\end_inset
+
+ is real and by the shift property of Fourier transforms (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "thm: shiftPropertyFourier"
+
+\end_inset
+
+), we have that 
+\begin_inset Formula $\tilde{y_{T}}\left(t+\tau\right)=\tilde{y}_{T}\left(t\right)e^{-i2\pi f\tau}$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\begin{eqnarray}
+2\int dty_{T}\left(t\right)y_{T}\left(t+\tau\right) & = & \int df\left(\tilde{y_{T}}\left(f\right)\tilde{y_{T}}^{*}\left(f\right)e^{-i2\pi f\tau}+\tilde{y_{T}}\left(f\right)\tilde{y_{T}}^{*}\left(f\right)e^{i2\pi f\tau}\right)\\
+ & = & 2\int df\left|\tilde{y_{T}}\left(f\right)\right|^{2}\cos\left(2\pi f\tau\right)\\
+\end{eqnarray}
+
+\end_inset
+
+Dividing by 2:
+\begin_inset Formula 
+\begin{eqnarray}
+\int dty_{T}\left(t\right)y_{T}\left(t+\tau\right) & = & \int df\left|\tilde{y_{T}}\left(f\right)\right|^{2}\cos\left(2\pi f\tau\right).
+\end{eqnarray}
+
+\end_inset
+
+Hence,
+\begin_inset Formula 
+\begin{eqnarray}
+C_{y}\left(\tau\right) & = & \limit T{\infty}\frac{1}{T}\int dty_{T}\left(t\right)y_{T}\left(t+\tau\right)\\
+ & = & \limit T{\infty}\frac{1}{T}\int_{-\infty}^{\infty}df\left|\tilde{y_{T}}\left(f\right)\right|^{2}\cos\left(2\pi f\tau\right).\\
+ & = & \int_{0}^{\infty}df\left(\limit T{\infty}\frac{2}{T}\left|\tilde{y_{T}}\left(f\right)\right|^{2}\right)\cos\left(2\pi f\tau\right).
+\end{eqnarray}
+
+\end_inset
+
+Then use that 
+\begin_inset Formula $S_{y}\left(f\right)$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "def:singleSidedSpectral"
+
+\end_inset
+
+) can be written in the following form:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{eqnarray}
+S_{y}\left(f\right) & = & \lim_{T\rightarrow\infty}\frac{2}{T}\left|\int_{-T/2}^{T/2}y\left(t\right)e^{i2\pi ft}dt\right|^{2}\\
+ & = & \lim_{T\rightarrow\infty}\frac{2}{T}\left|\int_{-\infty}^{\infty}y_{T}\left(t\right)e^{i2\pi ft}dt\right|^{2}\\
+ & = & \lim_{T\rightarrow\infty}\frac{2}{T}\left|y_{T}\left(f\right)\right|^{2}.
+\end{eqnarray}
+
+\end_inset
+
+Hence,
+\begin_inset Formula 
+\begin{equation}
+C_{y}\left(\tau\right)=\int_{0}^{\infty}dfS_{y}\left(f\right)\cos\left(2\pi f\tau\right).
+\end{equation}
+
+\end_inset
+
+To obtain the other equality, take the inverse cosine transform:
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{-\infty}^{\infty}C_{y}\left(\tau\right)\cos\left(2\pi f\tau\right)d\tau & = & \int_{-\infty}^{\infty}d\tau\int_{0}^{\infty}dxS_{y}\left(x\right)\cos\left(2\pi x\tau\right)\cos\left(2\pi f\tau\right)\\
+ & = & \int_{0}^{\infty}dxS_{y}\left(x\right)\left(\int_{-\infty}^{\infty}d\tau\cos\left(2\pi x\tau\right)\cos\left(2\pi f\tau\right)\right).
+\end{eqnarray}
+
+\end_inset
+
+Now, 
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{-\infty}^{\infty}d\tau\cos\left(2\pi fx\right)\cos\left(2\pi f\tau\right) & = & \int_{-\infty}^{\infty}d\tau\cosPtoS{2\pi f\tau}{2\pi\tau x}\\
+ & = & \int_{-\infty}^{\infty}d\tau\left[\exp\left(2\pi i\tau\left(f-x\right)\right)+\exp\left(2\pi i\tau\left(f+x\right)\right)+c.c.\right]\\
+ & = & 2\delta\left(f-x\right)+2\delta\left(f+x\right).\\
+\end{eqnarray}
+
+\end_inset
+
+Hence,
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{-\infty}^{\infty}C_{y}\left(\tau\right)\cos\left(2\pi f\tau\right)d\tau & = & 2S_{y}\left(f\right)+2S_{y}\left(-f\right)\\
+ & = & 2S_{y}\left(f\right)
+\end{eqnarray}
+
+\end_inset
+
+but 
+\begin_inset Formula $S_{y}\left(-f\right)=0$
+\end_inset
+
+ because 
+\begin_inset Formula $S_{y}$
+\end_inset
+
+ is only defined over positive frequencies.
+ We also have that 
+\begin_inset Formula $\cos$
+\end_inset
+
+ is an even function and the correlation function itself is even (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "rem:correlationEven"
+
+\end_inset
+
+) so we can write that
+\begin_inset Formula 
+\begin{equation}
+2\int_{0}^{\infty}C_{y}\left(\tau\right)\cos\left(2\pi f\tau\right)d\tau=2S_{y}\left(f\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Note that the factor of 4 comes from the fact that 
+\begin_inset Formula $S_{y}\left(f\right)$
+\end_inset
+
+ is a one-sided spectral density.
+ Moreover, because of the Wiener-Khintchine theorem, it is clear that 
+\begin_inset Formula $C_{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{y}$
+\end_inset
+
+ carry the same amount of information.
 \end_layout
 
 \begin_layout Chapter
