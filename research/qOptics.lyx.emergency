@@ -8,11 +8,9 @@
 \end_preamble
 \use_default_options true
 \begin_modules
+theorems-ams
 eqs-within-sections
 figs-within-sections
-theorems-ams-bytype
-theorems-ams-extended-bytype
-logicalmkup
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -2879,29 +2877,23 @@ Fundamentals of QO
 \end_layout
 
 \begin_layout Section
-The Different pictures in Quantum physics
+Different pictures
 \end_layout
 
 \begin_layout Subsection
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Heisenberg-picture"
-
-\end_inset
-
 Heisenberg picture
 \end_layout
 
 \begin_layout Standard
-Consider a Hamiltonian 
+Consider the Hamiltonian 
 \begin_inset Formula $H$
 \end_inset
 
-, then the Heisenberg picture is defined in the following way: 
+, then the Heisenberg picture is defined in the following way 
 \begin_inset Formula 
 \begin{eqnarray}
 \hat{A}_{H}\left(t\right) & = & \hat{U}^{\dagger}\left(t,t_{0}\right)\hat{A}\hat{U}\left(t,t_{0}\right)\\
-\left|\psi_{H}\left(t\right)\right\rangle  & = & \left|\psi\left(t_{0}\right)\right\rangle ,
+\left|\psi_{H}\left(t\right)\right\rangle  & = & \left|\psi\left(t_{0}\right)\right\rangle .
 \end{eqnarray}
 
 \end_inset
@@ -2910,20 +2902,7 @@ where
 \begin_inset Formula $\hat{A}$
 \end_inset
 
- is an operator, and 
-\begin_inset Formula $\left|\psi\right\rangle $
-\end_inset
-
- a ket, in the Schrodinger picture, the subscript 
-\begin_inset Formula $H$
-\end_inset
-
- refers to the Heisenberg picture of the associated quantity (e.g.
- 
-\begin_inset Formula $\hat{A}_{H}$
-\end_inset
-
- is an operator in the Heisenberg picture) and 
+ is an operator and 
 \begin_inset Formula $\hat{U}\left(t,t_{0}\right)$
 \end_inset
 
@@ -2981,7 +2960,7 @@ The time evolution of an operator is given by (assuming that
 
 *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -3027,52 +3006,41 @@ name "sub:InteractionPicture"
 
 \end_inset
 
-
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Interaction picture
-\end_layout
-
-\end_inset
-
 Interaction picture
 \end_layout
 
 \begin_layout Standard
 Consider a Hamiltonian of the form 
-\begin_inset Formula $H=H_{0}+H_{int}$
+\begin_inset Formula $H=H_{0}+H_{SI}$
 \end_inset
 
-, where I will refer to 
-\begin_inset Formula $H_{int}$
+, where 
+\begin_inset Formula $H_{SI}$
 \end_inset
 
- as the interaction Hamiltonian (in the Schrodinger picture).
- Then, in reference to the Schrodinger picture (whose elements will be denoted
- with the subscript 
-\begin_inset Formula $S$
-\end_inset
-
-), the interaction picture elements, which will be denoted with subscript
- 
-\begin_inset Formula $I$
-\end_inset
-
-, are defined in the following way
+ is called the interaction Hamiltonian.
+ Then, in reference to the original picture, the interaction picture elements
+ are defined in the following way
 \begin_inset Formula 
 \begin{eqnarray}
 \left|\psi_{I}\left(t\right)\right\rangle  & = & U_{0}^{\dagger}\left(t\right)\left|\psi_{S}\left(t\right)\right\rangle \\
 A_{I}\left(t\right) & = & U_{0}^{\dagger}\left(t\right)A_{S}\left(t\right)U_{0}\left(t\right)\\
 \hat{\rho}_{I}\left(t\right) & = & U_{0}^{\dagger}\left(t\right)\hat{\rho}_{S}\left(t\right)U_{0}\left(t\right)\\
 H_{0,I} & = & H_{0}\\
-H_{I,int} & = & U_{0}^{\dagger}\left(t\right)H_{int}\left(t\right)U_{0}\left(t\right)\label{eq:interactionHI}
+H_{I,SI} & = & U_{0}^{\dagger}\left(t\right)H_{SI}\left(t\right)U_{0}\left(t\right)\label{eq:interactionHI}
 \end{eqnarray}
 
 \end_inset
 
 where 
+\begin_inset Formula $I$
+\end_inset
+
+ denotes the interactions picture, and 
+\begin_inset Formula $S$
+\end_inset
+
+ refers to the original picture (be it Schrodinger or Heisenberg), and 
 \begin_inset Formula $U_{0}$
 \end_inset
 
@@ -3090,8 +3058,7 @@ where
 \end_inset
 
 .
- The interaction picture is equivalent to any other picture because expectation
- values are conserved, i.e.
+ The interaction picture is equivalent to any other picture because
 \begin_inset Formula 
 \begin{equation}
 \mbox{tr}\left(\hat{\rho}_{I}\hat{A}_{I}\right)=\mbox{tr}\left(\hat{\rho}_{S}\hat{A}_{S}\right).
@@ -3099,48 +3066,16 @@ where
 
 \end_inset
 
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Indeed, 
-\begin_inset Formula 
-\begin{eqnarray}
-\mbox{tr}\left(\hat{\rho}_{I}\hat{A}_{I}\right) & = & \mbox{tr}\left(U_{0}^{\dagger}\left(t\right)\hat{\rho}_{S}\left(t\right)U_{0}\left(t\right)U_{0}^{\dagger}\left(t\right)A_{S}\left(t\right)U_{0}\left(t\right)\right)\\
- & = & \mbox{tr}\left(U_{0}^{\dagger}\left(t\right)\hat{\rho}_{S}\left(t\right)A_{S}\left(t\right)U_{0}\left(t\right)\right)\\
- & = & \mbox{tr}\left(\hat{\rho}_{S}\hat{A}_{S}\right)
-\end{eqnarray}
-
-\end_inset
-
-because the trace is invariant under unitary transformations.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Time evolution
-\end_layout
-
-\begin_layout Assumption
+The time evolution is given by (assuming that 
 \begin_inset Formula $H_{0}$
 \end_inset
 
- is time-independent.
-\end_layout
-
-\begin_layout Standard
-The time evolution of states, operators and density operators is given by
- 
+ is time-independent) 
 \begin_inset Formula 
 \begin{eqnarray}
-i\hbar\frac{d}{dt}\left|\psi_{I}\left(t\right)\right\rangle  & = & H_{I,int}\left(t\right)\left|\psi_{I}\left(t\right)\right\rangle \\
+i\hbar\frac{d}{dt}\left|\psi_{I}\left(t\right)\right\rangle  & = & H_{I,SI}\left(t\right)\left|\psi_{I}\left(t\right)\right\rangle \\
 \frac{d}{dt}A_{I}\left(t\right) & = & \frac{i}{\hbar}\left[H_{0},A_{I}\right]\\
-i\hbar\frac{d}{dt}\hat{\rho}_{I}\left(t\right) & = & \left[H_{I,int}\left(t\right),\hat{\rho}_{I}\left(t\right)\right].
+i\hbar\frac{d}{dt}\hat{\rho}_{I}\left(t\right) & = & \left[H_{I,SI}\left(t\right),\hat{\rho}_{I}\left(t\right)\right].
 \end{eqnarray}
 
 \end_inset
@@ -5003,7 +4938,7 @@ key "Danilishin2012"
 \end_layout
 
 \begin_layout Subsection
-Spectral densities (double-sided) for 2 photon formalism
+Spectral densities (double-sised) for 2 photon formalism
 \end_layout
 
 \begin_layout Standard
@@ -17907,21 +17842,6 @@ Say
 \end_inset
 
 
-\begin_inset Formula $T$
-\end_inset
-
- is also 
-\begin_inset Formula $\approx10^{-3}$
-\end_inset
-
- - see 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "advancedLIGOdata"
-
-\end_inset
-
-.
 \end_layout
 
 \end_inset
@@ -17986,7 +17906,7 @@ with
 
  *
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 We obtain that 
@@ -18226,65 +18146,6 @@ Then use
 
 \end_layout
 
-\begin_layout Plain Layout
-Equivalently, we can follow the control approach as illustrated in: 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename controlDiagramDetunedCavity.svg
-	scale 80
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-A diagram visualizing the detuned cavity.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
- We would obtain that
-\begin_inset Formula 
-\begin{equation}
-\vec{\beta}=\left(-\sqrt{R}+\sqrt{T}\left[I-\sqrt{R}\mathbf{R}_{\theta}\mathbf{M}\mathbf{R}_{\theta}\right]^{-1}\mathbf{R}_{\theta}\mathbf{M}\mathbf{R}_{\theta}\sqrt{T}\right)\vec{\alpha}.
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Claim*
 :
 \begin_inset CommandInset label
@@ -18298,7 +18159,7 @@ name "note6"
 \end_inset
 
 , 
-\begin_inset Formula $4\kappa/T$
+\begin_inset Formula $\kappa$
 \end_inset
 
  and 
@@ -18515,33 +18376,18 @@ http://www.ligo.caltech.edu/advLIGO/scripts/ref_des.shtml
 \end_inset
 
  is equal to).
- We have that
-\begin_inset Formula 
-\begin{equation}
-\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}},
-\end{equation}
-
-\end_inset
-
-and so 
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
-\kappa & = & \frac{8\times1\times2.5}{4\times9\times4\pi^{2}}\frac{1\times100\times10^{15}}{10\times10^{16}\times10^{4}}\\
- & \approx & \frac{1}{400}\frac{1}{10^{4}}\approx10^{-6}.
+\kappa & = & \frac{8\times100\times2.5}{4\times9\times1}\frac{1\times10\times10^{15}}{10\times10^{16}\times10^{4}}\\
+ & \approx & \frac{20\times100}{36\times1}\frac{1}{10\times10^{4}}\\
+ & \approx & 100\frac{1}{10\times10^{4}}=10^{-3}
 \end{eqnarray*}
 
 \end_inset
 
-Hence
-\begin_inset Formula 
-\begin{equation}
-4\kappa/T\approx\frac{4}{400}\frac{1}{10^{4}}10^{-3}\approx10^{-3}.
-\end{equation}
-
-\end_inset
-
 and so 
-\begin_inset Formula $4\kappa/T$
+\begin_inset Formula $\kappa$
 \end_inset
 
 , 
@@ -18752,20 +18598,92 @@ name "note5"
 \end_inset
 
 The exact results are 
-\begin_inset Formula 
-\begin{equation}
-\mathbf{H}=\left(\begin{array}{cc}
-\frac{-e^{2ix}+\sqrt{1-T}}{-1+e^{2ix}\sqrt{1-T}} & 0\\
--\frac{4e^{2ix}\kappa}{\left(-1+e^{2ix}\sqrt{1-T}\right)^{2}} & \frac{-e^{2ix}+\sqrt{1-T}}{-1+e^{2ix}\sqrt{1-T}}
-\end{array}\right)
-\end{equation}
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mathbf{H}=
+\backslash
+left(
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{array}{cc}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+frac{-e^{2 i x}+
+\backslash
+sqrt{1-T}}{-1+e^{2 i x} 
+\backslash
+sqrt{1-T}} & 0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+frac{4e^{2 i x}  
+\backslash
+kappa }{
+\backslash
+left(-1+e^{2 i x} 
+\backslash
+sqrt{1-T}
+\backslash
+right)^2} & 
+\backslash
+frac{-e^{2 i x}+
+\backslash
+sqrt{1-T}}{-1+e^{2 i x} 
+\backslash
+sqrt{1-T}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{array}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+right)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
  (from tag:
 \begin_inset Quotes erd
 \end_inset
@@ -18775,21 +18693,79 @@ Hexact
 \end_inset
 
 ) and
-\begin_inset Formula 
-\begin{equation}
-\mathbf{F}=\left(\begin{array}{c}
-0\\
--\frac{2\sqrt{2}e^{ix}\sqrt{\kappa}}{\text{gSQL}-e^{2ix}\text{gSQL}\sqrt{1-T}}
-\end{array}\right)
-\end{equation}
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+F=
+\backslash
+left(
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{array}{c}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ -
+\backslash
+frac{2
+\backslash
+sqrt{2} e^{i x} 
+\backslash
+sqrt{
+\backslash
+kappa}}{
+\backslash
+text{gSQL}-e^{2 i x} 
+\backslash
+text{gSQL} 
+\backslash
+sqrt{1-T}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{array}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+right)
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
-(From tag:
+\end_inset
+
+ (From tag:
 \begin_inset Quotes erd
 \end_inset
 

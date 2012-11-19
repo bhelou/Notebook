@@ -9,9 +9,11 @@
 \end_preamble
 \use_default_options true
 \begin_modules
-theorems-ams
 eqs-within-sections
 figs-within-sections
+theorems-ams-bytype
+theorems-ams-extended-bytype
+logicalmkup
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -1485,8 +1487,7 @@ Dirac delta function
 We can also write that 
 \begin_inset Formula 
 \begin{eqnarray}
-\delta\left(t-t_{0}\right) & = & \lim_{\Delta t\rightarrow0}\frac{\delta_{t\in\left[t_{0}-\Delta t/2,t_{0}+\Delta t/2\right]}}{\Delta t}\label{eq:physics delta function}\\
-\nonumber 
+\delta\left(t-t_{0}\right) & = & \lim_{\Delta t\rightarrow0}\frac{\delta_{t\in\left[t_{0}-\Delta t/2,t_{0}+\Delta t/2\right]}}{\Delta t}.\label{eq:physics delta function}
 \end{eqnarray}
 
 \end_inset
@@ -1513,6 +1514,46 @@ Also,
  & = & \int_{t_{0}-dt/2}^{t_{0}+dt/2}dt\frac{f\left(t\right)}{dt}=\frac{F\left(t_{0}+dt/2\right)-F\left(t_{0}-dt/2\right)}{dt}\\
  & = & f\left(t_{0}\right).
 \end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We also have that 
+\begin_inset Formula 
+\begin{equation}
+\delta\left(0\right)=\limit{\delta t}0\frac{1}{\delta t}.\label{eq:fishyDeltaZero}
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{-\infty}^{\infty}f\left(x\right)\delta\left(x\right)dx & = & \limit{\delta x}0\int_{-\delta x/2}^{\delta x/2}f\left(x\right)\delta\left(x\right)dx=f\left(0\right)\\
+ & \approx & \limit{\delta x}0\delta xf\left(0\right)\delta\left(0\right)=f\left(0\right)\limit{\delta x}0\delta x\delta\left(0\right)\\
+ & = & f\left(0\right),
+\end{eqnarray}
+
+\end_inset
+
+so we can write that
+\begin_inset Formula 
+\begin{equation}
+\limit{\delta x}0\delta x\delta\left(0\right)=1
+\end{equation}
 
 \end_inset
 
@@ -7492,7 +7533,7 @@ y\left(t\right) & -T/2<t<T/2\\
 
 \end_inset
 
-Then, because 
+``Then, because 
 \begin_inset Formula $y_{T}$
 \end_inset
 
@@ -7667,7 +7708,7 @@ Note that it is reasonable that
  be bounded (a.s.) because it is a random variable with a finite variance.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Hence, 
 \begin_inset Formula 
 \begin{equation}

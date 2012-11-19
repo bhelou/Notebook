@@ -3,11 +3,16 @@
 \begin_document
 \begin_header
 \textclass scrbook
+\begin_preamble
+\usepackage{braket}
+\end_preamble
 \use_default_options true
 \begin_modules
-theorems-ams
 eqs-within-sections
 figs-within-sections
+logicalmkup
+theorems-ams-bytype
+theorems-ams-extended-bytype
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -78,7 +83,7 @@ Classical Optics
 \end_layout
 
 \begin_layout Section
-Light Propagation
+Misc Light topics
 \end_layout
 
 \begin_layout Subsection
@@ -88,16 +93,16 @@ name "sub:PlaneWavePropagation"
 
 \end_inset
 
-Plane Wave description and some important terminology
+Light pictures
 \end_layout
 
 \begin_layout Standard
 We can describe a plane wave in many different ways:
 \begin_inset Formula 
 \begin{eqnarray}
-E\left(\xi\right) & = & \mathcal{E}_{0}\cos\left(\omega_{0}\xi-\phi_{0}\right)\nonumber \\
- & = & \mathcal{E}_{c}\cos\left(\omega_{0}\xi\right)+\mathcal{E}_{s}\sin\left(\omega_{0}\xi\right)\label{eq:EfieldDefinitions}\\
- & = & \frac{1}{\sqrt{2}}\left(\mathcal{E}e^{-i\omega_{0}\xi}+c.c.\right),\nonumber 
+E\left(\xi\right) & = & \mathcal{E}_{0}\left(t\right)\cos\left(\omega_{0}\xi-\phi_{0}\right)\nonumber \\
+ & = & \mathcal{E}_{c}\left(t\right)\cos\left(\omega_{0}\xi\right)+\mathcal{E}_{s}\left(t\right)\sin\left(\omega_{0}\xi\right)\label{eq:EfieldDefinitions}\\
+ & = & \frac{1}{\sqrt{2}}\left(\mathcal{E}\left(t\right)e^{-i\omega_{0}\xi}+c.c.\right),\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -132,7 +137,17 @@ phase
 
  are the cosine and sine 
 \emph on
-quadrature amplitudes 
+quadrature amplitudes
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+cosine and sine quadrature amplitudes
+\end_layout
+
+\end_inset
+
+ 
 \emph default
 and 
 \begin_inset Formula $\mathcal{E}$
@@ -192,6 +207,14 @@ and so
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Subsection
+Plane wave propagation in free space
+\end_layout
+
+\begin_layout Standard
 Because of the nature of the wave, we only have to study it at one point
  in space, say for 
 \begin_inset Formula $x=0$
@@ -209,12 +232,123 @@ Because of the nature of the wave, we only have to study it at one point
  For the complex amplitude representation, we have that 
 \begin_inset Formula 
 \begin{eqnarray*}
-\mathcal{E}^{\left(L\right)} & = & e^{i\omega_{0}L/c}\mathcal{E}^{\left(0\right)}\\
+\mathcal{E}^{\left(L\right)} & = & e^{i\omega_{0}L/c}\mathcal{E}^{\left(0\right)},
 \end{eqnarray*}
 
 \end_inset
 
-and in the quadrature representation, we have that 
+where 
+\begin_inset Formula $L$
+\end_inset
+
+ is the distance that the electric field has traveled (along the 
+\begin_inset Formula $+\vec{k}$
+\end_inset
+
+ or 
+\begin_inset Formula $-\vec{k}$
+\end_inset
+
+ direction).
+ Hence, we can say that
+\begin_inset Formula 
+\begin{equation}
+E\left(t,x+L\right)=E\left(t-\tau,x\right)=E\left(t-\tau\right),\label{eq:simplePropagationFreeSpace}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\tau\equiv L/c$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray}
+E\left(t,x+L\right) & = & E_{0}\cos\left(k\left(x+L\right)-\omega_{0}t\right)\\
+ & = & E_{0}\cos\left(kx+kL-\omega_{0}t\right)\\
+ & = & E_{0}\cos\left(kx+\frac{\omega_{0}}{c}L-\omega_{0}t\right)\\
+ & = & E_{0}\cos\left(kx-\omega_{0}\left(t-\frac{L}{c}\right)\right)\\
+ & = & E_{0}\cos\left(kx-\omega_{0}\left(t-\tau\right)\right)\\
+ & = & E\left(t-\tau,x\right)=E\left(t-\tau\right)
+\end{eqnarray}
+
+\end_inset
+
+(note that if 
+\begin_inset Formula $E_{0}$
+\end_inset
+
+ is slowly varying function of time, then 
+\begin_inset Formula $E_{0}\left(t\pm\tau\right)\approx E_{0}\left(t\right)$
+\end_inset
+
+ if 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is small, i.e.
+ if the field travels a small distance such that 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is small)
+\end_layout
+
+\begin_layout Plain Layout
+Say the electric field is moving in the opposite direction, do we still
+ get the same relation? Yes, because in the opposite direction
+\begin_inset Formula 
+\begin{equation}
+k\rightarrow-k
+\end{equation}
+
+\end_inset
+
+and if the field moves a distance of 
+\begin_inset Formula $L$
+\end_inset
+
+ then
+\begin_inset Formula 
+\begin{equation}
+x\rightarrow x-L
+\end{equation}
+
+\end_inset
+
+and so
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray}
+E\left(t,x+L\right) & = & E_{0}\cos\left(-k\left(x-L\right)-\omega_{0}t\right)\\
+ & = & E_{0}\cos\left(-kx+kL-\omega_{0}t\right)\\
+ & = & E_{0}\cos\left(-kx+\frac{\omega_{0}}{c}L-\omega_{0}t\right)\\
+ & = & E_{0}\cos\left(-kx-\omega_{0}\left(t-\frac{L}{c}\right)\right)\\
+ & = & E_{0}\cos\left(-kx-\omega_{0}\left(t-\tau\right)\right)\\
+ & = & E\left(t-\tau,x\right)=E\left(t-\tau\right)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In the cosine/sine quadrature representation, we have that 
 \begin_inset Formula 
 \begin{eqnarray}
 \left(\begin{array}{c}
@@ -2739,23 +2873,8 @@ key "vanDrielO"
 Intracavity power 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Preview
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{rem}[Fabry-Perot intracavity power]
-\end_layout
-
-\end_inset
-
-For the setup given in 
+\begin_layout Fact
+[Fabry-Perot intracavity power] For the setup given in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:fabry perot driel"
@@ -2790,7 +2909,7 @@ where
 
 *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 NOTE: Siegman does it differently and gets a different result? See Eq.
@@ -2839,7 +2958,7 @@ Denote the phase difference by
 \begin_inset Formula 
 \begin{eqnarray*}
 \mathcal{E}_{c} & = & \mbox{First transmitted beam+First reflected beam+....}\\
- & = & \mbox{Beam that goes through first mirrors+}\\
+ & = & \mbox{Beam that goes through first mirror+}\\
  &  & \mbox{Beam that goes through 1st mirror then reflected and accumulates a phase shift+...}\\
  & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi\Gamma e^{i\delta^{'}}+\mathcal{E}_{0}\Phi\Gamma^{3}e^{2i\delta^{'}}+...\\
  & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi\Gamma e^{i\delta^{'}}\left(1+\Gamma^{2}e^{i\delta^{'}}+\Gamma^{4}e^{2i\delta^{'}}+...\right),
@@ -2933,24 +3052,6 @@ Calculating intracavity power at any location
 \end_inset
 
 .
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{rem}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2974,9 +3075,6 @@ begin{rem}[Fabry-Perot intracavity power]
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
 name "rem:intracavity power LM T0"

@@ -9,9 +9,11 @@
 \end_preamble
 \use_default_options true
 \begin_modules
-theorems-ams
 eqs-within-sections
 figs-within-sections
+theorems-ams-bytype
+theorems-ams-extended-bytype
+logicalmkup
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -7531,7 +7533,7 @@ y\left(t\right) & -T/2<t<T/2\\
 
 \end_inset
 
-Then, because 
+``SThen, because 
 \begin_inset Formula $y_{T}$
 \end_inset
 

@@ -8,11 +8,9 @@
 \end_preamble
 \use_default_options true
 \begin_modules
+theorems-ams
 eqs-within-sections
 figs-within-sections
-logicalmkup
-theorems-ams-bytype
-theorems-ams-extended-bytype
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -2873,8 +2871,23 @@ key "vanDrielO"
 Intracavity power 
 \end_layout
 
-\begin_layout Fact
-[Fabry-Perot intracavity power] For the setup given in 
+\begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{rem}[Fabry-Perot intracavity power]
+\end_layout
+
+\end_inset
+
+For the setup given in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:fabry perot driel"
@@ -2958,7 +2971,7 @@ Denote the phase difference by
 \begin_inset Formula 
 \begin{eqnarray*}
 \mathcal{E}_{c} & = & \mbox{First transmitted beam+First reflected beam+....}\\
- & = & \mbox{Beam that goes through first mirror+}\\
+ & = & \mbox{Beam that goes through first mirrors+}\\
  &  & \mbox{Beam that goes through 1st mirror then reflected and accumulates a phase shift+...}\\
  & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi\Gamma e^{i\delta^{'}}+\mathcal{E}_{0}\Phi\Gamma^{3}e^{2i\delta^{'}}+...\\
  & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi\Gamma e^{i\delta^{'}}\left(1+\Gamma^{2}e^{i\delta^{'}}+\Gamma^{4}e^{2i\delta^{'}}+...\right),
@@ -2981,7 +2994,7 @@ which is a geometric series because
  & = & \mathcal{E}_{0}\Phi\frac{1+e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)}{1-\Gamma^{2}e^{i\delta^{'}}}\\
 I_{c} & \propto & \left|\mathcal{E}_{c}\right|^{2}\\
 \implies I_{c} & = & I_{0}\left|\Phi\right|^{2}\frac{\left|1+e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)\right|^{2}}{\left|1-\Gamma^{2}e^{i\delta^{'}}\right|^{2}}\\
- & = & I_{0}T\frac{\normSumComplex 1{\left[e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)\right]}}{\left|1-r^{2}e^{i\Delta^{'}}\right|^{2}}\\
+ & = & I_{0}T\frac{\normSumComplex1{\left[e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)\right]}}{\left|1-r^{2}e^{i\Delta^{'}}\right|^{2}}\\
  & = & I_{0}T\frac{1+\normSumComplex{-\Gamma^{2}}{\Gamma}+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)}{\left(1+R^{2}-2R\cos\Delta^{'}\right)}\\
  & = & I_{0}T\frac{1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)}{\left(1+R^{2}-2R\cos\Delta^{'}\right)}\\
  & = & \left[\frac{I_{0}T}{\left(1-R\right)^{2}}/\left(\frac{1+R^{2}}{\left(1-R\right)^{2}}-\frac{2R}{\left(1-R\right)^{2}}\cos\Delta^{'}\right)\right]\left(1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)\right)\\
@@ -3052,6 +3065,24 @@ Calculating intracavity power at any location
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{rem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3088,7 +3119,7 @@ reference "fig:fabry perot driel"
 
 \end_inset
 
-, if the right mirror has perfect reflectivity (i.e.
+, if the left mirror has perfect reflectivity (i.e.
  
 \begin_inset Formula $R=1$
 \end_inset
@@ -3109,14 +3140,14 @@ reference "fig:fabry perot driel"
  intracavity power (at the outer edge of the right mirror) is given by 
 \begin_inset Formula 
 \begin{eqnarray*}
-I_{c} & = & \frac{4I_{0}}{T}.
+I_{c} & = & \frac{4I_{0}}{T}.\\
 \end{eqnarray*}
 
 \end_inset
 
 *
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3152,9 +3183,9 @@ Denote the phase difference by
 \begin_inset Formula 
 \begin{eqnarray*}
 \mathcal{E}_{c} & = & \mbox{First transmitted beam+First reflected beam+....}\\
- & = & \mbox{Beam that goes through first mirror+}\\
+ & = & \mbox{Beam that goes through first mirrors+}\\
  &  & \mbox{Beam that goes through 1st mirror then reflected and accumulates a phase shift+...}\\
- & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi\left(\Gamma_{right}=1\right)e^{i\delta^{'}}+\mathcal{E}_{0}\Phi\Gamma\left(\Gamma_{right}=1\right)e^{2i\delta^{'}}+...\\
+ & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi e^{i\delta^{'}}+\mathcal{E}_{0}\Phi\Gamma e^{2i\delta^{'}}+...\\
  & = & \mathcal{E}_{0}\Phi+\mathcal{E}_{0}\Phi e^{i\delta^{'}}\left(1+\Gamma e^{i\delta^{'}}+\Gamma^{2}e^{2i\delta^{'}}+...\right),
 \end{eqnarray*}
 
@@ -3175,7 +3206,7 @@ which is a geometric series because
  & = & \mathcal{E}_{0}\Phi\frac{1+e^{i\delta^{'}}\left(1-\Gamma\right)}{1-\Gamma e^{i\delta^{'}}}\\
 I_{c} & \propto & \left|\mathcal{E}_{c}\right|^{2}\\
 \implies I_{c} & = & I_{0}\left|\Phi\right|^{2}\frac{\left|1+e^{i\delta^{'}}\left(1-\Gamma\right)\right|^{2}}{\left|1-\Gamma e^{i\delta^{'}}\right|^{2}}\\
- & = & I_{0}T\frac{\normSumComplex 1{\left[e^{i\delta^{'}}\left(1-\Gamma\right)\right]}}{\left|1-re^{i\Delta^{'}}\right|^{2}}\\
+ & = & I_{0}T\frac{\normSumComplex1{\left[e^{i\delta^{'}}\left(1-\Gamma\right)\right]}}{\left|1-re^{i\Delta^{'}}\right|^{2}}\\
  & = & I_{0}T\frac{1+\normSumComplex{-1}{\Gamma}+2\left(\cos\left(\delta^{'}\right)-r\cos\left(\phi+\delta^{'}\right)\right)}{\left(1+R-2r\cos\Delta^{'}\right)}\\
  & = & I_{0}T\frac{1+1+R-2r\cos\phi+2\left(\cos\left(\delta^{'}\right)-r\cos\left(\phi+\delta^{'}\right)\right)}{\left(1+R-2r\cos\Delta^{'}\right)}\\
  & = & I_{0}T\frac{2+R-2r\cos\phi+2\left(\cos\left(\delta^{'}\right)-r\cos\left(\phi+\delta^{'}\right)\right)}{\left(1+R-2r\cos\Delta^{'}\right)}

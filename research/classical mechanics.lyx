@@ -5,9 +5,11 @@
 \textclass scrbook
 \use_default_options true
 \begin_modules
-theorems-ams
 eqs-within-sections
 figs-within-sections
+theorems-ams-bytype
+theorems-ams-extended-bytype
+logicalmkup
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -982,6 +984,16 @@ Equations of Motion
 \begin{eqnarray}
 \frac{d}{dt}\frac{\partial L}{\partial\dot{q}_{i}} & = & \frac{\partial L}{\partial q_{i}}\qquad\left(i=1,2,...\right),\label{eq:EOM lagrangian}
 \end{eqnarray}
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Euler-Lagrange Equations
+\end_layout
 
 \end_inset
 

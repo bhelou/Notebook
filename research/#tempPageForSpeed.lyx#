@@ -1,0 +1,1391 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+\usepackage{braket}
+\end_preamble
+\options unicode=true, hidelinks
+\use_default_options true
+\begin_modules
+eqs-within-sections
+figs-within-sections
+theorems-ams-bytype
+theorems-ams-extended-bytype
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 3cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Detuned Fabry
+\end_layout
+
+\begin_layout Standard
+The setup for such a system is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:detunedCavity"
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename detuned cavity.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:detunedCavity"
+
+\end_inset
+
+Let the bosonic operators associated with 
+\begin_inset Formula $E_{in}^{'}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{out}^{'}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{in}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{out}$
+\end_inset
+
+ be 
+\begin_inset Formula $\vec{\alpha}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{\beta}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+, respectively.
+ From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haixingThesis"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Let the bosonic operators associated with 
+\begin_inset Formula $E_{in}^{'}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{out}^{'}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{in}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{out}$
+\end_inset
+
+ be 
+\begin_inset Formula $\vec{\alpha}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{\beta}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+, respectively.
+ 
+\end_layout
+
+\begin_layout Assumption
+We assume that the laser's input optical field is a single mode coherent
+ state and so we can write all relevant electric field in the (unnormalized)
+ form (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:final simple single mode laser"
+
+\end_inset
+
+ without the normalization constant 
+\begin_inset Formula $\mathcal{C}_{0}$
+\end_inset
+
+ )
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{E}\left(t\right) & = & \left[\sqrt{2I_{0}/\hbar\omega_{0}}+\hat{a}_{c}\left(t\right)\right]\cos\omega_{0}t+\hat{a}_{s}\left(t\right)\sin\omega_{0}t,
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{a}_{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{a}_{s}$
+\end_inset
+
+ are the cosine and sine quadratures.
+\end_layout
+
+\begin_layout Standard
+We also have that
+\end_layout
+
+\begin_layout Assumption
+The mirror has transmissivity 
+\begin_inset Formula $T$
+\end_inset
+
+ and reflectivity 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Moreover, we assume that we have a symmetric mirror that inflicts a 
+\begin_inset Formula $\pi$
+\end_inset
+
+ phase shift on its input side*
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+We must have a phase shift because by the reciprocity relations 
+\begin_inset Formula 
+\begin{eqnarray*}
+r^{*}t^{'}+t^{*}r^{'} & = & 0\\
+\implies r^{*} & = & -r^{'}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and so its scattering matrix is given by (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:scatteringMatrixBS"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{cc}
+\sqrt{T} & -\sqrt{R}\\
+\sqrt{R} & \sqrt{T}
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Having a detuned cavity means that
+\begin_inset Formula 
+\begin{equation}
+\omega_{0}\tau=\theta+n\pi,
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is the travel time of a photon to cross the cavity of length 
+\begin_inset Formula $L$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $\tau=L/c$
+\end_inset
+
+^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+usually we have that 
+\begin_inset Formula $2L$
+\end_inset
+
+ is tuned to be integer multiple of wavelength, so 
+\begin_inset Formula $2L=l\lambda,$
+\end_inset
+
+where 
+\begin_inset Formula $l\in\mathbb{N}$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\begin{equation}
+2L=l\frac{c}{f_{0}}=2\pi l\frac{c}{\omega_{0}},
+\end{equation}
+
+\end_inset
+
+where we have used 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sillyRelationsFrequencyWavelength"
+
+\end_inset
+
+, and so 
+\begin_inset Formula 
+\begin{eqnarray}
+L & = & \pi l\frac{c}{\omega_{0}}\\
+\implies\omega_{0}\frac{L}{c} & = & \omega_{0}\tau=\pi l.
+\end{eqnarray}
+
+\end_inset
+
+So to add detuning, we just add an extra phase to 
+\begin_inset Formula $\omega_{0}\tau$
+\end_inset
+
+.
+ Call it 
+\begin_inset Formula $\theta$
+\end_inset
+
+, where 
+\begin_inset Formula $\theta\in\left(0,\pi\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ How does the detuning affect our formalism? We now have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{a} & = & \sqrt{R}{\bf R}_{2\theta}\vec{b}+\sqrt{T}{\bf R}_{\theta}\vec{\alpha}\\
+\vec{\beta} & = & \sqrt{T}{\bf R}_{\theta}\vec{b}-\sqrt{R}\vec{\alpha}.
+\end{eqnarray*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+{\bf R}_{\theta}\equiv e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+First of all, by the definition of the scattering matrix, we have that 
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c}
+E_{out}^{'}\\
+\tilde{E}_{in}
+\end{array}\right)=\left(\begin{array}{cc}
+\sqrt{T} & -\sqrt{R}\\
+\sqrt{R} & \sqrt{T}
+\end{array}\right)\left(\begin{array}{c}
+\tilde{E}_{out}\\
+E_{in}^{'}
+\end{array}\right),
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\tilde{E}_{in,out}$
+\end_inset
+
+ are defined in 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename understandingDetunedCavity.svg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Introducing 
+\begin_inset Formula $\tilde{E}_{in}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{E}_{out}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Hence, we have that (where 
+\begin_inset Formula $\tilde{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{b}$
+\end_inset
+
+ are the bosonic operators associated with 
+\begin_inset Formula $\tilde{E}_{in}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{E}_{out}$
+\end_inset
+
+, respectively)
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{\tilde{a}} & = & \sqrt{R}\vec{\tilde{b}}+\sqrt{T}\vec{\alpha}\\
+\vec{\beta} & = & \sqrt{T}\vec{\tilde{b}}-\sqrt{R}\vec{\alpha}.
+\end{eqnarray*}
+
+\end_inset
+
+Now, we have that 
+\begin_inset Formula $\tilde{E}_{in,out}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{in,out}$
+\end_inset
+
+ are simply related to each other.
+ Specifically, we have that 
+\begin_inset Formula 
+\begin{eqnarray}
+E_{in}\left(t\right) & = & \tilde{E}_{in}\left(t-\frac{\theta}{\omega_{0}}\right)\\
+\tilde{E}_{out}\left(t\right) & = & E_{out}\left(t-\frac{\theta}{\omega_{0}}\right),
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\frac{\theta}{\omega_{0}}$
+\end_inset
+
+ is the time taken to travel the distance that adds the phase 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Hence, according to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:quadraturesFreeSpacePropagation"
+
+\end_inset
+
+ (let 
+\begin_inset Formula $\tau=\theta/\omega_{0}$
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c}
+\hat{a}_{1}\left(\Omega\right)\\
+\hat{a}_{2}\left(\Omega\right)
+\end{array}\right)=e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right)\left(\begin{array}{c}
+\tilde{a}_{1}\left(\Omega\right)\\
+\tilde{a}_{2}\left(\Omega\right)
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c}
+\tilde{b}_{1}\left(\Omega\right)\\
+\tilde{b}_{2}\left(\Omega\right)
+\end{array}\right)=e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right)\left(\begin{array}{c}
+\hat{b}_{1}\left(\Omega\right)\\
+\hat{b}_{2}\left(\Omega\right)
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+Letting
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+{\bf R}_{\theta}\equiv e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right),
+\end{equation}
+
+\end_inset
+
+we can write that 
+\begin_inset Formula 
+\begin{eqnarray}
+\vec{a} & = & {\bf R}_{\theta}\vec{\tilde{a}}\\
+\implies\vec{\tilde{a}} & = & {\bf R}_{\theta}^{-1}\vec{a}\\
+\vec{\tilde{b}} & = & {\bf R}_{\theta}\vec{b}.
+\end{eqnarray}
+
+\end_inset
+
+Hence, 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{\tilde{a}} & = & \sqrt{R}\vec{\tilde{b}}+\sqrt{T}\vec{\alpha}\\
+\vec{\beta} & = & \sqrt{T}\vec{\tilde{b}}-\sqrt{R}\vec{\alpha}
+\end{eqnarray*}
+
+\end_inset
+
+becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+{\bf R}_{\theta}^{-1}\vec{a} & = & \sqrt{R}{\bf R}_{\theta}\vec{b}+\sqrt{T}\vec{\alpha}\\
+\implies\vec{a} & = & \sqrt{R}\left({\bf R}_{\theta}\right)^{2}\vec{b}+\sqrt{T}\vec{\alpha}\\
+\vec{\beta} & = & \sqrt{T}{\bf R}_{\theta}\vec{b}-\sqrt{R}\vec{\alpha}.
+\end{eqnarray*}
+
+\end_inset
+
+Now, 
+\begin_inset Formula ${\bf R}_{\theta}$
+\end_inset
+
+ is equal to a phase multiplied by the rotation matrix: 
+\begin_inset Formula ${\bf R}_{\theta}=e^{i\theta\Omega/\omega_{0}}R_{\theta,2D}$
+\end_inset
+
+, where 
+\begin_inset Formula $R_{\theta,2D}$
+\end_inset
+
+ is the 2D rotation matrix.
+ Hence, 
+\begin_inset Formula $\left({\bf R}_{\theta}\right)^{2}=e^{2i\theta\Omega/\omega_{0}}\left(R_{\theta,2D}\right)^{2}=e^{2i\theta\Omega/\omega_{0}}R_{2\theta,2D}={\bf R}_{2\theta}$
+\end_inset
+
+, thus obtaining the desired result.
+\end_layout
+
+\end_inset
+
+The input and output variables (
+\begin_inset Formula $\vec{\alpha}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{\beta}$
+\end_inset
+
+, respectively) can be directly related to each other by making use of the
+ above linear system of equations and Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outputQuadratures_freeSpaceNoise"
+
+\end_inset
+
+, which tells us that
+\begin_inset Formula 
+\begin{equation}
+\vec{b}\left(\Omega\right)=\mathbf{M}\vec{a}\left(\Omega\right)+\vec{D}G\left(\Omega\right),
+\end{equation}
+
+\end_inset
+
+ *
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We can relate the 
+\begin_inset Formula $\hat{E}_{out}$
+\end_inset
+
+ to 
+\begin_inset Formula $\hat{E}_{in}$
+\end_inset
+
+ as 
+\begin_inset Formula $\hat{E}_{out}\left(t\right)=\hat{E}_{in}\left(t-2\tau-2\hat{x}/c\right),$
+\end_inset
+
+ and so 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+ obey Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outputQuadratures_freeSpaceNoise"
+
+\end_inset
+
+, which was derived for the propagation of the electric field in a single
+ mirror setup (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Free test mass example"
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{M} & = & e^{2i\Omega\tau}\left[\begin{array}{cc}
+1 & 0\\
+-\kappa & 1
+\end{array}\right]\\
+\vec{D} & = & -\frac{e^{i\Omega\tau}}{g_{SQL}}\left[\begin{array}{c}
+0\\
+\sqrt{2\kappa}
+\end{array}\right],
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+\kappa & = & \frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}\\
+g_{SQL} & = & \sqrt{2\hbar m\Omega^{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+We obtain that
+\begin_inset Formula 
+\begin{equation}
+\vec{\beta}=\mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right),
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}=\left(\begin{array}{cc}
+\frac{\left(1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}\right)\sqrt{1-T}T+e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}T\text{Sin}[\theta](T\text{Cos}[\theta]+2\kappa\text{Sin}[\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}\\
+-\frac{2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}T\text{Cos}[\theta](-2\kappa\text{Cos}[\theta]+T\text{Sin}[\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{\left(1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}\right)\sqrt{1-T}T+e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+\vec{F}=\left(\begin{array}{c}
+0\\
+\frac{2\sqrt{2}e^{ix}\sqrt{\kappa}}{-\text{gSQL}+e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\text{gSQL}\sqrt{1-T}\text{Cos}[2\theta]}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+x=\Omega\tau.
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{\beta} & = & \left(T{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}-\sqrt{R}\right)\vec{\alpha}+\sqrt{T}{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G\left(\Omega\right)\\
+ & \equiv & \mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right).
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We have that from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outputQuadratures_freeSpaceNoise"
+
+\end_inset
+
+ that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{b}\left(\Omega\right) & = & e^{i2\Omega\tau}\left(\begin{array}{cc}
+1 & 0\\
+\kappa^{'} & 1
+\end{array}\right)\left(\begin{array}{c}
+a_{c}\left(\Omega\right)\\
+a_{s}\left(\Omega\right)
+\end{array}\right)+\left(\begin{array}{c}
+0\\
+e^{i\Omega\tau}\sqrt{2\kappa^{'}}
+\end{array}\right)\frac{G\left(\Omega\right)}{g_{SQL}}\\
+ & \equiv & \mathbf{M}\vec{a}+\vec{D}G,
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $g_{SQL}=\sqrt{2\hbar m\Omega^{2}}.$
+\end_inset
+
+ What is 
+\begin_inset Formula $\kappa^{'}$
+\end_inset
+
+ equal to? It is equal to 
+\begin_inset Formula $4\kappa/T$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outputQuadratures_freeSpaceNoise"
+
+\end_inset
+
+, it is equal to 
+\begin_inset Formula $\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}$
+\end_inset
+
+.
+ However, now, 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+ are inside the cavity (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:tuned fabry perot noise"
+
+\end_inset
+
+).
+ Inside the cavity, at steady state, there will be a very large power stored
+ in the cavity: 
+\begin_inset Formula $I_{c}=4I_{0}/T$
+\end_inset
+
+ (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "rem:intracavity power LM T0"
+
+\end_inset
+
+) and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\kappa^{'} & = & \frac{8I_{c}\omega_{0}}{mc^{2}\Omega^{2}}\\
+ & = & \frac{8\left(4I_{0}/T\right)\omega_{0}}{mc^{2}\Omega^{2}}\\
+ & = & \frac{4\kappa}{T}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula $\vec{a}=\sqrt{R}{\bf R}_{2\theta}\vec{b}+\sqrt{T}{\bf R}_{\theta}\vec{\alpha}$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{b}\left(\Omega\right) & = & \mathbf{M}\left(\sqrt{R}{\bf R}_{2\theta}\vec{b}+\sqrt{T}{\bf R}_{\theta}\vec{\alpha}\right)+\vec{D}G\\
+\implies\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)\vec{b} & = & \mathbf{M}{\bf R}_{\theta}\sqrt{T}\vec{\alpha}+\vec{D}G\\
+\vec{b} & = & \left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}\sqrt{T}\vec{\alpha}+\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G.
+\end{eqnarray*}
+
+\end_inset
+
+Then, we use that 
+\begin_inset Formula $\vec{\beta}=\sqrt{T}{\bf R}_{\theta}\vec{b}-\sqrt{R}\vec{\alpha}$
+\end_inset
+
+ to obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{\beta} & = & \sqrt{T}{\bf R}_{\theta}\left\{ \left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}\sqrt{T}\vec{\alpha}+\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G\right\} -\sqrt{R}\vec{\alpha}\\
+ & = & \left(T{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}-\sqrt{R}\right)\vec{\alpha}+\sqrt{T}{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G\\
+ & \equiv & \mathbf{H}\vec{\alpha}+\vec{F}G.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Using Mathematica (
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+detuned fabry perot output operators.nb
+\end_layout
+
+\end_inset
+
+), we solve 
+\begin_inset Formula $\mathbf{H}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{F}$
+\end_inset
+
+ (from tag:
+\begin_inset Quotes erd
+\end_inset
+
+Hexact
+\begin_inset Quotes erd
+\end_inset
+
+ and tag:
+\begin_inset Quotes erd
+\end_inset
+
+Fexact
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\Omega\ll\omega_{0}$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+Let us make the following assumption
+\end_layout
+
+\begin_layout Assumption
+Assume that the sideband frequencies 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ we are probing are much less than the input laser frequency 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+.
+ This is usually a very well justified assumption (e.g.
+ LIGO*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+For LIGO 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "advancedLIGOdata"
+
+\end_inset
+
+, we have that
+\begin_inset Formula 
+\begin{equation}
+\Omega\sim10^{2}Hz
+\end{equation}
+
+\end_inset
+
+while the laser wavelength is around a 
+\begin_inset Formula $\mu m$
+\end_inset
+
+ and so we have that 
+\begin_inset Formula $\omega_{0}\sim10^{14}\mbox{Hz}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\Omega/\omega_{0}\approx10^{-12}\approx0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+With this assumption, we have that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $e^{i\theta\Omega/\omega_{0}}\approx1$
+\end_inset
+
+ and so
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula 
+\begin{equation}
+{\bf R}_{\theta}\approx\left(\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+We would now have that 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}=\left(\begin{array}{cc}
+\frac{e^{2ix}\left(2\sqrt{1-T}T\text{Cos}[2x]+(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])\right)}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{2e^{2ix}T\text{Sin}[\theta](T\text{Cos}[\theta]+2\kappa\text{Sin}[\theta])}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}\\
+-\frac{2e^{2ix}T\text{Cos}[\theta](-2\kappa\text{Cos}[\theta]+T\text{Sin}[\theta])}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{e^{2ix}\left(2\sqrt{1-T}T\text{Cos}[2x]+(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])\right)}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=\left(\begin{array}{c}
+0\\
+\frac{2\sqrt{2}e^{ix}\sqrt{\kappa}}{-\text{gSQL}+e^{2ix}\text{gSQL}\sqrt{1-T}\text{Cos}[2\theta]}
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have used Mathematica (
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+detuned fabry perot output operators.nb
+\end_layout
+
+\end_inset
+
+): tag:
+\begin_inset Quotes erd
+\end_inset
+
+Hass1
+\begin_inset Quotes erd
+\end_inset
+
+ and tag:
+\begin_inset Quotes erd
+\end_inset
+
+Fass1
+\begin_inset Quotes erd
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+LIGO like setup and small detuned phase
+\end_layout
+
+\begin_layout Standard
+An advanced LIGO-like setup would also satisfy the following criteria
+\begin_inset CommandInset citation
+LatexCommand cite
+key "advancedLIGOdata"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Criterion
+Both 
+\begin_inset Formula $\Omega\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+ are small and are of approximately the same order - e.g.
+ for LIGO they are both ~
+\begin_inset Formula $10^{-3}$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "note3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We also make the following assumption
+\end_layout
+
+\begin_layout Assumption
+The detuned phase is small and on the same order of magnitude as 
+\begin_inset Formula $\Omega\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+\phi & \equiv & \tan^{-1}\left(\Omega/\gamma\right)\\
+\gamma & \equiv & \frac{Tc}{4L}=\frac{T}{4\tau}\\
+\mathcal{K} & \equiv & \frac{2\gamma\iota_{c}}{\Omega^{2}\left(\Omega^{2}+\gamma^{2}\right)}\quad\\
+\iota_{c} & \equiv & \frac{8\omega_{0}I_{c}}{mLc}=\frac{4}{T}\frac{8\omega_{0}I_{0}}{mLc}=\frac{4}{T}\frac{c\Omega^{2}}{L}\kappa\\
+ & = & \frac{4}{T}\frac{\Omega^{2}}{\tau}\kappa
+\end{eqnarray*}
+
+\end_inset
+
+We assume that we are working close enough to resonance that 
+\begin_inset Formula $I_{c}=4I_{0}/T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Hence,
+\begin_inset Formula 
+\begin{equation}
+\kappa=\frac{T\tau}{4\Omega^{2}}\iota_{c}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+I_{c}\equiv\frac{4I_{0}}{T}.
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\kappa & = & \frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}\\
+g_{SQL} & = & \sqrt{2\hbar m\Omega^{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+We have 
+\begin_inset Formula 
+\begin{eqnarray}
+\xi & \equiv & \frac{2T^{2}\theta}{-\frac{1}{4}T(T-4ix)^{2}-4T\theta^{2}-4(-2+T-4ix)\theta\kappa}\\
+ & = & \frac{2T^{2}\theta}{-\frac{1}{4}T(T-4i\Omega\tau)^{2}-4T\theta^{2}-4(-2+T-4\Omega\tau i)\theta\frac{T\tau}{4\Omega^{2}}\iota_{c}}\\
+ & = & \frac{2T^{2}\Delta/\tau}{-\frac{1}{4}T(T/\tau-4i\Omega)^{2}-4T\Delta^{2}-4(-2+T-4\Omega\tau i)\Delta\frac{T}{4\Omega^{2}}\iota_{c}}\\
+\mbox{} & = & \frac{8T\Delta\gamma}{-\frac{1}{4}T(T/\tau-4i\Omega)^{2}-4T\Delta^{2}-4(-2+T-4\Omega\tau i)\Delta\frac{T}{4\Omega^{2}}\iota_{c}}\\
+ & = & \frac{8\Delta\gamma}{-\frac{1}{4}(T/\tau-4i\Omega)^{2}-4\Delta^{2}-4(-2+T-4\Omega\tau i)\Delta\frac{1}{4\Omega^{2}}\iota_{c}}\\
+ & = & \frac{8\Delta\gamma\Omega^{2}}{\Omega^{2}\left[-\frac{1}{4}(T/\tau-4i\Omega)^{2}-4\Delta^{2}\right]-(-2+T-4\Omega\tau i)\Delta\iota_{c}}\\
+ & = & \frac{2\Delta\gamma\Omega^{2}}{\Omega^{2}\left[-\frac{1}{16}(T/\tau-4i\Omega)^{2}-\Delta^{2}\right]-(-2+T-4\Omega\tau i)\Delta\iota_{c}/4}\\
+ & = & \frac{2\Delta\gamma\Omega^{2}}{\Omega^{2}\left[-(\gamma-i\Omega)^{2}-\Delta^{2}\right]+(1/2-T/4+\Omega\tau i)\Delta\iota_{c}}\\
+ & \approx & \frac{2\Delta\gamma\Omega^{2}}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\Delta\iota_{c}/2}.
+\end{eqnarray}
+
+\end_inset
+
+We have that
+\begin_inset Formula 
+\begin{eqnarray}
+\xi_{dn} & = & -\frac{1}{4}T(T-4ix)^{2}-4T\theta^{2}-4(-2+T-4ix)\theta\kappa\\
+ & = & \frac{1}{4}T(iT+4x)^{2}-4T\theta^{2}-4(-2+T-4ix)\theta\kappa\\
+ & \approx & \frac{1}{4}T(iT+4x)^{2}-4T\theta^{2}+8\theta\kappa\\
+ & = & \frac{1}{4}T(iT+4x)^{2}-4T\theta^{2}+8\theta\frac{T\tau}{4\Omega^{2}}\iota_{c}\\
+ & = & \frac{\Omega^{2}T(iT+4x)^{2}-16T\Omega^{2}\theta^{2}+8\theta T\tau\iota_{c}}{4\Omega^{2}}\\
+ & = & 4\Omega^{2}T(iT+4\Omega\tau)^{2}-16T\Omega^{2}\theta^{2}+8\theta T\tau\iota_{c}\\
+ & = & \Omega^{2}T(i\gamma+\Omega)^{2}-\frac{T\Omega^{2}\theta^{2}}{\tau^{2}}+\frac{\theta T\iota_{c}}{2\tau}\\
+ & = & \Omega^{2}T(i\gamma+\Omega)^{2}-T\Omega^{2}\Delta^{2}+\frac{\Delta T\iota_{c}}{2}\\
+ & = & \Omega^{2}T\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta T\iota_{c}}{2}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We have that
+\begin_inset Formula 
+\begin{eqnarray}
+\xi_{21} & = & \frac{2T(-T\theta+2\kappa+4ix\kappa)}{\Omega^{2}T\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta T\iota_{c}}{2}}\\
+ & = & \frac{2(-T\theta+2\kappa+4ix\kappa)}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\\
+ & \approx & \frac{2(-T\theta+2\frac{T\tau}{4\Omega^{2}}\iota_{c})}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\\
+ & = & \frac{2\tau(-T\Delta+2\frac{T}{4\Omega^{2}}\iota_{c})}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\\
+ & = & \frac{2\tau^{2}(-\frac{T}{\tau}\Delta+2\frac{T}{4\tau\Omega^{2}}\iota_{c})}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\\
+ & = & \frac{2\tau^{2}(-4\gamma\Delta+2\frac{\gamma}{\Omega^{2}}\iota_{c})}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\\
+ & = & \frac{-4\gamma\Omega^{2}\Delta+2\gamma\iota_{c}}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\frac{2\tau^{2}}{\Omega^{2}}\\
+\end{eqnarray}
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+\xi_{21} & \equiv & \frac{2T(-T\theta+2\kappa+4ix\kappa)}{8\theta\kappa}\\
+ & = & \frac{2T(-T\theta+2\kappa+4ix\kappa)\left(-T\theta+2\kappa-4ix\kappa\right)}{8\theta\kappa\left(-T\theta+2\kappa-4ix\kappa\right)}\\
+ & = & \frac{2T(\left(-T\theta+2\kappa\right)^{2}+16x^{2}\kappa^{2})}{8\theta\kappa\left(-T\theta+2\kappa-4ix\kappa\right)}\\
+ & = & \frac{2T(2T^{2}\theta^{2}+4\kappa^{2}-4T\theta\kappa+16x^{2}\kappa^{2})}{8\theta\kappa\left(-T\theta+2\kappa-4ix\kappa\right)}\\
+ & \approx & \frac{2T(4\kappa^{2}-4T\theta\kappa)}{8\theta\kappa\left(-T\theta+2\kappa-4ix\kappa\right)}\\
+ & = & \frac{2T(4\kappa^{2}/\tau-4T\Delta\kappa)}{8\Delta\kappa\left(-T\theta+2\kappa-4ix\kappa\right)}\\
+ & = & \frac{2T(4\kappa/\tau-4T\Delta)}{8\Delta\left(-T\theta+2\kappa-4ix\kappa\right)}\\
+ & = & \frac{2T(4\frac{T\tau}{4\Omega^{2}}\iota_{c}/\tau-4T\Delta)}{8\Delta\left(-T\theta+2\frac{T\tau}{4\Omega^{2}}\iota_{c}-4ix\frac{T\tau}{4\Omega^{2}}\iota_{c}\right)}\\
+ & = & \frac{2T(\frac{T\tau}{4\Omega^{2}}\iota_{c}/\tau^{2}-\gamma\Delta)}{2\Delta\left(-T\theta+2\frac{T\tau}{4\Omega^{2}}\iota_{c}-4ix\frac{T\tau}{4\Omega^{2}}\iota_{c}\right)/\tau}\\
+ & = & \frac{T(\frac{T}{4\tau\Omega^{2}}\iota_{c}-\gamma\Delta)}{\Delta\left(-T\Delta+\frac{T}{2\Omega^{2}}\iota_{c}-ix\frac{T}{\Omega^{2}}\iota_{c}\right)}\\
+ & = & \frac{T(\frac{T}{4\tau}\iota_{c}-\gamma\Delta\Omega^{2})}{\Delta\left(-T\Delta\Omega^{2}+\frac{T}{2}\iota_{c}-ixT\iota_{c}\right)}\\
+ & = & \frac{T(\gamma\iota_{c}-\gamma\Delta\Omega^{2})}{\Delta\left(-T\Delta\Omega^{2}+\frac{T}{2}\iota_{c}-ixT\iota_{c}\right)}\\
+ & = & \frac{\gamma\iota_{c}-\gamma\Delta\Omega^{2}}{\Delta\left(-\Delta\Omega^{2}+\frac{1}{2}\iota_{c}-ix\iota_{c}\right)}\\
+\end{eqnarray}
+
+\end_inset
+
+Also 
+\begin_inset Formula 
+\begin{eqnarray}
+\xi_{21} & = & \frac{T\left(16(2+T)\theta+\frac{T(T-4ix)^{2}}{\kappa}\right)}{64\theta^{2}}\\
+ & = & \frac{T\left(16(2+T)\theta\kappa+T^{3}-4ixT^{2}-16Tx^{2}\right)}{64\theta^{2}\kappa}\\
+ & = & \frac{T\left(16(2+T)\theta\kappa+T^{3}-4ixT^{2}-16Tx^{2}\right)}{64\theta^{2}\kappa\left(16(2+T)\theta\kappa+T^{3}+4ixT^{2}-16Tx^{2}\right)}\\
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -5,9 +5,11 @@
 \textclass scrbook
 \use_default_options true
 \begin_modules
-theorems-ams
 eqs-within-sections
 figs-within-sections
+theorems-ams-bytype
+theorems-ams-extended-bytype
+logicalmkup
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -74,58 +76,6 @@ figs-within-sections
 
 \begin_layout Part
 Classical E&M
-\end_layout
-
-\begin_layout Section
-Conversion between SI and CGS
-\end_layout
-
-\begin_layout Enumerate
-The 
-\emph on
-Poynting vector
-\emph default
- is given by 
-\begin_inset Formula 
-\begin{eqnarray}
-S\left[SI\right] & \rightarrow & \frac{c}{4\pi}S\left[CGS\right]\label{eq:poynting in cgs}\\
-\nonumber 
-\end{eqnarray}
-
-\end_inset
-
-
-\begin_inset CommandInset href
-LatexCommand href
-name "Poynting vector in CGS units"
-target "http://scienceworld.wolfram.com/physics/PoyntingVector.html"
-
-\end_inset
-
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-S\left[CGS\right]=E\times H & \rightarrow & \sqrt{\frac{1}{4\pi\varepsilon_{0}}}\times\sqrt{\frac{1}{4\pi\mu_{0}}}S\left[SI\right]\\
- & \rightarrow & \frac{1}{4\pi}\frac{1}{\sqrt{\varepsilon_{0}\mu_{0}}}S\left[SI\right]=\frac{c}{4\pi}S\left[SI\right]
-\end{eqnarray*}
-
-\end_inset
-
-Something is wrong here ....
- as 
-\begin_inset Formula $\frac{1}{\sqrt{\varepsilon_{0}\mu_{0}}}=c$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -228,7 +178,79 @@ key "vanDrielO"
 )
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
+Wavelength 
+\begin_inset Formula $\leftrightarrow$
+\end_inset
+
+ frequency
+\end_layout
+
+\begin_layout Standard
+We have that
+\begin_inset Formula 
+\begin{equation}
+\frac{c}{n}=\lambda f=\frac{\omega}{k}=\frac{\lambda\omega}{2\pi}=2\pi\frac{f}{k}.\label{eq:sillyRelationsFrequencyWavelength}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conversion between SI and CGS
+\end_layout
+
+\begin_layout Enumerate
+The 
+\emph on
+Poynting vector
+\emph default
+ is given by 
+\begin_inset Formula 
+\begin{eqnarray}
+S\left[SI\right] & \rightarrow & \frac{c}{4\pi}S\left[CGS\right]\label{eq:poynting in cgs}\\
+\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Poynting vector in CGS units"
+target "http://scienceworld.wolfram.com/physics/PoyntingVector.html"
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+S\left[CGS\right]=E\times H & \rightarrow & \sqrt{\frac{1}{4\pi\varepsilon_{0}}}\times\sqrt{\frac{1}{4\pi\mu_{0}}}S\left[SI\right]\\
+ & \rightarrow & \frac{1}{4\pi}\frac{1}{\sqrt{\varepsilon_{0}\mu_{0}}}S\left[SI\right]=\frac{c}{4\pi}S\left[SI\right]
+\end{eqnarray*}
+
+\end_inset
+
+Something is wrong here ....
+ as 
+\begin_inset Formula $\frac{1}{\sqrt{\varepsilon_{0}\mu_{0}}}=c$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Units (SI)
 \end_layout
 
@@ -303,7 +325,7 @@ Poynting's theorem in non-dispersive media (SI)
 Let 
 \begin_inset Formula 
 \begin{eqnarray*}
-\vec{S} & = & \vec{E}\times\vec{H}\quad\left[\mbox{W/m}^{2}\right]\\
+\vec{S} & = & \vec{E}\times\vec{H}\quad\left[\mbox{W/m}^{2}\right]
 \end{eqnarray*}
 
 \end_inset

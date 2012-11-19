@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     23972,        531]
-NotebookOptionsPosition[     23439,        508]
-NotebookOutlinePosition[     23839,        525]
-CellTagsIndexPosition[     23796,        522]
+NotebookDataLength[     24690,        550]
+NotebookOptionsPosition[     24117,        526]
+NotebookOutlinePosition[     24516,        543]
+CellTagsIndexPosition[     24473,        540]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,17 +24,19 @@ Cell[BoxData[{
  RowBox[{"Needs", "[", "\"\<PlotLegends`\>\"", "]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"expr", "[", 
-    RowBox[{"x_", ",", "y_"}], "]"}], " ", ":=", " ", 
-   RowBox[{"2", "*", "x", "*", 
-    RowBox[{"y", "/", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"x", "^", "2"}], "-", "1"}], ")"}]}]}]}], ";", " ", 
+   RowBox[{
+    RowBox[{"expr", "[", 
+     RowBox[{"x_", ",", "y_"}], "]"}], " ", ":=", " ", 
+    RowBox[{"2", "*", "x", "*", 
+     RowBox[{"y", "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "-", "1"}], ")"}]}]}]}], ";"}], " ", 
   RowBox[{"(*", 
    RowBox[{
    "the", " ", "function", " ", "that", " ", "will", " ", "be", " ", 
-    "ploted"}], "*)"}], "\[IndentingNewLine]", 
+    "ploted"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"Manipulate", "[", 
    RowBox[{
     RowBox[{"Plot", "[", 
@@ -79,7 +81,7 @@ Cell[BoxData[
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`y$$], 0.1, 1}}, Typeset`size$$ = {468., {135., 143.}},
+      Hold[$CellContext`y$$], 0.1, 1}}, Typeset`size$$ = {468., {145., 154.}},
      Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
     True, $CellContext`y$3476$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -95,7 +97,7 @@ Cell[BoxData[
          $CellContext`expr[$CellContext`x, $CellContext`y$$]], \
 {$CellContext`x, 0, 2}], "Specifications" :> {{$CellContext`y$$, 0.1, 1}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{529., {193., 200.}},
+     ImageSizeCache->{529., {204., 211.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -107,7 +109,21 @@ Cell[BoxData[
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{{3.5552809779438367`*^9, 3.5552810030652733`*^9}, 
    3.5553365006123943`*^9, 3.555336760113237*^9, 3.5553369353402596`*^9, 
-   3.555337100377699*^9, 3.555337178474166*^9, 3.555361899015682*^9}]
+   3.555337100377699*^9, 3.555337178474166*^9, 3.555361899015682*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Plot", "::", "exclul"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(\\(Re[\\(\\(\\(\\(1\\/\\(1 - \\(\\(\
+\[ExponentialE]\\^\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\
+\\\\ R\\)\\)\\)\\)\\)[\\(\\(x, 0.1`\\)\\)]\\)\\)]\\)\\) - 0}\\)\[NoBreak] \
+must be a list of equalities or real-valued functions. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Plot\\\", ButtonNote -> \
+\\\"Plot::exclul\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5610655881849976`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -140,20 +156,22 @@ Cell[BoxData[{
       RowBox[{"{", 
        RowBox[{"{", 
         RowBox[{"1", ",", "\"\<1.0\>\""}], "}"}], "}"}], ",", " ", "temp2"}], 
-     "]"}]}], ";", " ", 
-   RowBox[{"(*", 
-    RowBox[{
-    "x", " ", "axis", " ", "ticks", " ", "in", " ", "format", " ", "of", " ", 
-     RowBox[{"{", " ", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"tick1", ",", " ", 
-         RowBox[{"tick1", " ", "label"}]}], "}"}], ",", " ", 
-       RowBox[{"{", 
-        RowBox[{"tick2", ",", " ", 
-         RowBox[{"tick2", " ", "label"}]}], "}"}], ",", " ", 
-       RowBox[{"etc", "..."}]}], " ", "}"}]}], "*)"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
+     "]"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "x", " ", "axis", " ", "ticks", " ", "in", " ", "format", " ", "of", " ", 
+    RowBox[{"{", " ", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"tick1", ",", " ", 
+        RowBox[{"tick1", " ", "label"}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"tick2", ",", " ", 
+        RowBox[{"tick2", " ", "label"}]}], "}"}], ",", " ", 
+      RowBox[{"etc", "..."}]}], " ", "}"}]}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
    RowBox[{"ticks", " ", "=", " ", 
     RowBox[{"{", " ", 
      RowBox[{"xTicks", ",", " ", "\[IndentingNewLine]", 
@@ -510,7 +528,7 @@ WindowSize->{1264, 665},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 ShowSelection->True,
 Magnification->1.3000000715255737`,
-FrontEndVersion->"8.0 for Microsoft Windows (32-bit) (November 7, 2010)",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -525,13 +543,14 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 1445, 35, 107, "Input"],
-Cell[2027, 59, 682, 13, 29, "Message"],
-Cell[2712, 74, 1740, 35, 414, "Output"]
+Cell[579, 22, 1478, 37, 107, "Input"],
+Cell[2060, 61, 682, 13, 29, "Message"],
+Cell[2745, 76, 1740, 35, 436, "Output"],
+Cell[4488, 113, 630, 12, 50, "Message"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4489, 114, 6503, 162, 542, "Input"],
-Cell[10995, 278, 12428, 227, 241, "Output"]
+Cell[5155, 130, 6515, 164, 542, "Input"],
+Cell[11673, 296, 12428, 227, 241, "Output"]
 }, Open  ]]
 }
 ]

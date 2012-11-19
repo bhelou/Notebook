@@ -985,6 +985,16 @@ Equations of Motion
 
 \end_inset
 
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Euler-Lagrange Equations
+\end_layout
+
+\end_inset
+
 where the 
 \begin_inset Formula $q_{i}\left(t\right)$
 \end_inset

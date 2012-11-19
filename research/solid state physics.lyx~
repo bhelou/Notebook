@@ -1233,7 +1233,27 @@ Results
 \end_layout
 
 \begin_layout Standard
-I wrote a Mathematica notebook for calculating the deviation per atom.
+I wrote a Mathematica notebook (
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+calculating deviation of Si atoms.nb
+\end_layout
+
+\end_inset
+
+ from which the figure below is generated) for calculating the deviation
+ per atom.
  The results are show in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1245,7 +1265,7 @@ reference "fig:fig1"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT

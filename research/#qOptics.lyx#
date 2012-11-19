@@ -8,9 +8,11 @@
 \end_preamble
 \use_default_options true
 \begin_modules
-theorems-ams
 eqs-within-sections
 figs-within-sections
+theorems-ams-bytype
+theorems-ams-extended-bytype
+logicalmkup
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -94,7 +96,7 @@ Cavities
 \end_layout
 
 \begin_layout Subsection
-hTuned Fabry-Perot in the optomechanical limit
+Tuned Fabry-Perot in the optomechanical limit
 \end_layout
 
 \begin_layout Subsubsection
@@ -235,7 +237,7 @@ Let
 \end_inset
 
 .
- In this case, one can use the 
+ In this case, one can use the `
 \begin_inset Quotes eld
 \end_inset
 
@@ -409,8 +411,8 @@ G_{0}=\frac{\omega}{d}=\frac{kc}{d}=\frac{k}{\left(d/c\right)}.
 \begin_inset Formula $G_{0}=\omega_{c}/d$
 \end_inset
 
-.
- (??????).
+ (the value of the coupling constant will be motivated later on with two
+ approaches).
  The Hamiltonian can also be written in the following form: 
 \begin_inset Formula 
 \begin{eqnarray}
@@ -468,7 +470,12 @@ status collapsed
 \begin_inset Formula $\hat{x}.\hat{F}$
 \end_inset
 
- can be interpreted to be the work done to move the oscillator.
+ can be interpreted to be the work done to move the oscillator (We only
+ could have gotten this result if 
+\begin_inset Formula $G_{0}=\omega_{c}/d$
+\end_inset
+
+).
  This way of viewing the interaction Hamiltonian can be intuitively explained
  with the statement: When the mirror changes its position, the energy in
  the field changes, and this change in the energy can give us the work,
@@ -570,6 +577,15 @@ Note that this interaction term could have also been derived differently:
 \end_inset
 
 as expected.
+ Moreover, notice that this derivation gives us that 
+\begin_inset Formula $G_{0}=\omega_{c}/d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Adding the input and output fields
 \end_layout
 
 \begin_layout Standard
@@ -582,7 +598,7 @@ Now add the input and output fields: if the mirror has finite transmittance
  Add to the Hamiltonian
 \begin_inset Formula 
 \begin{equation}
-H_{2}=\hbar\sqrt{\gamma}\left(\hat{a}_{in}^{\dagger}\left(t\right)e^{i\omega_{0}t}\hat{a}+\hat{a}_{in}\left(t\right)e^{-i\omega_{0}t}\hat{a}^{\dagger}\right),
+H_{2}=i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)e^{i\omega_{0}t}\hat{a}+\hat{a}_{in}\left(t\right)e^{-i\omega_{0}t}\hat{a}^{\dagger}\right),
 \end{equation}
 
 \end_inset
@@ -735,12 +751,17 @@ where
 \begin{eqnarray}
 H_{0} & = & \hbar\omega_{0}\hat{a}^{\dagger}\hat{a}\\
 H_{I} & = & \frac{\hat{P}^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a}+\\
- &  & i\hbar\sqrt{\gamma}\left(\hat{a}_{in}^{\dagger}\left(t\right)e^{i\omega_{0}t}\hat{a}+\hat{a}_{in}\left(t\right)e^{-i\omega_{0}t}\hat{a}^{\dagger}\right).
+ &  & i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)e^{i\omega_{0}t}\hat{a}+\hat{a}_{in}\left(t\right)e^{-i\omega_{0}t}\hat{a}^{\dagger}\right).
 \end{eqnarray}
 
 \end_inset
 
-So according to 
+We obtain that, in this new picture, the total Hamiltonian is given by*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+According to 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:interactionHI"
@@ -773,7 +794,7 @@ In
 \begin_inset Formula 
 \begin{eqnarray}
 \xi & \equiv & U_{0}^{\dagger}\left(t\right)\left\{ \hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(\hat{a}_{in}^{\dagger}\left(t\right)e^{i\omega_{0}t}\hat{a}+\hat{a}_{in}\left(t\right)e^{-i\omega_{0}t}\hat{a}^{\dagger}\right)\right\} U_{0}\left(t\right)\\
- & = & \hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(\hat{a}_{in}^{\dagger}\left(t\right)e^{i\omega_{0}t}U_{0}^{\dagger}\hat{a}U_{0}+\hat{a}_{in}\left(t\right)e^{-i\omega_{0}t}U_{0}^{\dagger}\hat{a}^{\dagger}U_{0}\right),
+ & = & \hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)e^{i\omega_{0}t}U_{0}^{\dagger}\hat{a}U_{0}+\hat{a}_{in}\left(t\right)e^{-i\omega_{0}t}U_{0}^{\dagger}\hat{a}^{\dagger}U_{0}\right),
 \end{eqnarray}
 
 \end_inset
@@ -815,7 +836,7 @@ reference "eq:usefulExpN"
  becomes
 \begin_inset Formula 
 \begin{equation}
-\xi=\hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right)
+\xi=\hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right).
 \end{equation}
 
 \end_inset
@@ -823,11 +844,12 @@ reference "eq:usefulExpN"
 
 \end_layout
 
-\begin_layout Standard
-In summary, in this new picture, the total Hamiltonian is given by
+\end_inset
+
+
 \begin_inset Formula 
 \begin{eqnarray}
-H_{I} & = & \frac{\hat{P}^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right).\label{eq:totalHamiltonianAfterInteractionPicture}
+H_{I} & = & \frac{\hat{P}^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right).\label{eq:totalHamiltonianAfterInteractionPicture}
 \end{eqnarray}
 
 \end_inset
@@ -1078,7 +1100,7 @@ The output field is not independent of the input field.
  Indeed, it is given by 
 \begin_inset Formula 
 \begin{equation}
-\hat{a}_{out}\left(t\right)\equiv-\limit{\Delta t}0\hat{a}_{in}\left(t-\Delta t\right),
+\hat{a}_{out}\left(t\right)\equiv-\limit{\Delta t}0\hat{a}_{in}\left(t+\Delta t\right),
 \end{equation}
 
 \end_inset
@@ -1086,17 +1108,17 @@ The output field is not independent of the input field.
 where the minus sign is the phase change due to the interaction with the
  mirror.
  In out model, at time 
-\begin_inset Formula $t^{-}$
+\begin_inset Formula $t$
 \end_inset
 
 , the input field interacts with the cavity field and with the mirror.
  Hence, at time 
-\begin_inset Formula $t$
+\begin_inset Formula $t^{+}$
 \end_inset
 
 , which would denote the time right after that the input field interacts
  with the cavity field and with the mirror (again this happens at 
-\begin_inset Formula $t^{-}$
+\begin_inset Formula $t$
 \end_inset
 
 ), the output field emerges.
@@ -1112,11 +1134,11 @@ Consider the simple model of a perfectly reflecting mirror (so that the
 \end_inset
 
 , will simply be the reflected field at time 
-\begin_inset Formula $t^{-}$
+\begin_inset Formula $t$
 \end_inset
 
 , which is given by 
-\begin_inset Formula $\hat{a}_{in}\left(t-\Delta t,x=0\right)$
+\begin_inset Formula $\hat{a}_{in}\left(t,x=0\right)$
 \end_inset
 
  (remember that the 
@@ -1135,6 +1157,15 @@ reference "eq:ainRigorous"
 \end_inset
 
 ).
+ Right after being reflected, the field travels slightly to give us 
+\begin_inset Formula $\hat{a}_{out}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t^{+}$
+\end_inset
+
+.
  This can also be understood with the following diagram: 
 \begin_inset Float figure
 wide false
@@ -1192,7 +1223,7 @@ Another possible way of visualizing what has been said is to draw the output
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1226,6 +1257,12 @@ In this picture, we take the limit that
 \end_inset
 
 .
+ So the output field is simply related to the input field in that it is
+ the input field at time 
+\begin_inset Formula $t^{+}$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -1248,7 +1285,7 @@ In this picture, we take the limit that
  Hence, we can write that
 \begin_inset Formula 
 \begin{equation}
-\hat{a}_{out}\left(t+\delta t\right)=-e^{iH\delta t/\hbar}\hat{a}_{in}\left(t\right)e^{-iH\delta t/\hbar},
+\hat{a}_{out}\left(t\right)=-e^{iH\delta t/\hbar}\hat{a}_{in}\left(t\right)e^{-iH\delta t/\hbar},
 \end{equation}
 
 \end_inset
@@ -1300,21 +1337,36 @@ reference "eq:totalHamiltonianAfterInteractionPicture"
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{d}{dt}\hat{a}_{in}\left(t\right) & = & \frac{d}{dt}\hat{a}_{in}\left(t+\delta t\right)\\
- & = & \lim_{\Delta t\rightarrow0}\frac{\hat{a}_{out}\left(t+\delta t+\Delta t\right)-\hat{a}_{out}\left(t+\delta t-\Delta t\right)}{\Delta t}\\
+\frac{d}{dt}\hat{a}_{in}\left(t\right) & = & -\frac{d}{dt}\hat{a}_{out}\left(t-\delta t\right)\\
+ & = & -\lim_{\Delta t\rightarrow0}\frac{\hat{a}_{out}\left(t-\delta t+\Delta t\right)-\hat{a}_{out}\left(t-\delta t\right)}{\Delta t}=-\lim_{\Delta t\rightarrow0}\frac{\hat{a}_{out}\left(t-\delta t+\Delta t\right)+\hat{a}_{in}\left(t\right)}{\Delta t}\\
  & = & \frac{i}{\hbar}\left[H_{I}\left(t\right),\hat{a}_{in}\left(t\right)\right]=\frac{i}{\hbar}\left[H_{I}\left(t\right),\hat{a}_{in}\left(t\right)\right]\\
- & = & \frac{i}{\hbar}-i\hbar\sqrt{\gamma}\left(\left[\hat{a}_{in}^{\dagger}\left(t\right),\hat{a}_{in}\left(t\right)\right]\hat{a}+\left[\hat{a}_{in}\left(t\right),\hat{a}_{in}\left(t\right)\right]\hat{a}^{\dagger}\right)\\
- & \approx & \sqrt{\gamma}\left(\left[\hat{a}_{in}^{\dagger}\left(t\right),\hat{a}_{in}\left(t\right)\right]\hat{a}+\left[\hat{a}_{in}\left(t\right),\hat{a}_{in}\left(t\right)\right]\hat{a}^{\dagger}\right)\\
- & = & \sqrt{\gamma}\hat{a}\delta\left(\delta t\right).
+ & = & \frac{i}{\hbar}i\hbar\sqrt{\gamma}\left(-\left[\hat{a}_{in}^{\dagger}\left(t\right),\hat{a}_{in}\left(t\right)\right]\hat{a}+\left[\hat{a}_{in}\left(t\right),\hat{a}_{in}\left(t\right)\right]\hat{a}^{\dagger}\right)\\
+ & \approx- & \sqrt{\gamma}\left(-\left[\hat{a}_{in}^{\dagger}\left(t\right),\hat{a}_{in}\left(t\right)\right]\hat{a}+\left[\hat{a}_{in}\left(t\right),\hat{a}_{in}\left(t\right)\right]\hat{a}^{\dagger}\right)\\
+ & = & -\sqrt{\gamma}\hat{a}\delta\left(0\right).
 \end{eqnarray*}
 
 \end_inset
 
-So
+So multiplying both sides by 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ and using that 
+\begin_inset Formula $\Delta t\delta\left(0\right)=1$
+\end_inset
+
+ (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fishyDeltaZero"
+
+\end_inset
+
+), we have that
 \begin_inset Formula 
 \begin{eqnarray}
-\hat{a}_{out}\left(t+\delta t\right) & = & \limit{\delta t}0\lim_{\Delta t\rightarrow0}\hat{a}_{in}\left(t\right)-i\sqrt{\gamma}\hat{a}\delta\left(\delta t\right)\Delta t\\
- & = & \hat{a}_{in}\left(t\right)-i\sqrt{\gamma}\hat{a}.
+-\hat{a}_{out}\left(t\right)-\hat{a}_{in}\left(t\right) & = & -\sqrt{\gamma}\hat{a}\\
+\implies\hat{a}_{out}\left(t\right)+\hat{a}_{in}\left(t\right) & = & +\sqrt{\gamma}\hat{a}.
 \end{eqnarray}
 
 \end_inset
@@ -1323,45 +1375,12 @@ So
 \end_layout
 
 \begin_layout Plain Layout
-We have that (for brevity letting 
-\begin_inset Formula $H_{I}\left(t\right)\equiv H$
-\end_inset
-
-) 
-\begin_inset Formula 
-\begin{eqnarray}
-\hat{a}_{out}\left(t\right)=\hat{a}_{in}\left(t+\delta t\right) & = & e^{iH\delta t/\hbar}\hat{a}_{in}\left(t\right)e^{-iH\delta t/\hbar}\\
- & \approx & \left(1+i\frac{H\delta t}{\hbar}\right)\hat{a}_{in}\left(1-i\frac{H\delta t}{\hbar}\right)+O\left(\delta t^{2}\right)\\
- & = & \hat{a}_{in}+i\frac{\delta t}{\hbar}H\hat{a}_{in}-i\frac{\delta t}{\hbar}\hat{a}_{in}H+O\left(\delta t^{2}\right)\\
- & \approx & \hat{a}_{in}+i\frac{\delta t}{\hbar}\left[H,\hat{a}_{in}\right]\\
- & = & \hat{a}_{in}+i\frac{\delta t}{\hbar}\left[i\hbar\sqrt{\gamma}\left(\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right),\hat{a}_{in}\right]\\
- & = & \hat{a}_{in}-\delta t\sqrt{\gamma}\left[\hat{a}_{in}^{\dagger}\left(t\right)\hat{a},\hat{a}_{in}\right]=1+i\delta t\sqrt{\gamma}\left[\hat{a}_{in}^{\dagger}\left(t\right),\hat{a}_{in}\left(t\right)\right]\hat{a}\\
- & = & \hat{a}_{in}-\delta t\sqrt{\gamma}\hat{a}\delta\left(0\right)=\hat{a}_{in}-\sqrt{\gamma}\hat{a},
-\end{eqnarray}
-
-\end_inset
-
-where we have used that (
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:aadaggerCommutationrelation"
-
-\end_inset
-
-) 
-\begin_inset Formula 
-\begin{equation}
-\left[a,a^{\dagger}\right]=I
-\end{equation}
-
-\end_inset
-
-
+ANOTHER BETTER APPROACH
 \end_layout
 
 \begin_layout Plain Layout
 The better approach is to use 
-\begin_inset Formula $\hat{a}_{out}\left(t\right)=\lim_{\delta t\rightarrow0}e^{iH\delta t/\hbar}\hat{a}_{in}\left(t\right)e^{-iH\delta t/\hbar}$
+\begin_inset Formula $\hat{a}_{out}\left(t\right)=-\lim_{\delta t\rightarrow0}e^{iH\delta t/\hbar}\hat{a}_{in}\left(t\right)e^{-iH\delta t/\hbar}$
 \end_inset
 
  because the differential equation approach only works if the Hamiltonian
@@ -1373,6 +1392,47 @@ reference "sub:InteractionPicture"
 \end_inset
 
 ).
+\end_layout
+
+\begin_layout Plain Layout
+We have that (for brevity letting 
+\begin_inset Formula $H_{I}\left(t\right)\equiv H$
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray}
+-\hat{a}_{out}\left(t\right)=\hat{a}_{in}\left(t+\delta t\right) & = & e^{iH\delta t/\hbar}\hat{a}_{in}\left(t\right)e^{-iH\delta t/\hbar}\\
+ & \approx & \left(1+i\frac{H\delta t}{\hbar}\right)\hat{a}_{in}\left(1-i\frac{H\delta t}{\hbar}\right)+O\left(\delta t^{2}\right)\\
+ & = & \hat{a}_{in}+i\frac{\delta t}{\hbar}H\hat{a}_{in}-i\frac{\delta t}{\hbar}\hat{a}_{in}H+O\left(\delta t^{2}\right)\\
+ & \approx & \hat{a}_{in}+i\frac{\delta t}{\hbar}\left[H,\hat{a}_{in}\right]\\
+ & = & \hat{a}_{in}+i\frac{\delta t}{\hbar}\left[i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right),\hat{a}_{in}\right]\\
+ & = & \hat{a}_{in}+\delta t\sqrt{\gamma}\left[\hat{a}_{in}^{\dagger}\left(t\right)\hat{a},\hat{a}_{in}\right]=1+\delta t\sqrt{\gamma}\left[\hat{a}_{in}^{\dagger}\left(t\right),\hat{a}_{in}\left(t\right)\right]\hat{a}\\
+ & = & \hat{a}_{in}-\delta t\sqrt{\gamma}\hat{a}\delta\left(0\right)=\hat{a}_{in}-\sqrt{\gamma}\hat{a},
+\end{eqnarray}
+
+\end_inset
+
+where we have used that 
+\begin_inset Formula $\delta\left(0\right)\delta t=1$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:aadaggerCommutationrelation"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{equation}
+\left[a,a^{\dagger}\right]=I.
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1975,8 +2035,18 @@ Simple analysis of the light emitted by a Single Mode laser
 \end_layout
 
 \begin_layout Standard
-In this simple treatment of the single mode laser, we will assume that it
- emits light described by the coherent state 
+In this simple treatment of the 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+single mode laser
+\end_layout
+
+\end_inset
+
+single mode laser, we will assume that it emits light described by the coherent
+ state 
 \begin_inset Formula $\ket{\xi}$
 \end_inset
 
@@ -2167,7 +2237,7 @@ where it is convenient to pick
 \begin_inset Formula $\pi\sqrt{2}$
 \end_inset
 
- and hence 
+ and so 
 \begin_inset Formula 
 \begin{eqnarray}
 \hat{E}\left(t\right) & \rightarrow & \mathcal{C}_{0}\left[\left(\bar{a}+\hat{\mathcal{E}_{c}}\left(t\right)\right)\cos\omega_{0}t+\hat{\mathcal{E}_{s}}\left(t\right)\sin\omega_{0}t\right].\label{eq:singleModeLaserElectricField}
@@ -2516,28 +2586,322 @@ key "haixingThesis"
  equation 2.15)
 \end_layout
 
+\begin_layout Section
+Electric Field Transformations
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Propagation in free space
+\end_layout
+
+\end_inset
+
+Propagation in free space
+\end_layout
+
+\begin_layout Standard
+Consider a coherent optical field traveling for time 
+\begin_inset Formula $\tau$
+\end_inset
+
+, as shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-field-propagating"
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename QuantumPropagationFreeSpace.svg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-field-propagating"
+
+\end_inset
+
+A field propagating for time 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ Note that we get the same result had the field moved from left to right
+ or right to left.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ How are the field's quadratures related to the input field's quadratures?
+\end_layout
+
+\begin_layout Standard
+We assume that the input optical field is a single mode coherent state and
+ so we can write all electric fields in the following (unnormalized) form
+ (this is Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:final simple single mode laser"
+
+\end_inset
+
+ without the normalization constant 
+\begin_inset Formula $\mathcal{C}_{0}$
+\end_inset
+
+ )
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{E}\left(t\right) & = & \left[\sqrt{2I_{0}/\hbar\omega_{0}}+\hat{u}_{1}\left(t\right)\right]\cos\omega_{0}t+\hat{u}_{2}\left(t\right)\sin\omega_{0}t,
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{u}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{u}_{2}$
+\end_inset
+
+ are the amplitude and phase quadratures, respectively.
+ Denote
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{E}_{in}\left(t\right) & = & \left[\sqrt{2I_{0}/\hbar\omega_{0}}+\hat{a}_{1}\left(t\right)\right]\cos\omega_{0}t+\hat{a}_{2}\left(t\right)\sin\omega_{0}t\\
+\hat{E}_{fsp}\left(t\right) & = & \hat{E}_{in}\left(t-\tau\right)\\
+ & = & \left[\sqrt{2I_{0}/\hbar\omega_{0}}+\hat{b}_{1}\left(t\right)\right]\cos\omega_{0}t+\hat{b}_{2}\left(t\right)\sin\omega_{0}t.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that
+\begin_inset Formula 
+\begin{equation}
+\hat{E}_{fsp}\left(t\right)=\hat{E}_{in}\left(t-\tau\right)
+\end{equation}
+
+\end_inset
+
+because of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:simplePropagationFreeSpace"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+Then,
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c}
+\hat{b}_{1}\left(\Omega\right)\\
+\hat{b}_{2}\left(\Omega\right)
+\end{array}\right)=e^{i\Omega\tau}\left(\begin{array}{cc}
+\cos\omega_{0}\tau & -\sin\omega_{0}\tau\\
+\sin\omega_{0}\tau & \cos\omega_{0}\tau
+\end{array}\right)\left(\begin{array}{c}
+\hat{a}_{1}\left(\Omega\right)\\
+\hat{a}_{2}\left(\Omega\right)
+\end{array}\right).\label{eq:quadraturesFreeSpacePropagation}
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{E}_{fsp}\left(t\right) & = & \hat{E}_{in}\left(t-\tau\right)\\
+ & = & \left[\sqrt{2I_{0}/\hbar\omega_{0}}+\hat{a}_{1}\left(t-\tau\right)\right]\cos\omega_{0}\left(t-\tau\right)+\hat{a}_{2}\left(t-\tau\right)\sin\omega_{0}\left(t-\tau\right)
+\end{eqnarray*}
+
+\end_inset
+
+Then use that
+\begin_inset Formula 
+\begin{eqnarray*}
+\sin\omega_{0}\left(t-\tau\right) & \approx & \sin\omega_{0}t\cos\left(\tau\omega_{0}\right)-\cos\left(\omega_{0}t\right)\sin\left(\tau\omega_{0}\right)\\
+\cos\omega_{0}\left(t-\tau\right) & \approx & \cos\omega_{0}t\cos\left(\omega_{0}\tau\right)+\sin\left(\omega_{0}t\right)\sin\left(\tau\omega_{0}\right),
+\end{eqnarray*}
+
+\end_inset
+
+to obtain that (letting 
+\begin_inset Formula $\xi\equiv\sqrt{2I_{0}/\hbar\omega_{0}}$
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{E}_{fsp}\left(t\right) & = & \left[\xi+\hat{a}_{1}\left(t-\tau\right)\right]\left(\cos\omega_{0}t\cos\left(\omega_{0}\tau\right)+\sin\left(\omega_{0}t\right)\sin\left(\tau\omega_{0}\right)\right)+\\
+ &  & \hat{a}_{2}\left(t-\tau\right)\left\{ \sin\omega_{0}t\cos\left(\tau\omega_{0}\right)-\cos\left(\omega_{0}t\right)\sin\left(\tau\omega_{0}\right)\right\} \\
+ & = & \cos\left(\omega_{0}t\right)\left\{ \left[\xi+\hat{a}_{1}\left(t-\tau\right)\right]\cos\left(\omega_{0}\tau\right)-\hat{a}_{2}\left(t-\tau\right)\sin\left(\tau\omega_{0}\right)\right\} \\
+ &  & +\sin\left(\omega_{0}t\right)\left\{ \left[\xi+\hat{a}_{1}\left(t-\tau\right)\right]\sin\left(\tau\omega_{0}\right)+\hat{a}_{2}\left(t-\tau\right)\cos\left(\tau\omega_{0}\right)\right\} \\
+ & = & \cos\left(\omega_{0}t\right)\left\{ \hat{a}_{1}\left(t-\tau\right)\cos\left(\omega_{0}\tau\right)-\hat{a}_{2}\left(t-\tau\right)\sin\left(\tau\omega_{0}\right)\right\} \\
+ &  & +\sin\left(\omega_{0}t\right)\left\{ \hat{a}_{1}\left(t-\tau\right)\sin\left(\tau\omega_{0}\right)+\hat{a}_{2}\left(t-\tau\right)\cos\left(\tau\omega_{0}\right)\right\} \\
+ &  & +\xi\cos\omega_{0}\left(t-\tau\right)\\
+ & = & \left[\sqrt{2I_{0}/\hbar\omega_{0}}+\hat{b}_{1}\left(t\right)\right]\cos\omega_{0}t+\hat{b}_{2}\left(t\right)\sin\omega_{0}t
+\end{eqnarray}
+
+\end_inset
+
+Hence, we have that
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c}
+\hat{b}_{1}\left(t\right)\\
+\hat{b}_{2}\left(t\right)
+\end{array}\right)=\left(\begin{array}{cc}
+\cos\left(\omega_{0}\tau\right) & -\sin\left(\tau\omega_{0}\right)\\
+\sin\left(\tau\omega_{0}\right) & \cos\left(\omega_{0}\tau\right)
+\end{array}\right)\left(\begin{array}{c}
+\hat{a}_{1}\left(t-\tau\right)\\
+\hat{a}_{2}\left(t-\tau\right)
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Now let us apply the Fourier transform.
+ All we need to use is that, using the shift property of Fourier transforms
+ (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:shiftPropertyFourierTransforms"
+
+\end_inset
+
+ with the Fourier transform defined as 
+\begin_inset Formula $\mathcal{F}\left[g\right]\propto\int e^{ixk}g\left(x\right)dx$
+\end_inset
+
+) that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{F}\left[\hat{a}_{1,2}\left(t-\tau\right)\right] & = & e^{i\Omega\tau}a_{1,2}\left(\Omega\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Hence, we obtain that 
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c}
+\hat{b}_{1}\left(\Omega\right)\\
+\hat{b}_{2}\left(\Omega\right)
+\end{array}\right)=e^{i\Omega\tau}\left(\begin{array}{cc}
+\cos\omega_{0}\tau & -\sin\omega_{0}\tau\\
+\sin\omega_{0}\tau & \cos\omega_{0}\tau
+\end{array}\right)\left(\begin{array}{c}
+\hat{a}_{1}\left(\Omega\right)\\
+\hat{a}_{2}\left(\Omega\right)
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Fundamentals of QO
 \end_layout
 
 \begin_layout Section
-Different pictures
+The Different pictures in Quantum physics
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Heisenberg-picture"
+
+\end_inset
+
 Heisenberg picture
 \end_layout
 
 \begin_layout Standard
-Consider the Hamiltonian 
+Consider a Hamiltonian 
 \begin_inset Formula $H$
 \end_inset
 
-, then the Heisenberg picture is defined in the following way 
+, then the Heisenberg picture is defined in the following way: 
 \begin_inset Formula 
 \begin{eqnarray}
 \hat{A}_{H}\left(t\right) & = & \hat{U}^{\dagger}\left(t,t_{0}\right)\hat{A}\hat{U}\left(t,t_{0}\right)\\
-\left|\psi_{H}\left(t\right)\right\rangle  & = & \left|\psi\left(t_{0}\right)\right\rangle .
+\left|\psi_{H}\left(t\right)\right\rangle  & = & \left|\psi\left(t_{0}\right)\right\rangle ,
 \end{eqnarray}
 
 \end_inset
@@ -2546,7 +2910,20 @@ where
 \begin_inset Formula $\hat{A}$
 \end_inset
 
- is an operator and 
+ is an operator, and 
+\begin_inset Formula $\left|\psi\right\rangle $
+\end_inset
+
+ a ket, in the Schrodinger picture, the subscript 
+\begin_inset Formula $H$
+\end_inset
+
+ refers to the Heisenberg picture of the associated quantity (e.g.
+ 
+\begin_inset Formula $\hat{A}_{H}$
+\end_inset
+
+ is an operator in the Heisenberg picture) and 
 \begin_inset Formula $\hat{U}\left(t,t_{0}\right)$
 \end_inset
 
@@ -2604,7 +2981,7 @@ The time evolution of an operator is given by (assuming that
 
 *
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -2650,41 +3027,52 @@ name "sub:InteractionPicture"
 
 \end_inset
 
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Interaction picture
+\end_layout
+
+\end_inset
+
 Interaction picture
 \end_layout
 
 \begin_layout Standard
 Consider a Hamiltonian of the form 
-\begin_inset Formula $H=H_{0}+H_{SI}$
+\begin_inset Formula $H=H_{0}+H_{int}$
 \end_inset
 
-, where 
-\begin_inset Formula $H_{SI}$
+, where I will refer to 
+\begin_inset Formula $H_{int}$
 \end_inset
 
- is called the interaction Hamiltonian.
- Then, in reference to the original picture, the interaction picture elements
- are defined in the following way
+ as the interaction Hamiltonian (in the Schrodinger picture).
+ Then, in reference to the Schrodinger picture (whose elements will be denoted
+ with the subscript 
+\begin_inset Formula $S$
+\end_inset
+
+), the interaction picture elements, which will be denoted with subscript
+ 
+\begin_inset Formula $I$
+\end_inset
+
+, are defined in the following way
 \begin_inset Formula 
 \begin{eqnarray}
 \left|\psi_{I}\left(t\right)\right\rangle  & = & U_{0}^{\dagger}\left(t\right)\left|\psi_{S}\left(t\right)\right\rangle \\
 A_{I}\left(t\right) & = & U_{0}^{\dagger}\left(t\right)A_{S}\left(t\right)U_{0}\left(t\right)\\
 \hat{\rho}_{I}\left(t\right) & = & U_{0}^{\dagger}\left(t\right)\hat{\rho}_{S}\left(t\right)U_{0}\left(t\right)\\
 H_{0,I} & = & H_{0}\\
-H_{I,SI} & = & U_{0}^{\dagger}\left(t\right)H_{SI}\left(t\right)U_{0}\left(t\right)\label{eq:interactionHI}
+H_{I,int} & = & U_{0}^{\dagger}\left(t\right)H_{int}\left(t\right)U_{0}\left(t\right)\label{eq:interactionHI}
 \end{eqnarray}
 
 \end_inset
 
 where 
-\begin_inset Formula $I$
-\end_inset
-
- denotes the interactions picture, and 
-\begin_inset Formula $S$
-\end_inset
-
- refers to the original picture (be it Schrodinger or Heisenberg), and 
 \begin_inset Formula $U_{0}$
 \end_inset
 
@@ -2702,7 +3090,8 @@ where
 \end_inset
 
 .
- The interaction picture is equivalent to any other picture because
+ The interaction picture is equivalent to any other picture because expectation
+ values are conserved, i.e.
 \begin_inset Formula 
 \begin{equation}
 \mbox{tr}\left(\hat{\rho}_{I}\hat{A}_{I}\right)=\mbox{tr}\left(\hat{\rho}_{S}\hat{A}_{S}\right).
@@ -2710,16 +3099,48 @@ where
 
 \end_inset
 
-The time evolution is given by (assuming that 
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Indeed, 
+\begin_inset Formula 
+\begin{eqnarray}
+\mbox{tr}\left(\hat{\rho}_{I}\hat{A}_{I}\right) & = & \mbox{tr}\left(U_{0}^{\dagger}\left(t\right)\hat{\rho}_{S}\left(t\right)U_{0}\left(t\right)U_{0}^{\dagger}\left(t\right)A_{S}\left(t\right)U_{0}\left(t\right)\right)\\
+ & = & \mbox{tr}\left(U_{0}^{\dagger}\left(t\right)\hat{\rho}_{S}\left(t\right)A_{S}\left(t\right)U_{0}\left(t\right)\right)\\
+ & = & \mbox{tr}\left(\hat{\rho}_{S}\hat{A}_{S}\right)
+\end{eqnarray}
+
+\end_inset
+
+because the trace is invariant under unitary transformations.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Time evolution
+\end_layout
+
+\begin_layout Assumption
 \begin_inset Formula $H_{0}$
 \end_inset
 
- is time-independent) 
+ is time-independent.
+\end_layout
+
+\begin_layout Standard
+The time evolution of states, operators and density operators is given by
+ 
 \begin_inset Formula 
 \begin{eqnarray}
-i\hbar\frac{d}{dt}\left|\psi_{I}\left(t\right)\right\rangle  & = & H_{I,SI}\left(t\right)\left|\psi_{I}\left(t\right)\right\rangle \\
+i\hbar\frac{d}{dt}\left|\psi_{I}\left(t\right)\right\rangle  & = & H_{I,int}\left(t\right)\left|\psi_{I}\left(t\right)\right\rangle \\
 \frac{d}{dt}A_{I}\left(t\right) & = & \frac{i}{\hbar}\left[H_{0},A_{I}\right]\\
-i\hbar\frac{d}{dt}\hat{\rho}_{I}\left(t\right) & = & \left[H_{I,SI}\left(t\right),\hat{\rho}_{I}\left(t\right)\right].
+i\hbar\frac{d}{dt}\hat{\rho}_{I}\left(t\right) & = & \left[H_{I,int}\left(t\right),\hat{\rho}_{I}\left(t\right)\right].
 \end{eqnarray}
 
 \end_inset
@@ -4582,7 +5003,7 @@ key "Danilishin2012"
 \end_layout
 
 \begin_layout Subsection
-Spectral densities (double-sised) for 2 photon formalism
+Spectral densities (double-sided) for 2 photon formalism
 \end_layout
 
 \begin_layout Standard
@@ -4758,7 +5179,7 @@ Covariance matrix of photon states
 \end_layout
 
 \begin_layout Standard
-Similar to spectrial densities but defined in the time domain:
+Similar to spectral densities but defined in the time domain:
 \begin_inset Formula 
 \begin{eqnarray*}
 \mathbb{V}_{ij}\left(t\right)\delta\left(t-t^{'}\right) & = & \left\langle \hat{a}_{i}\left(t\right)\hat{a}_{j}\left(t^{'}\right)\right\rangle _{symm}\\
@@ -4788,7 +5209,7 @@ Moreover, we can write that
 \begin{eqnarray*}
 \left\langle \hat{E}\left(x,y,z,t\right)^{2}\right\rangle  & = & \left(u\left(x,y,z\right)\mathcal{C}_{0}\right)^{2}\times\left(\begin{array}{cc}
 \cos\omega_{0}t & \sin\omega_{0}t\end{array}\right)\mathbb{V}\left(\begin{array}{cc}
-\cos\omega_{0}t & \sin\omega_{0}t\end{array}\right)^{T},\\
+\cos\omega_{0}t & \sin\omega_{0}t\end{array}\right)^{T},
 \end{eqnarray*}
 
 \end_inset
@@ -16246,8 +16667,8 @@ reference "fig:Free test mass example"
 
  for the setup.
  We assume that the laser's input optical field is a single mode coherent
- state and so we can write it's electric field in the (unnormalized) form
- (Eq.
+ state and so we can write it's electric field in the following (unnormalized)
+ form (Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16280,7 +16701,50 @@ where
 \begin_inset Formula $\tau=L/c$
 \end_inset
 
- is the time taken to reach the test mass in its rest position and 
+ is the time taken to reach the test mass in its rest position*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that (using 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadraturesFreeSpacePropagation"
+
+\end_inset
+
+) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\hat{E}_{out}\left(t\right)=\hat{E}_{in}\left(t-2\tau-2\hat{x}/c\right),
+\end{equation}
+
+\end_inset
+
+because the output field is the input field after it has traveled a distance
+ of 
+\begin_inset Formula $2L+2\hat{x}$
+\end_inset
+
+.
+ We divide by the velocity to obtain the desired result.
+\end_layout
+
+\end_inset
+
+ and 
 \begin_inset Formula 
 \begin{eqnarray}
 \hat{b}_{1}\left(t\right) & \approx & \hat{a}_{c}\left(t-2\tau\right)\nonumber \\
@@ -16334,17 +16798,14 @@ we have (letting
 \begin_inset Formula $\xi\equiv\sqrt{2I_{0}/\hbar\omega_{0}}$
 \end_inset
 
-) 
-\begin_inset Formula $a_{sc}\left(t-2\tau\right)$
-\end_inset
-
- 
+) that 
 \begin_inset Formula 
 \begin{eqnarray*}
-\hat{E}_{in}\left(t-2\tau-2\hat{x}/c\right) & = & \hat{E}_{in}\left(t-2\tau\right)+\left(\frac{\omega_{0}\hat{x}}{c}\right)\frac{d}{d\tilde{x}}E_{out}|_{\tilde{x}=0}+...\\
+\hat{E}_{out} & = & \hat{E}_{in}\left(t-2\tau-2\hat{x}/c\right)\\
+ & = & \hat{E}_{in}\left(t-2\tau\right)+\left(\frac{\omega_{0}\hat{x}}{c}\right)\frac{d}{d\tilde{x}}E_{out}|_{\tilde{x}=0}+...\\
  & \approx & \hat{E}_{in}\left(t-2\tau\right)+\left(\frac{\omega_{0}\hat{x}}{c}\right)\frac{d}{d\tilde{x}}\left(\left[\xi+\hat{a}_{c}\left(\tilde{t}\right)\right]\cos\omega_{0}\tilde{t}+\hat{a}_{s}\sin\omega_{0}\tilde{t}\right)|_{\tilde{x}=0}\\
  & = & \hat{E}_{in}\left(t-2\tau\right)+\left(\frac{\omega_{0}\hat{x}}{c}\right)\times\\
- &  & \left(\left.2\left(\hat{a}_{c}\left(\tilde{t}\right)+\xi\right)\sin\omega_{o}\tilde{t}\right|_{\tilde{x}=0}+\left.\frac{d}{d\tilde{x}}\hat{a}_{c}\left(\tilde{t}\right)\cos\omega_{0}\tilde{t}\right|_{\tilde{x}=0}-\left.2\hat{a}_{s}\left(\tilde{t}\right)\cos\omega_{0}\tilde{t}\right|_{\tilde{x}=0}+\left.\frac{d}{d\tilde{x}}\hat{a}_{s}\left(\tilde{t}\right)\sin\omega_{0}\tilde{t}\right|_{\tilde{x}=0}\right)\\
+ &  & \left(2\left(\hat{a}_{c}\left(\tilde{t}\right)+\xi\right)\sin\omega_{o}\tilde{t}+\frac{d}{d\tilde{x}}\hat{a}_{c}\left(\tilde{t}\right)\cos\omega_{0}\tilde{t}-2\hat{a}_{s}\left(\tilde{t}\right)\cos\omega_{0}\tilde{t}+\frac{d}{d\tilde{x}}\hat{a}_{s}\left(\tilde{t}\right)\sin\omega_{0}\tilde{t}\right)_{\tilde{x}=0}\\
  & = & \hat{E}_{in}\left(t-2\tau\right)+\left(\frac{\omega_{0}\hat{x}}{c}\right)\times\\
  &  & \left(2\left(\hat{a}_{c}\left(t-2\tau\right)+\xi\right)\sin\omega_{o}\left(t-2\tau\right)+\hat{a}_{c}\left(t-2\tau\right)\cos\omega_{0}\left(t-2\tau\right)-2\hat{a}_{s}\left(t-2\tau\right)\cos\omega_{0}\left(t-2\tau\right)+\hat{a}_{s}\left(t-2\tau\right)\sin\omega_{0}\left(t-2\tau\right)\right),\\
  & \approx & \hat{E}_{in}\left(t-2\tau\right)+\\
@@ -16372,10 +16833,7 @@ because we have assume that
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Plain Layout
-and we have used that
+ Moreover, we have used that
 \begin_inset Formula 
 \begin{eqnarray*}
 a_{sc}\left(t\right) & = & \int d\omega e^{-i\omega t}a_{sc}\left(\omega\right)\\
@@ -17164,7 +17622,7 @@ reference "fig:tuned fabry perot noise"
 \end_inset
 
 .
- We assume that we have a symmetric mirror that inflicts a 
+ Moreover, we assume that we have a symmetric mirror that inflicts a 
 \begin_inset Formula $\pi$
 \end_inset
 
@@ -17449,6 +17907,21 @@ Say
 \end_inset
 
 
+\begin_inset Formula $T$
+\end_inset
+
+ is also 
+\begin_inset Formula $\approx10^{-3}$
+\end_inset
+
+ - see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "advancedLIGOdata"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -17513,7 +17986,7 @@ with
 
  *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 We obtain that 
@@ -17753,6 +18226,65 @@ Then use
 
 \end_layout
 
+\begin_layout Plain Layout
+Equivalently, we can follow the control approach as illustrated in: 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename controlDiagramDetunedCavity.svg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A diagram visualizing the detuned cavity.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ We would obtain that
+\begin_inset Formula 
+\begin{equation}
+\vec{\beta}=\left(-\sqrt{R}+\sqrt{T}\left[I-\sqrt{R}\mathbf{R}_{\theta}\mathbf{M}\mathbf{R}_{\theta}\right]^{-1}\mathbf{R}_{\theta}\mathbf{M}\mathbf{R}_{\theta}\sqrt{T}\right)\vec{\alpha}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Claim*
 :
 \begin_inset CommandInset label
@@ -17766,7 +18298,7 @@ name "note6"
 \end_inset
 
 , 
-\begin_inset Formula $\kappa$
+\begin_inset Formula $4\kappa/T$
 \end_inset
 
  and 
@@ -17983,18 +18515,33 @@ http://www.ligo.caltech.edu/advLIGO/scripts/ref_des.shtml
 \end_inset
 
  is equal to).
- 
+ We have that
 \begin_inset Formula 
-\begin{eqnarray*}
-\kappa & = & \frac{8\times100\times2.5}{4\times9\times1}\frac{1\times10\times10^{15}}{10\times10^{16}\times10^{4}}\\
- & \approx & \frac{20\times100}{36\times1}\frac{1}{10\times10^{4}}\\
- & \approx & 100\frac{1}{10\times10^{4}}=10^{-3}
-\end{eqnarray*}
+\begin{equation}
+\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}},
+\end{equation}
 
 \end_inset
 
 and so 
-\begin_inset Formula $\kappa$
+\begin_inset Formula 
+\begin{eqnarray*}
+\kappa & = & \frac{8\times1\times2.5}{4\times9\times4\pi^{2}}\frac{1\times100\times10^{15}}{10\times10^{16}\times10^{4}}\\
+ & \approx & \frac{1}{400}\frac{1}{10^{4}}\approx10^{-6}.
+\end{eqnarray*}
+
+\end_inset
+
+Hence
+\begin_inset Formula 
+\begin{equation}
+4\kappa/T\approx\frac{4}{400}\frac{1}{10^{4}}10^{-3}\approx10^{-3}.
+\end{equation}
+
+\end_inset
+
+and so 
+\begin_inset Formula $4\kappa/T$
 \end_inset
 
 , 
@@ -18205,92 +18752,20 @@ name "note5"
 \end_inset
 
 The exact results are 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Preview
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mathbf{H}=
-\backslash
-left(
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{array}{cc}
-\end_layout
-
-\begin_layout Plain Layout
-
- 
-\backslash
-frac{-e^{2 i x}+
-\backslash
-sqrt{1-T}}{-1+e^{2 i x} 
-\backslash
-sqrt{1-T}} & 0 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
- 
-\backslash
-frac{4e^{2 i x}  
-\backslash
-kappa }{
-\backslash
-left(-1+e^{2 i x} 
-\backslash
-sqrt{1-T}
-\backslash
-right)^2} & 
-\backslash
-frac{-e^{2 i x}+
-\backslash
-sqrt{1-T}}{-1+e^{2 i x} 
-\backslash
-sqrt{1-T}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{array}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-right)
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}=\left(\begin{array}{cc}
+\frac{-e^{2ix}+\sqrt{1-T}}{-1+e^{2ix}\sqrt{1-T}} & 0\\
+-\frac{4e^{2ix}\kappa}{\left(-1+e^{2ix}\sqrt{1-T}\right)^{2}} & \frac{-e^{2ix}+\sqrt{1-T}}{-1+e^{2ix}\sqrt{1-T}}
+\end{array}\right)
+\end{equation}
 
 \end_inset
 
 
 \end_layout
 
-\end_inset
-
+\begin_layout Plain Layout
  (from tag:
 \begin_inset Quotes erd
 \end_inset
@@ -18300,79 +18775,21 @@ Hexact
 \end_inset
 
 ) and
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Preview
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-F=
-\backslash
-left(
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{array}{c}
-\end_layout
-
-\begin_layout Plain Layout
-
- 0 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
- -
-\backslash
-frac{2
-\backslash
-sqrt{2} e^{i x} 
-\backslash
-sqrt{
-\backslash
-kappa}}{
-\backslash
-text{gSQL}-e^{2 i x} 
-\backslash
-text{gSQL} 
-\backslash
-sqrt{1-T}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{array}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-right)
-\end_layout
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=\left(\begin{array}{c}
+0\\
+-\frac{2\sqrt{2}e^{ix}\sqrt{\kappa}}{\text{gSQL}-e^{2ix}\text{gSQL}\sqrt{1-T}}
+\end{array}\right)
+\end{equation}
 
 \end_inset
 
 
 \end_layout
 
-\end_inset
-
- (From tag:
+\begin_layout Plain Layout
+(From tag:
 \begin_inset Quotes erd
 \end_inset
 
@@ -18443,7 +18860,7 @@ We have used that
 \begin_inset Formula 
 \begin{eqnarray*}
 \exp\left(i\tan^{-1}\phi\right) & = & \expiAtan{\phi}\\
-\implies\exp\left(2i\tan^{-1}\phi\right) & = & \left[\exp\left(i\tan^{-1}\phi\right)\right]^{2}=\frac{\squareCnumber 1{\phi}}{1+\phi^{2}}=\frac{1-\phi^{2}+2i\phi}{1+\phi^{2}}\\
+\implies\exp\left(2i\tan^{-1}\phi\right) & = & \left[\exp\left(i\tan^{-1}\phi\right)\right]^{2}=\frac{\squareCnumber1{\phi}}{1+\phi^{2}}=\frac{1-\phi^{2}+2i\phi}{1+\phi^{2}}\\
  & = & \frac{i-\phi}{i+\phi}
 \end{eqnarray*}
 
@@ -19009,249 +19426,6 @@ Detuned Fabry-Perot Cavity
 \end_layout
 
 \begin_layout Standard
-The setup for such a system is shown in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:detunedCavity"
-
-\end_inset
-
-.
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename detuned cavity.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:detunedCavity"
-
-\end_inset
-
-From 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "haixingThesis"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-he mirror has transmissivity 
-\begin_inset Formula $T$
-\end_inset
-
- and reflectivity 
-\begin_inset Formula $R$
-\end_inset
-
-.
- We assume that we have a symmetric mirror that inflicts a 
-\begin_inset Formula $\pi$
-\end_inset
-
- phase shift on its input side*
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-We must have a phase shift because by the reciprocity relations 
-\begin_inset Formula 
-\begin{eqnarray*}
-r^{*}t^{'}+t^{*}r^{'} & = & 0\\
-\implies r^{*} & = & -r^{'}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- and so its scattering matrix is given by (Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:scatteringMatrixBS"
-
-\end_inset
-
-) 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula 
-\begin{equation}
-\left(\begin{array}{c}
-E_{out}^{'}\\
-E_{in}
-\end{array}\right)=\left(\begin{array}{cc}
-\sqrt{T} & -\sqrt{R}\\
-\sqrt{R} & \sqrt{T}
-\end{array}\right)\left(\begin{array}{c}
-E_{out}\\
-E_{in}^{'}
-\end{array}\right).
-\end{equation}
-
-\end_inset
-
-
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-Let the bosonic operators associated with 
-\begin_inset Formula $E_{in}^{'}$
-\end_inset
-
-, 
-\begin_inset Formula $E_{out}^{'}$
-\end_inset
-
-, 
-\begin_inset Formula $E_{in}$
-\end_inset
-
- and 
-\begin_inset Formula $E_{out}$
-\end_inset
-
- be 
-\begin_inset Formula $\vec{\alpha}$
-\end_inset
-
-, 
-\begin_inset Formula $\vec{\beta}$
-\end_inset
-
-, 
-\begin_inset Formula $\vec{a}$
-\end_inset
-
- and 
-\begin_inset Formula $\vec{b}$
-\end_inset
-
-, respectively.
- We have that
-\begin_inset Formula 
-\begin{equation}
-\left(\begin{array}{c}
-\hat{b}_{1}\left(\Omega\right)\\
-\hat{b}_{2}\left(\Omega\right)
-\end{array}\right)=e^{i\Omega\tau}\left(\begin{array}{cc}
-\cos\omega_{0}\tau & -\sin\omega_{0}\tau\\
-\sin\omega_{0}\tau & \cos\omega_{0}\tau
-\end{array}\right)\left(\begin{array}{c}
-\hat{a}_{1}\left(\Omega\right)\\
-\hat{a}_{2}\left(\Omega\right)
-\end{array}\right).
-\end{equation}
-
-\end_inset
-
-*
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-We assume that the laser's input optical field is a single mode coherent
- state and so we can write it's electric field in the (unnormalized) form
- (Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:final simple single mode laser"
-
-\end_inset
-
- without the normalization constant 
-\begin_inset Formula $\mathcal{C}_{0}$
-\end_inset
-
- )
-\begin_inset Formula 
-\begin{eqnarray*}
-\hat{E}_{in}\left(t\right) & = & \left[\sqrt{2I_{0}/\hbar\omega_{0}}+\hat{a}_{c}\left(t\right)\right]\cos\omega_{0}t+\hat{a}_{s}\left(t\right)\sin\omega_{0}t
-\end{eqnarray*}
-
-\end_inset
-
-and the output field is given by 
-\begin_inset Formula 
-\begin{eqnarray*}
-\hat{E}_{out}\left(t\right) & = & \hat{E}_{in}\left(t-2\tau-2\hat{x}/c\right),\\
- & = & \left[\sqrt{2I_{0}/\hbar\omega_{0}}+\hat{b}_{1}\left(t\right)\right]\cos\omega_{0}t+\hat{b}_{2}\left(t\right)\sin\omega_{0}t,
-\end{eqnarray*}
-
-\end_inset
-
-where 
-\begin_inset Formula $\tau=L/c$
-\end_inset
-
- is the time taken to reach the test mass in its rest position
-\end_layout
-
-\end_inset
-
 
 \end_layout
 

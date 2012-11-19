@@ -5,7 +5,6 @@
 \textclass scrbook
 \begin_preamble
 \usepackage{braket}
-\usepackage{empheq}
 
 \newref{claim}{name=claim~,Name=Claim~,names=claims~,Names=Claims~}
 \newref{def}{name=definition~,Name=Definition~,names=definitions~,Names=Definitions~}
@@ -13,9 +12,13 @@
 \options unicode=true, hidelinks
 \use_default_options true
 \begin_modules
-theorems-ams
 eqs-within-sections
 figs-within-sections
+theorems-ams-bytype
+theorems-ams-extended-bytype
+logicalmkup
+fixltx2e
+sweave
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -66,8 +69,8 @@ figs-within-sections
 \footskip 2cm
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation indent
-\paragraph_indentation default
+\paragraph_separation skip
+\defskip medskip
 \quotes_language english
 \papercolumns 1
 \papersides 1
@@ -152,6 +155,16 @@ filename "../solid state physics.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "../optics.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "../tempPageForSpeed.lyx"
 
 \end_inset
 
@@ -753,6 +766,202 @@ Lyx
 \end_layout
 
 \begin_layout Subsection
+Breaking equations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+usepackage{breqn} 
+\end_layout
+
+\begin_layout Plain Layout
+% Add support for automatic equation breaking 
+\backslash
+gdef
+\backslash
+wrap@breqn@environ#1#2{ 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname breqn@oldbegin@#1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname #1
+\backslash
+endcsname 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname breqn@oldend@#1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname end#1
+\backslash
+endcsname 
+\backslash
+expandafter
+\backslash
+gdef
+\backslash
+csname breqn@begin@#1
+\backslash
+endcsname{% 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname #1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@oldbegin@#1
+\backslash
+endcsname% 
+\backslash
+begin{#2}% } 
+\backslash
+expandafter
+\backslash
+gdef
+\backslash
+csname breqn@end@#1
+\backslash
+endcsname{% 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname end#1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@oldend@#1
+\backslash
+endcsname% 
+\backslash
+end{#2}% 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname #1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@begin@#1
+\backslash
+endcsname% 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname end#1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@end@#1
+\backslash
+endcsname% } 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname #1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@begin@#1
+\backslash
+endcsname 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname end#1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@end@#1
+\backslash
+endcsname } 
+\backslash
+wrap@breqn@environ{equation}{dmath} 
+\backslash
+wrap@breqn@environ{equation*}{dmath*}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+global
+\backslash
+let
+\backslash
+[=
+\backslash
+equation 
+\backslash
+global
+\backslash
+let
+\backslash
+]=
+\backslash
+endequation 
+\end_layout
+
+\begin_layout Standard
+BUT SEEMS TO CONFLICT WITH FEYN PACKAGE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Feynman diagrams
+\end_layout
+
+\begin_layout Standard
+It looks like I need to set the font size to default to make it work + the
+ pacakge empheq seems to give me errors if i use it with the feyn package.
+\end_layout
+
+\begin_layout Subsection
 Tools and scripts that can be used with Lyx
 \end_layout
 
@@ -882,6 +1091,20 @@ atop
 \begin{eqnarray*}
 \sum_{{i=1...n\atop j=2...n}}
 \end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\backslash
+underset
+\begin_inset Formula 
+\begin{equation}
+\underset{sadasd}{dsad}
+\end{equation}
 
 \end_inset
 
@@ -1045,7 +1268,7 @@ trickToSeperateIntoPowers
 
 )*
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 expr is the expression that needs to be simplified to be a polynomial in
@@ -1271,7 +1494,7 @@ ing[#,"TeX"]& by applying it to various examples, by pointing out areas
 \end_layout
 
 \begin_layout Section
-Perhaps useful in the future
+Math Perhaps useful in the future
 \end_layout
 
 \begin_layout Standard
@@ -1305,10 +1528,11 @@ reference "note 3"
 \end_inset
 
  at the end of the derivation.
+ (Proving Euler's Homogeneous function theorem).
 \end_layout
 
 \begin_layout Section
-Tex
+Tex 
 \end_layout
 
 \begin_layout Standard
@@ -1343,6 +1567,22 @@ Boxing equations
 \end_layout
 
 \begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Code for  boxing equations:
 \family roman
 \series medium
@@ -1589,6 +1829,30 @@ end{equation}
 
 \end_layout
 
+\begin_layout Plain Layout
+THIS CODE CONFLICTS WITH FEYN PACKAGE !!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+How to Simplify
+\end_layout
+
+\begin_layout Standard
+When we have long nasty expressions with a bunch of symbols, it seems like
+ the first step in the simplification procedure is to to attack a part of
+ the expression that is easy to simplify.
+ This will allow us to make progress and to find a combination of symbols
+ that can be combined into a new one.
+ See for example : we had an ugly matrix, but we noticed that all of the
+ entries in the matrix share the same denominator, so we simplified that
+ first, which allowed us to notice 
+\end_layout
+
 \begin_layout Part
 Simple Tools
 \end_layout
@@ -1653,9 +1917,13 @@ Data on current technology/Experiments
 Experiment specifications
 \end_layout
 
+\begin_layout Subsubsection
+LIGO
+\end_layout
+
 \begin_layout Enumerate
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1664,7 +1932,18 @@ http://www.ligo.caltech.edu/advLIGO/scripts/ref_des.shtml
 
 \end_inset
 
-: Exact specifications of the LIGO and the advanced LIGO experiments.
+: Exact specifications of the LIGO and the advanced LIGO experiments 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "advancedLIGOdata"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Particle Physics Measurements
 \end_layout
 
 \begin_layout Enumerate
@@ -1705,8 +1984,8 @@ ng Particle Physics, as well as related areas of Cosmology and Astrophysics.
 
 \end_layout
 
-\begin_layout Subsection
-State of the Art Technology Data
+\begin_layout Subsubsection
+High intensity lasers
 \end_layout
 
 \begin_layout Enumerate
@@ -1732,7 +2011,17 @@ Order of Magnitude Approximations
 Optics
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:orderMagnitudeFrequencies"
+
+\end_inset
+
+Frequency/Wavelengths
+\end_layout
+
+\begin_layout Standard
 
 \emph on
 Frequency/Wavelength range of visible light
@@ -1742,6 +2031,10 @@ Frequency/Wavelength range of visible light
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Fabry-Perot
 \end_layout
 
 \begin_layout Enumerate

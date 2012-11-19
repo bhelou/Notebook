@@ -5,7 +5,6 @@
 \textclass scrbook
 \begin_preamble
 \usepackage{braket}
-\usepackage{empheq}
 
 \newref{claim}{name=claim~,Name=Claim~,names=claims~,Names=Claims~}
 \newref{def}{name=definition~,Name=Definition~,names=definitions~,Names=Definitions~}
@@ -13,9 +12,13 @@
 \options unicode=true, hidelinks
 \use_default_options true
 \begin_modules
-theorems-ams
 eqs-within-sections
 figs-within-sections
+theorems-ams-bytype
+theorems-ams-extended-bytype
+logicalmkup
+fixltx2e
+sweave
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -66,8 +69,8 @@ figs-within-sections
 \footskip 2cm
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation indent
-\paragraph_indentation default
+\paragraph_separation skip
+\defskip medskip
 \quotes_language english
 \papercolumns 1
 \papersides 1
@@ -152,6 +155,16 @@ filename "../solid state physics.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "../optics.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "../tempPageForSpeed.lyx"
 
 \end_inset
 
@@ -753,6 +766,19 @@ Lyx
 \end_layout
 
 \begin_layout Subsection
+Breaking equations
+\end_layout
+
+\begin_layout Subsection
+Feynman diagrams
+\end_layout
+
+\begin_layout Standard
+It looks like I need to set the font size to default to make it work + the
+ pacakge empheq seems to give me errors if i use it with the feyn package.
+\end_layout
+
+\begin_layout Subsection
 Tools and scripts that can be used with Lyx
 \end_layout
 
@@ -882,6 +908,20 @@ atop
 \begin{eqnarray*}
 \sum_{{i=1...n\atop j=2...n}}
 \end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\backslash
+underset
+\begin_inset Formula 
+\begin{equation}
+\underset{sadasd}{dsad}
+\end{equation}
 
 \end_inset
 
@@ -1045,9 +1085,9 @@ trickToSeperateIntoPowers
 
 )*
 \begin_inset Note Note
-status open
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 expr is the expression that needs to be simplified to be a polynomial in
  
 \begin_inset Formula $y_{1}-ym1$
@@ -1231,8 +1271,47 @@ ber
 
 \end_layout
 
+\begin_layout Subsection
+Mathematica behavior that I want and that is in the works
+\end_layout
+
+\begin_layout Standard
+You can export Latex strings from Mathematica but it would be great if you
+ can also import them (see 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://library.wolfram.com/infocenter/Conferences/8013/
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+If the function ImportString[#,"TeX"]& worked perfectly, it would be powerful
+ indeed; untold thousands of technical papers that appear in the world's
+ scientific journals and elsewhere also exist as strings of common typographical
+ symbols written in the LaTeX typesetting language.
+ If these strings could all be readily translated into Mathematica notebooks,
+ one would be in a much stronger position to exploit the power of Mathematica
+ to probe on a large scale the intellectual content of the papers themselves.
+ As of June 2011, ImportString[#,"TeX"]& falls short of this ideal, but
+ it nonetheless appears to be an excellent starting point.
+ It is the purpose of this work to evaluate the present performance of ImportStr
+ing[#,"TeX"]& by applying it to various examples, by pointing out areas
+ of difficulty, and by suggesting possible avenues of improvement.
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
 \begin_layout Section
-Perhaps useful in the future
+Math Perhaps useful in the future
 \end_layout
 
 \begin_layout Standard
@@ -1266,10 +1345,11 @@ reference "note 3"
 \end_inset
 
  at the end of the derivation.
+ (Proving Euler's Homogeneous function theorem).
 \end_layout
 
 \begin_layout Section
-Tex
+Tex 
 \end_layout
 
 \begin_layout Standard
@@ -1304,6 +1384,22 @@ Boxing equations
 \end_layout
 
 \begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Code for  boxing equations:
 \family roman
 \series medium
@@ -1550,6 +1646,30 @@ end{equation}
 
 \end_layout
 
+\begin_layout Plain Layout
+THIS CODE CONFLICTS WITH FEYN PACKAGE !!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+How to Simplify
+\end_layout
+
+\begin_layout Standard
+When we have long nasty expressions with a bunch of symbols, it seems like
+ the first step in the simplification procedure is to to attack a part of
+ the expression that is easy to simplify.
+ This will allow us to make progress and to find a combination of symbols
+ that can be combined into a new one.
+ See for example : we had an ugly matrix, but we noticed that all of the
+ entries in the matrix share the same denominator, so we simplified that
+ first, which allowed us to notice 
+\end_layout
+
 \begin_layout Part
 Simple Tools
 \end_layout
@@ -1614,9 +1734,13 @@ Data on current technology/Experiments
 Experiment specifications
 \end_layout
 
+\begin_layout Subsubsection
+LIGO
+\end_layout
+
 \begin_layout Enumerate
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1625,7 +1749,18 @@ http://www.ligo.caltech.edu/advLIGO/scripts/ref_des.shtml
 
 \end_inset
 
-: Exact specifications of the LIGO and the advanced LIGO experiments.
+: Exact specifications of the LIGO and the advanced LIGO experiments 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "advancedLIGOdata"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Particle Physics Measurements
 \end_layout
 
 \begin_layout Enumerate
@@ -1666,8 +1801,8 @@ ng Particle Physics, as well as related areas of Cosmology and Astrophysics.
 
 \end_layout
 
-\begin_layout Subsection
-State of the Art Technology Data
+\begin_layout Subsubsection
+High intensity lasers
 \end_layout
 
 \begin_layout Enumerate
@@ -1693,7 +1828,17 @@ Order of Magnitude Approximations
 Optics
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:orderMagnitudeFrequencies"
+
+\end_inset
+
+Frequency/Wavelengths
+\end_layout
+
+\begin_layout Standard
 
 \emph on
 Frequency/Wavelength range of visible light
@@ -1703,6 +1848,10 @@ Frequency/Wavelength range of visible light
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Fabry-Perot
 \end_layout
 
 \begin_layout Enumerate
