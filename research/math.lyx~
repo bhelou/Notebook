@@ -1300,7 +1300,7 @@ Complex exponential of
 \emph default
 
 \begin_inset FormulaMacro
-\newcommand{\expiAtan}[1]{\frac{1+i#1}{\sqrt{1+#1^{2}}}}
+\renewcommand{\expiAtan}[1]{\frac{1+i#1}{\sqrt{1+#1^{2}}}}
 \end_inset
 
 :
@@ -1342,13 +1342,24 @@ Fourier Transform
 \begin_layout Enumerate
 
 \emph on
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\size normal
+\emph off
+Shift property of Fourier Transforms
+\end_layout
+
+\end_inset
+
 Shift property
 \emph default
 :
 \begin_inset Formula 
 \begin{eqnarray}
-\mathcal{F}\left(g\left(t-t_{0}\right)\right) & = & \mathcal{F}\left(g\left(t\right)\right)e^{-i\omega t_{0}}.\label{eq:shiftPropertyFourierTransforms}\\
-\nonumber 
+\mathcal{F}\left(g\left(t-t_{0}\right)\right) & = & \mathcal{F}\left(g\left(t\right)\right)e^{-i\omega t_{0}}.\label{eq:shiftPropertyFourierTransforms}
 \end{eqnarray}
 
 \end_inset
@@ -1468,7 +1479,17 @@ Distributions
 \end_layout
 
 \begin_layout Section
-Dirac delta function 
+Dirac delta function
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Dirac delta function
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -7533,7 +7554,7 @@ y\left(t\right) & -T/2<t<T/2\\
 
 \end_inset
 
-Then, because 
+``SThen, because 
 \begin_inset Formula $y_{T}$
 \end_inset
 

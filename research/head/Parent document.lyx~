@@ -161,16 +161,6 @@ filename "../optics.lyx"
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "../tempPageForSpeed.lyx"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Part
 Miscellaneous
 \end_layout
@@ -766,7 +756,205 @@ Lyx
 \end_layout
 
 \begin_layout Subsection
+LyX Tips
+\end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename C:/Users/bassa_000/Documents/GitHub/Notebook/research/pdf files/LyXTips.pdf
+	extra LaTeX "pages=-"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Breaking equations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+usepackage{breqn} 
+\end_layout
+
+\begin_layout Plain Layout
+% Add support for automatic equation breaking 
+\backslash
+gdef
+\backslash
+wrap@breqn@environ#1#2{ 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname breqn@oldbegin@#1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname #1
+\backslash
+endcsname 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname breqn@oldend@#1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname end#1
+\backslash
+endcsname 
+\backslash
+expandafter
+\backslash
+gdef
+\backslash
+csname breqn@begin@#1
+\backslash
+endcsname{% 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname #1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@oldbegin@#1
+\backslash
+endcsname% 
+\backslash
+begin{#2}% } 
+\backslash
+expandafter
+\backslash
+gdef
+\backslash
+csname breqn@end@#1
+\backslash
+endcsname{% 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname end#1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@oldend@#1
+\backslash
+endcsname% 
+\backslash
+end{#2}% 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname #1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@begin@#1
+\backslash
+endcsname% 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname end#1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@end@#1
+\backslash
+endcsname% } 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname #1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@begin@#1
+\backslash
+endcsname 
+\backslash
+expandafter
+\backslash
+let
+\backslash
+csname end#1
+\backslash
+expandafter
+\backslash
+endcsname
+\backslash
+csname breqn@end@#1
+\backslash
+endcsname } 
+\backslash
+wrap@breqn@environ{equation}{dmath} 
+\backslash
+wrap@breqn@environ{equation*}{dmath*}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+global
+\backslash
+let
+\backslash
+[=
+\backslash
+equation 
+\backslash
+global
+\backslash
+let
+\backslash
+]=
+\backslash
+endequation 
+\end_layout
+
+\begin_layout Plain Layout
+BUT SEEMS TO CONFLICT WITH FEYN PACKAGE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1138,6 +1326,11 @@ http://stackoverflow.com/questions/8073530/get-mathematica-to-simplify-expressio
 : Get mathematica to simplify an expression with another equation; example,
  let temp = x+y+z, how do we get Mathematica to simplify this to temp =
  v+z where v=x+y.
+\end_layout
+
+\begin_layout Enumerate
+Is something complex? Try using FullSimplify[Im[ComplexExpand[ veriableWantToChe
+ck ]]]
 \end_layout
 
 \begin_layout Subsection

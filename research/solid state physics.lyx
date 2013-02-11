@@ -187,8 +187,7 @@ key "FultzTM"
 ) In other words,
 \begin_inset Formula 
 \begin{eqnarray}
-v_{sound} & = & \lim_{k\rightarrow0}\frac{d\omega}{dk}\label{eq:sound velocity}\\
-\nonumber 
+v_{sound} & = & \lim_{k\rightarrow0}\frac{d\omega}{dk}\label{eq:sound velocity}
 \end{eqnarray}
 
 \end_inset
@@ -263,7 +262,7 @@ Calculation of density and heat capacity of silicon by molecular dynamics
 , we have from numerical simulations that
 \begin_inset Formula 
 \begin{eqnarray*}
-\rho & = & 2.33-2.19\times10^{-5}T\,\mbox{g.cm}^{-3}\qquad\left(100-1700K\right)\\
+\rho & = & 2.33-2.19\times10^{-5}T\,\mbox{g.cm}^{-3}\qquad\left(100-1700K\right)
 \end{eqnarray*}
 
 \end_inset
@@ -276,7 +275,7 @@ For a 1D monoatomic lattice, we have that the dispersion relation is given
  by 
 \begin_inset Formula 
 \begin{eqnarray*}
-\omega & = & 2\sqrt{\frac{K}{M}}\left|\sin\frac{1}{2}ka\right|,\\
+\omega & = & 2\sqrt{\frac{K}{M}}\left|\sin\frac{1}{2}ka\right|,
 \end{eqnarray*}
 
 \end_inset
@@ -1373,18 +1372,8 @@ HOWEVER, I am not able to reproduce the experimental values of the heat
  My calculated heat capacity is larger by many orders of magnitude! I believe
  that this is not a huge issue as a lower heat capacity means that the system
  is closer to the ground state (in the Debye model the heat capacity increases
- monotonically with temperature)?
-\end_layout
-
-\begin_layout Subsection*
-\begin_inset Formula 
-\begin{eqnarray*}
-\\
-\end{eqnarray*}
-
-\end_inset
-
-
+ monotonically with temperature)? ANSWER: ...
+ need to have a 3d latice ...
 \end_layout
 
 \end_body

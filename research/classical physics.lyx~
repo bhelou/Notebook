@@ -179,7 +179,11 @@ key "vanDrielO"
 \end_layout
 
 \begin_layout Section
-Conversion between wavelength and frequency
+Wavelength 
+\begin_inset Formula $\leftrightarrow$
+\end_inset
+
+ frequency
 \end_layout
 
 \begin_layout Standard
@@ -199,6 +203,15 @@ Conversion between SI and CGS
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Poynting vector in CGS
+\end_layout
+
+\end_inset
+
 The 
 \emph on
 Poynting vector
@@ -222,7 +235,7 @@ target "http://scienceworld.wolfram.com/physics/PoyntingVector.html"
 
 *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -332,6 +345,18 @@ Poynting's vector
 \emph default
  and gives the magnitude and direction of the power flux or irradiance/rate
  of energy transfer per unit area.
+ Note that 
+\begin_inset Formula $\vec{H}$
+\end_inset
+
+ is defined in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Maxwell's-Equations"
+
+\end_inset
+
+.
  Then 
 \begin_inset Formula 
 \begin{eqnarray*}
@@ -387,7 +412,7 @@ Intensity/Irradiance (SI)
 \end_layout
 
 \begin_layout Standard
-The tim averaged Poynting vector or irradiance or intensity is given by
+The time averaged Poynting vector or irradiance or intensity is given by
 \begin_inset Formula 
 \begin{eqnarray*}
 \left\langle S\right\rangle  & = & I\hat{k}=\frac{1}{T}\int_{0}^{T}\vec{E}\left(t\right)\times\vec{H}\left(t\right)dt,

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    162257,       4315]
-NotebookOptionsPosition[    155486,       4091]
-NotebookOutlinePosition[    157807,       4168]
-CellTagsIndexPosition[    157374,       4152]
+NotebookDataLength[    162330,       4313]
+NotebookOptionsPosition[    155560,       4089]
+NotebookOutlinePosition[    157884,       4166]
+CellTagsIndexPosition[    157451,       4150]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -34,8 +34,7 @@ comparable norm: e.g. ",
    RowBox[{" ", 
     ButtonBox["FradialForm",
      BaseStyle->"Hyperlink",
-     ButtonData->"FradialForm"]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     ButtonData->"FradialForm"]}], TraditionalForm]]],
  "\n4. Careful manipulations involving the arctan function: ",
  ButtonBox["arctan",
   BaseStyle->"Hyperlink",
@@ -365,24 +364,25 @@ Cell[BoxData[
          RowBox[{
           RowBox[{"s", "*", "4", "*", 
            RowBox[{"\[Kappa]", "/", "T"}]}], ",", " ", "1"}], "}"}]}], 
-       "}"}]}]}], ";", " ", 
-    RowBox[{"(*", 
-     RowBox[{
-      RowBox[{"\[Kappa]", "=", 
-       RowBox[{"8", "*", "I0", "*", 
+       "}"}]}]}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"\[Kappa]", "=", 
+      RowBox[{"8", "*", "I0", "*", 
+       RowBox[{
         RowBox[{
-         RowBox[{
-          RowBox[{"\[Omega]0", "/", "m"}], "/", 
-          RowBox[{"c", "^", "2"}]}], "/", 
-         RowBox[{"\[CapitalOmega]", "^", "2"}]}]}]}], ";"}], "*)"}], 
-    "\[IndentingNewLine]", 
-    RowBox[{"(*", 
-     RowBox[{
-      RowBox[{"gSQL", " ", "=", " ", 
-       RowBox[{"Sqrt", "[", 
-        RowBox[{"2", "*", "\[HBar]", "*", "m", "*", 
-         RowBox[{"\[CapitalOmega]", "^", "2"}]}], "]"}]}], ";"}], "*)"}], 
-    "\[IndentingNewLine]", 
+         RowBox[{"\[Omega]0", "/", "m"}], "/", 
+         RowBox[{"c", "^", "2"}]}], "/", 
+        RowBox[{"\[CapitalOmega]", "^", "2"}]}]}]}], ";"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"gSQL", " ", "=", " ", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"2", "*", "\[HBar]", "*", "m", "*", 
+        RowBox[{"\[CapitalOmega]", "^", "2"}]}], "]"}]}], ";"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{"Dvec", "=", 
      RowBox[{
       RowBox[{
@@ -421,13 +421,13 @@ Cell[BoxData[
      RowBox[{"Numerator", "[", 
       RowBox[{"Together", "[", 
        RowBox[{"\[Xi]", "-", 
-        RowBox[{"\[CapitalOmega]", "/", "\[Gamma]"}]}], "]"}], "]"}]}], ";", 
+        RowBox[{"\[CapitalOmega]", "/", "\[Gamma]"}]}], "]"}], "]"}]}], ";"}],
     " ", 
-    RowBox[{"(*", 
-     RowBox[{"\[Xi]", " ", "=", " ", 
-      RowBox[{
-       RowBox[{"\[CapitalOmega]", "/", "\[Gamma]"}], " ", ">", " ", "0"}]}], 
-     "*)"}]}]}]}]], "Input",
+   RowBox[{"(*", 
+    RowBox[{"\[Xi]", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"\[CapitalOmega]", "/", "\[Gamma]"}], " ", ">", " ", "0"}]}], 
+    "*)"}]}]}]], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.5547447900206175`*^9, 3.5547448714252734`*^9}, 
    3.554744914929762*^9, {3.5547449472746115`*^9, 3.5547449573561883`*^9}, {
@@ -882,9 +882,7 @@ Cell[TextData[Cell[BoxData[
   3.5564550041266384`*^9}},
  CellTags->"exact observations"],
 
-Cell["\<\
-Moreover, both approaches are indeed the same:\
-\>", "Text",
+Cell["Moreover, both approaches are indeed the same:", "Text",
  CellChangeTimes->{{3.556327326035498*^9, 3.556327331067786*^9}, {
   3.5564549644833713`*^9, 3.5564549665684905`*^9}}],
 
@@ -1053,7 +1051,7 @@ Cell[BoxData[
    3.560958584727063*^9}]
 }, Open  ]]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1202,7 +1200,7 @@ Cell[BoxData[
    3.556307792469291*^9}, {3.5563081382510686`*^9, 3.5563081408542175`*^9}, 
    3.556309059336752*^9, 3.556311901861335*^9}]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1327,7 +1325,7 @@ Cell[BoxData[
    3.55624911624783*^9, 3.5562491253623514`*^9}, 3.5562492733788176`*^9, 
    3.5562878824835052`*^9, 3.5563090624309287`*^9}]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1370,8 +1368,7 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    SuperscriptBox["tan", 
-    RowBox[{"-", "1"}]], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    RowBox[{"-", "1"}]], TraditionalForm]]],
  " is defined over the domain [-\[Pi]/2, \[Pi]/2]. Hence,"
 }], "Text",
  CellChangeTimes->{{3.556288472686263*^9, 3.5562885071132317`*^9}, {
@@ -1579,8 +1576,7 @@ Cell[TextData[{
      SuperscriptBox["tan", 
       RowBox[{"-", "1"}]], "u"}], "|", 
     RowBox[{">", 
-     RowBox[{"\[Pi]", "/", "2"}]}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     RowBox[{"\[Pi]", "/", "2"}]}]}], TraditionalForm]]],
  "? First, we note that \[CurlyPhi]>0 so that ",
  Cell[BoxData[
   FormBox[
@@ -1597,8 +1593,7 @@ Cell[TextData[{
         RowBox[{"-", "1"}]], "\[CurlyPhi]"}], " ", "|"}], "=", 
      RowBox[{"2", 
       SuperscriptBox["tan", 
-       RowBox[{"-", "1"}]], "\[CurlyPhi]", " "}]}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+       RowBox[{"-", "1"}]], "\[CurlyPhi]", " "}]}]}], TraditionalForm]]],
  " (because the inverse tangent of a positive number is positive). ",
  "We ask when is ",
  Cell[BoxData[
@@ -2273,11 +2268,17 @@ that:\n\n\n",
            SubscriptBox["H", "11"]}], "=", 
           RowBox[{
            SubscriptBox["H", "22"], "=", 
-           RowBox[{"exp", "(", 
-            RowBox[{"2", 
-             RowBox[{"\[ImaginaryI]ArcTan", "[", 
-              FractionBox[
-               RowBox[{"4", "x"}], "T"], "]"}]}], ")"}]}]}]},
+           RowBox[{
+            FractionBox[
+             RowBox[{"T", "+", 
+              RowBox[{"4", " ", "\[ImaginaryI]", " ", "x"}]}], 
+             RowBox[{"T", "-", 
+              RowBox[{"4", " ", "\[ImaginaryI]", " ", "x"}]}]], "=", 
+            RowBox[{"exp", "(", 
+             RowBox[{"2", 
+              RowBox[{"\[ImaginaryI]ArcTan", "[", 
+               FractionBox[
+                RowBox[{"4", "x"}], "T"], "]"}]}], ")"}]}]}]}]},
         {
          RowBox[{
           RowBox[{"=", 
@@ -2301,7 +2302,8 @@ that:\n\n\n",
  CellFrameColor->RGBColor[1, 0, 0],
  CellChangeTimes->{{3.5562925201357636`*^9, 3.556292762767641*^9}, {
   3.5562946928260345`*^9, 3.556294727103995*^9}, {3.556301548326146*^9, 
-  3.556301638163285*^9}, {3.556312165164395*^9, 3.556312165164395*^9}},
+  3.556301638163285*^9}, {3.556312165164395*^9, 3.556312165164395*^9}, {
+  3.569373216129306*^9, 3.569373217154359*^9}},
  CellTags->"result H11"],
 
 Cell[CellGroupData[{
@@ -2411,7 +2413,7 @@ Cell[BoxData[
    3.5562384709439535`*^9, {3.5562402144706774`*^9, 3.5562402403561583`*^9}, 
    3.556309079691916*^9}]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -2491,7 +2493,7 @@ $CellContext`\[Epsilon], $CellContext`T -> $CellContext`T $CellContext`\
 \[Epsilon]}], {$CellContext`\[Epsilon], 0, $CellContext`o$$}]], 
       "Specifications" :> {{$CellContext`o$$, -10, 10, 1}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{417., {112., 121.}},
+     ImageSizeCache->{419., {92., 101.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -2635,9 +2637,7 @@ Cell[BoxData[
    3.560957867297883*^9}]
 }, Open  ]],
 
-Cell["\<\
-The argument of the above expression can be written\
-\>", "Text",
+Cell["The argument of the above expression can be written", "Text",
  CellChangeTimes->{{3.556294042817856*^9, 3.5562940690993595`*^9}}],
 
 Cell[TextData[{
@@ -3346,8 +3346,7 @@ Cell[TextData[{
   FormBox[
    RowBox[{
     SubscriptBox["H", "21"], "\[Proportional]", 
-    SubscriptBox["H", "11"]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    SubscriptBox["H", "11"]}], TraditionalForm]]],
  " and the constant of proportionality is real"
 }], "Text",
  CellChangeTimes->{{3.5563021982223186`*^9, 3.5563022825861435`*^9}}],
@@ -3734,8 +3733,7 @@ Cell[TextData[{
  "Observations:\n ",
  Cell[BoxData[
   FormBox[
-   OverscriptBox["F", "\[RightVector]"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   OverscriptBox["F", "\[RightVector]"], TraditionalForm]]],
  " is definitely not real valued. \n ",
  Cell[BoxData[
   FormBox[
@@ -3838,7 +3836,7 @@ $CellContext`\[Epsilon], $CellContext`T -> $CellContext`T $CellContext`\
 \[Epsilon]}], {$CellContext`\[Epsilon], 0, $CellContext`o$$}]], 
       "Specifications" :> {{$CellContext`o$$, -10, 10, 1}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{417., {114., 123.}},
+     ImageSizeCache->{419., {94., 103.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -4089,19 +4087,19 @@ Cell[TextData[{
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1920, 1017},
-WindowMargins->{{556, Automatic}, {792, Automatic}},
+WindowSize->{1200, 1857},
+WindowMargins->{{Automatic, -8}, {792, Automatic}},
 ShowSelection->True,
 ShowCellTags->True,
 Magnification->1.6500000953674316`,
-FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
 StyleDefinitions->Notebook[{
    Cell[
     StyleData[
     StyleDefinitions -> 
      FrontEnd`FileName[{"Creative"}, "PastelColor.nb", CharacterEncoding -> 
        "WindowsANSI"]]]}, Visible -> False, FrontEndVersion -> 
-  "8.0 for Microsoft Windows (64-bit) (October 6, 2011)", StyleDefinitions -> 
+  "9.0 for Microsoft Windows (64-bit) (November 20, 2012)", StyleDefinitions -> 
   "PrivateStylesheetFormatting.nb"]
 ]
 (* End of Notebook Content *)
@@ -4109,210 +4107,210 @@ StyleDefinitions->Notebook[{
 (* Internal cache information *)
 (*CellTagsOutline
 CellTagsIndex->{
- "arctan"->{
-  Cell[50083, 1333, 168, 2, 52, "Subsubsection",
-   CellTags->"arctan"]},
  "calculateHMatrix"->{
-  Cell[20457, 481, 340, 10, 67, "Subsection",
+  Cell[20415, 481, 340, 10, 67, "Subsection",
    CellTags->"calculateHMatrix"]},
- "calculating H21"->{
-  Cell[128622, 3326, 356, 10, 52, "Subsubsection",
-   CellTags->"calculating H21"]},
- "exact observations"->{
-  Cell[28792, 730, 5629, 152, 457, "Text",
-   CellTags->"exact observations"]},
- "Fexact"->{
-  Cell[139980, 3620, 831, 22, 173, "Input",
-   CellTags->"Fexact"],
-  Cell[140814, 3644, 1465, 39, 146, "Output",
-   CellTags->"Fexact"]},
- "FradialForm"->{
-  Cell[144598, 3770, 428, 11, 71, "Subsubsection",
-   CellTags->"FradialForm"]},
  "Hexact"->{
-  Cell[26168, 650, 2356, 66, 172, "Output",
+  Cell[26126, 650, 2356, 66, 155, "Output",
    CellTags->"Hexact"]},
- "observations Fvector"->{
-  Cell[143568, 3732, 781, 25, 300, "Text",
-   CellTags->"observations Fvector"]},
+ "exact observations"->{
+  Cell[28750, 730, 5629, 152, 486, "Text",
+   CellTags->"exact observations"]},
+ "arctan"->{
+  Cell[50033, 1331, 168, 2, 64, "Subsubsection",
+   CellTags->"arctan"]},
  "result H11"->{
-  Cell[81524, 2115, 7178, 189, 858, "Text",
+  Cell[81375, 2110, 7477, 196, 552, "Text",
    CellTags->"result H11"]},
- "result H21"->{
-  Cell[137375, 3538, 2322, 66, 223, "Text",
-   CellTags->"result H21"]},
- "resultF2"->{
-  Cell[153536, 4025, 1910, 61, 161, "Text",
-   CellTags->"resultF2"]},
  "result1 H22"->{
-  Cell[126876, 3272, 1709, 49, 215, "Text",
-   CellTags->"result1 H22"]}
+  Cell[127017, 3272, 1709, 49, 354, "Text",
+   CellTags->"result1 H22"]},
+ "calculating H21"->{
+  Cell[128763, 3326, 356, 10, 52, "Subsubsection",
+   CellTags->"calculating H21"]},
+ "result H21"->{
+  Cell[137483, 3537, 2322, 66, 367, "Text",
+   CellTags->"result H21"]},
+ "Fexact"->{
+  Cell[140088, 3619, 831, 22, 285, "Input",
+   CellTags->"Fexact"],
+  Cell[140922, 3643, 1465, 39, 240, "Output",
+   CellTags->"Fexact"]},
+ "observations Fvector"->{
+  Cell[143676, 3731, 748, 24, 495, "Text",
+   CellTags->"observations Fvector"]},
+ "FradialForm"->{
+  Cell[144673, 3768, 428, 11, 71, "Subsubsection",
+   CellTags->"FradialForm"]},
+ "resultF2"->{
+  Cell[153610, 4023, 1910, 61, 265, "Text",
+   CellTags->"resultF2"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"arctan", 156161, 4111},
- {"calculateHMatrix", 156258, 4114},
- {"calculating H21", 156361, 4117},
- {"exact observations", 156471, 4120},
- {"Fexact", 156564, 4123},
- {"FradialForm", 156721, 4128},
- {"Hexact", 156815, 4131},
- {"observations Fvector", 156911, 4134},
- {"result H11", 157010, 4137},
- {"result H21", 157100, 4140},
- {"resultF2", 157188, 4143},
- {"result1 H22", 157277, 4146}
+ {"calculateHMatrix", 156248, 4109},
+ {"Hexact", 156342, 4112},
+ {"exact observations", 156436, 4115},
+ {"arctan", 156529, 4118},
+ {"result H11", 156620, 4121},
+ {"result1 H22", 156711, 4124},
+ {"calculating H21", 156807, 4127},
+ {"result H21", 156909, 4130},
+ {"Fexact", 156995, 4133},
+ {"observations Fvector", 157161, 4138},
+ {"FradialForm", 157261, 4141},
+ {"resultF2", 157357, 4144}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 1253, 31, 214, "Text"],
+Cell[557, 20, 1220, 30, 235, "Text"],
 Cell[CellGroupData[{
-Cell[1835, 55, 156, 2, 124, "Section"],
-Cell[1994, 59, 10555, 237, 12087, "Input",
+Cell[1802, 54, 156, 2, 124, "Section"],
+Cell[1961, 58, 10555, 237, 19943, "Input",
  InitializationCell->True]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[12586, 301, 103, 1, 72, "Section"],
+Cell[12553, 300, 103, 1, 72, "Section"],
 Cell[CellGroupData[{
-Cell[12714, 306, 124, 1, 60, "Subsection"],
-Cell[12841, 309, 7579, 167, 500, "Input",
+Cell[12681, 305, 124, 1, 60, "Subsection"],
+Cell[12808, 308, 7570, 168, 825, "Input",
  InitializationCell->True]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[20457, 481, 340, 10, 67, "Subsection",
+Cell[20415, 481, 340, 10, 67, "Subsection",
  CellTags->"calculateHMatrix"],
 Cell[CellGroupData[{
-Cell[20822, 495, 1238, 33, 239, "Input"],
-Cell[22063, 530, 2533, 76, 150, "Output"]
+Cell[20780, 495, 1238, 33, 239, "Input"],
+Cell[22021, 530, 2533, 76, 130, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24633, 611, 1532, 37, 239, "Input"],
-Cell[26168, 650, 2356, 66, 172, "Output",
+Cell[24591, 611, 1532, 37, 239, "Input"],
+Cell[26126, 650, 2356, 66, 155, "Output",
  CellTags->"Hexact"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28561, 721, 228, 7, 45, "Subsubsection"],
-Cell[28792, 730, 5629, 152, 457, "Text",
+Cell[28519, 721, 228, 7, 45, "Subsubsection"],
+Cell[28750, 730, 5629, 152, 486, "Text",
  CellTags->"exact observations"],
-Cell[34424, 884, 189, 4, 46, "Text"],
+Cell[34382, 884, 181, 2, 49, "Text"],
 Cell[CellGroupData[{
-Cell[34638, 892, 4986, 139, 139, "Input"],
-Cell[39627, 1033, 679, 19, 106, "Output"]
+Cell[34588, 890, 4986, 139, 257, "Input"],
+Cell[39577, 1031, 679, 19, 86, "Output"]
 }, Open  ]]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[40367, 1059, 424, 14, 46, "Subsection"],
+Cell[40317, 1057, 424, 14, 93, "Subsection"],
 Cell[CellGroupData[{
-Cell[40816, 1077, 228, 4, 43, "Subsubsection"],
+Cell[40766, 1075, 228, 4, 69, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[41069, 1085, 1432, 41, 210, "Input"],
-Cell[42504, 1128, 403, 9, 85, "Output"],
-Cell[42910, 1139, 2357, 63, 83, "Output"]
+Cell[41019, 1083, 1432, 41, 210, "Input"],
+Cell[42454, 1126, 403, 9, 85, "Output"],
+Cell[42860, 1137, 2357, 63, 84, "Output"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[45316, 1208, 228, 5, 31, "Subsubsection"],
+Cell[45266, 1206, 228, 5, 43, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[45569, 1217, 2278, 50, 3055, "Input"],
-Cell[47850, 1269, 2184, 58, 653, "Output"]
+Cell[45519, 1215, 2278, 50, 326, "Input"],
+Cell[47800, 1267, 2184, 58, 88, "Output"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[50083, 1333, 168, 2, 52, "Subsubsection",
+Cell[50033, 1331, 168, 2, 64, "Subsubsection",
  CellTags->"arctan"],
-Cell[50254, 1337, 253, 5, 75, "Text"],
-Cell[50510, 1344, 683, 21, 100, "Text"],
-Cell[51196, 1367, 728, 15, 79, "Text"],
-Cell[51927, 1384, 7240, 185, 211, "Text"],
-Cell[59170, 1571, 1227, 40, 136, "Text"],
+Cell[50204, 1335, 253, 5, 80, "Text"],
+Cell[50460, 1342, 683, 21, 64, "Text"],
+Cell[51146, 1365, 695, 14, 52, "Text"],
+Cell[51844, 1381, 7240, 185, 140, "Text"],
+Cell[59087, 1568, 1161, 38, 90, "Text"],
 Cell[CellGroupData[{
-Cell[60422, 1615, 687, 14, 105, "Input"],
-Cell[61112, 1631, 326, 5, 103, "Output"]
+Cell[60273, 1610, 687, 14, 64, "Input"],
+Cell[60963, 1626, 326, 5, 64, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[61475, 1641, 652, 17, 202, "Input"],
-Cell[62130, 1660, 2124, 42, 663, "Output"]
+Cell[61326, 1636, 652, 17, 123, "Input"],
+Cell[61981, 1655, 2124, 42, 402, "Output"]
 }, Open  ]],
-Cell[64269, 1705, 9786, 245, 292, "Text"],
+Cell[64120, 1700, 9786, 245, 198, "Text"],
 Cell[CellGroupData[{
-Cell[74080, 1954, 3077, 77, 283, "Input"],
-Cell[77160, 2033, 4349, 79, 569, "Output"]
+Cell[73931, 1949, 3077, 77, 173, "Input"],
+Cell[77011, 2028, 4349, 79, 345, "Output"]
 }, Open  ]],
-Cell[81524, 2115, 7178, 189, 858, "Text",
+Cell[81375, 2110, 7477, 196, 552, "Text",
  CellTags->"result H11"],
 Cell[CellGroupData[{
-Cell[88727, 2308, 4560, 91, 585, "Input"],
-Cell[93290, 2401, 569, 10, 108, "Output"]
+Cell[88877, 2310, 4560, 91, 355, "Input"],
+Cell[93440, 2403, 569, 10, 67, "Output"]
 }, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[93908, 2417, 299, 7, 31, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[94232, 2428, 1667, 37, 152, "Input"],
-Cell[95902, 2467, 1780, 37, 276, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[97719, 2509, 1878, 50, 239, "Input"],
-Cell[99600, 2561, 2680, 73, 110, "Output"]
+Cell[94058, 2419, 299, 7, 43, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[94382, 2430, 1667, 37, 250, "Input"],
+Cell[96052, 2469, 1779, 37, 455, "Output"]
 }, Open  ]],
-Cell[102295, 2637, 143, 3, 46, "Text"],
-Cell[102441, 2642, 17305, 416, 358, "Text"],
-Cell[119749, 3060, 1194, 39, 118, "Text"],
-Cell[120946, 3101, 457, 14, 61, "Text"],
-Cell[121406, 3117, 5467, 153, 268, "Text"],
-Cell[126876, 3272, 1709, 49, 215, "Text",
+Cell[CellGroupData[{
+Cell[97868, 2511, 1878, 50, 394, "Input"],
+Cell[99749, 2563, 2680, 73, 181, "Output"]
+}, Open  ]],
+Cell[102444, 2639, 135, 1, 75, "Text"],
+Cell[102582, 2642, 17305, 416, 590, "Text"],
+Cell[119890, 3060, 1194, 39, 194, "Text"],
+Cell[121087, 3101, 457, 14, 100, "Text"],
+Cell[121547, 3117, 5467, 153, 442, "Text"],
+Cell[127017, 3272, 1709, 49, 354, "Text",
  CellTags->"result1 H22"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[128622, 3326, 356, 10, 52, "Subsubsection",
+Cell[128763, 3326, 356, 10, 52, "Subsubsection",
  CellTags->"calculating H21"],
-Cell[128981, 3338, 449, 14, 46, "Text"],
+Cell[129122, 3338, 416, 13, 75, "Text"],
 Cell[CellGroupData[{
-Cell[129455, 3356, 4400, 110, 442, "Input"],
-Cell[133858, 3468, 1201, 22, 95, "Output"],
-Cell[135062, 3492, 1178, 21, 88, "Output"],
-Cell[136243, 3515, 1117, 20, 85, "Output"]
+Cell[129563, 3355, 4400, 110, 729, "Input"],
+Cell[133966, 3467, 1201, 22, 156, "Output"],
+Cell[135170, 3491, 1178, 21, 145, "Output"],
+Cell[136351, 3514, 1117, 20, 140, "Output"]
 }, Open  ]],
-Cell[137375, 3538, 2322, 66, 223, "Text",
+Cell[137483, 3537, 2322, 66, 367, "Text",
  CellTags->"result H21"]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[139746, 3610, 209, 6, 65, "Subsection"],
+Cell[139854, 3609, 209, 6, 65, "Subsection"],
 Cell[CellGroupData[{
-Cell[139980, 3620, 831, 22, 173, "Input",
+Cell[140088, 3619, 831, 22, 285, "Input",
  CellTags->"Fexact"],
-Cell[140814, 3644, 1465, 39, 146, "Output",
+Cell[140922, 3643, 1465, 39, 240, "Output",
  CellTags->"Fexact"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[142316, 3688, 232, 7, 49, "Subsubsection"],
+Cell[142424, 3687, 232, 7, 80, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[142573, 3699, 362, 8, 105, "Input"],
-Cell[142938, 3709, 615, 20, 173, "Output"]
+Cell[142681, 3698, 362, 8, 173, "Input"],
+Cell[143046, 3708, 615, 20, 285, "Output"]
 }, Open  ]],
-Cell[143568, 3732, 781, 25, 300, "Text",
+Cell[143676, 3731, 748, 24, 495, "Text",
  CellTags->"observations Fvector"]
 }, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[144398, 3763, 175, 3, 44, "Subsection"],
+Cell[144473, 3761, 175, 3, 44, "Subsection"],
 Cell[CellGroupData[{
-Cell[144598, 3770, 428, 11, 71, "Subsubsection",
+Cell[144673, 3768, 428, 11, 71, "Subsubsection",
  CellTags->"FradialForm"],
 Cell[CellGroupData[{
-Cell[145051, 3785, 968, 27, 152, "Input"],
-Cell[146022, 3814, 1824, 37, 280, "Output"]
+Cell[145126, 3783, 968, 27, 250, "Input"],
+Cell[146097, 3812, 1823, 37, 462, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[147883, 3856, 1580, 44, 268, "Input"],
-Cell[149466, 3902, 681, 20, 112, "Output"]
+Cell[147957, 3854, 1580, 44, 442, "Input"],
+Cell[149540, 3900, 681, 20, 184, "Output"]
 }, Open  ]],
-Cell[150162, 3925, 3371, 98, 351, "Text"],
-Cell[153536, 4025, 1910, 61, 161, "Text",
+Cell[150236, 3923, 3371, 98, 579, "Text"],
+Cell[153610, 4023, 1910, 61, 265, "Text",
  CellTags->"resultF2"]
 }, Closed]]
 }, Open  ]]

@@ -89,7 +89,7 @@ Misc Light topics
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:PlaneWavePropagation"
+name "sub:classicalLightPictures"
 
 \end_inset
 
@@ -2981,7 +2981,7 @@ which is a geometric series because
  & = & \mathcal{E}_{0}\Phi\frac{1+e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)}{1-\Gamma^{2}e^{i\delta^{'}}}\\
 I_{c} & \propto & \left|\mathcal{E}_{c}\right|^{2}\\
 \implies I_{c} & = & I_{0}\left|\Phi\right|^{2}\frac{\left|1+e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)\right|^{2}}{\left|1-\Gamma^{2}e^{i\delta^{'}}\right|^{2}}\\
- & = & I_{0}T\frac{\normSumComplex 1{\left[e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)\right]}}{\left|1-r^{2}e^{i\Delta^{'}}\right|^{2}}\\
+ & = & I_{0}T\frac{\normSumComplex1{\left[e^{i\delta^{'}}\left(\Gamma-\Gamma^{2}\right)\right]}}{\left|1-r^{2}e^{i\Delta^{'}}\right|^{2}}\\
  & = & I_{0}T\frac{1+\normSumComplex{-\Gamma^{2}}{\Gamma}+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)}{\left(1+R^{2}-2R\cos\Delta^{'}\right)}\\
  & = & I_{0}T\frac{1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)}{\left(1+R^{2}-2R\cos\Delta^{'}\right)}\\
  & = & \left[\frac{I_{0}T}{\left(1-R\right)^{2}}/\left(\frac{1+R^{2}}{\left(1-R\right)^{2}}-\frac{2R}{\left(1-R\right)^{2}}\cos\Delta^{'}\right)\right]\left(1+R^{2}+R-2Rr\cos\phi+2\left(r\cos\left(\phi+\delta^{'}\right)-R\cos\left(2\phi+\delta^{'}\right)\right)\right)\\
@@ -3058,23 +3058,8 @@ Calculating intracavity power at any location
 For different conditions, we have that
 \end_layout
 
-\begin_layout Standard
-\begin_inset Preview
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{rem}[Fabry-Perot intracavity power]
-\end_layout
-
-\end_inset
-
-
+\begin_layout Remark
+[Fabry-Perot intracavity power]
 \begin_inset CommandInset label
 LatexCommand label
 name "rem:intracavity power LM T0"
@@ -3189,9 +3174,9 @@ For a non-attenuating medium we have that
 
  and so 
 \begin_inset Formula 
-\begin{eqnarray*}
-I_{c} & = & I_{0}T\frac{3-T-2\sqrt{1-T}\cos\phi+2\left(\cos\left(\delta^{'}\right)-\sqrt{1-T}\cos\left(\phi+\delta^{'}\right)\right)}{\left(2-T-2\sqrt{1-T}\cos\Delta^{'}\right)}
-\end{eqnarray*}
+\begin{eqnarray}
+I_{c} & = & I_{0}T\frac{3-T-2\sqrt{1-T}\cos\phi+2\left(\cos\left(\delta^{'}\right)-\sqrt{1-T}\cos\left(\phi+\delta^{'}\right)\right)}{\left(2-T-2\sqrt{1-T}\cos\Delta^{'}\right)}\label{eq:intracavityPowerFabryRR}
+\end{eqnarray}
 
 \end_inset
 
@@ -3261,24 +3246,6 @@ I_{c} & \approx & I_{0}T\frac{1-T+2T+T^{2}/2}{T^{2}/4}\\
  & \approx & I_{0}\frac{T}{T^{2}/4}\\
  & = & 4\frac{I_{0}}{T}.
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{rem}
-\end_layout
 
 \end_inset
 

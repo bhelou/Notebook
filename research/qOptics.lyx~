@@ -96,7 +96,31 @@ Cavities
 \end_layout
 
 \begin_layout Subsection
-Tuned Fabry-Perot in the optomechanical limit
+Detuned Fabry-Perot
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Deuned Fabry-Perot Hamiltonian approach
+\end_layout
+
+\end_inset
+
+ in the optomechanical limit
+\end_layout
+
+\begin_layout Standard
+(also called 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+strawman system
+\end_layout
+
+\end_inset
+
+strawman system)
 \end_layout
 
 \begin_layout Subsubsection
@@ -216,7 +240,7 @@ Let
 
 .
  In their case, 
-\begin_inset Formula $\Omega\sim\omega_{m}\sim khz-Mhz$
+\begin_inset Formula $\omega_{m}\sim hz-Mhz$
 \end_inset
 
 , where 
@@ -416,7 +440,8 @@ G_{0}=\frac{\omega}{d}=\frac{kc}{d}=\frac{k}{\left(d/c\right)}.
  The Hamiltonian can also be written in the following form: 
 \begin_inset Formula 
 \begin{eqnarray}
-\hat{H} & = & \frac{P^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\omega_{c}\hat{a}^{\dagger}\hat{a}-\hat{x}.\frac{\hat{N}\hbar\vec{k}}{\tau},\label{eq:eqTemp}
+\hat{H} & = & \frac{P^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\omega_{c}\hat{a}^{\dagger}\hat{a}-\hat{x}.\frac{\hat{N}\hbar\vec{k}}{\tau}\label{eq:eqTemp}\\
+ & = & \frac{P^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\omega_{c}\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a},
 \end{eqnarray}
 
 \end_inset
@@ -444,7 +469,15 @@ where
 \end_inset
 
  is the photon travel time from one end of the mirror to the other.
- Moreover, note that 
+ 
+\end_layout
+
+\begin_layout Paragraph
+Interpretation of the radiation pressure force term
+\end_layout
+
+\begin_layout Standard
+Notice that 
 \begin_inset Formula $\hat{N}\hbar\vec{k}/\tau$
 \end_inset
 
@@ -454,13 +487,61 @@ where
 
 *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula $\hbar k$
 \end_inset
 
- is the momentum carrier by one photon
+ is the momentum carried by one photon
+\end_layout
+
+\end_inset
+
+.
+ We also have that 
+\begin_inset Formula $\hat{N}\hbar\vec{k}/\tau$
+\end_inset
+
+ is just 
+\begin_inset Formula $\hat{N}\hbar G_{0}$
+\end_inset
+
+ if 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ (unit vector along 
+\begin_inset Formula $+x$
+\end_inset
+
+ direction) is aligned with 
+\begin_inset Formula $\vec{k}$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+If they are aligned then 
+\begin_inset Formula $\hat{x}.\vec{k}=\hat{x}k$
+\end_inset
+
+.
+ We have that 
+\begin_inset Formula $k=\omega_{c}/c$
+\end_inset
+
+ so
+\begin_inset Formula 
+\begin{equation}
+\frac{\hat{N}\hbar\vec{k}}{\tau}=\hat{N}\hbar\frac{\omega_{c}}{c}\frac{c}{d}=\hat{N}\hbar\frac{\omega_{c}}{d}=\hat{N}\hbar G_{0}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -578,7 +659,7 @@ Note that this interaction term could have also been derived differently:
 
 as expected.
  Moreover, notice that this derivation gives us that 
-\begin_inset Formula $G_{0}=\omega_{c}/d$
+\begin_inset Formula $\boxed{G_{0}=\omega_{c}/d}$
 \end_inset
 
 .
@@ -729,6 +810,10 @@ We now have to add a heat bath.
  (like the quantum Langevin equations).
 \end_layout
 
+\begin_layout Paragraph
+Moving into the interaction picture
+\end_layout
+
 \begin_layout Standard
 The next is to move into another 
 \begin_inset Quotes eld
@@ -848,8 +933,16 @@ reference "eq:usefulExpN"
 
 
 \begin_inset Formula 
+\begin{equation}
+\boxed{H_{I,int}=\frac{\hat{P}^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right)}.
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
 \begin{eqnarray}
-H_{I} & = & \frac{\hat{P}^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right).\label{eq:totalHamiltonianAfterInteractionPicture}
+H_{I,int} & = & \frac{\hat{P}^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right).\label{eq:totalHamiltonianAfterInteractionPicture}
 \end{eqnarray}
 
 \end_inset
@@ -894,9 +987,18 @@ We have that
 status collapsed
 
 \begin_layout Plain Layout
+We have that (remember that we are working in the interaction picture)
+\begin_inset Formula 
+\begin{equation}
+H_{I,int}=\frac{\hat{P}^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right).
+\end{equation}
+
+\end_inset
+
+so
 \begin_inset Formula 
 \begin{eqnarray}
--i\frac{d}{dt}\hat{x} & = & \frac{1}{\hbar}\left[H,\hat{x}\right]\\
+-i\frac{d}{dt}\hat{x} & = & \frac{1}{\hbar}\left[H_{I,int},\hat{x}\right]\\
  & = & \frac{1}{\hbar}\left[\frac{P^{2}}{2m},\hat{x}\right]\\
  & = & \frac{1}{2m\hbar}2\hat{P}\left[\hat{P},\hat{x}\right]\\
  & = & \frac{-i\hbar}{m\hbar}\hat{P}=\frac{-i}{m}\hat{P}.
@@ -947,14 +1049,23 @@ We have that
 
 \end_inset
 
-*
+ *
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
+We have that (remember that we are working in the interaction picture)
+\begin_inset Formula 
+\begin{equation}
+H_{I,int}=\frac{\hat{P}^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right).
+\end{equation}
+
+\end_inset
+
+so
 \begin_inset Formula 
 \begin{eqnarray}
--i\frac{d}{dt}\hat{p} & = & \frac{1}{\hbar}\left[H,\hat{p}\right]\\
+-i\frac{d}{dt}\hat{p} & = & \frac{1}{\hbar}\left[H_{I,int},\hat{p}\right]\\
  & = & \frac{1}{2\hbar}m\omega_{m}^{2}\left[\hat{x}^{2},\hat{p}\right]-G_{0}\left[\hat{x},\hat{p}\right]\hat{N}\\
  & = & \frac{1}{\hbar}m\omega_{m}^{2}\hat{x}\left[\hat{x},\hat{p}\right]-i\hbar G_{0}\hat{N}\\
  & = & im\omega_{m}^{2}\hat{x}-i\hbar G_{0}\hat{N},
@@ -982,6 +1093,14 @@ reference "eq:commutationXP"
 
 ).
  We hence obtain that
+\begin_inset Formula 
+\begin{equation}
+\frac{d}{dt}\hat{p}=\hbar G_{0}\hat{N}-m\omega_{m}^{2}\hat{x},
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1045,26 +1164,40 @@ reference "eq:eqTemp"
 We have that
 \begin_inset Formula 
 \begin{equation}
-\frac{d}{dt}\hat{a}=i\left(\omega_{c}\hat{a}-G_{0}\hat{x}\hat{a}\right).
+\frac{d}{dt}\hat{a}=i\left(-\left(\omega_{c}-\omega_{0}\right)\hat{a}+G_{0}\hat{x}\hat{a}\right)+\sqrt{\gamma}\hat{a}_{in},.
 \end{equation}
 
 \end_inset
 
 *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
+We have that (remember that we are working in the interaction picture)
+\begin_inset Formula 
+\begin{equation}
+H_{I,int}=\frac{\hat{P}^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\left(\omega_{c}-\omega_{0}\right)\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right).
+\end{equation}
+
+\end_inset
+
+so
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{d}{dt}\hat{a} & = & \frac{i}{\hbar}\left[H,\hat{a}\right]\\
- & = & \frac{i}{\hbar}\left(\hbar\omega_{c}\left[\hat{a},\hat{N}\right]-\hbar G_{0}\hat{x}\left[\hat{a},\hat{N}\right]\right)\\
- & = & i\left(\omega_{c}\hat{a}-G_{0}\hat{x}\hat{a}\right),
+\frac{d}{dt}\hat{a} & = & \frac{i}{\hbar}\left[H_{I,int},\hat{a}\right]\\
+ & = & \frac{i}{\hbar}\left(\hbar\left(\omega_{c}-\omega_{0}\right)\left[\hat{N},\hat{a}\right]-\hbar G_{0}\hat{x}\left[\hat{N},\hat{a}\right]+i\hbar\sqrt{\gamma}\left[\hat{a}_{in}\left(t\right)\hat{a}^{\dagger},\hat{a}\right]\right)\\
+ & = & \frac{i}{\hbar}\left(-\hbar\left(\omega_{c}-\omega_{0}\right)a+\hbar G_{0}\hat{x}a-i\hbar\sqrt{\gamma}\hat{a}_{in}\right)\\
+ & = & i\left(-\left(\omega_{c}-\omega_{0}\right)\hat{a}+G_{0}\hat{x}\hat{a}\right)+\sqrt{\gamma}\hat{a}_{in},
 \end{eqnarray*}
 
 \end_inset
 
 where we have used that 
+\begin_inset Formula $\left[a,a^{\dagger}\right]=I$
+\end_inset
+
+, 
 \begin_inset Formula $\left[N=a^{\dagger}a,a\right]=-a$
 \end_inset
 
@@ -1310,7 +1443,7 @@ Equation of motion for
 We can show that
 \begin_inset Formula 
 \begin{equation}
-\hat{a}_{out}=-\hat{a}_{in}+\sqrt{\gamma}\hat{a}.
+\boxed{\hat{a}_{out}\left(t\right)=-\hat{a}_{in}\left(t\right)+\sqrt{\gamma}\hat{a}\left(t\right)}.
 \end{equation}
 
 \end_inset
@@ -1399,7 +1532,8 @@ We have that (for brevity letting
 \begin_inset Formula $H_{I}\left(t\right)\equiv H$
 \end_inset
 
-) 
+) (the minus sign is due to the phase factor picked up due to the interaction
+ with the mirror) 
 \begin_inset Formula 
 \begin{eqnarray}
 -\hat{a}_{out}\left(t\right)=\hat{a}_{in}\left(t+\delta t\right) & = & e^{iH\delta t/\hbar}\hat{a}_{in}\left(t\right)e^{-iH\delta t/\hbar}\\
@@ -1503,7 +1637,7 @@ Mandel treatment of the beam-splitter
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1646,8 +1780,7 @@ Assume that the field in mode 0 is the vacuum and denote the total state
  then 
 \begin_inset Formula 
 \begin{eqnarray}
-\hat{a}_{0}\hat{\rho}_{0} & = & \hat{\rho}\hat{a}_{0}^{\dagger}=0\label{eq:consequenceVaccumField}\\
-\nonumber 
+\hat{a}_{0}\hat{\rho}_{0} & = & \hat{\rho}\hat{a}_{0}^{\dagger}=0\label{eq:consequenceVaccumField}
 \end{eqnarray}
 
 \end_inset
@@ -1837,7 +1970,15 @@ reference "eq:ouputProbDetected"
 \end_inset
 
 Hence, for subpoissonian statistics, we have negative correlations between
- the fluctuations of the transmitted and reflected beams.
+ the fluctuations of the transmitted (
+\begin_inset Formula $\hat{n}_{3}$
+\end_inset
+
+) and reflected beams (
+\begin_inset Formula $\hat{n}_{2}$
+\end_inset
+
+).
  For a coherent state, the correlations are equal to zero (use Eqs.
  
 \begin_inset CommandInset ref
@@ -1849,6 +1990,16 @@ reference "eq:photonStatisticsCoherentState"
 ).
  When the correlation between output 2 and 3 is positive, the phenomenon
  is then known as the 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Hanbury Brown-Twiss effect
+\end_layout
+
+\end_inset
+
+ 
 \emph on
 Hanbury Brown-Twiss 
 \emph default
@@ -1885,9 +2036,9 @@ reference "eq:QuantumBSphotonconservation"
 
 , we obtain that 
 \begin_inset Formula 
-\begin{eqnarray*}
-P_{23} & = & \left(\left|t\right|^{2}-\left|r\right|^{2}\right)^{2},\\
-\end{eqnarray*}
+\begin{eqnarray}
+P_{23} & = & \left(\left|t\right|^{2}-\left|r\right|^{2}\right)^{2},\label{eq:blah}
+\end{eqnarray}
 
 \end_inset
 
@@ -2075,7 +2226,7 @@ We can write down the electric field in the following fashion:
 \end_inset
 
 with 
-\begin_inset Formula $\mathcal{C}_{0}$
+\begin_inset Formula $\mathcal{C}_{0}=\sqrt{\left(4\pi\hbar\omega_{0}\right)/\mathcal{A}c}$
 \end_inset
 
  being a constant (see Eqs.
@@ -2114,7 +2265,7 @@ reference "sub:The-displacement-transformation"
 
 *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Use 
@@ -2454,7 +2605,7 @@ as can be determined using Mathematica with
  Now, 
 \begin_inset Formula 
 \begin{eqnarray*}
-c_{2}^{-1}\braket{\xi|\hat{I}_{0}|\xi}/\mathcal{C}_{0}^{2}=1/c_{2}/\mathcal{C}_{0}^{2}\left\langle \hat{I}_{0}\right\rangle  & \equiv & \frac{4\pi}{\mathcal{A}c}I_{0}=\left(\frac{c_{1}}{\pi\sqrt{2}}\right)^{2}\frac{\bar{a}}{2}^{2}+\bar{a}\left\langle \hat{\mathcal{E}_{c}}\right\rangle +\frac{\left\langle \hat{\mathcal{E}_{c}}^{2}\right\rangle }{2}+\frac{\left\langle \hat{\mathcal{E}_{s}}^{2}\right\rangle }{2}
+c_{2}^{-1}\braket{\xi|\hat{I}_{0}}{\xi}/\mathcal{C}_{0}^{2}=1/c_{2}/\mathcal{C}_{0}^{2}\left\langle \hat{I}_{0}\right\rangle  & \equiv & \frac{4\pi}{\mathcal{A}c}I_{0}=\left(\frac{c_{1}}{\pi\sqrt{2}}\right)^{2}\frac{\bar{a}}{2}^{2}+\bar{a}\left\langle \hat{\mathcal{E}_{c}}\right\rangle +\frac{\left\langle \hat{\mathcal{E}_{c}}^{2}\right\rangle }{2}+\frac{\left\langle \hat{\mathcal{E}_{s}}^{2}\right\rangle }{2}
 \end{eqnarray*}
 
 \end_inset
@@ -2875,7 +3026,305 @@ Hence, we obtain that
 \end_layout
 
 \begin_layout Chapter
-Fundamentals of QO
+Fundamentals of Quantum Optics/Quantum Mechanics
+\end_layout
+
+\begin_layout Section
+Light pictures in QO (for single mode fields)
+\end_layout
+
+\begin_layout Standard
+The starting point is to write down the expression for a single mode of
+ the electric field in the Heisenberg picture*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quantizedEfieldAPH190"
+
+\end_inset
+
+ restricted to one mode
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray}
+\vec{E}\left(\vec{x},t\right) & = & \sqrt{\frac{\hbar\omega}{2\epsilon_{0}}}\left(a\left(t\right)+a^{\dagger}\left(t\right)\right)\vec{u}\left(\vec{x}\right)\\
+ & \equiv & \mathcal{C}_{0}\frac{\mathcal{E}\left(\vec{x},t\right)e^{i\vec{k}.\vec{x}-i\omega t}+\mathcal{E}^{\dagger}\left(\vec{x},t\right)e^{-i\vec{k}.\vec{x}+i\omega t}}{\sqrt{2}}\\
+ & \equiv & \mathcal{C}_{0}\left(\mathcal{E}_{c}\left(\vec{x},t\right)\cos\left(\omega t-\vec{k}.\vec{x}\right)+\mathcal{E}_{s}\left(\vec{x},t\right)\sin\left(\omega t-\vec{k}.\vec{x}\right)\right),
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{C}_{0}$
+\end_inset
+
+ is a constant.
+ Then in analogy to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:classicalLightPictures"
+
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathcal{E}^{\dagger}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ are the complex amplitude quadratures
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+complex amplitude quadratures
+\end_layout
+
+\end_inset
+
+, and 
+\begin_inset Formula $\mathcal{E}_{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{E}_{s}$
+\end_inset
+
+ are the cosine/amplitude and sine/phase quadratures
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+cosine/amplitude and sine/phase quadratures
+\end_layout
+
+\end_inset
+
+, respectively.
+ We can see that
+\begin_inset Formula 
+\begin{eqnarray}
+\mathcal{E}_{c}\left(\vec{x},t\right) & = & \frac{\mathcal{E}\left(\vec{x},t\right)+\mathcal{E}^{\dagger}\left(\vec{x},t\right)}{\sqrt{2}}\\
+\mathcal{E}_{s}\left(\vec{x},t\right) & = & \frac{\mathcal{E}\left(\vec{x},t\right)-\mathcal{E}^{\dagger}\left(\vec{x},t\right)}{i\sqrt{2}}.
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have that
+\begin_inset Formula 
+\begin{eqnarray}
+i\im{\frac{\mathcal{E}\left(t\right)e^{-i\omega t}+\mathcal{E}^{\dagger}\left(t\right)e^{i\omega t}}{\sqrt{2}}} & = & -\frac{\im{\mathcal{E}\left(t\right)e^{-i\omega t}}+\im{\mathcal{E}^{\dagger}\left(t\right)e^{i\omega t}}}{i\sqrt{2}}\\
+ & = & \frac{\mathcal{E}\left(t\right)-\mathcal{E}^{\dagger}\left(t\right)}{i\sqrt{2}}\sin\omega t\\
+ & = & \mathcal{E}_{s}\sin\omega t
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Results for two photon formalism
+\end_layout
+
+\begin_layout Standard
+From the analysis done in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sub:2photon-formalism"
+
+\end_inset
+
+, we have in the limit that the sidebands 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ are 
+\begin_inset Formula $\ll\omega$
+\end_inset
+
+ that (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:complexAmplitude2PhotonFormalism"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{equation}
+\hat{\mathcal{E}}\left(t\right)\equiv\frac{\mathcal{C}_{0}}{\sqrt{2}}\hat{a}\left(t\right)=\intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}\lambda_{+}\left(\Omega\right)\hat{a}_{+}e^{-i\Omega t}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{C}_{0}\equiv\sqrt{\left(4\pi\hbar\omega_{0}\right)/\mathcal{A}c}$
+\end_inset
+
+*
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Why did we choose this normalization constant? From 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Qemrelations"
+
+\end_inset
+
+, we have that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\hat{E}\left(\vec{r},t\right)=\frac{1}{L^{3/2}}\sum_{\vec{k}}\sum_{s}\sqrt{\frac{\hbar\omega}{2\epsilon_{0}}}\left[i\hat{a}_{\vec{k}s}\left(t=0\right)\epsilon_{\vec{k}s}e^{i\left(\vec{k}.\vec{r}-\omega t\right)}+\mbox{h.c.}\right].
+\end{equation}
+
+\end_inset
+
+We can define
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $L^{3/2}\equiv\sqrt{\mathcal{A}L}$
+\end_inset
+
+.
+ In addition, going to gaussian cgs units, mean we pick up a factor of 
+\begin_inset Formula $\sqrt{4\pi\epsilon_{0}}$
+\end_inset
+
+.
+ So now we obtain something like
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\hat{E}\left(\vec{r},t\right)=\sum_{\vec{k}}\sum_{s}\sqrt{\frac{2\pi\hbar\omega}{\mathcal{A}L}}\left[i\hat{a}_{\vec{k}s}\left(t=0\right)\epsilon_{\vec{k}s}e^{i\left(\vec{k}.\vec{r}-\omega t\right)}+\mbox{h.c.}\right].
+\end{equation}
+
+\end_inset
+
+How does 
+\begin_inset Formula $\sqrt{1/L}$
+\end_inset
+
+ become 
+\begin_inset Formula $\sqrt{1/c}$
+\end_inset
+
+ ?? where does a time constant come into play ???
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula $\lambda_{\pm}\left(\Omega\right)\equiv\sqrt{\frac{\omega_{0}\pm\Omega}{\omega_{0}}}$
+\end_inset
+
+.
+ We would then obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{a}_{c}\left(\Omega\right) & = & \frac{\lambda_{+}\hat{a}_{\omega_{0}+\Omega}+\lambda_{-}\hat{a}_{\omega_{0}-\Omega}^{\dagger}}{2},\\
+\hat{a}_{s}\left(\Omega\right) & = & \frac{\lambda_{+}\hat{a}_{\omega_{0}+\Omega}-\lambda_{-}\hat{a}_{\omega_{0}-\Omega}^{\dagger}}{i\sqrt{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+and in the small bandwidth limit (
+\begin_inset Formula $\omega_{0}\ggg\Omega$
+\end_inset
+
+), we have that 
+\begin_inset Formula $\lambda_{\pm}\approx1$
+\end_inset
+
+ and so in this limit
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{a}_{c}\left(\Omega\right) & = & \frac{\hat{a}_{\omega_{0}+\Omega}+\hat{a}_{\omega_{0}-\Omega}^{\dagger}}{2},\\
+\hat{a}_{s}\left(\Omega\right) & = & \frac{\hat{a}_{\omega_{0}+\Omega}-\hat{a}_{\omega_{0}-\Omega}^{\dagger}}{i\sqrt{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3394,7 +3843,7 @@ where
 The classical Hamiltonian can be written as 
 \begin_inset Formula 
 \begin{eqnarray*}
-H & = & \frac{1}{2}\sum_{k}\sum_{s}\left[p_{ks}^{2}\left(t\right)+\omega^{2}q_{ks}^{2}\left(t\right)\right].\\
+H & = & \frac{1}{2}\sum_{k}\sum_{s}\left[p_{ks}^{2}\left(t\right)+\omega^{2}q_{ks}^{2}\left(t\right)\right].
 \end{eqnarray*}
 
 \end_inset
@@ -3587,7 +4036,7 @@ So
 \begin_inset Formula 
 \begin{eqnarray}
 \hat{a}_{s}\left(\omega\right) & = & \int d\vec{n}\hat{a}_{s}\left(\vec{k}\right)\\
- & = & \int d\vec{n}\hat{a}_{s}\left(\frac{\omega}{c}\vec{n}\right)\\
+ & = & \int d\vec{n}\hat{a}_{s}\left(\frac{\omega}{c}\vec{n}\right)
 \end{eqnarray}
 
 \end_inset
@@ -3704,7 +4153,7 @@ reference "sec:ClassicalEMmomentum"
 :
 \begin_inset Formula 
 \begin{eqnarray*}
-\boldsymbol{P} & = & \epsilon_{0}\intop_{L^{3}}\boldsymbol{E}\left(r,t\right)\times\boldsymbol{B}\left(r,t\right).\\
+\boldsymbol{P} & = & \epsilon_{0}\intop_{L^{3}}\boldsymbol{E}\left(r,t\right)\times\boldsymbol{B}\left(r,t\right).
 \end{eqnarray*}
 
 \end_inset
@@ -3722,7 +4171,7 @@ Howeover, this classical expression is not Hermitian (
  quantized field:
 \begin_inset Formula 
 \begin{eqnarray*}
-\hat{P} & = & \frac{1}{2}\epsilon_{0}\intop_{L^{3}}\left[\hat{E}\times\hat{B}-\hat{B}\times\hat{E}\right]d^{3}r\\
+\hat{P} & = & \frac{1}{2}\epsilon_{0}\intop_{L^{3}}\left[\hat{E}\times\hat{B}-\hat{B}\times\hat{E}\right]d^{3}r
 \end{eqnarray*}
 
 \end_inset
@@ -3746,8 +4195,7 @@ reference "eq:Qemrelations"
 ) to obtain after some tedious algebra that 
 \begin_inset Formula 
 \begin{eqnarray}
-\hat{P} & = & \sum_{\boldsymbol{k}s}\hbar\boldsymbol{k}\hat{n}_{\boldsymbol{k}s}\label{eq:momentumQMfield}\\
-\nonumber 
+\hat{P} & = & \sum_{\boldsymbol{k}s}\hbar\boldsymbol{k}\hat{n}_{\boldsymbol{k}s}\label{eq:momentumQMfield}
 \end{eqnarray}
 
 \end_inset
@@ -3804,7 +4252,7 @@ A phase operator
 Write the creation operator as 
 \begin_inset Formula 
 \begin{eqnarray*}
-\hat{a}_{ks} & = & \hat{g}_{ks}e^{i\hat{\phi}_{ks}}\\
+\hat{a}_{ks} & = & \hat{g}_{ks}e^{i\hat{\phi}_{ks}}
 \end{eqnarray*}
 
 \end_inset
@@ -4163,7 +4611,7 @@ where the
  Or equivalently, we can say that 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle \Delta E\left(x,t\right)^{2}\right\rangle  & = & \intop\frac{d\omega}{2\pi}\mathcal{D}\left(\omega\right),\\
+\left\langle \Delta E\left(x,t\right)^{2}\right\rangle  & = & \intop\frac{d\omega}{2\pi}\mathcal{D}\left(\omega\right),
 \end{eqnarray*}
 
 \end_inset
@@ -4203,11 +4651,47 @@ key "caves1985"
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:2photon-formalism;"
+name "sub:2photon-formalism"
 
 \end_inset
 
 Two photon formalism; introduction
+\end_layout
+
+\begin_layout Remark
+The polarization of light has been ignored*
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Insofar as the light beams in the interferometer can be well approximated
+ as paraxial beams, and the polarization of the light wave does not matter
+ in most of the considered interferometers, we will omit the vector nature
+ of the electric field and treat it as a scalar field with strength defined
+ by a scalar operator-valued function 
+\begin_inset Formula $\hat{E}\left(x,y,z,t\right)$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Danilishin2012"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4215,11 +4699,10 @@ Consider a light wave traveling along the + direction of the
 \begin_inset Formula $z$
 \end_inset
 
--axis:
+-axis, then in the Heisenberg picture:
 \begin_inset Formula 
 \begin{eqnarray}
-\hat{E}\left(x,y,z;t\right) & = & u\left(x,y,z\right)\left\{ \hat{E}^{\left(+\right)}\left(t\right)+\hat{E}^{\left(-\right)}\left(t\right)\right\} \label{eq:eField2photonFormalism}\\
-\nonumber 
+\hat{E}\left(x,y,z;t\right) & = & u\left(x,y,z\right)\left\{ \hat{E}^{\left(+\right)}\left(t\right)+\hat{E}^{\left(-\right)}\left(t\right)\right\} \label{eq:eField2photonFormalism}
 \end{eqnarray}
 
 \end_inset
@@ -4251,40 +4734,51 @@ where
 status collapsed
 
 \begin_layout Plain Layout
-To obtain the E-field at any location, replace 
-\begin_inset Formula $t$
-\end_inset
-
- in 
-\begin_inset Formula $E^{+}\left(t\right)$
-\end_inset
-
- with 
-\begin_inset Formula $\xi=t-z/c$
-\end_inset
-
- (see 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:PlaneWavePropagation"
-
-\end_inset
-
-).
- These results are a special case of the equations 
+These results are a special case of the equations 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:cavityEM"
 
 \end_inset
 
- with say a linear polarization (polarization does not matter in most of
- the considered interferometers) and for a place wave with a spatial profile
- given by 
+ with a spatial profile given by 
 \begin_inset Formula $u$
 \end_inset
 
 .
+ Indeed, 
+\begin_inset Formula $k=\omega/c$
+\end_inset
+
+ and so 
+\begin_inset Formula $\sqrt{2\pi\hbar ck_{n}}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cavityEM"
+
+\end_inset
+
+ becomes 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sqrt{2\pi\hbar\omega_{n}}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \end_inset
@@ -4293,8 +4787,7 @@ reference "eq:cavityEM"
  Moreover, we have that
 \begin_inset Formula 
 \begin{eqnarray}
-\left[\hat{a}_{\omega},\hat{a}_{\omega^{'}}^{\dagger}\right] & = & 2\pi\delta\left(\omega-\omega^{'}\right)\label{eq:commutationFrequencyDomain}\\
-\nonumber 
+\left[\hat{a}_{\omega},\hat{a}_{\omega^{'}}^{\dagger}\right] & = & 2\pi\delta\left(\omega-\omega^{'}\right)\label{eq:commutationFrequencyDomain}
 \end{eqnarray}
 
 \end_inset
@@ -4472,6 +4965,26 @@ status collapsed
 
 \end_inset
 
+We integrate from 
+\begin_inset Formula $0$
+\end_inset
+
+ to 
+\begin_inset Formula $\infty$
+\end_inset
+
+ for the following reason: by definition we split the electric field into
+ positive and negative frequency components:
+\begin_inset Formula 
+\begin{equation}
+E\left(\omega\right)=\begin{cases}
+E^{+}, & \omega>0\\
+E^{-}, & \omega<0.
+\end{cases}
+\end{equation}
+
+\end_inset
+
 
 \end_layout
 
@@ -4493,7 +5006,7 @@ because now the electric field has the form of Re
 -see section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:PlaneWavePropagation"
+reference "sub:classicalLightPictures"
 
 \end_inset
 
@@ -4520,7 +5033,7 @@ reference "eq:transformationElectricFieldPictures"
 , we have that 
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{E}{\sqrt{2}} & \rightarrow & E_{c}\cos+E_{s}\sin\\
+\frac{E}{\sqrt{2}} & \rightarrow & E_{c}\cos+E_{s}\sin
 \end{eqnarray*}
 
 \end_inset
@@ -4570,8 +5083,7 @@ because of the definition of E as
  and where 
 \begin_inset Formula 
 \begin{eqnarray}
-\mathcal{C}_{0} & \equiv & \sqrt{\left(4\pi\hbar\omega_{0}\right)/\mathcal{A}c}\label{eq:definition of C0 in QuantumEfield}\\
-\nonumber 
+\mathcal{C}_{0} & \equiv & \sqrt{\left(4\pi\hbar\omega_{0}\right)/\mathcal{A}c}\label{eq:definition of C0 in QuantumEfield}
 \end{eqnarray}
 
 \end_inset
@@ -4611,7 +5123,7 @@ Then take the limit that
 \end_inset
 
 .
- With the interpertation of 
+ With the interpretation of 
 \begin_inset Formula $\hat{\mathcal{E}}$
 \end_inset
 
@@ -4619,7 +5131,7 @@ Then take the limit that
 es : 
 \begin_inset Formula 
 \begin{eqnarray}
-\hat{E}\left(t\right) & = & \hat{\mathcal{E}_{c}}\left(t\right)\cos\omega_{0}t+\hat{\mathcal{E}_{s}}\left(t\right)\sin\omega_{0}t\nonumber \\
+\hat{E}\left(t\right) & \equiv & \hat{\mathcal{E}_{c}}\left(t\right)\cos\omega_{0}t+\hat{\mathcal{E}_{s}}\left(t\right)\sin\omega_{0}t\nonumber \\
 \hat{\mathcal{E}_{c}}\left(t\right) & = & \mathcal{C}_{0}\intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}\hat{a}_{c}\left(\Omega\right)e^{-i\Omega t}=\mathcal{C}_{0}\hat{a}_{c}\left(t\right)\\
 \hat{\mathcal{E}_{s}}\left(t\right) & = & \mathcal{C}_{0}\intop_{-\infty}^{\infty}\frac{d\Omega}{2\pi}\hat{a}_{s}\left(\Omega\right)e^{-i\Omega t}=\mathcal{C}_{0}\hat{a}_{s}\left(t\right),\label{eqeQuadratures2photonformalism}
 \end{eqnarray}
@@ -4727,7 +5239,7 @@ status collapsed
 Indeed, the electric field is given by 
 \begin_inset Formula 
 \begin{eqnarray*}
-E\left(t\right) & = & \hat{\mathcal{E}}_{c}\left(t\right)\cos\omega_{0t}+\hat{\mathcal{E}}_{s}\left(t\right)\sin\omega_{0}t\\
+E\left(t\right) & = & \hat{\mathcal{E}}_{c}\left(t\right)\cos\omega_{0t}+\hat{\mathcal{E}}_{s}\left(t\right)\sin\omega_{0}t
 \end{eqnarray*}
 
 \end_inset
@@ -4797,8 +5309,7 @@ reference "eq:transformationElectricFieldPictures"
 and so we can say that 
 \begin_inset Formula 
 \begin{eqnarray}
-\hat{a}_{sc}^{\dagger}\left(\Omega\right) & = & \hat{a}_{sc}\left(-\Omega\right)\quad\implies\hat{a}_{sc}^{\dagger}\left(t\right)=\hat{a}_{sc}\left(t\right)\label{eq:phasequadraturesarehermitian}\\
-\nonumber 
+\hat{a}_{sc}^{\dagger}\left(\Omega\right) & = & \hat{a}_{sc}\left(-\Omega\right)\quad\implies\hat{a}_{sc}^{\dagger}\left(t\right)=\hat{a}_{sc}\left(t\right)\label{eq:phasequadraturesarehermitian}
 \end{eqnarray}
 
 \end_inset
@@ -4857,7 +5368,7 @@ reference "eq:commutationFrequency"
  However if the photodetectors measure the photon number flux:
 \begin_inset Formula 
 \begin{eqnarray*}
-\hat{\mathcal{N}}\left(t\right) & = & \intop_{-\infty}^{\infty}\intop_{-\infty}^{\infty}\frac{d\omega d\omega^{'}}{\left(2\pi\right)^{2}}\hat{a}_{\omega}^{\dagger}\hat{a}_{\omega^{'}}\exp\left[i\left(\omega-\omega^{'}\right)t\right],\\
+\hat{\mathcal{N}}\left(t\right) & = & \intop_{-\infty}^{\infty}\intop_{-\infty}^{\infty}\frac{d\omega d\omega^{'}}{\left(2\pi\right)^{2}}\hat{a}_{\omega}^{\dagger}\hat{a}_{\omega^{'}}\exp\left[i\left(\omega-\omega^{'}\right)t\right],
 \end{eqnarray*}
 
 \end_inset
@@ -5179,7 +5690,7 @@ Covariance matrix of photon states
 \end_layout
 
 \begin_layout Standard
-Similar to spectrial densities but defined in the time domain:
+Similar to spectral densities but defined in the time domain:
 \begin_inset Formula 
 \begin{eqnarray*}
 \mathbb{V}_{ij}\left(t\right)\delta\left(t-t^{'}\right) & = & \left\langle \hat{a}_{i}\left(t\right)\hat{a}_{j}\left(t^{'}\right)\right\rangle _{symm}\\
@@ -5209,7 +5720,7 @@ Moreover, we can write that
 \begin{eqnarray*}
 \left\langle \hat{E}\left(x,y,z,t\right)^{2}\right\rangle  & = & \left(u\left(x,y,z\right)\mathcal{C}_{0}\right)^{2}\times\left(\begin{array}{cc}
 \cos\omega_{0}t & \sin\omega_{0}t\end{array}\right)\mathbb{V}\left(\begin{array}{cc}
-\cos\omega_{0}t & \sin\omega_{0}t\end{array}\right)^{T},\\
+\cos\omega_{0}t & \sin\omega_{0}t\end{array}\right)^{T},
 \end{eqnarray*}
 
 \end_inset
@@ -5876,11 +6387,11 @@ key "mandelQO"
 \begin_inset Formula $t$
 \end_inset
 
- will be 
+ will be
 \begin_inset Formula 
-\begin{eqnarray*}
-F^{+}\left(s,\vec{r},t\right) & = & \frac{1}{L^{3/2}}\sum_{\vec{k}}l\left(k\right)\hat{a}_{\vec{k}s}\epsilon_{\vec{k}s}e^{i\left(\vec{k}.\vec{r}-\omega t\right)}\\
-\end{eqnarray*}
+\begin{equation}
+\boxed{F^{+}\left(s,\vec{r},t\right)=\frac{1}{L^{3/2}}\sum_{\vec{k}}l\left(k\right)\hat{a}_{\vec{k}s}\epsilon_{\vec{k}s}e^{i\left(\vec{k}.\vec{r}-\omega t\right)}}
+\end{equation}
 
 \end_inset
 
@@ -5935,7 +6446,7 @@ Let us follow a simple argument: the interaction is described by
 \end_inset
 
  is given by the matrix element 
-\begin_inset Formula $\braket{\psi_{final}|F^{+}\left(s,r,t\right)|\psi_{initial}}$
+\begin_inset Formula $\braket{\psi_{final}|F^{+}\left(s,r,t\right)|\psi_{initial}}{}$
 \end_inset
 
  (see 
@@ -6692,8 +7203,8 @@ A general representation can then be written as
 \begin_inset Formula 
 \begin{eqnarray*}
 \rho & = & \intop\phi_{12}\left(v_{1},v_{2}\right)\ket{v_{1}+v_{2}}\bra{v_{1}+v_{2}}d^{2}v_{1}d^{2}v_{2}\\
- & = & \intop\phi_{12}\left(v_{1},v-v_{1}\right)\ket{v}\bra{v}d^{2}v_{1}d^{2}v\\
- & \equiv & \intop\phi\left(v\right)\ket{v}\bra{v}d^{2}v,
+ & = & \intop\phi_{12}\left(v_{1},v-v_{1}\right)\ket v\bra vd^{2}v_{1}d^{2}v\\
+ & \equiv & \intop\phi\left(v\right)\ket v\bra vd^{2}v,
 \end{eqnarray*}
 
 \end_inset
@@ -6729,7 +7240,7 @@ reference "fig:simpleInterference"
 
 \end_inset
 
-If the two sources are indepedent then 
+If the two sources are independent then 
 \begin_inset Formula $\phi_{12}\left(v_{1},v_{2}\right)=\phi_{1}\left(v_{1}\right)\phi_{2}\left(v_{2}\right)$
 \end_inset
 
@@ -6771,8 +7282,7 @@ reference "fig:simpleInterference"
 )? We have that 
 \begin_inset Formula 
 \begin{eqnarray}
-\left\langle \hat{I}\left(r,t\right)\right\rangle  & = & \left\langle F_{1}^{-}\left(r,t\right).F_{1}^{+}\left(r,t\right)\right\rangle _{\phi_{12}}+\left\langle F_{2}^{-}\left(r,t\right).F_{2}^{+}\left(r,t\right)\right\rangle _{\phi_{12}}+\left\langle F_{1}^{-}\left(r,t\right).F_{2}^{+}\left(r,t\right)\right\rangle _{\phi_{12}}+\left\langle F_{2}^{-}\left(r,t\right).F_{1}^{+}\left(r,t\right)\right\rangle _{\phi_{12}},\label{eq:intensities}\\
-\nonumber 
+\left\langle \hat{I}\left(r,t\right)\right\rangle  & = & \left\langle F_{1}^{-}\left(r,t\right).F_{1}^{+}\left(r,t\right)\right\rangle _{\phi_{12}}+\left\langle F_{2}^{-}\left(r,t\right).F_{2}^{+}\left(r,t\right)\right\rangle _{\phi_{12}}+\left\langle F_{1}^{-}\left(r,t\right).F_{2}^{+}\left(r,t\right)\right\rangle _{\phi_{12}}+\left\langle F_{2}^{-}\left(r,t\right).F_{1}^{+}\left(r,t\right)\right\rangle _{\phi_{12}},\label{eq:intensities}
 \end{eqnarray}
 
 \end_inset
@@ -6922,7 +7432,7 @@ Indeed,
  Now we can write 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle \hat{I}\left(r,t\right)\right\rangle  & = & \left|K_{1}\right|^{2}\left\langle \hat{I}\left(r_{1},t-\tau_{1}\right)\right\rangle +\left|K_{2}\right|^{2}\left\langle \hat{I}\left(r_{2},t-\tau_{2}\right)\right\rangle +2Re\left[K_{1}^{*}K_{2}\left\langle \hat{\vec{F}}^{-}\left(r_{1},t-\tau_{1}\right).\hat{\vec{F}}^{+}\left(r_{2},t-\tau_{2}\right)\right\rangle \right].\\
+\left\langle \hat{I}\left(r,t\right)\right\rangle  & = & \left|K_{1}\right|^{2}\left\langle \hat{I}\left(r_{1},t-\tau_{1}\right)\right\rangle +\left|K_{2}\right|^{2}\left\langle \hat{I}\left(r_{2},t-\tau_{2}\right)\right\rangle +2Re\left[K_{1}^{*}K_{2}\left\langle \hat{\vec{F}}^{-}\left(r_{1},t-\tau_{1}\right).\hat{\vec{F}}^{+}\left(r_{2},t-\tau_{2}\right)\right\rangle \right].
 \end{eqnarray*}
 
 \end_inset
@@ -6934,7 +7444,7 @@ The generalization of
  to multiple photodetectors will be of the form 
 \begin_inset Formula 
 \begin{eqnarray*}
-\Gamma^{\left(N,N\right)} & = & \left\langle F_{i_{1}}^{-}\left(r_{1},t_{1}\right)...F_{i_{1N}}^{-}\left(r_{N},t_{N}\right)F_{i_{N}}^{+}\left(r_{N},t_{N}\right)...F_{i_{1}}^{+}\left(r_{1},t_{1}\right)\right\rangle \\
+\Gamma^{\left(N,N\right)} & = & \left\langle F_{i_{1}}^{-}\left(r_{1},t_{1}\right)...F_{i_{1N}}^{-}\left(r_{N},t_{N}\right)F_{i_{N}}^{+}\left(r_{N},t_{N}\right)...F_{i_{1}}^{+}\left(r_{1},t_{1}\right)\right\rangle 
 \end{eqnarray*}
 
 \end_inset
@@ -7506,7 +8016,7 @@ d & = & i\sqrt{1-T}a+\sqrt{T}b
 
 \end_inset
 
-
+*
 \begin_inset Note Note
 status collapsed
 
@@ -7562,7 +8072,7 @@ reference "eq:scatteringMatrixBS"
 large
 \emph default
  amplitude coherent state 
-\begin_inset Formula $\ket{\beta_{l}}$
+\begin_inset Formula $\left|\beta_{l}\right\rangle $
 \end_inset
 
  with phase 
@@ -7574,7 +8084,7 @@ large
  1 are given by 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left(\Delta n_{c}\right)^{2} & = & \left(1-T\right)\left|\beta_{l}\right|^{2}\left(\left(1-T\right)+4T\left(\Delta X_{\phi+\pi/2}\right)^{2}\right)\\
+\left(\Delta n_{c}\right)^{2} & = & \left(1-T\right)\left|\beta_{l}\right|^{2}\left(\left(1-T\right)+4T\left(\Delta X_{\phi+\pi/2}\right)^{2}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -7668,7 +8178,7 @@ Where we have used the fact that
 \begin{eqnarray*}
 \left\langle n_{c}^{2}\right\rangle  & \approx & \left(1-T\right)^{2}\left|\beta_{l}\right|^{4}+\left(1-T\right)^{2}\left|\beta_{l}\right|^{2}+i\sqrt{T\left(1-T\right)}\left\langle \left[\left(1-T\right)\left|\beta_{l}\right|^{3}\left(a^{\dagger}e^{i\phi_{l}}-ae^{-i\phi_{l}}\right)\right]\right\rangle +\\
  &  & i\sqrt{T\left(1-T\right)}\left\langle \left[\left(1-T\right)\left|\beta_{l}\right|^{3}\left(a^{\dagger}e^{i\phi_{l}}-ae^{-i\phi_{l}}\right)\right]\right\rangle -T\left(1-T\right)\left|\beta_{l}\right|^{2}\left\langle \left(a^{\dagger2}e^{2i\phi_{l}}-\left\langle n_{a}\right\rangle -aa^{\dagger}+a^{2}e^{-2i\phi_{l}}\right)\right\rangle \\
-\left\langle n_{c}^{2}\right\rangle  & = & \left(1-T\right)^{2}\left|\beta_{l}\right|^{4}+\left(1-T\right)^{2}\left|\beta_{l}\right|^{2}+4\sqrt{T\left(1-T\right)}\left(1-T\right)\left|\beta_{l}\right|^{3}\left\langle X_{\phi+\pi/2}\right\rangle +4T\left(1-T\right)\left|\beta_{l}\right|^{2}\left\langle X_{\phi+\pi/2}^{2}\right\rangle ,\\
+\left\langle n_{c}^{2}\right\rangle  & = & \left(1-T\right)^{2}\left|\beta_{l}\right|^{4}+\left(1-T\right)^{2}\left|\beta_{l}\right|^{2}+4\sqrt{T\left(1-T\right)}\left(1-T\right)\left|\beta_{l}\right|^{3}\left\langle X_{\phi+\pi/2}\right\rangle +4T\left(1-T\right)\left|\beta_{l}\right|^{2}\left\langle X_{\phi+\pi/2}^{2}\right\rangle ,
 \end{eqnarray*}
 
 \end_inset
@@ -7690,7 +8200,7 @@ where again we use
 \begin_inset Formula 
 \begin{eqnarray*}
 \left\langle n_{c}\right\rangle ^{2} & = & \left(1-T\right)^{2}\left|\beta_{l}\right|^{4}+4\sqrt{T\left(1-T\right)}\left(1-T\right)\left\langle X\left(\phi_{l}+\pi/2\right)\right\rangle \left|\beta_{l}\right|^{3}+4T\left(1-T\right)\left\langle X\left(\phi_{l}+\pi/2\right)\right\rangle ^{2}\left|\beta_{l}\right|^{2}\\
-\implies\left(\Delta n_{c}\right)^{2} & =\left(1-T\right)^{2}\left|\beta_{l}\right|^{2} & +4T\left(1-T\right)\left|\beta_{l}\right|^{2}\left(\Delta X_{\phi+\pi/2}\right)^{2}
+\implies\left(\Delta n_{c}\right)^{2} & = & \left(1-T\right)^{2}\left|\beta_{l}\right|^{2}+4T\left(1-T\right)\left|\beta_{l}\right|^{2}\left(\Delta X_{\phi+\pi/2}\right)^{2}
 \end{eqnarray*}
 
 \end_inset
@@ -7700,8 +8210,24 @@ where again we use
 
 \end_inset
 
-, where the first term is the reflected LO noise (LO shot noise) and the
- second term is less than 
+, where 
+\begin_inset Formula 
+\begin{equation}
+X_{\phi+\pi/2}\equiv\frac{ae^{-i\phi}+a^{\dagger}e^{i\phi}}{2},
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\Delta X_{\phi+\pi/2}$
+\end_inset
+
+ is the variance of the operator 
+\begin_inset Formula $X_{\phi+\pi/2}$
+\end_inset
+
+, the first term is the reflected LO noise (LO shot noise).
+ Note that the second term is less than 
 \begin_inset Formula $1/4$
 \end_inset
 
@@ -7746,6 +8272,12 @@ key "scullyQO"
 \end_layout
 
 \begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Fabio-balanced-homodyne"
+
+\end_inset
+
 Fabio treatment: Balanced Homodyne detection as applied to measuring quadratures
 \end_layout
 
@@ -7848,7 +8380,7 @@ where
 \begin_inset Formula $\delta$
 \end_inset
 
- the phase shift between the transmitted any reflected waves*
+ the phase shift between the transmitted and reflected waves*
 \begin_inset Note Note
 status collapsed
 
@@ -7941,9 +8473,9 @@ We then use the fact that the local oscillator mode
 
  to obtain that 
 \begin_inset Formula 
-\begin{eqnarray*}
-\left\langle I\right\rangle  & \approx & \left(1-2\eta\right)\left|\alpha_{L}\right|^{2}+\sqrt{2\eta\left(1-\eta\right)}\left|\alpha_{L}\right|\left\langle X_{\eta-\delta}\right\rangle ,\\
-\end{eqnarray*}
+\begin{equation}
+\boxed{\left\langle I\right\rangle \approx\left(1-2\eta\right)\left|\alpha_{L}\right|^{2}+\sqrt{2\eta\left(1-\eta\right)}\left|\alpha_{L}\right|\left\langle X_{\eta-\delta}\right\rangle },
+\end{equation}
 
 \end_inset
 
@@ -7955,8 +8487,12 @@ where
 \begin_inset Formula $X_{\xi-\delta}$
 \end_inset
 
- is the quadrature operator: 
-\begin_inset Formula $X_{\lambda}=\left(e^{-i\lambda}a_{S}+e^{i\lambda}a_{S}^{\dagger}\right)/\sqrt{2}$
+ is the general quadrature operator: 
+\begin_inset Formula 
+\begin{equation}
+X_{\lambda}\equiv\frac{e^{-i\lambda}a_{S}+e^{i\lambda}a_{S}^{\dagger}}{\sqrt{2}}
+\end{equation}
+
 \end_inset
 
 *
@@ -8011,7 +8547,7 @@ because we expect that
  We can also measure the quadrature probability distribution 
 \begin_inset Formula 
 \begin{eqnarray*}
-p\left(x,\lambda\right) & = & \braket{x_{\lambda}|\rho|x_{\lambda}}.\\
+p\left(x,\lambda\right) & = & \braket{x_{\lambda}|\rho}{x_{\lambda}}
 \end{eqnarray*}
 
 \end_inset
@@ -8071,8 +8607,8 @@ They are defined to be the right eigenstates of the destruction operator:
  
 \begin_inset Formula 
 \begin{eqnarray*}
-\hat{a}\ket{v} & = & v\ket{v}\\
-\implies\bra{v}\hat{a}^{\dagger} & = & v^{*}\bra{v}
+\hat{a}\ket v & = & v\ket v\\
+\implies\bra v\hat{a}^{\dagger} & = & v^{*}\bra v
 \end{eqnarray*}
 
 \end_inset
@@ -8109,7 +8645,7 @@ The second equality follows from
 Moreover,
 \begin_inset Formula 
 \begin{eqnarray*}
-\ket{v} & = & e^{-\left|v\right|^{2}/2}\sum_{n=0}^{\infty}\frac{v^{n}}{\sqrt{n!}}\ket{n}\\
+\ket v & = & e^{-\left|v\right|^{2}/2}\sum_{n=0}^{\infty}\frac{v^{n}}{\sqrt{n!}}\ket n
 \end{eqnarray*}
 
 \end_inset
@@ -8132,19 +8668,31 @@ Displacement Operator
 We call the 
 \emph on
 displacement operator
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph off
+displacement operator
+\end_layout
+
+\end_inset
+
+
 \emph default
 , the operator that creates the coherent state 
-\begin_inset Formula $\ket{v}$
+\begin_inset Formula $\ket v$
 \end_inset
 
  from the vacuum state 
-\begin_inset Formula $\ket{0}=\ket{vac}$
+\begin_inset Formula $\ket0=\ket{vac}$
 \end_inset
 
 : 
 \begin_inset Formula 
 \begin{eqnarray*}
-\hat{D}\left(v\right) & = & \exp\left(v\hat{a}^{\dagger}-v^{*}\hat{a}\right)\\
+\hat{D}\left(v\right) & = & \exp\left(v\hat{a}^{\dagger}-v^{*}\hat{a}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -8163,13 +8711,16 @@ key "mandelQO"
 The Displacement Operator for Continuum Fields
 \end_layout
 
-\begin_layout Standard
-Consider the continuum description of the displacement operator - here we
- work with the commutation relation 
+\begin_layout Remark
+We work with the commutation relation 
 \begin_inset Formula $\left[a_{\omega},a_{\omega^{'}}^{\dagger}\right]=\delta\left(\omega-\omega^{'}\right)$
 \end_inset
 
-:
+.
+\end_layout
+
+\begin_layout Standard
+Consider the continuum description of the displacement operator:
 \begin_inset Formula 
 \begin{eqnarray*}
 \ket{\left\{ \alpha\left(\omega\right)\right\} } & = & \exp\left(\intop d\omega\left[\alpha\left(\omega\right)\hat{a}^{\dagger}\left(\omega\right)-\alpha^{*}\left(\omega\right)\hat{a}\left(\omega\right)\right]\right)\ket{vac}\\
@@ -8181,7 +8732,7 @@ Consider the continuum description of the displacement operator - here we
 This can also be written in the equivalent form 
 \begin_inset Formula 
 \begin{eqnarray*}
-\ket{\left\{ \alpha\left(\omega\right)\right\} } & = & \exp\left(-\frac{1}{2}\int d\omega\left|\alpha\left(\omega\right)\right|^{2}+\int d\omega\alpha\left(\omega\right)\hat{a}^{\dagger}\left(\omega\right)\right)\ket{vac}\\
+\ket{\left\{ \alpha\left(\omega\right)\right\} } & = & \exp\left(-\frac{1}{2}\int d\omega\left|\alpha\left(\omega\right)\right|^{2}+\int d\omega\alpha\left(\omega\right)\hat{a}^{\dagger}\left(\omega\right)\right)\ket{vac}
 \end{eqnarray*}
 
 \end_inset
@@ -8253,7 +8804,7 @@ reference "eq:baker formula"
 We can also work in the time domain with the transformation 
 \begin_inset Formula 
 \begin{eqnarray*}
-\alpha\left(t\right) & = & \left(2\pi\right)^{-1/2}\int d\omega\alpha\left(\omega\right)\exp\left(-i\omega t\right)\\
+\alpha\left(t\right) & = & \left(2\pi\right)^{-1/2}\int d\omega\alpha\left(\omega\right)\exp\left(-i\omega t\right)
 \end{eqnarray*}
 
 \end_inset
@@ -8261,8 +8812,7 @@ We can also work in the time domain with the transformation
 and with this definition
 \begin_inset Formula 
 \begin{eqnarray*}
-\ket{\left\{ \alpha\left(\omega\right)\right\} } & = & \ket{\left\{ \alpha\left(t\right)\right\} }\\
- & = & \exp\left(\int dt\left[\alpha\left(t\right)\hat{a}^{\dagger}\left(t\right)-\alpha^{*}\left(t\right)\hat{a}\left(t\right)\right]\right)\ket{vac}.
+\ket{\left\{ \alpha\left(t\right)\right\} } & = & \exp\left(\int dt\left[\alpha\left(t\right)\hat{a}^{\dagger}\left(t\right)-\alpha^{*}\left(t\right)\hat{a}\left(t\right)\right]\right)\ket{vac}.
 \end{eqnarray*}
 
 \end_inset
@@ -8270,14 +8820,14 @@ and with this definition
 We can also calculate that 
 \begin_inset Formula 
 \begin{eqnarray*}
-\hat{D}^{\dagger}\left(\alpha\left(\omega\right)\right)\hat{a}_{\Omega}\hat{D}\left(\alpha\left(\omega\right)\right) & = & \hat{a}_{\Omega}+\alpha\left(\Omega\right).\\
+\hat{D}^{\dagger}\left(\alpha\left(\omega\right)\right)\hat{a}_{\Omega}\hat{D}\left(\alpha\left(\omega\right)\right) & = & \hat{a}_{\Omega}+\alpha\left(\Omega\right).
 \end{eqnarray*}
 
 \end_inset
 
 *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -8387,15 +8937,14 @@ We now generalize some of the above results with a more general commutation
 
 \begin_inset Formula 
 \begin{eqnarray}
-\hat{D}_{c_{1}c_{2}}^{\dagger}\left(\alpha\left(\omega\right)\right)\hat{a}_{\Omega}\hat{D}_{c_{1}c_{2}}\left(\alpha\left(\omega\right)\right) & = & \hat{a}_{\Omega}+c_{1}c_{2}\alpha\left(\Omega\right).\label{eq:general displacement transformation}\\
-\nonumber 
+\hat{D}_{c_{1}c_{2}}^{\dagger}\left(\alpha\left(\omega\right)\right)\hat{a}_{\Omega}\hat{D}_{c_{1}c_{2}}\left(\alpha\left(\omega\right)\right) & = & \hat{a}_{\Omega}+c_{1}c_{2}\alpha\left(\Omega\right).\label{eq:general displacement transformation}
 \end{eqnarray}
 
 \end_inset
 
 *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -8410,12 +8959,16 @@ status collapsed
 \uwave off
 \noun off
 \color none
-where in the first line we used the operato expansion theorem (Eq.
+where in the first line we used the operator expansion theorem (Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:operatorExpansionTheorem"
 
+\end_inset
+
+: 
+\begin_inset Formula $\exp\left(\hat{A}\right)\hat{B}\exp\left(-\hat{A}\right)=\hat{B}+\left[\hat{A},\hat{B}\right]+\frac{1}{2!}\left[\hat{A},\left[\hat{A},\hat{B}\right]\right]+\frac{1}{3!}\left[\hat{A},\left[\hat{A},\left[\hat{A},\hat{B}\right]\right]\right]+...$
 \end_inset
 
 ) with 
@@ -8446,6 +8999,16 @@ name "sub:The-displacement-transformation"
 \end_inset
 
 The displacement transformation
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+displacement transformation
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8473,7 +9036,7 @@ status collapsed
 The displacement operator is a unitary transformation so 
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{d}{dt}\left(D^{\dagger}\rho D\right) & = & -\frac{i}{\hbar}\left[U^{\dagger}HU,U^{\dagger}\rho U\right],\\
+\frac{d}{dt}\left(D^{\dagger}\rho D\right) & = & -\frac{i}{\hbar}\left[D^{\dagger}HD,D^{\dagger}\rho D\right],\\
 \end{eqnarray*}
 
 \end_inset
@@ -8494,8 +9057,23 @@ reference "eq:unitary transformation of a commutator"
 .
 \end_layout
 
+\begin_layout Subsubsection
+Examples
+\end_layout
+
+\begin_layout Enumerate
+Single mode laser: see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Simple-analysis-of single mode laser"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-q-Representation
+q-Representation (q wavefunction of a coherent state)
 \end_layout
 
 \begin_layout Standard
@@ -8504,7 +9082,7 @@ Let's find the coordinate representation
 \end_inset
 
  of a coherent state 
-\begin_inset Formula $\ket{v}$
+\begin_inset Formula $\ket v$
 \end_inset
 
 , where (section 
@@ -8520,7 +9098,7 @@ Let's find the coordinate representation
 
 \end_inset
 
-
+TODO: COMPLETE THE DERIVATION (RESULT IS A GAUSSIAN) 
 \begin_inset Note Note
 status collapsed
 
@@ -8528,7 +9106,7 @@ status collapsed
 We know that 
 \begin_inset Formula 
 \begin{eqnarray*}
-\braket{q|\hat{a}|v} & = & v\braket{q|v}=v\psi_{v}\left(q\right),\\
+\braket{q|\hat{a}}v & = & v\left\langle q|v\right\rangle =v\psi_{v}\left(q\right),
 \end{eqnarray*}
 
 \end_inset
@@ -8549,14 +9127,18 @@ but we know that from the Harmonic oscillator relations (section
 and so 
 \begin_inset Formula 
 \begin{eqnarray*}
-\braket{q|\sqrt{\frac{1}{2\hbar\omega}}\left[\omega\hat{q}+i\hat{p}\right]|v} & = & \sqrt{\frac{1}{2\hbar\omega}}\left[\omega q+\hbar\partial_{q}\right]\psi_{v}\left(q\right)\\
+\braket{q|\underbrace{\sqrt{\frac{1}{2\hbar\omega}}\left[\omega\hat{q}+i\hat{p}\right]}_{\hat{a}}}v & = & \sqrt{\frac{1}{2\hbar\omega}}\left[\omega q+\hbar\partial_{q}\right]\psi_{v}\left(q\right)\\
  & = & v\psi_{v}\left(q\right)
 \end{eqnarray*}
 
 \end_inset
 
-with a general solution that is a Gaussian.
+with a general solution that is a Gaussian because of the differential equation
  
+\begin_inset Formula $\psi_{v}\left(q\right)$
+\end_inset
+
+ satisfied.
 \end_layout
 
 \end_inset
@@ -8572,8 +9154,7 @@ Time evolution and expectation values of elementary operators
 The time evolution of a coherent state is given by 
 \begin_inset Formula 
 \begin{eqnarray}
-\ket{v\left(t\right)} & = & e^{-i\omega t}\ket{ve^{-i\omega t}}.\label{eq:time evo}\\
-\nonumber 
+\ket{v\left(t\right)} & = & e^{-i\omega t}\ket{ve^{-i\omega t}}.\label{eq:time evo}
 \end{eqnarray}
 
 \end_inset
@@ -8598,7 +9179,11 @@ status collapsed
 
 \end_inset
 
- Note that this is another coherent state.
+Note that this is a coherent state with complex eigenvalue 
+\begin_inset Formula $ve^{-i\omega t}$
+\end_inset
+
+.
  Using the above relation we also obtain that 
 \begin_inset Formula 
 \begin{eqnarray}
@@ -8763,7 +9348,7 @@ The coherent states are eigenstates of a non-Hermitian operator, so they
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left|\braket{v_{1}|v_{2}}\right|^{2}=e^{-\left|v_{1}-v_{2}\right|^{2}}\neq\delta_{v_{1},v_{2}}.$
+\begin_inset Formula $\left|\braket{v_{1}}{v_{2}}\right|^{2}=e^{-\left|v_{1}-v_{2}\right|^{2}}\neq\delta_{v_{1},v_{2}}.$
 \end_inset
 
 
@@ -8812,7 +9397,7 @@ Completeness - relation
 : 
 \begin_inset Formula 
 \begin{eqnarray*}
-1 & = & \frac{1}{\pi}\intop\ket{v}\bra{v}d^{2}v,\\
+1 & = & \frac{1}{\pi}\intop\ket v\bra vd^{2}v,\\
 \end{eqnarray*}
 
 \end_inset
@@ -8879,8 +9464,8 @@ because
 It can be easily shown that 
 \begin_inset Formula 
 \begin{eqnarray*}
-0 & = & \intop\ket{v}\left[\frac{1}{\pi}e^{-\left|v-v^{'}\right|/2}e^{\left(v^{*}v^{'}-vv^{'*}\right)/2}-\delta^{2}\left(v-v^{'}\right)\right]d^{2}v\quad\mbox{for any \ensuremath{v^{'}}}\\
-0 & = & \intop\ket{v}f\left(\left|v\right|\right)v^{n}d^{2}v\quad\mbox{for n}=0,1,2,...\mbox{ and for any \ensuremath{f}for which the integral exists}
+0 & = & \intop\ket v\left[\frac{1}{\pi}e^{-\left|v-v^{'}\right|/2}e^{\left(v^{*}v^{'}-vv^{'*}\right)/2}-\delta^{2}\left(v-v^{'}\right)\right]d^{2}v\quad\mbox{for any \ensuremath{v^{'}}}\\
+0 & = & \intop\ket vf\left(\left|v\right|\right)v^{n}d^{2}v\quad\mbox{for n}=0,1,2,...\mbox{ and for any \ensuremath{f}for which the integral exists}
 \end{eqnarray*}
 
 \end_inset
@@ -8929,7 +9514,7 @@ if it is expressible as a sum of products of creation and annihilation operators
  be such an operator then we can write 
 \begin_inset Formula 
 \begin{eqnarray*}
-\braket{v^{'}|f\left(a,a^{\dagger}\right)|v^{''}} & = & f\left(v^{''},v^{'*}\right)e^{-\left|v^{'}-v^{''}\right|^{2}/2}e^{\left(v^{'*}v^{''}-v^{'}v^{''*}\right)/2}.\\
+\braket{v^{'}|f\left(a,a^{\dagger}\right)}{v^{''}} & = & f\left(v^{''},v^{'*}\right)e^{-\left|v^{'}-v^{''}\right|^{2}/2}e^{\left(v^{'*}v^{''}-v^{'}v^{''*}\right)/2}.
 \end{eqnarray*}
 
 \end_inset
@@ -8985,7 +9570,7 @@ Unique representation and usefulness of over-completeness
 
 \begin_layout Standard
 An expansion of the form 
-\begin_inset Formula $\ket{\psi}=\intop\ket{v}\braket{v|\psi}d^{2}v/\pi$
+\begin_inset Formula $\ket{\psi}=\intop\ket v\braket{v|\psi}d^{2}v/\pi$
 \end_inset
 
  is not unique because of the relations in section 
@@ -8994,13 +9579,13 @@ An expansion of the form
 
  point 3.
  But 
-\begin_inset Formula $\braket{v|\psi}$
+\begin_inset Formula $\braket v{\psi}$
 \end_inset
 
  is unique: 
 \begin_inset Formula 
 \begin{eqnarray*}
-\braket{v|\psi} & = & e^{-\left|v\right|^{2}/2}\sum_{n=0}^{\infty}\frac{v^{*n}}{\sqrt{n!}}\left\langle n|\psi\right\rangle \\
+\braket v{\psi} & = & e^{-\left|v\right|^{2}/2}\sum_{n=0}^{\infty}\frac{v^{*n}}{\sqrt{n!}}\left\langle n|\psi\right\rangle \\
  & \equiv & e^{-\left|v\right|^{2}/2}F_{\psi}\left(v^{*}\right).
 \end{eqnarray*}
 
@@ -9128,7 +9713,7 @@ A representation for positive definite Hermitian and traceable operators
 : We have that
 \begin_inset Formula 
 \begin{eqnarray*}
-\braket{v|\hat{A}|v^{'}} & = & e^{-\left|v\right|^{2}/2}e^{-\left|v^{'}\right|^{2}/2}\sum_{n=0}\sum_{m=0}\frac{v^{*n}}{\sqrt{n!}}\frac{v^{'m}}{\sqrt{m!}}\braket{n|\hat{A}|m}\\
+\braket{v|\hat{A}}{v^{'}} & = & e^{-\left|v\right|^{2}/2}e^{-\left|v^{'}\right|^{2}/2}\sum_{n=0}\sum_{m=0}\frac{v^{*n}}{\sqrt{n!}}\frac{v^{'m}}{\sqrt{m!}}\braket{n|\hat{A}}m\\
  & \equiv & \exp\left(-\left(\left|v\right|^{2}+\left|v^{'}\right|^{2}\right)/2\right)F_{A}\left(v^{*},v^{'}\right).
 \end{eqnarray*}
 
@@ -9184,7 +9769,7 @@ Indeed, we first show that
 
 .
  (In fact, 
-\begin_inset Formula $\braket{v|\hat{A}|v}$
+\begin_inset Formula $\braket{v|\hat{A}}v$
 \end_inset
 
  for 
@@ -9240,14 +9825,24 @@ name "sub:p representation"
 \end_inset
 
 Diagonal coherent state representation of the density operator (Glauber-Sudarsha
-n P-representation)
+n P-representation
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Glauber-Sudarshan P-representation
+\end_layout
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Standard
 The density operator has a representation:
 \begin_inset Formula 
 \begin{eqnarray*}
-\rho & = & \intop\phi\left(v\right)\ket{v}\bra{v}d^{2}v\\
+\rho & = & \intop\phi\left(v\right)\ket v\bra vd^{2}v
 \end{eqnarray*}
 
 \end_inset
@@ -9405,13 +10000,13 @@ Obtaining
 One possible integral representation is:
 \begin_inset Formula 
 \begin{eqnarray*}
-\phi\left(v\right)e^{-\left|v\right|^{2}} & = & \frac{1}{\pi^{2}}\intop e^{\left|u\right|^{2}}\braket{-u|\rho|u}e^{-uv^{*}+u*v}d^{2}u,\\
+\phi\left(v\right)e^{-\left|v\right|^{2}} & = & \frac{1}{\pi^{2}}\intop e^{\left|u\right|^{2}}\braket{-u|\rho}ue^{-uv^{*}+u*v}d^{2}u,
 \end{eqnarray*}
 
 \end_inset
 
 where 
-\begin_inset Formula $\ket{u}$
+\begin_inset Formula $\ket u$
 \end_inset
 
  is a coherent state and 
@@ -9470,6 +10065,16 @@ name "sub:opticaEquivalence"
 
 \end_inset
 
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Optical equivalence theorem
+\end_layout
+
+\end_inset
+
 Optical equivalence theorem
 \end_layout
 
@@ -9477,9 +10082,21 @@ Optical equivalence theorem
 \begin_inset Formula 
 \begin{eqnarray*}
 \left\langle g^{\left(N\right)}\left(a,a^{\dagger}\right)\right\rangle  & = & \int\phi\left(v\right)g^{\left(N\right)}\left(v,v^{*}\right)d^{2}v.\\
- & \equiv & \left\langle g^{\left(N\right)}\left(v,v^{*}\right)\right\rangle _{\phi}.
+ & \equiv & \left\langle g^{\left(N\right)}\left(v,v^{*}\right)\right\rangle _{\phi},
 \end{eqnarray*}
 
+\end_inset
+
+where 
+\begin_inset Formula $g^{\left(N\right)}\left(a,a^{\dagger}\right)$
+\end_inset
+
+ is a normally ordered function of 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $a^{\dagger}$
 \end_inset
 
 
@@ -9488,7 +10105,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Use 
-\begin_inset Formula $Tr\ket{A}\bra{B}=\braket{A|B}$
+\begin_inset Formula $Tr\ket A\bra B=\left\langle A|B\right\rangle $
 \end_inset
 
  (proven in section
@@ -9498,7 +10115,7 @@ Use
 ) to write that 
 \begin_inset Formula 
 \begin{eqnarray*}
-Tr\left(\rho g^{\left(N\right)}\left(a,a^{\dagger}\right)\right) & = & Tr\left(\intop\phi\left(v\right)\sum_{nm}c_{nm}\ket{v}\bra{v}a^{\dagger n}a^{m}d^{2}v\right)\\
+Tr\left(\rho g^{\left(N\right)}\left(a,a^{\dagger}\right)\right) & = & Tr\left(\intop\phi\left(v\right)\sum_{nm}c_{nm}\ket v\bra va^{\dagger n}a^{m}d^{2}v\right)\\
  & = & \intop\phi\left(v\right)\sum_{nm}c_{nm}\braket{v|a^{\dagger n}a^{m}|v}d^{2}v
 \end{eqnarray*}
 
@@ -9507,7 +10124,7 @@ Tr\left(\rho g^{\left(N\right)}\left(a,a^{\dagger}\right)\right) & = & Tr\left(\
 and remember 
 \begin_inset Formula 
 \begin{eqnarray*}
-\rho & = & \intop\phi\left(v\right)\ket{v}\bra{v}d^{2}v\\
+\rho & = & \intop\phi\left(v\right)\ket v\bra vd^{2}v\\
 \end{eqnarray*}
 
 \end_inset
@@ -9517,10 +10134,19 @@ and remember
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Subsection
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Anti-normal order
+\end_layout
+
+\end_inset
+
 Anti-normal order
 \end_layout
 
@@ -9537,7 +10163,7 @@ We have that for an anti-normally ordered function that
 where 
 \begin_inset Formula 
 \begin{eqnarray*}
-Q\left(\left\{ v\right\} \right) & = & \braket{\left\{ v\right\} |\rho|\left\{ v\right\} }\prod_{\left[k,s\right]}\left[\frac{1}{\pi}\right]\\
+Q\left(\left\{ v\right\} \right) & = & \braket{\left\{ v\right\} |\rho}{\left\{ v\right\} }\prod_{\left[k,s\right]}\left[\frac{1}{\pi}\right]
 \end{eqnarray*}
 
 \end_inset
@@ -9595,17 +10221,17 @@ The wigner distribution is used to characterize the quantum state
  in phase space and is defined to be: 
 \begin_inset Formula 
 \begin{eqnarray*}
-W\left(q,p\right) & = & \frac{1}{2\pi}\intop_{-\infty}^{\infty}\braket{q+\frac{1}{2}\hbar x|\rho|q-\frac{1}{2}\hbar x}e^{ixp}dx,\\
+W\left(q,p\right) & = & \frac{1}{2\pi}\intop_{-\infty}^{\infty}\braket{q+\frac{1}{2}\hbar x|\rho}{q-\frac{1}{2}\hbar x}e^{ixp}dx,
 \end{eqnarray*}
 
 \end_inset
 
 where 
-\begin_inset Formula $\ket{q}$
+\begin_inset Formula $\ket q$
 \end_inset
 
  and 
-\begin_inset Formula $\ket{p}$
+\begin_inset Formula $\ket p$
 \end_inset
 
  denote position and momentum, respectively.
@@ -9622,7 +10248,7 @@ where
 ) 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle F^{\left(W\right)}\left(\hat{q},\hat{p}\right)\right\rangle  & = & \intop F^{\left(W\right)}\left(q,p\right)W\left(q,p\right)dqdp\\
+\left\langle F^{\left(W\right)}\left(\hat{q},\hat{p}\right)\right\rangle  & = & \intop F^{\left(W\right)}\left(q,p\right)W\left(q,p\right)dqdp
 \end{eqnarray*}
 
 \end_inset
@@ -9681,7 +10307,7 @@ key "mandelQO"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-W\left(x,p\right) & = & Tr\left[e^{ix\hat{X}+ip\hat{P}}\hat{\rho}\right]\\
+W\left(x,p\right) & = & Tr\left[e^{ix\hat{X}+ip\hat{P}}\hat{\rho}\right]
 \end{eqnarray*}
 
 \end_inset
@@ -9720,7 +10346,7 @@ P^{'} & = & i\left(a^{\dagger}-a\right)
 and so 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left[Q^{'},P^{'}\right] & = & 2i.\\
+\left[Q^{'},P^{'}\right] & = & 2i.
 \end{eqnarray*}
 
 \end_inset
@@ -9746,7 +10372,7 @@ status collapsed
 Hence, they behave like dimensionless canonical conjugates and so 
 \begin_inset Formula 
 \begin{eqnarray*}
-\sqrt{\left\langle \Delta Q^{'2}\right\rangle \left\langle \Delta P^{'2}\right\rangle } & \geq & 1.\\
+\sqrt{\left\langle \Delta Q^{'2}\right\rangle \left\langle \Delta P^{'2}\right\rangle } & \geq & 1.
 \end{eqnarray*}
 
 \end_inset
@@ -9772,8 +10398,8 @@ Hence, they behave like dimensionless canonical conjugates and so
  
 \begin_inset Formula 
 \begin{eqnarray*}
-\braket{v|\Delta Q^{'2}|v} & = & 1\\
-\braket{v|\Delta P^{'2}|v} & = & 1.
+\braket{v|\Delta Q^{'2}}v & = & 1\\
+\braket{v|\Delta P^{'2}}v & = & 1.
 \end{eqnarray*}
 
 \end_inset
@@ -9823,7 +10449,7 @@ Schematic diagram of the uncertainty areas in the generalized coordinate
 \emph on
 General quadratures 
 \emph default
-can be accomodated with the definition 
+can be accommodated with the definition 
 \begin_inset Formula 
 \begin{eqnarray}
 Q\left(\beta\right) & = & a^{\dagger}e^{i\beta}+ae^{-i\beta}\label{eq:defQ}\\
@@ -9904,7 +10530,7 @@ The electric field for a single mode (single frequency), linearly polarized
  field is 
 \begin_inset Formula 
 \begin{eqnarray*}
-E & = & l\left(\omega\right)\vec{\epsilon}\left[ae^{i\left(\vec{k}.\vec{r}-\omega t\right)}+c.c.\right],\\
+E & = & l\left(\omega\right)\vec{\epsilon}\left[ae^{i\left(\vec{k}.\vec{r}-\omega t\right)}+c.c.\right],
 \end{eqnarray*}
 
 \end_inset
@@ -9928,7 +10554,7 @@ key "mandelQO"
 ), we can then write that 
 \begin_inset Formula 
 \begin{eqnarray*}
-E & = & l\left(\omega\right)\vec{\epsilon}\left(Q\cos\left(\vec{k}.\vec{r}-\omega t+\beta\right)-P\sin\left(\vec{k}.\vec{r}-\omega t+\beta\right)\right).\\
+E & = & l\left(\omega\right)\vec{\epsilon}\left(Q\cos\left(\vec{k}.\vec{r}-\omega t+\beta\right)-P\sin\left(\vec{k}.\vec{r}-\omega t+\beta\right)\right).
 \end{eqnarray*}
 
 \end_inset
@@ -10183,7 +10809,7 @@ squeeze parameter
  Turns out that 
 \begin_inset Formula 
 \begin{eqnarray*}
-\ket{z,v} & = & S\left(z\right)\ket{v}\\
+\ket{z,v} & = & S\left(z\right)\ket v\\
 \implies A\ket{z,v} & = & v\ket{z,v}.
 \end{eqnarray*}
 
@@ -10369,194 +10995,6 @@ key "mandelQO"
 \end_inset
 
  section 21.4)
-\end_layout
-
-\begin_layout Section
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Harmonic-Oscillator"
-
-\end_inset
-
-QHO/ladder operators
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-\hat{q} & = & \sqrt{\frac{\hbar}{2\omega}}\left[\hat{a}+\hat{a}^{\dagger}\right]\nonumber \\
-\hat{p} & = & i\sqrt{\frac{\hbar\omega}{2}}\left[\hat{a}^{\dagger}-\hat{a}\right].\label{eq:harmEq}
-\end{eqnarray}
-
-\end_inset
-
-We can then think of 
-\begin_inset Formula $\hat{q}$
-\end_inset
-
- and 
-\begin_inset Formula $\hat{p}$
-\end_inset
-
- as the real and imaginary parts, respectively, of the complex amplitude
- 
-\begin_inset Formula $\hat{a}$
-\end_inset
-
-.
- We can then write
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-\hat{a} & = & \sqrt{\frac{1}{2\hbar\omega}}\left[\omega\hat{q}+i\hat{p}\right]\\
-\hat{a}^{\dagger} & = & \sqrt{\frac{1}{2\hbar\omega}}\left[\omega\hat{q}-i\hat{p}\right].
-\end{eqnarray*}
-
-\end_inset
-
-The following relations are also useful
-\begin_inset Formula 
-\begin{eqnarray}
-\left[a,a^{\dagger}\right] & = & I\label{eq:aadaggerCommutationrelation}\\
-\left[N=a^{\dagger}a,a\right] & = & -a\label{eq:Na_commutation_relation}\\
-\left[N,a^{\dagger}\right] & = & a^{\dagger}\nonumber \\
-\left[a,f\left(a,a^{\dagger}\right)\right] & = & \partial_{a^{\dagger}}f\nonumber \\
-\left[a^{\dagger},f\left(a,a^{\dagger}\right)\right] & = & -\partial_{a}f\nonumber \\
-\exp\left(-\alpha N\right)f\left(a,a^{\dagger}\right)\exp\left(\alpha N\right) & = & f\left(ae^{\alpha},a^{\dagger}e^{-\alpha}\right).\label{eq:usefulExpN}
-\end{eqnarray}
-
-\end_inset
-
-If 
-\begin_inset Formula $f$
-\end_inset
-
- is of a complicated form (example not in normal or anti-normal order) then
- write it's taylor series (see example in note) 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Formula $\left[a,f\left(a,a^{\dagger}\right)\right]=\partial_{a^{\dagger}}f$
-\end_inset
-
- (section 
-\begin_inset Formula $\ref{sub:identitiesQO}$
-\end_inset
-
-) and so 
-\begin_inset Formula 
-\begin{eqnarray*}
-a\left(\frac{1}{2}\left(za^{\dagger2}-z^{*}a^{2}\right)\right)^{n} & = & \left(\frac{1}{2}\left(za^{\dagger2}-z^{*}a^{2}\right)\right)^{n}a+nza^{\dagger}\left(\frac{1}{2}\left(za^{\dagger2}-z^{*}a^{2}\right)\right)^{n-1}\\
-\end{eqnarray*}
-
-\end_inset
-
-we got this by using the binomial expansion on 
-\begin_inset Formula $\left(\frac{1}{2}\left(za^{\dagger2}-z^{*}a^{2}\right)\right)^{n}$
-\end_inset
-
- (see section 
-\begin_inset Formula $\ref{sub:QMequs}$
-\end_inset
-
-): 
-\begin_inset Formula 
-\begin{eqnarray*}
-\left(za^{\dagger2}-z^{*}a^{2}\right)^{n} & = & (A+B)^{n}=\sum_{k=0}^{n}S_{k}^{n}(a+b)^{n}=\sum_{k=0}^{n}\sum_{j=0}^{k}S_{k}^{n}C_{j}^{k}A^{k-j}B^{j}\\
- & = & \sum_{k=0}^{n}\sum_{j=0}^{k}S_{k}^{n}C_{j}^{k}z^{k-j}a^{\dagger2\left(k-j\right)}B^{j}\\
-\implies\partial_{a^{\dagger}}\left(za^{\dagger2}-z^{*}a^{2}\right)^{n} & = & \sum_{k=0}^{n}\sum_{j=0}^{k}S_{k}^{n}C_{j}^{k}z^{k-j}2\left(k-j\right)a^{\dagger2\left(k-j\right)-1}B^{j}\\
- & = & za^{\dagger}\sum_{k=0}^{n}\sum_{j=0}^{k}S_{k}^{n}C_{j}^{k}z^{k-j-1}2\left(k-j\right)a^{\dagger2\left(k-j-1\right)}B^{j}\\
- & = & 2za^{\dagger}\sum_{b=-1}^{n-1}\sum_{j=0}^{b+1}\left(b+1\right)S_{b+1}^{n}C_{j}^{b}z^{b-j}a^{\dagger2\left(b-j\right)}B^{j}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula $j$
-\end_inset
-
- only goes to 
-\begin_inset Formula $b$
-\end_inset
-
- because we have that 
-\begin_inset Formula $\left(k-j\right)=\left(b+1-j\right)=0$
-\end_inset
-
- if 
-\begin_inset Formula $j=b+1$
-\end_inset
-
- and if 
-\begin_inset Formula $b=-1$
-\end_inset
-
- then 
-\begin_inset Formula $\left(b+1-j\right)=-j=0$
-\end_inset
-
- so the 
-\begin_inset Formula $-1$
-\end_inset
-
- limit is useless.
- We have that 
-\begin_inset Formula $k-1=b$
-\end_inset
-
- and in our case we have that 
-\begin_inset Formula $\lambda=1$
-\end_inset
-
- so 
-\begin_inset Formula 
-\begin{eqnarray*}
-C_{j}^{k}\times\left(k-j\right) & = & \frac{k!}{\left(k-j-1\right)!j!}=kC_{j}^{b}\\
-S_{k}^{n} & = & \begin{cases}
-\frac{n!}{2^{\frac{n-k}{2}}\left(\frac{n-k}{2}\right)!k!}\\
-0 & n-k\; odd
-\end{cases}\\
-\implies S_{b+1}^{n}\left(b+1\right) & = & \begin{cases}
-\frac{n!}{2^{\frac{n-b-1}{2}}\left(\frac{n-b-1}{2}\right)!b!}\\
-0 & n-b-1\; odd
-\end{cases}\\
- & = & nS_{b}^{n-1}
-\end{eqnarray*}
-
-\end_inset
-
-and so 
-\begin_inset Formula 
-\begin{eqnarray*}
-\partial_{a^{\dagger}}\left(za^{\dagger2}-z^{*}a^{2}\right)^{n} & = & 2nza^{\dagger}\sum_{b=0}^{n-1}\sum_{j=0}^{b}S_{b}^{n-1}C_{j}^{b}z^{b-j}a^{\dagger2\left(b-j\right)}B^{j}\\
- & = & 2nza^{\dagger}\left(za^{\dagger2}-z^{*}a^{2}\right)^{n-1}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Differential form of ladder operators when acting on coherent states
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "mandelQO"
-
-\end_inset
-
- section 12.9.2
 \end_layout
 
 \begin_layout Section
@@ -13259,7 +13697,7 @@ status collapsed
 See section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:2photon-formalism;"
+reference "sub:2photon-formalism"
 
 \end_inset
 
@@ -16285,10 +16723,11 @@ for
 \end_layout
 
 \begin_layout Standard
-For example, the power spectral density of a vacuum state is given by 
+For example, the double-sided power spectral density of a vacuum state is
+ given by 
 \begin_inset Formula 
 \begin{eqnarray}
-S_{Y}^{vac}\left(\Omega\right) & = & \frac{\left|H_{c}\left(\Omega\right)\right|^{2}+\left|H_{s}\left(\Omega\right)\right|^{2}}{2}\label{eq:vacuum spectral density}
+S_{Y}^{vac}\left(\Omega\right) & = & \frac{\left|H_{c}\left(\Omega\right)\right|^{2}+\left|H_{s}\left(\Omega\right)\right|^{2}}{2}=\frac{\vec{H}\vec{H}^{\dagger}}{2}\label{eq:vacuum-spectral-density}
 \end{eqnarray}
 
 \end_inset
@@ -17066,6 +17505,20 @@ Work around the average of
  
 \end_layout
 
+\begin_layout Assumption
+Assume that the radiation pressure force is tuned in such a way that it
+ exactly cancels 
+\begin_inset Formula $G$
+\end_inset
+
+; i.e.
+ we are working in an inertial frame and so 
+\begin_inset Formula $\dot{\hat{x}}=0$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 To solve this problem, work in Fourier space:
 \begin_inset Formula 
@@ -17299,7 +17752,7 @@ reference "eq:expectations quadratures 1mode laser"
 which arises from the phase-quadrature fluctuation of the input optical
  field and has a flat spectrum 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 with the definition 
@@ -17321,7 +17774,7 @@ S_{sh}\left(\Omega\right) & = & 1
 
 *
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Note that here we used the single-definition definition 
@@ -17364,7 +17817,7 @@ To show this result we use Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:vacuum spectral density"
+reference "eq:vacuum-spectral-density"
 
 \end_inset
 
@@ -17719,10 +18172,6 @@ reference "eq:scattering equation of tuned fabry perot - qNoise"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 The input and output variables (
 \begin_inset Formula $\vec{\alpha}$
 \end_inset
@@ -18048,7 +18497,15 @@ reference "eq:outputQuadratures_freeSpaceNoise"
 \begin_inset Formula $\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}$
 \end_inset
 
-.
+ (we should have 
+\begin_inset Formula $\omega_{c}$
+\end_inset
+
+ instead of 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ but the cavity is tuned so we do not have to worry about it).
  However, now, 
 \begin_inset Formula $\vec{a}$
 \end_inset
@@ -18220,65 +18677,6 @@ Then use
 
 )
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Equivalently, we can follow the control approach as illustrated in: 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename controlDiagramDetunedCavity.svg
-	scale 80
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-A diagram visualizing the detuned cavity.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
- We would obtain that
-\begin_inset Formula 
-\begin{equation}
-\vec{\beta}=\left(-\sqrt{R}+\sqrt{T}\left[I-\sqrt{R}\mathbf{R}_{\theta}\mathbf{M}\mathbf{R}_{\theta}\right]^{-1}\mathbf{R}_{\theta}\mathbf{M}\mathbf{R}_{\theta}\sqrt{T}\right)\vec{\alpha}.
-\end{equation}
 
 \end_inset
 
@@ -18694,52 +19092,6 @@ resultF2
 \end_layout
 
 \begin_layout Remark*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-If 
-\begin_inset Formula $G$
-\end_inset
-
- is that of a LIGO experiment:
-\end_layout
-
-\begin_layout Plain Layout
-For 
-\begin_inset Formula $G=\frac{1}{2}mL\ddot{h}\left(t\right)=-m\Omega^{2}Lh\left(\Omega\right)/2$
-\end_inset
-
- which would mean that 
-\begin_inset Formula 
-\begin{eqnarray*}
-h_{SQL} & = & \frac{\overbrace{g_{SQL}}^{\sqrt{2\hbar m\Omega^{2}}}}{m\Omega^{2}L/2}=\underrightarrow{2}\frac{\sqrt{\underrightarrow{2}\hbar\underline{m\Omega^{2}}}}{\underline{m\Omega^{2}}\underbrace{L}_{\sqrt{L^{2}}}}\\
- & = & \sqrt{\frac{8\hbar}{m\Omega^{2}L^{2}}}\\
-\implies\frac{G}{g_{SQL}} & = & -\frac{h}{h_{SQL}}
-\end{eqnarray*}
-
-\end_inset
-
- so that we can write that 
-\begin_inset Formula 
-\begin{eqnarray*}
-\vec{F}G & = & e^{i\phi}\left(\begin{array}{c}
-0\\
-\mathcal{\sqrt{K}}
-\end{array}\right)\frac{h}{h_{SQL}}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Remark*
 Exact Results 
 \begin_inset Note Note
 status collapsed
@@ -18946,6 +19298,143 @@ because
 \end_layout
 
 \begin_layout Remark*
+These results match the results of section 2.5.2 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haixingThesis"
+
+\end_inset
+
+*(which assumes that both mirrors in the cavity move)
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "GinTermsofHQNoiseExample"
+
+\end_inset
+
+If 
+\begin_inset Formula $G$
+\end_inset
+
+ is that of a LIGO experiment:
+\end_layout
+
+\begin_layout Plain Layout
+For 
+\begin_inset Formula $G=\frac{1}{2}mL\ddot{h}\left(t\right)=-m\Omega^{2}Lh\left(\Omega\right)/2$
+\end_inset
+
+ which would mean that 
+\begin_inset Formula 
+\begin{eqnarray*}
+h_{SQL} & = & \frac{\overbrace{g_{SQL}}^{\sqrt{2\hbar m\Omega^{2}}}}{m\Omega^{2}L/2}=\underrightarrow{2}\frac{\sqrt{\underrightarrow{2}\hbar\underline{m\Omega^{2}}}}{\underline{m\Omega^{2}}\underbrace{L}_{\sqrt{L^{2}}}}\\
+ & = & \sqrt{\frac{8\hbar}{m\Omega^{2}L^{2}}}\\
+\implies\frac{G}{g_{SQL}} & = & -\frac{h}{h_{SQL}}
+\end{eqnarray*}
+
+\end_inset
+
+ so that we can write that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{F}G & = & e^{i\phi}\left(\begin{array}{c}
+0\\
+\mathcal{\sqrt{K}}
+\end{array}\right)\frac{h}{h_{SQL}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+We get a different result because in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haixingThesis"
+
+\end_inset
+
+, both mirrors can move so you consider the relative motion of the mirrors.
+ In this case, 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ is the relative motion and we have to consider the reduced mass: We have
+ 
+\begin_inset Formula 
+\begin{equation}
+\mathcal{K}=\frac{2\gamma\iota_{c}}{\Omega^{2}\left(\Omega^{2}+\gamma^{2}\right)}
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula $\iota_{c}$
+\end_inset
+
+ is proportional to 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:tempEquationQNoise13814"
+
+\end_inset
+
+), which in turn is proportional to 
+\begin_inset Formula $m^{-1}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}.
+\end{equation}
+
+\end_inset
+
+So if we have two mirrors of equal mass then we have to use the reduced
+ mass which is equal to 
+\begin_inset Formula $m/2$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\kappa\rightarrow2\kappa$
+\end_inset
+
+ and consequently 
+\begin_inset Formula $\mathcal{K}\rightarrow2\mathcal{K}$
+\end_inset
+
+ and we retrieve 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haixingThesis"
+
+\end_inset
+
+'s results.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+In addition,
+\end_layout
+
+\begin_layout Remark*
 The exact expressions for 
 \begin_inset Formula $\mathbf{H}$
 \end_inset
@@ -19088,7 +19577,7 @@ To show this result we use Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:vacuum spectral density"
+reference "eq:vacuum-spectral-density"
 
 \end_inset
 
@@ -19120,7 +19609,7 @@ S_{rp}\left(\Omega\right) & = & \mathcal{K}^{2}/2
 Because we have a coherent state, the amplitude and phase-quadrature fluctuation
 s are not correlated*
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 See 
@@ -19422,10 +19911,2204 @@ This is attributable to the coherent amplification of the optical power
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Detuned-Fabry-Perot-Cavity-semi-classical"
+
+\end_inset
+
 Detuned Fabry-Perot Cavity
 \end_layout
 
 \begin_layout Standard
+The setup for such a system is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:detunedCavity"
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename detuned cavity.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:detunedCavity"
+
+\end_inset
+
+Let the bosonic operators associated with 
+\begin_inset Formula $E_{in}^{'}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{out}^{'}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{in}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{out}$
+\end_inset
+
+ be 
+\begin_inset Formula $\vec{\alpha}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{\beta}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+, respectively.
+ From 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haixingThesis"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Let the bosonic operators associated with 
+\begin_inset Formula $E_{in}^{'}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{out}^{'}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{in}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{out}$
+\end_inset
+
+ be 
+\begin_inset Formula $\vec{\alpha}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{\beta}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+, respectively.
+ 
+\end_layout
+
+\begin_layout Assumption
+We assume that the laser's input optical field is a single mode coherent
+ state and so we can write all relevant electric field in the (unnormalized)
+ form (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:final simple single mode laser"
+
+\end_inset
+
+ without the normalization constant 
+\begin_inset Formula $\mathcal{C}_{0}$
+\end_inset
+
+ )
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{E}\left(t\right) & = & \left[\sqrt{2I_{0}/\hbar\omega_{0}}+\hat{a}_{c}\left(t\right)\right]\cos\omega_{0}t+\hat{a}_{s}\left(t\right)\sin\omega_{0}t,
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{a}_{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{a}_{s}$
+\end_inset
+
+ are the cosine and sine quadratures.
+\end_layout
+
+\begin_layout Standard
+We also have that
+\end_layout
+
+\begin_layout Assumption
+The mirror has transmissivity 
+\begin_inset Formula $T$
+\end_inset
+
+ and reflectivity 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Moreover, we assume that we have a symmetric mirror that inflicts a 
+\begin_inset Formula $\pi$
+\end_inset
+
+ phase shift on its input side*
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+We must have a phase shift because by the reciprocity relations 
+\begin_inset Formula 
+\begin{eqnarray*}
+r^{*}t^{'}+t^{*}r^{'} & = & 0\\
+\implies r^{*} & = & -r^{'}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and so its scattering matrix is given by (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:scatteringMatrixBS"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{cc}
+\sqrt{T} & -\sqrt{R}\\
+\sqrt{R} & \sqrt{T}
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Having a detuned cavity means that
+\begin_inset Formula 
+\begin{equation}
+\omega_{0}\tau=\theta+n\pi,\label{eq:detunedCavityMeaning1382}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is the travel time of a photon to cross the cavity of length 
+\begin_inset Formula $L$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $\tau=L/c$
+\end_inset
+
+^
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+usually we have that 
+\begin_inset Formula $2L$
+\end_inset
+
+ is tuned to be integer multiple of wavelength, so 
+\begin_inset Formula $2L=l\lambda,$
+\end_inset
+
+where 
+\begin_inset Formula $l\in\mathbb{N}$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\begin{equation}
+2L=l\frac{c}{f_{0}}=2\pi l\frac{c}{\omega_{0}},
+\end{equation}
+
+\end_inset
+
+where we have used 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sillyRelationsFrequencyWavelength"
+
+\end_inset
+
+, and so 
+\begin_inset Formula 
+\begin{eqnarray}
+L & = & \pi l\frac{c}{\omega_{0}}\\
+\implies\omega_{0}\frac{L}{c} & = & \omega_{0}\tau=\pi l.
+\end{eqnarray}
+
+\end_inset
+
+So to add detuning, we just add an extra phase to 
+\begin_inset Formula $\omega_{0}\tau$
+\end_inset
+
+.
+ Call it 
+\begin_inset Formula $\theta$
+\end_inset
+
+, where 
+\begin_inset Formula $\theta\in\left(0,\pi\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ How does the detuning affect our formalism? We now have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{a} & = & \sqrt{R}{\bf R}_{2\theta}\vec{b}+\sqrt{T}{\bf R}_{\theta}\vec{\alpha}\\
+\vec{\beta} & = & \sqrt{T}{\bf R}_{\theta}\vec{b}-\sqrt{R}\vec{\alpha}.
+\end{eqnarray*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+{\bf R}_{\theta}\equiv e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+First of all, by the definition of the scattering matrix, we have that 
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c}
+E_{out}^{'}\\
+\tilde{E}_{in}
+\end{array}\right)=\left(\begin{array}{cc}
+\sqrt{T} & -\sqrt{R}\\
+\sqrt{R} & \sqrt{T}
+\end{array}\right)\left(\begin{array}{c}
+\tilde{E}_{out}\\
+E_{in}^{'}
+\end{array}\right),
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\tilde{E}_{in,out}$
+\end_inset
+
+ are defined in 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename understandingDetunedCavity.svg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Introducing 
+\begin_inset Formula $\tilde{E}_{in}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{E}_{out}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Hence, we have that (where 
+\begin_inset Formula $\tilde{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{b}$
+\end_inset
+
+ are the bosonic operators associated with 
+\begin_inset Formula $\tilde{E}_{in}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{E}_{out}$
+\end_inset
+
+, respectively)
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{\tilde{a}} & = & \sqrt{R}\vec{\tilde{b}}+\sqrt{T}\vec{\alpha}\\
+\vec{\beta} & = & \sqrt{T}\vec{\tilde{b}}-\sqrt{R}\vec{\alpha}.
+\end{eqnarray*}
+
+\end_inset
+
+Now, we have that 
+\begin_inset Formula $\tilde{E}_{in,out}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{in,out}$
+\end_inset
+
+ are simply related to each other.
+ Specifically, we have that 
+\begin_inset Formula 
+\begin{eqnarray}
+E_{in}\left(t\right) & = & \tilde{E}_{in}\left(t-\frac{\theta}{\omega_{0}}\right)\\
+\tilde{E}_{out}\left(t\right) & = & E_{out}\left(t-\frac{\theta}{\omega_{0}}\right),
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\frac{\theta}{\omega_{0}}$
+\end_inset
+
+ is the time taken to travel the distance that adds the phase 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Hence, according to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:quadraturesFreeSpacePropagation"
+
+\end_inset
+
+ (let 
+\begin_inset Formula $\tau=\theta/\omega_{0}$
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c}
+\hat{a}_{1}\left(\Omega\right)\\
+\hat{a}_{2}\left(\Omega\right)
+\end{array}\right)=e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right)\left(\begin{array}{c}
+\tilde{a}_{1}\left(\Omega\right)\\
+\tilde{a}_{2}\left(\Omega\right)
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c}
+\tilde{b}_{1}\left(\Omega\right)\\
+\tilde{b}_{2}\left(\Omega\right)
+\end{array}\right)=e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right)\left(\begin{array}{c}
+\hat{b}_{1}\left(\Omega\right)\\
+\hat{b}_{2}\left(\Omega\right)
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+Letting
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+{\bf R}_{\theta}\equiv e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right),
+\end{equation}
+
+\end_inset
+
+we can write that 
+\begin_inset Formula 
+\begin{eqnarray}
+\vec{a} & = & {\bf R}_{\theta}\vec{\tilde{a}}\\
+\implies\vec{\tilde{a}} & = & {\bf R}_{\theta}^{-1}\vec{a}\\
+\vec{\tilde{b}} & = & {\bf R}_{\theta}\vec{b}.
+\end{eqnarray}
+
+\end_inset
+
+Hence, 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{\tilde{a}} & = & \sqrt{R}\vec{\tilde{b}}+\sqrt{T}\vec{\alpha}\\
+\vec{\beta} & = & \sqrt{T}\vec{\tilde{b}}-\sqrt{R}\vec{\alpha}
+\end{eqnarray*}
+
+\end_inset
+
+becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+{\bf R}_{\theta}^{-1}\vec{a} & = & \sqrt{R}{\bf R}_{\theta}\vec{b}+\sqrt{T}\vec{\alpha}\\
+\implies\vec{a} & = & \sqrt{R}\left({\bf R}_{\theta}\right)^{2}\vec{b}+\sqrt{T}\vec{\alpha}\\
+\vec{\beta} & = & \sqrt{T}{\bf R}_{\theta}\vec{b}-\sqrt{R}\vec{\alpha}.
+\end{eqnarray*}
+
+\end_inset
+
+Now, 
+\begin_inset Formula ${\bf R}_{\theta}$
+\end_inset
+
+ is equal to a phase multiplied by the rotation matrix: 
+\begin_inset Formula ${\bf R}_{\theta}=e^{i\theta\Omega/\omega_{0}}R_{\theta,2D}$
+\end_inset
+
+, where 
+\begin_inset Formula $R_{\theta,2D}$
+\end_inset
+
+ is the 2D rotation matrix.
+ Hence, 
+\begin_inset Formula $\left({\bf R}_{\theta}\right)^{2}=e^{2i\theta\Omega/\omega_{0}}\left(R_{\theta,2D}\right)^{2}=e^{2i\theta\Omega/\omega_{0}}R_{2\theta,2D}={\bf R}_{2\theta}$
+\end_inset
+
+, thus obtaining the desired result.
+\end_layout
+
+\end_inset
+
+The input and output variables (
+\begin_inset Formula $\vec{\alpha}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{\beta}$
+\end_inset
+
+, respectively) can be directly related to each other by making use of the
+ above linear system of equations and Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outputQuadratures_freeSpaceNoise"
+
+\end_inset
+
+, which tells us that
+\begin_inset Formula 
+\begin{equation}
+\vec{b}\left(\Omega\right)=\mathbf{M}\vec{a}\left(\Omega\right)+\vec{D}G\left(\Omega\right),
+\end{equation}
+
+\end_inset
+
+ *
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We can relate the 
+\begin_inset Formula $\hat{E}_{out}$
+\end_inset
+
+ to 
+\begin_inset Formula $\hat{E}_{in}$
+\end_inset
+
+ as 
+\begin_inset Formula $\hat{E}_{out}\left(t\right)=\hat{E}_{in}\left(t-2\tau-2\hat{x}/c\right),$
+\end_inset
+
+ and so 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+ obey Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outputQuadratures_freeSpaceNoise"
+
+\end_inset
+
+, which was derived for the propagation of the electric field in a single
+ mirror setup (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Free test mass example"
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{M} & = & e^{2i\Omega\tau}\left[\begin{array}{cc}
+1 & 0\\
+-\kappa & 1
+\end{array}\right]\\
+\vec{D} & = & -\frac{e^{i\Omega\tau}}{g_{SQL}}\left[\begin{array}{c}
+0\\
+\sqrt{2\kappa}
+\end{array}\right],
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+\kappa & = & \frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}\\
+g_{SQL} & = & \sqrt{2\hbar m\Omega^{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+We obtain that
+\begin_inset Formula 
+\begin{equation}
+\boxed{\vec{\beta}=\mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right)},
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}=\left(\begin{array}{cc}
+\frac{\left(1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}\right)\sqrt{1-T}T+e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}T\text{Sin}[\theta](T\text{Cos}[\theta]+2\kappa\text{Sin}[\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}\\
+-\frac{2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}T\text{Cos}[\theta](-2\kappa\text{Cos}[\theta]+T\text{Sin}[\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{\left(1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}\right)\sqrt{1-T}T+e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}
+\end{array}\right),
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+x=\Omega\tau.
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{\beta} & = & \left(T{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}-\sqrt{R}\right)\vec{\alpha}+\sqrt{T}{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G\left(\Omega\right)\\
+ & \equiv & \mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right).
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We have that from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outputQuadratures_freeSpaceNoise"
+
+\end_inset
+
+ that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{b}\left(\Omega\right) & = & e^{i2\Omega\tau}\left(\begin{array}{cc}
+1 & 0\\
+\kappa^{'} & 1
+\end{array}\right)\left(\begin{array}{c}
+a_{c}\left(\Omega\right)\\
+a_{s}\left(\Omega\right)
+\end{array}\right)+\left(\begin{array}{c}
+0\\
+e^{i\Omega\tau}\sqrt{2\kappa^{'}}
+\end{array}\right)\frac{G\left(\Omega\right)}{g_{SQL}}\\
+ & \equiv & \mathbf{M}\vec{a}+\vec{D}G,
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $g_{SQL}=\sqrt{2\hbar m\Omega^{2}}.$
+\end_inset
+
+ What is 
+\begin_inset Formula $\kappa^{'}$
+\end_inset
+
+ equal to? It is equal to 
+\begin_inset Formula $4\kappa/T$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outputQuadratures_freeSpaceNoise"
+
+\end_inset
+
+, it is equal to 
+\begin_inset Formula $\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}$
+\end_inset
+
+.
+ However, now, 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+ are inside the cavity (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:tuned fabry perot noise"
+
+\end_inset
+
+).
+ Inside the cavity, at steady state, there will be a very large power stored
+ in the cavity: 
+\begin_inset Formula $I_{c}=4I_{0}/T$
+\end_inset
+
+ (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "rem:intracavity power LM T0"
+
+\end_inset
+
+) and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\kappa^{'} & = & \frac{8I_{c}\omega_{0}}{mc^{2}\Omega^{2}}\\
+ & = & \frac{8\left(4I_{0}/T\right)\omega_{0}}{mc^{2}\Omega^{2}}\\
+ & = & \frac{4\kappa}{T}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula $\vec{a}=\sqrt{R}{\bf R}_{2\theta}\vec{b}+\sqrt{T}{\bf R}_{\theta}\vec{\alpha}$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{b}\left(\Omega\right) & = & \mathbf{M}\left(\sqrt{R}{\bf R}_{2\theta}\vec{b}+\sqrt{T}{\bf R}_{\theta}\vec{\alpha}\right)+\vec{D}G\\
+\implies\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)\vec{b} & = & \mathbf{M}{\bf R}_{\theta}\sqrt{T}\vec{\alpha}+\vec{D}G\\
+\vec{b} & = & \left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}\sqrt{T}\vec{\alpha}+\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G.
+\end{eqnarray*}
+
+\end_inset
+
+Then, we use that 
+\begin_inset Formula $\vec{\beta}=\sqrt{T}{\bf R}_{\theta}\vec{b}-\sqrt{R}\vec{\alpha}$
+\end_inset
+
+ to obtain that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\vec{\beta} & = & \sqrt{T}{\bf R}_{\theta}\left\{ \left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}\sqrt{T}\vec{\alpha}+\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G\right\} -\sqrt{R}\vec{\alpha}\\
+ & = & \left(T{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}-\sqrt{R}\right)\vec{\alpha}+\sqrt{T}{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G\\
+ & \equiv & \mathbf{H}\vec{\alpha}+\vec{F}G.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Equivalently, we can follow the control approach as illustrated in: 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename controlDiagramDetunedCavity.svg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A diagram visualizing the detuned cavity.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ We would obtain that (what happened to 
+\begin_inset Formula $G$
+\end_inset
+
+ ???
+\begin_inset Formula 
+\begin{equation}
+\vec{\beta}=\left(-\sqrt{R}+\sqrt{T}\left[I-\sqrt{R}\mathbf{R}_{\theta}\mathbf{M}\mathbf{R}_{\theta}\right]^{-1}\mathbf{R}_{\theta}\mathbf{M}\mathbf{R}_{\theta}\sqrt{T}\right)\vec{\alpha}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Using Mathematica (
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+detuned fabry perot output operators.nb
+\end_layout
+
+\end_inset
+
+), we solve 
+\begin_inset Formula $\mathbf{H}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{F}$
+\end_inset
+
+ (from tag:
+\begin_inset Quotes erd
+\end_inset
+
+Hexact
+\begin_inset Quotes erd
+\end_inset
+
+ and tag:
+\begin_inset Quotes erd
+\end_inset
+
+Fexact
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $\Omega\ll\omega_{0}$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+Let us make the following assumption
+\end_layout
+
+\begin_layout Assumption
+Assume that the sideband frequencies 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ we are probing are much less than the input laser frequency 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+.
+ This is usually a very well justified assumption (e.g.
+ LIGO*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+For LIGO 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "advancedLIGOdata"
+
+\end_inset
+
+, we have that
+\begin_inset Formula 
+\begin{equation}
+\Omega\sim10^{2}Hz
+\end{equation}
+
+\end_inset
+
+while the laser wavelength is around a 
+\begin_inset Formula $\mu m$
+\end_inset
+
+ and so we have that 
+\begin_inset Formula $\omega_{0}\sim10^{14}\mbox{Hz}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\Omega/\omega_{0}\approx10^{-12}\approx0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+With this assumption, we have that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $e^{i\theta\Omega/\omega_{0}}\approx1$
+\end_inset
+
+ and so
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula 
+\begin{equation}
+{\bf R}_{\theta}\approx\left(\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+We would now have that 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}=\left(\begin{array}{cc}
+\frac{e^{2ix}\left(2\sqrt{1-T}T\text{Cos}[2x]+(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])\right)}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{2e^{2ix}T\text{Sin}[\theta](T\text{Cos}[\theta]+2\kappa\text{Sin}[\theta])}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}\\
+-\frac{2e^{2ix}T\text{Cos}[\theta](-2\kappa\text{Cos}[\theta]+T\text{Sin}[\theta])}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{e^{2ix}\left(2\sqrt{1-T}T\text{Cos}[2x]+(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])\right)}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=\left(\begin{array}{c}
+\frac{\sqrt{2}e^{ix}\left(1+e^{2ix}\sqrt{1-T}\right)\sqrt{T\text{\ensuremath{\kappa}C}}\text{Sin}[\theta]}{\text{gSQL}\left(1+e^{4ix}-e^{4ix}T-2e^{2ix}\sqrt{1-T}\text{Cos}[2\theta]+e^{2ix}\sqrt{1-T}(-1+\theta)\text{\ensuremath{\kappa}C}\text{Sin}[2\theta]\right)}\\
+\frac{\sqrt{2}e^{ix}\left(-1+e^{2ix}\sqrt{1-T}\right)\sqrt{T\text{\ensuremath{\kappa}C}}\text{Cos}[\theta]}{\text{gSQL}\left(1+e^{4ix}-e^{4ix}T-2e^{2ix}\sqrt{1-T}\text{Cos}[2\theta]+e^{2ix}\sqrt{1-T}(-1+\theta)\text{\ensuremath{\kappa}C}\text{Sin}[2\theta]\right)}
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We have used Mathematica (
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+detuned fabry perot output operators.nb
+\end_layout
+
+\end_inset
+
+): tag:
+\begin_inset Quotes erd
+\end_inset
+
+Hass1
+\begin_inset Quotes erd
+\end_inset
+
+ and tag:
+\begin_inset Quotes erd
+\end_inset
+
+Fass1
+\begin_inset Quotes erd
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+LIGO like setup and small detuned phase
+\end_layout
+
+\begin_layout Standard
+An advanced LIGO-like setup would also satisfy the following criteria
+\begin_inset CommandInset citation
+LatexCommand cite
+key "advancedLIGOdata"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Criterion
+All of 
+\begin_inset Formula $4\kappa/T$
+\end_inset
+
+, 
+\begin_inset Formula $\Omega\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+ are small and are of approximately the same order - e.g.
+ for LIGO they are all of order ~
+\begin_inset Formula $10^{-3}$
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "note6"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We also make the following assumption
+\end_layout
+
+\begin_layout Assumption
+The detuned phase (
+\begin_inset Formula $\omega_{0}\tau=\theta$
+\end_inset
+
+ mod 
+\begin_inset Formula $\pi$
+\end_inset
+
+) is small and on the same order of magnitude as 
+\begin_inset Formula $\Omega\tau$
+\end_inset
+
+, 
+\begin_inset Formula $T$
+\end_inset
+
+ and 
+\begin_inset Formula $4\kappa/T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Under these assumptions, we obtain that 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}=\frac{1}{\mathcal{C}}\left(\begin{array}{cc}
+-\Omega^{2}\left(\Omega^{2}+\gamma^{2}-\Delta^{2}\right)-\Delta\iota_{c}/2 & 2\gamma\Delta\Omega^{2}\\
+-2\gamma\Delta\Omega^{2}+\gamma\iota_{c} & -\Omega^{2}\left(\Omega^{2}+\gamma^{2}-\Delta^{2}\right)-\Delta\iota_{c}/2
+\end{array}\right),
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{eqnarray}
+\mathcal{C} & \equiv & \frac{1}{\Delta\iota_{c}/2+\Omega^{2}\left((i\gamma+\Omega)^{2}-\Delta^{2}\right)}\\
+\gamma & \equiv & \frac{Tc}{4L}=\frac{T}{4\tau}\\
+\iota_{c} & \equiv & \frac{8\omega_{0}I_{c}}{mLc}=\frac{4}{T}\frac{8\omega_{0}I_{0}}{mLc}=\frac{4}{T}\frac{c\Omega^{2}}{L}\kappa=\frac{4}{T}\frac{\Omega^{2}}{\tau}\kappa\label{eq:tempEquationQNoise13814}\\
+\kappa & \equiv & \frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}\\
+\Delta & \equiv & \frac{\theta}{\tau}.
+\end{eqnarray}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We will make use of the following Mathematica file: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+detuned fabry perot output operators.nb
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+We will make use of the following definitions
+\begin_inset Formula 
+\begin{eqnarray*}
+\gamma & \equiv & \frac{Tc}{4L}=\frac{T}{4\tau}\\
+\iota_{c} & \equiv & \frac{8\omega_{0}I_{c}}{mLc}=\frac{4}{T}\frac{8\omega_{0}I_{0}}{mLc}=\frac{4}{T}\frac{c\Omega^{2}}{L}\kappa\\
+ & = & \frac{4}{T}\frac{\Omega^{2}}{\tau}\kappa
+\end{eqnarray*}
+
+\end_inset
+
+where we assume that we are working close enough to resonance that 
+\begin_inset Formula $I_{c}\approx4I_{0}/T$
+\end_inset
+
+ 
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+This is because we had that the intracavity power is given by (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:intracavityPowerFabryRR"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{equation}
+I_{c}=I_{0}T\frac{3-T-2\sqrt{1-T}\cos\phi+2\left(\cos\left(\delta^{'}\right)-\sqrt{1-T}\cos\left(\phi+\delta^{'}\right)\right)}{\left(2-T-2\sqrt{1-T}\cos\Delta^{'}\right)},
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is the phase of 
+\begin_inset Formula $r$
+\end_inset
+
+ (which in our case is 0 as we assume that 
+\begin_inset Formula $r$
+\end_inset
+
+ is real), 
+\begin_inset Formula $\Delta^{'}=\phi+\delta^{'}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta^{'}=k2d\sec\theta$
+\end_inset
+
+, where 
+\begin_inset Formula $d$
+\end_inset
+
+ is the spacing between the Fabry Perot cavities and so is 
+\begin_inset Formula $L$
+\end_inset
+
+ in this section.
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the angle of incidence of the EM field, which we assume is 0 in this
+ example so that 
+\begin_inset Formula 
+\begin{equation}
+\Delta^{'}=\delta^{'}=2Lk=\frac{2L\omega_{0}}{c}
+\end{equation}
+
+\end_inset
+
+We had that (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:detunedCavityMeaning1382"
+
+\end_inset
+
+) 
+\begin_inset Formula $\omega_{0}\tau=\theta+n\pi=\omega_{0}L/c$
+\end_inset
+
+ so 
+\begin_inset Formula 
+\begin{equation}
+\Delta^{'}=2\theta+2n\pi.
+\end{equation}
+
+\end_inset
+
+ So 
+\begin_inset Formula $I_{c}$
+\end_inset
+
+ indeed does depend on 
+\begin_inset Formula $\theta$
+\end_inset
+
+ but to zeroth order it does not.
+ Including the first order term will change nothing as it will be neglected
+ in the order of terms we are looking at, as can be easily verified by letting
+ 
+\begin_inset Formula $\kappa C\rightarrow\left(\theta+\kappa C\right)$
+\end_inset
+
+ in 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+detuned fabry perot output operators.nb
+\end_layout
+
+\end_inset
+
+ ....
+ the results do not change up to the order we have been working in.
+\end_layout
+
+\end_inset
+
+and we made us of 
+\begin_inset Formula 
+\begin{equation}
+\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}.
+\end{equation}
+
+\end_inset
+
+We also have that
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\Delta=\frac{\theta}{\tau}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Hence,
+\begin_inset Formula 
+\begin{equation}
+\kappa=\frac{T\tau}{4\Omega^{2}}\iota_{c}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+After making these approximations, we obtain that (tag: 
+\begin_inset Quotes eld
+\end_inset
+
+fullAssumptions
+\begin_inset Quotes erd
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}=\left(\begin{array}{cc}
+\frac{\Delta\iota+2(\gamma-\Delta)(\gamma+\Delta)\Omega^{2}+2\Omega^{4}}{-\Delta\iota+2\Delta^{2}\Omega^{2}+2(\gamma-i\Omega)^{2}\Omega^{2}} & -\frac{4\gamma\Delta\Omega^{2}}{-\Delta\iota+2\Delta^{2}\Omega^{2}+2(\gamma-i\Omega)^{2}\Omega^{2}}\\
+-\frac{2\gamma\left(\iota-2\Delta\Omega^{2}\right)}{-\Delta\iota+2\Delta^{2}\Omega^{2}+2(\gamma-i\Omega)^{2}\Omega^{2}} & \frac{\Delta\iota+2(\gamma-\Delta)(\gamma+\Delta)\Omega^{2}+2\Omega^{4}}{-\Delta\iota+2\Delta^{2}\Omega^{2}+2(\gamma-i\Omega)^{2}\Omega^{2}}
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+Notice that all of the entries have the same denominator:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{1}{-\Delta\iota_{c}+2\Delta^{2}\Omega^{2}+2(\gamma-i\Omega)^{2}\Omega^{2}} & = & \frac{1}{-\Delta\iota_{c}/2+\Delta^{2}\Omega^{2}+(\gamma-i\Omega)^{2}\Omega^{2}}\frac{1}{2}\\
+ & = & \frac{1}{-\Delta\iota_{c}/2+\left(\Delta^{2}+(\gamma-i\Omega)^{2}\right)\Omega^{2}}\frac{1}{2}\\
+ & = & \frac{1}{\Delta\iota_{c}/2+\Omega^{2}\left((i\gamma+\Omega)^{2}-\Delta^{2}\right)}\frac{-1}{2}
+\end{eqnarray}
+
+\end_inset
+
+So we can write that 
+\begin_inset Formula 
+\begin{eqnarray}
+\mathbf{H} & = & \left(\begin{array}{cc}
+\frac{-\Delta\iota_{c}}{2}-(\gamma-\Delta)(\gamma+\Delta)\Omega^{2}-\Omega^{4} & 2\gamma\Delta\Omega^{2}\\
+\gamma\left(\iota-2\Delta\Omega^{2}\right) & \frac{-\Delta\iota_{c}}{2}-(\gamma-\Delta)(\gamma+\Delta)\Omega^{2}-\Omega^{4}
+\end{array}\right)\frac{1}{\Delta\iota_{c}/2+\Omega^{2}\left((i\gamma+\Omega)^{2}-\Delta^{2}\right)}\\
+ & = & \left(\begin{array}{cc}
+-\Omega^{2}\left(\Omega^{2}+\gamma^{2}-\Delta^{2}\right)-\Delta\iota_{c}/2 & 2\gamma\Delta\Omega^{2}\\
+-2\gamma\Delta\Omega^{2}+\gamma\iota_{c} & -\Omega^{2}\left(\Omega^{2}+\gamma^{2}-\Delta^{2}\right)-\Delta\iota_{c}/2
+\end{array}\right)\frac{1}{\Delta\iota_{c}/2+\Omega^{2}\left((i\gamma+\Omega)^{2}-\Delta^{2}\right)}.
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Moreover, we can show that
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=-\left(\begin{array}{c}
+\Delta\Omega\\
+(-\gamma+i\Omega)\Omega
+\end{array}\right)\frac{\sqrt{2\gamma\iota_{c}}}{\mathcal{C}g_{SQL}},
+\end{equation}
+
+\end_inset
+
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+g_{SQL} & = & \sqrt{2\hbar m\Omega^{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We will make use of the following Mathematica file: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+detuned fabry perot output operators.nb
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+We will make use of the following definitions
+\begin_inset Formula 
+\begin{eqnarray*}
+\gamma & \equiv & \frac{Tc}{4L}=\frac{T}{4\tau}\\
+\iota_{c} & \equiv & \frac{8\omega_{0}I_{c}}{mLc}=\frac{4}{T}\frac{8\omega_{0}I_{0}}{mLc}=\frac{4}{T}\frac{c\Omega^{2}}{L}\kappa\\
+ & = & \frac{4}{T}\frac{\Omega^{2}}{\tau}\kappa
+\end{eqnarray*}
+
+\end_inset
+
+where we assume that we are working close enough to resonance that 
+\begin_inset Formula $I_{c}\approx4I_{0}/T$
+\end_inset
+
+ 
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+This is because we had that the intracavity power is given by (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:intracavityPowerFabryRR"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{equation}
+I_{c}=I_{0}T\frac{3-T-2\sqrt{1-T}\cos\phi+2\left(\cos\left(\delta^{'}\right)-\sqrt{1-T}\cos\left(\phi+\delta^{'}\right)\right)}{\left(2-T-2\sqrt{1-T}\cos\Delta^{'}\right)},
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is the phase of 
+\begin_inset Formula $r$
+\end_inset
+
+ (which in our case is 0 as we assume that 
+\begin_inset Formula $r$
+\end_inset
+
+ is real), 
+\begin_inset Formula $\Delta^{'}=\phi+\delta^{'}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta^{'}=k2d\sec\theta$
+\end_inset
+
+, where 
+\begin_inset Formula $d$
+\end_inset
+
+ is the spacing between the Fabry Perot cavities and so is 
+\begin_inset Formula $L$
+\end_inset
+
+ in this section.
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the angle of incidence of the EM field, which we assume is 0 in this
+ example so that 
+\begin_inset Formula 
+\begin{equation}
+\Delta^{'}=\delta^{'}=2Lk=\frac{2L\omega_{0}}{c}
+\end{equation}
+
+\end_inset
+
+We had that (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:detunedCavityMeaning1382"
+
+\end_inset
+
+) 
+\begin_inset Formula $\omega_{0}\tau=\theta+n\pi=\omega_{0}L/c$
+\end_inset
+
+ so 
+\begin_inset Formula 
+\begin{equation}
+\Delta^{'}=2\theta+2n\pi.
+\end{equation}
+
+\end_inset
+
+ So 
+\begin_inset Formula $I_{c}$
+\end_inset
+
+ indeed does depend on 
+\begin_inset Formula $\theta$
+\end_inset
+
+ but to zeroth order it does not.
+ Including the first order term will change nothing as it will be neglected
+ in the order of terms we are looking at, as can be easily verified by letting
+ 
+\begin_inset Formula $\kappa C\rightarrow\left(\theta+\kappa C\right)$
+\end_inset
+
+ in 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+..
+\backslash
+
+\backslash
+Mathematica files
+\backslash
+
+\backslash
+detuned fabry perot output operators.nb
+\end_layout
+
+\end_inset
+
+ ....
+ the results do not change up to the order we have been working in.
+\end_layout
+
+\end_inset
+
+and we made us of 
+\begin_inset Formula 
+\begin{equation}
+\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}.
+\end{equation}
+
+\end_inset
+
+We also have that
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\Delta=\frac{\theta}{\tau}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Hence,
+\begin_inset Formula 
+\begin{equation}
+\kappa=\frac{T\tau}{4\Omega^{2}}\iota_{c}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+After making these approximations, we obtain that (tag: 
+\begin_inset Quotes eld
+\end_inset
+
+fullAssumptions
+\begin_inset Quotes erd
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=\left(\begin{array}{c}
+\frac{2\sqrt{2}\Delta\sqrt{\gamma\iota}\Omega}{\text{gSQL}\left(-\Delta\iota+2\Delta^{2}\Omega^{2}+2(\gamma-i\Omega)^{2}\Omega^{2}\right)}\\
+-\frac{2\sqrt{2}\sqrt{\gamma\iota}(\gamma-i\Omega)\Omega}{\text{gSQL}\left(-\Delta\iota+2\Delta^{2}\Omega^{2}+2(\gamma-i\Omega)^{2}\Omega^{2}\right)}
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+Notice that all of the entries have the same denominator:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{1}{g_{SQL}}\frac{1}{-\Delta\iota_{c}+2\Delta^{2}\Omega^{2}+2(\gamma-i\Omega)^{2}\Omega^{2}} & = & \frac{1}{-\Delta\iota_{c}/2+\Delta^{2}\Omega^{2}+(\gamma-i\Omega)^{2}\Omega^{2}}\frac{1}{2g_{SQL}}\\
+ & = & \frac{1}{-\Delta\iota_{c}/2+\left(\Delta^{2}+(\gamma-i\Omega)^{2}\right)\Omega^{2}}\frac{1}{2g_{SQL}}\\
+ & = & \frac{1}{\Delta\iota_{c}/2+\Omega^{2}\left((i\gamma+\Omega)^{2}-\Delta^{2}\right)}\frac{-1}{2g_{SQL}}
+\end{eqnarray}
+
+\end_inset
+
+So we can write that 
+\begin_inset Formula 
+\begin{eqnarray}
+\mathbf{F} & = & -\left(\begin{array}{c}
+\sqrt{2}\Delta\sqrt{\gamma\iota_{c}}\Omega\\
+-\sqrt{2}\sqrt{\gamma\iota_{c}}(\gamma-i\Omega)\Omega
+\end{array}\right)\frac{1}{\Delta\iota_{c}/2+\Omega^{2}\left((i\gamma+\Omega)^{2}-\Delta^{2}\right)}\frac{1}{g_{SQL}}\\
+ & = & -\left(\begin{array}{c}
+\Delta\Omega\\
+-(\gamma-i\Omega)\Omega
+\end{array}\right)\frac{\sqrt{2\gamma\iota_{c}}}{\Delta\iota_{c}/2+\Omega^{2}\left((i\gamma+\Omega)^{2}-\Delta^{2}\right)}\frac{1}{g_{SQL}}\\
+ & = & -\left(\begin{array}{c}
+\Delta\Omega\\
+(-\gamma+i\Omega)\Omega
+\end{array}\right)\frac{\sqrt{2\gamma\iota_{c}}}{\Delta\iota_{c}/2+\Omega^{2}\left((i\gamma+\Omega)^{2}-\Delta^{2}\right)}\frac{1}{g_{SQL}}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+We can show equivalence with the results of section 2.5.3 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haixingThesis"
+
+\end_inset
+
+ (which assumes that both mirrors in the cavity move)*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+First, we ask what is 
+\begin_inset Formula $G$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $h$
+\end_inset
+
+? Looking at 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "GinTermsofHQNoiseExample"
+
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\begin{equation}
+\frac{G}{g_{SQL}}=-\frac{h}{h_{SQL}}.
+\end{equation}
+
+\end_inset
+
+Thus, our results are 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=\left(\begin{array}{c}
+\Delta\Omega\\
+(-\gamma+i\Omega)\Omega
+\end{array}\right)\frac{\sqrt{2\gamma\iota_{c}}}{\mathcal{C}h_{SQL}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haixingThesis"
+
+\end_inset
+
+'s analysis we have that both mirrors are moving and so we have to use the
+ reduced mass and as a result 
+\begin_inset Formula $\iota_{c}$
+\end_inset
+
+, which is proportional to 
+\begin_inset Formula $\kappa$
+\end_inset
+
+, becomes 
+\begin_inset Formula $2\iota_{c}$
+\end_inset
+
+ as 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ is proportional to 
+\begin_inset Formula $m^{-1}$
+\end_inset
+
+ (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "GinTermsofHQNoiseExample"
+
+\end_inset
+
+ for more details).
+ We would then have that 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=\left(\begin{array}{c}
+\Delta\Omega\\
+(-\gamma+i\Omega)\Omega
+\end{array}\right)\frac{2\sqrt{\gamma\iota_{c}}}{\mathcal{C}h_{SQL}}
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}=\frac{1}{\mathcal{C}}\left(\begin{array}{cc}
+-\Omega^{2}\left(\Omega^{2}+\gamma^{2}-\Delta^{2}\right)-\Delta\iota_{c} & 2\gamma\Delta\Omega^{2}\\
+-2\gamma\Delta\Omega^{2}+2\gamma\iota_{c} & -\Omega^{2}\left(\Omega^{2}+\gamma^{2}-\Delta^{2}\right)-\Delta\iota_{c}
+\end{array}\right),
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+\mathcal{C}=\frac{1}{\Delta\iota_{c}+\Omega^{2}\left((i\gamma+\Omega)^{2}-\Delta^{2}\right)}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subparagraph
+Analysis of results
+\end_layout
+
+\begin_layout Standard
+Notice that the signal that we would like to measure, 
+\begin_inset Formula $G\left(\Omega\right)$
+\end_inset
+
+, now appears in both quadratures: 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+.
+ In this case, it is best to use Homodyne detection to measure an arbitrary
+ quadrature: see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Fabio-balanced-homodyne"
+
+\end_inset
+
+ for how to measure the expectation value of an arbitrary quadrature*
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Replace 
+\begin_inset Formula $X_{\lambda}$
+\end_inset
+
+ with 
+\begin_inset Formula $\beta_{\lambda}$
+\end_inset
+
+.
+ But in that section, we worked in the complex amplitude picture and not
+ the cosine/sine quadrature picture.
+ Let us transform from one picture to the other: First we take the Fourier
+ transform of 
+\begin_inset Formula $X_{\lambda}$
+\end_inset
+
+ to obtain 
+\begin_inset Formula $X_{\lambda}\left(\Omega\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+X_{\lambda}\left(\Omega\right)=\int X_{\lambda}\left(t\right)e^{i\Omega t}\frac{d\Omega}{2\pi},
+\end{equation}
+
+\end_inset
+
+(and so with this convention we have that 
+\begin_inset Formula $\left[X_{\lambda}\left(\Omega\right),X_{\lambda}^{\dagger}\left(\Omega^{'}\right)\right]=2\pi\delta\left(\Omega-\Omega^{'}\right)$
+\end_inset
+
+) then in the small bandwidth limit we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\beta_{\lambda,c}\left(\Omega\right) & = & \frac{X_{\lambda}\left(\omega_{0}+\Omega\right)+X_{\lambda}^{\dagger}\left(\omega_{0}-\Omega\right)}{2},\\
+\beta_{\lambda,c}\left(\Omega\right) & = & \frac{X_{\lambda}\left(\omega_{0}+\Omega\right)-X_{\lambda}^{\dagger}\left(\omega_{0}-\Omega\right)}{i\sqrt{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Noise Spectrum
+\end_layout
+
+\begin_layout Standard
+Say the following quadrature has been measured:
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{\zeta}\left(\Omega\right)=\hat{\beta}_{1}\cos\zeta+\hat{\beta}_{2}\sin\zeta.
+\end{equation}
+
+\end_inset
+
+What is the noise we measure if we do the measurement with a coherent state?
+\end_layout
+
+\begin_layout Standard
+First, we will offset the measurement by the signal: 
+\begin_inset Formula 
+\begin{equation}
+\left\langle \hat{\beta}_{\zeta}\right\rangle =G\left(\Omega\right)\left(\cos\zeta,\sin\zeta\right)\vec{F}.
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray}
+\left\langle \hat{\beta}_{\zeta}\right\rangle  & = & \left\langle \hat{\beta}_{1}\right\rangle \cos\zeta+\left\langle \hat{\beta}_{2}\right\rangle \sin\zeta\\
+ & = & \left\langle \mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right)\right\rangle _{1}\cos\zeta+\left\langle \mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right)\right\rangle _{2}\sin\zeta\\
+ & = & \left\langle \vec{F}G\left(\Omega\right)\right\rangle _{1}\cos\zeta+\left\langle \vec{F}G\left(\Omega\right)\right\rangle _{2}\sin\zeta\\
+ & = & G\left(\Omega\right)\left(\left\langle \vec{F}\right\rangle _{1}\cos\zeta+\left\langle \vec{F}\right\rangle _{2}\sin\zeta\right)=G\left(\Omega\right)\left(\cos\zeta,\sin\zeta\right)\vec{F}\\
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+We then have 
+\begin_inset Formula 
+\begin{equation}
+\Delta\hat{\beta}_{\zeta}=\hat{\beta}_{\zeta}-\left\langle \hat{\beta}_{\zeta}\right\rangle ,
+\end{equation}
+
+\end_inset
+
+which has the following noise spectrum (after normalizing 
+\begin_inset Formula $\hat{\beta}_{\zeta}$
+\end_inset
+
+ by 
+\begin_inset Formula $\left(\cos\zeta,\sin\zeta\right)\vec{F}$
+\end_inset
+
+ so we can measure 
+\begin_inset Formula $G$
+\end_inset
+
+ directly) 
+\begin_inset Formula 
+\begin{equation}
+S^{h}\left(\Omega\right)=\frac{\left(\cos\zeta,\sin\zeta\right)\mathbf{HH}^{T}\left(\cos\zeta,\sin\zeta\right)^{T}}{\left|\mathbf{F}\left(\cos\zeta,\sin\zeta\right)\right|^{2}},
+\end{equation}
+
+\end_inset
+
+where we used the following definition for 
+\begin_inset Formula $S^{h}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\pi S_{h}\left(\Omega\right)\delta\left(\Omega-\Omega^{'}\right)=\left\langle \Delta\hat{\beta}_{\zeta}\left(\Omega\right)\Delta\hat{\beta}_{\zeta}\left(\Omega^{'}\right)\right\rangle _{symm}.
+\end{equation}
+
+\end_inset
+
+*
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Use the result 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vacuum-spectral-density"
+
+\end_inset
+
+; this result holds only for vacuum states, but we have applied the displacement
+ transformation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Simple-analysis-of single mode laser"
+
+\end_inset
+
+) to displace the coherent state to the vacuum state.
+ In the reference we have that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{Y}\left(\Omega\right) & = & \vec{H}^{\dagger}\left(\Omega\right)\hat{\vec{a}}\left(\Omega\right)+G\left(\Omega\right)\\
+ & = & H_{c}\left(\Omega\right)\hat{a}_{c}\left(\Omega\right)+H_{s}\left(\Omega\right)\hat{a}_{s}\left(\Omega\right)+G\left(\Omega\right)\\
+ & \equiv & \hat{N}_{Y}\left(\Omega\right)+G\left(\Omega\right),
+\end{eqnarray*}
+
+\end_inset
+
+In our case, we have that 
+\begin_inset Formula $G=0$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{\hat{a}}=\vec{\alpha}$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta\hat{\beta}_{\zeta} & = & \left(\mathbf{H}\vec{\alpha}\right)_{1}\cos\zeta+\left(\mathbf{H}\vec{\alpha}\right)_{2}\sin\zeta\\
+ & = & \left(\mathbf{H}\vec{\alpha}\right)\left(\cos\zeta,\sin\zeta\right)\\
+ & = & \left[\left(\cos\zeta,\sin\zeta\right)\mathbf{H}\right]\vec{\alpha}
+\end{eqnarray}
+
+\end_inset
+
+so 
+\begin_inset Formula 
+\begin{eqnarray}
+\vec{H}^{\dagger}\left(\Omega\right) & = & \left[\left(\cos\zeta,\sin\zeta\right)\mathbf{H}\right]
+\end{eqnarray}
+
+\end_inset
+
+As a result 
+\begin_inset Formula 
+\begin{eqnarray}
+S_{h} & = & \left[\left(\cos\zeta,\sin\zeta\right)\mathbf{H}\right]\left[\left(\cos\zeta,\sin\zeta\right)\mathbf{H}\right]^{\dagger}\\
+ & = & \left(\cos\zeta,\sin\zeta\right)\mathbf{H}\mathbf{H}^{\dagger}\left(\cos\zeta,\sin\zeta\right)^{T}\\
+ & = & \left(\cos\zeta,\sin\zeta\right)\mathbf{H}\mathbf{H}^{T}\left(\cos\zeta,\sin\zeta\right)^{T},
+\end{eqnarray}
+
+\end_inset
+
+because 
+\begin_inset Formula $\mathbf{H}$
+\end_inset
+
+ is real.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Next we apply the 
+\emph on
+normalization 
+\emph default
+step:
+\end_layout
+
+\begin_layout Plain Layout
+We had that
+\begin_inset Formula 
+\begin{equation}
+\left\langle \hat{\beta}_{\zeta}\right\rangle =G\left(\Omega\right)\left(\cos\zeta,\sin\zeta\right)\vec{F},
+\end{equation}
+
+\end_inset
+
+but normally we would like to measure 
+\begin_inset Formula $G$
+\end_inset
+
+, so we normalize by 
+\begin_inset Formula $\left(\cos\zeta,\sin\zeta\right)\vec{F}$
+\end_inset
+
+ to obtain that 
+\begin_inset Formula 
+\begin{equation}
+S_{h}=\frac{\left(\cos\zeta,\sin\zeta\right)\mathbf{H}\mathbf{H}^{T}\left(\cos\zeta,\sin\zeta\right)^{T}}{\left|\left(\cos\zeta,\sin\zeta\right)\vec{F}\right|^{2}}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -21002,8 +23685,8 @@ Useful trace relations
 We have that
 \begin_inset Formula 
 \begin{eqnarray*}
-Tr\ket{A}\bra{B}\hat{O} & = & \braket{A|B}\\
-Tr\left(\ket{A}\bra{B}\hat{O}\right) & = & \braket{B|\hat{O}|A}
+Tr\ket A\bra B\hat{O} & = & \braket{A|B}{}\\
+Tr\left(\ket A\bra B\hat{O}\right) & = & \braket{B|\hat{O}|A}{}
 \end{eqnarray*}
 
 \end_inset
@@ -21106,8 +23789,7 @@ Baker-Campbell-Hausdorff formula
  then
 \begin_inset Formula 
 \begin{eqnarray}
-\exp\left(\hat{x}+\hat{y}\right) & = & \exp\left(-\frac{1}{2}\left[\hat{x},\hat{y}\right]\right)e^{\hat{x}}e^{\hat{y}}=\exp\left(\frac{1}{2}\left[\hat{x},\hat{y}\right]\right)e^{\hat{y}}e^{\hat{x}}.\label{eq:baker formula}\\
-\nonumber 
+\exp\left(\hat{x}+\hat{y}\right) & = & \exp\left(-\frac{1}{2}\left[\hat{x},\hat{y}\right]\right)e^{\hat{x}}e^{\hat{y}}=\exp\left(\frac{1}{2}\left[\hat{x},\hat{y}\right]\right)e^{\hat{y}}e^{\hat{x}}.\label{eq:baker formula}
 \end{eqnarray}
 
 \end_inset
@@ -21159,8 +23841,7 @@ Unitary transformation of a commutator
  be a unitary operator then 
 \begin_inset Formula 
 \begin{eqnarray}
-U\left[A,B\right]U^{\dagger} & = & \left[UAU^{\dagger},UBU^{\dagger}\right].\label{eq:unitary transformation of a commutator}\\
-\nonumber 
+U\left[A,B\right]U^{\dagger} & = & \left[UAU^{\dagger},UBU^{\dagger}\right].\label{eq:unitary transformation of a commutator}
 \end{eqnarray}
 
 \end_inset
@@ -21471,6 +24152,18 @@ key "Buonanno2002"
  appendix)
 \end_layout
 
+\begin_layout Enumerate
+Commutator stuff:
+\begin_inset Formula 
+\begin{equation}
+\left[AB,CD\right]=A\left[B,C\right]D+AC\left[B,D\right]+\left[A,C\right]DB+C\left[A,D\right]B.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Quantum Notation/Terminology
 \end_layout
@@ -21653,8 +24346,7 @@ Translation by time
  
 \begin_inset Formula 
 \begin{eqnarray}
-\exp\left(i\hat{H}\tau/\hbar\right)\hat{O}\left(t\right)\exp\left(-i\hat{H}\tau/\hbar\right) & = & \hat{O}\left(t+\tau\right).\label{eq:generator of time translation}\\
-\nonumber 
+\exp\left(i\hat{H}\tau/\hbar\right)\hat{O}\left(t\right)\exp\left(-i\hat{H}\tau/\hbar\right) & = & \hat{O}\left(t+\tau\right).\label{eq:generator of time translation}
 \end{eqnarray}
 
 \end_inset
@@ -21695,6 +24387,300 @@ key "mandelQO"
 \end_inset
 
 )
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Harmonic-Oscillator"
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Quantum Harmonic Oscillator
+\end_layout
+
+\end_inset
+
+QHO/ladder operators
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+ladder operators
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For a Hamiltonian of the form
+\begin_inset Formula 
+\begin{equation}
+H=\frac{\hat{p}^{2}}{2m}+\frac{1}{2}m\omega^{2}\hat{x}^{2},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{q} & = & \sqrt{\frac{\hbar}{2m\omega}}\left[\hat{a}+\hat{a}^{\dagger}\right]\nonumber \\
+\hat{p} & = & i\sqrt{\frac{\hbar m\omega}{2}}\left[\hat{a}^{\dagger}-\hat{a}\right].\label{eq:harmEq}
+\end{eqnarray}
+
+\end_inset
+
+We can then think of 
+\begin_inset Formula $\hat{q}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{p}$
+\end_inset
+
+ as the real and imaginary parts, respectively, of the complex amplitude
+ 
+\begin_inset Formula $\hat{a}$
+\end_inset
+
+.
+ We can then write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{a} & = & \sqrt{\frac{1}{2\hbar\omega}}\left[\omega\hat{q}+i\hat{p}\right]\\
+\hat{a}^{\dagger} & = & \sqrt{\frac{1}{2\hbar\omega}}\left[\omega\hat{q}-i\hat{p}\right].
+\end{eqnarray*}
+
+\end_inset
+
+The following relations are also useful
+\begin_inset Formula 
+\begin{eqnarray}
+\left[a,a^{\dagger}\right] & = & I\implies aa^{\dagger}=I+a^{\dagger}a\label{eq:aadaggerCommutationrelation}\\
+\left[N=a^{\dagger}a,a\right] & = & -a\label{eq:Na_commutation_relation}\\
+\left[N=a^{\dagger}a,a^{\dagger}\right] & = & a^{\dagger}\nonumber \\
+\left[a,f\left(a,a^{\dagger}\right)\right] & = & \partial_{a^{\dagger}}f\nonumber \\
+\left[a^{\dagger},f\left(a,a^{\dagger}\right)\right] & = & -\partial_{a}f\nonumber \\
+\exp\left(-\alpha N\right)f\left(a,a^{\dagger}\right)\exp\left(\alpha N\right) & = & f\left(ae^{\alpha},a^{\dagger}e^{-\alpha}\right).\label{eq:usefulExpN}
+\end{eqnarray}
+
+\end_inset
+
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is of a complicated form (example not in normal or anti-normal order) then
+ write it's taylor series (see example in note) 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[a,f\left(a,a^{\dagger}\right)\right]=\partial_{a^{\dagger}}f$
+\end_inset
+
+ (section 
+\begin_inset Formula $\ref{sub:identitiesQO}$
+\end_inset
+
+) and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+a\left(\frac{1}{2}\left(za^{\dagger2}-z^{*}a^{2}\right)\right)^{n} & = & \left(\frac{1}{2}\left(za^{\dagger2}-z^{*}a^{2}\right)\right)^{n}a+nza^{\dagger}\left(\frac{1}{2}\left(za^{\dagger2}-z^{*}a^{2}\right)\right)^{n-1}\\
+\end{eqnarray*}
+
+\end_inset
+
+we got this by using the binomial expansion on 
+\begin_inset Formula $\left(\frac{1}{2}\left(za^{\dagger2}-z^{*}a^{2}\right)\right)^{n}$
+\end_inset
+
+ (see section 
+\begin_inset Formula $\ref{sub:QMequs}$
+\end_inset
+
+): 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(za^{\dagger2}-z^{*}a^{2}\right)^{n} & = & (A+B)^{n}=\sum_{k=0}^{n}S_{k}^{n}(a+b)^{n}=\sum_{k=0}^{n}\sum_{j=0}^{k}S_{k}^{n}C_{j}^{k}A^{k-j}B^{j}\\
+ & = & \sum_{k=0}^{n}\sum_{j=0}^{k}S_{k}^{n}C_{j}^{k}z^{k-j}a^{\dagger2\left(k-j\right)}B^{j}\\
+\implies\partial_{a^{\dagger}}\left(za^{\dagger2}-z^{*}a^{2}\right)^{n} & = & \sum_{k=0}^{n}\sum_{j=0}^{k}S_{k}^{n}C_{j}^{k}z^{k-j}2\left(k-j\right)a^{\dagger2\left(k-j\right)-1}B^{j}\\
+ & = & za^{\dagger}\sum_{k=0}^{n}\sum_{j=0}^{k}S_{k}^{n}C_{j}^{k}z^{k-j-1}2\left(k-j\right)a^{\dagger2\left(k-j-1\right)}B^{j}\\
+ & = & 2za^{\dagger}\sum_{b=-1}^{n-1}\sum_{j=0}^{b+1}\left(b+1\right)S_{b+1}^{n}C_{j}^{b}z^{b-j}a^{\dagger2\left(b-j\right)}B^{j}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $j$
+\end_inset
+
+ only goes to 
+\begin_inset Formula $b$
+\end_inset
+
+ because we have that 
+\begin_inset Formula $\left(k-j\right)=\left(b+1-j\right)=0$
+\end_inset
+
+ if 
+\begin_inset Formula $j=b+1$
+\end_inset
+
+ and if 
+\begin_inset Formula $b=-1$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(b+1-j\right)=-j=0$
+\end_inset
+
+ so the 
+\begin_inset Formula $-1$
+\end_inset
+
+ limit is useless.
+ We have that 
+\begin_inset Formula $k-1=b$
+\end_inset
+
+ and in our case we have that 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+ so 
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{j}^{k}\times\left(k-j\right) & = & \frac{k!}{\left(k-j-1\right)!j!}=kC_{j}^{b}\\
+S_{k}^{n} & = & \begin{cases}
+\frac{n!}{2^{\frac{n-k}{2}}\left(\frac{n-k}{2}\right)!k!}\\
+0 & n-k\; odd
+\end{cases}\\
+\implies S_{b+1}^{n}\left(b+1\right) & = & \begin{cases}
+\frac{n!}{2^{\frac{n-b-1}{2}}\left(\frac{n-b-1}{2}\right)!b!}\\
+0 & n-b-1\; odd
+\end{cases}\\
+ & = & nS_{b}^{n-1}
+\end{eqnarray*}
+
+\end_inset
+
+and so 
+\begin_inset Formula 
+\begin{eqnarray*}
+\partial_{a^{\dagger}}\left(za^{\dagger2}-z^{*}a^{2}\right)^{n} & = & 2nza^{\dagger}\sum_{b=0}^{n-1}\sum_{j=0}^{b}S_{b}^{n-1}C_{j}^{b}z^{b-j}a^{\dagger2\left(b-j\right)}B^{j}\\
+ & = & 2nza^{\dagger}\left(za^{\dagger2}-z^{*}a^{2}\right)^{n-1}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Differential form of ladder operators when acting on coherent states
+\end_layout
+
+\begin_layout Standard
+We can write that
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}_{\lambda}^{\dagger}\left|\left\{ \nu\right\} \right\rangle \left\langle \left\{ \nu\right\} \right| & = & \left(\nu_{\lambda}^{*}+\frac{\partial}{\partial\nu_{\lambda}}\right)\left|\left\{ \nu\right\} \right\rangle \left\langle \left\{ \nu\right\} \right|\\
+\left|\left\{ \nu\right\} \right\rangle \left\langle \left\{ \nu\right\} \right|\hat{a}_{\lambda} & = & \left(\nu_{\lambda}+\frac{\partial}{\partial\nu_{\lambda}^{*}}\right)\left|\left\{ \nu\right\} \right\rangle \left\langle \left\{ \nu\right\} \right|.
+\end{eqnarray}
+
+\end_inset
+
+This will allow us to write that
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}_{\lambda}^{\dagger}\left|\left\{ \nu\right\} \right\rangle \left\langle \left\{ \nu\right\} \right|\hat{a}_{\lambda} & = & \left(\nu_{\lambda}^{*}+\frac{\partial}{\partial\nu_{\lambda}}\right)\left(\nu_{\lambda r}+\frac{\partial}{\partial\nu_{\lambda}^{*}}\right)\left|\left\{ \nu\right\} \right\rangle \left\langle \left\{ \nu\right\} \right|\\
+\hat{a}_{\lambda}^{\dagger}\hat{a}_{\lambda}\left|\left\{ \nu\right\} \right\rangle \left\langle \left\{ \nu\right\} \right| & = & \nu_{\lambda}\left(\nu_{\lambda}^{*}+\frac{\partial}{\partial\nu_{\lambda}}\right)\left|\left\{ \nu\right\} \right\rangle \left\langle \left\{ \nu\right\} \right|\\
+\left|\left\{ \nu\right\} \right\rangle \left\langle \left\{ \nu\right\} \right|\hat{a}_{\lambda}^{\dagger}\hat{a}_{\lambda} & = & \nu_{\lambda}^{*}\left(\nu_{\lambda}+\frac{\partial}{\partial\nu_{\lambda}^{*}}\right)\left|\left\{ \nu\right\} \right\rangle \left\langle \left\{ \nu\right\} \right|.
+\end{eqnarray}
+
+\end_inset
+
+This will allow us to write that the expectation value of an anti-normally
+ ordered (i.e.
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ to the left followed by 
+\begin_inset Formula $a^{\dagger}$
+\end_inset
+
+) operator to be 
+\begin_inset Formula 
+\begin{equation}
+\left\langle f^{\left(A\right)}\left(\left\{ \hat{a}\right\} ,\left\{ \hat{a}^{\dagger}\right\} \right)\right\rangle =\mbox{Tr}\left(\int\phi\left(\left\{ \nu\right\} \right)f^{\left(A\right)}\left(\left\{ \nu+\frac{\partial}{\partial\nu^{*}}\right\} ,\left\{ \nu^{*}+\frac{\partial}{\partial\nu}\right\} \right)\left|\left\{ \nu\right\} \right\rangle \left\langle \left\{ \nu\right\} \right|d\left\{ \nu\right\} \right),
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is the coherent state representation of the density operator:
+\begin_inset Formula 
+\begin{equation}
+\rho=\intop\phi\left(v\right)\ket v\bra vd^{2}v.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+This procedure is rarely used directly to evaluate the correlation function.
+ However, we shall later find it valuable in reducing the operator master
+ equation of motion of an interacting field to the form of a differential
+ equation (see Section 18.5).
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mandelQO"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mandelQO"
+
+\end_inset
+
+ section 12.9.2
 \end_layout
 
 \begin_layout Section

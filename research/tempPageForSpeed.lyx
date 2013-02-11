@@ -79,438 +79,841 @@ logicalmkup
 
 \begin_body
 
-\begin_layout Section
-Detuned Fabry
+\begin_layout Part
+Temporary
+\end_layout
+
+\begin_layout Subsection
+Comparison between two approaches
+\end_layout
+
+\begin_layout Subsubsection
+The detuning
 \end_layout
 
 \begin_layout Standard
-The setup for such a system is shown in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:detunedCavity"
+What is the detuning in terms in the Hamiltonian case? We have a laser of
+ frequency 
+\begin_inset Formula $\omega_{0}$
+\end_inset
 
+ interacting with a cavity that has a resonant frequency given by 
+\begin_inset Formula $\omega_{c}$
 \end_inset
 
 .
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
+ This is similar to the setup of a field interacting with an atom that has
+ a resonant frequency given by 
+\begin_inset Formula $\Omega$
 \end_inset
 
-
-\begin_inset Graphics
-	filename detuned cavity.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:detunedCavity"
-
-\end_inset
-
-Let the bosonic operators associated with 
-\begin_inset Formula $E_{in}^{'}$
-\end_inset
-
-, 
-\begin_inset Formula $E_{out}^{'}$
-\end_inset
-
-, 
-\begin_inset Formula $E_{in}$
-\end_inset
-
- and 
-\begin_inset Formula $E_{out}$
-\end_inset
-
- be 
-\begin_inset Formula $\vec{\alpha}$
-\end_inset
-
-, 
-\begin_inset Formula $\vec{\beta}$
-\end_inset
-
-, 
-\begin_inset Formula $\vec{a}$
-\end_inset
-
- and 
-\begin_inset Formula $\vec{b}$
-\end_inset
-
-, respectively.
- From 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "haixingThesis"
-
+, and where the detuning is said to be 
+\begin_inset Formula $\omega_{0}-\Omega$
 \end_inset
 
 .
- 
-\end_layout
-
+ So it is reasonable to postulate that the detuning is given by 
+\begin_inset Formula $\omega_{c}-\omega_{0}$
 \end_inset
 
-
-\end_layout
-
-\end_inset
-
-Let the bosonic operators associated with 
-\begin_inset Formula $E_{in}^{'}$
-\end_inset
-
-, 
-\begin_inset Formula $E_{out}^{'}$
-\end_inset
-
-, 
-\begin_inset Formula $E_{in}$
-\end_inset
-
- and 
-\begin_inset Formula $E_{out}$
-\end_inset
-
- be 
-\begin_inset Formula $\vec{\alpha}$
-\end_inset
-
-, 
-\begin_inset Formula $\vec{\beta}$
-\end_inset
-
-, 
-\begin_inset Formula $\vec{a}$
-\end_inset
-
- and 
-\begin_inset Formula $\vec{b}$
-\end_inset
-
-, respectively.
- 
-\end_layout
-
-\begin_layout Assumption
-We assume that the laser's input optical field is a single mode coherent
- state and so we can write all relevant electric field in the (unnormalized)
- form (Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:final simple single mode laser"
-
-\end_inset
-
- without the normalization constant 
-\begin_inset Formula $\mathcal{C}_{0}$
-\end_inset
-
- )
-\begin_inset Formula 
-\begin{eqnarray*}
-\hat{E}\left(t\right) & = & \left[\sqrt{2I_{0}/\hbar\omega_{0}}+\hat{a}_{c}\left(t\right)\right]\cos\omega_{0}t+\hat{a}_{s}\left(t\right)\sin\omega_{0}t,
-\end{eqnarray*}
-
-\end_inset
-
-where 
-\begin_inset Formula $\hat{a}_{c}$
-\end_inset
-
- and 
-\begin_inset Formula $\hat{a}_{s}$
-\end_inset
-
- are the cosine and sine quadratures.
+.
+ Let us try to clearly establish this statement:
 \end_layout
 
 \begin_layout Standard
-We also have that
-\end_layout
-
-\begin_layout Assumption
-The mirror has transmissivity 
-\begin_inset Formula $T$
-\end_inset
-
- and reflectivity 
-\begin_inset Formula $R$
-\end_inset
-
-.
- Moreover, we assume that we have a symmetric mirror that inflicts a 
-\begin_inset Formula $\pi$
-\end_inset
-
- phase shift on its input side*
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-We must have a phase shift because by the reciprocity relations 
-\begin_inset Formula 
-\begin{eqnarray*}
-r^{*}t^{'}+t^{*}r^{'} & = & 0\\
-\implies r^{*} & = & -r^{'}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- and so its scattering matrix is given by (Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:scatteringMatrixBS"
-
-\end_inset
-
-)
+A cavity has resonant modes given by 
 \begin_inset Formula 
 \begin{equation}
-\left(\begin{array}{cc}
-\sqrt{T} & -\sqrt{R}\\
-\sqrt{R} & \sqrt{T}
-\end{array}\right).
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Having a detuned cavity means that
-\begin_inset Formula 
-\begin{equation}
-\omega_{0}\tau=\theta+n\pi,
+\omega_{m}=2\pi m\Delta\nu,
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $\tau$
+\begin_inset Formula $\Delta\nu\equiv c/2nd$
 \end_inset
 
- is the travel time of a photon to cross the cavity of length 
+ is the free-spectral-range (eq:defFreeSpectralRange), where 
+\begin_inset Formula $d$
+\end_inset
+
+ is the length of the Fabry-perot cavity.
+ In the Hamiltonian approach, we set 
+\begin_inset Formula $n$
+\end_inset
+
+ to 1.
+ We expect that only a mode interacts with the laser and it is the mode
+ that satisfies 
+\begin_inset Formula $\min_{m}\left|\omega_{m}-\omega_{0}\right|$
+\end_inset
+
+.
+ Say 
+\begin_inset Formula $\omega_{c}$
+\end_inset
+
+ is the frequency that can is the solution of this optimization procedure.
+ Then, 
+\begin_inset Formula $\omega_{c}=2\pi l\Delta\nu$
+\end_inset
+
+ for some integer 
+\begin_inset Formula $l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For the detuned Fabry-Perot case we had that 
+\begin_inset Formula $\omega_{0}\tau=\theta+n\pi$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\Delta=\frac{\theta}{\tau}=\omega_{0}-\frac{n\pi}{\tau}=\omega_{0}-\frac{n\pi c}{L}=\omega_{0}-2\frac{n\pi c}{2L}=\omega_{0}-\omega_{c}
+\end{equation}
+
+\end_inset
+
+as 
+\begin_inset Formula $n\pi c/L=2n\pi\left(c/2L\right)$
+\end_inset
+
+ is just the cavity resonant frequency that is closest to the laser frequency.
+ Thus, we have that 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ maps to 
+\begin_inset Formula $\omega_{0}-\omega_{c}$
+\end_inset
+
+.
+ So from now on, we will call this quantity 
+\begin_inset Formula $\Delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+The mechanical resonant frequency
+\end_layout
+
+\begin_layout Standard
+In the semi-classical approach, we have a free mass, so 
+\begin_inset Formula $\omega_{m},$
+\end_inset
+
+ the intrinsic frequency of the oscillator is 0.
+\end_layout
+
+\begin_layout Paragraph
+Problem setup
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Variable in Hamiltonian approach
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Variable in semi-classical approach
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+What does it represent?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ \hat{a}_{out},\hat{a}_{out}^{\dagger}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ \beta_{c},\beta_{s}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Outgoing field
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ \hat{a}_{in},\hat{a}_{in}^{\dagger}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ \alpha_{c},\alpha_{s}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Input field
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ \hat{a},\hat{a}^{\dagger}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ \tilde{a}_{c},\tilde{a}_{s}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cavity field
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 \begin_inset Formula $L$
 \end_inset
 
-, i.e.
- 
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Length of cavity
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T/4\tau$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\omega_{m}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+We have a free mass so 
+\begin_inset Formula $\omega_{m}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Intrinsic frequency of the mechanical oscillator
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\omega_{0}-\omega_{c}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta=\theta/\tau$
+\end_inset
+
+; 
 \begin_inset Formula $\tau=L/c$
 \end_inset
 
-^
-\begin_inset Note Comment
-status collapsed
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
 
 \begin_layout Plain Layout
-usually we have that 
-\begin_inset Formula $2L$
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
 \end_inset
 
- is tuned to be integer multiple of wavelength, so 
-\begin_inset Formula $2L=l\lambda,$
+
+\end_layout
+
+\begin_layout Paragraph
+Moving from one c/s quadratures to complex quadratures
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+According to the two-photon formalism, in the narrow sideband limit, one
+ moves from an operator in the cosine/sine quadrature picture, 
+\begin_inset Formula $\left\{ \gamma_{c},\gamma_{s}\right\} $
 \end_inset
 
-where 
-\begin_inset Formula $l\in\mathbb{N}$
+ to a complex amplitude quadrature operator, 
+\begin_inset Formula $\left\{ d,d^{\dagger}\right\} $
 \end_inset
 
-.
- Hence,
+, via (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:sidesbands2photonAcAs"
+
+\end_inset
+
+): 
 \begin_inset Formula 
 \begin{equation}
-2L=l\frac{c}{f_{0}}=2\pi l\frac{c}{\omega_{0}},
+\boxed{\gamma_{c}\left(\Omega\right)=\frac{d\left(\omega+\Omega\right)+d^{\dagger}\left(\omega-\Omega\right)}{\sqrt{2}}}
 \end{equation}
 
 \end_inset
 
-where we have used 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:sillyRelationsFrequencyWavelength"
+and
+\begin_inset Formula 
+\begin{equation}
+\boxed{\gamma_{s}\left(\Omega\right)=\frac{d\left(\omega+\Omega\right)-d^{\dagger}\left(\omega-\Omega\right)}{i\sqrt{2}}},
+\end{equation}
 
 \end_inset
 
-, and so 
+where 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is the central frequency of the laser.
+ We can then also write that 
+\begin_inset Formula 
+\begin{equation}
+\gamma_{c}\left(\Omega\right)-i\gamma_{s}\left(\Omega\right)=\frac{2}{\sqrt{2}}d^{\dagger}\left(\omega-\Omega\right),
+\end{equation}
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{equation}
+\boxed{d^{\dagger}\left(\omega-\Omega\right)=\frac{\gamma_{c}\left(\Omega\right)-i\gamma_{s}\left(\Omega\right)}{\sqrt{2}}}.
+\end{equation}
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Similarly,
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{equation}
+\gamma_{c}\left(\Omega\right)+i\gamma_{s}\left(\Omega\right)=\frac{2}{\sqrt{2}}d\left(\omega+\Omega\right),
+\end{equation}
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{equation}
+\boxed{d\left(\omega+\Omega\right)=\frac{\gamma_{c}\left(\Omega\right)+i\gamma_{s}\left(\Omega\right)}{\sqrt{2}}}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Thus, the DC components of 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ give us 
 \begin_inset Formula 
 \begin{eqnarray}
-L & = & \pi l\frac{c}{\omega_{0}}\\
-\implies\omega_{0}\frac{L}{c} & = & \omega_{0}\tau=\pi l.
+\gamma_{c}\left(0\right) & = & \frac{d\left(\omega\right)+d^{\dagger}\left(\omega\right)}{\sqrt{2}}\\
+\gamma_{s}\left(0\right) & = & \frac{d\left(\omega\right)-d^{\dagger}\left(\omega\right)}{i\sqrt{2}}
 \end{eqnarray}
 
 \end_inset
 
-So to add detuning, we just add an extra phase to 
-\begin_inset Formula $\omega_{0}\tau$
-\end_inset
-
-.
- Call it 
-\begin_inset Formula $\theta$
-\end_inset
-
-, where 
-\begin_inset Formula $\theta\in\left(0,\pi\right)$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-.
- How does the detuning affect our formalism? We now have that 
-\begin_inset Formula 
-\begin{eqnarray*}
-\vec{a} & = & \sqrt{R}{\bf R}_{2\theta}\vec{b}+\sqrt{T}{\bf R}_{\theta}\vec{\alpha}\\
-\vec{\beta} & = & \sqrt{T}{\bf R}_{\theta}\vec{b}-\sqrt{R}\vec{\alpha}.
-\end{eqnarray*}
-
-\end_inset
-
-where
+so 
 \begin_inset Formula 
 \begin{equation}
-{\bf R}_{\theta}\equiv e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
-\cos\theta & -\sin\theta\\
-\sin\theta & \cos\theta
+d^{\dagger}\left(\omega\right)=d\left(\omega\right)-i\sqrt{2}\gamma_{s}\left(0\right)
+\end{equation}
+
+\end_inset
+
+and we obtain that
+\begin_inset Formula 
+\begin{eqnarray}
+\gamma_{c}\left(0\right) & = & \frac{d\left(\omega\right)+d\left(\omega\right)-i\sqrt{2}\gamma_{s}\left(0\right)}{\sqrt{2}}=\frac{2d\left(\omega\right)-i\sqrt{2}\gamma_{s}\left(0\right)}{\sqrt{2}}\\
+ & = & \sqrt{2}d\left(\omega\right)-i\gamma_{s}\left(0\right).
+\end{eqnarray}
+
+\end_inset
+
+Thus
+\begin_inset Formula 
+\begin{equation}
+d\left(\omega\right)=\frac{\gamma_{c}\left(0\right)+i\gamma_{s}\left(0\right)}{\sqrt{2}}.
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+d^{\dagger}\left(\omega\right)=\frac{\gamma_{c}\left(0\right)-i\gamma_{s}\left(0\right)}{\sqrt{2}}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Expected form of 
+\begin_inset Formula $\hat{a}_{out}$
+\end_inset
+
+ if we start in semi-classical picture
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Then, we must have that if, 
+\begin_inset Formula $\vec{\beta}=\mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right)$
+\end_inset
+
+, that 
+\begin_inset Formula 
+\begin{equation}
+\beta\left(\omega\right)=\frac{\left(\mathbf{H}\vec{\alpha}\right)_{1}\left(\Omega=0\right)+F_{1}\left(0\right)G\left(0\right)+i\left(\mathbf{H}\vec{\alpha}\right)_{2}\left(\Omega=0\right)+F_{2}\left(0\right)G\left(0\right)}{\sqrt{2}}.
+\end{equation}
+
+\end_inset
+
+What is 
+\begin_inset Formula $\mathbf{H}\left(\Omega=0\right)$
+\end_inset
+
+?? we had that, under certain assumptions, that 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}=\frac{1}{\mathcal{C}}\left(\begin{array}{cc}
+-\Omega^{2}\left(\Omega^{2}+\gamma^{2}-\Delta^{2}\right)-\Delta\iota_{c}/2 & 2\gamma\Delta\Omega^{2}\\
+-2\gamma\Delta\Omega^{2}+\gamma\iota_{c} & -\Omega^{2}\left(\Omega^{2}+\gamma^{2}-\Delta^{2}\right)-\Delta\iota_{c}/2
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+so this becomes
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}\left(0\right)=\frac{1}{\mathcal{C}\left(0\right)}\left(\begin{array}{cc}
+-\Delta\iota_{c}/2 & 0\\
+\gamma\iota_{c} & -\Delta\iota_{c}/2
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+\mathcal{C}\left(0\right)=\Delta\iota_{c}/2,
+\end{equation}
+
+\end_inset
+
+so we must have that
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}\left(0\right)=\left(\begin{array}{cc}
+-1 & 0\\
+2\gamma/\Delta & -1
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+so 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{H}\left(0\right)\vec{\alpha}\left(0\right)=\left(\begin{array}{c}
+-\alpha_{1}\left(0\right)\\
+2\alpha_{1}\left(0\right)\gamma/\Delta-\alpha_{2}\left(0\right)
 \end{array}\right).
 \end{equation}
 
 \end_inset
 
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-First of all, by the definition of the scattering matrix, we have that 
+Moreover we had that 
 \begin_inset Formula 
 \begin{equation}
-\left(\begin{array}{c}
-E_{out}^{'}\\
-\tilde{E}_{in}
-\end{array}\right)=\left(\begin{array}{cc}
-\sqrt{T} & -\sqrt{R}\\
-\sqrt{R} & \sqrt{T}
-\end{array}\right)\left(\begin{array}{c}
-\tilde{E}_{out}\\
-E_{in}^{'}
-\end{array}\right),
+\mathbf{F}=-\left(\begin{array}{c}
+\Delta\Omega\\
+(-\gamma+i\Omega)\Omega
+\end{array}\right)\frac{\sqrt{2\gamma\iota_{c}}}{\mathcal{C}g_{SQL}}
 \end{equation}
 
 \end_inset
 
-where 
-\begin_inset Formula $\tilde{E}_{in,out}$
+with 
+\begin_inset Formula $g_{SQL}=\Omega\sqrt{2\hbar m}$
 \end_inset
 
- are defined in 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename understandingDetunedCavity.svg
-	scale 80
+, so 
+\begin_inset Formula 
+\begin{eqnarray}
+\mathbf{F}\left(0\right) & = & -\left(\begin{array}{c}
+\Delta\\
+-\gamma
+\end{array}\right)\frac{2}{\Delta\iota_{c}}\sqrt{\frac{2\gamma\iota_{c}}{2\hbar m}}\\
+ & = & -\left(\begin{array}{c}
+\Delta\\
+-\gamma
+\end{array}\right)\frac{2}{\Delta}\sqrt{\frac{\gamma}{\hbar m\iota_{c}}}\\
+ & = & \left(\begin{array}{c}
+-2\\
+\gamma/\Delta
+\end{array}\right)\sqrt{\frac{\gamma}{\hbar m\iota_{c}}}.
+\end{eqnarray}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Introducing 
-\begin_inset Formula $\tilde{E}_{in}$
-\end_inset
-
- and 
-\begin_inset Formula $\tilde{E}_{out}$
-\end_inset
-
-
-\end_layout
+Thus, 
+\begin_inset Formula 
+\begin{eqnarray}
+\beta\left(\omega\right) & = & \frac{\left(\mathbf{H}\vec{\alpha}\right)_{1}\left(\Omega=0\right)+F_{1}\left(0\right)G\left(0\right)+i\left(\mathbf{H}\vec{\alpha}\right)_{2}\left(\Omega=0\right)+F_{2}\left(0\right)G\left(0\right)}{\sqrt{2}}.\\
+ & = & \frac{1}{\sqrt{2}}\left(-\alpha_{1}\left(0\right)-\alpha_{2}\left(0\right)+2\alpha_{1}\left(0\right)\frac{\gamma}{\Delta}+\sqrt{\frac{\gamma}{\hbar m\iota_{c}}}\left(\frac{\gamma}{\Delta}-2\right)G\left(0\right)\right)\\
+ & = & \frac{1}{\sqrt{2}}\left(\left(\frac{2\gamma}{\Delta}-1\right)\alpha_{1}\left(0\right)-\alpha_{2}\left(0\right)+\frac{1}{2}\sqrt{\frac{\gamma}{\hbar m\iota_{c}}}\left(\frac{2\gamma}{\Delta}-1\right)G\left(0\right)\right)
+\end{eqnarray}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
+Now, we have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\alpha_{1}\left(0\right) & = & \frac{\alpha\left(\omega\right)+\alpha^{\dagger}\left(\omega\right)}{\sqrt{2}}\\
+\alpha_{2}\left(0\right) & = & \frac{\alpha\left(\omega\right)-\alpha^{\dagger}\left(\omega\right)}{i\sqrt{2}}
+\end{eqnarray}
 
 \end_inset
 
-Hence, we have that (where 
-\begin_inset Formula $\tilde{a}$
+so
+\begin_inset Formula 
+\begin{eqnarray}
+\beta\left(\omega\right) & = & \frac{1}{\sqrt{2}}\left(\frac{1}{\sqrt{2}}\left[\left(\frac{2\gamma}{\Delta}-1\right)\left(\alpha\left(\omega\right)+\alpha^{\dagger}\left(\omega\right)\right)-i\alpha\left(\omega\right)+i\alpha^{\dagger}\left(\omega\right)\right]+\frac{1}{2}\sqrt{\frac{\gamma}{\hbar m\iota_{c}}}\left(\frac{2\gamma}{\Delta}-1\right)G\left(0\right)\right)\\
+ & = & \frac{1}{\sqrt{2}}\left(\frac{1}{\sqrt{2}}\left(\alpha\left(\omega\right)\left[\left(\frac{2\gamma}{\Delta}-1\right)-i\right]+\alpha^{\dagger}\left(\omega\right)\left[\left(\frac{2\gamma}{\Delta}-1\right)+i\right]\right)+\frac{1}{2}\sqrt{\frac{\gamma}{\hbar m\iota_{c}}}\left(\frac{2\gamma}{\Delta}-1\right)G\left(0\right)\right)\\
+ & = & \frac{1}{2}\left(\alpha\left(\omega\right)\left[\left(\frac{2\gamma}{\Delta}-1\right)-i\right]+\alpha^{\dagger}\left(\omega\right)\left[\left(\frac{2\gamma}{\Delta}-1\right)+i\right]\right)+\frac{1}{2}\sqrt{\frac{\gamma}{2\hbar m\iota_{c}}}\left(\frac{2\gamma}{\Delta}-1\right)G\left(0\right).
+\end{eqnarray}
+
+\end_inset
+
+Replacing 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ with 
+\begin_inset Formula $a_{in}$
 \end_inset
 
  and 
-\begin_inset Formula $\tilde{b}$
+\begin_inset Formula $\beta$
 \end_inset
 
- are the bosonic operators associated with 
-\begin_inset Formula $\tilde{E}_{in}$
+ with 
+\begin_inset Formula $a_{out}$
 \end_inset
 
- and 
-\begin_inset Formula $\tilde{E}_{out}$
+ we then expect that
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(\omega\right)\overset{?}{=}\frac{1}{2}\left(\hat{a}_{in}\left(\omega\right)\left[\left(\frac{2\gamma}{\Delta}-1\right)-i\right]+\hat{a}_{in}^{\dagger}\left(\omega\right)\left[\left(\frac{2\gamma}{\Delta}-1\right)+i\right]\right)+\frac{1}{2}\sqrt{\frac{\gamma}{2\hbar m\iota_{c}}}\left(\frac{2\gamma}{\Delta}-1\right)G\left(0\right).
+\end{equation}
+
 \end_inset
 
-, respectively)
+
+\end_layout
+
+\begin_layout Paragraph
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Attempt at keeping 
+\begin_inset Formula $a_{in}$
+\end_inset
+
+ as is
+\end_layout
+
+\begin_layout Standard
+The semi-classical approach gives us that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\vec{\beta}=\mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right),
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The better starting point might be
 \begin_inset Formula 
 \begin{eqnarray*}
 \vec{\tilde{a}} & = & \sqrt{R}\vec{\tilde{b}}+\sqrt{T}\vec{\alpha}\\
@@ -519,711 +922,2362 @@ Hence, we have that (where
 
 \end_inset
 
-Now, we have that 
-\begin_inset Formula $\tilde{E}_{in,out}$
-\end_inset
-
- and 
-\begin_inset Formula $E_{in,out}$
-\end_inset
-
- are simply related to each other.
- Specifically, we have that 
-\begin_inset Formula 
-\begin{eqnarray}
-E_{in}\left(t\right) & = & \tilde{E}_{in}\left(t-\frac{\theta}{\omega_{0}}\right)\\
-\tilde{E}_{out}\left(t\right) & = & E_{out}\left(t-\frac{\theta}{\omega_{0}}\right),
-\end{eqnarray}
-
-\end_inset
-
-where 
-\begin_inset Formula $\frac{\theta}{\omega_{0}}$
-\end_inset
-
- is the time taken to travel the distance that adds the phase 
-\begin_inset Formula $\theta$
-\end_inset
-
-.
- Hence, according to 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:quadraturesFreeSpacePropagation"
-
-\end_inset
-
- (let 
-\begin_inset Formula $\tau=\theta/\omega_{0}$
-\end_inset
-
-)
-\begin_inset Formula 
-\begin{equation}
-\left(\begin{array}{c}
-\hat{a}_{1}\left(\Omega\right)\\
-\hat{a}_{2}\left(\Omega\right)
-\end{array}\right)=e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
-\cos\theta & -\sin\theta\\
-\sin\theta & \cos\theta
-\end{array}\right)\left(\begin{array}{c}
-\tilde{a}_{1}\left(\Omega\right)\\
-\tilde{a}_{2}\left(\Omega\right)
-\end{array}\right)
-\end{equation}
-
-\end_inset
-
-and
-\begin_inset Formula 
-\begin{equation}
-\left(\begin{array}{c}
-\tilde{b}_{1}\left(\Omega\right)\\
-\tilde{b}_{2}\left(\Omega\right)
-\end{array}\right)=e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
-\cos\theta & -\sin\theta\\
-\sin\theta & \cos\theta
-\end{array}\right)\left(\begin{array}{c}
-\hat{b}_{1}\left(\Omega\right)\\
-\hat{b}_{2}\left(\Omega\right)
-\end{array}\right).
-\end{equation}
-
-\end_inset
-
-Letting
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula 
-\begin{equation}
-{\bf R}_{\theta}\equiv e^{i\theta\Omega/\omega_{0}}\left(\begin{array}{cc}
-\cos\theta & -\sin\theta\\
-\sin\theta & \cos\theta
-\end{array}\right),
-\end{equation}
-
-\end_inset
-
-we can write that 
-\begin_inset Formula 
-\begin{eqnarray}
-\vec{a} & = & {\bf R}_{\theta}\vec{\tilde{a}}\\
-\implies\vec{\tilde{a}} & = & {\bf R}_{\theta}^{-1}\vec{a}\\
-\vec{\tilde{b}} & = & {\bf R}_{\theta}\vec{b}.
-\end{eqnarray}
-
-\end_inset
-
-Hence, 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\vec{\tilde{a}} & = & \sqrt{R}\vec{\tilde{b}}+\sqrt{T}\vec{\alpha}\\
-\vec{\beta} & = & \sqrt{T}\vec{\tilde{b}}-\sqrt{R}\vec{\alpha}
-\end{eqnarray*}
-
-\end_inset
-
-becomes
-\begin_inset Formula 
-\begin{eqnarray*}
-{\bf R}_{\theta}^{-1}\vec{a} & = & \sqrt{R}{\bf R}_{\theta}\vec{b}+\sqrt{T}\vec{\alpha}\\
-\implies\vec{a} & = & \sqrt{R}\left({\bf R}_{\theta}\right)^{2}\vec{b}+\sqrt{T}\vec{\alpha}\\
-\vec{\beta} & = & \sqrt{T}{\bf R}_{\theta}\vec{b}-\sqrt{R}\vec{\alpha}.
-\end{eqnarray*}
-
-\end_inset
-
-Now, 
-\begin_inset Formula ${\bf R}_{\theta}$
-\end_inset
-
- is equal to a phase multiplied by the rotation matrix: 
-\begin_inset Formula ${\bf R}_{\theta}=e^{i\theta\Omega/\omega_{0}}R_{\theta,2D}$
-\end_inset
-
-, where 
-\begin_inset Formula $R_{\theta,2D}$
-\end_inset
-
- is the 2D rotation matrix.
- Hence, 
-\begin_inset Formula $\left({\bf R}_{\theta}\right)^{2}=e^{2i\theta\Omega/\omega_{0}}\left(R_{\theta,2D}\right)^{2}=e^{2i\theta\Omega/\omega_{0}}R_{2\theta,2D}={\bf R}_{2\theta}$
-\end_inset
-
-, thus obtaining the desired result.
-\end_layout
-
-\end_inset
-
-The input and output variables (
-\begin_inset Formula $\vec{\alpha}$
-\end_inset
-
- and 
-\begin_inset Formula $\vec{\beta}$
-\end_inset
-
-, respectively) can be directly related to each other by making use of the
- above linear system of equations and Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:outputQuadratures_freeSpaceNoise"
-
-\end_inset
-
-, which tells us that
-\begin_inset Formula 
-\begin{equation}
-\vec{b}\left(\Omega\right)=\mathbf{M}\vec{a}\left(\Omega\right)+\vec{D}G\left(\Omega\right),
-\end{equation}
-
-\end_inset
-
- *
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-We can relate the 
-\begin_inset Formula $\hat{E}_{out}$
-\end_inset
-
- to 
-\begin_inset Formula $\hat{E}_{in}$
-\end_inset
-
- as 
-\begin_inset Formula $\hat{E}_{out}\left(t\right)=\hat{E}_{in}\left(t-2\tau-2\hat{x}/c\right),$
-\end_inset
-
- and so 
-\begin_inset Formula $\vec{a}$
-\end_inset
-
- and 
-\begin_inset Formula $\vec{b}$
-\end_inset
-
- obey Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:outputQuadratures_freeSpaceNoise"
-
-\end_inset
-
-, which was derived for the propagation of the electric field in a single
- mirror setup (Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Free test mass example"
-
-\end_inset
-
-).
-\end_layout
-
-\end_inset
-
-where
-\begin_inset Formula 
-\begin{eqnarray*}
-\mathbf{M} & = & e^{2i\Omega\tau}\left[\begin{array}{cc}
-1 & 0\\
--\kappa & 1
-\end{array}\right]\\
-\vec{D} & = & -\frac{e^{i\Omega\tau}}{g_{SQL}}\left[\begin{array}{c}
-0\\
-\sqrt{2\kappa}
-\end{array}\right],
-\end{eqnarray*}
-
-\end_inset
-
-and
-\begin_inset Formula 
-\begin{eqnarray*}
-\kappa & = & \frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}\\
-g_{SQL} & = & \sqrt{2\hbar m\Omega^{2}}.
-\end{eqnarray*}
-
-\end_inset
-
-We obtain that
-\begin_inset Formula 
-\begin{equation}
-\vec{\beta}=\mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right),
-\end{equation}
-
-\end_inset
-
-where
-\begin_inset Formula 
-\begin{equation}
-\mathbf{H}=\left(\begin{array}{cc}
-\frac{\left(1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}\right)\sqrt{1-T}T+e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}T\text{Sin}[\theta](T\text{Cos}[\theta]+2\kappa\text{Sin}[\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}\\
--\frac{2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}T\text{Cos}[\theta](-2\kappa\text{Cos}[\theta]+T\text{Sin}[\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{\left(1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}\right)\sqrt{1-T}T+e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}{\left(-1+e^{4i(x+\theta\Omega\text{\ensuremath{\omega}0})}(-1+T)\right)T+2e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}
-\end{array}\right)
-\end{equation}
-
-\end_inset
-
-and
-\begin_inset Formula 
-\begin{equation}
-\vec{F}=\left(\begin{array}{c}
-0\\
-\frac{2\sqrt{2}e^{ix}\sqrt{\kappa}}{-\text{gSQL}+e^{2i(x+\theta\Omega\text{\ensuremath{\omega}0})}\text{gSQL}\sqrt{1-T}\text{Cos}[2\theta]}
-\end{array}\right)
-\end{equation}
-
-\end_inset
-
-where
-\begin_inset Formula 
-\begin{equation}
-x=\Omega\tau.
-\end{equation}
-
-\end_inset
-
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-We have that 
-\begin_inset Formula 
-\begin{eqnarray*}
-\vec{\beta} & = & \left(T{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}-\sqrt{R}\right)\vec{\alpha}+\sqrt{T}{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G\left(\Omega\right)\\
- & \equiv & \mathbf{H}\vec{\alpha}+\vec{F}G\left(\Omega\right).
-\end{eqnarray*}
-
-\end_inset
-
-*
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-We have that from Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:outputQuadratures_freeSpaceNoise"
-
-\end_inset
-
- that 
-\begin_inset Formula 
-\begin{eqnarray*}
-\vec{b}\left(\Omega\right) & = & e^{i2\Omega\tau}\left(\begin{array}{cc}
-1 & 0\\
-\kappa^{'} & 1
-\end{array}\right)\left(\begin{array}{c}
-a_{c}\left(\Omega\right)\\
-a_{s}\left(\Omega\right)
-\end{array}\right)+\left(\begin{array}{c}
-0\\
-e^{i\Omega\tau}\sqrt{2\kappa^{'}}
-\end{array}\right)\frac{G\left(\Omega\right)}{g_{SQL}}\\
- & \equiv & \mathbf{M}\vec{a}+\vec{D}G,
-\end{eqnarray*}
-
-\end_inset
-
-where 
-\begin_inset Formula $g_{SQL}=\sqrt{2\hbar m\Omega^{2}}.$
-\end_inset
-
- What is 
-\begin_inset Formula $\kappa^{'}$
-\end_inset
-
- equal to? It is equal to 
-\begin_inset Formula $4\kappa/T$
-\end_inset
-
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-In 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:outputQuadratures_freeSpaceNoise"
-
-\end_inset
-
-, it is equal to 
-\begin_inset Formula $\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}$
-\end_inset
-
-.
- However, now, 
-\begin_inset Formula $\vec{a}$
-\end_inset
-
- and 
-\begin_inset Formula $\vec{b}$
-\end_inset
-
- are inside the cavity (see 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:tuned fabry perot noise"
-
-\end_inset
-
-).
- Inside the cavity, at steady state, there will be a very large power stored
- in the cavity: 
-\begin_inset Formula $I_{c}=4I_{0}/T$
-\end_inset
-
- (see 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "rem:intracavity power LM T0"
-
-\end_inset
-
-) and so 
-\begin_inset Formula 
-\begin{eqnarray*}
-\kappa^{'} & = & \frac{8I_{c}\omega_{0}}{mc^{2}\Omega^{2}}\\
- & = & \frac{8\left(4I_{0}/T\right)\omega_{0}}{mc^{2}\Omega^{2}}\\
- & = & \frac{4\kappa}{T}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Plain Layout
-We have that 
-\begin_inset Formula $\vec{a}=\sqrt{R}{\bf R}_{2\theta}\vec{b}+\sqrt{T}{\bf R}_{\theta}\vec{\alpha}$
-\end_inset
-
- and so 
-\begin_inset Formula 
-\begin{eqnarray*}
-\vec{b}\left(\Omega\right) & = & \mathbf{M}\left(\sqrt{R}{\bf R}_{2\theta}\vec{b}+\sqrt{T}{\bf R}_{\theta}\vec{\alpha}\right)+\vec{D}G\\
-\implies\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)\vec{b} & = & \mathbf{M}{\bf R}_{\theta}\sqrt{T}\vec{\alpha}+\vec{D}G\\
-\vec{b} & = & \left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}\sqrt{T}\vec{\alpha}+\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G.
-\end{eqnarray*}
-
-\end_inset
-
-Then, we use that 
-\begin_inset Formula $\vec{\beta}=\sqrt{T}{\bf R}_{\theta}\vec{b}-\sqrt{R}\vec{\alpha}$
-\end_inset
-
- to obtain that 
-\begin_inset Formula 
-\begin{eqnarray*}
-\vec{\beta} & = & \sqrt{T}{\bf R}_{\theta}\left\{ \left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}\sqrt{T}\vec{\alpha}+\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G\right\} -\sqrt{R}\vec{\alpha}\\
- & = & \left(T{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\mathbf{M}{\bf R}_{\theta}-\sqrt{R}\right)\vec{\alpha}+\sqrt{T}{\bf R}_{\theta}\left(I-\mathbf{M}{\bf R}_{2\theta}\sqrt{R}\right)^{-1}\vec{D}G\\
- & \equiv & \mathbf{H}\vec{\alpha}+\vec{F}G.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Using Mathematica (
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-..
-\backslash
-
-\backslash
-Mathematica files
-\backslash
-
-\backslash
-detuned fabry perot output operators.nb
-\end_layout
-
-\end_inset
-
-), we solve 
-\begin_inset Formula $\mathbf{H}$
-\end_inset
-
- and 
-\begin_inset Formula $\vec{F}$
-\end_inset
-
- (from tag:
-\begin_inset Quotes erd
-\end_inset
-
-Hexact
-\begin_inset Quotes erd
-\end_inset
-
- and tag:
-\begin_inset Quotes erd
-\end_inset
-
-Fexact
-\begin_inset Quotes erd
-\end_inset
-
-)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-\begin_inset Formula $\Omega\ll\omega_{0}$
-\end_inset
-
- case
-\end_layout
-
-\begin_layout Standard
-Let us make the following assumption
-\end_layout
-
-\begin_layout Assumption
-Assume that the sideband frequencies 
-\begin_inset Formula $\Omega$
-\end_inset
-
- we are probing are much less than the input laser frequency 
-\begin_inset Formula $\omega_{0}$
-\end_inset
-
-.
- This is usually a very well justified assumption (e.g.
- LIGO*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-For LIGO 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "advancedLIGOdata"
-
-\end_inset
-
-, we have that
-\begin_inset Formula 
-\begin{equation}
-\Omega\sim10^{2}Hz
-\end{equation}
-
-\end_inset
-
-while the laser wavelength is around a 
-\begin_inset Formula $\mu m$
-\end_inset
-
- and so we have that 
-\begin_inset Formula $\omega_{0}\sim10^{14}\mbox{Hz}$
-\end_inset
-
-.
- So 
-\begin_inset Formula $\Omega/\omega_{0}\approx10^{-12}\approx0$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
-With this assumption, we have that 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $e^{i\theta\Omega/\omega_{0}}\approx1$
-\end_inset
-
- and so
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
- 
-\begin_inset Formula 
-\begin{equation}
-{\bf R}_{\theta}\approx\left(\begin{array}{cc}
-\cos\theta & -\sin\theta\\
-\sin\theta & \cos\theta
-\end{array}\right).
-\end{equation}
-
-\end_inset
-
-We would now have that 
-\begin_inset Formula 
-\begin{equation}
-\mathbf{H}=\left(\begin{array}{cc}
-\frac{e^{2ix}\left(2\sqrt{1-T}T\text{Cos}[2x]+(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])\right)}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{2e^{2ix}T\text{Sin}[\theta](T\text{Cos}[\theta]+2\kappa\text{Sin}[\theta])}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}\\
--\frac{2e^{2ix}T\text{Cos}[\theta](-2\kappa\text{Cos}[\theta]+T\text{Sin}[\theta])}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])} & \frac{e^{2ix}\left(2\sqrt{1-T}T\text{Cos}[2x]+(-2+T)(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])\right)}{\left(-1+e^{4ix}(-1+T)\right)T+2e^{2ix}\sqrt{1-T}(T\text{Cos}[2\theta]+2\kappa\text{Sin}[2\theta])}
-\end{array}\right)
-\end{equation}
-
-\end_inset
-
-and 
-\begin_inset Formula 
-\begin{equation}
-\mathbf{F}=\left(\begin{array}{c}
-0\\
-\frac{2\sqrt{2}e^{ix}\sqrt{\kappa}}{-\text{gSQL}+e^{2ix}\text{gSQL}\sqrt{1-T}\text{Cos}[2\theta]}
-\end{array}\right).
-\end{equation}
-
-\end_inset
-
-*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-We have used Mathematica (
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-..
-\backslash
-
-\backslash
-Mathematica files
-\backslash
-
-\backslash
-detuned fabry perot output operators.nb
-\end_layout
-
-\end_inset
-
-): tag:
-\begin_inset Quotes erd
-\end_inset
-
-Hass1
-\begin_inset Quotes erd
-\end_inset
-
- and tag:
-\begin_inset Quotes erd
-\end_inset
-
-Fass1
-\begin_inset Quotes erd
-\end_inset
-
-) 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-LIGO like setup and small detuned phase
-\end_layout
-
-\begin_layout Standard
-An advanced LIGO-like setup would also satisfy the following criteria
-\begin_inset CommandInset citation
-LatexCommand cite
-key "advancedLIGOdata"
-
+ Let us eliminate 
+\begin_inset Formula $\vec{\tilde{b}}$
 \end_inset
 
 :
 \end_layout
 
-\begin_layout Criterion
-All of 
-\begin_inset Formula $4\kappa/T$
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\vec{\tilde{a}}-\sqrt{T}\vec{\alpha}}{\sqrt{R}} & = & \vec{\tilde{b}}
+\end{eqnarray*}
+
 \end_inset
 
-, 
-\begin_inset Formula $\Omega\tau$
+and so 
+\begin_inset Formula 
+\begin{eqnarray}
+\vec{\beta} & = & \sqrt{T}\frac{\vec{\tilde{a}}-\sqrt{T}\vec{\alpha}}{\sqrt{R}}-\sqrt{R}\vec{\alpha}\\
+ & = & \sqrt{\frac{T}{R}}\vec{\tilde{a}}-\left(\sqrt{R}-\frac{T}{\sqrt{R}}\right)\vec{\alpha}.
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Analysis of Hamiltonian approach
+\end_layout
+
+\begin_layout Standard
+The Hamiltonian approach gives us that 
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(t\right)=-\hat{a}_{in}\left(t\right)+\sqrt{\gamma}\hat{a}\left(t\right).
+\end{equation}
+
+\end_inset
+
+Hence, after applying a Fourier Transform we have that
+\begin_inset Formula 
+\begin{equation}
+\boxed{\hat{a}_{out}\left(\omega\right)=-\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\hat{a}\left(\omega\right)}.
+\end{equation}
+
+\end_inset
+
+We have that in the Hamiltonian picture that
+\begin_inset Formula 
+\begin{equation}
+\frac{d}{dt}\hat{x}=\frac{\hat{P}}{m}
+\end{equation}
+
+\end_inset
+
+and so 
+\begin_inset Formula 
+\begin{equation}
+\frac{d^{2}}{dt^{2}}\hat{x}=\frac{\dot{\hat{P}}}{m}=\frac{1}{m}\left(\hbar G_{0}\hat{N}-m\omega_{m}^{2}\hat{x}\right)
+\end{equation}
+
+\end_inset
+
+Add the classical force 
+\begin_inset Formula $G\left(t\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\frac{d^{2}}{dt^{2}}\hat{x}=\frac{\dot{\hat{P}}}{m}=\frac{1}{m}\left(\hbar G_{0}\hat{N}-m\omega_{m}^{2}\hat{x}+G\left(t\right)\right).\label{eq:equationXtempCavityes}
+\end{equation}
+
+\end_inset
+
+Let us linearize 
+\begin_inset Formula $\hat{N}$
+\end_inset
+
+ (the field's amplitude is real):
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{N}\left(t\right) & = & a^{\dagger}\left(t\right)a\left(t\right)\\
+ & = & \left(\bar{a}^{*}+\delta a^{\dagger}\left(t\right)\right)\left(\bar{a}+\delta a\left(t\right)\right)
+\end{eqnarray}
+
+\end_inset
+
+Ignoring the zeroth (because we will be working with the linearized 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+) and second order term, we have that
+\begin_inset Formula 
+\begin{equation}
+\hat{N}\left(t\right)\approx\left(\bar{a}^{*}\delta a\left(t\right)+h.c.\right).
+\end{equation}
+
+\end_inset
+
+Thus, taking the Fourier transform of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:equationXtempCavityes"
+
+\end_inset
+
+, we obtain that
+\begin_inset Formula 
+\begin{equation}
+-\omega^{2}\hat{x}\left(\omega\right)=\frac{1}{m}\left(\hbar G_{0}\left[\bar{a}^{*}\delta a\left(\omega\right)+\bar{a}\delta a^{\dagger}\left(-\omega\right)\right]-m\omega_{m}^{2}\hat{x}\left(\omega\right)+G\left(\omega\right)\right)
+\end{equation}
+
+\end_inset
+
+because the Fourier transform of 
+\begin_inset Formula $\delta a^{\dagger}\left(t\right)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray}
+\mathcal{F}\left(\delta a^{\dagger}\left(t\right)\right) & = & \int e^{-i\omega t}\delta a^{\dagger}\left(t\right)dt\\
+ & = & \left(\int e^{i\omega t}\delta a\left(t\right)dt\right)^{\dagger}\\
+ & = & \left(\int e^{-i\left(-\omega\right)t}\delta a\left(t\right)dt\right)^{\dagger}\\
+ & = & \delta a^{\dagger}\left(-\omega\right).
+\end{eqnarray}
+
+\end_inset
+
+so 
+\begin_inset Formula 
+\begin{equation}
+\hat{x}\left(\omega\right)m\left(\omega_{m}^{2}-\omega^{2}\right)=\hbar G_{0}\left[\bar{a}^{*}\delta a\left(\omega\right)+\bar{a}\delta a^{\dagger}\left(-\omega\right)\right]+G\left(\omega\right)
+\end{equation}
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\begin{equation}
+\boxed{\hat{x}\left(\omega\right)=\frac{\hbar G_{0}\left[\bar{a}^{*}\delta a\left(\omega\right)+\bar{a}\delta a^{\dagger}\left(-\omega\right)\right]+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}}.
+\end{equation}
+
+\end_inset
+
+Note that,
+\begin_inset Formula 
+\begin{equation}
+\bar{a}^{*}\delta a\left(\omega\right)+\bar{a}\delta a^{\dagger}\left(-\omega\right)=\mbox{re}\left(\bar{a}\right)\left[\delta a\left(\omega\right)+\delta a^{\dagger}\left(-\omega\right)\right]-i\mbox{im}\left(\bar{a}\right)\left[\delta a\left(\omega\right)-\delta a^{\dagger}\left(-\omega\right)\right].
+\end{equation}
+
+\end_inset
+
+We had 
+\begin_inset Formula 
+\begin{equation}
+\overline{a}=\sqrt{\gamma}\frac{\overline{a}_{in}}{\gamma-i\Delta}
+\end{equation}
+
+\end_inset
+
+ We will choose a transformation so that 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ is real, thus considerably simplifying our calculations.
+ The rationale behind this is the following: The displacement transformation
+ that we are currently using is
+\begin_inset Formula 
+\begin{equation}
+D\left(\bar{a}\right)^{\dagger}a\left(t\right)D\left(\bar{a}\right)=\bar{a}+\delta a\left(t\right).
+\end{equation}
+
+\end_inset
+
+The linearization procedure works when 
+\begin_inset Formula $0=\left\langle \delta a\right\rangle $
+\end_inset
+
+.
+ Let us choose 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ in such a way that is multiplied by a global phase factor that conserves
+ its norm:
+\begin_inset Formula 
+\begin{equation}
+\bar{a}\rightarrow\frac{\sqrt{\gamma}}{\gamma^{2}+\Delta^{2}}\overline{a}_{in}.
+\end{equation}
+
+\end_inset
+
+Since 
+\begin_inset Formula 
+\begin{equation}
+\bar{a}_{before}=\left\langle a\right\rangle =\bar{a}_{after}e^{i\theta}
+\end{equation}
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{equation}
+\left|\left\langle a\right\rangle \right|=\bar{a}_{after}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+\left\langle D\left(\bar{a}_{after}\right)^{\dagger}a\left(t\right)D\left(\bar{a}_{after}\right)\right\rangle  & = & \left\langle a\right\rangle \\
+ & = & \bar{a}_{after}+\left\langle \delta a\left(t\right)\right\rangle 
+\end{eqnarray}
+
+\end_inset
+
+Hence, 
+\begin_inset Formula 
+\begin{equation}
+\left|\left\langle a\right\rangle \right|^{2}=\bar{a}_{after}^{2}+\left\langle \delta a\left(t\right)\right\rangle ^{2}=\bar{a}_{after}^{2}.
+\end{equation}
+
+\end_inset
+
+Hence, 
+\begin_inset Formula 
+\begin{equation}
+\left\langle \delta a\right\rangle =0
+\end{equation}
+
+\end_inset
+
+as wanted.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Annihilation operator equation of motion
+\end_layout
+
+\begin_layout Standard
+We need to be careful with Fourier transforms here as 
+\begin_inset Formula $\hat{x}\hat{a}$
+\end_inset
+
+ becomes a convolution:
+\begin_inset Formula 
+\begin{eqnarray}
+\mathcal{F}\left[x\left(t\right)a\left(t\right)\right]\left(\omega\right) & = & \int_{-\infty}^{\infty}x\left(s\right)a\left(\omega-s\right)ds.
+\end{eqnarray}
+
+\end_inset
+
+Let us linearize our equations to avoid this issue.
+ Our hamiltonian in the interaction picture is
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+H_{I,int}=\frac{\hat{P}^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\underbrace{\left(\omega_{c}-\omega_{0}\right)}_{-\Delta}\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+after linearization becomes
+\begin_inset Formula 
+\begin{eqnarray}
+H_{I,int} & = & \frac{\hat{P}^{2}}{2m}+\frac{1}{2}m\omega_{m}^{2}\hat{x}^{2}+\hbar\left(\omega_{c}-\omega_{0}\right)\bar{a}\left(\delta a+\delta a^{\dagger}\right)\\
+ &  & -\hbar G_{0}\hat{x}\bar{a}\left(\delta a+\delta a^{\dagger}\right)+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\left(\bar{a}+\delta a\right)+\hat{a}_{in}\left(t\right)\left(\bar{a}+\delta a^{\dagger}\right)\right)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+DO NOT LINEARIZE THE HAMILTONIAN AS YOU WILL BE TAKING ITS COMMUTATOR SO
+ SOMETHING LIKE 
+\begin_inset Formula $\hbar\left(\omega_{c}-\omega_{0}\right)\bar{a}\left(\delta a+\delta a^{\dagger}\right)$
+\end_inset
+
+ INSTEAD OF 
+\begin_inset Formula $\hbar\left(\omega_{c}-\omega_{0}\right)a^{\dagger}a$
+\end_inset
+
+ WILL GIVE THE WRONG RESULT.
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+where we have assumed that 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ is real and where we have assumed that we can take care of terms of order
+ 
+\begin_inset Formula $\bar{a}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Before we apply a Fourier transform, we have to be careful: is 
+\begin_inset Formula $\hat{a}_{int}\left(t\right)$
+\end_inset
+
+ evaluated at 
+\begin_inset Formula $t^{-}$
+\end_inset
+
+ or 
+\begin_inset Formula $t^{+}$
+\end_inset
+
+.
+ The interaction with the cavity happens instantaneously and as a result
+ at time 
+\begin_inset Formula $t^{+},$
+\end_inset
+
+ 
+\begin_inset Formula $\hat{a}_{in}$
+\end_inset
+
+ changes to 
+\begin_inset Formula $\hat{a}_{out}$
+\end_inset
+
+.
+ Eventually we will be using the relation 
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(t^{+}\right)=-\hat{a}_{in}\left(t^{-}\right)+\sqrt{\gamma}\hat{a}\left(t^{+}\right).
+\end{equation}
+
+\end_inset
+
+So we have to choose time 
+\begin_inset Formula $t^{+}$
+\end_inset
+
+ and as a result, we have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}\delta a\left(t\right) & = & i\left(\left(\omega_{c}-\omega_{0}\right)-G_{0}\hat{x}\right)\bar{a}-\sqrt{\gamma}\hat{a}_{in}\left(t^{+}\right)\\
+ & = & i\left(\left(\omega_{c}-\omega_{0}\right)-G_{0}\hat{x}\right)\bar{a}-\sqrt{\gamma}\hat{a}_{out}\left(t\right)\\
+ & = & i\left(\left(\omega_{c}-\omega_{0}\right)-G_{0}\hat{x}\right)\bar{a}-\gamma\hat{a}\left(t\right)+\sqrt{\gamma}\hat{a}_{in}\left(t^{-}\right).
+\end{eqnarray}
+
+\end_inset
+
+We have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}\hat{a} & = & \frac{i}{\hbar}\left[H,\hat{a}\right]=\frac{i}{\hbar}\left[-\hbar\Delta\hat{a}^{\dagger}\hat{a}-\hbar G_{0}\hat{x}\hat{a}^{\dagger}\hat{a}+i\hbar\sqrt{\gamma}\left(-\hat{a}_{in}^{\dagger}\left(t\right)\hat{a}+\hat{a}_{in}\left(t\right)\hat{a}^{\dagger}\right),\hat{a}\right]\\
+ & = & i\Delta\hat{a}+iG_{0}\hat{x}\hat{a}+i\times i\times-1\times\sqrt{\gamma}\hat{a}_{in}\left(t^{+}\right)\\
+ & = & i\Delta\hat{a}+iG_{0}\hat{x}\hat{a}+\sqrt{\gamma}\hat{a}_{in}\left(t^{+}\right)
+\end{eqnarray}
+
+\end_inset
+
+where we have made use of 
+\begin_inset Formula $\left[\hat{a}^{\dagger}\hat{a},\hat{a}\right]=-\hat{a}$
 \end_inset
 
  and 
-\begin_inset Formula $T$
+\begin_inset Formula $\left[\hat{a}^{\dagger},\hat{a}\right]=-I$
 \end_inset
 
- are small and are of approximately the same order - e.g.
- for LIGO they are both ~
-\begin_inset Formula $10^{-3}$
+.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+To linearize the system, we simply replace any operator 
+\begin_inset Formula $\hat{o}\left(t\right)$
+\end_inset
+
+ with the sum of a steady-state part and a small perturbed part, namely:
+ 
+\begin_inset Formula $\hat{o}\left(t\right)\rightarrow\overline{o}+\hat{o}\left(t\right)$
+\end_inset
+
+.
+ We assume that the mean displacement of the oscillator is equal to zero
+ with 
+\begin_inset Formula $\overline{x}=0$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+ Hence, 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}\delta\hat{a} & = & i\Delta\left(\bar{a}+\delta a\right)+iG_{0}\left(0+\delta x\right)\left(\overline{a}+\delta a\right)+\sqrt{\gamma}\hat{a}_{in}\left(t^{+}\right)\\
+ & \approx & i\Delta\left(\bar{a}+\delta a\right)+iG_{0}\delta x\overline{a}+\sqrt{\gamma}\hat{a}_{in}\left(t^{+}\right)
+\end{eqnarray}
+
+\end_inset
+
+Moreover, since 
+\begin_inset Formula $\hat{a}_{out}\left(t^{+}\right)=-\lim_{\Delta t\rightarrow0}\hat{a}_{in}\left(t+\Delta t\right)=-\hat{a}_{in}\left(t^{-}\right)+\sqrt{\gamma}\hat{a}\left(t^{+}\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}\delta\hat{a} & = & i\Delta\left(\bar{a}+\delta a\right)+iG_{0}\delta x\overline{a}-\sqrt{\gamma}\left[-\hat{a}_{in}\left(t^{+}\right)\right]\\
+ & = & i\Delta\left(\bar{a}+\delta a\right)+iG_{0}\delta x\overline{a}-\sqrt{\gamma}\left[-\hat{a}_{in}\left(t^{-}\right)+\sqrt{\gamma}\underbrace{\hat{a}\left(t^{+}\right)}_{\overline{a}+\delta a}\right]\\
+ & = & \overline{a}\left(i\Delta-\gamma\right)+\delta a\left(i\Delta-\gamma\right)+iG_{0}\delta x\overline{a}+\sqrt{\gamma}\hat{a}_{in}\left(t^{-}\right)
+\end{eqnarray}
+
+\end_inset
+
+Fourier transforming we have that
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}\delta\hat{a} & = & i\Delta\left(\bar{a}+\delta a\right)+iG_{0}\delta x\overline{a}-\sqrt{\gamma}\left[-\hat{a}_{in}\left(t^{+}\right)\right]\\
+ & = & i\Delta\left(\bar{a}+\delta a\right)+iG_{0}\delta x\overline{a}-\sqrt{\gamma}\left[-\hat{a}_{in}\left(t^{-}\right)+\sqrt{\gamma}\underbrace{\hat{a}\left(t^{+}\right)}_{\overline{a}+\delta a}\right]\\
+ & = & \overline{a}\left(i\Delta-\gamma\right)+\delta a\left(i\Delta-\gamma\right)+iG_{0}\delta x\overline{a}+\sqrt{\gamma}\hat{a}_{in}\left(t^{-}\right)\\
+ & = & \overline{a}\left(i\Delta-\gamma\right)+\delta a\left(i\Delta-\gamma\right)+iG_{0}\delta x\overline{a}+\sqrt{\gamma}\left(\overline{a}_{in}+\delta\hat{a}_{in}\right)
+\end{eqnarray}
+
+\end_inset
+
+Consider 
+\begin_inset Formula 
+\begin{equation}
+\overline{a}=\sqrt{\gamma}\frac{\overline{a}_{in}}{\gamma-i\Delta}
+\end{equation}
+
+\end_inset
+
+NEED TO SHOW ....
+ so 
+\begin_inset Formula 
+\begin{equation}
+-\delta a\left(\gamma-i\Delta\right)+\sqrt{\gamma}\overline{a}_{in}=0.
+\end{equation}
+
+\end_inset
+
+As a result 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}\delta\hat{a} & = & \delta a\left(i\Delta-\gamma\right)+iG_{0}\delta x\overline{a}+\sqrt{\gamma}\delta\hat{a}_{in}.
+\end{eqnarray}
+
+\end_inset
+
+Fourier transforming, we obtain 
+\begin_inset Formula 
+\begin{eqnarray}
+-i\Omega\delta\hat{a}\left(\Omega\right) & = & \delta a\left(\Omega\right)\left(i\Delta-\gamma\right)+iG_{0}\delta x\left(\Omega\right)\overline{a}+\sqrt{\gamma}\delta\hat{a}_{in}\left(\Omega\right).
+\end{eqnarray}
+
+\end_inset
+
+So
+\begin_inset Formula 
+\begin{eqnarray}
+\delta\hat{a}\left(\Omega\right)\left[\gamma-i\left(\Omega+\Delta\right)\right] & = & iG_{0}\delta x\left(\Omega\right)\overline{a}+\sqrt{\gamma}\delta\hat{a}_{in}\left(\Omega\right).
+\end{eqnarray}
+
+\end_inset
+
+Hence
+\begin_inset Formula 
+\begin{equation}
+\delta\hat{a}\left(\Omega\right)=\frac{iG_{0}\delta x\left(\Omega\right)\overline{a}+\sqrt{\gamma}\delta\hat{a}_{in}\left(\Omega\right)}{\gamma-i\left(\Omega+\Delta\right)}.
+\end{equation}
+
+\end_inset
+
+We had that 
+\begin_inset Formula 
+\begin{equation}
+\delta\hat{x}\left(\omega\right)=\frac{\hbar G_{0}\bar{a}\left[\delta a\left(\omega\right)+\delta a^{\dagger}\left(-\omega\right)\right]+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}
+\end{equation}
+
+\end_inset
+
+Hence, using that 
+\begin_inset Formula $a_{1}\left(\Omega\right)=\left[\delta a\left(\Omega\right)+\delta a^{\dagger}\left(-\Omega\right)\right]/\sqrt{2}$
+\end_inset
+
+, we obtain
+\begin_inset Formula 
+\begin{equation}
+\delta\hat{x}\left(\Omega\right)=\frac{\hbar G_{0}\bar{a}\sqrt{2}a_{1}\left(\Omega\right)+G\left(\Omega\right)}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}.
+\end{equation}
+
+\end_inset
+
+Consequently, 
+\begin_inset Formula 
+\begin{eqnarray}
+\delta\hat{a}\left(\Omega\right) & = & \frac{\overbrace{i}^{1/-i}G_{0}\overline{a}}{\left[\gamma-i\left(\Omega+\Delta\right)\right]m\left(\omega_{m}^{2}-\Omega^{2}\right)}\left[\hbar G_{0}\bar{a}\sqrt{2}a_{1}\left(\Omega\right)+G\left(\Omega\right)\right]+\frac{\sqrt{\gamma}\delta\hat{a}_{in}\left(\Omega\right)}{\gamma-i\left(\Omega+\Delta\right)}\\
+ & = & \frac{G_{0}\overline{a}}{\left[-i\gamma-\left(\Omega+\Delta\right)\right]m\left(\omega_{m}^{2}-\Omega^{2}\right)}\left[\hbar G_{0}\bar{a}\sqrt{2}a_{1}\left(\Omega\right)+G\left(\Omega\right)\right]+\frac{\sqrt{\gamma}\delta\hat{a}_{in}\left(\Omega\right)}{\gamma-i\left(\Omega+\Delta\right)}.
+\end{eqnarray}
+
+\end_inset
+
+And, 
+\begin_inset Formula 
+\begin{equation}
+\delta\hat{a}^{\dagger}\left(-\Omega\right)=\frac{G_{0}\overline{a}}{\left[i\gamma-\left(\Delta-\Omega\right)\right]m\left(\omega_{m}^{2}-\Omega^{2}\right)}\left[\hbar G_{0}\bar{a}\sqrt{2}a_{1}\left(\Omega\right)+G\left(\Omega\right)\right]+\frac{\sqrt{\gamma}\delta\hat{a}_{in}^{\dagger}\left(-\Omega\right)}{\gamma+i\left(\Delta-\Omega\right)}.
+\end{equation}
+
+\end_inset
+
+because 
+\begin_inset Formula $G\left(t\right)$
+\end_inset
+
+ is real so 
+\begin_inset Formula $G^{*}\left(-\Omega\right)=G\left(\Omega\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{1}^{\dagger}\left(-\Omega\right)=\left[\delta a^{\dagger}\left(-\Omega\right)+\delta a\left(\Omega\right)\right]/\sqrt{2}=a_{1}\left(\Omega\right)$
+\end_inset
+
+.
+ Moreover,
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{-i\gamma-\left(\Omega+\Delta\right)}+\frac{1}{i\gamma-\left(\Delta-\Omega\right)}=-\frac{2\Delta}{\Delta^{2}+\left(\gamma-i\Omega\right)^{2}}.
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+expr1 = 1/(-I*
+\backslash
+[Gamma] - (
+\backslash
+[CapitalOmega] + 
+\backslash
+[CapitalDelta]));
+\end_layout
+
+\begin_layout Plain Layout
+expr2 = 1/(I*
+\backslash
+[Gamma] - (-
+\backslash
+[CapitalOmega] + 
+\backslash
+[CapitalDelta]));
+\end_layout
+
+\begin_layout Plain Layout
+Assuming[{
+\backslash
+[Gamma] > 0, 
+\backslash
+[CapitalOmega] > 0, 
+\backslash
+[CapitalDelta] > 0}, FullSimplify[expr1 + expr2]]
+\end_layout
+
+\end_inset
+
+Consequently, 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{a_{1}\left(\Omega\right)}{\sqrt{2}} & = & \delta a\left(\Omega\right)+\delta a^{\dagger}\left(-\Omega\right)\\
+ & = & -\frac{2\Delta}{\Delta^{2}+\left(\gamma-i\Omega\right)^{2}}\frac{G_{0}\overline{a}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}\left[\hbar G_{0}\bar{a}\sqrt{2}a_{1}\left(\Omega\right)+G\left(\omega\right)\right]+\frac{\sqrt{\gamma}\delta\hat{a}_{in}\left(\Omega\right)}{\gamma-i\left(\Omega+\Delta\right)}+\frac{\sqrt{\gamma}\delta\hat{a}_{in}^{\dagger}\left(-\Omega\right)}{\gamma+i\left(\Delta-\Omega\right)}.
+\end{eqnarray}
+
+\end_inset
+
+Now, 
+\begin_inset Formula 
+\begin{equation}
+\frac{\sqrt{\gamma}}{\gamma\mp i\left(\Delta\pm\Omega\right)}=\frac{\sqrt{\gamma}}{\gamma^{2}+\left(\Delta\pm\Omega\right)^{2}}\left[\gamma\pm i\left(\Delta\pm\Omega\right)\right]
+\end{equation}
+
+\end_inset
+
+In addition,
+\begin_inset Formula 
+\begin{eqnarray}
+\delta a_{in}\left(\Omega\right) & = & \frac{\alpha_{1}\left(\Omega\right)+i\alpha_{2}\left(\Omega\right)}{\sqrt{2}},\\
+\delta a_{in}^{\dagger}\left(-\Omega\right) & = & \frac{\alpha_{1}\left(\Omega\right)-i\alpha_{2}\left(\Omega\right)}{\sqrt{2}}.
+\end{eqnarray}
+
+\end_inset
+
+Consequently,
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\sqrt{\gamma}\delta\hat{a}_{in}\left(\Omega\right)}{\gamma-i\left(\Omega+\Delta\right)}+\frac{\sqrt{\gamma}\delta\hat{a}_{in}^{\dagger}\left(-\Omega\right)}{\gamma+i\left(\Delta-\Omega\right)} & = & \frac{\alpha_{1}\left(\Omega\right)}{\sqrt{2}}\left[\frac{\sqrt{\gamma}}{\gamma-i\left(\Omega+\Delta\right)}+\frac{\sqrt{\gamma}}{\gamma+i\left(\Delta-\Omega\right)}\right]\\
+ &  & +i\frac{\alpha_{2}\left(\Omega\right)}{\sqrt{2}}\left[\frac{\sqrt{\gamma}}{\gamma-i\left(\Omega+\Delta\right)}-\frac{\sqrt{\gamma}}{\gamma+i\left(\Delta-\Omega\right)}\right].
+\end{eqnarray}
+
+\end_inset
+
+We have that
+\begin_inset Formula 
+\begin{equation}
+\frac{\sqrt{\gamma}}{\gamma-i\left(\Omega+\Delta\right)}+\frac{\sqrt{\gamma}}{\gamma+i\left(\Delta-\Omega\right)}=\frac{2\sqrt{\gamma}\left(\gamma-i\Omega\right)}{\Delta^{2}+\left(\gamma-i\Omega\right)^{2}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+expr1 = Sqrt[
+\backslash
+[Gamma]]/(
+\backslash
+[Gamma] - I (
+\backslash
+[CapitalOmega] + 
+\backslash
+[CapitalDelta]));
+\end_layout
+
+\begin_layout Plain Layout
+expr2 = Sqrt[
+\backslash
+[Gamma]]/(
+\backslash
+[Gamma] + I (-
+\backslash
+[CapitalOmega] + 
+\backslash
+[CapitalDelta]));
+\end_layout
+
+\begin_layout Plain Layout
+Assuming[{
+\backslash
+[Gamma] > 0, 
+\backslash
+[CapitalOmega] > 0, 
+\backslash
+[CapitalDelta] > 0}, FullSimplify[expr1 + expr2]]
+\end_layout
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+\frac{\sqrt{\gamma}}{\gamma-i\left(\Omega+\Delta\right)}+\frac{\sqrt{\gamma}}{\gamma+i\left(\Delta-\Omega\right)}=\frac{2i\sqrt{\gamma}\Delta}{\Delta^{2}+\left(\gamma-i\Omega\right)^{2}}.
+\end{equation}
+
+\end_inset
+
+Hence,
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\sqrt{\gamma}\delta\hat{a}_{in}\left(\Omega\right)}{\gamma-i\left(\Omega+\Delta\right)}+\frac{\sqrt{\gamma}\delta\hat{a}_{in}^{\dagger}\left(-\Omega\right)}{\gamma+i\left(\Delta-\Omega\right)} & = & \frac{\alpha_{1}\left(\Omega\right)}{\sqrt{2}}\frac{2\sqrt{\gamma}\left(\gamma-i\Omega\right)}{\Delta^{2}+\left(\gamma-i\Omega\right)^{2}}+i\frac{\alpha_{2}\left(\Omega\right)}{\sqrt{2}}\frac{2i\sqrt{\gamma}\Delta}{\Delta^{2}+\left(\gamma-i\Omega\right)^{2}}\\
+ & = & \frac{\sqrt{2\gamma}}{\Delta^{2}+\left(\gamma-i\Omega\right)^{2}}\left[\alpha_{1}\left(\Omega\right)\left(\gamma-i\Omega\right)-\alpha_{2}\left(\Omega\right)\Delta\right].
+\end{eqnarray}
+
+\end_inset
+
+Plugging back into the expression for 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+, we have that
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{a_{1}\left(\Omega\right)}{\sqrt{2}} & = & -\frac{2\Delta}{\Delta^{2}+\left(\gamma-i\Omega\right)^{2}}\frac{G_{0}\overline{a}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}\left[\hbar G_{0}\bar{a}\sqrt{2}a_{1}\left(\Omega\right)+G\left(\Omega\right)\right]+\frac{\sqrt{2\gamma}}{\Delta^{2}+\left(\gamma-i\Omega\right)^{2}}\left[\alpha_{1}\left(\Omega\right)\left(\gamma-i\Omega\right)-\alpha_{2}\left(\Omega\right)\Delta\right].
+\end{eqnarray}
+
+\end_inset
+
+As a result,
+\begin_inset Formula 
+\begin{eqnarray}
+a_{1}\left(\Omega\right) & = & -\frac{2\sqrt{2}\Delta G_{0}\overline{a}\left[\hbar G_{0}\bar{a}\sqrt{2}a_{1}\left(\Omega\right)+G\left(\Omega\right)\right]}{\left[\Delta^{2}+\left(\gamma-i\Omega\right)^{2}\right]m\left(\omega_{m}^{2}-\Omega^{2}\right)}+\frac{2\sqrt{\gamma}}{\Delta^{2}+\left(\gamma-i\Omega\right)^{2}}\left[\alpha_{1}\left(\Omega\right)\left(\gamma-i\Omega\right)-\alpha_{2}\left(\Omega\right)\Delta\right].
+\end{eqnarray}
+
+\end_inset
+
+So
+\begin_inset Formula 
+\begin{equation}
+a_{1}\left(\Omega\right)\left[1+\frac{4\Delta\hbar G_{0}^{2}\overline{a}^{2}}{\left[\Delta^{2}+\left(\gamma-i\Omega\right)^{2}\right]m\left(\omega_{m}^{2}-\omega^{2}\right)}\right]=-\frac{2\sqrt{2}\Delta G_{0}\overline{a}G\left(\Omega\right)}{\left[\Delta^{2}+\left(\gamma-i\Omega\right)^{2}\right]m\left(\omega_{m}^{2}-\Omega^{2}\right)}+\frac{2\sqrt{\gamma}\left[\alpha_{1}\left(\Omega\right)\left(\gamma-i\Omega\right)-\alpha_{2}\left(\Omega\right)\Delta\right]}{\Delta^{2}+\left(\gamma-i\Omega\right)^{2}}.
+\end{equation}
+
+\end_inset
+
+Now
+\begin_inset Formula 
+\begin{equation}
+1+\frac{4\Delta\hbar G_{0}^{2}\overline{a}^{2}}{\left[\Delta^{2}+\left(\gamma-i\Omega\right)^{2}\right]m\left(\omega_{m}^{2}-\omega^{2}\right)}=\frac{4\Delta\hbar G_{0}^{2}\overline{a}^{2}+\left[\Delta^{2}+\left(\gamma-i\Omega\right)^{2}\right]m\left(\omega_{m}^{2}-\omega^{2}\right)}{\left[\Delta^{2}+\left(\gamma-i\Omega\right)^{2}\right]m\left(\omega_{m}^{2}-\Omega^{2}\right)}.
+\end{equation}
+
+\end_inset
+
+Let
+\begin_inset Formula 
+\begin{equation}
+\xi=4\Delta\hbar G_{0}^{2}\overline{a}^{2}+\left[\Delta^{2}+\left(\gamma-i\Omega\right)^{2}\right]m\left(\omega_{m}^{2}-\Omega^{2}\right),
+\end{equation}
+
+\end_inset
+
+then we obtain that 
+\begin_inset Formula 
+\begin{equation}
+a_{1}\left(\Omega\right)=\frac{1}{\mathcal{\xi}}\left[-2\sqrt{2}\Delta G_{0}\overline{a}G\left(\Omega\right)+2\sqrt{\gamma}\left(\alpha_{1}\left(\Omega\right)\left(\gamma-i\Omega\right)-\alpha_{2}\left(\Omega\right)\Delta\right)m\left(\omega_{m}^{2}-\Omega^{2}\right)\right].
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, 
+\begin_inset Formula 
+\begin{equation}
+\beta_{1}\left(\Omega\right)=-\alpha_{1}\left(\Omega\right)+\sqrt{\gamma}a_{1}\left(\Omega\right).
+\end{equation}
+
+\end_inset
+
+So
+\begin_inset Formula 
+\begin{equation}
+\beta_{1}\left(\Omega\right)=\frac{1}{\mathcal{\xi}}\left[-2\sqrt{2\gamma}\Delta G_{0}\overline{a}G\left(\Omega\right)+2\gamma\left(\alpha_{1}\left(\Omega\right)\left(\gamma-i\Omega-\frac{\xi}{2\gamma m\left(\omega_{m}^{2}-\Omega^{2}\right)}\right)-\alpha_{2}\left(\Omega\right)\Delta\right)m\left(\omega_{m}^{2}-\Omega^{2}\right)\right].
+\end{equation}
+
+\end_inset
+
+But
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\xi}{2\gamma m\left(\omega_{m}^{2}-\Omega^{2}\right)} & = & \frac{4\Delta\hbar G_{0}^{2}\overline{a}^{2}}{2\gamma m\left(\omega_{m}^{2}-\Omega^{2}\right)}+\frac{\left[\Delta^{2}+\left(\gamma-i\Omega\right)^{2}\right]}{2\gamma}\\
+ & = & \frac{4\Delta\hbar G_{0}^{2}\overline{a}^{2}}{2\gamma m\left(\omega_{m}^{2}-\Omega^{2}\right)}+\frac{\left[\Delta^{2}+\gamma^{2}-2i\gamma\Omega-\Omega^{2}\right]}{2\gamma}.
+\end{eqnarray}
+
+\end_inset
+
+So
+\begin_inset Formula 
+\begin{eqnarray}
+\beta_{1}\left(\Omega\right) & = & \frac{1}{\mathcal{\xi}}\left[-2\sqrt{2\gamma}\Delta G_{0}\overline{a}G\left(\Omega\right)+\left(\alpha_{1}\left(\Omega\right)\left(2\gamma^{2}-2i\gamma\Omega-\frac{4\Delta\hbar G_{0}^{2}\overline{a}^{2}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}-\left(\Delta^{2}+\gamma^{2}-2i\gamma\Omega-\Omega^{2}\right)\right)-\alpha_{2}\left(\Omega\right)\Delta\right)m\left(\omega_{m}^{2}-\Omega^{2}\right)\right]\\
+ & = & \frac{1}{\mathcal{\xi}}\left[-2\sqrt{2\gamma}\Delta G_{0}\overline{a}G\left(\Omega\right)+\left(\alpha_{1}\left(\Omega\right)\left(\gamma^{2}+\Omega^{2}-\Delta^{2}-\frac{4\Delta\hbar G_{0}^{2}\overline{a}^{2}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}\right)-\alpha_{2}\left(\Omega\right)\Delta\right)m\left(\omega_{m}^{2}-\Omega^{2}\right)\right]\\
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Analysis of 
+\begin_inset Formula $\xi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us analyze 
+\begin_inset Formula $\xi$
+\end_inset
+
+ further.
+ We have
+\begin_inset Formula 
+\begin{eqnarray}
+\mathcal{\xi} & = & 4\Delta\hbar G_{0}^{2}\overline{a}^{2}-\left[\Delta^{2}-\overbrace{-}^{i^{2}}\left(\gamma-i\Omega\right)^{2}\right]m\left(\Omega^{2}-\omega_{m}^{2}\right)\\
+ & = & 4\Delta\hbar G_{0}^{2}\overline{a}^{2}-\left[\Delta^{2}-\left(i\gamma+\Omega\right)^{2}\right]m\left(\Omega^{2}-\omega_{m}^{2}\right)\\
+ & = & 4\Delta\hbar G_{0}^{2}\overline{a}^{2}+\left[\left(i\gamma+\Omega\right)^{2}-\Delta^{2}\right]m\left(\Omega^{2}-\omega_{m}^{2}\right).
+\end{eqnarray}
+
+\end_inset
+
+In addition, we had that
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\overline{a}=\sqrt{\gamma}\frac{\overline{a}_{in}}{\gamma-i\Delta}
+\end{equation}
+
+\end_inset
+
+And we have that 
+\begin_inset Formula 
+\begin{equation}
+\overline{a}_{in}=\sqrt{\frac{I_{0}}{\hbar\omega_{0}}}.
+\end{equation}
+
+\end_inset
+
+Hence,
+\begin_inset Formula 
+\begin{equation}
+\left|\overline{a}\right|^{2}=\frac{\gamma}{\gamma^{2}+\Delta^{2}}\frac{I_{0}}{\hbar\omega_{0}}.
+\end{equation}
+
+\end_inset
+
+On the other hand, 
+\begin_inset Formula $G_{0}=\omega_{c}/d$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma=Tc/4L$
+\end_inset
+
+, so 
+\begin_inset Formula 
+\begin{eqnarray}
+\hbar G_{0}^{2}\left|\overline{a}\right|^{2} & = & \frac{\gamma I_{0}}{\gamma^{2}+\Delta^{2}}\frac{\omega_{c}^{2}}{\omega_{0}}\frac{1}{d^{2}}\\
+ & \approx & \frac{I_{0}}{\gamma}\frac{\omega_{c}^{2}}{\omega_{0}}\frac{1}{d}\approx\frac{I_{0}}{\gamma}\frac{\omega_{0}}{d^{2}}\\
+ & = & \frac{4\tau}{T}\frac{I_{0}\omega_{0}}{d}=\frac{4d/c}{T}\frac{I_{0}\omega_{0}}{d^{2}}=\frac{4}{T}\frac{I_{0}\omega_{0}}{dc}.
+\end{eqnarray}
+
+\end_inset
+
+What is 
+\begin_inset Formula 
+\begin{equation}
+\frac{\omega_{c}^{2}}{\omega_{0}}=\frac{\left(\omega_{0}-\Delta\right)^{2}}{\omega_{0}}=\omega_{0}\left(1-\frac{\Delta}{\omega_{0}}\right)^{2}\approx\omega_{0}\left(1-\frac{\Delta}{2\omega_{0}}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{\gamma^{2}}{\gamma^{2}+\Delta^{2}}
+\end{equation}
+
+\end_inset
+
+Hence
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{\xi} & = & 4\Delta\frac{4}{T}\frac{I_{0}\omega_{0}}{dc}+\left[\left(i\gamma+\Omega\right)^{2}-\Delta^{2}\right]m\left(\Omega^{2}-\omega_{m}^{2}\right)\\
+ & = & m\left(4\Delta\frac{4}{T}\frac{I_{0}\omega_{0}}{mdc}+\left[\left(i\gamma+\Omega\right)^{2}-\Delta^{2}\right]\left(\Omega^{2}-\omega_{m}^{2}\right)\right)\\
+ & = & m\left(\Delta\frac{4}{T}\frac{8I_{0}\omega_{0}}{mdc}\frac{1}{2}+\left[\left(i\gamma+\Omega\right)^{2}-\Delta^{2}\right]\left(\Omega^{2}-\omega_{m}^{2}\right)\right)\\
+ & = & m\mathcal{C}.
+\end{eqnarray*}
+
+\end_inset
+
+Consequently, 
+\begin_inset Formula 
+\begin{equation}
+a_{1}\left(\Omega\right)=\frac{1}{\mathcal{\mathcal{C}}}\left[-2\sqrt{2}\Delta\frac{G_{0}\overline{a}}{m}G\left(\Omega\right)+2\sqrt{\gamma}\left(\alpha_{1}\left(\Omega\right)\left(\gamma-i\Omega\right)-\alpha_{2}\left(\Omega\right)\Delta\right)\left(\omega_{m}^{2}-\Omega^{2}\right)\right].
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, we use that
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(t^{+}\right)=-\hat{a}_{in}\left(t^{-}\right)+\sqrt{\gamma}\hat{a}\left(t^{+}\right).
+\end{equation}
+
+\end_inset
+
+Fourier transforming the above relation, we obtain that
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(\omega\right)=-\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\hat{a}\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+Linearizing we have that 
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(\omega\right)=-\bar{a}_{in}+\sqrt{\gamma}\bar{a}-\delta\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\delta a\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+However, when we linearize 
+\begin_inset Formula $a_{out}$
+\end_inset
+
+, we obtain 
+\begin_inset Formula 
+\begin{equation}
+a_{out}\left(\omega\right)=-\bar{a}_{in}+\sqrt{\gamma}\bar{a}+\delta a_{out}.
+\end{equation}
+
+\end_inset
+
+This is simply because 
+\begin_inset Formula $\hat{a}_{out}$
+\end_inset
+
+ is defined through 
+\begin_inset Formula $\hat{a}_{out}\left(t^{+}\right)=-\hat{a}_{in}\left(t^{-}\right)+\sqrt{\gamma}\hat{a}\left(t^{+}\right)$
+\end_inset
+
+ so after all of the displacement transformations have been made, it makes
+ sense to define 
+\begin_inset Formula $\bar{a}_{out}$
+\end_inset
+
+ to be 
+\begin_inset Formula $\bar{a}_{out}=-\bar{a}_{in}+\sqrt{\gamma}\bar{a}$
+\end_inset
+
+.
+ Hence, we now obtain that
+\begin_inset Formula 
+\begin{equation}
+\delta a_{out}\left(\omega\right)=-\delta\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\delta a\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+Consequently,
+\begin_inset Formula 
+\begin{equation}
+\beta_{1}\left(\Omega\right)=-\alpha_{1}\left(\Omega\right)+\frac{\gamma}{\sqrt{2}}\left(\delta a\left(\Omega\right)+\delta a^{\dagger}\left(-\Omega\right)\right)=-\alpha_{1}\left(\Omega\right)+\frac{\gamma}{\sqrt{2}}a_{1}\left(\Omega\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+The Fourier Transform
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+-i\omega\delta a\left(\omega\right) & = & i\left(\left(\omega_{c}-\omega_{0}\right)-G_{0}\hat{x}\left(\omega\right)\right)\bar{a}+\sqrt{\gamma}\hat{a}_{in}\left(\omega\right)-\gamma\hat{a}\left(\omega\right)\\
+ & = & i\left(\left(\omega_{c}-\omega_{0}\right)-G_{0}\frac{\hbar G_{0}\bar{a}\left[\delta a\left(\omega\right)+\delta a^{\dagger}\left(-\omega\right)\right]+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\bar{a}+\sqrt{\gamma}\hat{a}_{in}\left(\omega\right)-\gamma\hat{a}\left(\omega\right)\\
+ & = & i\left(\underbrace{\left(\omega_{c}-\omega_{0}\right)}_{-\Delta}-G_{0}\frac{\hbar G_{0}\bar{a}\left[\delta a\left(\omega\right)+\delta a^{\dagger}\left(-\omega\right)\right]+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}+i\gamma\right)\bar{a}+\sqrt{\gamma}\hat{a}_{in}\left(\omega\right)-\gamma\delta a\left(\omega\right).
+\end{eqnarray}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{equation}
+\delta a\left(\omega\right)=\left(\Delta+G_{0}\frac{\hbar G_{0}\bar{a}\left[\delta a\left(\omega\right)+\delta a^{\dagger}\left(-\omega\right)\right]+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}-i\gamma\right)\frac{\bar{a}}{\omega}+i\frac{\sqrt{\gamma}}{\omega}\hat{a}_{in}\left(\omega\right)-i\frac{\gamma}{\omega}\delta a\left(\omega\right)
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray}
+\delta a\left(\omega\right)\left(1+i\frac{\gamma}{\omega}\right) & = & \delta a\left(\omega\right)\frac{\omega+i\gamma}{\omega}\\
+ & = & \left(\Delta+G_{0}\frac{\hbar G_{0}\bar{a}\left[\delta a\left(\omega\right)+\delta a^{\dagger}\left(-\omega\right)\right]+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}-i\gamma\right)\frac{\bar{a}}{\omega}+\underbrace{i}_{1/-i}\frac{\sqrt{\gamma}}{\omega}\hat{a}_{in}\left(\omega\right).
+\end{eqnarray}
+
+\end_inset
+
+Consequently,
+\begin_inset Formula 
+\begin{equation}
+\boxed{\delta a\left(\Omega\right)=\left(\Delta+G_{0}\frac{\hbar G_{0}\bar{a}\left[\delta a\left(\Omega\right)+\delta a^{\dagger}\left(-\Omega\right)\right]+G\left(\Omega\right)}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}-i\gamma\right)\frac{\bar{a}}{\Omega+i\gamma}+\frac{\sqrt{\gamma}}{\gamma-i\Omega}\hat{a}_{in}\left(\Omega\right)}
+\end{equation}
+
+\end_inset
+
+and (using that 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ is assumed to be real and 
+\begin_inset Formula $G\left(t\right)$
+\end_inset
+
+ is real so 
+\begin_inset Formula $G^{*}\left(-\Omega\right)=G\left(\Omega\right)$
+\end_inset
+
+; also 
+\begin_inset Formula $G\left(\Omega\right)$
+\end_inset
+
+ is non-zero at 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ because we are working in the interaction picture (specifically, we are
+ working in a rotating frame at frequency 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+, which is slightly detuned from the cavity's intrinsic frequency 
+\begin_inset Formula $\omega_{c}$
+\end_inset
+
+) for 
+\begin_inset Formula $a$
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{equation}
+\boxed{\delta a^{\dagger}\left(-\Omega\right)=\left(\Delta+G_{0}\frac{\hbar G_{0}\bar{a}\left[\delta a\left(\Omega\right)+\delta a^{\dagger}\left(-\Omega\right)\right]+G\left(\Omega\right)}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}+i\gamma\right)\frac{-\bar{a}}{\Omega+i\gamma}+\frac{\sqrt{\gamma}}{\gamma-i\Omega}\hat{a}_{in}^{\dagger}\left(-\Omega\right)}.
+\end{equation}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula 
+\begin{eqnarray}
+\delta a\left(\Omega\right)+\delta a^{\dagger}\left(-\Omega\right) & = & \frac{\sqrt{\gamma}}{\gamma-i\Omega}\left(\hat{a}_{in}\left(\Omega\right)+\hat{a}_{in}^{\dagger}\left(-\Omega\right)\right)\\
+ &  & +\frac{\bar{a}}{\Omega+i\gamma}\left(\frac{\hbar G_{0}^{2}\bar{a}\left(\delta a\left(\Omega\right)+\delta a^{\dagger}\left(-\Omega\right)-\delta a\left(\Omega\right)-\delta a^{\dagger}\left(-\Omega\right)\right)}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}-2i\gamma\right)\\
+ & = & \frac{\sqrt{\gamma}}{\gamma-i\Omega}\left(\hat{a}_{in}\left(\Omega\right)+\hat{a}_{in}^{\dagger}\left(-\Omega\right)\right)-\frac{2i\gamma\bar{a}}{\Omega+i\gamma}.
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Paragraph
+Including the detuning
+\end_layout
+
+\begin_layout Plain Layout
+After the interaction picture transformation to 
+\begin_inset Formula $-\Delta=\omega_{0}-\omega_{c}$
+\end_inset
+
+, we have that
+\begin_inset Formula 
+\begin{eqnarray*}
+\delta a\left(-\Delta+\Omega\right) & = & \left(\Delta+G_{0}\frac{\hbar G_{0}\bar{a}\left[\delta a\left(\Omega-\Delta\right)+\delta a^{\dagger}\left(-\Omega+\Delta\right)\right]+G\left(\Omega-\Delta\right)}{m\left(\omega_{m}^{2}-\left(\Omega-\Delta\right)^{2}\right)}-i\gamma\right)\frac{\bar{a}}{\left(\Omega-\Delta\right)+i\gamma}\\
+ &  & +\frac{\sqrt{\gamma}}{\gamma-i\left(\Omega-\Delta\right)}\hat{a}_{in}\left(\Omega\right)
+\end{eqnarray*}
+
+\end_inset
+
+Call 
+\begin_inset Formula $\Omega-\Delta\equiv\xi$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+\delta a\left(\xi\right) & = & \left(\Delta+G_{0}\frac{\hbar G_{0}\bar{a}\left[\delta a\left(\xi\right)+\delta a^{\dagger}\left(-\xi\right)\right]+G\left(\Omega-\Delta\right)}{m\left(\omega_{m}^{2}-\left(\Omega-\Delta\right)^{2}\right)}-i\gamma\right)\frac{\bar{a}}{\left(\Omega-\Delta\right)+i\gamma}\\
+ &  & +\frac{\sqrt{\gamma}}{\gamma-i\left(\Omega-\Delta\right)}\hat{a}_{in}\left(\Omega\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+WRONG
+\end_layout
+
+\begin_layout Plain Layout
+We have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}_{in}\left(\Omega\right) & = & \hat{a}_{in}\left(\Delta+\left(\Omega-\Delta\right)\right)=\frac{\alpha_{1}\left(\Omega-\Delta\right)+i\alpha_{2}\left(\Omega-\Delta\right)}{\sqrt{2}},\\
+\hat{a}_{in}^{\dagger}\left(-\Omega\right) & = & \hat{a}_{in}^{\dagger}\left(\Delta-\left(\Omega+\Delta\right)\right)=\frac{\alpha_{1}\left(\Omega+\Delta\right)+i\alpha_{2}\left(\Omega+\Delta\right)}{\sqrt{2}},
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Thus, 
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{in}\left(\Omega\right)+\hat{a}_{in}^{\dagger}\left(-\Omega\right)=\frac{\alpha\left(\Omega-\Delta\right)+\alpha_{1}\left(\Omega+\Delta\right)+i\left(\alpha_{2}\left(\Omega-\Delta\right)+\alpha_{2}\left(\Omega+\Delta\right)\right)}{\sqrt{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We have that 
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}_{in}\left(\Omega\right)+\hat{a}_{in}^{\dagger}\left(-\Omega\right) & = & 2\bar{a}_{in}+\delta\hat{a}_{in}\left(\Omega\right)+\delta\hat{a}_{in}^{\dagger}\left(-\Omega\right)\\
+ & = & 2\bar{a}_{in}+\alpha_{1}\left(\Omega\right)\sqrt{2},
+\end{eqnarray}
+
+\end_inset
+
+because the central frequency of 
+\begin_inset Formula $\hat{a}_{in}$
+\end_inset
+
+ (after the interaction picture transformation with 
+\begin_inset Formula $H_{0}=\hbar\omega_{0}a^{\dagger}a$
+\end_inset
+
+) is 0.
+ Thus,
+\begin_inset Formula 
+\begin{equation}
+a_{1}\left(\Omega\right)=\frac{\sqrt{\gamma}}{\gamma-i\Omega}\left(2\bar{a}_{in}+\alpha_{1}\left(\Omega\right)\sqrt{2}\right)-\frac{2i\gamma\bar{a}}{\Omega+i\gamma}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boxed{a_{1}\left(\Omega\right)=\frac{\sqrt{\gamma}}{\gamma-i\Omega}\left(2\bar{a}_{in}+\alpha_{1}\left(\Omega\right)\sqrt{2}\right)-\frac{2i\gamma\bar{a}}{\Omega+i\gamma}},\label{eq:expressionA1hamilt}
+\end{equation}
+
+\end_inset
+
+where we defined
+\begin_inset Formula 
+\begin{eqnarray}
+a_{1}\left(\Omega\right) & \equiv & \delta a\left(\Omega\right)+\delta a^{\dagger}\left(-\Omega\right),\\
+a_{2}\left(\Omega\right) & \equiv & \delta a\left(\Omega\right)-\delta a^{\dagger}\left(-\Omega\right).
+\end{eqnarray}
+
+\end_inset
+
+Moreover, we have that
+\begin_inset Formula 
+\begin{eqnarray}
+\delta a\left(\Omega\right)-\delta a^{\dagger}\left(-\Omega\right) & = & 2\left(\Delta+G_{0}\frac{\hbar G_{0}\bar{a}a_{1}\left(\Omega\right)+G\left(\Omega\right)}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}\right)\frac{\bar{a}}{\Omega+i\gamma}+\frac{\sqrt{\gamma}}{\gamma-i\Omega}\left(\hat{a}_{in}\left(\Omega\right)-\hat{a}_{in}^{\dagger}\left(-\Omega\right)\right).
+\end{eqnarray}
+
+\end_inset
+
+We have that
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}_{in}\left(\Omega\right)-\hat{a}_{in}^{\dagger}\left(-\Omega\right) & = & \delta\hat{a}_{in}\left(\Omega\right)-\delta\hat{a}_{in}^{\dagger}\left(-\Omega\right)=i\sqrt{2}\alpha_{2}\left(\Omega\right).
+\end{eqnarray}
+
+\end_inset
+
+Consequently, 
+\begin_inset Formula 
+\begin{equation}
+\boxed{a_{2}\left(\Omega\right)=2\left(\Delta+G_{0}\frac{\hbar G_{0}\bar{a}a_{1}\left(\Omega\right)+G\left(\Omega\right)}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}\right)\frac{\bar{a}}{\Omega+i\gamma}+\frac{i\sqrt{2\gamma}}{\gamma-i\Omega}\alpha_{2}\left(\Omega\right)}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Moreover, notice that
+\begin_inset Formula 
+\begin{eqnarray}
+\alpha_{2}^{\dagger}\left(\Omega\right) & = & \left(\frac{a_{in}\left(\Omega\right)-a_{in}^{\dagger}\left(-\Omega\right)}{i\sqrt{2}}\right)^{\dagger}=\frac{a_{in}^{\dagger}\left(\Omega\right)-a_{in}\left(-\Omega\right)}{-i\sqrt{2}}\\
+ & = & \frac{a_{in}\left(-\Omega\right)-a_{in}^{\dagger}\left(\Omega\right)}{i\sqrt{2}}=\alpha_{2}\left(-\Omega\right).
+\end{eqnarray}
+
+\end_inset
+
+A similar argument to show that 
+\begin_inset Formula $\alpha_{1}^{\dagger}\left(\Omega\right)=\alpha_{1}\left(-\Omega\right)$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\begin{eqnarray*}
+a_{1}\left(\Omega\right) & = & \frac{\sqrt{\gamma}}{\gamma-i\Omega}\left(2\bar{a}_{in}+\alpha_{1}\left(\Omega\right)\sqrt{2}\right)-\frac{2i\gamma\bar{a}}{\Omega+i\gamma}\\
+ &  & +\frac{2\hbar^{2}G_{0}^{4}\bar{a}^{4}\Omega}{m^{2}\left(\omega_{m}^{2}-\Omega^{2}\right)^{2}\left(\Omega+i\gamma\right)\left(\Omega^{2}+\gamma^{2}\right)}\left(a_{1}\left(\Omega\right)+h.c.\right)\\
+ &  & +\frac{\hbar G_{0}^{2}\bar{a}^{2}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)\left(\Omega+i\gamma\right)}\left(\frac{4\Delta\Omega\bar{a}}{\Omega^{2}+\gamma^{2}}+\frac{2\bar{a}G_{0}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}\left(\frac{G\left(\Omega\right)}{\Omega+i\gamma}+\frac{G\left(-\Omega\right)}{\Omega-i\gamma}\right)\right)\\
+ &  & +\frac{\hbar G_{0}^{2}\bar{a}^{2}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)\left(\Omega+i\gamma\right)}\left(\frac{i\sqrt{2\gamma}}{\gamma-i\Omega}\alpha_{2}\left(\Omega\right)-\frac{i\sqrt{2\gamma}}{\gamma+i\Omega}\alpha_{2}\left(-\Omega\right)\right)
+\end{eqnarray*}
+
+\end_inset
+
+Define 
+\begin_inset Formula $\tilde{a}_{1}$
+\end_inset
+
+ to be 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ without the constant components (which we can easily measure and they do
+ not contribute to the noise spectrum ?????)
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{a}_{1}\left(\Omega\right) & = & \frac{\sqrt{2\gamma}}{\gamma-i\Omega}\alpha_{1}\left(\Omega\right)\\
+ &  & +\frac{2\hbar^{2}G_{0}^{4}\bar{a}^{4}\Omega}{m^{2}\left(\omega_{m}^{2}-\Omega^{2}\right)^{2}\left(\Omega+i\gamma\right)\left(\Omega^{2}+\gamma^{2}\right)}\left(\tilde{a}_{1}\left(\Omega\right)+h.c.\right)\\
+ &  & +\frac{\hbar G_{0}^{2}\bar{a}^{2}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)\left(\Omega+i\gamma\right)}\left(\frac{2\bar{a}G_{0}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}\left(\frac{G\left(\Omega\right)}{\Omega+i\gamma}+\frac{G\left(-\Omega\right)}{\Omega-i\gamma}\right)\right)\\
+ &  & -\frac{\hbar G_{0}^{2}\bar{a}^{2}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)\left(\Omega+i\gamma\right)}\left(\frac{\sqrt{2\gamma}}{\Omega+i\gamma}\alpha_{2}\left(\Omega\right)+\frac{\sqrt{2\gamma}}{\Omega-i\gamma}\alpha_{2}\left(-\Omega\right)\right)
+\end{eqnarray*}
+
+\end_inset
+
+Let us solve for 
+\begin_inset Formula $\tilde{a}_{1}^{\dagger}$
+\end_inset
+
+ and plug back into this equation
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{a}_{1}^{\dagger}\left(\Omega\right) & = & \frac{\sqrt{2\gamma}}{\gamma+i\Omega}\alpha_{1}\left(-\Omega\right)\\
+ &  & +\frac{2\hbar^{2}G_{0}^{4}\bar{a}^{4}\Omega}{m^{2}\left(\omega_{m}^{2}-\Omega^{2}\right)^{2}\left(\Omega-i\gamma\right)\left(\Omega^{2}+\gamma^{2}\right)}\left(\tilde{a}_{1}^{\dagger}\left(\Omega\right)+h.c.\right)\\
+ &  & +\frac{\hbar G_{0}^{2}\bar{a}^{2}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)\left(\Omega-i\gamma\right)}\left(\frac{2\bar{a}G_{0}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)}\left(\frac{G\left(\Omega\right)}{\Omega-i\gamma}+\frac{G\left(-\Omega\right)}{\Omega+i\gamma}\right)\right)\\
+ &  & -\frac{\hbar G_{0}^{2}\bar{a}^{2}}{m\left(\omega_{m}^{2}-\Omega^{2}\right)\left(\Omega+i\gamma\right)}\left(\frac{\sqrt{2\gamma}}{\Omega+i\gamma}\alpha_{2}\left(\Omega\right)+\frac{\sqrt{2\gamma}}{\Omega-i\gamma}\alpha_{2}\left(-\Omega\right)\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us now assume that the 
+\begin_inset Formula $\alpha_{1}\left(\Omega\right)=\alpha_{1}\left(-\Omega\right)$
+\end_inset
+
+ (i.e.
+ it is real) and 
+\begin_inset Formula $\alpha_{2}\left(\Omega\right)=-\alpha_{2}\left(-\Omega\right)$
+\end_inset
+
+ (i.e.
+ pure imaginary) so 
+\begin_inset Formula 
+\begin{eqnarray*}
+-\frac{\sqrt{2\gamma}}{\Omega+i\gamma}\alpha_{2}\left(\Omega\right)-\frac{\sqrt{2\gamma}}{\Omega-i\gamma}\alpha_{2}\left(-\Omega\right) & = & -\frac{\sqrt{2\gamma}}{\Omega+i\gamma}\alpha_{2}\left(\Omega\right)+\frac{\sqrt{2\gamma}}{\Omega-i\gamma}\alpha_{2}\left(\Omega\right)\\
+ & = & -\frac{\sqrt{2\gamma}}{\Omega^{2}+\gamma^{2}}\alpha_{2}\left(\Omega\right)\left(\Omega-i\gamma-\Omega-i\gamma\right)\\
+ & = & \frac{2\sqrt{2}i\gamma\sqrt{\gamma}}{\Omega^{2}+\gamma^{2}}\alpha_{2}\left(\Omega\right).
+\end{eqnarray*}
+
+\end_inset
+
+As a result,
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{a}_{1}\left(\Omega\right)+\tilde{a}_{1}^{\dagger}\left(\Omega\right) & = & \frac{2\sqrt{2}\gamma\sqrt{\gamma}}{\gamma^{2}+\Omega^{2}}\left(\alpha_{1}\left(\Omega\right)+i\alpha_{2}\left(\Omega\right)\right)\\
+ &  & +\frac{2\hbar^{2}G_{0}^{4}\bar{a}^{4}\Omega^{2}}{m^{2}\left(\omega_{m}^{2}-\Omega^{2}\right)^{2}\left(\Omega^{2}+\gamma^{2}\right)^{2}}\left(\tilde{a}_{1}\left(\Omega\right)+\tilde{a}_{1}^{\dagger}\left(\Omega\right)\right)\\
+ &  & +\frac{4\hbar G_{0}^{3}\bar{a}^{3}\Omega}{m^{2}\left(\omega_{m}^{2}-\Omega^{2}\right)^{2}\left(\Omega^{2}+\gamma^{2}\right)}\left(\frac{G\left(\Omega\right)}{\Omega-i\gamma}+\frac{G\left(-\Omega\right)}{\Omega+i\gamma}\right).
+\end{eqnarray*}
+
+\end_inset
+
+We have that
+\begin_inset Formula 
+\begin{equation}
+1+\frac{2\hbar^{2}G_{0}^{4}\bar{a}^{4}\Omega^{2}}{m^{2}\left(\omega_{m}^{2}-\Omega^{2}\right)^{2}\left(\Omega^{2}+\gamma^{2}\right)^{2}}=\frac{m^{2}\left(\omega_{m}^{2}-\Omega^{2}\right)^{2}\left(\Omega^{2}+\gamma^{2}\right)^{2}+2\hbar^{2}G_{0}^{4}\bar{a}^{4}\Omega^{2}}{m^{2}\left(\omega_{m}^{2}-\Omega^{2}\right)^{2}\left(\Omega^{2}+\gamma^{2}\right)^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, we use that
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(t^{+}\right)=-\hat{a}_{in}\left(t^{-}\right)+\sqrt{\gamma}\hat{a}\left(t^{+}\right).
+\end{equation}
+
+\end_inset
+
+Fourier transforming the above relation, we obtain that
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(\omega\right)=-\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\hat{a}\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+Linearizing we have that 
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(\omega\right)=-\bar{a}_{in}+\sqrt{\gamma}\bar{a}-\delta\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\delta a\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+However, when we linearize 
+\begin_inset Formula $a_{out}$
+\end_inset
+
+, we obtain 
+\begin_inset Formula 
+\begin{equation}
+a_{out}\left(\omega\right)=-\bar{a}_{in}+\sqrt{\gamma}\bar{a}+\delta a_{out}.
+\end{equation}
+
+\end_inset
+
+This is simply because 
+\begin_inset Formula $\hat{a}_{out}$
+\end_inset
+
+ is defined through 
+\begin_inset Formula $\hat{a}_{out}\left(t^{+}\right)=-\hat{a}_{in}\left(t^{-}\right)+\sqrt{\gamma}\hat{a}\left(t^{+}\right)$
+\end_inset
+
+ so after all of the displacement transformations have been made, it makes
+ sense to define 
+\begin_inset Formula $\bar{a}_{out}$
+\end_inset
+
+ to be 
+\begin_inset Formula $\bar{a}_{out}=-\bar{a}_{in}+\sqrt{\gamma}\bar{a}$
+\end_inset
+
+.
+ Hence, we now obtain that
+\begin_inset Formula 
+\begin{equation}
+\delta a_{out}\left(\omega\right)=-\delta\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\delta a\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+Consequently,
+\begin_inset Formula 
+\begin{equation}
+\beta_{1}\left(\Omega\right)=-\alpha_{1}\left(\Omega\right)+\frac{\gamma}{\sqrt{2}}\left(\delta a\left(\Omega\right)+\delta a^{\dagger}\left(-\Omega\right)\right)=-\alpha_{1}\left(\Omega\right)+\frac{\gamma}{\sqrt{2}}a_{1}\left(\Omega\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Notice that
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+i\omega\delta a^{\dagger}\left(\omega\right)=-i\left(\left(\omega_{c}-\omega_{0}\right)-G_{0}\frac{\hbar G_{0}\bar{a}\left(\delta a\left(\omega\right)+\delta a^{\dagger}\left(\omega\right)\right)+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\bar{a}-\sqrt{\gamma}\hat{a}_{in}^{\dagger}\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+Adding 
+\begin_inset Formula $\delta a$
+\end_inset
+
+ to 
+\begin_inset Formula $\delta a^{\dagger}$
+\end_inset
+
+, we obtain that
+\begin_inset Formula 
+\begin{equation}
+-i\omega\left(\delta a\left(\omega\right)+\delta a^{\dagger}\left(\omega\right)\right)=2i\left(\left(\omega_{c}-\omega_{0}\right)-G_{0}\frac{\hbar G_{0}\bar{a}\left(\delta a\left(\omega\right)+\delta a^{\dagger}\left(\omega\right)\right)+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\bar{a}-\sqrt{\gamma}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right).
+\end{equation}
+
+\end_inset
+
+Letting 
+\begin_inset Formula 
+\begin{equation}
+\boxed{\xi\equiv\frac{2\hbar G_{0}^{2}\bar{a}^{2}}{\omega m\left(\omega_{m}^{2}-\omega^{2}\right)}},
+\end{equation}
+
+\end_inset
+
+we have that (by dividing by 
+\begin_inset Formula $i\omega$
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{eqnarray}
+\delta a+\delta a^{\dagger} & = & -\frac{2}{\omega}\left(\left(\omega_{c}-\omega_{0}\right)-G_{0}\frac{\hbar G_{0}\bar{a}\left(\delta a\left(\omega\right)+\delta a^{\dagger}\left(\omega\right)\right)+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\bar{a}-i\frac{\sqrt{\gamma}}{\omega}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right)\\
+ & = & -\frac{2}{\omega}\bar{a}\left(\omega_{c}-\omega_{0}\right)+\frac{2}{\omega}\frac{\hbar G_{0}^{2}\bar{a}^{2}\left(\delta a\left(\omega\right)+\delta a^{\dagger}\left(\omega\right)\right)+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}-i\frac{\sqrt{\gamma}}{\omega}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right)\\
+ & = & -\frac{2}{\omega}\bar{a}\left(\omega_{c}-\omega_{0}-\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)+\frac{2\hbar G_{0}^{2}\bar{a}^{2}}{\omega m\left(\omega_{m}^{2}-\omega^{2}\right)}\left(\delta a+\delta a^{\dagger}\right)-i\frac{\sqrt{\gamma}}{\omega}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right).
+\end{eqnarray}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{eqnarray}
+\delta a+\delta a^{\dagger} & = & \frac{2\bar{a}}{\omega\left(1+\xi\right)}\left(\omega_{c}-\omega_{0}-\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)-i\frac{\sqrt{\gamma}/\omega}{1+\xi}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right)\\
+ & = & \frac{2\bar{a}}{\omega\left(1+\xi\right)}\left(-\Delta-\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)-i\frac{\sqrt{\gamma}/\omega}{1+\xi}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right)\\
+ & = & -\frac{2\bar{a}}{\omega\left(1+\xi\right)}\left(\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)-i\frac{\sqrt{\gamma}/\omega}{1+\xi}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right),
+\end{eqnarray}
+
+\end_inset
+
+Consequently, 
+\begin_inset Formula 
+\begin{eqnarray}
+-i\omega\delta a\left(\omega\right) & = & i\left(\left(\omega_{c}-\omega_{0}\right)-G_{0}\frac{\hbar G_{0}\bar{a}\left(\delta a\left(\omega\right)+\delta a^{\dagger}\left(\omega\right)\right)+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\bar{a}-\sqrt{\gamma}\hat{a}_{in}\left(\omega\right)\\
+ & = & i\left(-\Delta-\frac{\hbar G_{0}^{2}\bar{a}}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\left(\delta a\left(\omega\right)+\delta a^{\dagger}\left(\omega\right)\right)-\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\bar{a}-\sqrt{\gamma}\hat{a}_{in}\left(\omega\right)\\
+ & = & i\left(-\Delta-\frac{\hbar G_{0}^{2}\bar{a}}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\left\{ -\frac{2\bar{a}}{\omega\left(1+\xi\right)}\left(\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)-i\frac{\sqrt{\gamma}/\omega}{1+\xi}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right)\right\} -\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\bar{a}\\
+ &  & -\sqrt{\gamma}\hat{a}_{in}\left(\omega\right).
+\end{eqnarray}
+
+\end_inset
+
+We have that
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\hbar G_{0}^{2}\bar{a}}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\frac{1}{1+\xi} & = & \frac{\hbar G_{0}^{2}\bar{a}}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\left(1+\frac{2\hbar G_{0}^{2}\bar{a}^{2}}{\omega m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)^{-1}\\
+ & = & \frac{\hbar G_{0}^{2}\bar{a}}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\left(\frac{\omega m\left(\omega_{m}^{2}-\omega^{2}\right)+2\hbar G_{0}^{2}\bar{a}^{2}}{\omega m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)^{-1}\\
+ & = & \frac{\omega\hbar G_{0}^{2}\bar{a}}{\omega m\left(\omega_{m}^{2}-\omega^{2}\right)+2\hbar G_{0}^{2}\bar{a}^{2}}.
+\end{eqnarray}
+
+\end_inset
+
+Let
+\begin_inset Formula 
+\begin{equation}
+\boxed{\xi\equiv\frac{\hbar G_{0}^{2}\bar{a}}{\omega m\left(\omega_{m}^{2}-\omega^{2}\right)+2\hbar G_{0}^{2}\bar{a}^{2}}}.
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\xi$
+\end_inset
+
+ has units of 
+\begin_inset Formula $\omega/\bar{a}$
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+this has the same units as 
+\begin_inset Formula 
+\begin{equation}
+\frac{\omega\hbar G_{0}^{2}\bar{a}}{\hbar G_{0}^{2}\bar{a}^{2}}=\frac{\omega}{\bar{a}}
+\end{equation}
+
+\end_inset
+
+so 
+\begin_inset Formula $\xi$
+\end_inset
+
+ has units of 
+\begin_inset Formula $\omega/\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+So
+\begin_inset Formula 
+\begin{eqnarray}
+-i\omega\delta a & = & i\left(-\Delta-\xi\left\{ -\frac{2\bar{a}}{\omega}\left(\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)-i\frac{\sqrt{\gamma}}{\omega}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right)\right\} -\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\bar{a}-\sqrt{\gamma}\hat{a}_{in}\\
+ & = & -i\left(\Delta-\xi\left\{ \frac{2\bar{a}}{\omega}\left(\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)+i\frac{\sqrt{\gamma}}{\omega}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right)\right\} +\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\bar{a}-\sqrt{\gamma}\hat{a}_{in}.
+\end{eqnarray}
+
+\end_inset
+
+Dividing by 
+\begin_inset Formula $-i\omega$
+\end_inset
+
+, we obtain that
+\begin_inset Formula 
+\begin{eqnarray}
+\delta a & = & \left(\Delta-\xi\left\{ \frac{2\bar{a}}{\omega}\left(\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)+i\frac{\sqrt{\gamma}}{\omega}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right)\right\} +\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\frac{\bar{a}}{\omega}-\frac{\sqrt{\gamma}}{\omega}\hat{a}_{in}.
+\end{eqnarray}
+
+\end_inset
+
+We then use that
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(\omega\right)=-\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\hat{a}\left(\omega\right),
+\end{equation}
+
+\end_inset
+
+to obtain that
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}_{out}\left(\omega\right) & = & -\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\left(\bar{a}+\delta a\right)\\
+ & = & -\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\bar{a}\\
+ &  & +\left(\Delta-\xi\left\{ \frac{2\bar{a}}{\omega}\left(\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)+i\frac{\sqrt{\gamma}}{\omega}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right)\right\} +\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\frac{\bar{a}\sqrt{\gamma}}{\omega}-\frac{\gamma}{\omega}\hat{a}_{in}\\
+ & = & -\hat{a}_{in}\left(1+\frac{\gamma}{\omega}\right)+\sqrt{\gamma}\bar{a}\left(1+\frac{\Delta}{\omega}\right)\\
+ &  & +\left(\xi\left\{ \frac{2\bar{a}}{\omega}\left(\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)+i\frac{\sqrt{\gamma}}{\omega}\left(\hat{a}_{in}-\hat{a}_{in}^{\dagger}\right)\right\} +\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\frac{\bar{a}\sqrt{\gamma}}{\omega}.
+\end{eqnarray}
+
+\end_inset
+
+Linearizing these equations (
+\begin_inset Formula $\bar{a}_{out}=-\bar{a}_{in}+\sqrt{\gamma}\bar{a}$
+\end_inset
+
+) we obtain that
+\begin_inset Formula 
+\begin{eqnarray}
+\delta\hat{a}_{out} & = & -\bar{a}_{out}-\left(\bar{a}_{in}+\delta a_{in}\right)\left(1+\frac{\gamma}{\omega}\right)+\sqrt{\gamma}\bar{a}\left(1+\frac{\Delta}{\omega}\right)\\
+ &  & +\left(\xi\left\{ \frac{2\bar{a}}{\omega}\left(\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)+i\frac{\sqrt{\gamma}}{\omega}\left(\delta\hat{a}_{in}-\delta\hat{a}_{in}^{\dagger}\right)\right\} +\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\frac{\bar{a}\sqrt{\gamma}}{\omega}\\
+ & = & -\bar{a}_{out}-\left(\bar{a}_{in}+\delta a_{in}\right)\left(1+\frac{\gamma}{\omega}\right)+\frac{\sqrt{\gamma}\bar{a}}{\omega}\left(\omega+\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}+\frac{2\bar{a}\xi}{\omega}\left(\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\right)\right)\\
+ &  & +i\xi\frac{\sqrt{\gamma}}{\omega}\left(\delta\hat{a}_{in}-\delta\hat{a}_{in}^{\dagger}\right)\frac{\bar{a}\sqrt{\gamma}}{\omega}\\
+ & = & -\bar{a}_{in}\frac{\gamma}{\omega}-\delta\hat{a}_{in}\left(1+\frac{\gamma}{\omega}\right)+\frac{\sqrt{\gamma}\bar{a}}{\omega}\left(\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\left(1+\frac{2\bar{a}\xi}{\omega}\right)+2\bar{a}\xi\frac{\Delta}{\omega}\right)\\
+ &  & +i\xi\frac{\bar{a}\gamma}{\omega^{2}}\left(\delta\hat{a}_{in}-\delta\hat{a}_{in}^{\dagger}\right)
+\end{eqnarray}
+
+\end_inset
+
+Hence,
+\begin_inset Formula 
+\begin{equation}
+\delta\hat{a}_{out}=-\bar{a}_{in}\frac{\gamma}{\omega}-\delta\hat{a}_{in}\left(1+\frac{\gamma}{\omega}+i\xi\frac{\bar{a}\gamma}{\omega^{2}}\right)+\frac{\sqrt{\gamma}\bar{a}}{\omega}\left(\Delta+\frac{G_{0}G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\left(1+\frac{2\bar{a}\xi}{\omega}\right)+2\bar{a}\xi\frac{\Delta}{\omega}\right)-i\xi\frac{\bar{a}\gamma}{\omega^{2}}\delta\hat{a}_{in}^{\dagger}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Consider 
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}\frac{G\left(s\right)a\left(\omega-s\right)}{\omega_{m}^{2}-s^{2}}.
+\end{equation}
+
+\end_inset
+
+If 
+\begin_inset Formula $G\left(s\right)$
+\end_inset
+
+ has mainly one component at a small frequency 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ (e.g.
+ 
+\begin_inset Formula $G\left(t\right)=\cos10t$
+\end_inset
+
+) then
+\begin_inset Formula 
+\begin{equation}
+G\left(\omega\right)\approx\delta\left(\omega-\alpha\right)G\left(\alpha\right).
+\end{equation}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}\frac{G\left(s\right)a\left(\omega-s\right)}{\omega_{m}^{2}-s^{2}}=\frac{G\left(\alpha\right)a\left(\omega-\alpha\right)}{\omega_{m}^{2}-\alpha^{2}}.
+\end{equation}
+
+\end_inset
+
+Moreover,
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}\frac{\hat{N}\left(s\right)}{m\left(\omega_{m}^{2}-s^{2}\right)}a\left(\omega-s\right)ds.
+\end{equation}
+
+\end_inset
+
+Since we have a laser, we expect that the number of photons be extremely
+ peaked around the laser frequency 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ so that 
+\begin_inset Formula $\left\langle N\left(s\right)\right\rangle \approx\delta\left(\omega-s\right)N\left(\omega\right)$
+\end_inset
+
+ but then 
+\begin_inset Formula $a\left(\omega-s\right)$
+\end_inset
+
+ would collapse to 
+\begin_inset Formula $a\left(\omega-\omega_{0}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is also an optical frequency and so 
+\begin_inset Formula $\omega-\omega_{0}$
+\end_inset
+
+ is small and at this frequency we can neglect 
+\begin_inset Formula $a\left(\omega-\omega_{0}\right)$
+\end_inset
+
+.
+ So
+\begin_inset Formula 
+\begin{equation}
+\mathcal{F}\left[x\left(t\right)a\left(t\right)\right]\left(\omega\right)=\frac{G\left(\alpha\right)a\left(\omega-\alpha\right)}{m\left(\omega_{m}^{2}-\alpha^{2}\right)}
+\end{equation}
+
+\end_inset
+
+So
+\begin_inset Formula 
+\begin{eqnarray}
+-i\omega\hat{a}\left(\omega\right) & = & i\left(\overbrace{\left(\omega_{c}-\omega_{0}\right)}^{-\Delta}a\left(\omega\right)-G_{0}\frac{G\left(\alpha\right)a\left(\omega-\alpha\right)}{m\left(\omega_{m}^{2}-\alpha^{2}\right)}\right)-\sqrt{\gamma}\hat{a}_{in}\left(\omega\right)\\
+ & = & -i\left(\Delta\hat{a}\left(\omega\right)+G_{0}\frac{G\left(\alpha\right)\hat{a}\left(\omega-\alpha\right)}{m\left(\omega_{m}^{2}-\alpha^{2}\right)}\right)-\sqrt{\gamma}\hat{a}_{in}\left(\omega\right).
+\end{eqnarray}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is small we will just write that 
+\begin_inset Formula $\hat{a}\left(\omega-\alpha\right)\approx\hat{a}\left(\omega\right)$
+\end_inset
+
+ to obtain that
+\begin_inset Formula 
+\begin{eqnarray}
+i\left(\Delta+G_{0}\frac{G\left(\alpha\right)}{m\left(\omega_{m}^{2}-\alpha^{2}\right)}-\omega\right)\hat{a}\left(\omega\right) & = & \sqrt{\gamma}\hat{a}_{in}\left(\omega\right).
+\end{eqnarray}
+
+\end_inset
+
+So that 
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}\left(\omega\right) & = & -i\frac{m\left(\omega_{m}^{2}-\alpha^{2}\right)}{m\left(\Delta-\omega\right)\left(\omega_{m}^{2}-\alpha^{2}\right)+G_{0}G\left(\alpha\right)}\sqrt{\gamma}\hat{a}_{in}\left(\omega\right).
+\end{eqnarray}
+
+\end_inset
+
+We then use that 
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(\omega\right)=-\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\hat{a}\left(\omega\right),
+\end{equation}
+
+\end_inset
+
+to write that
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(\omega\right)=-\hat{a}_{in}\left(\omega\right)\left[1+i\frac{\gamma m\left(\omega_{m}^{2}-\alpha^{2}\right)}{m\left(\Delta-\omega\right)\left(\omega_{m}^{2}-\alpha^{2}\right)+G_{0}G\left(\alpha\right)}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+=============================
+\end_layout
+
+\begin_layout Plain Layout
+=======================================
+\end_layout
+
+\begin_layout Plain Layout
+==========================================================
+\begin_inset Formula 
+\begin{eqnarray}
+-i\omega\hat{a}\left(\omega\right) & = & i\left(\overbrace{\left(\omega_{c}-\omega_{0}\right)}^{-\Delta}-G_{0}\hat{x}\right)\hat{a}-\sqrt{\gamma}\hat{a}_{in}\left(\omega\right)\\
+ & = & -i\left(\Delta+G_{0}\hat{x}\right)\hat{a}-\sqrt{\gamma}\hat{a}_{in}\left(\omega\right)
+\end{eqnarray}
+
+\end_inset
+
+Hence,
+\begin_inset Formula 
+\begin{eqnarray}
+-i\hat{a}\left(\omega\right)\left[\omega-G_{0}\hat{x}-\Delta\right] & = & -\sqrt{\gamma}\hat{a}_{in}\left(\omega\right)\\
+\implies i\hat{a}\left(\omega\right)\left[\omega-G_{0}\hat{x}-\Delta\right] & = & \sqrt{\gamma}\hat{a}_{in}\left(\omega\right).
+\end{eqnarray}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}\left(\omega\right) & = & -i\frac{\sqrt{\gamma}}{\omega-G_{0}\hat{x}-\Delta}\hat{a}_{in}\left(\omega\right)\\
+ & = & \frac{i\sqrt{\gamma}}{\Delta+G_{0}\hat{x}-\omega}\hat{a}_{in}\left(\omega\right).
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+First approximation: 
+\begin_inset Formula $d\gg\left\langle \hat{x}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+We then use that 
+\begin_inset Formula $G_{0}=\omega_{c}/d$
+\end_inset
+
+, where 
+\begin_inset Formula $\omega_{c}$
+\end_inset
+
+ is the frequency of photons in the cavity and 
+\begin_inset Formula $d$
+\end_inset
+
+ is the length of the cavity to write that
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}\left(\omega\right) & = & -i\frac{\sqrt{\gamma}}{\omega+\omega_{c}\hat{x}/d-\Delta}\hat{a}_{in}\left(\omega\right)\\
+ & = & -i\frac{\sqrt{\gamma}}{\left(\omega-\Delta\right)\left(1-\frac{\hat{x}}{d}\frac{\omega_{c}}{\omega-\Delta}\right)}\hat{a}_{in}\left(\omega\right)\\
+ & \approx & -i\frac{\sqrt{\gamma}}{\omega-\Delta}\left(1+\frac{\hat{x}}{d}\frac{\omega_{c}}{\omega-\Delta}\right)\hat{a}_{in}\left(\omega\right)\\
+ & = & i\frac{\sqrt{\gamma}}{\Delta-\omega}\left(1+\hat{x}\frac{\omega_{c}}{d\left(\omega-\Delta\right)}\right)\hat{a}_{in}\left(\omega\right)
+\end{eqnarray}
+
+\end_inset
+
+because 
+\begin_inset Formula $G$
+\end_inset
+
+ is a weak force and so will displace the mirror by very little, also quantum
+ fluctuations are expected to be small in comparison to the macro/meso-scopic
+ size 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ We then use the expression of 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\hat{N}$
+\end_inset
+
+ and 
+\begin_inset Formula $G$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}\left(\omega\right) & = & i\frac{\sqrt{\gamma}}{\Delta-\omega}\left(\frac{\hbar G_{0}\hat{N}\left(\omega\right)+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\frac{\omega_{c}}{d\left(\omega-\Delta\right)}+1\right)\hat{a}_{in}\left(\omega\right)\\
+ & = & i\frac{\sqrt{\gamma}}{\Delta-\omega}\left(\frac{\hbar G_{0}\hat{N}\left(\omega\right)+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\frac{G_{0}}{\omega-\Delta}+1\right)\hat{a}_{in}\left(\omega\right).
+\end{eqnarray}
+
+\end_inset
+
+where we used that 
+\begin_inset Formula $G_{0}=\omega_{c}/d$
+\end_inset
+
+ in the second equality
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Do the units make sense? We have that 
+\begin_inset Formula $\hat{a}$
+\end_inset
+
+ is dimensionless as it is a cavity mode, so 
+\begin_inset Formula $k$
+\end_inset
+
+ is discrete and 
+\begin_inset Formula $a$
+\end_inset
+
+ satisfies the following commutation relation:
+\begin_inset Formula 
+\begin{equation}
+\left[a_{k},a_{k^{'}}^{\dagger}\right]=\delta_{kk^{'}}.
+\end{equation}
+
+\end_inset
+
+On the other hand 
+\begin_inset Formula $a_{in}$
+\end_inset
+
+ has units of 1/square root frequency as 
+\begin_inset Formula 
+\begin{equation}
+\left[a_{in}\left(\omega\right),a_{in}\left(\omega^{'}\right)\right]\propto\delta\left(\omega-\omega^{'}\right)
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula $\delta\left(\omega\right)$
+\end_inset
+
+ is like 
+\begin_inset Formula $1/\Delta\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+hmmmmmmm something is wrong
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+The displacement transformation
+\end_layout
+
+\begin_layout Plain Layout
+We now encounter a non-linearity: 
+\begin_inset Formula $Na_{in}$
+\end_inset
+
+.
+ Let us get rid of it by making a displacement transformation from 
+\begin_inset Formula $\left|\alpha\right\rangle \rightarrow\left|\mbox{vac}\right\rangle $
+\end_inset
+
+ so that
+\begin_inset Formula 
+\begin{equation}
+\hat{a}\left(\omega\right)\rightarrow\bar{a}+\delta a.
+\end{equation}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}^{\dagger}\hat{a} & \rightarrow & \left(\bar{a}^{*}+\delta a\right)\left(\bar{a}+\delta a\right)\\
+ & = & \left|\bar{a}\right|^{2}+\bar{a}^{*}\delta a+\bar{a}\delta a^{\dagger}+O\left(\delta a^{2}\right)
+\end{eqnarray}
+
+\end_inset
+
+Assuming that 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ is real, we have that
+\begin_inset Formula 
+\begin{equation}
+\hat{N}\rightarrow\left|\bar{a}\right|^{2}+\bar{a}\left(\delta a+\delta a^{\dagger}\right),
+\end{equation}
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{equation}
+\bar{a}+\delta a=i\frac{\sqrt{\gamma}}{\Delta-\omega}\left(\frac{\hbar G_{0}\left(\left|\bar{a}\right|^{2}+\bar{a}\left(\delta a+\delta a^{\dagger}\right)\right)+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\frac{G_{0}}{\omega-\Delta}+1\right)\hat{a}_{in}\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+The 
+\begin_inset Formula $\left|\bar{a}\right|^{2}$
+\end_inset
+
+ can be considered a constant known and classical force term that can be
+ compensated for (this step should have been made when the EOM for 
+\begin_inset Formula $\partial_{t}^{2}\hat{x}$
+\end_inset
+
+ was written), so
+\begin_inset Formula 
+\begin{equation}
+\bar{a}+\delta a=i\frac{\sqrt{\gamma}}{\Delta-\omega}\left(\frac{\hbar G_{0}\bar{a}\left(\delta a+\delta a^{\dagger}\right)+G\left(\omega\right)}{m\left(\omega_{m}^{2}-\omega^{2}\right)}\frac{G_{0}}{\omega-\Delta}+1\right)\hat{a}_{in}\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+Call 
+\begin_inset Formula 
+\begin{equation}
+\mathcal{T}\left(\omega\right)=\frac{\sqrt{\gamma}}{\Delta-\omega}\frac{G_{0}}{\omega-\Delta}\frac{1}{m\left(\omega_{m}^{2}-\omega^{2}\right)}=-\frac{\sqrt{\gamma}G_{0}}{\left(\omega-\Delta\right)^{2}}\frac{1}{m\left(\omega_{m}^{2}-\omega^{2}\right)},
+\end{equation}
+
+\end_inset
+
+then
+\begin_inset Formula 
+\begin{equation}
+\boxed{\bar{a}+\delta a=i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\left(\delta a+\delta a^{\dagger}\right)\right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\hat{a}_{in}\left(\omega\right)}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Aside: What is the order of magnitude of 
+\begin_inset Formula $\mathcal{T}\left(\omega\approx2\pi\times10^{2}\right)$
+\end_inset
+
+? (for a free mass)
+\end_layout
+
+\begin_layout Plain Layout
+For a free mass, we have that 
+\begin_inset Formula $\omega_{m}=0$
+\end_inset
+
+, and so 
+\begin_inset Formula 
+\begin{equation}
+\mathcal{T}\left(\omega\right)=\frac{\sqrt{\gamma}G_{0}}{m\left(\omega-\Delta\right)^{2}\omega^{2}}.
+\end{equation}
+
+\end_inset
+
+The detuning is small (smaller than 
+\begin_inset Formula $2\pi\times10^{2}$
+\end_inset
+
+ ?????) so 
+\begin_inset Formula 
+\begin{equation}
+\mathcal{T}\left(\omega\right)\approx\frac{\sqrt{\gamma}G_{0}}{m\omega^{4}}=\frac{\sqrt{\gamma}}{md\omega^{4}}\omega_{c}.
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $md$
+\end_inset
+
+ is about order 
+\begin_inset Formula $10^{2}$
+\end_inset
+
+ for LIGO (
+\begin_inset Formula $\approx40\times4$
+\end_inset
+
+) while 
+\begin_inset Formula $\omega^{4}$
+\end_inset
+
+ is about 
+\begin_inset Formula $\left(2\pi\right)^{4}\left(10^{2}\right)^{4}\approx10^{12}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\omega_{c}$
+\end_inset
+
+ is an optical frequency so is about 
+\begin_inset Formula $10^{15}$
+\end_inset
+
+.
+ Finally, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is about 
+\begin_inset Formula $10^{2}$
+\end_inset
+
+ (note that 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is not an optical frequency) so 
+\begin_inset Formula 
+\begin{equation}
+\mathcal{T}\left(\omega\right)\approx\frac{10}{10^{12}\times10^{2}}\times10^{15}\approx10^{2}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Continuing the calculation
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $\mathcal{T}\left(\omega\right)$
+\end_inset
+
+ is real, we have that
+\begin_inset Formula 
+\begin{equation}
+\bar{a}+\delta a^{\dagger}=-i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\left(\delta a+\delta a^{\dagger}\right)\right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\hat{a}_{in}^{\dagger}\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+Thus, adding 
+\begin_inset Formula $\left(\bar{a}+\delta a\right)$
+\end_inset
+
+ with 
+\begin_inset Formula $\left(\bar{a}+\delta a^{\dagger}\right)$
+\end_inset
+
+, we obtain
+\begin_inset Formula 
+\begin{equation}
+2\bar{a}+\left(\delta a+\delta a^{\dagger}\right)=i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\left(\delta a+\delta a^{\dagger}\right)\right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\left\{ \hat{a}_{in}\left(\omega\right)-\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} .
+\end{equation}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{equation}
+\left(\delta a+\delta a^{\dagger}\right)\left\{ 1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}\right\} =i\left(\mathcal{T}\left(\omega\right)G\left(\omega\right)+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\left\{ \hat{a}_{in}\left(\omega\right)-\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} -2\bar{a}.
+\end{equation}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{equation}
+\left(\delta a+\delta a^{\dagger}\right)=\frac{i\left[\mathcal{T}\left(\omega\right)G\left(\omega\right)+\sqrt{\gamma}/\left(\Delta-\omega\right)\right]\left\{ \hat{a}_{in}\left(\omega\right)-\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} -2\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}.
+\end{equation}
+
+\end_inset
+
+Plugging this back into the equation for 
+\begin_inset Formula $\bar{a}+\delta a$
+\end_inset
+
+, we have that
+\begin_inset Formula 
+\begin{equation}
+\bar{a}+\delta a=i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\frac{i\left[\mathcal{T}\left(\omega\right)G\left(\omega\right)+\sqrt{\gamma}/\left(\Delta-\omega\right)\right]\left\{ \hat{a}_{in}\left(\omega\right)-\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} -2\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\hat{a}_{in}\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+Calling
+\begin_inset Formula 
+\begin{equation}
+\boxed{\mathcal{J}\left(\omega\right)\equiv i\frac{\mathcal{T}\left(\omega\right)G\left(\omega\right)+\sqrt{\gamma}/\left(\Delta-\omega\right)}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}},
+\end{equation}
+
+\end_inset
+
+then
+\begin_inset Formula 
+\begin{equation}
+\bar{a}+\delta a=i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\left\{ \mathcal{J}\left(\omega\right)\left\{ \hat{a}_{in}\left(\omega\right)-\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} -\frac{2\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\right\} \right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\hat{a}_{in}\left(\omega\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+=============================================================
+\end_layout
+
+\begin_layout Plain Layout
+Aside: Collecting the factors multiplying 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+, we have that
+\begin_inset Formula 
+\begin{eqnarray}
+-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}\frac{2\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}-\bar{a} & = & -\bar{a}\left(1+2\frac{i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\right)\\
+ & = & -\bar{a}\left(\frac{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}+2i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\right)\\
+ & = & -\bar{a}\frac{1+i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}.
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+==============================================================
+\end_layout
+
+\begin_layout Plain Layout
+Let us try to linearize by doing a displacement transformation on 
+\begin_inset Formula $a_{in}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\bar{a}+\delta a=i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\left\{ \mathcal{J}\left(\omega\right)\left\{ \delta\hat{a}_{in}\left(\omega\right)-\delta\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} -\frac{2\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\right\} \right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\left(\bar{a}_{in}+\delta\hat{a}_{in}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+=======================================
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\bar{a}+\delta a=i\left(\mathcal{T}\left(\omega\right)\left[\underbrace{G\left(\omega\right)}_{I}+\hbar G_{0}\bar{a}\left\{ \underbrace{\mathcal{J}\left(\omega\right)\left\{ \delta\hat{a}_{in}\left(\omega\right)-\delta\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} }_{II}-\underbrace{\frac{2\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}}_{III}\right\} \right]+\underbrace{\frac{\sqrt{\gamma}}{\Delta-\omega}}_{IV}\right)\left(\bar{a}_{in}+\delta\hat{a}_{in}\right)
+\end{equation}
+
+\end_inset
+
+all of 
+\begin_inset Formula $I,III$
+\end_inset
+
+ and 
+\begin_inset Formula $IV$
+\end_inset
+
+ will be multiplied by 
+\begin_inset Formula $\left(\bar{a}_{in}+\delta a_{in}\right)$
+\end_inset
+
+ but 
+\begin_inset Formula $II$
+\end_inset
+
+ by 
+\begin_inset Formula $\bar{a}_{in}$
+\end_inset
+
+ only because we ignore terms of order 
+\begin_inset Formula $O\left(\delta a_{in}^{2}\right)$
+\end_inset
+
+.
+ So, we end up with
+\begin_inset Formula 
+\begin{eqnarray}
+\bar{a}+\delta a & = & i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\left\{ \mathcal{J}\left(\omega\right)\left\{ \delta\hat{a}_{in}-\delta\hat{a}_{in}^{\dagger}\right\} -\frac{2\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\right\} \right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\bar{a}_{in}\\
+ & + & i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)-2\hbar G_{0}\bar{a}\frac{\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\delta\hat{a}_{in}\\
+ & = & i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)-\frac{2\hbar G_{0}\bar{a}^{2}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\bar{a}_{in}\\
+ &  & +i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\left\{ \mathcal{J}\left(\omega\right)\bar{a}_{in}-\frac{2\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\right\} \right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\delta\hat{a}_{in}\\
+ &  & -i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}\bar{a}_{in}\mathcal{J}\left(\omega\right)\delta\hat{a}_{in}^{\dagger}
+\end{eqnarray}
+
+\end_inset
+
+Plugging this into 
+\begin_inset Formula $\hat{a}_{out}\left(\omega\right)=\bar{a}_{in}+\delta a_{out}=-\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\hat{a}\left(\omega\right),$
+\end_inset
+
+ we obtain that
+\begin_inset Formula 
+\begin{eqnarray}
+\delta a_{out} & = & i\left(\sqrt{\gamma}\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)-\frac{2\hbar G_{0}\bar{a}^{2}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\right]+\frac{\gamma}{\Delta-\omega}+\left(\xi+1\right)i\right)\bar{a}_{in}\\
+ &  & +i\left(\sqrt{\gamma}\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\left\{ \mathcal{J}\left(\omega\right)\bar{a}_{in}-\frac{2\bar{a}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\right\} \right]+\frac{\gamma}{\Delta-\omega}\right)\delta\hat{a}_{in}\\
+ &  & -i\mathcal{T}\left(\omega\right)\sqrt{\gamma}\hbar G_{0}\bar{a}\bar{a}_{in}\mathcal{J}\left(\omega\right)\delta\hat{a}_{in}^{\dagger}
+\end{eqnarray}
+
+\end_inset
+
+where the 
+\begin_inset Formula $\xi=\pm1$
+\end_inset
+
+ (i think it should be 1).
+ What is 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\bar{a}_{in}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{a}_{in}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $I_{0}$
+\end_inset
+
+? We know that
+\begin_inset Formula 
+\begin{equation}
+\bar{a}^{2}=\#\mbox{ photons in the mode in the cavity}
+\end{equation}
+
+\end_inset
+
+(as we were originally dealing with a coherent state) so 
+\begin_inset Formula $\hbar\omega_{c}\bar{a}^{2}$
+\end_inset
+
+ is the energy density.
+ Thus, we expect that the intensity is given by 
+\begin_inset Formula 
+\begin{eqnarray}
+I_{c} & = & \frac{c\hbar\omega_{c}\bar{a}^{2}}{2}\\
+I_{0} & = & \frac{c\hbar\omega_{0}\bar{a}_{in}^{2}}{2}\\
+I_{c} & \approx & \frac{T}{4}I_{0}
+\end{eqnarray}
+
 \end_inset
 
 *
@@ -1231,10 +3285,96 @@ All of
 status collapsed
 
 \begin_layout Plain Layout
-See 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "note6"
+because we (calling the energy density 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{equation}
+\nabla.S+\partial_{t}\mathcal{E}=0
+\end{equation}
+
+\end_inset
+
+so in fourier space:
+\begin_inset Formula 
+\begin{equation}
+k.S=-i\omega\mathcal{E}
+\end{equation}
+
+\end_inset
+
+and so 
+\begin_inset Formula 
+\begin{equation}
+S=-i\frac{\omega}{k}\mathcal{E}
+\end{equation}
+
+\end_inset
+
+since 
+\begin_inset Formula $\omega=ck$
+\end_inset
+
+, we obtain the desired result (as intensity is just the time averaged 
+\begin_inset Formula $S$
+\end_inset
+
+ so we gain an extra factor of 
+\begin_inset Formula $1/2$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Plain Layout
+????????
+\end_layout
+
+\begin_layout Plain Layout
+Also, in the semi-classical approach we had that
+\begin_inset Formula 
+\begin{equation}
+E_{in}=\sqrt{\frac{4\pi\hbar\omega_{0}}{\mathcal{A}c}}\left(\left[\sqrt{2I_{0}/\hbar\omega_{0}}+a_{1}\right]\cos\omega_{0}t+a_{2}\sin\omega_{0}t\right)
+\end{equation}
+
+\end_inset
+
+then
+\begin_inset Formula 
+\begin{equation}
+E_{in}^{\dagger}E_{in}=\frac{2I_{0}}{\hbar\omega_{0}}\cos^{2}\omega_{0}t+2\sqrt{\frac{2I_{0}}{\hbar\omega_{0}}}a_{1}\cos\omega_{0}t+2\sqrt{\frac{2I_{0}}{\hbar\omega_{0}}}a_{2}\cos\omega_{0}t\sin\omega_{0}t+O\left(a_{1,2}^{2}\right)
+\end{equation}
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{equation}
+\frac{4\pi\hbar\omega_{0}}{\mathcal{A}c}\frac{2I_{0}}{\hbar\omega_{0}}\cos^{2}\omega_{0}t=\left\langle E_{in}\right\rangle ^{2}=4\bar{a}_{in}^{2}\frac{\pi\hbar\omega_{0}}{\mathcal{A}c}\cos^{2}\omega_{0}t
+\end{equation}
+
+\end_inset
+
+because we could have also written that 
+\begin_inset Formula 
+\begin{eqnarray}
+E_{in}\left(t\right) & = & \sqrt{\frac{2\pi\hbar\omega_{0}}{\mathcal{A}c}}\frac{\left(a_{in}\left(t\right)e^{-i\omega_{0}t}+a_{in}^{\dagger}\left(t\right)e^{i\omega_{0}t}\right)}{\sqrt{2}}\\
+ & = & \sqrt{\frac{\pi\hbar\omega_{0}}{\mathcal{A}c}}\left(\bar{a}_{in}\underbrace{\left(e^{i\omega_{0}t}+e^{-i\omega_{0}t}\right)}_{2\cos\omega_{0}t}+\delta a_{in}e^{-i\omega_{0}t}+\delta a_{in}^{\dagger}e^{i\omega_{0}t}\right)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus,
+\begin_inset Formula 
+\begin{equation}
+\frac{2I_{0}}{\hbar\omega_{0}}=\bar{a}_{in}^{2}
+\end{equation}
 
 \end_inset
 
@@ -1246,51 +3386,205 @@ reference "note6"
 .
 \end_layout
 
-\begin_layout Standard
-We also make the following assumption
+\begin_layout Plain Layout
+Need,
+\begin_inset Formula 
+\begin{eqnarray}
+\omega & \rightarrow & 2\pi\Omega\\
+\gamma & \rightarrow & T/4/\tau\\
+\Delta & \rightarrow & \theta/\tau\\
+I_{0} & \rightarrow & \frac{\kappa mc^{2}\Omega^{2}}{8\omega_{0}}
+\end{eqnarray}
+
+\end_inset
+
+because 
+\begin_inset Formula 
+\begin{equation}
+\kappa=\frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Assumption
-The detuned phase is small and on the same order of magnitude as 
-\begin_inset Formula $\Omega\tau$
-\end_inset
-
-, 
-\begin_inset Formula $T$
-\end_inset
-
- and 
-\begin_inset Formula $4\kappa/T$
-\end_inset
-
-.
+\begin_layout Plain Layout
+============================================
 \end_layout
 
-\begin_layout Standard
-where
+\begin_layout Plain Layout
+Ignore the 
+\begin_inset Formula $-\frac{2i\mathcal{T}\left(\omega\right)\hbar G_{0}}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}\bar{a}^{2}$
+\end_inset
+
+ because it can be corrected for, then
+\begin_inset Formula 
+\begin{equation}
+\bar{a}+\delta a=i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\left\{ \mathcal{J}\left(\omega\right)\left\{ \delta\hat{a}_{in}\left(\omega\right)-\delta\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} \right\} \right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\left(\bar{a}_{in}+\delta\hat{a}_{in}\right).
+\end{equation}
+
+\end_inset
+
+Ignore the 
+\begin_inset Formula $\delta a_{in}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\bar{a}+\delta a=i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\left\{ \mathcal{J}\left(\omega\right)\left\{ \delta\hat{a}_{in}\left(\omega\right)-\delta\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} \right\} \right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\bar{a}_{in}=\hat{a}\left(\omega\right)
+\end{equation}
+
+\end_inset
+
+We began with 
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(\omega\right)=-\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\hat{a}\left(\omega\right),
+\end{equation}
+
+\end_inset
+
+so this becomes
+\begin_inset Formula 
+\begin{equation}
+\bar{a}_{in}+\delta a_{out}=-\bar{a}_{in}-\delta a_{in}+i\left(\sqrt{\gamma}\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\left\{ \mathcal{J}\left(\omega\right)\left\{ \delta\hat{a}_{in}\left(\omega\right)-\delta\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} \right\} \right]+\frac{\gamma}{\Delta-\omega}\right)\bar{a}_{in}
+\end{equation}
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{equation}
+\delta a_{out}=-\bar{a}_{in}\left(2+\frac{\gamma}{\omega-\Delta}\right)+i\sqrt{\gamma}\mathcal{T}\left(\omega\right)\bar{a}_{in}\left[G\left(\omega\right)+\hbar G_{0}\bar{a}\mathcal{J}\left(\omega\right)\left\{ \delta\hat{a}_{in}\left(\omega\right)-\delta\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} \right]
+\end{equation}
+
+\end_inset
+
+The 
+\begin_inset Formula $-\bar{a}_{in}\left(2+\frac{\gamma}{\omega-\Delta}\right)$
+\end_inset
+
+ is a constant force term that we can compensate for??? so
+\begin_inset Formula 
+\begin{equation}
+\delta a_{out}=i\sqrt{\gamma}\mathcal{T}\left(\omega\right)\bar{a}_{in}G\left(\omega\right)+i\sqrt{\gamma}\mathcal{T}\left(\omega\right)\bar{a}_{in}\hbar G_{0}\bar{a}\mathcal{J}\left(\omega\right)\left\{ \delta\hat{a}_{in}\left(\omega\right)-\delta\hat{a}_{in}^{\dagger}\left(\omega\right)\right\} 
+\end{equation}
+
+\end_inset
+
+What is 
+\begin_inset Formula $\mathcal{TJ}$
+\end_inset
+
+? We have that
+\begin_inset Formula 
+\begin{equation}
+\mathcal{T}\left(\omega\right)=\frac{\sqrt{\gamma}}{\Delta-\omega}\frac{G_{0}}{\omega-\Delta}\frac{1}{m\left(\omega_{m}^{2}-\omega^{2}\right)}=-\frac{\sqrt{\gamma}G_{0}}{\left(\omega-\Delta\right)^{2}}\frac{1}{m\left(\omega_{m}^{2}-\omega^{2}\right)},
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathcal{TJ}=i\mathcal{T}\left(\omega\right)\frac{\mathcal{T}\left(\omega\right)G\left(\omega\right)+\sqrt{\gamma}/\left(\Delta-\omega\right)}{1-i\mathcal{T}\left(\omega\right)\hbar G_{0}\bar{a}}=i\frac{\mathcal{T}\left(\omega\right)G\left(\omega\right)+\sqrt{\gamma}/\left(\Delta-\omega\right)}{1/\mathcal{T}\left(\omega\right)-i\hbar G_{0}\bar{a}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Approximation approach 2
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\bar{a}+\delta a=i\left(\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)-2\hbar G_{0}\bar{a}^{2}\right]+\frac{\sqrt{\gamma}}{\Delta-\omega}\right)\hat{a}_{in}\left(\omega\right)=\hat{a}\left(\omega\right)
+\end{equation}
+
+\end_inset
+
+We began with 
+\begin_inset Formula 
+\begin{equation}
+\hat{a}_{out}\left(\omega\right)=-\hat{a}_{in}\left(\omega\right)+\sqrt{\gamma}\hat{a}\left(\omega\right),
+\end{equation}
+
+\end_inset
+
+so now we can express 
+\begin_inset Formula $a_{out}$
+\end_inset
+
+ in terms of just 
+\begin_inset Formula $a_{in}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{a}_{out}\left(\omega\right) & \approx & -\hat{a}_{in}\left(\omega\right)+i\left(\sqrt{\gamma}\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)-2\hbar G_{0}\bar{a}^{2}\right]+\frac{\gamma}{\Delta-\omega}\right)\hat{a}_{in}\left(\omega\right)\\
+ & = & i\left(\sqrt{\gamma}\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)-2\hbar G_{0}\bar{a}^{2}\right]+\frac{\gamma}{\Delta-\omega}+i\right)\hat{a}_{in}\left(\omega\right)
+\end{eqnarray}
+
+\end_inset
+
+Apply the displacement transformation on 
+\begin_inset Formula $\hat{a}_{in}$
+\end_inset
+
+ to obtain that 
+\begin_inset Formula 
+\begin{eqnarray}
+\bar{a}_{in}+\delta\hat{a}_{out}\left(\omega\right) & \approx & -\hat{a}_{in}\left(\omega\right)+i\left(\sqrt{\gamma}\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)-2\hbar G_{0}\bar{a}^{2}\right]+\frac{\gamma}{\Delta-\omega}\right)\hat{a}_{in}\left(\omega\right)\\
+ & = & i\left(\sqrt{\gamma}\mathcal{T}\left(\omega\right)\left[G\left(\omega\right)-2\hbar G_{0}\bar{a}^{2}\right]+\frac{\gamma}{\Delta-\omega}+i\right)\left(\bar{a}_{in}+\delta\hat{a}_{in}\left(\omega\right)\right)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+We have that transforming from complex amplitude to cosine/sine quadratures
+ is given by:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\gamma_{c}\left(\Omega\right)=\frac{d\left(\omega+\Omega\right)+d^{\dagger}\left(\omega-\Omega\right)}{\sqrt{2}}
+\end{equation}
+
+\end_inset
+
+Thus
 \begin_inset Formula 
 \begin{eqnarray*}
-\phi & \equiv & \tan^{-1}\left(\Omega/\gamma\right)\\
-\gamma & \equiv & \frac{Tc}{4L}=\frac{T}{4\tau}\\
-\mathcal{K} & \equiv & \frac{2\gamma\iota_{c}}{\Omega^{2}\left(\Omega^{2}+\gamma^{2}\right)}\quad\\
-\iota_{c} & \equiv & \frac{8\omega_{0}I_{c}}{mLc}=\frac{4}{T}\frac{8\omega_{0}I_{0}}{mLc}=\frac{4}{T}\frac{c\Omega^{2}}{L}\kappa\\
- & = & \frac{4}{T}\frac{\Omega^{2}}{\tau}\kappa
+\sqrt{2}\hat{a}_{out,c}\left(\Omega\right) & = & i\left(\sqrt{\gamma}\mathcal{T}\left(\omega+\Omega\right)\left[G\left(\omega+\Omega\right)-2\hbar G_{0}\bar{a}^{2}\right]+\frac{\gamma}{\Delta-\omega-\Omega}+i\right)\hat{a}_{in}\left(\omega+\Omega\right)-\\
+ &  & i\left(\sqrt{\gamma}\mathcal{T}\left(\omega-\Omega\right)\left[G\left(\omega-\Omega\right)-2\hbar G_{0}\bar{a}^{2}\right]+\frac{\gamma}{\Delta-\omega+\Omega}-i\right)\hat{a}_{in}^{\dagger}\left(\omega-\Omega\right)
 \end{eqnarray*}
 
 \end_inset
 
-We assume that we are working close enough to resonance that 
-\begin_inset Formula $I_{c}=4I_{0}/T$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Define
+Similarly,
 \begin_inset Formula 
 \begin{equation}
-\Delta=\frac{\theta}{\tau}.
+\gamma_{s}\left(\Omega\right)=\frac{d\left(\omega+\Omega\right)-d^{\dagger}\left(\omega-\Omega\right)}{i\sqrt{2}},
 \end{equation}
 
 \end_inset
@@ -1298,109 +3592,83 @@ Define
 
 \end_layout
 
-\begin_layout Standard
-Hence,
-\begin_inset Formula 
-\begin{equation}
-\kappa=\frac{T\tau}{4\Omega^{2}}\iota_{c}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-I_{c}\equiv\frac{4I_{0}}{T}.
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\kappa & = & \frac{8I_{0}\omega_{0}}{mc^{2}\Omega^{2}}\\
-g_{SQL} & = & \sqrt{2\hbar m\Omega^{2}}.
-\end{eqnarray*}
-
-\end_inset
-
-We have 
-\begin_inset Formula 
-\begin{eqnarray}
-\xi & \equiv & \frac{2T^{2}\theta}{-\frac{1}{4}T(T-4ix)^{2}-4T\theta^{2}-4(-2+T-4ix)\theta\kappa}\\
- & = & \frac{2T^{2}\theta}{-\frac{1}{4}T(T-4i\Omega\tau)^{2}-4T\theta^{2}-4(-2+T-4\Omega\tau i)\theta\frac{T\tau}{4\Omega^{2}}\iota_{c}}\\
- & = & \frac{2T^{2}\Delta/\tau}{-\frac{1}{4}T(T/\tau-4i\Omega)^{2}-4T\Delta^{2}-4(-2+T-4\Omega\tau i)\Delta\frac{T}{4\Omega^{2}}\iota_{c}}\\
-\mbox{} & = & \frac{8T\Delta\gamma}{-\frac{1}{4}T(T/\tau-4i\Omega)^{2}-4T\Delta^{2}-4(-2+T-4\Omega\tau i)\Delta\frac{T}{4\Omega^{2}}\iota_{c}}\\
- & = & \frac{8\Delta\gamma}{-\frac{1}{4}(T/\tau-4i\Omega)^{2}-4\Delta^{2}-4(-2+T-4\Omega\tau i)\Delta\frac{1}{4\Omega^{2}}\iota_{c}}\\
- & = & \frac{8\Delta\gamma\Omega^{2}}{\Omega^{2}\left[-\frac{1}{4}(T/\tau-4i\Omega)^{2}-4\Delta^{2}\right]-(-2+T-4\Omega\tau i)\Delta\iota_{c}}\\
- & = & \frac{2\Delta\gamma\Omega^{2}}{\Omega^{2}\left[-\frac{1}{16}(T/\tau-4i\Omega)^{2}-\Delta^{2}\right]-(-2+T-4\Omega\tau i)\Delta\iota_{c}/4}\\
- & = & \frac{2\Delta\gamma\Omega^{2}}{\Omega^{2}\left[-(\gamma-i\Omega)^{2}-\Delta^{2}\right]+(1/2-T/4+\Omega\tau i)\Delta\iota_{c}}\\
- & \approx & \frac{2\Delta\gamma\Omega^{2}}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\Delta\iota_{c}/2}.
-\end{eqnarray}
-
-\end_inset
-
-We have that
-\begin_inset Formula 
-\begin{eqnarray}
-\xi_{dn} & = & -\frac{1}{4}T(T-4ix)^{2}-4T\theta^{2}-4(-2+T-4ix)\theta\kappa\\
- & = & \frac{1}{4}T(iT+4x)^{2}-4T\theta^{2}-4(-2+T-4ix)\theta\kappa\\
- & \approx & \frac{1}{4}T(iT+4x)^{2}-4T\theta^{2}+8\theta\kappa\\
- & = & \frac{1}{4}T(iT+4x)^{2}-4T\theta^{2}+8\theta\frac{T\tau}{4\Omega^{2}}\iota_{c}\\
- & = & \frac{\Omega^{2}T(iT+4x)^{2}-16T\Omega^{2}\theta^{2}+8\theta T\tau\iota_{c}}{4\Omega^{2}}\\
- & = & \frac{\Omega^{2}T(iT+4\Omega\tau)^{2}-16T\Omega^{2}\theta^{2}+8\theta T\tau\iota_{c}}{4\Omega^{2}}\\
- & = & \left(\Omega^{2}T(i\gamma+\Omega)^{2}-\frac{T\Omega^{2}\theta^{2}}{\tau^{2}}+\frac{\theta T\iota_{c}}{2\tau}\right)\frac{16\tau^{2}}{4\Omega^{2}}\\
- & = & \left(\Omega^{2}T(i\gamma+\Omega)^{2}-T\Omega^{2}\Delta^{2}+\frac{\Delta T\iota_{c}}{2}\right)\frac{4\tau^{2}}{\Omega^{2}}\\
- & = & \left(\Omega^{2}T\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta T\iota_{c}}{2}\right)\frac{4\tau^{2}}{\Omega^{2}}\\
- & = & \left(\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}\right)\frac{4T\tau^{2}}{\Omega^{2}}
-\end{eqnarray}
-
 \end_inset
 
 
 \end_layout
 
+\begin_layout Section
+Questions to Haixing
+\end_layout
+
 \begin_layout Standard
-We have that
+Note that 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ really depends on frequency.
+ Since 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is small, we are assuming that we can neglect the change in 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ ????????????
+\end_layout
+
+\begin_layout Standard
+What happens when we displace say 
+\begin_inset Formula $a$
+\end_inset
+
+ then 
+\begin_inset Formula $a_{in}$
+\end_inset
+
+ should be displaced as well because both are related to each other ???
+\end_layout
+
+\begin_layout Paragraph
+Perhaps useful
+\end_layout
+
+\begin_layout Standard
+To solve this equation we will replace 
+\begin_inset Formula $\hat{N}$
+\end_inset
+
+ with its expected value per unit volume: 
+\begin_inset Formula 
+\begin{equation}
+\left\langle N\right\rangle =\frac{I_{c}}{c\hbar\omega_{c}}
+\end{equation}
+
+\end_inset
+
+because we have that for a plane wave that
+\begin_inset Formula 
+\begin{equation}
+I=\frac{1}{2}c\epsilon_{0}E_{0}^{2}.
+\end{equation}
+
+\end_inset
+
+and the photon density is given by 
 \begin_inset Formula 
 \begin{eqnarray}
-\xi_{21} & = & \frac{2T(-T\theta+2\kappa+4ix\kappa)}{\Omega^{2}T\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta T\iota_{c}}{2}}\\
- & = & \frac{2(-T\theta+2\kappa+4ix\kappa)}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\\
- & \approx & \frac{2(-T\theta+2\frac{T\tau}{4\Omega^{2}}\iota_{c})}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\\
- & = & \frac{2\tau(-T\Delta+2\frac{T}{4\Omega^{2}}\iota_{c})}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\\
- & = & \frac{2\tau^{2}(-\frac{T}{\tau}\Delta+2\frac{T}{4\tau\Omega^{2}}\iota_{c})}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\\
- & = & \frac{2\tau^{2}(-4\gamma\Delta+2\frac{\gamma}{\Omega^{2}}\iota_{c})}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\\
- & = & \frac{-2\gamma\Omega^{2}\Delta+\gamma\iota_{c}}{\Omega^{2}\left[(i\gamma+\Omega)^{2}-\Delta^{2}\right]+\frac{\Delta\iota_{c}}{2}}\frac{4\tau^{2}}{\Omega^{2}}\\
+S & = & \frac{\epsilon_{0}E_{0}^{2}}{2\hbar\omega}=\mbox{\# num photons/volume}\\
+ & = & \frac{I}{c}\frac{1}{\hbar\omega}.
 \end{eqnarray}
 
 \end_inset
 
- 
+We have that 
 \begin_inset Formula 
 \begin{eqnarray}
-\xi_{21} & \equiv & \frac{2T(-T\theta+2\kappa+4ix\kappa)}{8\theta\kappa}\\
- & = & \frac{2T(-T\theta+2\kappa+4ix\kappa)\left(-T\theta+2\kappa-4ix\kappa\right)}{8\theta\kappa\left(-T\theta+2\kappa-4ix\kappa\right)}\\
- & = & \frac{2T(\left(-T\theta+2\kappa\right)^{2}+16x^{2}\kappa^{2})}{8\theta\kappa\left(-T\theta+2\kappa-4ix\kappa\right)}\\
- & = & \frac{2T(2T^{2}\theta^{2}+4\kappa^{2}-4T\theta\kappa+16x^{2}\kappa^{2})}{8\theta\kappa\left(-T\theta+2\kappa-4ix\kappa\right)}\\
- & \approx & \frac{2T(4\kappa^{2}-4T\theta\kappa)}{8\theta\kappa\left(-T\theta+2\kappa-4ix\kappa\right)}\\
- & = & \frac{2T(4\kappa^{2}/\tau-4T\Delta\kappa)}{8\Delta\kappa\left(-T\theta+2\kappa-4ix\kappa\right)}\\
- & = & \frac{2T(4\kappa/\tau-4T\Delta)}{8\Delta\left(-T\theta+2\kappa-4ix\kappa\right)}\\
- & = & \frac{2T(4\frac{T\tau}{4\Omega^{2}}\iota_{c}/\tau-4T\Delta)}{8\Delta\left(-T\theta+2\frac{T\tau}{4\Omega^{2}}\iota_{c}-4ix\frac{T\tau}{4\Omega^{2}}\iota_{c}\right)}\\
- & = & \frac{2T(\frac{T\tau}{4\Omega^{2}}\iota_{c}/\tau^{2}-\gamma\Delta)}{2\Delta\left(-T\theta+2\frac{T\tau}{4\Omega^{2}}\iota_{c}-4ix\frac{T\tau}{4\Omega^{2}}\iota_{c}\right)/\tau}\\
- & = & \frac{T(\frac{T}{4\tau\Omega^{2}}\iota_{c}-\gamma\Delta)}{\Delta\left(-T\Delta+\frac{T}{2\Omega^{2}}\iota_{c}-ix\frac{T}{\Omega^{2}}\iota_{c}\right)}\\
- & = & \frac{T(\frac{T}{4\tau}\iota_{c}-\gamma\Delta\Omega^{2})}{\Delta\left(-T\Delta\Omega^{2}+\frac{T}{2}\iota_{c}-ixT\iota_{c}\right)}\\
- & = & \frac{T(\gamma\iota_{c}-\gamma\Delta\Omega^{2})}{\Delta\left(-T\Delta\Omega^{2}+\frac{T}{2}\iota_{c}-ixT\iota_{c}\right)}\\
- & = & \frac{\gamma\iota_{c}-\gamma\Delta\Omega^{2}}{\Delta\left(-\Delta\Omega^{2}+\frac{1}{2}\iota_{c}-ix\iota_{c}\right)}\\
-\end{eqnarray}
-
-\end_inset
-
-Also 
-\begin_inset Formula 
-\begin{eqnarray}
-\xi_{21} & = & \frac{T\left(16(2+T)\theta+\frac{T(T-4ix)^{2}}{\kappa}\right)}{64\theta^{2}}\\
- & = & \frac{T\left(16(2+T)\theta\kappa+T^{3}-4ixT^{2}-16Tx^{2}\right)}{64\theta^{2}\kappa}\\
- & = & \frac{T\left(16(2+T)\theta\kappa+T^{3}-4ixT^{2}-16Tx^{2}\right)}{64\theta^{2}\kappa\left(16(2+T)\theta\kappa+T^{3}+4ixT^{2}-16Tx^{2}\right)}\\
+\hbar G_{0}\frac{I_{c}}{c\hbar\omega_{c}} & = & \hbar\frac{\omega_{c}}{d}\frac{I_{c}}{c\hbar\omega_{c}}\\
+ & = & \frac{I_{c}}{dc}
 \end{eqnarray}
 
 \end_inset

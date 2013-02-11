@@ -43,7 +43,16 @@ sweave
 \float_placement H
 \paperfontsize 11
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_amsmath 1
@@ -155,16 +164,6 @@ filename "../solid state physics.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "../optics.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "../tempPageForSpeed.lyx"
 
 \end_inset
 
@@ -766,12 +765,27 @@ Lyx
 \end_layout
 
 \begin_layout Subsection
+LyX Tips
+\end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename C:/Users/bassa_000/Documents/GitHub/Notebook/research/pdf files/LyXTips.pdf
+	extra LaTeX "pages=-"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Breaking equations
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -943,7 +957,7 @@ let
 endequation 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 BUT SEEMS TO CONFLICT WITH FEYN PACKAGE
 \end_layout
 
@@ -1321,6 +1335,11 @@ http://stackoverflow.com/questions/8073530/get-mathematica-to-simplify-expressio
 : Get mathematica to simplify an expression with another equation; example,
  let temp = x+y+z, how do we get Mathematica to simplify this to temp =
  v+z where v=x+y.
+\end_layout
+
+\begin_layout Enumerate
+Is something complex? Try using FullSimplify[Im[ComplexExpand[ veriableWantToChe
+ck ]]]
 \end_layout
 
 \begin_layout Subsection

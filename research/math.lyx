@@ -1271,7 +1271,7 @@ Sine of
 \emph default
 
 \begin_inset FormulaMacro
-\newcommand{\sinAtan}[1]{\frac{#1}{\sqrt{1+#1^{2}}}}
+\renewcommand{\sinAtan}[1]{\frac{#1}{\sqrt{1+#1^{2}}}}
 \end_inset
 
 :
@@ -1300,7 +1300,7 @@ Complex exponential of
 \emph default
 
 \begin_inset FormulaMacro
-\newcommand{\expiAtan}[1]{\frac{1+i#1}{\sqrt{1+#1^{2}}}}
+\renewcommand{\expiAtan}[1]{\frac{1+i#1}{\sqrt{1+#1^{2}}}}
 \end_inset
 
 :
@@ -1335,6 +1335,17 @@ ExpToTrig[Exp[I*ArcTan[a]]]].
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula 
+\begin{equation}
+\frac{T+4ix}{T-4ix}=e^{2i\tan^{-1}\left(4x/T\right)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Fourier Transform
 \end_layout
@@ -1342,13 +1353,24 @@ Fourier Transform
 \begin_layout Enumerate
 
 \emph on
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\size normal
+\emph off
+Shift property of Fourier Transforms
+\end_layout
+
+\end_inset
+
 Shift property
 \emph default
 :
 \begin_inset Formula 
 \begin{eqnarray}
-\mathcal{F}\left(g\left(t-t_{0}\right)\right) & = & \mathcal{F}\left(g\left(t\right)\right)e^{-i\omega t_{0}}.\label{eq:shiftPropertyFourierTransforms}\\
-\nonumber 
+\mathcal{F}\left(g\left(t-t_{0}\right)\right) & = & \mathcal{F}\left(g\left(t\right)\right)e^{-i\omega t_{0}}.\label{eq:shiftPropertyFourierTransforms}
 \end{eqnarray}
 
 \end_inset
@@ -1468,7 +1490,17 @@ Distributions
 \end_layout
 
 \begin_layout Section
-Dirac delta function 
+Dirac delta function
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Dirac delta function
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard

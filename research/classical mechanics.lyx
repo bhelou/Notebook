@@ -554,6 +554,16 @@ key "Danilishin2012"
 
 \begin_layout Section
 Brownian Motion
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Brownian Motion
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -626,7 +636,7 @@ key "gillespie96"
 process by 
 \begin_inset Formula 
 \begin{eqnarray*}
-\Gamma\left(t\right) & = & \lim_{dt\rightarrow0}\mbox{\textbf{N}}\left(0,1/dt\right)\\
+\Gamma\left(t\right) & = & \lim_{dt\rightarrow0}\mbox{\textbf{N}}\left(0,1/dt\right)
 \end{eqnarray*}
 
 \end_inset
@@ -642,6 +652,16 @@ to obtain that
 
 This is the 
 \series bold
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+white noise form of the Langevin equation
+\end_layout
+
+\end_inset
+
 white noise form of the Langevin equation
 \series default
  
@@ -873,7 +893,7 @@ fluctuation dissipation formula
  and so 
 \begin_inset Formula 
 \begin{eqnarray*}
-\gamma & = & \frac{1}{2k_{B}T}\intop_{-\infty}^{\infty}\left\langle F\left(t\right)F\left(t+t^{'}\right)\right\rangle dt^{'}.\\
+\gamma & = & \frac{1}{2k_{B}T}\intop_{-\infty}^{\infty}\left\langle F\left(t\right)F\left(t+t^{'}\right)\right\rangle dt^{'}.
 \end{eqnarray*}
 
 \end_inset
@@ -885,7 +905,7 @@ Another important integral equation is the
 : 
 \begin_inset Formula 
 \begin{eqnarray*}
-D & = & \intop_{0}^{\infty}\left[\lim_{t\rightarrow\infty}\left\langle v\left(t\right)v\left(t+t^{'}\right)\right\rangle \right]dt^{'}.\\
+D & = & \intop_{0}^{\infty}\left[\lim_{t\rightarrow\infty}\left\langle v\left(t\right)v\left(t+t^{'}\right)\right\rangle \right]dt^{'}.
 \end{eqnarray*}
 
 \end_inset
@@ -921,7 +941,7 @@ mean power dissipated
  force: 
 \begin_inset Formula 
 \begin{eqnarray*}
-P_{eq} & = & 3\left\langle \left[\gamma v\left(\infty\right)\right]v\left(\infty\right)\right\rangle =\frac{3\gamma k_{B}T}{m}.\\
+P_{eq} & = & 3\left\langle \left[\gamma v\left(\infty\right)\right]v\left(\infty\right)\right\rangle =\frac{3\gamma k_{B}T}{m}.
 \end{eqnarray*}
 
 \end_inset
@@ -963,7 +983,7 @@ We can also use the O-U theory to obtain the frequency spectrum of the equilibri
 um power: 
 \begin_inset Formula 
 \begin{eqnarray*}
-P_{eq}\left(\nu\right) & = & \frac{12k_{B}T}{1+\left(2\pi m\nu/\gamma\right)^{2}}\quad\nu\geq0.\\
+P_{eq}\left(\nu\right) & = & \frac{12k_{B}T}{1+\left(2\pi m\nu/\gamma\right)^{2}}\quad\nu\geq0.
 \end{eqnarray*}
 
 \end_inset
@@ -973,6 +993,21 @@ P_{eq}\left(\nu\right) & = & \frac{12k_{B}T}{1+\left(2\pi m\nu/\gamma\right)^{2}
 
 \begin_layout Section
 The Lagrangian
+\end_layout
+
+\begin_layout Subsection
+Intro
+\end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename pdf files/Lagrangian_Formulation.pdf
+	extra LaTeX "pages=-"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection

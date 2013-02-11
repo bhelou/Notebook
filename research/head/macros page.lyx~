@@ -70,7 +70,7 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\re}[1]{#1}
+\renewcommand{\re}[1]{#1}
 {\mbox{re}\left(#1\right)}
 \end_inset
 
@@ -79,7 +79,7 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\im}[1]{#1}
+\renewcommand{\im}[1]{#1}
 {\mbox{im}\left(#1\right)}
 \end_inset
 
@@ -88,7 +88,7 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\i}[3]{#1#2#3}
+\renewcommand{\i}[3]{#1#2#3}
 {\intop_{#1}^{#2}d#3}
 \end_inset
 
@@ -97,7 +97,7 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\sectionSymbol}{}
+\renewcommand{\sectionSymbol}{}
 {\mathcal{x}}
 \end_inset
 
@@ -106,7 +106,132 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ang}{\mbox{\overset{\circ}{A}}}
+\renewcommand{\ang}{\mbox{\overset{\circ}{A}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\limit}[2]{\lim_{#1\rightarrow#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\colwhite}[1]{\textcolor{white}{#1}}
+{\textcolor{white}{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\colblack}[1]{\textcolor{black}{#1}}
+{\textcolor{black}{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\colred}[1]{\textcolor{red}{#1}}
+{\textcolor{red}{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\colblue}[1]{\textcolor{blue}{#1}}
+{\textcolor{blue}{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\colgreen}[1]{\textcolor{green}{#1}}
+{\textcolor{green}{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\colcyan}[1]{\textcolor{cyan}{#1}}
+{\textcolor{cyan}{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\colmagenta}[1]{\textcolor{magenta}{#1}}
+{\textcolor{magenta}{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\colyellow}[1]{\textcolor{yellow}{#1}}
+{\textcolor{yellow}{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\ket}[1]{\left|#1\right\rangle }
+{\left|#1\right\rangle }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\bra}[1]{\left\langle #1\right|}
+{\left\langle #1\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\braket}[2]{\left\langle #1\middle|#2\right\rangle }
+{\left\langle #1|#2\right\rangle }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\ketbra}[2]{\left|#1\vphantom{#2}\right\rangle \left\langle \vphantom{#1}#2\right|}
+{\left|#1\right\rangle \left\langle #2\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\braOket}[3]{\left\langle #1\middle|#2\middle|#3\right\rangle }
+{\left\langle #1\left|#2\right|#3\right\rangle }
 \end_inset
 
 

@@ -2,12 +2,24 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass article
+\textclass scrbook
+\begin_preamble
+\usepackage{braket}
+\usepackage{empheq}
+\end_preamble
+\options unicode=true, hidelinks
 \use_default_options true
+\begin_modules
+eqs-within-sections
+figs-within-sections
+theorems-ams-bytype
+theorems-ams-extended-bytype
+sweave
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman default
 \font_sans default
@@ -25,7 +37,7 @@
 \bibtex_command default
 \index_command default
 \float_placement H
-\paperfontsize default
+\paperfontsize 11
 \spacing single
 \use_hyperref false
 \papersize default
@@ -44,17 +56,17 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
-\topmargin 2cm
-\rightmargin 2cm
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
 \bottommargin 3cm
 \headheight 2cm
 \headsep 2cm
 \footskip 2cm
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation indent
-\paragraph_indentation default
+\paragraph_separation skip
+\defskip medskip
 \quotes_language english
 \papercolumns 1
 \papersides 1
@@ -69,52 +81,10 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\re}[1]{#1}
-{\mbox{re}\left(#1\right)}
-\end_inset
+\begin_inset CommandInset include
+LatexCommand include
+filename "../tempPageForSpeed.lyx"
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\im}[1]{#1}
-{\mbox{im}\left(#1\right)}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\i}[3]{#1#2#3}
-{\intop_{#1}^{#2}d#3}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\sectionSymbol}{}
-{\mathcal{x}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\ang}{\mbox{\overset{\circ}{A}}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\li}{}
 \end_inset
 
 
