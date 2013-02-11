@@ -4711,12 +4711,12 @@ where
 \begin_inset Formula $u$
 \end_inset
 
- is the spatial mode shape (assume that it is slowly changing on a wavelength
- 
+ is the spatial mode shape (assume that it is slowly changing on the scale
+ of a wavelength 
 \begin_inset Formula $\lambda$
 \end_inset
 
- scale) and in CGS units 
+) and in CGS units 
 \begin_inset Formula 
 \begin{eqnarray*}
 \hat{E}^{\left(+\right)}\left(t\right) & = & \intop_{0}^{\infty}\frac{d\omega}{2\pi}\sqrt{\frac{2\pi\hbar\omega}{\mathcal{A}c}}\hat{a}_{\omega}e^{-i\omega t}\\
@@ -4731,7 +4731,7 @@ where
 
  is the effective cross-section area of the light beam*
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 These results are a special case of the equations 

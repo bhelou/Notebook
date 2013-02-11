@@ -18,7 +18,6 @@ theorems-ams-bytype
 theorems-ams-extended-bytype
 logicalmkup
 fixltx2e
-sweave
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -240,6 +239,10 @@ Packages can very easily be installed by using Miktex's package manager
 \end_layout
 
 \begin_layout Enumerate
+Install the amsmath and amscls packages
+\end_layout
+
+\begin_layout Enumerate
 Install the 
 \begin_inset Quotes eld
 \end_inset
@@ -317,6 +320,18 @@ Install the
 \end_inset
 
 preview
+\begin_inset Quotes erd
+\end_inset
+
+ package.
+\end_layout
+
+\begin_layout Enumerate
+Install the 
+\begin_inset Quotes eld
+\end_inset
+
+cm-super
 \begin_inset Quotes erd
 \end_inset
 
@@ -771,7 +786,7 @@ LyX Tips
 \begin_layout Standard
 \begin_inset External
 	template PDFPages
-	filename C:/Users/bassa_000/Documents/GitHub/Notebook/research/pdf files/LyXTips.pdf
+	filename ../pdf files/LyXTips.pdf
 	extra LaTeX "pages=-"
 
 \end_inset
